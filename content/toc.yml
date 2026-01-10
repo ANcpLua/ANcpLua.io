@@ -1,10 +1,8 @@
 - name: Home
   href: index.md
-- name: SDK
+- name: ANcpLua.NET.Sdk
   href: sdk/
-- name: Utilities
+- name: ANcpLua.Roslyn.Utilities
   href: utilities/
-- name: Analyzers
+- name: ANcpLua.Analyzers
   href: analyzers/
-- name: API Reference
-  href: api/

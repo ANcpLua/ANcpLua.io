@@ -1,4 +1,6 @@
-- name: Overview
+- name: Home
   href: index.md
 - name: Rules
   href: rules/
+- name: API Reference
+  href: api/

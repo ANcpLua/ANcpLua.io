@@ -1,10 +1,25 @@
 ---
-_layout: landing
+title: ANcpLua Framework
+description: Documentation for the ANcpLua .NET framework
 ---
 
 # ANcpLua Framework
 
-A modern .NET SDK with opinionated defaults, analyzers, and Roslyn utilities.
+Welcome to the ANcpLua Framework documentation.
+
+## Components
+
+### [ANcpLua.NET.Sdk](./sdk/)
+
+MSBuild SDK with polyfills, analyzers, and opinionated defaults
+
+### [ANcpLua.Roslyn.Utilities](./utilities/)
+
+Roslyn utilities for source generators and analyzers
+
+### [ANcpLua.Analyzers](./analyzers/)
+
+Custom Roslyn analyzers and code fixes
 
 ## Quick Start
 
@@ -15,15 +30,3 @@ A modern .NET SDK with opinionated defaults, analyzers, and Roslyn utilities.
   </PropertyGroup>
 </Project>
 ```
-
-## Components
-
-| Package | Description | NuGet |
-|---------|-------------|-------|
-| [ANcpLua.NET.Sdk](sdk/) | MSBuild SDK with polyfills and analyzers | [![NuGet](https://img.shields.io/nuget/v/ANcpLua.NET.Sdk)](https://nuget.org/packages/ANcpLua.NET.Sdk) |
-| [ANcpLua.Roslyn.Utilities](utilities/) | Roslyn utilities for analyzers and generators | [![NuGet](https://img.shields.io/nuget/v/ANcpLua.Roslyn.Utilities)](https://nuget.org/packages/ANcpLua.Roslyn.Utilities) |
-| [ANcpLua.Analyzers](analyzers/) | Custom Roslyn analyzers and code fixes | [![NuGet](https://img.shields.io/nuget/v/ANcpLua.Analyzers)](https://nuget.org/packages/ANcpLua.Analyzers) |
-
-## API Reference
-
-Browse the [API documentation](api/) for detailed type and method information.

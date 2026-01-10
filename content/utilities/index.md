@@ -1,38 +1,82 @@
----
-title: ANcpLua.Roslyn.Utilities
----
-
 # ANcpLua.Roslyn.Utilities
 
-Roslyn utilities for source generators, analyzers, and comprehensive testing.
-
-## Packages
-
-| Package | Description |
-|---------|-------------|
-| `ANcpLua.Roslyn.Utilities` | Core Roslyn helpers for generators and analyzers |
-| `ANcpLua.Roslyn.Utilities.Sources` | Source-only package (no runtime dependency) |
-| `ANcpLua.Roslyn.Utilities.Testing` | Test infrastructure for Roslyn and MSBuild |
+Comprehensive utilities for Roslyn analyzers and incremental source generators.
 
 ## Installation
 
-```xml
-<PackageReference Include="ANcpLua.Roslyn.Utilities" Version="1.8.0" />
+```bash
+dotnet add package ANcpLua.Roslyn.Utilities
 ```
 
-For testing:
+## Overview
 
-```xml
-<PackageReference Include="ANcpLua.Roslyn.Utilities.Testing" Version="1.8.0" />
+| Category | Key Types |
+|----------|-----------|
+| **Flow Control** | `DiagnosticFlow<T>` |
+| **Validation** | `SemanticGuard<T>` |
+| **Pattern Matching** | `SymbolPattern`, `Match.*`, `Invoke.*` |
+| **Domain Contexts** | `AwaitableContext`, `AspNetContext`, `DisposableContext`, `CollectionContext` |
+| **Code Generation** | `IndentedStringBuilder`, `GeneratedCodeHelpers` |
+| **Caching** | `EquatableArray<T>`, `HashCombiner` |
+
+## Quick Examples
+
+### Railway-Oriented Pipelines
+
+```csharp
+symbol.ToFlow(nullDiag)
+    .Then(ValidateMethod)
+    .Where(m => m.IsAsync, asyncRequired)
+    .WarnIf(m => m.IsObsolete, obsoleteWarn)
+    .Then(GenerateCode);
 ```
 
-## Features
+### Pattern Matching
 
-### Core Utilities
-- Symbol analysis helpers
-- Syntax generation utilities
-- Diagnostic helpers
+```csharp
+var asyncTask = SymbolPattern.Method()
+    .Async()
+    .ReturnsTask()
+    .WithCancellationToken()
+    .Public()
+    .Build();
 
-### Testing Infrastructure
-- **Roslyn Testing**: Fluent API for testing analyzers, code fixes, and generators
-- **MSBuild Testing**: Integration testing with real `dotnet build` commands
+if (asyncTask.Matches(method)) { ... }
+```
+
+### Declarative Validation
+
+```csharp
+SemanticGuard.ForMethod(method)
+    .MustBeAsync(asyncRequired)
+    .MustReturnTask(taskRequired)
+    .MustHaveCancellationToken(ctRequired)
+    .ToFlow();
+```
+
+## Extension Methods
+
+The library provides 170+ extension methods across 20 classes:
+
+| Class | Purpose |
+|-------|---------|
+| `SymbolExtensions` | Equality, attributes, visibility, names |
+| `TypeSymbolExtensions` | Inheritance, interfaces, special types |
+| `MethodSymbolExtensions` | Overrides, interface implementations |
+| `OperationExtensions` | Tree traversal, context detection |
+| `InvocationExtensions` | Method call analysis |
+| `IncrementalValuesProviderExtensions` | Pipeline helpers |
+| `SourceProductionContextExtensions` | Source output |
+| `StringExtensions` | Zero-allocation parsing |
+| `EnumerableExtensions` | Null-safe LINQ |
+
+## Documentation
+
+- [DiagnosticFlow](diagnostic-flow.md) - Railway-oriented programming
+- [SemanticGuard](semantic-guard.md) - Declarative validation
+- [Pattern Matching](patterns.md) - Composable symbol patterns
+- [Domain Contexts](contexts.md) - Awaitable, ASP.NET, Disposable, Collection
+- [Pipeline Extensions](pipeline.md) - Generator pipeline helpers
+- [Symbol Extensions](symbols.md) - Symbol analysis utilities
+- [Operation Extensions](operations.md) - IOperation tree traversal
+- [Code Generation](codegen.md) - IndentedStringBuilder, helpers
