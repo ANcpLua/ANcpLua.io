@@ -140,7 +140,7 @@ sealed class DocsGenerator(DocsConfig config, string gitRoot)
             await ShowGitDiffAsync();
         }
 
-        return _filesWritten;
+        return 0; // Success
     }
 
     private async Task FetchReposAsync()
