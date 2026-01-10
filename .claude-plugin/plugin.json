@@ -1,0 +1,11 @@
+{
+  "name": "ancplua-docs-site",
+  "version": "0.1.0",
+  "description": "Local plugin for the ANcpLua.io unified documentation site. Provides context and workflows for maintaining the DocFX-based documentation.",
+  "author": {
+    "name": "ANcpLua",
+    "url": "https://github.com/ANcpLua"
+  },
+  "repository": "https://github.com/ANcpLua/ANcpLua.io",
+  "license": "MIT"
+}

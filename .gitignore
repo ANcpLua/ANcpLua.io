@@ -1,0 +1,28 @@
+# Build outputs
+bin/
+obj/
+public/
+_site/
+resources/_gen/
+
+# Cloned source repos (DocsGenerator)
+.repos/
+
+# IDE
+.idea/
+.vs/
+*.user
+*.suo
+
+# Hugo
+.hugo_build.lock
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Dependencies
+node_modules/
+
+# Logs
+*.log

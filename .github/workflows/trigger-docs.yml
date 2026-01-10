@@ -1,0 +1,33 @@
+# Add this workflow to each source repo (SDK, Utilities, Analyzers)
+# Triggers ANcpLua.io docs rebuild when docs-related files change
+
+name: Trigger Docs Update
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'docs/**'
+      - 'src/**/*.cs'          # Analyzer source changes
+      - 'README.md'
+      - 'eng/**/*.md'          # SDK polyfill docs
+      - '**/*.resx'            # Resource strings (analyzer messages)
+
+jobs:
+  trigger-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger ANcpLua.io rebuild
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          # Use a PAT with repo scope, stored as DOCS_TRIGGER_TOKEN
+          token: ${{ secrets.DOCS_TRIGGER_TOKEN }}
+          repository: ANcpLua/ANcpLua.io
+          event-type: docs-update-${{ github.event.repository.name }}
+          client-payload: |
+            {
+              "repo": "${{ github.repository }}",
+              "ref": "${{ github.ref }}",
+              "sha": "${{ github.sha }}",
+              "actor": "${{ github.actor }}"
+            }

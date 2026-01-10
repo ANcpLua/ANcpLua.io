@@ -1,0 +1,29 @@
+{
+  "agents": [
+    ".claude/agents/docfx-principal.md"
+  ],
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "ANcpLua.io Docs Site loaded.\n\n**Quick Commands:**\n- `dotnet run` in tools/DocsGenerator to regenerate content\n- `docfx build docfx.json` to build site\n- `docfx serve _site` to preview\n\n**Content Sources:**\n- SDK/Utilities docs: ANcpLua.Roslyn.Utilities/docs/\n- Analyzer/Rules docs: ANcpLua.Analyzers/docs/\n\n**Key Files:**\n- docfx.json: Build config\n- tools/DocsGenerator/Program.cs: Content aggregator"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Write",
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "DOCFX_REMINDER|If editing toc.yml: use `- name:` + `href:` format. If editing index.md: ensure YAML frontmatter has `title:` field."
+          }
+        ]
+      }
+    ]
+  }
+}
