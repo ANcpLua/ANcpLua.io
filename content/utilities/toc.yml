@@ -1,2 +1,6 @@
 - name: Overview
   href: index.md
+- name: Testing Infrastructure
+  href: testing.md
+- name: MSBuild Testing
+  href: msbuild-testing.md

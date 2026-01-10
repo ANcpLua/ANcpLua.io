@@ -51,11 +51,10 @@ var config = new DocsConfig
             GitUrl = "https://github.com/ANcpLua/ANcpLua.Analyzers.git",
             DisplayName = "ANcpLua.Analyzers",
             Description = "Custom Roslyn analyzers and code fixes",
-            DocsSource = DocsSourceType.Reflection, // Generate from assembly reflection
-            GenerateFromAssembly = true,
-            AssemblyPath = "src/ANcpLua.Analyzers/bin/Release/netstandard2.0/ANcpLua.Analyzers.dll",
-            CodeFixAssemblyPath =
-                "src/ANcpLua.Analyzers.CodeFixes/bin/Release/netstandard2.0/ANcpLua.Analyzers.CodeFixes.dll"
+            // Use existing docs (reflection requires ANcpLua.NET.Sdk which may not be on NuGet)
+            DocsSource = DocsSourceType.Existing,
+            ExistingDocsPath = "docs",
+            GenerateFromAssembly = false
         }
     ],
     OutputPath = "content"
@@ -172,7 +171,15 @@ sealed class DocsGenerator(DocsConfig config, string gitRoot)
         {
             var repoPath = Path.Combine(_reposPath, repo.Name);
             Console.WriteLine($"Building {repo.Name}...");
-            await RunDotNetAsync(repoPath, "build", "-c", "Release", "-v", "q", "--nologo");
+            var (exitCode, output, error) = await RunDotNetWithOutputAsync(repoPath, "build", "-c", "Release", "--nologo");
+            if (exitCode != 0)
+            {
+                Console.WriteLine($"  Warning: Build failed for {repo.Name} (exit code {exitCode})");
+                if (!string.IsNullOrWhiteSpace(error))
+                {
+                    Console.WriteLine($"  Error: {error.Trim()}");
+                }
+            }
         }
     }
 
@@ -248,8 +255,24 @@ sealed class DocsGenerator(DocsConfig config, string gitRoot)
         var assemblyPath = Path.Combine(repoPath, repo.AssemblyPath);
         if (!File.Exists(assemblyPath))
         {
-            Console.WriteLine($"  Warning: Assembly not found at {assemblyPath}");
-            return;
+            // Try to find the DLL in Release folder (handles different TFMs)
+            var assemblyName = Path.GetFileName(repo.AssemblyPath);
+            var searchPattern = Path.Combine(repoPath, "**", "bin", "Release", "**", assemblyName);
+            var foundFiles = Directory.GetFiles(repoPath, assemblyName, SearchOption.AllDirectories)
+                .Where(f => f.Contains(Path.Combine("bin", "Release")) && !f.Contains("ref"))
+                .ToArray();
+
+            if (foundFiles.Length > 0)
+            {
+                assemblyPath = foundFiles[0];
+                Console.WriteLine($"  Found assembly at: {Path.GetRelativePath(repoPath, assemblyPath)}");
+            }
+            else
+            {
+                Console.WriteLine($"  Warning: Assembly not found at {assemblyPath}");
+                Console.WriteLine($"  Searched for {assemblyName} in {repoPath}");
+                return;
+            }
         }
 
         // Load assemblies
@@ -258,6 +281,19 @@ sealed class DocsGenerator(DocsConfig config, string gitRoot)
         if (repo.CodeFixAssemblyPath != null)
         {
             var codeFixPath = Path.Combine(repoPath, repo.CodeFixAssemblyPath);
+            if (!File.Exists(codeFixPath))
+            {
+                // Try to find CodeFix DLL
+                var codeFixName = Path.GetFileName(repo.CodeFixAssemblyPath);
+                var foundCodeFix = Directory.GetFiles(repoPath, codeFixName, SearchOption.AllDirectories)
+                    .Where(f => f.Contains(Path.Combine("bin", "Release")) && !f.Contains("ref"))
+                    .FirstOrDefault();
+                if (foundCodeFix is not null)
+                {
+                    codeFixPath = foundCodeFix;
+                    Console.WriteLine($"  Found CodeFix at: {Path.GetRelativePath(repoPath, codeFixPath)}");
+                }
+            }
             if (File.Exists(codeFixPath))
             {
                 codeFixAssembly = Assembly.LoadFrom(codeFixPath);
@@ -899,7 +935,7 @@ sealed class DocsGenerator(DocsConfig config, string gitRoot)
         }
     }
 
-    private static async Task RunDotNetAsync(string workingDir, params string[] args)
+    private static async Task<(int ExitCode, string Output, string Error)> RunDotNetWithOutputAsync(string workingDir, params string[] args)
     {
         var psi = new ProcessStartInfo
         {
@@ -911,10 +947,15 @@ sealed class DocsGenerator(DocsConfig config, string gitRoot)
             UseShellExecute = false
         };
         var process = Process.Start(psi);
-        if (process is not null)
+        if (process is null)
         {
-            await process.WaitForExitAsync();
+            return (-1, string.Empty, "Failed to start process");
         }
+
+        var output = await process.StandardOutput.ReadToEndAsync();
+        var error = await process.StandardError.ReadToEndAsync();
+        await process.WaitForExitAsync();
+        return (process.ExitCode, output, error);
     }
 
     private async Task ShowGitDiffAsync()
