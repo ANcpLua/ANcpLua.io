@@ -1,0 +1,70 @@
+- name: Rules Index
+  href: index.md
+- name: Design Rules
+  items:
+  - name: AL0001
+    href: AL0001.md
+  - name: AL0002
+    href: AL0002.md
+  - name: AL0006
+    href: AL0006.md
+  - name: AL0010
+    href: AL0010.md
+- name: Reliability Rules
+  items:
+  - name: AL0003
+    href: AL0003.md
+- name: Usage Rules
+  items:
+  - name: AL0004
+    href: AL0004.md
+  - name: AL0005
+    href: AL0005.md
+  - name: AL0007
+    href: AL0007.md
+  - name: AL0008
+    href: AL0008.md
+  - name: AL0009
+    href: AL0009.md
+- name: Threading Rules
+  items:
+  - name: AL0011
+    href: AL0011.md
+- name: OpenTelemetry Rules
+  items:
+  - name: AL0012
+    href: AL0012.md
+  - name: AL0013
+    href: AL0013.md
+- name: Style Rules
+  items:
+  - name: AL0014
+    href: AL0014.md
+  - name: AL0015
+    href: AL0015.md
+  - name: AL0016
+    href: AL0016.md
+- name: Version Management Rules
+  items:
+  - name: AL0017
+    href: AL0017.md
+  - name: AL0018
+    href: AL0018.md
+  - name: AL0019
+    href: AL0019.md
+- name: ASP.NET Core Rules
+  items:
+  - name: AL0020
+    href: AL0020.md
+  - name: AL0021
+    href: AL0021.md
+  - name: AL0022
+    href: AL0022.md
+  - name: AL0023
+    href: AL0023.md
+  - name: AL0024
+    href: AL0024.md
+- name: Refactorings
+  items:
+  - name: AR0001
+    href: AR0001.md
