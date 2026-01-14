@@ -397,7 +397,7 @@ internal sealed class DocsGenerator(DocsConfig config, string gitRoot)
 
     private async Task GenerateManualDocsAsync(string repoPath, RepoConfig repo, string outputDir)
     {
-        // For SDK: generate docs from README, eng/ folder structure, etc.
+        // For SDK: generate comprehensive docs from README, eng/ folder structure, etc.
         var readmePath = Path.Combine(repoPath, "README.md");
         if (File.Exists(readmePath))
         {
@@ -423,6 +423,32 @@ internal sealed class DocsGenerator(DocsConfig config, string gitRoot)
         // Generate banned APIs documentation
         var bannedApisFile = Path.Combine(repoPath, "src", "configuration", "BannedSymbols.txt");
         if (File.Exists(bannedApisFile)) await GenerateBannedApisDocsAsync(bannedApisFile, outputDir);
+
+        // Generate Service Defaults documentation (Web SDK)
+        var serviceDefaultsDir = Path.Combine(repoPath, "eng", "ANcpSdk.AspNetCore.ServiceDefaults");
+        if (Directory.Exists(serviceDefaultsDir)) await GenerateServiceDefaultsDocsAsync(serviceDefaultsDir, outputDir);
+
+        // Generate Extensions documentation (FakeLogger, SourceGen, Comparers)
+        var extensionsDir = Path.Combine(repoPath, "eng", "Extensions");
+        if (Directory.Exists(extensionsDir)) await GenerateExtensionsDocsAsync(extensionsDir, outputDir);
+
+        // Generate Shared utilities documentation (Throw, CodeTests)
+        var sharedDir = Path.Combine(repoPath, "eng", "Shared");
+        if (Directory.Exists(sharedDir)) await GenerateSharedDocsAsync(sharedDir, outputDir);
+
+        // Generate Configuration files documentation
+        var configDir = Path.Combine(repoPath, "src", "configuration");
+        if (Directory.Exists(configDir)) await GenerateConfigurationDocsAsync(configDir, outputDir);
+
+        // Generate Testing infrastructure documentation
+        var testingSharedDir = Path.Combine(repoPath, "src", "Shared");
+        if (Directory.Exists(testingSharedDir)) await GenerateTestingDocsAsync(testingSharedDir, outputDir);
+
+        // Generate MSBuild properties reference
+        await GenerateMSBuildPropertiesDocsAsync(repoPath, outputDir);
+
+        // Generate comprehensive SDK toc.yml
+        GenerateSdkToc(outputDir);
     }
 
     private async Task GenerateSdkVariantsDocsAsync(string sdkDir, string outputDir)
@@ -504,6 +530,429 @@ internal sealed class DocsGenerator(DocsConfig config, string gitRoot)
         }
 
         WriteFileIfChanged(Path.Combine(outputDir, "banned-apis.md"), sb.ToString());
+    }
+
+    private async Task GenerateServiceDefaultsDocsAsync(string serviceDefaultsDir, string outputDir)
+    {
+        var sb = new StringBuilder();
+        sb.AppendLine("---");
+        sb.AppendLine("title: Service Defaults (Web SDK)");
+        sb.AppendLine("---");
+        sb.AppendLine();
+        sb.AppendLine("# Service Defaults");
+        sb.AppendLine();
+        sb.AppendLine("The Web SDK (`ANcpLua.NET.Sdk.Web`) automatically configures common ASP.NET Core services.");
+        sb.AppendLine();
+        sb.AppendLine("## Features");
+        sb.AppendLine();
+
+        var features = new Dictionary<string, string>
+        {
+            ["ANcpSdkOpenTelemetryConfiguration"] = "OpenTelemetry (logging, metrics, tracing with OTLP export)",
+            ["ANcpSdkDevLogsConfiguration"] = "DevLogs (browser console to server logs)",
+            ["ANcpSdkHttpsConfiguration"] = "HTTPS redirection and HSTS",
+            ["ANcpSdkForwardedHeadersConfiguration"] = "Forwarded headers for reverse proxies",
+            ["ANcpSdkAntiForgeryConfiguration"] = "Anti-forgery token configuration",
+            ["ANcpSdkStaticAssetsConfiguration"] = "Static file serving with proper caching",
+            ["ANcpSdkOpenApiConfiguration"] = "OpenAPI/Swagger documentation"
+        };
+
+        foreach (var (file, description) in features)
+        {
+            var filePath = Path.Combine(serviceDefaultsDir, $"{file}.cs");
+            if (File.Exists(filePath))
+                sb.AppendLine($"- **{file.Replace("ANcpSdk", "").Replace("Configuration", "")}**: {description}");
+        }
+
+        sb.AppendLine();
+        sb.AppendLine("## Usage");
+        sb.AppendLine();
+        sb.AppendLine("Service defaults are automatically registered when using `ANcpLua.NET.Sdk.Web`.");
+        sb.AppendLine("The source generator intercepts `WebApplication.CreateBuilder()` calls.");
+        sb.AppendLine();
+        sb.AppendLine("```csharp");
+        sb.AppendLine("// This call is automatically enhanced by the SDK");
+        sb.AppendLine("var builder = WebApplication.CreateBuilder(args);");
+        sb.AppendLine("```");
+        sb.AppendLine();
+        sb.AppendLine("## Opt-out");
+        sb.AppendLine();
+        sb.AppendLine("```xml");
+        sb.AppendLine("<PropertyGroup>");
+        sb.AppendLine("  <AutoRegisterServiceDefaults>false</AutoRegisterServiceDefaults>");
+        sb.AppendLine("</PropertyGroup>");
+        sb.AppendLine("```");
+        sb.AppendLine();
+
+        var readmePath = Path.Combine(serviceDefaultsDir, "README.md");
+        if (File.Exists(readmePath))
+        {
+            var readme = await File.ReadAllTextAsync(readmePath);
+            sb.AppendLine("## Details");
+            sb.AppendLine();
+            sb.AppendLine(readme);
+        }
+
+        WriteFileIfChanged(Path.Combine(outputDir, "service-defaults.md"), sb.ToString());
+    }
+
+    private async Task GenerateExtensionsDocsAsync(string extensionsDir, string outputDir)
+    {
+        var sb = new StringBuilder();
+        sb.AppendLine("---");
+        sb.AppendLine("title: Extensions");
+        sb.AppendLine("---");
+        sb.AppendLine();
+        sb.AppendLine("# Extensions");
+        sb.AppendLine();
+        sb.AppendLine("Opt-in extensions for specialized use cases.");
+        sb.AppendLine();
+
+        foreach (var extDir in Directory.GetDirectories(extensionsDir).OrderBy(static d => d))
+        {
+            var name = Path.GetFileName(extDir);
+            var readmePath = Path.Combine(extDir, "README.md");
+
+            sb.AppendLine($"## {name}");
+            sb.AppendLine();
+
+            if (File.Exists(readmePath))
+            {
+                var readme = await File.ReadAllTextAsync(readmePath);
+                sb.AppendLine(readme);
+            }
+            else
+            {
+                var csFiles = Directory.GetFiles(extDir, "*.cs");
+                if (csFiles.Length > 0)
+                {
+                    sb.AppendLine("Files:");
+                    foreach (var csFile in csFiles)
+                        sb.AppendLine($"- `{Path.GetFileName(csFile)}`");
+                }
+            }
+
+            sb.AppendLine();
+        }
+
+        sb.AppendLine("## Enabling Extensions");
+        sb.AppendLine();
+        sb.AppendLine("```xml");
+        sb.AppendLine("<PropertyGroup>");
+        sb.AppendLine("  <!-- Roslyn source generator utilities -->");
+        sb.AppendLine("  <InjectSourceGenHelpers>true</InjectSourceGenHelpers>");
+        sb.AppendLine();
+        sb.AppendLine("  <!-- FakeLogger for testing -->");
+        sb.AppendLine("  <InjectFakeLogger>true</InjectFakeLogger>");
+        sb.AppendLine("</PropertyGroup>");
+        sb.AppendLine("```");
+
+        WriteFileIfChanged(Path.Combine(outputDir, "extensions.md"), sb.ToString());
+    }
+
+    private async Task GenerateSharedDocsAsync(string sharedDir, string outputDir)
+    {
+        var sb = new StringBuilder();
+        sb.AppendLine("---");
+        sb.AppendLine("title: Shared Utilities");
+        sb.AppendLine("---");
+        sb.AppendLine();
+        sb.AppendLine("# Shared Utilities");
+        sb.AppendLine();
+        sb.AppendLine("Utilities automatically injected into all SDK projects.");
+        sb.AppendLine();
+
+        foreach (var utilDir in Directory.GetDirectories(sharedDir).OrderBy(static d => d))
+        {
+            var name = Path.GetFileName(utilDir);
+            var readmePath = Path.Combine(utilDir, "README.md");
+
+            sb.AppendLine($"## {name}");
+            sb.AppendLine();
+
+            if (File.Exists(readmePath))
+            {
+                var readme = await File.ReadAllTextAsync(readmePath);
+                sb.AppendLine(readme);
+            }
+            else
+            {
+                var csFiles = Directory.GetFiles(utilDir, "*.cs");
+                foreach (var csFile in csFiles)
+                {
+                    var fileName = Path.GetFileName(csFile);
+                    sb.AppendLine($"### {Path.GetFileNameWithoutExtension(fileName)}");
+                    sb.AppendLine();
+
+                    var content = await File.ReadAllTextAsync(csFile);
+                    var summaryMatch = Regex.Match(content, @"<summary>\s*(.*?)\s*</summary>", RegexOptions.Singleline);
+                    if (summaryMatch.Success)
+                        sb.AppendLine(summaryMatch.Groups[1].Value.Trim());
+
+                    sb.AppendLine();
+                }
+            }
+        }
+
+        sb.AppendLine("## Opt-out");
+        sb.AppendLine();
+        sb.AppendLine("```xml");
+        sb.AppendLine("<PropertyGroup>");
+        sb.AppendLine("  <InjectSharedThrow>false</InjectSharedThrow>");
+        sb.AppendLine("</PropertyGroup>");
+        sb.AppendLine("```");
+
+        WriteFileIfChanged(Path.Combine(outputDir, "shared-utilities.md"), sb.ToString());
+    }
+
+    private Task GenerateConfigurationDocsAsync(string configDir, string outputDir)
+    {
+        var sb = new StringBuilder();
+        sb.AppendLine("---");
+        sb.AppendLine("title: Configuration Files");
+        sb.AppendLine("---");
+        sb.AppendLine();
+        sb.AppendLine("# Configuration Files");
+        sb.AppendLine();
+        sb.AppendLine("The SDK includes pre-configured settings for analyzers and code style.");
+        sb.AppendLine();
+
+        var editorConfigs = Directory.GetFiles(configDir, "*.editorconfig");
+        if (editorConfigs.Length > 0)
+        {
+            sb.AppendLine("## EditorConfig Files");
+            sb.AppendLine();
+            sb.AppendLine("| File | Purpose |");
+            sb.AppendLine("|------|---------|");
+
+            foreach (var file in editorConfigs.OrderBy(static f => f))
+            {
+                var name = Path.GetFileName(file);
+                var purpose = name switch
+                {
+                    "CodingStyle.editorconfig" => "Code style settings (indentation, spacing, etc.)",
+                    "NamingConvention.editorconfig" => "Naming conventions for types, members, parameters",
+                    "Analyzers.editorconfig" => "Master analyzer configuration",
+                    "GeneratedFiles.editorconfig" => "Suppresses warnings in generated code",
+                    _ when name.StartsWith("Analyzer.") => $"Settings for {name.Replace("Analyzer.", "").Replace(".editorconfig", "")}",
+                    _ => "Configuration file"
+                };
+                sb.AppendLine($"| `{name}` | {purpose} |");
+            }
+
+            sb.AppendLine();
+        }
+
+        var bannedFiles = Directory.GetFiles(configDir, "BannedSymbols*.txt");
+        if (bannedFiles.Length > 0)
+        {
+            sb.AppendLine("## Banned Symbols");
+            sb.AppendLine();
+            sb.AppendLine("| File | Description |");
+            sb.AppendLine("|------|-------------|");
+
+            foreach (var file in bannedFiles.OrderBy(static f => f))
+            {
+                var name = Path.GetFileName(file);
+                var desc = name switch
+                {
+                    "BannedSymbols.txt" => "Default banned APIs (use TimeProvider instead of legacy time APIs)",
+                    _ when name.Contains("Json") => "Bans legacy JSON library in favor of System.Text.Json",
+                    _ => "Additional banned APIs"
+                };
+                sb.AppendLine($"| `{name}` | {desc} |");
+            }
+
+            sb.AppendLine();
+        }
+
+        var runsettings = Path.Combine(configDir, "default.runsettings");
+        if (File.Exists(runsettings))
+        {
+            sb.AppendLine("## Test Run Settings");
+            sb.AppendLine();
+            sb.AppendLine("The `default.runsettings` file configures test execution settings.");
+            sb.AppendLine();
+        }
+
+        WriteFileIfChanged(Path.Combine(outputDir, "configuration-files.md"), sb.ToString());
+        return Task.CompletedTask;
+    }
+
+    private async Task GenerateTestingDocsAsync(string testingDir, string outputDir)
+    {
+        var sb = new StringBuilder();
+        sb.AppendLine("---");
+        sb.AppendLine("title: Testing Infrastructure");
+        sb.AppendLine("---");
+        sb.AppendLine();
+        sb.AppendLine("# Testing Infrastructure");
+        sb.AppendLine();
+        sb.AppendLine("The SDK provides base classes and utilities for testing.");
+        sb.AppendLine();
+
+        var testFiles = Directory.GetFiles(testingDir, "*.cs")
+            .Where(static f => !f.Contains("obj") && !f.Contains("bin"))
+            .ToArray();
+
+        foreach (var file in testFiles.OrderBy(static f => f))
+        {
+            var name = Path.GetFileNameWithoutExtension(file);
+            var content = await File.ReadAllTextAsync(file);
+
+            sb.AppendLine($"## {name}");
+            sb.AppendLine();
+
+            var summaryMatch = Regex.Match(content, @"/// <summary>\s*(.*?)\s*/// </summary>", RegexOptions.Singleline);
+            if (summaryMatch.Success)
+            {
+                var summary = Regex.Replace(summaryMatch.Groups[1].Value, @"^\s*///\s*", "", RegexOptions.Multiline).Trim();
+                sb.AppendLine(summary);
+                sb.AppendLine();
+            }
+
+            var classMatch = Regex.Match(content, @"public\s+(abstract\s+)?class\s+(\w+)(?:<[^>]+>)?(?:\s*:\s*([^\{]+))?");
+            if (classMatch.Success)
+            {
+                sb.AppendLine("```csharp");
+                sb.AppendLine(classMatch.Value.Trim());
+                sb.AppendLine("```");
+                sb.AppendLine();
+            }
+        }
+
+        WriteFileIfChanged(Path.Combine(outputDir, "testing.md"), sb.ToString());
+    }
+
+    private async Task GenerateMSBuildPropertiesDocsAsync(string repoPath, string outputDir)
+    {
+        var sb = new StringBuilder();
+        sb.AppendLine("---");
+        sb.AppendLine("title: MSBuild Properties Reference");
+        sb.AppendLine("---");
+        sb.AppendLine();
+        sb.AppendLine("# MSBuild Properties Reference");
+        sb.AppendLine();
+        sb.AppendLine("Complete reference of all MSBuild properties available in ANcpLua.NET.Sdk.");
+        sb.AppendLine();
+
+        var properties = new Dictionary<string, (string Description, string Default, string Category)>();
+
+        var propsFiles = Directory.GetFiles(repoPath, "*.props", SearchOption.AllDirectories)
+            .Concat(Directory.GetFiles(repoPath, "*.targets", SearchOption.AllDirectories))
+            .Where(static f => !f.Contains("obj") && !f.Contains("bin") && !f.Contains(".repos"))
+            .ToArray();
+
+        foreach (var file in propsFiles)
+        {
+            var content = await File.ReadAllTextAsync(file);
+            var fileName = Path.GetFileName(file);
+
+            var propMatches = Regex.Matches(content, @"<(\w+)\s*(?:Condition=""[^""]*"")?\s*>([^<]*)</\1>");
+            foreach (Match match in propMatches)
+            {
+                var propName = match.Groups[1].Value;
+                var propValue = match.Groups[2].Value.Trim();
+
+                if (propName.StartsWith('_') || propName == "PropertyGroup" || propName == "ItemGroup")
+                    continue;
+
+                var category = fileName switch
+                {
+                    _ when fileName.Contains("Testing") => "Testing",
+                    _ when fileName.Contains("Web") => "Web SDK",
+                    _ when fileName.Contains("Legacy") => "Polyfills",
+                    _ when fileName.Contains("Enforcement") => "Enforcement",
+                    _ => "General"
+                };
+
+                if (!properties.ContainsKey(propName) && IsUserConfigurableProperty(propName))
+                    properties[propName] = (GetPropertyDescription(propName), propValue, category);
+            }
+        }
+
+        var grouped = properties
+            .GroupBy(static p => p.Value.Category)
+            .OrderBy(static g => g.Key);
+
+        foreach (var group in grouped)
+        {
+            sb.AppendLine($"## {group.Key}");
+            sb.AppendLine();
+            sb.AppendLine("| Property | Default | Description |");
+            sb.AppendLine("|----------|---------|-------------|");
+
+            foreach (var prop in group.OrderBy(static p => p.Key))
+            {
+                var defaultVal = string.IsNullOrEmpty(prop.Value.Default) ? "-" : $"`{prop.Value.Default}`";
+                sb.AppendLine($"| `{prop.Key}` | {defaultVal} | {prop.Value.Description} |");
+            }
+
+            sb.AppendLine();
+        }
+
+        WriteFileIfChanged(Path.Combine(outputDir, "msbuild-properties.md"), sb.ToString());
+    }
+
+    private static bool IsUserConfigurableProperty(string name)
+    {
+        var userProps = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
+        {
+            "GenerateClaudeMd", "InjectSharedThrow", "InjectSourceGenHelpers", "InjectFakeLogger",
+            "InjectLockPolyfill", "InjectTimeProviderPolyfill", "AutoRegisterServiceDefaults",
+            "IncludeDefaultBannedSymbols", "EnableNETAnalyzers", "EnforceCodeStyleInBuild",
+            "TreatWarningsAsErrors", "Nullable", "ImplicitUsings", "IsPackable"
+        };
+        return userProps.Contains(name) || name.StartsWith("Inject") || name.StartsWith("Generate");
+    }
+
+    private static string GetPropertyDescription(string name)
+    {
+        return name switch
+        {
+            "GenerateClaudeMd" => "Generate CLAUDE.md file for AI assistants",
+            "InjectSharedThrow" => "Inject Throw.IfNull() guard clauses",
+            "InjectSourceGenHelpers" => "Inject Roslyn source generator utilities",
+            "InjectFakeLogger" => "Inject FakeLogger test extensions",
+            "InjectLockPolyfill" => "Inject System.Threading.Lock polyfill",
+            "InjectTimeProviderPolyfill" => "Inject TimeProvider polyfill",
+            "AutoRegisterServiceDefaults" => "Auto-register service defaults in Web SDK",
+            "IncludeDefaultBannedSymbols" => "Include default banned API list",
+            "EnableNETAnalyzers" => "Enable .NET analyzers",
+            "EnforceCodeStyleInBuild" => "Enforce code style during build",
+            "TreatWarningsAsErrors" => "Treat all warnings as errors",
+            "Nullable" => "Nullable reference types setting",
+            "ImplicitUsings" => "Enable implicit global usings",
+            "IsPackable" => "Whether project can be packed as NuGet",
+            _ => "MSBuild property"
+        };
+    }
+
+    private void GenerateSdkToc(string outputDir)
+    {
+        var toc = """
+                  - name: Overview
+                    href: index.md
+                  - name: SDK Variants
+                    href: variants.md
+                  - name: MSBuild Properties
+                    href: msbuild-properties.md
+                  - name: Service Defaults
+                    href: service-defaults.md
+                  - name: Polyfills
+                    href: polyfills.md
+                  - name: Extensions
+                    href: extensions.md
+                  - name: Shared Utilities
+                    href: shared-utilities.md
+                  - name: Banned APIs
+                    href: banned-apis.md
+                  - name: Configuration Files
+                    href: configuration-files.md
+                  - name: Testing
+                    href: testing.md
+                  """;
+        WriteFileIfChanged(Path.Combine(outputDir, "toc.yml"), toc);
     }
 
     private void GenerateRepoIndex(RepoConfig repo, string outputDir)
