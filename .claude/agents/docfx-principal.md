@@ -160,6 +160,27 @@ metadata (optional) → build → output
 - `modern`: Current recommended template (responsive, dark mode)
 - Custom templates: Folder with `layout/`, `partials/`, `styles/`
 
+### 7. GitHub Pages Deployment (CRITICAL)
+
+```json
+"resource": [
+  {
+    "files": [".nojekyll", "logo.svg", "favicon.ico"],
+    "src": "content"
+  }
+]
+```
+
+- **`.nojekyll` is MANDATORY**: Without it, GitHub Pages processes the site with Jekyll
+- Jekyll ignores folders starting with `_` or containing special patterns
+- DocFX's `public/` folder (CSS/JS assets) gets excluded without `.nojekyll`
+- Result: 404 errors even though files exist in `_site/`
+
+**URL Mapping:**
+- DocFX compiles `.md` → `.html`
+- Live URLs use `.html` extension: `site.com/sdk/overview.html` NOT `overview.md`
+- Never link to `.md` files in production URLs
+
 ## OPERATING PROCEDURE
 
 ### Phase 0 — Inventory (docfx_audit.md)
@@ -310,9 +331,42 @@ For ANcpLua.io pattern:
 
 3. **xref validator**: Ensure no unresolved cross-references
 
+4. **GitHub Pages validation**:
+
+   ```bash
+   # Verify .nojekyll exists in output
+   test -f _site/.nojekyll || (echo "ERROR: .nojekyll missing" && exit 1)
+
+   # Verify assets copied
+   test -d _site/public || (echo "ERROR: public/ assets missing" && exit 1)
+   ```
+
+5. **Post-deployment check**:
+
+   ```bash
+   # Wait for deployment, then verify
+   curl -sI https://YOUR-SITE.github.io/ | grep "HTTP/2 200"
+   curl -sI https://YOUR-SITE.github.io/public/main.css | grep "HTTP/2 200"
+   ```
+
 Output: `DOCFX_GUARDRAILS.md` + CI configuration.
 
 ## COMMON FAILURE MODES
+
+### "404 on GitHub Pages" (MOST COMMON)
+
+| Symptom                        | Cause                    | Fix                                                |
+| ------------------------------ | ------------------------ | -------------------------------------------------- |
+| Site loads but no CSS/JS       | Missing `.nojekyll`      | Create empty `.nojekyll` in content root           |
+| 404 for all pages              | Missing `.nojekyll`      | Add `.nojekyll` to resource files in docfx.json    |
+| 404 for specific page          | Using `.md` extension    | Use `.html` extension in URLs                      |
+| Assets in `public/` not found  | Jekyll filtering         | `.nojekyll` disables Jekyll processing             |
+| Works locally, fails on deploy | Resource not configured  | Add `.nojekyll` to `build.resource.files` array    |
+
+**Quick Fix Checklist:**
+1. Create `content/.nojekyll` (empty file)
+2. Add to docfx.json: `"resource": [{"files": [".nojekyll"], "src": "content"}]`
+3. Rebuild and redeploy
 
 ### "No API docs generated"
 
@@ -391,3 +445,13 @@ Before completing:
 - [ ] Search functionality works
 - [ ] Cross-references resolve (no xref warnings)
 - [ ] External links use xrefmap where appropriate
+
+### GitHub Pages Deployment Checklist
+
+- [ ] `.nojekyll` file exists in content root
+- [ ] `.nojekyll` included in `build.resource.files` array
+- [ ] `_site/` contains `.nojekyll` after build
+- [ ] `_site/public/` contains CSS/JS assets
+- [ ] Live site returns HTTP 200 (not 404)
+- [ ] CSS/JS loads correctly (check browser DevTools)
+- [ ] All URLs use `.html` extension (not `.md`)
