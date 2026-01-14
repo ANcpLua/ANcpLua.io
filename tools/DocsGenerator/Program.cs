@@ -447,8 +447,12 @@ internal sealed class DocsGenerator(DocsConfig config, string gitRoot)
         // Generate MSBuild properties reference
         await GenerateMSBuildPropertiesDocsAsync(repoPath, outputDir);
 
-        // Generate comprehensive SDK toc.yml
-        GenerateSdkToc(outputDir);
+        // Generate comprehensive SDK toc.yml (only for SDK repo, not utilities)
+        if (repo.Name == "sdk")
+        {
+            GenerateSdkToc(outputDir);
+        }
+        // For utilities: toc.yml is manually maintained in content/utilities/toc.yml
     }
 
     private async Task GenerateSdkVariantsDocsAsync(string sdkDir, string outputDir)
@@ -1028,23 +1032,46 @@ internal sealed class DocsGenerator(DocsConfig config, string gitRoot)
 
         WriteFileIfChanged(Path.Combine(_outputPath, "toc.yml"), toc.ToString());
 
-        // Generate docfx.json
+        // Generate docfx.json with API metadata configuration
         var docfx = new
         {
-            metadata = Array.Empty<object>(),
+            metadata = new object[]
+            {
+                new
+                {
+                    src = new[] { new { files = new[] { "ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/*.csproj" }, src = ".repos/utilities" } },
+                    dest = "api/utilities",
+                    properties = new { TargetFramework = "netstandard2.0" },
+                    disableGitFeatures = false
+                },
+                new
+                {
+                    src = new[] { new { files = new[] { "src/ANcpLua.Analyzers/*.csproj", "src/ANcpLua.Analyzers.CodeFixes/*.csproj" }, src = ".repos/analyzers" } },
+                    dest = "api/analyzers",
+                    properties = new { TargetFramework = "netstandard2.0" },
+                    disableGitFeatures = false
+                }
+            },
             build = new
             {
-                content = new[]
+                content = new object[]
                 {
-                    new { files = new[] { "**/*.md", "**/toc.yml" }, src = "content" }
+                    new { files = new[] { "**/*.md", "**/toc.yml" }, src = "content" },
+                    new { files = new[] { "**/*.yml" }, src = "api" }
+                },
+                resource = new[]
+                {
+                    new { files = new[] { ".nojekyll", "logo.svg", "favicon.ico" }, src = "content" }
                 },
                 dest = "_site",
                 globalMetadata = new
                 {
                     _appTitle = "ANcpLua Framework",
-                    _appFooter = "ANcpLua Framework Documentation"
+                    _appFooter = "ANcpLua Framework Documentation",
+                    _enableSearch = true
                 },
-                template = new[] { "default", "modern" }
+                template = new[] { "default", "modern" },
+                xref = new[] { "https://learn.microsoft.com/en-us/dotnet/.xrefmap.json" }
             }
         };
 
