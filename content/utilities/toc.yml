@@ -1,24 +1,20 @@
 - name: Overview
   href: index.md
-- name: Diagnostic Flow
-  href: diagnostic-flow.md
-- name: Pipeline
-  href: pipeline.md
-- name: Contexts
-  href: contexts.md
-- name: Patterns
-  href: patterns.md
-- name: Operations
-  href: operations.md
-- name: Symbols
-  href: symbols.md
-- name: Code Generation
-  href: codegen.md
-- name: Semantic Guard
-  href: semantic-guard.md
+- name: SDK Variants
+  href: variants.md
 - name: MSBuild Properties
   href: msbuild-properties.md
-- name: MSBuild Testing
-  href: msbuild-testing.md
+- name: Service Defaults
+  href: service-defaults.md
+- name: Polyfills
+  href: polyfills.md
+- name: Extensions
+  href: extensions.md
+- name: Shared Utilities
+  href: shared-utilities.md
+- name: Banned APIs
+  href: banned-apis.md
+- name: Configuration Files
+  href: configuration-files.md
 - name: Testing
   href: testing.md

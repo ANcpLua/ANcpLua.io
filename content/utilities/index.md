@@ -5,9 +5,8 @@ description: Roslyn utilities for source generators and analyzers
 
 [![NuGet](https://img.shields.io/nuget/v/ANcpLua.Roslyn.Utilities?label=NuGet&color=0891B2)](https://www.nuget.org/packages/ANcpLua.Roslyn.Utilities/)
 [![NuGet](https://img.shields.io/nuget/v/ANcpLua.Roslyn.Utilities.Testing?label=Testing&color=059669)](https://www.nuget.org/packages/ANcpLua.Roslyn.Utilities.Testing/)
-[![GitHub](https://img.shields.io/badge/GitHub-Source-181717?logo=github)](https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities)
 [![.NET Standard 2.0](https://img.shields.io/badge/.NET%20Standard-2.0-512BD4)](https://dotnet.microsoft.com/platform/dotnet-standard)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities/blob/main/LICENSE)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 # ANcpLua.Roslyn.Utilities
 
