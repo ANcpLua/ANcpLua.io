@@ -41,6 +41,7 @@ Custom Roslyn analyzers and code fixes
 |Id|Description|
 |--|-----------|
 |[AR0001](./rules/AR0001.md)|Snake Case To Pascal Case|
+|[AR0002](./rules/AR0002.md)|Make Static Lambda|
 
 
 ## Configuration
