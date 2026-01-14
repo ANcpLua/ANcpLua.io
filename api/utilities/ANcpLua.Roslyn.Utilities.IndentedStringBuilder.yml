@@ -1,0 +1,1626 @@
+### YamlMime:ManagedReference
+items:
+- uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder
+  commentId: T:ANcpLua.Roslyn.Utilities.IndentedStringBuilder
+  id: IndentedStringBuilder
+  parent: ANcpLua.Roslyn.Utilities
+  children:
+  - ANcpLua.Roslyn.Utilities.IndentedStringBuilder.#ctor(System.Int32,System.String)
+  - ANcpLua.Roslyn.Utilities.IndentedStringBuilder.Append(System.Char)
+  - ANcpLua.Roslyn.Utilities.IndentedStringBuilder.Append(System.String)
+  - ANcpLua.Roslyn.Utilities.IndentedStringBuilder.AppendLine
+  - ANcpLua.Roslyn.Utilities.IndentedStringBuilder.AppendLine(System.String)
+  - ANcpLua.Roslyn.Utilities.IndentedStringBuilder.AppendLineNoIndent(System.String)
+  - ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginBlock(System.String)
+  - ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginClass(System.String,System.String,System.String)
+  - ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginElse
+  - ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginForEach(System.String,System.String,System.String)
+  - ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginIf(System.String)
+  - ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginMethod(System.String,System.String,System.String,System.String)
+  - ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginNamespace(System.String)
+  - ANcpLua.Roslyn.Utilities.IndentedStringBuilder.Clear
+  - ANcpLua.Roslyn.Utilities.IndentedStringBuilder.EndBlock(System.String)
+  - ANcpLua.Roslyn.Utilities.IndentedStringBuilder.Indent
+  - ANcpLua.Roslyn.Utilities.IndentedStringBuilder.Length
+  - ANcpLua.Roslyn.Utilities.IndentedStringBuilder.Outdent
+  - ANcpLua.Roslyn.Utilities.IndentedStringBuilder.ToString
+  langs:
+  - csharp
+  - vb
+  name: IndentedStringBuilder
+  nameWithType: IndentedStringBuilder
+  fullName: ANcpLua.Roslyn.Utilities.IndentedStringBuilder
+  type: Class
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/CodeGeneration.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IndentedStringBuilder
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/CodeGeneration.cs
+    startLine: 176
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: >-
+    A <xref href="System.Text.StringBuilder" data-throw-if-not-resolved="false"></xref>-based builder that automatically manages indentation for code generation.
+
+    <p>
+
+    This class provides fluent methods for building indented source code with support for
+
+    common code structures like namespaces, classes, methods, and control flow statements.
+
+    </p>
+  remarks: <ul><li>All <code>Append</code> and <code>AppendLine</code> methods automatically prepend the current indentation.</li><li>Use <xref href="ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginBlock(System.String)" data-throw-if-not-resolved="false"></xref> with a <code>using</code> statement for automatic block closure.</li><li>The builder is reusable via the <xref href="ANcpLua.Roslyn.Utilities.IndentedStringBuilder.Clear" data-throw-if-not-resolved="false"></xref> method.</li></ul>
+  example: []
+  syntax:
+    content: public sealed class IndentedStringBuilder
+    content.vb: Public NotInheritable Class IndentedStringBuilder
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.IndentScope
+    commentId: T:ANcpLua.Roslyn.Utilities.IndentScope
+  - linkId: ANcpLua.Roslyn.Utilities.GeneratedCodeHelpers
+    commentId: T:ANcpLua.Roslyn.Utilities.GeneratedCodeHelpers
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  extensionMethods:
+  - ANcpLua.Roslyn.Utilities.IndentedStringBuilder.ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1
+  - ANcpLua.Roslyn.Utilities.IndentedStringBuilder.ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+- uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.#ctor(System.Int32,System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.IndentedStringBuilder.#ctor(System.Int32,System.String)
+  id: '#ctor(System.Int32,System.String)'
+  parent: ANcpLua.Roslyn.Utilities.IndentedStringBuilder
+  langs:
+  - csharp
+  - vb
+  name: IndentedStringBuilder(int, string)
+  nameWithType: IndentedStringBuilder.IndentedStringBuilder(int, string)
+  fullName: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.IndentedStringBuilder(int, string)
+  type: Constructor
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/CodeGeneration.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: .ctor
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/CodeGeneration.cs
+    startLine: 192
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Initializes a new instance of the <xref href="ANcpLua.Roslyn.Utilities.IndentedStringBuilder" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public IndentedStringBuilder(int initialCapacity = 256, string indentString = "    ")
+    parameters:
+    - id: initialCapacity
+      type: System.Int32
+      description: The initial capacity of the underlying <xref href="System.Text.StringBuilder" data-throw-if-not-resolved="false"></xref>. Defaults to 256.
+    - id: indentString
+      type: System.String
+      description: The string to use for each level of indentation. Defaults to four spaces.
+    content.vb: Public Sub New(initialCapacity As Integer = 256, indentString As String = "    ")
+  overload: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.#ctor*
+  nameWithType.vb: IndentedStringBuilder.New(Integer, String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.New(Integer, String)
+  name.vb: New(Integer, String)
+- uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.Length
+  commentId: P:ANcpLua.Roslyn.Utilities.IndentedStringBuilder.Length
+  id: Length
+  parent: ANcpLua.Roslyn.Utilities.IndentedStringBuilder
+  langs:
+  - csharp
+  - vb
+  name: Length
+  nameWithType: IndentedStringBuilder.Length
+  fullName: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.Length
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/CodeGeneration.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Length
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/CodeGeneration.cs
+    startLine: 202
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Gets the current length of the generated content.
+  example: []
+  syntax:
+    content: public int Length { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property Length As Integer
+  overload: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.Length*
+- uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.Append(System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.IndentedStringBuilder.Append(System.String)
+  id: Append(System.String)
+  parent: ANcpLua.Roslyn.Utilities.IndentedStringBuilder
+  langs:
+  - csharp
+  - vb
+  name: Append(string)
+  nameWithType: IndentedStringBuilder.Append(string)
+  fullName: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.Append(string)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/CodeGeneration.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Append
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/CodeGeneration.cs
+    startLine: 209
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Appends the specified text to the builder with the current indentation.
+  example: []
+  syntax:
+    content: public IndentedStringBuilder Append(string text)
+    parameters:
+    - id: text
+      type: System.String
+      description: The text to append.
+    return:
+      type: ANcpLua.Roslyn.Utilities.IndentedStringBuilder
+      description: This instance for method chaining.
+    content.vb: Public Function Append(text As String) As IndentedStringBuilder
+  overload: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.Append*
+  nameWithType.vb: IndentedStringBuilder.Append(String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.Append(String)
+  name.vb: Append(String)
+- uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.Append(System.Char)
+  commentId: M:ANcpLua.Roslyn.Utilities.IndentedStringBuilder.Append(System.Char)
+  id: Append(System.Char)
+  parent: ANcpLua.Roslyn.Utilities.IndentedStringBuilder
+  langs:
+  - csharp
+  - vb
+  name: Append(char)
+  nameWithType: IndentedStringBuilder.Append(char)
+  fullName: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.Append(char)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/CodeGeneration.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Append
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/CodeGeneration.cs
+    startLine: 221
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Appends the specified character to the builder with the current indentation.
+  example: []
+  syntax:
+    content: public IndentedStringBuilder Append(char c)
+    parameters:
+    - id: c
+      type: System.Char
+      description: The character to append.
+    return:
+      type: ANcpLua.Roslyn.Utilities.IndentedStringBuilder
+      description: This instance for method chaining.
+    content.vb: Public Function Append(c As Char) As IndentedStringBuilder
+  overload: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.Append*
+  nameWithType.vb: IndentedStringBuilder.Append(Char)
+  fullName.vb: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.Append(Char)
+  name.vb: Append(Char)
+- uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.AppendLine
+  commentId: M:ANcpLua.Roslyn.Utilities.IndentedStringBuilder.AppendLine
+  id: AppendLine
+  parent: ANcpLua.Roslyn.Utilities.IndentedStringBuilder
+  langs:
+  - csharp
+  - vb
+  name: AppendLine()
+  nameWithType: IndentedStringBuilder.AppendLine()
+  fullName: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.AppendLine()
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/CodeGeneration.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: AppendLine
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/CodeGeneration.cs
+    startLine: 232
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Appends a new line to the builder.
+  example: []
+  syntax:
+    content: public IndentedStringBuilder AppendLine()
+    return:
+      type: ANcpLua.Roslyn.Utilities.IndentedStringBuilder
+      description: This instance for method chaining.
+    content.vb: Public Function AppendLine() As IndentedStringBuilder
+  overload: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.AppendLine*
+- uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.AppendLine(System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.IndentedStringBuilder.AppendLine(System.String)
+  id: AppendLine(System.String)
+  parent: ANcpLua.Roslyn.Utilities.IndentedStringBuilder
+  langs:
+  - csharp
+  - vb
+  name: AppendLine(string)
+  nameWithType: IndentedStringBuilder.AppendLine(string)
+  fullName: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.AppendLine(string)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/CodeGeneration.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: AppendLine
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/CodeGeneration.cs
+    startLine: 244
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Appends the specified text followed by a new line, with the current indentation.
+  example: []
+  syntax:
+    content: public IndentedStringBuilder AppendLine(string text)
+    parameters:
+    - id: text
+      type: System.String
+      description: The text to append before the new line.
+    return:
+      type: ANcpLua.Roslyn.Utilities.IndentedStringBuilder
+      description: This instance for method chaining.
+    content.vb: Public Function AppendLine(text As String) As IndentedStringBuilder
+  overload: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.AppendLine*
+  nameWithType.vb: IndentedStringBuilder.AppendLine(String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.AppendLine(String)
+  name.vb: AppendLine(String)
+- uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.AppendLineNoIndent(System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.IndentedStringBuilder.AppendLineNoIndent(System.String)
+  id: AppendLineNoIndent(System.String)
+  parent: ANcpLua.Roslyn.Utilities.IndentedStringBuilder
+  langs:
+  - csharp
+  - vb
+  name: AppendLineNoIndent(string)
+  nameWithType: IndentedStringBuilder.AppendLineNoIndent(string)
+  fullName: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.AppendLineNoIndent(string)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/CodeGeneration.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: AppendLineNoIndent
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/CodeGeneration.cs
+    startLine: 260
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: >-
+    Appends the specified text followed by a new line without applying indentation.
+
+    <p>
+
+    Use this method for preprocessor directives or other content that should not be indented.
+
+    </p>
+  example: []
+  syntax:
+    content: public IndentedStringBuilder AppendLineNoIndent(string text)
+    parameters:
+    - id: text
+      type: System.String
+      description: The text to append before the new line.
+    return:
+      type: ANcpLua.Roslyn.Utilities.IndentedStringBuilder
+      description: This instance for method chaining.
+    content.vb: Public Function AppendLineNoIndent(text As String) As IndentedStringBuilder
+  overload: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.AppendLineNoIndent*
+  nameWithType.vb: IndentedStringBuilder.AppendLineNoIndent(String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.AppendLineNoIndent(String)
+  name.vb: AppendLineNoIndent(String)
+- uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.Indent
+  commentId: M:ANcpLua.Roslyn.Utilities.IndentedStringBuilder.Indent
+  id: Indent
+  parent: ANcpLua.Roslyn.Utilities.IndentedStringBuilder
+  langs:
+  - csharp
+  - vb
+  name: Indent()
+  nameWithType: IndentedStringBuilder.Indent()
+  fullName: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.Indent()
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/CodeGeneration.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Indent
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/CodeGeneration.cs
+    startLine: 272
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Increases the current indentation level by one.
+  example: []
+  syntax:
+    content: public IndentedStringBuilder Indent()
+    return:
+      type: ANcpLua.Roslyn.Utilities.IndentedStringBuilder
+      description: This instance for method chaining.
+    content.vb: Public Function Indent() As IndentedStringBuilder
+  overload: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.Indent*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.Outdent
+    commentId: M:ANcpLua.Roslyn.Utilities.IndentedStringBuilder.Outdent
+- uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.Outdent
+  commentId: M:ANcpLua.Roslyn.Utilities.IndentedStringBuilder.Outdent
+  id: Outdent
+  parent: ANcpLua.Roslyn.Utilities.IndentedStringBuilder
+  langs:
+  - csharp
+  - vb
+  name: Outdent()
+  nameWithType: IndentedStringBuilder.Outdent()
+  fullName: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.Outdent()
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/CodeGeneration.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Outdent
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/CodeGeneration.cs
+    startLine: 283
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Decreases the current indentation level by one, if greater than zero.
+  example: []
+  syntax:
+    content: public IndentedStringBuilder Outdent()
+    return:
+      type: ANcpLua.Roslyn.Utilities.IndentedStringBuilder
+      description: This instance for method chaining.
+    content.vb: Public Function Outdent() As IndentedStringBuilder
+  overload: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.Outdent*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.Indent
+    commentId: M:ANcpLua.Roslyn.Utilities.IndentedStringBuilder.Indent
+- uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginBlock(System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginBlock(System.String)
+  id: BeginBlock(System.String)
+  parent: ANcpLua.Roslyn.Utilities.IndentedStringBuilder
+  langs:
+  - csharp
+  - vb
+  name: BeginBlock(string?)
+  nameWithType: IndentedStringBuilder.BeginBlock(string?)
+  fullName: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginBlock(string?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/CodeGeneration.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: BeginBlock
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/CodeGeneration.cs
+    startLine: 298
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Begins a new code block, optionally writing an opening delimiter, and increases indentation.
+  example: []
+  syntax:
+    content: public IndentScope BeginBlock(string? opener = "{")
+    parameters:
+    - id: opener
+      type: System.String
+      description: The opening delimiter to write (e.g., <code>"{"</code>). If <code>null</code>, no opener is written.
+    return:
+      type: ANcpLua.Roslyn.Utilities.IndentScope
+      description: An <xref href="ANcpLua.Roslyn.Utilities.IndentScope" data-throw-if-not-resolved="false"></xref> that, when disposed, calls <xref href="ANcpLua.Roslyn.Utilities.IndentedStringBuilder.EndBlock(System.String)" data-throw-if-not-resolved="false"></xref> to close the block.
+    content.vb: Public Function BeginBlock(opener As String = "{") As IndentScope
+  overload: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginBlock*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.EndBlock(System.String)
+    commentId: M:ANcpLua.Roslyn.Utilities.IndentedStringBuilder.EndBlock(System.String)
+  nameWithType.vb: IndentedStringBuilder.BeginBlock(String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginBlock(String)
+  name.vb: BeginBlock(String)
+- uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginNamespace(System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginNamespace(System.String)
+  id: BeginNamespace(System.String)
+  parent: ANcpLua.Roslyn.Utilities.IndentedStringBuilder
+  langs:
+  - csharp
+  - vb
+  name: BeginNamespace(string)
+  nameWithType: IndentedStringBuilder.BeginNamespace(string)
+  fullName: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginNamespace(string)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/CodeGeneration.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: BeginNamespace
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/CodeGeneration.cs
+    startLine: 313
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Begins a namespace declaration and opens a block.
+  example: []
+  syntax:
+    content: public IndentScope BeginNamespace(string namespaceName)
+    parameters:
+    - id: namespaceName
+      type: System.String
+      description: The fully-qualified namespace name.
+    return:
+      type: ANcpLua.Roslyn.Utilities.IndentScope
+      description: An <xref href="ANcpLua.Roslyn.Utilities.IndentScope" data-throw-if-not-resolved="false"></xref> that, when disposed, closes the namespace block.
+    content.vb: Public Function BeginNamespace(namespaceName As String) As IndentScope
+  overload: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginNamespace*
+  nameWithType.vb: IndentedStringBuilder.BeginNamespace(String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginNamespace(String)
+  name.vb: BeginNamespace(String)
+- uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginClass(System.String,System.String,System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginClass(System.String,System.String,System.String)
+  id: BeginClass(System.String,System.String,System.String)
+  parent: ANcpLua.Roslyn.Utilities.IndentedStringBuilder
+  langs:
+  - csharp
+  - vb
+  name: BeginClass(string, string, string?)
+  nameWithType: IndentedStringBuilder.BeginClass(string, string, string?)
+  fullName: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginClass(string, string, string?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/CodeGeneration.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: BeginClass
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/CodeGeneration.cs
+    startLine: 328
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Begins a class declaration and opens a block.
+  example: []
+  syntax:
+    content: public IndentScope BeginClass(string modifiers, string className, string? baseType = null)
+    parameters:
+    - id: modifiers
+      type: System.String
+      description: The access and other modifiers (e.g., <code>"public partial"</code>).
+    - id: className
+      type: System.String
+      description: The name of the class.
+    - id: baseType
+      type: System.String
+      description: The optional base type or interface list. If <code>null</code>, no inheritance clause is added.
+    return:
+      type: ANcpLua.Roslyn.Utilities.IndentScope
+      description: An <xref href="ANcpLua.Roslyn.Utilities.IndentScope" data-throw-if-not-resolved="false"></xref> that, when disposed, closes the class block.
+    content.vb: Public Function BeginClass(modifiers As String, className As String, baseType As String = Nothing) As IndentScope
+  overload: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginClass*
+  nameWithType.vb: IndentedStringBuilder.BeginClass(String, String, String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginClass(String, String, String)
+  name.vb: BeginClass(String, String, String)
+- uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginMethod(System.String,System.String,System.String,System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginMethod(System.String,System.String,System.String,System.String)
+  id: BeginMethod(System.String,System.String,System.String,System.String)
+  parent: ANcpLua.Roslyn.Utilities.IndentedStringBuilder
+  langs:
+  - csharp
+  - vb
+  name: BeginMethod(string, string, string, string)
+  nameWithType: IndentedStringBuilder.BeginMethod(string, string, string, string)
+  fullName: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginMethod(string, string, string, string)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/CodeGeneration.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: BeginMethod
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/CodeGeneration.cs
+    startLine: 347
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Begins a method declaration and opens a block.
+  example: []
+  syntax:
+    content: public IndentScope BeginMethod(string modifiers, string returnType, string methodName, string parameters = "")
+    parameters:
+    - id: modifiers
+      type: System.String
+      description: The access and other modifiers (e.g., <code>"public async"</code>).
+    - id: returnType
+      type: System.String
+      description: The return type of the method (e.g., <code>"void"</code>, <code>"Task"</code>).
+    - id: methodName
+      type: System.String
+      description: The name of the method.
+    - id: parameters
+      type: System.String
+      description: The parameter list without parentheses. Defaults to empty string for parameterless methods.
+    return:
+      type: ANcpLua.Roslyn.Utilities.IndentScope
+      description: An <xref href="ANcpLua.Roslyn.Utilities.IndentScope" data-throw-if-not-resolved="false"></xref> that, when disposed, closes the method block.
+    content.vb: Public Function BeginMethod(modifiers As String, returnType As String, methodName As String, parameters As String = "") As IndentScope
+  overload: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginMethod*
+  nameWithType.vb: IndentedStringBuilder.BeginMethod(String, String, String, String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginMethod(String, String, String, String)
+  name.vb: BeginMethod(String, String, String, String)
+- uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginIf(System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginIf(System.String)
+  id: BeginIf(System.String)
+  parent: ANcpLua.Roslyn.Utilities.IndentedStringBuilder
+  langs:
+  - csharp
+  - vb
+  name: BeginIf(string)
+  nameWithType: IndentedStringBuilder.BeginIf(string)
+  fullName: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginIf(string)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/CodeGeneration.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: BeginIf
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/CodeGeneration.cs
+    startLine: 361
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Begins an <code>if</code> statement and opens a block.
+  example: []
+  syntax:
+    content: public IndentScope BeginIf(string condition)
+    parameters:
+    - id: condition
+      type: System.String
+      description: The condition expression without parentheses.
+    return:
+      type: ANcpLua.Roslyn.Utilities.IndentScope
+      description: An <xref href="ANcpLua.Roslyn.Utilities.IndentScope" data-throw-if-not-resolved="false"></xref> that, when disposed, closes the <code>if</code> block.
+    content.vb: Public Function BeginIf(condition As String) As IndentScope
+  overload: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginIf*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginElse
+    commentId: M:ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginElse
+  nameWithType.vb: IndentedStringBuilder.BeginIf(String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginIf(String)
+  name.vb: BeginIf(String)
+- uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginElse
+  commentId: M:ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginElse
+  id: BeginElse
+  parent: ANcpLua.Roslyn.Utilities.IndentedStringBuilder
+  langs:
+  - csharp
+  - vb
+  name: BeginElse()
+  nameWithType: IndentedStringBuilder.BeginElse()
+  fullName: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginElse()
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/CodeGeneration.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: BeginElse
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/CodeGeneration.cs
+    startLine: 374
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Begins an <code>else</code> clause and opens a block.
+  example: []
+  syntax:
+    content: public IndentScope BeginElse()
+    return:
+      type: ANcpLua.Roslyn.Utilities.IndentScope
+      description: An <xref href="ANcpLua.Roslyn.Utilities.IndentScope" data-throw-if-not-resolved="false"></xref> that, when disposed, closes the <code>else</code> block.
+    content.vb: Public Function BeginElse() As IndentScope
+  overload: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginElse*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginIf(System.String)
+    commentId: M:ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginIf(System.String)
+- uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginForEach(System.String,System.String,System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginForEach(System.String,System.String,System.String)
+  id: BeginForEach(System.String,System.String,System.String)
+  parent: ANcpLua.Roslyn.Utilities.IndentedStringBuilder
+  langs:
+  - csharp
+  - vb
+  name: BeginForEach(string, string, string)
+  nameWithType: IndentedStringBuilder.BeginForEach(string, string, string)
+  fullName: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginForEach(string, string, string)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/CodeGeneration.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: BeginForEach
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/CodeGeneration.cs
+    startLine: 389
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Begins a <code>foreach</code> loop and opens a block.
+  example: []
+  syntax:
+    content: public IndentScope BeginForEach(string variableType, string variableName, string collection)
+    parameters:
+    - id: variableType
+      type: System.String
+      description: The type of the loop variable (e.g., <code>"var"</code>, <code>"int"</code>).
+    - id: variableName
+      type: System.String
+      description: The name of the loop variable.
+    - id: collection
+      type: System.String
+      description: The collection expression to iterate over.
+    return:
+      type: ANcpLua.Roslyn.Utilities.IndentScope
+      description: An <xref href="ANcpLua.Roslyn.Utilities.IndentScope" data-throw-if-not-resolved="false"></xref> that, when disposed, closes the <code>foreach</code> block.
+    content.vb: Public Function BeginForEach(variableType As String, variableName As String, collection As String) As IndentScope
+  overload: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginForEach*
+  nameWithType.vb: IndentedStringBuilder.BeginForEach(String, String, String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginForEach(String, String, String)
+  name.vb: BeginForEach(String, String, String)
+- uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.EndBlock(System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.IndentedStringBuilder.EndBlock(System.String)
+  id: EndBlock(System.String)
+  parent: ANcpLua.Roslyn.Utilities.IndentedStringBuilder
+  langs:
+  - csharp
+  - vb
+  name: EndBlock(string?)
+  nameWithType: IndentedStringBuilder.EndBlock(string?)
+  fullName: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.EndBlock(string?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/CodeGeneration.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: EndBlock
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/CodeGeneration.cs
+    startLine: 400
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Ends a code block by decreasing indentation and optionally writing a closing delimiter.
+  example: []
+  syntax:
+    content: public void EndBlock(string? closer = "}")
+    parameters:
+    - id: closer
+      type: System.String
+      description: The closing delimiter to write (e.g., <code>"}"</code>). If <code>null</code>, no closer is written.
+    content.vb: Public Sub EndBlock(closer As String = "}")
+  overload: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.EndBlock*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginBlock(System.String)
+    commentId: M:ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginBlock(System.String)
+  nameWithType.vb: IndentedStringBuilder.EndBlock(String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.EndBlock(String)
+  name.vb: EndBlock(String)
+- uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.ToString
+  commentId: M:ANcpLua.Roslyn.Utilities.IndentedStringBuilder.ToString
+  id: ToString
+  parent: ANcpLua.Roslyn.Utilities.IndentedStringBuilder
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: IndentedStringBuilder.ToString()
+  fullName: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.ToString()
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/CodeGeneration.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: ToString
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/CodeGeneration.cs
+    startLine: 411
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Returns the generated content as a string.
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: The complete generated source code.
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.Object.ToString
+  overload: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.ToString*
+- uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.Clear
+  commentId: M:ANcpLua.Roslyn.Utilities.IndentedStringBuilder.Clear
+  id: Clear
+  parent: ANcpLua.Roslyn.Utilities.IndentedStringBuilder
+  langs:
+  - csharp
+  - vb
+  name: Clear()
+  nameWithType: IndentedStringBuilder.Clear()
+  fullName: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.Clear()
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/CodeGeneration.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Clear
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/CodeGeneration.cs
+    startLine: 416
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Clears all content and resets the indentation level to zero.
+  example: []
+  syntax:
+    content: public void Clear()
+    content.vb: Public Sub Clear()
+  overload: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.Clear*
+references:
+- uid: ANcpLua.Roslyn.Utilities.IndentScope
+  commentId: T:ANcpLua.Roslyn.Utilities.IndentScope
+  parent: ANcpLua.Roslyn.Utilities
+  href: ANcpLua.Roslyn.Utilities.IndentScope.html
+  name: IndentScope
+  nameWithType: IndentScope
+  fullName: ANcpLua.Roslyn.Utilities.IndentScope
+- uid: ANcpLua.Roslyn.Utilities.GeneratedCodeHelpers
+  commentId: T:ANcpLua.Roslyn.Utilities.GeneratedCodeHelpers
+  href: ANcpLua.Roslyn.Utilities.GeneratedCodeHelpers.html
+  name: GeneratedCodeHelpers
+  nameWithType: GeneratedCodeHelpers
+  fullName: ANcpLua.Roslyn.Utilities.GeneratedCodeHelpers
+- uid: System.Text.StringBuilder
+  commentId: T:System.Text.StringBuilder
+  parent: System.Text
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.text.stringbuilder
+  name: StringBuilder
+  nameWithType: StringBuilder
+  fullName: System.Text.StringBuilder
+- uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginBlock(System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginBlock(System.String)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.html#ANcpLua_Roslyn_Utilities_IndentedStringBuilder_BeginBlock_System_String_
+  name: BeginBlock(string)
+  nameWithType: IndentedStringBuilder.BeginBlock(string)
+  fullName: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginBlock(string)
+  nameWithType.vb: IndentedStringBuilder.BeginBlock(String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginBlock(String)
+  name.vb: BeginBlock(String)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginBlock(System.String)
+    name: BeginBlock
+    href: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.html#ANcpLua_Roslyn_Utilities_IndentedStringBuilder_BeginBlock_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginBlock(System.String)
+    name: BeginBlock
+    href: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.html#ANcpLua_Roslyn_Utilities_IndentedStringBuilder_BeginBlock_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.Clear
+  commentId: M:ANcpLua.Roslyn.Utilities.IndentedStringBuilder.Clear
+  href: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.html#ANcpLua_Roslyn_Utilities_IndentedStringBuilder_Clear
+  name: Clear()
+  nameWithType: IndentedStringBuilder.Clear()
+  fullName: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.Clear()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.Clear
+    name: Clear
+    href: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.html#ANcpLua_Roslyn_Utilities_IndentedStringBuilder_Clear
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.Clear
+    name: Clear
+    href: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.html#ANcpLua_Roslyn_Utilities_IndentedStringBuilder_Clear
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities
+  commentId: N:ANcpLua.Roslyn.Utilities
+  href: ANcpLua.html
+  name: ANcpLua.Roslyn.Utilities
+  nameWithType: ANcpLua.Roslyn.Utilities
+  fullName: ANcpLua.Roslyn.Utilities
+  spec.csharp:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  spec.vb:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+  parent: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+  definition: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  name: ToResultWithDiagnostics<IndentedStringBuilder>(IndentedStringBuilder)
+  nameWithType: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<IndentedStringBuilder>(IndentedStringBuilder)
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<ANcpLua.Roslyn.Utilities.IndentedStringBuilder>(ANcpLua.Roslyn.Utilities.IndentedStringBuilder)
+  nameWithType.vb: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of IndentedStringBuilder)(IndentedStringBuilder)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of ANcpLua.Roslyn.Utilities.IndentedStringBuilder)(ANcpLua.Roslyn.Utilities.IndentedStringBuilder)
+  name.vb: ToResultWithDiagnostics(Of IndentedStringBuilder)(IndentedStringBuilder)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(ANcpLua.Roslyn.Utilities.IndentedStringBuilder)
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder
+    name: IndentedStringBuilder
+    href: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.html
+  - name: '>'
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder
+    name: IndentedStringBuilder
+    href: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.html
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(ANcpLua.Roslyn.Utilities.IndentedStringBuilder)
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder
+    name: IndentedStringBuilder
+    href: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.html
+  - name: )
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder
+    name: IndentedStringBuilder
+    href: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.html
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  parent: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+  definition: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  name: ToResultWithDiagnostics<IndentedStringBuilder>(IndentedStringBuilder, ImmutableArray<DiagnosticInfo>)
+  nameWithType: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<IndentedStringBuilder>(IndentedStringBuilder, ImmutableArray<DiagnosticInfo>)
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<ANcpLua.Roslyn.Utilities.IndentedStringBuilder>(ANcpLua.Roslyn.Utilities.IndentedStringBuilder, System.Collections.Immutable.ImmutableArray<ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo>)
+  nameWithType.vb: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of IndentedStringBuilder)(IndentedStringBuilder, ImmutableArray(Of DiagnosticInfo))
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of ANcpLua.Roslyn.Utilities.IndentedStringBuilder)(ANcpLua.Roslyn.Utilities.IndentedStringBuilder, System.Collections.Immutable.ImmutableArray(Of ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo))
+  name.vb: ToResultWithDiagnostics(Of IndentedStringBuilder)(IndentedStringBuilder, ImmutableArray(Of DiagnosticInfo))
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(ANcpLua.Roslyn.Utilities.IndentedStringBuilder,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder
+    name: IndentedStringBuilder
+    href: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.html
+  - name: '>'
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder
+    name: IndentedStringBuilder
+    href: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(ANcpLua.Roslyn.Utilities.IndentedStringBuilder,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder
+    name: IndentedStringBuilder
+    href: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.html
+  - name: )
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder
+    name: IndentedStringBuilder
+    href: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: )
+  - name: )
+- uid: System.Text
+  commentId: N:System.Text
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Text
+  nameWithType: System.Text
+  fullName: System.Text
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Text
+    name: Text
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Text
+    name: Text
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  name: ToResultWithDiagnostics<T>(T)
+  nameWithType: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<T>(T)
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<T>(T)
+  nameWithType.vb: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of T)(T)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of T)(T)
+  name.vb: ToResultWithDiagnostics(Of T)(T)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+  commentId: T:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+  parent: ANcpLua.Roslyn.Utilities.Models
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html
+  name: ResultWithDiagnosticsExtensions
+  nameWithType: ResultWithDiagnosticsExtensions
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+- uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  name: ToResultWithDiagnostics<T>(T, ImmutableArray<DiagnosticInfo>)
+  nameWithType: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<T>(T, ImmutableArray<DiagnosticInfo>)
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<T>(T, System.Collections.Immutable.ImmutableArray<ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo>)
+  nameWithType.vb: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of T)(T, ImmutableArray(Of DiagnosticInfo))
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of T)(T, System.Collections.Immutable.ImmutableArray(Of ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo))
+  name.vb: ToResultWithDiagnostics(Of T)(T, ImmutableArray(Of DiagnosticInfo))
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: )
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Models
+  commentId: N:ANcpLua.Roslyn.Utilities.Models
+  href: ANcpLua.html
+  name: ANcpLua.Roslyn.Utilities.Models
+  nameWithType: ANcpLua.Roslyn.Utilities.Models
+  fullName: ANcpLua.Roslyn.Utilities.Models
+  spec.csharp:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities.Models
+    name: Models
+    href: ANcpLua.Roslyn.Utilities.Models.html
+  spec.vb:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities.Models
+    name: Models
+    href: ANcpLua.Roslyn.Utilities.Models.html
+- uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder
+  commentId: T:ANcpLua.Roslyn.Utilities.IndentedStringBuilder
+  parent: ANcpLua.Roslyn.Utilities
+  href: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.html
+  name: IndentedStringBuilder
+  nameWithType: IndentedStringBuilder
+  fullName: ANcpLua.Roslyn.Utilities.IndentedStringBuilder
+- uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.#ctor*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.IndentedStringBuilder.#ctor
+  href: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.html#ANcpLua_Roslyn_Utilities_IndentedStringBuilder__ctor_System_Int32_System_String_
+  name: IndentedStringBuilder
+  nameWithType: IndentedStringBuilder.IndentedStringBuilder
+  fullName: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.IndentedStringBuilder
+  nameWithType.vb: IndentedStringBuilder.New
+  fullName.vb: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.New
+  name.vb: New
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.Length*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.IndentedStringBuilder.Length
+  href: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.html#ANcpLua_Roslyn_Utilities_IndentedStringBuilder_Length
+  name: Length
+  nameWithType: IndentedStringBuilder.Length
+  fullName: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.Length
+- uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.Append*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.IndentedStringBuilder.Append
+  href: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.html#ANcpLua_Roslyn_Utilities_IndentedStringBuilder_Append_System_String_
+  name: Append
+  nameWithType: IndentedStringBuilder.Append
+  fullName: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.Append
+- uid: System.Char
+  commentId: T:System.Char
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.char
+  name: char
+  nameWithType: char
+  fullName: char
+  nameWithType.vb: Char
+  fullName.vb: Char
+  name.vb: Char
+- uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.AppendLine*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.IndentedStringBuilder.AppendLine
+  href: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.html#ANcpLua_Roslyn_Utilities_IndentedStringBuilder_AppendLine
+  name: AppendLine
+  nameWithType: IndentedStringBuilder.AppendLine
+  fullName: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.AppendLine
+- uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.AppendLineNoIndent*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.IndentedStringBuilder.AppendLineNoIndent
+  href: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.html#ANcpLua_Roslyn_Utilities_IndentedStringBuilder_AppendLineNoIndent_System_String_
+  name: AppendLineNoIndent
+  nameWithType: IndentedStringBuilder.AppendLineNoIndent
+  fullName: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.AppendLineNoIndent
+- uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.Outdent
+  commentId: M:ANcpLua.Roslyn.Utilities.IndentedStringBuilder.Outdent
+  href: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.html#ANcpLua_Roslyn_Utilities_IndentedStringBuilder_Outdent
+  name: Outdent()
+  nameWithType: IndentedStringBuilder.Outdent()
+  fullName: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.Outdent()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.Outdent
+    name: Outdent
+    href: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.html#ANcpLua_Roslyn_Utilities_IndentedStringBuilder_Outdent
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.Outdent
+    name: Outdent
+    href: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.html#ANcpLua_Roslyn_Utilities_IndentedStringBuilder_Outdent
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.Indent*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.IndentedStringBuilder.Indent
+  href: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.html#ANcpLua_Roslyn_Utilities_IndentedStringBuilder_Indent
+  name: Indent
+  nameWithType: IndentedStringBuilder.Indent
+  fullName: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.Indent
+- uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.Indent
+  commentId: M:ANcpLua.Roslyn.Utilities.IndentedStringBuilder.Indent
+  href: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.html#ANcpLua_Roslyn_Utilities_IndentedStringBuilder_Indent
+  name: Indent()
+  nameWithType: IndentedStringBuilder.Indent()
+  fullName: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.Indent()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.Indent
+    name: Indent
+    href: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.html#ANcpLua_Roslyn_Utilities_IndentedStringBuilder_Indent
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.Indent
+    name: Indent
+    href: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.html#ANcpLua_Roslyn_Utilities_IndentedStringBuilder_Indent
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.Outdent*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.IndentedStringBuilder.Outdent
+  href: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.html#ANcpLua_Roslyn_Utilities_IndentedStringBuilder_Outdent
+  name: Outdent
+  nameWithType: IndentedStringBuilder.Outdent
+  fullName: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.Outdent
+- uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.EndBlock(System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.IndentedStringBuilder.EndBlock(System.String)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.html#ANcpLua_Roslyn_Utilities_IndentedStringBuilder_EndBlock_System_String_
+  name: EndBlock(string)
+  nameWithType: IndentedStringBuilder.EndBlock(string)
+  fullName: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.EndBlock(string)
+  nameWithType.vb: IndentedStringBuilder.EndBlock(String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.EndBlock(String)
+  name.vb: EndBlock(String)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.EndBlock(System.String)
+    name: EndBlock
+    href: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.html#ANcpLua_Roslyn_Utilities_IndentedStringBuilder_EndBlock_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.EndBlock(System.String)
+    name: EndBlock
+    href: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.html#ANcpLua_Roslyn_Utilities_IndentedStringBuilder_EndBlock_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginBlock*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginBlock
+  href: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.html#ANcpLua_Roslyn_Utilities_IndentedStringBuilder_BeginBlock_System_String_
+  name: BeginBlock
+  nameWithType: IndentedStringBuilder.BeginBlock
+  fullName: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginBlock
+- uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginNamespace*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginNamespace
+  href: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.html#ANcpLua_Roslyn_Utilities_IndentedStringBuilder_BeginNamespace_System_String_
+  name: BeginNamespace
+  nameWithType: IndentedStringBuilder.BeginNamespace
+  fullName: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginNamespace
+- uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginClass*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginClass
+  href: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.html#ANcpLua_Roslyn_Utilities_IndentedStringBuilder_BeginClass_System_String_System_String_System_String_
+  name: BeginClass
+  nameWithType: IndentedStringBuilder.BeginClass
+  fullName: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginClass
+- uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginMethod*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginMethod
+  href: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.html#ANcpLua_Roslyn_Utilities_IndentedStringBuilder_BeginMethod_System_String_System_String_System_String_System_String_
+  name: BeginMethod
+  nameWithType: IndentedStringBuilder.BeginMethod
+  fullName: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginMethod
+- uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginElse
+  commentId: M:ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginElse
+  href: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.html#ANcpLua_Roslyn_Utilities_IndentedStringBuilder_BeginElse
+  name: BeginElse()
+  nameWithType: IndentedStringBuilder.BeginElse()
+  fullName: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginElse()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginElse
+    name: BeginElse
+    href: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.html#ANcpLua_Roslyn_Utilities_IndentedStringBuilder_BeginElse
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginElse
+    name: BeginElse
+    href: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.html#ANcpLua_Roslyn_Utilities_IndentedStringBuilder_BeginElse
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginIf*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginIf
+  href: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.html#ANcpLua_Roslyn_Utilities_IndentedStringBuilder_BeginIf_System_String_
+  name: BeginIf
+  nameWithType: IndentedStringBuilder.BeginIf
+  fullName: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginIf
+- uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginIf(System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginIf(System.String)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.html#ANcpLua_Roslyn_Utilities_IndentedStringBuilder_BeginIf_System_String_
+  name: BeginIf(string)
+  nameWithType: IndentedStringBuilder.BeginIf(string)
+  fullName: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginIf(string)
+  nameWithType.vb: IndentedStringBuilder.BeginIf(String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginIf(String)
+  name.vb: BeginIf(String)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginIf(System.String)
+    name: BeginIf
+    href: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.html#ANcpLua_Roslyn_Utilities_IndentedStringBuilder_BeginIf_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginIf(System.String)
+    name: BeginIf
+    href: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.html#ANcpLua_Roslyn_Utilities_IndentedStringBuilder_BeginIf_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginElse*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginElse
+  href: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.html#ANcpLua_Roslyn_Utilities_IndentedStringBuilder_BeginElse
+  name: BeginElse
+  nameWithType: IndentedStringBuilder.BeginElse
+  fullName: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginElse
+- uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginForEach*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginForEach
+  href: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.html#ANcpLua_Roslyn_Utilities_IndentedStringBuilder_BeginForEach_System_String_System_String_System_String_
+  name: BeginForEach
+  nameWithType: IndentedStringBuilder.BeginForEach
+  fullName: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginForEach
+- uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.EndBlock*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.IndentedStringBuilder.EndBlock
+  href: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.html#ANcpLua_Roslyn_Utilities_IndentedStringBuilder_EndBlock_System_String_
+  name: EndBlock
+  nameWithType: IndentedStringBuilder.EndBlock
+  fullName: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.EndBlock
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.ToString*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.IndentedStringBuilder.ToString
+  href: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.html#ANcpLua_Roslyn_Utilities_IndentedStringBuilder_ToString
+  name: ToString
+  nameWithType: IndentedStringBuilder.ToString
+  fullName: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.ToString
+- uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.Clear*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.IndentedStringBuilder.Clear
+  href: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.html#ANcpLua_Roslyn_Utilities_IndentedStringBuilder_Clear
+  name: Clear
+  nameWithType: IndentedStringBuilder.Clear
+  fullName: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.Clear

@@ -1,0 +1,1902 @@
+### YamlMime:ManagedReference
+items:
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions
+  commentId: T:ANcpLua.Roslyn.Utilities.SemanticGuardExtensions
+  id: SemanticGuardExtensions
+  parent: ANcpLua.Roslyn.Utilities
+  children:
+  - ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeAsync(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IMethodSymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  - ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeClass(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.INamedTypeSymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  - ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeDisposable(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.INamedTypeSymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  - ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeExtensionMethod(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IMethodSymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  - ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeInterface(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.INamedTypeSymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  - ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeReadOnly(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IPropertySymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  - ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeRecord(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.INamedTypeSymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  - ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeRequired(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IPropertySymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  - ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeStruct(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.INamedTypeSymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  - ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustHaveCancellationToken(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IMethodSymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  - ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustHaveGetter(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IPropertySymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  - ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustHaveMultipleDeclarations(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.INamedTypeSymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  - ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustHaveNoParameters(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IMethodSymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  - ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustHaveParameterCount(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IMethodSymbol},System.Int32,ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  - ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustHaveSetter(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IPropertySymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  - ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustImplement(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.INamedTypeSymbol},Microsoft.CodeAnalysis.ITypeSymbol,ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  - ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustInheritFrom(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.INamedTypeSymbol},Microsoft.CodeAnalysis.ITypeSymbol,ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  - ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustNotBeAbstract(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.INamedTypeSymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  - ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustNotBeAsync(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IMethodSymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  - ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustNotBeExtensionMethod(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IMethodSymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  - ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustNotBeGeneric(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.INamedTypeSymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  - ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustNotReturnVoid(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IMethodSymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  - ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustReturnTask(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IMethodSymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  - ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustReturnVoid(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IMethodSymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  langs:
+  - csharp
+  - vb
+  name: SemanticGuardExtensions
+  nameWithType: SemanticGuardExtensions
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions
+  type: Class
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: SemanticGuardExtensions
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+    startLine: 256
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Provides extension methods for <xref href="ANcpLua.Roslyn.Utilities.SemanticGuard%601" data-throw-if-not-resolved="false"></xref> with symbol-type-specific validations.
+  remarks: <ul><li>Method-specific guards for <xref href="Microsoft.CodeAnalysis.IMethodSymbol" data-throw-if-not-resolved="false"></xref></li><li>Type-specific guards for <xref href="Microsoft.CodeAnalysis.INamedTypeSymbol" data-throw-if-not-resolved="false"></xref></li><li>Property-specific guards for <xref href="Microsoft.CodeAnalysis.IPropertySymbol" data-throw-if-not-resolved="false"></xref></li></ul>
+  example: []
+  syntax:
+    content: public static class SemanticGuardExtensions
+    content.vb: Public Module SemanticGuardExtensions
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.SemanticGuard`1
+    commentId: T:ANcpLua.Roslyn.Utilities.SemanticGuard`1
+  - linkId: ANcpLua.Roslyn.Utilities.SemanticGuard
+    commentId: T:ANcpLua.Roslyn.Utilities.SemanticGuard
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeAsync(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IMethodSymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  commentId: M:ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeAsync(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IMethodSymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  id: MustBeAsync(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IMethodSymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions
+  langs:
+  - csharp
+  - vb
+  name: MustBeAsync(SemanticGuard<IMethodSymbol>, DiagnosticInfo)
+  nameWithType: SemanticGuardExtensions.MustBeAsync(SemanticGuard<IMethodSymbol>, DiagnosticInfo)
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeAsync(ANcpLua.Roslyn.Utilities.SemanticGuard<Microsoft.CodeAnalysis.IMethodSymbol>, ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: MustBeAsync
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+    startLine: 270
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Validates that the method is declared with the <code>async</code> modifier.
+  example: []
+  syntax:
+    content: public static SemanticGuard<IMethodSymbol> MustBeAsync(this SemanticGuard<IMethodSymbol> guard, DiagnosticInfo onFail)
+    parameters:
+    - id: guard
+      type: ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IMethodSymbol}
+      description: The <xref href="ANcpLua.Roslyn.Utilities.SemanticGuard%601" data-throw-if-not-resolved="false"></xref> for the method.
+    - id: onFail
+      type: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+      description: The diagnostic to record if the method is not async.
+    return:
+      type: ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IMethodSymbol}
+      description: The current <xref href="ANcpLua.Roslyn.Utilities.SemanticGuard%601" data-throw-if-not-resolved="false"></xref> instance for method chaining.
+    content.vb: Public Shared Function MustBeAsync(guard As SemanticGuard(Of IMethodSymbol), onFail As DiagnosticInfo) As SemanticGuard(Of IMethodSymbol)
+  overload: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeAsync*
+  nameWithType.vb: SemanticGuardExtensions.MustBeAsync(SemanticGuard(Of IMethodSymbol), DiagnosticInfo)
+  fullName.vb: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeAsync(ANcpLua.Roslyn.Utilities.SemanticGuard(Of Microsoft.CodeAnalysis.IMethodSymbol), ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  name.vb: MustBeAsync(SemanticGuard(Of IMethodSymbol), DiagnosticInfo)
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustNotBeAsync(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IMethodSymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  commentId: M:ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustNotBeAsync(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IMethodSymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  id: MustNotBeAsync(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IMethodSymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions
+  langs:
+  - csharp
+  - vb
+  name: MustNotBeAsync(SemanticGuard<IMethodSymbol>, DiagnosticInfo)
+  nameWithType: SemanticGuardExtensions.MustNotBeAsync(SemanticGuard<IMethodSymbol>, DiagnosticInfo)
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustNotBeAsync(ANcpLua.Roslyn.Utilities.SemanticGuard<Microsoft.CodeAnalysis.IMethodSymbol>, ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: MustNotBeAsync
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+    startLine: 279
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Validates that the method is not declared with the <code>async</code> modifier.
+  example: []
+  syntax:
+    content: public static SemanticGuard<IMethodSymbol> MustNotBeAsync(this SemanticGuard<IMethodSymbol> guard, DiagnosticInfo onFail)
+    parameters:
+    - id: guard
+      type: ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IMethodSymbol}
+      description: The <xref href="ANcpLua.Roslyn.Utilities.SemanticGuard%601" data-throw-if-not-resolved="false"></xref> for the method.
+    - id: onFail
+      type: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+      description: The diagnostic to record if the method is async.
+    return:
+      type: ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IMethodSymbol}
+      description: The current <xref href="ANcpLua.Roslyn.Utilities.SemanticGuard%601" data-throw-if-not-resolved="false"></xref> instance for method chaining.
+    content.vb: Public Shared Function MustNotBeAsync(guard As SemanticGuard(Of IMethodSymbol), onFail As DiagnosticInfo) As SemanticGuard(Of IMethodSymbol)
+  overload: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustNotBeAsync*
+  nameWithType.vb: SemanticGuardExtensions.MustNotBeAsync(SemanticGuard(Of IMethodSymbol), DiagnosticInfo)
+  fullName.vb: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustNotBeAsync(ANcpLua.Roslyn.Utilities.SemanticGuard(Of Microsoft.CodeAnalysis.IMethodSymbol), ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  name.vb: MustNotBeAsync(SemanticGuard(Of IMethodSymbol), DiagnosticInfo)
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustReturnVoid(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IMethodSymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  commentId: M:ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustReturnVoid(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IMethodSymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  id: MustReturnVoid(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IMethodSymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions
+  langs:
+  - csharp
+  - vb
+  name: MustReturnVoid(SemanticGuard<IMethodSymbol>, DiagnosticInfo)
+  nameWithType: SemanticGuardExtensions.MustReturnVoid(SemanticGuard<IMethodSymbol>, DiagnosticInfo)
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustReturnVoid(ANcpLua.Roslyn.Utilities.SemanticGuard<Microsoft.CodeAnalysis.IMethodSymbol>, ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: MustReturnVoid
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+    startLine: 288
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Validates that the method returns <code>void</code>.
+  example: []
+  syntax:
+    content: public static SemanticGuard<IMethodSymbol> MustReturnVoid(this SemanticGuard<IMethodSymbol> guard, DiagnosticInfo onFail)
+    parameters:
+    - id: guard
+      type: ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IMethodSymbol}
+      description: The <xref href="ANcpLua.Roslyn.Utilities.SemanticGuard%601" data-throw-if-not-resolved="false"></xref> for the method.
+    - id: onFail
+      type: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+      description: The diagnostic to record if the method does not return void.
+    return:
+      type: ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IMethodSymbol}
+      description: The current <xref href="ANcpLua.Roslyn.Utilities.SemanticGuard%601" data-throw-if-not-resolved="false"></xref> instance for method chaining.
+    content.vb: Public Shared Function MustReturnVoid(guard As SemanticGuard(Of IMethodSymbol), onFail As DiagnosticInfo) As SemanticGuard(Of IMethodSymbol)
+  overload: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustReturnVoid*
+  nameWithType.vb: SemanticGuardExtensions.MustReturnVoid(SemanticGuard(Of IMethodSymbol), DiagnosticInfo)
+  fullName.vb: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustReturnVoid(ANcpLua.Roslyn.Utilities.SemanticGuard(Of Microsoft.CodeAnalysis.IMethodSymbol), ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  name.vb: MustReturnVoid(SemanticGuard(Of IMethodSymbol), DiagnosticInfo)
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustNotReturnVoid(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IMethodSymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  commentId: M:ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustNotReturnVoid(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IMethodSymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  id: MustNotReturnVoid(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IMethodSymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions
+  langs:
+  - csharp
+  - vb
+  name: MustNotReturnVoid(SemanticGuard<IMethodSymbol>, DiagnosticInfo)
+  nameWithType: SemanticGuardExtensions.MustNotReturnVoid(SemanticGuard<IMethodSymbol>, DiagnosticInfo)
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustNotReturnVoid(ANcpLua.Roslyn.Utilities.SemanticGuard<Microsoft.CodeAnalysis.IMethodSymbol>, ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: MustNotReturnVoid
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+    startLine: 297
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Validates that the method does not return <code>void</code>.
+  example: []
+  syntax:
+    content: public static SemanticGuard<IMethodSymbol> MustNotReturnVoid(this SemanticGuard<IMethodSymbol> guard, DiagnosticInfo onFail)
+    parameters:
+    - id: guard
+      type: ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IMethodSymbol}
+      description: The <xref href="ANcpLua.Roslyn.Utilities.SemanticGuard%601" data-throw-if-not-resolved="false"></xref> for the method.
+    - id: onFail
+      type: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+      description: The diagnostic to record if the method returns void.
+    return:
+      type: ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IMethodSymbol}
+      description: The current <xref href="ANcpLua.Roslyn.Utilities.SemanticGuard%601" data-throw-if-not-resolved="false"></xref> instance for method chaining.
+    content.vb: Public Shared Function MustNotReturnVoid(guard As SemanticGuard(Of IMethodSymbol), onFail As DiagnosticInfo) As SemanticGuard(Of IMethodSymbol)
+  overload: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustNotReturnVoid*
+  nameWithType.vb: SemanticGuardExtensions.MustNotReturnVoid(SemanticGuard(Of IMethodSymbol), DiagnosticInfo)
+  fullName.vb: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustNotReturnVoid(ANcpLua.Roslyn.Utilities.SemanticGuard(Of Microsoft.CodeAnalysis.IMethodSymbol), ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  name.vb: MustNotReturnVoid(SemanticGuard(Of IMethodSymbol), DiagnosticInfo)
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustReturnTask(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IMethodSymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  commentId: M:ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustReturnTask(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IMethodSymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  id: MustReturnTask(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IMethodSymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions
+  langs:
+  - csharp
+  - vb
+  name: MustReturnTask(SemanticGuard<IMethodSymbol>, DiagnosticInfo)
+  nameWithType: SemanticGuardExtensions.MustReturnTask(SemanticGuard<IMethodSymbol>, DiagnosticInfo)
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustReturnTask(ANcpLua.Roslyn.Utilities.SemanticGuard<Microsoft.CodeAnalysis.IMethodSymbol>, ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: MustReturnTask
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+    startLine: 307
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Validates that the method returns a Task-like type.
+  example: []
+  syntax:
+    content: public static SemanticGuard<IMethodSymbol> MustReturnTask(this SemanticGuard<IMethodSymbol> guard, DiagnosticInfo onFail)
+    parameters:
+    - id: guard
+      type: ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IMethodSymbol}
+      description: The <xref href="ANcpLua.Roslyn.Utilities.SemanticGuard%601" data-throw-if-not-resolved="false"></xref> for the method.
+    - id: onFail
+      type: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+      description: The diagnostic to record if the method does not return a Task-like type.
+    return:
+      type: ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IMethodSymbol}
+      description: The current <xref href="ANcpLua.Roslyn.Utilities.SemanticGuard%601" data-throw-if-not-resolved="false"></xref> instance for method chaining.
+    content.vb: Public Shared Function MustReturnTask(guard As SemanticGuard(Of IMethodSymbol), onFail As DiagnosticInfo) As SemanticGuard(Of IMethodSymbol)
+  overload: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustReturnTask*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsTaskType(Microsoft.CodeAnalysis.ITypeSymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsTaskType(Microsoft.CodeAnalysis.ITypeSymbol)
+  nameWithType.vb: SemanticGuardExtensions.MustReturnTask(SemanticGuard(Of IMethodSymbol), DiagnosticInfo)
+  fullName.vb: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustReturnTask(ANcpLua.Roslyn.Utilities.SemanticGuard(Of Microsoft.CodeAnalysis.IMethodSymbol), ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  name.vb: MustReturnTask(SemanticGuard(Of IMethodSymbol), DiagnosticInfo)
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustHaveNoParameters(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IMethodSymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  commentId: M:ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustHaveNoParameters(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IMethodSymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  id: MustHaveNoParameters(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IMethodSymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions
+  langs:
+  - csharp
+  - vb
+  name: MustHaveNoParameters(SemanticGuard<IMethodSymbol>, DiagnosticInfo)
+  nameWithType: SemanticGuardExtensions.MustHaveNoParameters(SemanticGuard<IMethodSymbol>, DiagnosticInfo)
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustHaveNoParameters(ANcpLua.Roslyn.Utilities.SemanticGuard<Microsoft.CodeAnalysis.IMethodSymbol>, ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: MustHaveNoParameters
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+    startLine: 316
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Validates that the method has no parameters.
+  example: []
+  syntax:
+    content: public static SemanticGuard<IMethodSymbol> MustHaveNoParameters(this SemanticGuard<IMethodSymbol> guard, DiagnosticInfo onFail)
+    parameters:
+    - id: guard
+      type: ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IMethodSymbol}
+      description: The <xref href="ANcpLua.Roslyn.Utilities.SemanticGuard%601" data-throw-if-not-resolved="false"></xref> for the method.
+    - id: onFail
+      type: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+      description: The diagnostic to record if the method has parameters.
+    return:
+      type: ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IMethodSymbol}
+      description: The current <xref href="ANcpLua.Roslyn.Utilities.SemanticGuard%601" data-throw-if-not-resolved="false"></xref> instance for method chaining.
+    content.vb: Public Shared Function MustHaveNoParameters(guard As SemanticGuard(Of IMethodSymbol), onFail As DiagnosticInfo) As SemanticGuard(Of IMethodSymbol)
+  overload: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustHaveNoParameters*
+  nameWithType.vb: SemanticGuardExtensions.MustHaveNoParameters(SemanticGuard(Of IMethodSymbol), DiagnosticInfo)
+  fullName.vb: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustHaveNoParameters(ANcpLua.Roslyn.Utilities.SemanticGuard(Of Microsoft.CodeAnalysis.IMethodSymbol), ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  name.vb: MustHaveNoParameters(SemanticGuard(Of IMethodSymbol), DiagnosticInfo)
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustHaveParameterCount(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IMethodSymbol},System.Int32,ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  commentId: M:ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustHaveParameterCount(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IMethodSymbol},System.Int32,ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  id: MustHaveParameterCount(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IMethodSymbol},System.Int32,ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions
+  langs:
+  - csharp
+  - vb
+  name: MustHaveParameterCount(SemanticGuard<IMethodSymbol>, int, DiagnosticInfo)
+  nameWithType: SemanticGuardExtensions.MustHaveParameterCount(SemanticGuard<IMethodSymbol>, int, DiagnosticInfo)
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustHaveParameterCount(ANcpLua.Roslyn.Utilities.SemanticGuard<Microsoft.CodeAnalysis.IMethodSymbol>, int, ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: MustHaveParameterCount
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+    startLine: 326
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Validates that the method has the specified number of parameters.
+  example: []
+  syntax:
+    content: public static SemanticGuard<IMethodSymbol> MustHaveParameterCount(this SemanticGuard<IMethodSymbol> guard, int count, DiagnosticInfo onFail)
+    parameters:
+    - id: guard
+      type: ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IMethodSymbol}
+      description: The <xref href="ANcpLua.Roslyn.Utilities.SemanticGuard%601" data-throw-if-not-resolved="false"></xref> for the method.
+    - id: count
+      type: System.Int32
+      description: The required number of parameters.
+    - id: onFail
+      type: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+      description: The diagnostic to record if the parameter count does not match.
+    return:
+      type: ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IMethodSymbol}
+      description: The current <xref href="ANcpLua.Roslyn.Utilities.SemanticGuard%601" data-throw-if-not-resolved="false"></xref> instance for method chaining.
+    content.vb: Public Shared Function MustHaveParameterCount(guard As SemanticGuard(Of IMethodSymbol), count As Integer, onFail As DiagnosticInfo) As SemanticGuard(Of IMethodSymbol)
+  overload: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustHaveParameterCount*
+  nameWithType.vb: SemanticGuardExtensions.MustHaveParameterCount(SemanticGuard(Of IMethodSymbol), Integer, DiagnosticInfo)
+  fullName.vb: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustHaveParameterCount(ANcpLua.Roslyn.Utilities.SemanticGuard(Of Microsoft.CodeAnalysis.IMethodSymbol), Integer, ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  name.vb: MustHaveParameterCount(SemanticGuard(Of IMethodSymbol), Integer, DiagnosticInfo)
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustHaveCancellationToken(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IMethodSymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  commentId: M:ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustHaveCancellationToken(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IMethodSymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  id: MustHaveCancellationToken(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IMethodSymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions
+  langs:
+  - csharp
+  - vb
+  name: MustHaveCancellationToken(SemanticGuard<IMethodSymbol>, DiagnosticInfo)
+  nameWithType: SemanticGuardExtensions.MustHaveCancellationToken(SemanticGuard<IMethodSymbol>, DiagnosticInfo)
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustHaveCancellationToken(ANcpLua.Roslyn.Utilities.SemanticGuard<Microsoft.CodeAnalysis.IMethodSymbol>, ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: MustHaveCancellationToken
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+    startLine: 335
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Validates that the method has a <xref href="System.Threading.CancellationToken" data-throw-if-not-resolved="false"></xref> parameter.
+  example: []
+  syntax:
+    content: public static SemanticGuard<IMethodSymbol> MustHaveCancellationToken(this SemanticGuard<IMethodSymbol> guard, DiagnosticInfo onFail)
+    parameters:
+    - id: guard
+      type: ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IMethodSymbol}
+      description: The <xref href="ANcpLua.Roslyn.Utilities.SemanticGuard%601" data-throw-if-not-resolved="false"></xref> for the method.
+    - id: onFail
+      type: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+      description: The diagnostic to record if no CancellationToken parameter is present.
+    return:
+      type: ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IMethodSymbol}
+      description: The current <xref href="ANcpLua.Roslyn.Utilities.SemanticGuard%601" data-throw-if-not-resolved="false"></xref> instance for method chaining.
+    content.vb: Public Shared Function MustHaveCancellationToken(guard As SemanticGuard(Of IMethodSymbol), onFail As DiagnosticInfo) As SemanticGuard(Of IMethodSymbol)
+  overload: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustHaveCancellationToken*
+  nameWithType.vb: SemanticGuardExtensions.MustHaveCancellationToken(SemanticGuard(Of IMethodSymbol), DiagnosticInfo)
+  fullName.vb: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustHaveCancellationToken(ANcpLua.Roslyn.Utilities.SemanticGuard(Of Microsoft.CodeAnalysis.IMethodSymbol), ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  name.vb: MustHaveCancellationToken(SemanticGuard(Of IMethodSymbol), DiagnosticInfo)
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeExtensionMethod(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IMethodSymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  commentId: M:ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeExtensionMethod(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IMethodSymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  id: MustBeExtensionMethod(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IMethodSymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions
+  langs:
+  - csharp
+  - vb
+  name: MustBeExtensionMethod(SemanticGuard<IMethodSymbol>, DiagnosticInfo)
+  nameWithType: SemanticGuardExtensions.MustBeExtensionMethod(SemanticGuard<IMethodSymbol>, DiagnosticInfo)
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeExtensionMethod(ANcpLua.Roslyn.Utilities.SemanticGuard<Microsoft.CodeAnalysis.IMethodSymbol>, ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: MustBeExtensionMethod
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+    startLine: 354
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Validates that the method is an extension method.
+  example: []
+  syntax:
+    content: public static SemanticGuard<IMethodSymbol> MustBeExtensionMethod(this SemanticGuard<IMethodSymbol> guard, DiagnosticInfo onFail)
+    parameters:
+    - id: guard
+      type: ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IMethodSymbol}
+      description: The <xref href="ANcpLua.Roslyn.Utilities.SemanticGuard%601" data-throw-if-not-resolved="false"></xref> for the method.
+    - id: onFail
+      type: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+      description: The diagnostic to record if the method is not an extension method.
+    return:
+      type: ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IMethodSymbol}
+      description: The current <xref href="ANcpLua.Roslyn.Utilities.SemanticGuard%601" data-throw-if-not-resolved="false"></xref> instance for method chaining.
+    content.vb: Public Shared Function MustBeExtensionMethod(guard As SemanticGuard(Of IMethodSymbol), onFail As DiagnosticInfo) As SemanticGuard(Of IMethodSymbol)
+  overload: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeExtensionMethod*
+  nameWithType.vb: SemanticGuardExtensions.MustBeExtensionMethod(SemanticGuard(Of IMethodSymbol), DiagnosticInfo)
+  fullName.vb: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeExtensionMethod(ANcpLua.Roslyn.Utilities.SemanticGuard(Of Microsoft.CodeAnalysis.IMethodSymbol), ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  name.vb: MustBeExtensionMethod(SemanticGuard(Of IMethodSymbol), DiagnosticInfo)
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustNotBeExtensionMethod(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IMethodSymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  commentId: M:ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustNotBeExtensionMethod(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IMethodSymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  id: MustNotBeExtensionMethod(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IMethodSymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions
+  langs:
+  - csharp
+  - vb
+  name: MustNotBeExtensionMethod(SemanticGuard<IMethodSymbol>, DiagnosticInfo)
+  nameWithType: SemanticGuardExtensions.MustNotBeExtensionMethod(SemanticGuard<IMethodSymbol>, DiagnosticInfo)
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustNotBeExtensionMethod(ANcpLua.Roslyn.Utilities.SemanticGuard<Microsoft.CodeAnalysis.IMethodSymbol>, ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: MustNotBeExtensionMethod
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+    startLine: 363
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Validates that the method is not an extension method.
+  example: []
+  syntax:
+    content: public static SemanticGuard<IMethodSymbol> MustNotBeExtensionMethod(this SemanticGuard<IMethodSymbol> guard, DiagnosticInfo onFail)
+    parameters:
+    - id: guard
+      type: ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IMethodSymbol}
+      description: The <xref href="ANcpLua.Roslyn.Utilities.SemanticGuard%601" data-throw-if-not-resolved="false"></xref> for the method.
+    - id: onFail
+      type: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+      description: The diagnostic to record if the method is an extension method.
+    return:
+      type: ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IMethodSymbol}
+      description: The current <xref href="ANcpLua.Roslyn.Utilities.SemanticGuard%601" data-throw-if-not-resolved="false"></xref> instance for method chaining.
+    content.vb: Public Shared Function MustNotBeExtensionMethod(guard As SemanticGuard(Of IMethodSymbol), onFail As DiagnosticInfo) As SemanticGuard(Of IMethodSymbol)
+  overload: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustNotBeExtensionMethod*
+  nameWithType.vb: SemanticGuardExtensions.MustNotBeExtensionMethod(SemanticGuard(Of IMethodSymbol), DiagnosticInfo)
+  fullName.vb: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustNotBeExtensionMethod(ANcpLua.Roslyn.Utilities.SemanticGuard(Of Microsoft.CodeAnalysis.IMethodSymbol), ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  name.vb: MustNotBeExtensionMethod(SemanticGuard(Of IMethodSymbol), DiagnosticInfo)
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustHaveMultipleDeclarations(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.INamedTypeSymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  commentId: M:ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustHaveMultipleDeclarations(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.INamedTypeSymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  id: MustHaveMultipleDeclarations(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.INamedTypeSymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions
+  langs:
+  - csharp
+  - vb
+  name: MustHaveMultipleDeclarations(SemanticGuard<INamedTypeSymbol>, DiagnosticInfo)
+  nameWithType: SemanticGuardExtensions.MustHaveMultipleDeclarations(SemanticGuard<INamedTypeSymbol>, DiagnosticInfo)
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustHaveMultipleDeclarations(ANcpLua.Roslyn.Utilities.SemanticGuard<Microsoft.CodeAnalysis.INamedTypeSymbol>, ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: MustHaveMultipleDeclarations
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+    startLine: 374
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Validates that the type has multiple partial declarations.
+  example: []
+  syntax:
+    content: public static SemanticGuard<INamedTypeSymbol> MustHaveMultipleDeclarations(this SemanticGuard<INamedTypeSymbol> guard, DiagnosticInfo onFail)
+    parameters:
+    - id: guard
+      type: ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.INamedTypeSymbol}
+      description: The <xref href="ANcpLua.Roslyn.Utilities.SemanticGuard%601" data-throw-if-not-resolved="false"></xref> for the type.
+    - id: onFail
+      type: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+      description: The diagnostic to record if the type does not have multiple declarations.
+    return:
+      type: ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.INamedTypeSymbol}
+      description: The current <xref href="ANcpLua.Roslyn.Utilities.SemanticGuard%601" data-throw-if-not-resolved="false"></xref> instance for method chaining.
+    content.vb: Public Shared Function MustHaveMultipleDeclarations(guard As SemanticGuard(Of INamedTypeSymbol), onFail As DiagnosticInfo) As SemanticGuard(Of INamedTypeSymbol)
+  overload: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustHaveMultipleDeclarations*
+  nameWithType.vb: SemanticGuardExtensions.MustHaveMultipleDeclarations(SemanticGuard(Of INamedTypeSymbol), DiagnosticInfo)
+  fullName.vb: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustHaveMultipleDeclarations(ANcpLua.Roslyn.Utilities.SemanticGuard(Of Microsoft.CodeAnalysis.INamedTypeSymbol), ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  name.vb: MustHaveMultipleDeclarations(SemanticGuard(Of INamedTypeSymbol), DiagnosticInfo)
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeClass(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.INamedTypeSymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  commentId: M:ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeClass(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.INamedTypeSymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  id: MustBeClass(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.INamedTypeSymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions
+  langs:
+  - csharp
+  - vb
+  name: MustBeClass(SemanticGuard<INamedTypeSymbol>, DiagnosticInfo)
+  nameWithType: SemanticGuardExtensions.MustBeClass(SemanticGuard<INamedTypeSymbol>, DiagnosticInfo)
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeClass(ANcpLua.Roslyn.Utilities.SemanticGuard<Microsoft.CodeAnalysis.INamedTypeSymbol>, ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: MustBeClass
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+    startLine: 383
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Validates that the type is a class.
+  example: []
+  syntax:
+    content: public static SemanticGuard<INamedTypeSymbol> MustBeClass(this SemanticGuard<INamedTypeSymbol> guard, DiagnosticInfo onFail)
+    parameters:
+    - id: guard
+      type: ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.INamedTypeSymbol}
+      description: The <xref href="ANcpLua.Roslyn.Utilities.SemanticGuard%601" data-throw-if-not-resolved="false"></xref> for the type.
+    - id: onFail
+      type: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+      description: The diagnostic to record if the type is not a class.
+    return:
+      type: ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.INamedTypeSymbol}
+      description: The current <xref href="ANcpLua.Roslyn.Utilities.SemanticGuard%601" data-throw-if-not-resolved="false"></xref> instance for method chaining.
+    content.vb: Public Shared Function MustBeClass(guard As SemanticGuard(Of INamedTypeSymbol), onFail As DiagnosticInfo) As SemanticGuard(Of INamedTypeSymbol)
+  overload: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeClass*
+  nameWithType.vb: SemanticGuardExtensions.MustBeClass(SemanticGuard(Of INamedTypeSymbol), DiagnosticInfo)
+  fullName.vb: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeClass(ANcpLua.Roslyn.Utilities.SemanticGuard(Of Microsoft.CodeAnalysis.INamedTypeSymbol), ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  name.vb: MustBeClass(SemanticGuard(Of INamedTypeSymbol), DiagnosticInfo)
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeStruct(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.INamedTypeSymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  commentId: M:ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeStruct(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.INamedTypeSymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  id: MustBeStruct(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.INamedTypeSymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions
+  langs:
+  - csharp
+  - vb
+  name: MustBeStruct(SemanticGuard<INamedTypeSymbol>, DiagnosticInfo)
+  nameWithType: SemanticGuardExtensions.MustBeStruct(SemanticGuard<INamedTypeSymbol>, DiagnosticInfo)
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeStruct(ANcpLua.Roslyn.Utilities.SemanticGuard<Microsoft.CodeAnalysis.INamedTypeSymbol>, ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: MustBeStruct
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+    startLine: 392
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Validates that the type is a struct.
+  example: []
+  syntax:
+    content: public static SemanticGuard<INamedTypeSymbol> MustBeStruct(this SemanticGuard<INamedTypeSymbol> guard, DiagnosticInfo onFail)
+    parameters:
+    - id: guard
+      type: ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.INamedTypeSymbol}
+      description: The <xref href="ANcpLua.Roslyn.Utilities.SemanticGuard%601" data-throw-if-not-resolved="false"></xref> for the type.
+    - id: onFail
+      type: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+      description: The diagnostic to record if the type is not a struct.
+    return:
+      type: ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.INamedTypeSymbol}
+      description: The current <xref href="ANcpLua.Roslyn.Utilities.SemanticGuard%601" data-throw-if-not-resolved="false"></xref> instance for method chaining.
+    content.vb: Public Shared Function MustBeStruct(guard As SemanticGuard(Of INamedTypeSymbol), onFail As DiagnosticInfo) As SemanticGuard(Of INamedTypeSymbol)
+  overload: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeStruct*
+  nameWithType.vb: SemanticGuardExtensions.MustBeStruct(SemanticGuard(Of INamedTypeSymbol), DiagnosticInfo)
+  fullName.vb: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeStruct(ANcpLua.Roslyn.Utilities.SemanticGuard(Of Microsoft.CodeAnalysis.INamedTypeSymbol), ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  name.vb: MustBeStruct(SemanticGuard(Of INamedTypeSymbol), DiagnosticInfo)
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeInterface(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.INamedTypeSymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  commentId: M:ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeInterface(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.INamedTypeSymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  id: MustBeInterface(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.INamedTypeSymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions
+  langs:
+  - csharp
+  - vb
+  name: MustBeInterface(SemanticGuard<INamedTypeSymbol>, DiagnosticInfo)
+  nameWithType: SemanticGuardExtensions.MustBeInterface(SemanticGuard<INamedTypeSymbol>, DiagnosticInfo)
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeInterface(ANcpLua.Roslyn.Utilities.SemanticGuard<Microsoft.CodeAnalysis.INamedTypeSymbol>, ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: MustBeInterface
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+    startLine: 401
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Validates that the type is an interface.
+  example: []
+  syntax:
+    content: public static SemanticGuard<INamedTypeSymbol> MustBeInterface(this SemanticGuard<INamedTypeSymbol> guard, DiagnosticInfo onFail)
+    parameters:
+    - id: guard
+      type: ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.INamedTypeSymbol}
+      description: The <xref href="ANcpLua.Roslyn.Utilities.SemanticGuard%601" data-throw-if-not-resolved="false"></xref> for the type.
+    - id: onFail
+      type: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+      description: The diagnostic to record if the type is not an interface.
+    return:
+      type: ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.INamedTypeSymbol}
+      description: The current <xref href="ANcpLua.Roslyn.Utilities.SemanticGuard%601" data-throw-if-not-resolved="false"></xref> instance for method chaining.
+    content.vb: Public Shared Function MustBeInterface(guard As SemanticGuard(Of INamedTypeSymbol), onFail As DiagnosticInfo) As SemanticGuard(Of INamedTypeSymbol)
+  overload: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeInterface*
+  nameWithType.vb: SemanticGuardExtensions.MustBeInterface(SemanticGuard(Of INamedTypeSymbol), DiagnosticInfo)
+  fullName.vb: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeInterface(ANcpLua.Roslyn.Utilities.SemanticGuard(Of Microsoft.CodeAnalysis.INamedTypeSymbol), ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  name.vb: MustBeInterface(SemanticGuard(Of INamedTypeSymbol), DiagnosticInfo)
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeRecord(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.INamedTypeSymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  commentId: M:ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeRecord(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.INamedTypeSymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  id: MustBeRecord(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.INamedTypeSymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions
+  langs:
+  - csharp
+  - vb
+  name: MustBeRecord(SemanticGuard<INamedTypeSymbol>, DiagnosticInfo)
+  nameWithType: SemanticGuardExtensions.MustBeRecord(SemanticGuard<INamedTypeSymbol>, DiagnosticInfo)
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeRecord(ANcpLua.Roslyn.Utilities.SemanticGuard<Microsoft.CodeAnalysis.INamedTypeSymbol>, ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: MustBeRecord
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+    startLine: 410
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Validates that the type is a record.
+  example: []
+  syntax:
+    content: public static SemanticGuard<INamedTypeSymbol> MustBeRecord(this SemanticGuard<INamedTypeSymbol> guard, DiagnosticInfo onFail)
+    parameters:
+    - id: guard
+      type: ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.INamedTypeSymbol}
+      description: The <xref href="ANcpLua.Roslyn.Utilities.SemanticGuard%601" data-throw-if-not-resolved="false"></xref> for the type.
+    - id: onFail
+      type: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+      description: The diagnostic to record if the type is not a record.
+    return:
+      type: ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.INamedTypeSymbol}
+      description: The current <xref href="ANcpLua.Roslyn.Utilities.SemanticGuard%601" data-throw-if-not-resolved="false"></xref> instance for method chaining.
+    content.vb: Public Shared Function MustBeRecord(guard As SemanticGuard(Of INamedTypeSymbol), onFail As DiagnosticInfo) As SemanticGuard(Of INamedTypeSymbol)
+  overload: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeRecord*
+  nameWithType.vb: SemanticGuardExtensions.MustBeRecord(SemanticGuard(Of INamedTypeSymbol), DiagnosticInfo)
+  fullName.vb: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeRecord(ANcpLua.Roslyn.Utilities.SemanticGuard(Of Microsoft.CodeAnalysis.INamedTypeSymbol), ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  name.vb: MustBeRecord(SemanticGuard(Of INamedTypeSymbol), DiagnosticInfo)
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustNotBeAbstract(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.INamedTypeSymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  commentId: M:ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustNotBeAbstract(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.INamedTypeSymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  id: MustNotBeAbstract(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.INamedTypeSymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions
+  langs:
+  - csharp
+  - vb
+  name: MustNotBeAbstract(SemanticGuard<INamedTypeSymbol>, DiagnosticInfo)
+  nameWithType: SemanticGuardExtensions.MustNotBeAbstract(SemanticGuard<INamedTypeSymbol>, DiagnosticInfo)
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustNotBeAbstract(ANcpLua.Roslyn.Utilities.SemanticGuard<Microsoft.CodeAnalysis.INamedTypeSymbol>, ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: MustNotBeAbstract
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+    startLine: 419
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Validates that the type is not abstract.
+  example: []
+  syntax:
+    content: public static SemanticGuard<INamedTypeSymbol> MustNotBeAbstract(this SemanticGuard<INamedTypeSymbol> guard, DiagnosticInfo onFail)
+    parameters:
+    - id: guard
+      type: ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.INamedTypeSymbol}
+      description: The <xref href="ANcpLua.Roslyn.Utilities.SemanticGuard%601" data-throw-if-not-resolved="false"></xref> for the type.
+    - id: onFail
+      type: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+      description: The diagnostic to record if the type is abstract.
+    return:
+      type: ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.INamedTypeSymbol}
+      description: The current <xref href="ANcpLua.Roslyn.Utilities.SemanticGuard%601" data-throw-if-not-resolved="false"></xref> instance for method chaining.
+    content.vb: Public Shared Function MustNotBeAbstract(guard As SemanticGuard(Of INamedTypeSymbol), onFail As DiagnosticInfo) As SemanticGuard(Of INamedTypeSymbol)
+  overload: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustNotBeAbstract*
+  nameWithType.vb: SemanticGuardExtensions.MustNotBeAbstract(SemanticGuard(Of INamedTypeSymbol), DiagnosticInfo)
+  fullName.vb: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustNotBeAbstract(ANcpLua.Roslyn.Utilities.SemanticGuard(Of Microsoft.CodeAnalysis.INamedTypeSymbol), ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  name.vb: MustNotBeAbstract(SemanticGuard(Of INamedTypeSymbol), DiagnosticInfo)
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustNotBeGeneric(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.INamedTypeSymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  commentId: M:ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustNotBeGeneric(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.INamedTypeSymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  id: MustNotBeGeneric(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.INamedTypeSymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions
+  langs:
+  - csharp
+  - vb
+  name: MustNotBeGeneric(SemanticGuard<INamedTypeSymbol>, DiagnosticInfo)
+  nameWithType: SemanticGuardExtensions.MustNotBeGeneric(SemanticGuard<INamedTypeSymbol>, DiagnosticInfo)
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustNotBeGeneric(ANcpLua.Roslyn.Utilities.SemanticGuard<Microsoft.CodeAnalysis.INamedTypeSymbol>, ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: MustNotBeGeneric
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+    startLine: 428
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Validates that the type is not generic.
+  example: []
+  syntax:
+    content: public static SemanticGuard<INamedTypeSymbol> MustNotBeGeneric(this SemanticGuard<INamedTypeSymbol> guard, DiagnosticInfo onFail)
+    parameters:
+    - id: guard
+      type: ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.INamedTypeSymbol}
+      description: The <xref href="ANcpLua.Roslyn.Utilities.SemanticGuard%601" data-throw-if-not-resolved="false"></xref> for the type.
+    - id: onFail
+      type: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+      description: The diagnostic to record if the type is generic.
+    return:
+      type: ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.INamedTypeSymbol}
+      description: The current <xref href="ANcpLua.Roslyn.Utilities.SemanticGuard%601" data-throw-if-not-resolved="false"></xref> instance for method chaining.
+    content.vb: Public Shared Function MustNotBeGeneric(guard As SemanticGuard(Of INamedTypeSymbol), onFail As DiagnosticInfo) As SemanticGuard(Of INamedTypeSymbol)
+  overload: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustNotBeGeneric*
+  nameWithType.vb: SemanticGuardExtensions.MustNotBeGeneric(SemanticGuard(Of INamedTypeSymbol), DiagnosticInfo)
+  fullName.vb: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustNotBeGeneric(ANcpLua.Roslyn.Utilities.SemanticGuard(Of Microsoft.CodeAnalysis.INamedTypeSymbol), ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  name.vb: MustNotBeGeneric(SemanticGuard(Of INamedTypeSymbol), DiagnosticInfo)
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustImplement(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.INamedTypeSymbol},Microsoft.CodeAnalysis.ITypeSymbol,ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  commentId: M:ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustImplement(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.INamedTypeSymbol},Microsoft.CodeAnalysis.ITypeSymbol,ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  id: MustImplement(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.INamedTypeSymbol},Microsoft.CodeAnalysis.ITypeSymbol,ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions
+  langs:
+  - csharp
+  - vb
+  name: MustImplement(SemanticGuard<INamedTypeSymbol>, ITypeSymbol, DiagnosticInfo)
+  nameWithType: SemanticGuardExtensions.MustImplement(SemanticGuard<INamedTypeSymbol>, ITypeSymbol, DiagnosticInfo)
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustImplement(ANcpLua.Roslyn.Utilities.SemanticGuard<Microsoft.CodeAnalysis.INamedTypeSymbol>, Microsoft.CodeAnalysis.ITypeSymbol, ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: MustImplement
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+    startLine: 439
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Validates that the type implements the specified interface.
+  example: []
+  syntax:
+    content: public static SemanticGuard<INamedTypeSymbol> MustImplement(this SemanticGuard<INamedTypeSymbol> guard, ITypeSymbol interfaceType, DiagnosticInfo onFail)
+    parameters:
+    - id: guard
+      type: ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.INamedTypeSymbol}
+      description: The <xref href="ANcpLua.Roslyn.Utilities.SemanticGuard%601" data-throw-if-not-resolved="false"></xref> for the type.
+    - id: interfaceType
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The <xref href="Microsoft.CodeAnalysis.ITypeSymbol" data-throw-if-not-resolved="false"></xref> representing the interface to check for.
+    - id: onFail
+      type: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+      description: The diagnostic to record if the type does not implement the interface.
+    return:
+      type: ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.INamedTypeSymbol}
+      description: The current <xref href="ANcpLua.Roslyn.Utilities.SemanticGuard%601" data-throw-if-not-resolved="false"></xref> instance for method chaining.
+    content.vb: Public Shared Function MustImplement(guard As SemanticGuard(Of INamedTypeSymbol), interfaceType As ITypeSymbol, onFail As DiagnosticInfo) As SemanticGuard(Of INamedTypeSymbol)
+  overload: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustImplement*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.Implements(Microsoft.CodeAnalysis.ITypeSymbol,Microsoft.CodeAnalysis.ITypeSymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.Implements(Microsoft.CodeAnalysis.ITypeSymbol,Microsoft.CodeAnalysis.ITypeSymbol)
+  nameWithType.vb: SemanticGuardExtensions.MustImplement(SemanticGuard(Of INamedTypeSymbol), ITypeSymbol, DiagnosticInfo)
+  fullName.vb: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustImplement(ANcpLua.Roslyn.Utilities.SemanticGuard(Of Microsoft.CodeAnalysis.INamedTypeSymbol), Microsoft.CodeAnalysis.ITypeSymbol, ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  name.vb: MustImplement(SemanticGuard(Of INamedTypeSymbol), ITypeSymbol, DiagnosticInfo)
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustInheritFrom(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.INamedTypeSymbol},Microsoft.CodeAnalysis.ITypeSymbol,ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  commentId: M:ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustInheritFrom(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.INamedTypeSymbol},Microsoft.CodeAnalysis.ITypeSymbol,ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  id: MustInheritFrom(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.INamedTypeSymbol},Microsoft.CodeAnalysis.ITypeSymbol,ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions
+  langs:
+  - csharp
+  - vb
+  name: MustInheritFrom(SemanticGuard<INamedTypeSymbol>, ITypeSymbol, DiagnosticInfo)
+  nameWithType: SemanticGuardExtensions.MustInheritFrom(SemanticGuard<INamedTypeSymbol>, ITypeSymbol, DiagnosticInfo)
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustInheritFrom(ANcpLua.Roslyn.Utilities.SemanticGuard<Microsoft.CodeAnalysis.INamedTypeSymbol>, Microsoft.CodeAnalysis.ITypeSymbol, ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: MustInheritFrom
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+    startLine: 450
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Validates that the type inherits from the specified base type.
+  example: []
+  syntax:
+    content: public static SemanticGuard<INamedTypeSymbol> MustInheritFrom(this SemanticGuard<INamedTypeSymbol> guard, ITypeSymbol baseType, DiagnosticInfo onFail)
+    parameters:
+    - id: guard
+      type: ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.INamedTypeSymbol}
+      description: The <xref href="ANcpLua.Roslyn.Utilities.SemanticGuard%601" data-throw-if-not-resolved="false"></xref> for the type.
+    - id: baseType
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The <xref href="Microsoft.CodeAnalysis.ITypeSymbol" data-throw-if-not-resolved="false"></xref> representing the expected base type.
+    - id: onFail
+      type: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+      description: The diagnostic to record if the type does not inherit from the base type.
+    return:
+      type: ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.INamedTypeSymbol}
+      description: The current <xref href="ANcpLua.Roslyn.Utilities.SemanticGuard%601" data-throw-if-not-resolved="false"></xref> instance for method chaining.
+    content.vb: Public Shared Function MustInheritFrom(guard As SemanticGuard(Of INamedTypeSymbol), baseType As ITypeSymbol, onFail As DiagnosticInfo) As SemanticGuard(Of INamedTypeSymbol)
+  overload: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustInheritFrom*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.InheritsFrom(Microsoft.CodeAnalysis.ITypeSymbol,Microsoft.CodeAnalysis.ITypeSymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.InheritsFrom(Microsoft.CodeAnalysis.ITypeSymbol,Microsoft.CodeAnalysis.ITypeSymbol)
+  nameWithType.vb: SemanticGuardExtensions.MustInheritFrom(SemanticGuard(Of INamedTypeSymbol), ITypeSymbol, DiagnosticInfo)
+  fullName.vb: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustInheritFrom(ANcpLua.Roslyn.Utilities.SemanticGuard(Of Microsoft.CodeAnalysis.INamedTypeSymbol), Microsoft.CodeAnalysis.ITypeSymbol, ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  name.vb: MustInheritFrom(SemanticGuard(Of INamedTypeSymbol), ITypeSymbol, DiagnosticInfo)
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeDisposable(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.INamedTypeSymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  commentId: M:ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeDisposable(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.INamedTypeSymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  id: MustBeDisposable(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.INamedTypeSymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions
+  langs:
+  - csharp
+  - vb
+  name: MustBeDisposable(SemanticGuard<INamedTypeSymbol>, DiagnosticInfo)
+  nameWithType: SemanticGuardExtensions.MustBeDisposable(SemanticGuard<INamedTypeSymbol>, DiagnosticInfo)
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeDisposable(ANcpLua.Roslyn.Utilities.SemanticGuard<Microsoft.CodeAnalysis.INamedTypeSymbol>, ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: MustBeDisposable
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+    startLine: 459
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Validates that the type implements <xref href="System.IDisposable" data-throw-if-not-resolved="false"></xref> or <code>IAsyncDisposable</code>.
+  example: []
+  syntax:
+    content: public static SemanticGuard<INamedTypeSymbol> MustBeDisposable(this SemanticGuard<INamedTypeSymbol> guard, DiagnosticInfo onFail)
+    parameters:
+    - id: guard
+      type: ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.INamedTypeSymbol}
+      description: The <xref href="ANcpLua.Roslyn.Utilities.SemanticGuard%601" data-throw-if-not-resolved="false"></xref> for the type.
+    - id: onFail
+      type: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+      description: The diagnostic to record if the type is not disposable.
+    return:
+      type: ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.INamedTypeSymbol}
+      description: The current <xref href="ANcpLua.Roslyn.Utilities.SemanticGuard%601" data-throw-if-not-resolved="false"></xref> instance for method chaining.
+    content.vb: Public Shared Function MustBeDisposable(guard As SemanticGuard(Of INamedTypeSymbol), onFail As DiagnosticInfo) As SemanticGuard(Of INamedTypeSymbol)
+  overload: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeDisposable*
+  nameWithType.vb: SemanticGuardExtensions.MustBeDisposable(SemanticGuard(Of INamedTypeSymbol), DiagnosticInfo)
+  fullName.vb: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeDisposable(ANcpLua.Roslyn.Utilities.SemanticGuard(Of Microsoft.CodeAnalysis.INamedTypeSymbol), ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  name.vb: MustBeDisposable(SemanticGuard(Of INamedTypeSymbol), DiagnosticInfo)
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustHaveGetter(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IPropertySymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  commentId: M:ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustHaveGetter(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IPropertySymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  id: MustHaveGetter(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IPropertySymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions
+  langs:
+  - csharp
+  - vb
+  name: MustHaveGetter(SemanticGuard<IPropertySymbol>, DiagnosticInfo)
+  nameWithType: SemanticGuardExtensions.MustHaveGetter(SemanticGuard<IPropertySymbol>, DiagnosticInfo)
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustHaveGetter(ANcpLua.Roslyn.Utilities.SemanticGuard<Microsoft.CodeAnalysis.IPropertySymbol>, ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: MustHaveGetter
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+    startLine: 481
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Validates that the property has a getter.
+  example: []
+  syntax:
+    content: public static SemanticGuard<IPropertySymbol> MustHaveGetter(this SemanticGuard<IPropertySymbol> guard, DiagnosticInfo onFail)
+    parameters:
+    - id: guard
+      type: ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IPropertySymbol}
+      description: The <xref href="ANcpLua.Roslyn.Utilities.SemanticGuard%601" data-throw-if-not-resolved="false"></xref> for the property.
+    - id: onFail
+      type: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+      description: The diagnostic to record if the property does not have a getter.
+    return:
+      type: ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IPropertySymbol}
+      description: The current <xref href="ANcpLua.Roslyn.Utilities.SemanticGuard%601" data-throw-if-not-resolved="false"></xref> instance for method chaining.
+    content.vb: Public Shared Function MustHaveGetter(guard As SemanticGuard(Of IPropertySymbol), onFail As DiagnosticInfo) As SemanticGuard(Of IPropertySymbol)
+  overload: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustHaveGetter*
+  nameWithType.vb: SemanticGuardExtensions.MustHaveGetter(SemanticGuard(Of IPropertySymbol), DiagnosticInfo)
+  fullName.vb: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustHaveGetter(ANcpLua.Roslyn.Utilities.SemanticGuard(Of Microsoft.CodeAnalysis.IPropertySymbol), ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  name.vb: MustHaveGetter(SemanticGuard(Of IPropertySymbol), DiagnosticInfo)
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustHaveSetter(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IPropertySymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  commentId: M:ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustHaveSetter(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IPropertySymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  id: MustHaveSetter(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IPropertySymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions
+  langs:
+  - csharp
+  - vb
+  name: MustHaveSetter(SemanticGuard<IPropertySymbol>, DiagnosticInfo)
+  nameWithType: SemanticGuardExtensions.MustHaveSetter(SemanticGuard<IPropertySymbol>, DiagnosticInfo)
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustHaveSetter(ANcpLua.Roslyn.Utilities.SemanticGuard<Microsoft.CodeAnalysis.IPropertySymbol>, ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: MustHaveSetter
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+    startLine: 490
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Validates that the property has a setter.
+  example: []
+  syntax:
+    content: public static SemanticGuard<IPropertySymbol> MustHaveSetter(this SemanticGuard<IPropertySymbol> guard, DiagnosticInfo onFail)
+    parameters:
+    - id: guard
+      type: ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IPropertySymbol}
+      description: The <xref href="ANcpLua.Roslyn.Utilities.SemanticGuard%601" data-throw-if-not-resolved="false"></xref> for the property.
+    - id: onFail
+      type: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+      description: The diagnostic to record if the property does not have a setter.
+    return:
+      type: ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IPropertySymbol}
+      description: The current <xref href="ANcpLua.Roslyn.Utilities.SemanticGuard%601" data-throw-if-not-resolved="false"></xref> instance for method chaining.
+    content.vb: Public Shared Function MustHaveSetter(guard As SemanticGuard(Of IPropertySymbol), onFail As DiagnosticInfo) As SemanticGuard(Of IPropertySymbol)
+  overload: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustHaveSetter*
+  nameWithType.vb: SemanticGuardExtensions.MustHaveSetter(SemanticGuard(Of IPropertySymbol), DiagnosticInfo)
+  fullName.vb: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustHaveSetter(ANcpLua.Roslyn.Utilities.SemanticGuard(Of Microsoft.CodeAnalysis.IPropertySymbol), ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  name.vb: MustHaveSetter(SemanticGuard(Of IPropertySymbol), DiagnosticInfo)
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeReadOnly(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IPropertySymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  commentId: M:ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeReadOnly(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IPropertySymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  id: MustBeReadOnly(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IPropertySymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions
+  langs:
+  - csharp
+  - vb
+  name: MustBeReadOnly(SemanticGuard<IPropertySymbol>, DiagnosticInfo)
+  nameWithType: SemanticGuardExtensions.MustBeReadOnly(SemanticGuard<IPropertySymbol>, DiagnosticInfo)
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeReadOnly(ANcpLua.Roslyn.Utilities.SemanticGuard<Microsoft.CodeAnalysis.IPropertySymbol>, ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: MustBeReadOnly
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+    startLine: 499
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Validates that the property is read-only (has no setter).
+  example: []
+  syntax:
+    content: public static SemanticGuard<IPropertySymbol> MustBeReadOnly(this SemanticGuard<IPropertySymbol> guard, DiagnosticInfo onFail)
+    parameters:
+    - id: guard
+      type: ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IPropertySymbol}
+      description: The <xref href="ANcpLua.Roslyn.Utilities.SemanticGuard%601" data-throw-if-not-resolved="false"></xref> for the property.
+    - id: onFail
+      type: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+      description: The diagnostic to record if the property is not read-only.
+    return:
+      type: ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IPropertySymbol}
+      description: The current <xref href="ANcpLua.Roslyn.Utilities.SemanticGuard%601" data-throw-if-not-resolved="false"></xref> instance for method chaining.
+    content.vb: Public Shared Function MustBeReadOnly(guard As SemanticGuard(Of IPropertySymbol), onFail As DiagnosticInfo) As SemanticGuard(Of IPropertySymbol)
+  overload: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeReadOnly*
+  nameWithType.vb: SemanticGuardExtensions.MustBeReadOnly(SemanticGuard(Of IPropertySymbol), DiagnosticInfo)
+  fullName.vb: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeReadOnly(ANcpLua.Roslyn.Utilities.SemanticGuard(Of Microsoft.CodeAnalysis.IPropertySymbol), ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  name.vb: MustBeReadOnly(SemanticGuard(Of IPropertySymbol), DiagnosticInfo)
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeRequired(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IPropertySymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  commentId: M:ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeRequired(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IPropertySymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  id: MustBeRequired(ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IPropertySymbol},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions
+  langs:
+  - csharp
+  - vb
+  name: MustBeRequired(SemanticGuard<IPropertySymbol>, DiagnosticInfo)
+  nameWithType: SemanticGuardExtensions.MustBeRequired(SemanticGuard<IPropertySymbol>, DiagnosticInfo)
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeRequired(ANcpLua.Roslyn.Utilities.SemanticGuard<Microsoft.CodeAnalysis.IPropertySymbol>, ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: MustBeRequired
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+    startLine: 508
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Validates that the property is marked with the <code>required</code> modifier.
+  example: []
+  syntax:
+    content: public static SemanticGuard<IPropertySymbol> MustBeRequired(this SemanticGuard<IPropertySymbol> guard, DiagnosticInfo onFail)
+    parameters:
+    - id: guard
+      type: ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IPropertySymbol}
+      description: The <xref href="ANcpLua.Roslyn.Utilities.SemanticGuard%601" data-throw-if-not-resolved="false"></xref> for the property.
+    - id: onFail
+      type: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+      description: The diagnostic to record if the property is not required.
+    return:
+      type: ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IPropertySymbol}
+      description: The current <xref href="ANcpLua.Roslyn.Utilities.SemanticGuard%601" data-throw-if-not-resolved="false"></xref> instance for method chaining.
+    content.vb: Public Shared Function MustBeRequired(guard As SemanticGuard(Of IPropertySymbol), onFail As DiagnosticInfo) As SemanticGuard(Of IPropertySymbol)
+  overload: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeRequired*
+  nameWithType.vb: SemanticGuardExtensions.MustBeRequired(SemanticGuard(Of IPropertySymbol), DiagnosticInfo)
+  fullName.vb: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeRequired(ANcpLua.Roslyn.Utilities.SemanticGuard(Of Microsoft.CodeAnalysis.IPropertySymbol), ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  name.vb: MustBeRequired(SemanticGuard(Of IPropertySymbol), DiagnosticInfo)
+references:
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuard`1
+  commentId: T:ANcpLua.Roslyn.Utilities.SemanticGuard`1
+  parent: ANcpLua.Roslyn.Utilities
+  href: ANcpLua.Roslyn.Utilities.SemanticGuard-1.html
+  name: SemanticGuard<T>
+  nameWithType: SemanticGuard<T>
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuard<T>
+  nameWithType.vb: SemanticGuard(Of T)
+  fullName.vb: ANcpLua.Roslyn.Utilities.SemanticGuard(Of T)
+  name.vb: SemanticGuard(Of T)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.SemanticGuard`1
+    name: SemanticGuard
+    href: ANcpLua.Roslyn.Utilities.SemanticGuard-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.SemanticGuard`1
+    name: SemanticGuard
+    href: ANcpLua.Roslyn.Utilities.SemanticGuard-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuard
+  commentId: T:ANcpLua.Roslyn.Utilities.SemanticGuard
+  href: ANcpLua.Roslyn.Utilities.SemanticGuard.html
+  name: SemanticGuard
+  nameWithType: SemanticGuard
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuard
+- uid: Microsoft.CodeAnalysis.IMethodSymbol
+  commentId: T:Microsoft.CodeAnalysis.IMethodSymbol
+  parent: Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.imethodsymbol
+  name: IMethodSymbol
+  nameWithType: IMethodSymbol
+  fullName: Microsoft.CodeAnalysis.IMethodSymbol
+- uid: Microsoft.CodeAnalysis.INamedTypeSymbol
+  commentId: T:Microsoft.CodeAnalysis.INamedTypeSymbol
+  parent: Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.inamedtypesymbol
+  name: INamedTypeSymbol
+  nameWithType: INamedTypeSymbol
+  fullName: Microsoft.CodeAnalysis.INamedTypeSymbol
+- uid: Microsoft.CodeAnalysis.IPropertySymbol
+  commentId: T:Microsoft.CodeAnalysis.IPropertySymbol
+  parent: Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ipropertysymbol
+  name: IPropertySymbol
+  nameWithType: IPropertySymbol
+  fullName: Microsoft.CodeAnalysis.IPropertySymbol
+- uid: ANcpLua.Roslyn.Utilities
+  commentId: N:ANcpLua.Roslyn.Utilities
+  href: ANcpLua.html
+  name: ANcpLua.Roslyn.Utilities
+  nameWithType: ANcpLua.Roslyn.Utilities
+  fullName: ANcpLua.Roslyn.Utilities
+  spec.csharp:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  spec.vb:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: Microsoft.CodeAnalysis
+  commentId: N:Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.CodeAnalysis
+  nameWithType: Microsoft.CodeAnalysis
+  fullName: Microsoft.CodeAnalysis
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeAsync*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeAsync
+  href: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.html#ANcpLua_Roslyn_Utilities_SemanticGuardExtensions_MustBeAsync_ANcpLua_Roslyn_Utilities_SemanticGuard_Microsoft_CodeAnalysis_IMethodSymbol__ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_
+  name: MustBeAsync
+  nameWithType: SemanticGuardExtensions.MustBeAsync
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeAsync
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IMethodSymbol}
+  commentId: T:ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IMethodSymbol}
+  parent: ANcpLua.Roslyn.Utilities
+  definition: ANcpLua.Roslyn.Utilities.SemanticGuard`1
+  href: ANcpLua.Roslyn.Utilities.SemanticGuard-1.html
+  name: SemanticGuard<IMethodSymbol>
+  nameWithType: SemanticGuard<IMethodSymbol>
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuard<Microsoft.CodeAnalysis.IMethodSymbol>
+  nameWithType.vb: SemanticGuard(Of IMethodSymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.SemanticGuard(Of Microsoft.CodeAnalysis.IMethodSymbol)
+  name.vb: SemanticGuard(Of IMethodSymbol)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.SemanticGuard`1
+    name: SemanticGuard
+    href: ANcpLua.Roslyn.Utilities.SemanticGuard-1.html
+  - name: <
+  - uid: Microsoft.CodeAnalysis.IMethodSymbol
+    name: IMethodSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.imethodsymbol
+  - name: '>'
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.SemanticGuard`1
+    name: SemanticGuard
+    href: ANcpLua.Roslyn.Utilities.SemanticGuard-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.IMethodSymbol
+    name: IMethodSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.imethodsymbol
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+  commentId: T:ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+  parent: ANcpLua.Roslyn.Utilities.Models
+  href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  name: DiagnosticInfo
+  nameWithType: DiagnosticInfo
+  fullName: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+- uid: ANcpLua.Roslyn.Utilities.Models
+  commentId: N:ANcpLua.Roslyn.Utilities.Models
+  href: ANcpLua.html
+  name: ANcpLua.Roslyn.Utilities.Models
+  nameWithType: ANcpLua.Roslyn.Utilities.Models
+  fullName: ANcpLua.Roslyn.Utilities.Models
+  spec.csharp:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities.Models
+    name: Models
+    href: ANcpLua.Roslyn.Utilities.Models.html
+  spec.vb:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities.Models
+    name: Models
+    href: ANcpLua.Roslyn.Utilities.Models.html
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustNotBeAsync*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustNotBeAsync
+  href: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.html#ANcpLua_Roslyn_Utilities_SemanticGuardExtensions_MustNotBeAsync_ANcpLua_Roslyn_Utilities_SemanticGuard_Microsoft_CodeAnalysis_IMethodSymbol__ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_
+  name: MustNotBeAsync
+  nameWithType: SemanticGuardExtensions.MustNotBeAsync
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustNotBeAsync
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustReturnVoid*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustReturnVoid
+  href: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.html#ANcpLua_Roslyn_Utilities_SemanticGuardExtensions_MustReturnVoid_ANcpLua_Roslyn_Utilities_SemanticGuard_Microsoft_CodeAnalysis_IMethodSymbol__ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_
+  name: MustReturnVoid
+  nameWithType: SemanticGuardExtensions.MustReturnVoid
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustReturnVoid
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustNotReturnVoid*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustNotReturnVoid
+  href: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.html#ANcpLua_Roslyn_Utilities_SemanticGuardExtensions_MustNotReturnVoid_ANcpLua_Roslyn_Utilities_SemanticGuard_Microsoft_CodeAnalysis_IMethodSymbol__ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_
+  name: MustNotReturnVoid
+  nameWithType: SemanticGuardExtensions.MustNotReturnVoid
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustNotReturnVoid
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsTaskType(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsTaskType(Microsoft.CodeAnalysis.ITypeSymbol)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_IsTaskType_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsTaskType(ITypeSymbol)
+  nameWithType: TypeSymbolExtensions.IsTaskType(ITypeSymbol)
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsTaskType(Microsoft.CodeAnalysis.ITypeSymbol)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsTaskType(Microsoft.CodeAnalysis.ITypeSymbol)
+    name: IsTaskType
+    href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_IsTaskType_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsTaskType(Microsoft.CodeAnalysis.ITypeSymbol)
+    name: IsTaskType
+    href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_IsTaskType_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustReturnTask*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustReturnTask
+  href: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.html#ANcpLua_Roslyn_Utilities_SemanticGuardExtensions_MustReturnTask_ANcpLua_Roslyn_Utilities_SemanticGuard_Microsoft_CodeAnalysis_IMethodSymbol__ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_
+  name: MustReturnTask
+  nameWithType: SemanticGuardExtensions.MustReturnTask
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustReturnTask
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustHaveNoParameters*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustHaveNoParameters
+  href: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.html#ANcpLua_Roslyn_Utilities_SemanticGuardExtensions_MustHaveNoParameters_ANcpLua_Roslyn_Utilities_SemanticGuard_Microsoft_CodeAnalysis_IMethodSymbol__ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_
+  name: MustHaveNoParameters
+  nameWithType: SemanticGuardExtensions.MustHaveNoParameters
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustHaveNoParameters
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustHaveParameterCount*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustHaveParameterCount
+  href: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.html#ANcpLua_Roslyn_Utilities_SemanticGuardExtensions_MustHaveParameterCount_ANcpLua_Roslyn_Utilities_SemanticGuard_Microsoft_CodeAnalysis_IMethodSymbol__System_Int32_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_
+  name: MustHaveParameterCount
+  nameWithType: SemanticGuardExtensions.MustHaveParameterCount
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustHaveParameterCount
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustHaveCancellationToken*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustHaveCancellationToken
+  href: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.html#ANcpLua_Roslyn_Utilities_SemanticGuardExtensions_MustHaveCancellationToken_ANcpLua_Roslyn_Utilities_SemanticGuard_Microsoft_CodeAnalysis_IMethodSymbol__ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_
+  name: MustHaveCancellationToken
+  nameWithType: SemanticGuardExtensions.MustHaveCancellationToken
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustHaveCancellationToken
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeExtensionMethod*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeExtensionMethod
+  href: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.html#ANcpLua_Roslyn_Utilities_SemanticGuardExtensions_MustBeExtensionMethod_ANcpLua_Roslyn_Utilities_SemanticGuard_Microsoft_CodeAnalysis_IMethodSymbol__ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_
+  name: MustBeExtensionMethod
+  nameWithType: SemanticGuardExtensions.MustBeExtensionMethod
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeExtensionMethod
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustNotBeExtensionMethod*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustNotBeExtensionMethod
+  href: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.html#ANcpLua_Roslyn_Utilities_SemanticGuardExtensions_MustNotBeExtensionMethod_ANcpLua_Roslyn_Utilities_SemanticGuard_Microsoft_CodeAnalysis_IMethodSymbol__ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_
+  name: MustNotBeExtensionMethod
+  nameWithType: SemanticGuardExtensions.MustNotBeExtensionMethod
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustNotBeExtensionMethod
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustHaveMultipleDeclarations*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustHaveMultipleDeclarations
+  href: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.html#ANcpLua_Roslyn_Utilities_SemanticGuardExtensions_MustHaveMultipleDeclarations_ANcpLua_Roslyn_Utilities_SemanticGuard_Microsoft_CodeAnalysis_INamedTypeSymbol__ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_
+  name: MustHaveMultipleDeclarations
+  nameWithType: SemanticGuardExtensions.MustHaveMultipleDeclarations
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustHaveMultipleDeclarations
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.INamedTypeSymbol}
+  commentId: T:ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.INamedTypeSymbol}
+  parent: ANcpLua.Roslyn.Utilities
+  definition: ANcpLua.Roslyn.Utilities.SemanticGuard`1
+  href: ANcpLua.Roslyn.Utilities.SemanticGuard-1.html
+  name: SemanticGuard<INamedTypeSymbol>
+  nameWithType: SemanticGuard<INamedTypeSymbol>
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuard<Microsoft.CodeAnalysis.INamedTypeSymbol>
+  nameWithType.vb: SemanticGuard(Of INamedTypeSymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.SemanticGuard(Of Microsoft.CodeAnalysis.INamedTypeSymbol)
+  name.vb: SemanticGuard(Of INamedTypeSymbol)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.SemanticGuard`1
+    name: SemanticGuard
+    href: ANcpLua.Roslyn.Utilities.SemanticGuard-1.html
+  - name: <
+  - uid: Microsoft.CodeAnalysis.INamedTypeSymbol
+    name: INamedTypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.inamedtypesymbol
+  - name: '>'
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.SemanticGuard`1
+    name: SemanticGuard
+    href: ANcpLua.Roslyn.Utilities.SemanticGuard-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.INamedTypeSymbol
+    name: INamedTypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.inamedtypesymbol
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeClass*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeClass
+  href: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.html#ANcpLua_Roslyn_Utilities_SemanticGuardExtensions_MustBeClass_ANcpLua_Roslyn_Utilities_SemanticGuard_Microsoft_CodeAnalysis_INamedTypeSymbol__ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_
+  name: MustBeClass
+  nameWithType: SemanticGuardExtensions.MustBeClass
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeClass
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeStruct*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeStruct
+  href: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.html#ANcpLua_Roslyn_Utilities_SemanticGuardExtensions_MustBeStruct_ANcpLua_Roslyn_Utilities_SemanticGuard_Microsoft_CodeAnalysis_INamedTypeSymbol__ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_
+  name: MustBeStruct
+  nameWithType: SemanticGuardExtensions.MustBeStruct
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeStruct
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeInterface*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeInterface
+  href: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.html#ANcpLua_Roslyn_Utilities_SemanticGuardExtensions_MustBeInterface_ANcpLua_Roslyn_Utilities_SemanticGuard_Microsoft_CodeAnalysis_INamedTypeSymbol__ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_
+  name: MustBeInterface
+  nameWithType: SemanticGuardExtensions.MustBeInterface
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeInterface
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeRecord*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeRecord
+  href: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.html#ANcpLua_Roslyn_Utilities_SemanticGuardExtensions_MustBeRecord_ANcpLua_Roslyn_Utilities_SemanticGuard_Microsoft_CodeAnalysis_INamedTypeSymbol__ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_
+  name: MustBeRecord
+  nameWithType: SemanticGuardExtensions.MustBeRecord
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeRecord
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustNotBeAbstract*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustNotBeAbstract
+  href: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.html#ANcpLua_Roslyn_Utilities_SemanticGuardExtensions_MustNotBeAbstract_ANcpLua_Roslyn_Utilities_SemanticGuard_Microsoft_CodeAnalysis_INamedTypeSymbol__ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_
+  name: MustNotBeAbstract
+  nameWithType: SemanticGuardExtensions.MustNotBeAbstract
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustNotBeAbstract
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustNotBeGeneric*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustNotBeGeneric
+  href: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.html#ANcpLua_Roslyn_Utilities_SemanticGuardExtensions_MustNotBeGeneric_ANcpLua_Roslyn_Utilities_SemanticGuard_Microsoft_CodeAnalysis_INamedTypeSymbol__ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_
+  name: MustNotBeGeneric
+  nameWithType: SemanticGuardExtensions.MustNotBeGeneric
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustNotBeGeneric
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.Implements(Microsoft.CodeAnalysis.ITypeSymbol,Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.Implements(Microsoft.CodeAnalysis.ITypeSymbol,Microsoft.CodeAnalysis.ITypeSymbol)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_Implements_Microsoft_CodeAnalysis_ITypeSymbol_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: Implements(ITypeSymbol, ITypeSymbol)
+  nameWithType: TypeSymbolExtensions.Implements(ITypeSymbol, ITypeSymbol)
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.Implements(Microsoft.CodeAnalysis.ITypeSymbol, Microsoft.CodeAnalysis.ITypeSymbol)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.Implements(Microsoft.CodeAnalysis.ITypeSymbol,Microsoft.CodeAnalysis.ITypeSymbol)
+    name: Implements
+    href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_Implements_Microsoft_CodeAnalysis_ITypeSymbol_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: ','
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.Implements(Microsoft.CodeAnalysis.ITypeSymbol,Microsoft.CodeAnalysis.ITypeSymbol)
+    name: Implements
+    href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_Implements_Microsoft_CodeAnalysis_ITypeSymbol_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: ','
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+- uid: Microsoft.CodeAnalysis.ITypeSymbol
+  commentId: T:Microsoft.CodeAnalysis.ITypeSymbol
+  parent: Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  name: ITypeSymbol
+  nameWithType: ITypeSymbol
+  fullName: Microsoft.CodeAnalysis.ITypeSymbol
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustImplement*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustImplement
+  href: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.html#ANcpLua_Roslyn_Utilities_SemanticGuardExtensions_MustImplement_ANcpLua_Roslyn_Utilities_SemanticGuard_Microsoft_CodeAnalysis_INamedTypeSymbol__Microsoft_CodeAnalysis_ITypeSymbol_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_
+  name: MustImplement
+  nameWithType: SemanticGuardExtensions.MustImplement
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustImplement
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.InheritsFrom(Microsoft.CodeAnalysis.ITypeSymbol,Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.InheritsFrom(Microsoft.CodeAnalysis.ITypeSymbol,Microsoft.CodeAnalysis.ITypeSymbol)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_InheritsFrom_Microsoft_CodeAnalysis_ITypeSymbol_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: InheritsFrom(ITypeSymbol, ITypeSymbol)
+  nameWithType: TypeSymbolExtensions.InheritsFrom(ITypeSymbol, ITypeSymbol)
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.InheritsFrom(Microsoft.CodeAnalysis.ITypeSymbol, Microsoft.CodeAnalysis.ITypeSymbol)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.InheritsFrom(Microsoft.CodeAnalysis.ITypeSymbol,Microsoft.CodeAnalysis.ITypeSymbol)
+    name: InheritsFrom
+    href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_InheritsFrom_Microsoft_CodeAnalysis_ITypeSymbol_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: ','
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.InheritsFrom(Microsoft.CodeAnalysis.ITypeSymbol,Microsoft.CodeAnalysis.ITypeSymbol)
+    name: InheritsFrom
+    href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_InheritsFrom_Microsoft_CodeAnalysis_ITypeSymbol_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: ','
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustInheritFrom*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustInheritFrom
+  href: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.html#ANcpLua_Roslyn_Utilities_SemanticGuardExtensions_MustInheritFrom_ANcpLua_Roslyn_Utilities_SemanticGuard_Microsoft_CodeAnalysis_INamedTypeSymbol__Microsoft_CodeAnalysis_ITypeSymbol_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_
+  name: MustInheritFrom
+  nameWithType: SemanticGuardExtensions.MustInheritFrom
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustInheritFrom
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeDisposable*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeDisposable
+  href: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.html#ANcpLua_Roslyn_Utilities_SemanticGuardExtensions_MustBeDisposable_ANcpLua_Roslyn_Utilities_SemanticGuard_Microsoft_CodeAnalysis_INamedTypeSymbol__ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_
+  name: MustBeDisposable
+  nameWithType: SemanticGuardExtensions.MustBeDisposable
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeDisposable
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustHaveGetter*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustHaveGetter
+  href: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.html#ANcpLua_Roslyn_Utilities_SemanticGuardExtensions_MustHaveGetter_ANcpLua_Roslyn_Utilities_SemanticGuard_Microsoft_CodeAnalysis_IPropertySymbol__ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_
+  name: MustHaveGetter
+  nameWithType: SemanticGuardExtensions.MustHaveGetter
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustHaveGetter
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IPropertySymbol}
+  commentId: T:ANcpLua.Roslyn.Utilities.SemanticGuard{Microsoft.CodeAnalysis.IPropertySymbol}
+  parent: ANcpLua.Roslyn.Utilities
+  definition: ANcpLua.Roslyn.Utilities.SemanticGuard`1
+  href: ANcpLua.Roslyn.Utilities.SemanticGuard-1.html
+  name: SemanticGuard<IPropertySymbol>
+  nameWithType: SemanticGuard<IPropertySymbol>
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuard<Microsoft.CodeAnalysis.IPropertySymbol>
+  nameWithType.vb: SemanticGuard(Of IPropertySymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.SemanticGuard(Of Microsoft.CodeAnalysis.IPropertySymbol)
+  name.vb: SemanticGuard(Of IPropertySymbol)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.SemanticGuard`1
+    name: SemanticGuard
+    href: ANcpLua.Roslyn.Utilities.SemanticGuard-1.html
+  - name: <
+  - uid: Microsoft.CodeAnalysis.IPropertySymbol
+    name: IPropertySymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ipropertysymbol
+  - name: '>'
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.SemanticGuard`1
+    name: SemanticGuard
+    href: ANcpLua.Roslyn.Utilities.SemanticGuard-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.IPropertySymbol
+    name: IPropertySymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ipropertysymbol
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustHaveSetter*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustHaveSetter
+  href: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.html#ANcpLua_Roslyn_Utilities_SemanticGuardExtensions_MustHaveSetter_ANcpLua_Roslyn_Utilities_SemanticGuard_Microsoft_CodeAnalysis_IPropertySymbol__ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_
+  name: MustHaveSetter
+  nameWithType: SemanticGuardExtensions.MustHaveSetter
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustHaveSetter
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeReadOnly*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeReadOnly
+  href: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.html#ANcpLua_Roslyn_Utilities_SemanticGuardExtensions_MustBeReadOnly_ANcpLua_Roslyn_Utilities_SemanticGuard_Microsoft_CodeAnalysis_IPropertySymbol__ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_
+  name: MustBeReadOnly
+  nameWithType: SemanticGuardExtensions.MustBeReadOnly
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeReadOnly
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeRequired*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeRequired
+  href: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.html#ANcpLua_Roslyn_Utilities_SemanticGuardExtensions_MustBeRequired_ANcpLua_Roslyn_Utilities_SemanticGuard_Microsoft_CodeAnalysis_IPropertySymbol__ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_
+  name: MustBeRequired
+  nameWithType: SemanticGuardExtensions.MustBeRequired
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.MustBeRequired

@@ -1,0 +1,1261 @@
+### YamlMime:ManagedReference
+items:
+- uid: ANcpLua.Roslyn.Utilities.SyntaxExtensions
+  commentId: T:ANcpLua.Roslyn.Utilities.SyntaxExtensions
+  id: SyntaxExtensions
+  parent: ANcpLua.Roslyn.Utilities
+  children:
+  - ANcpLua.Roslyn.Utilities.SyntaxExtensions.GetIdentifierName(Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax)
+  - ANcpLua.Roslyn.Utilities.SyntaxExtensions.GetMethodName(Microsoft.CodeAnalysis.CSharp.Syntax.InvocationExpressionSyntax)
+  - ANcpLua.Roslyn.Utilities.SyntaxExtensions.GetNameLocation(Microsoft.CodeAnalysis.CSharp.Syntax.MethodDeclarationSyntax)
+  - ANcpLua.Roslyn.Utilities.SyntaxExtensions.GetNameLocation(Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax)
+  - ANcpLua.Roslyn.Utilities.SyntaxExtensions.HasModifier(Microsoft.CodeAnalysis.CSharp.Syntax.MemberDeclarationSyntax,Microsoft.CodeAnalysis.CSharp.SyntaxKind)
+  - ANcpLua.Roslyn.Utilities.SyntaxExtensions.IsPartial(Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax)
+  - ANcpLua.Roslyn.Utilities.SyntaxExtensions.IsPrimaryConstructorType(Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax)
+  langs:
+  - csharp
+  - vb
+  name: SyntaxExtensions
+  nameWithType: SyntaxExtensions
+  fullName: ANcpLua.Roslyn.Utilities.SyntaxExtensions
+  type: Class
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SyntaxExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: SyntaxExtensions
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SyntaxExtensions.cs
+    startLine: 25
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Provides extension methods for Roslyn syntax types.
+  remarks: >-
+    <p>
+        This class contains utility methods for working with C# syntax nodes, including
+        expression analysis, modifier checking, and location extraction.
+    </p>
+
+    <ul><li>Extract method and identifier names from expressions</li><li>Check for specific modifiers on member declarations</li><li>Detect partial types and primary constructor types</li><li>Retrieve name token locations for diagnostics</li></ul>
+  example: []
+  syntax:
+    content: public static class SyntaxExtensions
+    content.vb: Public Module SyntaxExtensions
+  seealso:
+  - linkId: Microsoft.CodeAnalysis.CSharp.Syntax.InvocationExpressionSyntax
+    commentId: T:Microsoft.CodeAnalysis.CSharp.Syntax.InvocationExpressionSyntax
+  - linkId: Microsoft.CodeAnalysis.CSharp.Syntax.MemberDeclarationSyntax
+    commentId: T:Microsoft.CodeAnalysis.CSharp.Syntax.MemberDeclarationSyntax
+  - linkId: Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax
+    commentId: T:Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: ANcpLua.Roslyn.Utilities.SyntaxExtensions.GetMethodName(Microsoft.CodeAnalysis.CSharp.Syntax.InvocationExpressionSyntax)
+  commentId: M:ANcpLua.Roslyn.Utilities.SyntaxExtensions.GetMethodName(Microsoft.CodeAnalysis.CSharp.Syntax.InvocationExpressionSyntax)
+  id: GetMethodName(Microsoft.CodeAnalysis.CSharp.Syntax.InvocationExpressionSyntax)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.SyntaxExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetMethodName(InvocationExpressionSyntax)
+  nameWithType: SyntaxExtensions.GetMethodName(InvocationExpressionSyntax)
+  fullName: ANcpLua.Roslyn.Utilities.SyntaxExtensions.GetMethodName(Microsoft.CodeAnalysis.CSharp.Syntax.InvocationExpressionSyntax)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SyntaxExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: GetMethodName
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SyntaxExtensions.cs
+    startLine: 51
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Gets the method name from an invocation expression.
+  remarks: >-
+    <p>
+        This method handles both member access expressions (e.g., <code>obj.Method()</code>)
+        and simple identifier expressions (e.g., <code>Method()</code>).
+    </p>
+
+    <ul><li>For member access expressions, returns the name portion (e.g., "Method" from "obj.Method")</li><li>For identifier expressions, returns the identifier text directly</li><li>For other expression types, returns <code>null</code></li></ul>
+  example: []
+  syntax:
+    content: public static string? GetMethodName(this InvocationExpressionSyntax invocation)
+    parameters:
+    - id: invocation
+      type: Microsoft.CodeAnalysis.CSharp.Syntax.InvocationExpressionSyntax
+      description: The invocation expression to extract the method name from.
+    return:
+      type: System.String
+      description: >-
+        The method name as a string, or <code>null</code> if the method name cannot be determined
+
+        from the expression syntax.
+    content.vb: Public Shared Function GetMethodName(invocation As InvocationExpressionSyntax) As String
+  overload: ANcpLua.Roslyn.Utilities.SyntaxExtensions.GetMethodName*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.SyntaxExtensions.GetIdentifierName(Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax)
+    commentId: M:ANcpLua.Roslyn.Utilities.SyntaxExtensions.GetIdentifierName(Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax)
+- uid: ANcpLua.Roslyn.Utilities.SyntaxExtensions.GetIdentifierName(Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax)
+  commentId: M:ANcpLua.Roslyn.Utilities.SyntaxExtensions.GetIdentifierName(Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax)
+  id: GetIdentifierName(Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.SyntaxExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetIdentifierName(ExpressionSyntax)
+  nameWithType: SyntaxExtensions.GetIdentifierName(ExpressionSyntax)
+  fullName: ANcpLua.Roslyn.Utilities.SyntaxExtensions.GetIdentifierName(Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SyntaxExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: GetIdentifierName
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SyntaxExtensions.cs
+    startLine: 79
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Gets the identifier name from an expression.
+  remarks: >-
+    <p>
+        This method extracts identifier text from both simple identifier expressions
+        and member access expressions.
+    </p>
+
+    <ul><li>For identifier expressions (e.g., <code>foo</code>), returns the identifier text</li><li>For member access expressions (e.g., <code>obj.Property</code>), returns the member name</li><li>For other expression types, returns <code>null</code></li></ul>
+  example: []
+  syntax:
+    content: public static string? GetIdentifierName(this ExpressionSyntax expression)
+    parameters:
+    - id: expression
+      type: Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax
+      description: The expression to extract the identifier name from.
+    return:
+      type: System.String
+      description: >-
+        The identifier name as a string, or <code>null</code> if the identifier cannot be determined
+
+        from the expression syntax.
+    content.vb: Public Shared Function GetIdentifierName(expression As ExpressionSyntax) As String
+  overload: ANcpLua.Roslyn.Utilities.SyntaxExtensions.GetIdentifierName*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.SyntaxExtensions.GetMethodName(Microsoft.CodeAnalysis.CSharp.Syntax.InvocationExpressionSyntax)
+    commentId: M:ANcpLua.Roslyn.Utilities.SyntaxExtensions.GetMethodName(Microsoft.CodeAnalysis.CSharp.Syntax.InvocationExpressionSyntax)
+- uid: ANcpLua.Roslyn.Utilities.SyntaxExtensions.HasModifier(Microsoft.CodeAnalysis.CSharp.Syntax.MemberDeclarationSyntax,Microsoft.CodeAnalysis.CSharp.SyntaxKind)
+  commentId: M:ANcpLua.Roslyn.Utilities.SyntaxExtensions.HasModifier(Microsoft.CodeAnalysis.CSharp.Syntax.MemberDeclarationSyntax,Microsoft.CodeAnalysis.CSharp.SyntaxKind)
+  id: HasModifier(Microsoft.CodeAnalysis.CSharp.Syntax.MemberDeclarationSyntax,Microsoft.CodeAnalysis.CSharp.SyntaxKind)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.SyntaxExtensions
+  langs:
+  - csharp
+  - vb
+  name: HasModifier(MemberDeclarationSyntax, SyntaxKind)
+  nameWithType: SyntaxExtensions.HasModifier(MemberDeclarationSyntax, SyntaxKind)
+  fullName: ANcpLua.Roslyn.Utilities.SyntaxExtensions.HasModifier(Microsoft.CodeAnalysis.CSharp.Syntax.MemberDeclarationSyntax, Microsoft.CodeAnalysis.CSharp.SyntaxKind)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SyntaxExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: HasModifier
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SyntaxExtensions.cs
+    startLine: 132
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Checks if a member declaration has a specific modifier.
+  remarks: >-
+    <p>
+        Common modifier kinds include <xref href="Microsoft.CodeAnalysis.CSharp.SyntaxKind.PublicKeyword" data-throw-if-not-resolved="false"></xref>,
+        <xref href="Microsoft.CodeAnalysis.CSharp.SyntaxKind.PrivateKeyword" data-throw-if-not-resolved="false"></xref>, <xref href="Microsoft.CodeAnalysis.CSharp.SyntaxKind.StaticKeyword" data-throw-if-not-resolved="false"></xref>,
+        <xref href="Microsoft.CodeAnalysis.CSharp.SyntaxKind.AsyncKeyword" data-throw-if-not-resolved="false"></xref>, and <xref href="Microsoft.CodeAnalysis.CSharp.SyntaxKind.PartialKeyword" data-throw-if-not-resolved="false"></xref>.
+    </p>
+
+    <ul><li>Access modifiers: <xref href="Microsoft.CodeAnalysis.CSharp.SyntaxKind.PublicKeyword" data-throw-if-not-resolved="false"></xref>, <xref href="Microsoft.CodeAnalysis.CSharp.SyntaxKind.PrivateKeyword" data-throw-if-not-resolved="false"></xref>, <xref href="Microsoft.CodeAnalysis.CSharp.SyntaxKind.ProtectedKeyword" data-throw-if-not-resolved="false"></xref>, <xref href="Microsoft.CodeAnalysis.CSharp.SyntaxKind.InternalKeyword" data-throw-if-not-resolved="false"></xref></li><li>Member modifiers: <xref href="Microsoft.CodeAnalysis.CSharp.SyntaxKind.StaticKeyword" data-throw-if-not-resolved="false"></xref>, <xref href="Microsoft.CodeAnalysis.CSharp.SyntaxKind.ReadOnlyKeyword" data-throw-if-not-resolved="false"></xref>, <xref href="Microsoft.CodeAnalysis.CSharp.SyntaxKind.ConstKeyword" data-throw-if-not-resolved="false"></xref>, <xref href="Microsoft.CodeAnalysis.CSharp.SyntaxKind.VolatileKeyword" data-throw-if-not-resolved="false"></xref></li><li>Inheritance modifiers: <xref href="Microsoft.CodeAnalysis.CSharp.SyntaxKind.AbstractKeyword" data-throw-if-not-resolved="false"></xref>, <xref href="Microsoft.CodeAnalysis.CSharp.SyntaxKind.VirtualKeyword" data-throw-if-not-resolved="false"></xref>, <xref href="Microsoft.CodeAnalysis.CSharp.SyntaxKind.OverrideKeyword" data-throw-if-not-resolved="false"></xref>, <xref href="Microsoft.CodeAnalysis.CSharp.SyntaxKind.SealedKeyword" data-throw-if-not-resolved="false"></xref>, <xref href="Microsoft.CodeAnalysis.CSharp.SyntaxKind.NewKeyword" data-throw-if-not-resolved="false"></xref></li><li>Async/unsafe: <xref href="Microsoft.CodeAnalysis.CSharp.SyntaxKind.AsyncKeyword" data-throw-if-not-resolved="false"></xref>, <xref href="Microsoft.CodeAnalysis.CSharp.SyntaxKind.UnsafeKeyword" data-throw-if-not-resolved="false"></xref></li><li>Type modifiers: <xref href="Microsoft.CodeAnalysis.CSharp.SyntaxKind.PartialKeyword" data-throw-if-not-resolved="false"></xref>, <xref href="Microsoft.CodeAnalysis.CSharp.SyntaxKind.FileKeyword" data-throw-if-not-resolved="false"></xref></li></ul>
+  example:
+  - >-
+    <pre><code class="lang-csharp">// Check for async methods in an analyzer
+
+    if (methodDeclaration.HasModifier(SyntaxKind.AsyncKeyword))
+
+    {
+        // Analyze async-specific patterns
+    }
+
+
+    // Check for static members
+
+    if (memberDeclaration.HasModifier(SyntaxKind.StaticKeyword))
+
+    {
+        // Apply static member rules
+    }
+
+
+    // Check for virtual methods that could be overridden
+
+    if (methodDeclaration.HasModifier(SyntaxKind.VirtualKeyword) ||
+        methodDeclaration.HasModifier(SyntaxKind.AbstractKeyword))
+    {
+        // Method can be overridden in derived classes
+    }</code></pre>
+  syntax:
+    content: public static bool HasModifier(this MemberDeclarationSyntax member, SyntaxKind kind)
+    parameters:
+    - id: member
+      type: Microsoft.CodeAnalysis.CSharp.Syntax.MemberDeclarationSyntax
+      description: The member declaration to check.
+    - id: kind
+      type: Microsoft.CodeAnalysis.CSharp.SyntaxKind
+      description: The <xref href="Microsoft.CodeAnalysis.CSharp.SyntaxKind" data-throw-if-not-resolved="false"></xref> of the modifier to look for.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if the member has the specified modifier; otherwise, <code>false</code>.
+    content.vb: Public Shared Function HasModifier(member As MemberDeclarationSyntax, kind As SyntaxKind) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.SyntaxExtensions.HasModifier*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.SyntaxExtensions.IsPartial(Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax)
+    commentId: M:ANcpLua.Roslyn.Utilities.SyntaxExtensions.IsPartial(Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax)
+- uid: ANcpLua.Roslyn.Utilities.SyntaxExtensions.IsPartial(Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax)
+  commentId: M:ANcpLua.Roslyn.Utilities.SyntaxExtensions.IsPartial(Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax)
+  id: IsPartial(Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.SyntaxExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsPartial(TypeDeclarationSyntax)
+  nameWithType: SyntaxExtensions.IsPartial(TypeDeclarationSyntax)
+  fullName: ANcpLua.Roslyn.Utilities.SyntaxExtensions.IsPartial(Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SyntaxExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsPartial
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SyntaxExtensions.cs
+    startLine: 149
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Checks if a type declaration has the partial modifier.
+  remarks: >-
+    <p>
+        Partial types are commonly required for source generators to augment existing types
+        with generated members.
+    </p>
+  example: []
+  syntax:
+    content: public static bool IsPartial(this TypeDeclarationSyntax type)
+    parameters:
+    - id: type
+      type: Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax
+      description: The type declaration to check.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if the type has the <code>partial</code> modifier; otherwise, <code>false</code>.
+    content.vb: Public Shared Function IsPartial(type As TypeDeclarationSyntax) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.SyntaxExtensions.IsPartial*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.SyntaxExtensions.HasModifier(Microsoft.CodeAnalysis.CSharp.Syntax.MemberDeclarationSyntax,Microsoft.CodeAnalysis.CSharp.SyntaxKind)
+    commentId: M:ANcpLua.Roslyn.Utilities.SyntaxExtensions.HasModifier(Microsoft.CodeAnalysis.CSharp.Syntax.MemberDeclarationSyntax,Microsoft.CodeAnalysis.CSharp.SyntaxKind)
+  - linkId: ANcpLua.Roslyn.Utilities.SyntaxExtensions.IsPrimaryConstructorType(Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax)
+    commentId: M:ANcpLua.Roslyn.Utilities.SyntaxExtensions.IsPrimaryConstructorType(Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax)
+- uid: ANcpLua.Roslyn.Utilities.SyntaxExtensions.IsPrimaryConstructorType(Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax)
+  commentId: M:ANcpLua.Roslyn.Utilities.SyntaxExtensions.IsPrimaryConstructorType(Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax)
+  id: IsPrimaryConstructorType(Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.SyntaxExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsPrimaryConstructorType(TypeDeclarationSyntax)
+  nameWithType: SyntaxExtensions.IsPrimaryConstructorType(TypeDeclarationSyntax)
+  fullName: ANcpLua.Roslyn.Utilities.SyntaxExtensions.IsPrimaryConstructorType(Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SyntaxExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsPrimaryConstructorType
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SyntaxExtensions.cs
+    startLine: 172
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Checks if a type declaration is a primary constructor type.
+  remarks: >-
+    <p>
+        Primary constructors were introduced in C# 12 for classes and structs,
+        and have been available for records since C# 9. A primary constructor is
+        declared by adding a parameter list directly after the type name.
+    </p>
+
+    <ul><li>Applies to <xref href="Microsoft.CodeAnalysis.CSharp.Syntax.ClassDeclarationSyntax" data-throw-if-not-resolved="false"></xref>, <xref href="Microsoft.CodeAnalysis.CSharp.Syntax.StructDeclarationSyntax" data-throw-if-not-resolved="false"></xref>, and <xref href="Microsoft.CodeAnalysis.CSharp.Syntax.RecordDeclarationSyntax" data-throw-if-not-resolved="false"></xref></li><li>Returns <code>true</code> only if the type has a non-null <xref href="Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax.ParameterList" data-throw-if-not-resolved="false"></xref></li><li>Does not apply to interfaces or other type declarations</li></ul>
+  example: []
+  syntax:
+    content: public static bool IsPrimaryConstructorType(this TypeDeclarationSyntax type)
+    parameters:
+    - id: type
+      type: Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax
+      description: The type declaration to check.
+    return:
+      type: System.Boolean
+      description: >-
+        <code>true</code> if the type is a class, struct, or record with a primary constructor
+
+        (parameter list); otherwise, <code>false</code>.
+    content.vb: Public Shared Function IsPrimaryConstructorType(type As TypeDeclarationSyntax) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.SyntaxExtensions.IsPrimaryConstructorType*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.SyntaxExtensions.IsPartial(Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax)
+    commentId: M:ANcpLua.Roslyn.Utilities.SyntaxExtensions.IsPartial(Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax)
+- uid: ANcpLua.Roslyn.Utilities.SyntaxExtensions.GetNameLocation(Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax)
+  commentId: M:ANcpLua.Roslyn.Utilities.SyntaxExtensions.GetNameLocation(Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax)
+  id: GetNameLocation(Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.SyntaxExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetNameLocation(TypeDeclarationSyntax)
+  nameWithType: SyntaxExtensions.GetNameLocation(TypeDeclarationSyntax)
+  fullName: ANcpLua.Roslyn.Utilities.SyntaxExtensions.GetNameLocation(Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SyntaxExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: GetNameLocation
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SyntaxExtensions.cs
+    startLine: 190
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Gets the name token location for a type declaration.
+  remarks: >-
+    <p>
+        This method is useful for reporting diagnostics that should point to the type name
+        rather than the entire type declaration.
+    </p>
+  example: []
+  syntax:
+    content: public static Location GetNameLocation(this TypeDeclarationSyntax type)
+    parameters:
+    - id: type
+      type: Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax
+      description: The type declaration to get the name location from.
+    return:
+      type: Microsoft.CodeAnalysis.Location
+      description: The <xref href="Microsoft.CodeAnalysis.Location" data-throw-if-not-resolved="false"></xref> of the type's identifier token.
+    content.vb: Public Shared Function GetNameLocation(type As TypeDeclarationSyntax) As Location
+  overload: ANcpLua.Roslyn.Utilities.SyntaxExtensions.GetNameLocation*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.SyntaxExtensions.GetNameLocation(Microsoft.CodeAnalysis.CSharp.Syntax.MethodDeclarationSyntax)
+    commentId: M:ANcpLua.Roslyn.Utilities.SyntaxExtensions.GetNameLocation(Microsoft.CodeAnalysis.CSharp.Syntax.MethodDeclarationSyntax)
+- uid: ANcpLua.Roslyn.Utilities.SyntaxExtensions.GetNameLocation(Microsoft.CodeAnalysis.CSharp.Syntax.MethodDeclarationSyntax)
+  commentId: M:ANcpLua.Roslyn.Utilities.SyntaxExtensions.GetNameLocation(Microsoft.CodeAnalysis.CSharp.Syntax.MethodDeclarationSyntax)
+  id: GetNameLocation(Microsoft.CodeAnalysis.CSharp.Syntax.MethodDeclarationSyntax)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.SyntaxExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetNameLocation(MethodDeclarationSyntax)
+  nameWithType: SyntaxExtensions.GetNameLocation(MethodDeclarationSyntax)
+  fullName: ANcpLua.Roslyn.Utilities.SyntaxExtensions.GetNameLocation(Microsoft.CodeAnalysis.CSharp.Syntax.MethodDeclarationSyntax)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SyntaxExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: GetNameLocation
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SyntaxExtensions.cs
+    startLine: 206
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Gets the name token location for a method declaration.
+  remarks: >-
+    <p>
+        This method is useful for reporting diagnostics that should point to the method name
+        rather than the entire method declaration.
+    </p>
+  example: []
+  syntax:
+    content: public static Location GetNameLocation(this MethodDeclarationSyntax method)
+    parameters:
+    - id: method
+      type: Microsoft.CodeAnalysis.CSharp.Syntax.MethodDeclarationSyntax
+      description: The method declaration to get the name location from.
+    return:
+      type: Microsoft.CodeAnalysis.Location
+      description: The <xref href="Microsoft.CodeAnalysis.Location" data-throw-if-not-resolved="false"></xref> of the method's identifier token.
+    content.vb: Public Shared Function GetNameLocation(method As MethodDeclarationSyntax) As Location
+  overload: ANcpLua.Roslyn.Utilities.SyntaxExtensions.GetNameLocation*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.SyntaxExtensions.GetNameLocation(Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax)
+    commentId: M:ANcpLua.Roslyn.Utilities.SyntaxExtensions.GetNameLocation(Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax)
+references:
+- uid: Microsoft.CodeAnalysis.CSharp.Syntax.InvocationExpressionSyntax
+  commentId: T:Microsoft.CodeAnalysis.CSharp.Syntax.InvocationExpressionSyntax
+  parent: Microsoft.CodeAnalysis.CSharp.Syntax
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.syntax.invocationexpressionsyntax
+  name: InvocationExpressionSyntax
+  nameWithType: InvocationExpressionSyntax
+  fullName: Microsoft.CodeAnalysis.CSharp.Syntax.InvocationExpressionSyntax
+- uid: Microsoft.CodeAnalysis.CSharp.Syntax.MemberDeclarationSyntax
+  commentId: T:Microsoft.CodeAnalysis.CSharp.Syntax.MemberDeclarationSyntax
+  parent: Microsoft.CodeAnalysis.CSharp.Syntax
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.syntax.memberdeclarationsyntax
+  name: MemberDeclarationSyntax
+  nameWithType: MemberDeclarationSyntax
+  fullName: Microsoft.CodeAnalysis.CSharp.Syntax.MemberDeclarationSyntax
+- uid: Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax
+  commentId: T:Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax
+  parent: Microsoft.CodeAnalysis.CSharp.Syntax
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.syntax.typedeclarationsyntax
+  name: TypeDeclarationSyntax
+  nameWithType: TypeDeclarationSyntax
+  fullName: Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax
+- uid: ANcpLua.Roslyn.Utilities
+  commentId: N:ANcpLua.Roslyn.Utilities
+  href: ANcpLua.html
+  name: ANcpLua.Roslyn.Utilities
+  nameWithType: ANcpLua.Roslyn.Utilities
+  fullName: ANcpLua.Roslyn.Utilities
+  spec.csharp:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  spec.vb:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: Microsoft.CodeAnalysis.CSharp.Syntax
+  commentId: N:Microsoft.CodeAnalysis.CSharp.Syntax
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.CodeAnalysis.CSharp.Syntax
+  nameWithType: Microsoft.CodeAnalysis.CSharp.Syntax
+  fullName: Microsoft.CodeAnalysis.CSharp.Syntax
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+  - name: .
+  - uid: Microsoft.CodeAnalysis.CSharp
+    name: CSharp
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp
+  - name: .
+  - uid: Microsoft.CodeAnalysis.CSharp.Syntax
+    name: Syntax
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.syntax
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+  - name: .
+  - uid: Microsoft.CodeAnalysis.CSharp
+    name: CSharp
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp
+  - name: .
+  - uid: Microsoft.CodeAnalysis.CSharp.Syntax
+    name: Syntax
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.syntax
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ANcpLua.Roslyn.Utilities.SyntaxExtensions.GetIdentifierName(Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax)
+  commentId: M:ANcpLua.Roslyn.Utilities.SyntaxExtensions.GetIdentifierName(Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.SyntaxExtensions.html#ANcpLua_Roslyn_Utilities_SyntaxExtensions_GetIdentifierName_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_
+  name: GetIdentifierName(ExpressionSyntax)
+  nameWithType: SyntaxExtensions.GetIdentifierName(ExpressionSyntax)
+  fullName: ANcpLua.Roslyn.Utilities.SyntaxExtensions.GetIdentifierName(Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.SyntaxExtensions.GetIdentifierName(Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax)
+    name: GetIdentifierName
+    href: ANcpLua.Roslyn.Utilities.SyntaxExtensions.html#ANcpLua_Roslyn_Utilities_SyntaxExtensions_GetIdentifierName_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax
+    name: ExpressionSyntax
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.syntax.expressionsyntax
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.SyntaxExtensions.GetIdentifierName(Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax)
+    name: GetIdentifierName
+    href: ANcpLua.Roslyn.Utilities.SyntaxExtensions.html#ANcpLua_Roslyn_Utilities_SyntaxExtensions_GetIdentifierName_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax
+    name: ExpressionSyntax
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.syntax.expressionsyntax
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.SyntaxExtensions.GetMethodName*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SyntaxExtensions.GetMethodName
+  href: ANcpLua.Roslyn.Utilities.SyntaxExtensions.html#ANcpLua_Roslyn_Utilities_SyntaxExtensions_GetMethodName_Microsoft_CodeAnalysis_CSharp_Syntax_InvocationExpressionSyntax_
+  name: GetMethodName
+  nameWithType: SyntaxExtensions.GetMethodName
+  fullName: ANcpLua.Roslyn.Utilities.SyntaxExtensions.GetMethodName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: ANcpLua.Roslyn.Utilities.SyntaxExtensions.GetMethodName(Microsoft.CodeAnalysis.CSharp.Syntax.InvocationExpressionSyntax)
+  commentId: M:ANcpLua.Roslyn.Utilities.SyntaxExtensions.GetMethodName(Microsoft.CodeAnalysis.CSharp.Syntax.InvocationExpressionSyntax)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.SyntaxExtensions.html#ANcpLua_Roslyn_Utilities_SyntaxExtensions_GetMethodName_Microsoft_CodeAnalysis_CSharp_Syntax_InvocationExpressionSyntax_
+  name: GetMethodName(InvocationExpressionSyntax)
+  nameWithType: SyntaxExtensions.GetMethodName(InvocationExpressionSyntax)
+  fullName: ANcpLua.Roslyn.Utilities.SyntaxExtensions.GetMethodName(Microsoft.CodeAnalysis.CSharp.Syntax.InvocationExpressionSyntax)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.SyntaxExtensions.GetMethodName(Microsoft.CodeAnalysis.CSharp.Syntax.InvocationExpressionSyntax)
+    name: GetMethodName
+    href: ANcpLua.Roslyn.Utilities.SyntaxExtensions.html#ANcpLua_Roslyn_Utilities_SyntaxExtensions_GetMethodName_Microsoft_CodeAnalysis_CSharp_Syntax_InvocationExpressionSyntax_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.CSharp.Syntax.InvocationExpressionSyntax
+    name: InvocationExpressionSyntax
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.syntax.invocationexpressionsyntax
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.SyntaxExtensions.GetMethodName(Microsoft.CodeAnalysis.CSharp.Syntax.InvocationExpressionSyntax)
+    name: GetMethodName
+    href: ANcpLua.Roslyn.Utilities.SyntaxExtensions.html#ANcpLua_Roslyn_Utilities_SyntaxExtensions_GetMethodName_Microsoft_CodeAnalysis_CSharp_Syntax_InvocationExpressionSyntax_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.CSharp.Syntax.InvocationExpressionSyntax
+    name: InvocationExpressionSyntax
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.syntax.invocationexpressionsyntax
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.SyntaxExtensions.GetIdentifierName*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SyntaxExtensions.GetIdentifierName
+  href: ANcpLua.Roslyn.Utilities.SyntaxExtensions.html#ANcpLua_Roslyn_Utilities_SyntaxExtensions_GetIdentifierName_Microsoft_CodeAnalysis_CSharp_Syntax_ExpressionSyntax_
+  name: GetIdentifierName
+  nameWithType: SyntaxExtensions.GetIdentifierName
+  fullName: ANcpLua.Roslyn.Utilities.SyntaxExtensions.GetIdentifierName
+- uid: Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax
+  commentId: T:Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax
+  parent: Microsoft.CodeAnalysis.CSharp.Syntax
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.syntax.expressionsyntax
+  name: ExpressionSyntax
+  nameWithType: ExpressionSyntax
+  fullName: Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax
+- uid: ANcpLua.Roslyn.Utilities.SyntaxExtensions.IsPartial(Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax)
+  commentId: M:ANcpLua.Roslyn.Utilities.SyntaxExtensions.IsPartial(Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.SyntaxExtensions.html#ANcpLua_Roslyn_Utilities_SyntaxExtensions_IsPartial_Microsoft_CodeAnalysis_CSharp_Syntax_TypeDeclarationSyntax_
+  name: IsPartial(TypeDeclarationSyntax)
+  nameWithType: SyntaxExtensions.IsPartial(TypeDeclarationSyntax)
+  fullName: ANcpLua.Roslyn.Utilities.SyntaxExtensions.IsPartial(Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.SyntaxExtensions.IsPartial(Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax)
+    name: IsPartial
+    href: ANcpLua.Roslyn.Utilities.SyntaxExtensions.html#ANcpLua_Roslyn_Utilities_SyntaxExtensions_IsPartial_Microsoft_CodeAnalysis_CSharp_Syntax_TypeDeclarationSyntax_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax
+    name: TypeDeclarationSyntax
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.syntax.typedeclarationsyntax
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.SyntaxExtensions.IsPartial(Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax)
+    name: IsPartial
+    href: ANcpLua.Roslyn.Utilities.SyntaxExtensions.html#ANcpLua_Roslyn_Utilities_SyntaxExtensions_IsPartial_Microsoft_CodeAnalysis_CSharp_Syntax_TypeDeclarationSyntax_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax
+    name: TypeDeclarationSyntax
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.syntax.typedeclarationsyntax
+  - name: )
+- uid: Microsoft.CodeAnalysis.CSharp.SyntaxKind
+  commentId: T:Microsoft.CodeAnalysis.CSharp.SyntaxKind
+  parent: Microsoft.CodeAnalysis.CSharp
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.syntaxkind
+  name: SyntaxKind
+  nameWithType: SyntaxKind
+  fullName: Microsoft.CodeAnalysis.CSharp.SyntaxKind
+- uid: Microsoft.CodeAnalysis.CSharp.SyntaxKind.PublicKeyword
+  commentId: F:Microsoft.CodeAnalysis.CSharp.SyntaxKind.PublicKeyword
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.syntaxkind#microsoft-codeanalysis-csharp-syntaxkind-publickeyword
+  name: PublicKeyword
+  nameWithType: SyntaxKind.PublicKeyword
+  fullName: Microsoft.CodeAnalysis.CSharp.SyntaxKind.PublicKeyword
+- uid: Microsoft.CodeAnalysis.CSharp.SyntaxKind.PrivateKeyword
+  commentId: F:Microsoft.CodeAnalysis.CSharp.SyntaxKind.PrivateKeyword
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.syntaxkind#microsoft-codeanalysis-csharp-syntaxkind-privatekeyword
+  name: PrivateKeyword
+  nameWithType: SyntaxKind.PrivateKeyword
+  fullName: Microsoft.CodeAnalysis.CSharp.SyntaxKind.PrivateKeyword
+- uid: Microsoft.CodeAnalysis.CSharp.SyntaxKind.StaticKeyword
+  commentId: F:Microsoft.CodeAnalysis.CSharp.SyntaxKind.StaticKeyword
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.syntaxkind#microsoft-codeanalysis-csharp-syntaxkind-statickeyword
+  name: StaticKeyword
+  nameWithType: SyntaxKind.StaticKeyword
+  fullName: Microsoft.CodeAnalysis.CSharp.SyntaxKind.StaticKeyword
+- uid: Microsoft.CodeAnalysis.CSharp.SyntaxKind.AsyncKeyword
+  commentId: F:Microsoft.CodeAnalysis.CSharp.SyntaxKind.AsyncKeyword
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.syntaxkind#microsoft-codeanalysis-csharp-syntaxkind-asynckeyword
+  name: AsyncKeyword
+  nameWithType: SyntaxKind.AsyncKeyword
+  fullName: Microsoft.CodeAnalysis.CSharp.SyntaxKind.AsyncKeyword
+- uid: Microsoft.CodeAnalysis.CSharp.SyntaxKind.PartialKeyword
+  commentId: F:Microsoft.CodeAnalysis.CSharp.SyntaxKind.PartialKeyword
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.syntaxkind#microsoft-codeanalysis-csharp-syntaxkind-partialkeyword
+  name: PartialKeyword
+  nameWithType: SyntaxKind.PartialKeyword
+  fullName: Microsoft.CodeAnalysis.CSharp.SyntaxKind.PartialKeyword
+- uid: Microsoft.CodeAnalysis.CSharp.SyntaxKind.ProtectedKeyword
+  commentId: F:Microsoft.CodeAnalysis.CSharp.SyntaxKind.ProtectedKeyword
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.syntaxkind#microsoft-codeanalysis-csharp-syntaxkind-protectedkeyword
+  name: ProtectedKeyword
+  nameWithType: SyntaxKind.ProtectedKeyword
+  fullName: Microsoft.CodeAnalysis.CSharp.SyntaxKind.ProtectedKeyword
+- uid: Microsoft.CodeAnalysis.CSharp.SyntaxKind.InternalKeyword
+  commentId: F:Microsoft.CodeAnalysis.CSharp.SyntaxKind.InternalKeyword
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.syntaxkind#microsoft-codeanalysis-csharp-syntaxkind-internalkeyword
+  name: InternalKeyword
+  nameWithType: SyntaxKind.InternalKeyword
+  fullName: Microsoft.CodeAnalysis.CSharp.SyntaxKind.InternalKeyword
+- uid: Microsoft.CodeAnalysis.CSharp.SyntaxKind.ReadOnlyKeyword
+  commentId: F:Microsoft.CodeAnalysis.CSharp.SyntaxKind.ReadOnlyKeyword
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.syntaxkind#microsoft-codeanalysis-csharp-syntaxkind-readonlykeyword
+  name: ReadOnlyKeyword
+  nameWithType: SyntaxKind.ReadOnlyKeyword
+  fullName: Microsoft.CodeAnalysis.CSharp.SyntaxKind.ReadOnlyKeyword
+- uid: Microsoft.CodeAnalysis.CSharp.SyntaxKind.ConstKeyword
+  commentId: F:Microsoft.CodeAnalysis.CSharp.SyntaxKind.ConstKeyword
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.syntaxkind#microsoft-codeanalysis-csharp-syntaxkind-constkeyword
+  name: ConstKeyword
+  nameWithType: SyntaxKind.ConstKeyword
+  fullName: Microsoft.CodeAnalysis.CSharp.SyntaxKind.ConstKeyword
+- uid: Microsoft.CodeAnalysis.CSharp.SyntaxKind.VolatileKeyword
+  commentId: F:Microsoft.CodeAnalysis.CSharp.SyntaxKind.VolatileKeyword
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.syntaxkind#microsoft-codeanalysis-csharp-syntaxkind-volatilekeyword
+  name: VolatileKeyword
+  nameWithType: SyntaxKind.VolatileKeyword
+  fullName: Microsoft.CodeAnalysis.CSharp.SyntaxKind.VolatileKeyword
+- uid: Microsoft.CodeAnalysis.CSharp.SyntaxKind.AbstractKeyword
+  commentId: F:Microsoft.CodeAnalysis.CSharp.SyntaxKind.AbstractKeyword
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.syntaxkind#microsoft-codeanalysis-csharp-syntaxkind-abstractkeyword
+  name: AbstractKeyword
+  nameWithType: SyntaxKind.AbstractKeyword
+  fullName: Microsoft.CodeAnalysis.CSharp.SyntaxKind.AbstractKeyword
+- uid: Microsoft.CodeAnalysis.CSharp.SyntaxKind.VirtualKeyword
+  commentId: F:Microsoft.CodeAnalysis.CSharp.SyntaxKind.VirtualKeyword
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.syntaxkind#microsoft-codeanalysis-csharp-syntaxkind-virtualkeyword
+  name: VirtualKeyword
+  nameWithType: SyntaxKind.VirtualKeyword
+  fullName: Microsoft.CodeAnalysis.CSharp.SyntaxKind.VirtualKeyword
+- uid: Microsoft.CodeAnalysis.CSharp.SyntaxKind.OverrideKeyword
+  commentId: F:Microsoft.CodeAnalysis.CSharp.SyntaxKind.OverrideKeyword
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.syntaxkind#microsoft-codeanalysis-csharp-syntaxkind-overridekeyword
+  name: OverrideKeyword
+  nameWithType: SyntaxKind.OverrideKeyword
+  fullName: Microsoft.CodeAnalysis.CSharp.SyntaxKind.OverrideKeyword
+- uid: Microsoft.CodeAnalysis.CSharp.SyntaxKind.SealedKeyword
+  commentId: F:Microsoft.CodeAnalysis.CSharp.SyntaxKind.SealedKeyword
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.syntaxkind#microsoft-codeanalysis-csharp-syntaxkind-sealedkeyword
+  name: SealedKeyword
+  nameWithType: SyntaxKind.SealedKeyword
+  fullName: Microsoft.CodeAnalysis.CSharp.SyntaxKind.SealedKeyword
+- uid: Microsoft.CodeAnalysis.CSharp.SyntaxKind.NewKeyword
+  commentId: F:Microsoft.CodeAnalysis.CSharp.SyntaxKind.NewKeyword
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.syntaxkind#microsoft-codeanalysis-csharp-syntaxkind-newkeyword
+  name: NewKeyword
+  nameWithType: SyntaxKind.NewKeyword
+  fullName: Microsoft.CodeAnalysis.CSharp.SyntaxKind.NewKeyword
+- uid: Microsoft.CodeAnalysis.CSharp.SyntaxKind.UnsafeKeyword
+  commentId: F:Microsoft.CodeAnalysis.CSharp.SyntaxKind.UnsafeKeyword
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.syntaxkind#microsoft-codeanalysis-csharp-syntaxkind-unsafekeyword
+  name: UnsafeKeyword
+  nameWithType: SyntaxKind.UnsafeKeyword
+  fullName: Microsoft.CodeAnalysis.CSharp.SyntaxKind.UnsafeKeyword
+- uid: Microsoft.CodeAnalysis.CSharp.SyntaxKind.FileKeyword
+  commentId: F:Microsoft.CodeAnalysis.CSharp.SyntaxKind.FileKeyword
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.syntaxkind#microsoft-codeanalysis-csharp-syntaxkind-filekeyword
+  name: FileKeyword
+  nameWithType: SyntaxKind.FileKeyword
+  fullName: Microsoft.CodeAnalysis.CSharp.SyntaxKind.FileKeyword
+- uid: ANcpLua.Roslyn.Utilities.SyntaxExtensions.HasModifier*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SyntaxExtensions.HasModifier
+  href: ANcpLua.Roslyn.Utilities.SyntaxExtensions.html#ANcpLua_Roslyn_Utilities_SyntaxExtensions_HasModifier_Microsoft_CodeAnalysis_CSharp_Syntax_MemberDeclarationSyntax_Microsoft_CodeAnalysis_CSharp_SyntaxKind_
+  name: HasModifier
+  nameWithType: SyntaxExtensions.HasModifier
+  fullName: ANcpLua.Roslyn.Utilities.SyntaxExtensions.HasModifier
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Microsoft.CodeAnalysis.CSharp
+  commentId: N:Microsoft.CodeAnalysis.CSharp
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.CodeAnalysis.CSharp
+  nameWithType: Microsoft.CodeAnalysis.CSharp
+  fullName: Microsoft.CodeAnalysis.CSharp
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+  - name: .
+  - uid: Microsoft.CodeAnalysis.CSharp
+    name: CSharp
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+  - name: .
+  - uid: Microsoft.CodeAnalysis.CSharp
+    name: CSharp
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp
+- uid: ANcpLua.Roslyn.Utilities.SyntaxExtensions.HasModifier(Microsoft.CodeAnalysis.CSharp.Syntax.MemberDeclarationSyntax,Microsoft.CodeAnalysis.CSharp.SyntaxKind)
+  commentId: M:ANcpLua.Roslyn.Utilities.SyntaxExtensions.HasModifier(Microsoft.CodeAnalysis.CSharp.Syntax.MemberDeclarationSyntax,Microsoft.CodeAnalysis.CSharp.SyntaxKind)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.SyntaxExtensions.html#ANcpLua_Roslyn_Utilities_SyntaxExtensions_HasModifier_Microsoft_CodeAnalysis_CSharp_Syntax_MemberDeclarationSyntax_Microsoft_CodeAnalysis_CSharp_SyntaxKind_
+  name: HasModifier(MemberDeclarationSyntax, SyntaxKind)
+  nameWithType: SyntaxExtensions.HasModifier(MemberDeclarationSyntax, SyntaxKind)
+  fullName: ANcpLua.Roslyn.Utilities.SyntaxExtensions.HasModifier(Microsoft.CodeAnalysis.CSharp.Syntax.MemberDeclarationSyntax, Microsoft.CodeAnalysis.CSharp.SyntaxKind)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.SyntaxExtensions.HasModifier(Microsoft.CodeAnalysis.CSharp.Syntax.MemberDeclarationSyntax,Microsoft.CodeAnalysis.CSharp.SyntaxKind)
+    name: HasModifier
+    href: ANcpLua.Roslyn.Utilities.SyntaxExtensions.html#ANcpLua_Roslyn_Utilities_SyntaxExtensions_HasModifier_Microsoft_CodeAnalysis_CSharp_Syntax_MemberDeclarationSyntax_Microsoft_CodeAnalysis_CSharp_SyntaxKind_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.CSharp.Syntax.MemberDeclarationSyntax
+    name: MemberDeclarationSyntax
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.syntax.memberdeclarationsyntax
+  - name: ','
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.CSharp.SyntaxKind
+    name: SyntaxKind
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.syntaxkind
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.SyntaxExtensions.HasModifier(Microsoft.CodeAnalysis.CSharp.Syntax.MemberDeclarationSyntax,Microsoft.CodeAnalysis.CSharp.SyntaxKind)
+    name: HasModifier
+    href: ANcpLua.Roslyn.Utilities.SyntaxExtensions.html#ANcpLua_Roslyn_Utilities_SyntaxExtensions_HasModifier_Microsoft_CodeAnalysis_CSharp_Syntax_MemberDeclarationSyntax_Microsoft_CodeAnalysis_CSharp_SyntaxKind_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.CSharp.Syntax.MemberDeclarationSyntax
+    name: MemberDeclarationSyntax
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.syntax.memberdeclarationsyntax
+  - name: ','
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.CSharp.SyntaxKind
+    name: SyntaxKind
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.syntaxkind
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.SyntaxExtensions.IsPrimaryConstructorType(Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax)
+  commentId: M:ANcpLua.Roslyn.Utilities.SyntaxExtensions.IsPrimaryConstructorType(Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.SyntaxExtensions.html#ANcpLua_Roslyn_Utilities_SyntaxExtensions_IsPrimaryConstructorType_Microsoft_CodeAnalysis_CSharp_Syntax_TypeDeclarationSyntax_
+  name: IsPrimaryConstructorType(TypeDeclarationSyntax)
+  nameWithType: SyntaxExtensions.IsPrimaryConstructorType(TypeDeclarationSyntax)
+  fullName: ANcpLua.Roslyn.Utilities.SyntaxExtensions.IsPrimaryConstructorType(Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.SyntaxExtensions.IsPrimaryConstructorType(Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax)
+    name: IsPrimaryConstructorType
+    href: ANcpLua.Roslyn.Utilities.SyntaxExtensions.html#ANcpLua_Roslyn_Utilities_SyntaxExtensions_IsPrimaryConstructorType_Microsoft_CodeAnalysis_CSharp_Syntax_TypeDeclarationSyntax_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax
+    name: TypeDeclarationSyntax
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.syntax.typedeclarationsyntax
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.SyntaxExtensions.IsPrimaryConstructorType(Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax)
+    name: IsPrimaryConstructorType
+    href: ANcpLua.Roslyn.Utilities.SyntaxExtensions.html#ANcpLua_Roslyn_Utilities_SyntaxExtensions_IsPrimaryConstructorType_Microsoft_CodeAnalysis_CSharp_Syntax_TypeDeclarationSyntax_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax
+    name: TypeDeclarationSyntax
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.syntax.typedeclarationsyntax
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.SyntaxExtensions.IsPartial*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SyntaxExtensions.IsPartial
+  href: ANcpLua.Roslyn.Utilities.SyntaxExtensions.html#ANcpLua_Roslyn_Utilities_SyntaxExtensions_IsPartial_Microsoft_CodeAnalysis_CSharp_Syntax_TypeDeclarationSyntax_
+  name: IsPartial
+  nameWithType: SyntaxExtensions.IsPartial
+  fullName: ANcpLua.Roslyn.Utilities.SyntaxExtensions.IsPartial
+- uid: Microsoft.CodeAnalysis.CSharp.Syntax.ClassDeclarationSyntax
+  commentId: T:Microsoft.CodeAnalysis.CSharp.Syntax.ClassDeclarationSyntax
+  parent: Microsoft.CodeAnalysis.CSharp.Syntax
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.syntax.classdeclarationsyntax
+  name: ClassDeclarationSyntax
+  nameWithType: ClassDeclarationSyntax
+  fullName: Microsoft.CodeAnalysis.CSharp.Syntax.ClassDeclarationSyntax
+- uid: Microsoft.CodeAnalysis.CSharp.Syntax.StructDeclarationSyntax
+  commentId: T:Microsoft.CodeAnalysis.CSharp.Syntax.StructDeclarationSyntax
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.syntax.structdeclarationsyntax
+  name: StructDeclarationSyntax
+  nameWithType: StructDeclarationSyntax
+  fullName: Microsoft.CodeAnalysis.CSharp.Syntax.StructDeclarationSyntax
+- uid: Microsoft.CodeAnalysis.CSharp.Syntax.RecordDeclarationSyntax
+  commentId: T:Microsoft.CodeAnalysis.CSharp.Syntax.RecordDeclarationSyntax
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.syntax.recorddeclarationsyntax
+  name: RecordDeclarationSyntax
+  nameWithType: RecordDeclarationSyntax
+  fullName: Microsoft.CodeAnalysis.CSharp.Syntax.RecordDeclarationSyntax
+- uid: Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax.ParameterList
+  commentId: P:Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax.ParameterList
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.syntax.typedeclarationsyntax.parameterlist
+  name: ParameterList
+  nameWithType: TypeDeclarationSyntax.ParameterList
+  fullName: Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax.ParameterList
+- uid: ANcpLua.Roslyn.Utilities.SyntaxExtensions.IsPrimaryConstructorType*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SyntaxExtensions.IsPrimaryConstructorType
+  href: ANcpLua.Roslyn.Utilities.SyntaxExtensions.html#ANcpLua_Roslyn_Utilities_SyntaxExtensions_IsPrimaryConstructorType_Microsoft_CodeAnalysis_CSharp_Syntax_TypeDeclarationSyntax_
+  name: IsPrimaryConstructorType
+  nameWithType: SyntaxExtensions.IsPrimaryConstructorType
+  fullName: ANcpLua.Roslyn.Utilities.SyntaxExtensions.IsPrimaryConstructorType
+- uid: ANcpLua.Roslyn.Utilities.SyntaxExtensions.GetNameLocation(Microsoft.CodeAnalysis.CSharp.Syntax.MethodDeclarationSyntax)
+  commentId: M:ANcpLua.Roslyn.Utilities.SyntaxExtensions.GetNameLocation(Microsoft.CodeAnalysis.CSharp.Syntax.MethodDeclarationSyntax)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.SyntaxExtensions.html#ANcpLua_Roslyn_Utilities_SyntaxExtensions_GetNameLocation_Microsoft_CodeAnalysis_CSharp_Syntax_MethodDeclarationSyntax_
+  name: GetNameLocation(MethodDeclarationSyntax)
+  nameWithType: SyntaxExtensions.GetNameLocation(MethodDeclarationSyntax)
+  fullName: ANcpLua.Roslyn.Utilities.SyntaxExtensions.GetNameLocation(Microsoft.CodeAnalysis.CSharp.Syntax.MethodDeclarationSyntax)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.SyntaxExtensions.GetNameLocation(Microsoft.CodeAnalysis.CSharp.Syntax.MethodDeclarationSyntax)
+    name: GetNameLocation
+    href: ANcpLua.Roslyn.Utilities.SyntaxExtensions.html#ANcpLua_Roslyn_Utilities_SyntaxExtensions_GetNameLocation_Microsoft_CodeAnalysis_CSharp_Syntax_MethodDeclarationSyntax_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.CSharp.Syntax.MethodDeclarationSyntax
+    name: MethodDeclarationSyntax
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.syntax.methoddeclarationsyntax
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.SyntaxExtensions.GetNameLocation(Microsoft.CodeAnalysis.CSharp.Syntax.MethodDeclarationSyntax)
+    name: GetNameLocation
+    href: ANcpLua.Roslyn.Utilities.SyntaxExtensions.html#ANcpLua_Roslyn_Utilities_SyntaxExtensions_GetNameLocation_Microsoft_CodeAnalysis_CSharp_Syntax_MethodDeclarationSyntax_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.CSharp.Syntax.MethodDeclarationSyntax
+    name: MethodDeclarationSyntax
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.syntax.methoddeclarationsyntax
+  - name: )
+- uid: Microsoft.CodeAnalysis.Location
+  commentId: T:Microsoft.CodeAnalysis.Location
+  parent: Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.location
+  name: Location
+  nameWithType: Location
+  fullName: Microsoft.CodeAnalysis.Location
+- uid: ANcpLua.Roslyn.Utilities.SyntaxExtensions.GetNameLocation*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SyntaxExtensions.GetNameLocation
+  href: ANcpLua.Roslyn.Utilities.SyntaxExtensions.html#ANcpLua_Roslyn_Utilities_SyntaxExtensions_GetNameLocation_Microsoft_CodeAnalysis_CSharp_Syntax_TypeDeclarationSyntax_
+  name: GetNameLocation
+  nameWithType: SyntaxExtensions.GetNameLocation
+  fullName: ANcpLua.Roslyn.Utilities.SyntaxExtensions.GetNameLocation
+- uid: Microsoft.CodeAnalysis
+  commentId: N:Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.CodeAnalysis
+  nameWithType: Microsoft.CodeAnalysis
+  fullName: Microsoft.CodeAnalysis
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+- uid: ANcpLua.Roslyn.Utilities.SyntaxExtensions.GetNameLocation(Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax)
+  commentId: M:ANcpLua.Roslyn.Utilities.SyntaxExtensions.GetNameLocation(Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.SyntaxExtensions.html#ANcpLua_Roslyn_Utilities_SyntaxExtensions_GetNameLocation_Microsoft_CodeAnalysis_CSharp_Syntax_TypeDeclarationSyntax_
+  name: GetNameLocation(TypeDeclarationSyntax)
+  nameWithType: SyntaxExtensions.GetNameLocation(TypeDeclarationSyntax)
+  fullName: ANcpLua.Roslyn.Utilities.SyntaxExtensions.GetNameLocation(Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.SyntaxExtensions.GetNameLocation(Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax)
+    name: GetNameLocation
+    href: ANcpLua.Roslyn.Utilities.SyntaxExtensions.html#ANcpLua_Roslyn_Utilities_SyntaxExtensions_GetNameLocation_Microsoft_CodeAnalysis_CSharp_Syntax_TypeDeclarationSyntax_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax
+    name: TypeDeclarationSyntax
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.syntax.typedeclarationsyntax
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.SyntaxExtensions.GetNameLocation(Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax)
+    name: GetNameLocation
+    href: ANcpLua.Roslyn.Utilities.SyntaxExtensions.html#ANcpLua_Roslyn_Utilities_SyntaxExtensions_GetNameLocation_Microsoft_CodeAnalysis_CSharp_Syntax_TypeDeclarationSyntax_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax
+    name: TypeDeclarationSyntax
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.syntax.typedeclarationsyntax
+  - name: )
+- uid: Microsoft.CodeAnalysis.CSharp.Syntax.MethodDeclarationSyntax
+  commentId: T:Microsoft.CodeAnalysis.CSharp.Syntax.MethodDeclarationSyntax
+  parent: Microsoft.CodeAnalysis.CSharp.Syntax
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.syntax.methoddeclarationsyntax
+  name: MethodDeclarationSyntax
+  nameWithType: MethodDeclarationSyntax
+  fullName: Microsoft.CodeAnalysis.CSharp.Syntax.MethodDeclarationSyntax

@@ -1,0 +1,1439 @@
+### YamlMime:ManagedReference
+items:
+- uid: ANcpLua.Roslyn.Utilities.SpanExtensions
+  commentId: T:ANcpLua.Roslyn.Utilities.SpanExtensions
+  id: SpanExtensions
+  parent: ANcpLua.Roslyn.Utilities
+  children:
+  - ANcpLua.Roslyn.Utilities.SpanExtensions.All``1(System.ReadOnlySpan{``0},System.Func{``0,System.Boolean})
+  - ANcpLua.Roslyn.Utilities.SpanExtensions.Any``1(System.ReadOnlySpan{``0},System.Func{``0,System.Boolean})
+  - ANcpLua.Roslyn.Utilities.SpanExtensions.Count``1(System.ReadOnlySpan{``0},System.Func{``0,System.Boolean})
+  - ANcpLua.Roslyn.Utilities.SpanExtensions.FirstOrDefault``1(System.ReadOnlySpan{``0},System.Func{``0,System.Boolean})
+  - ANcpLua.Roslyn.Utilities.SpanExtensions.IndexOf``1(System.ReadOnlySpan{``0},System.Func{``0,System.Boolean})
+  - ANcpLua.Roslyn.Utilities.SpanExtensions.MaxBy``2(System.ReadOnlySpan{``0},System.Func{``0,``1})
+  - ANcpLua.Roslyn.Utilities.SpanExtensions.MinBy``2(System.ReadOnlySpan{``0},System.Func{``0,``1})
+  langs:
+  - csharp
+  - vb
+  name: SpanExtensions
+  nameWithType: SpanExtensions
+  fullName: ANcpLua.Roslyn.Utilities.SpanExtensions
+  type: Class
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/EnumerableExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: SpanExtensions
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/EnumerableExtensions.cs
+    startLine: 723
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Extension methods for <xref href="System.ReadOnlySpan%601" data-throw-if-not-resolved="false"></xref> providing zero-allocation operations.
+  remarks: >-
+    <p>
+        These extension methods provide LINQ-like functionality for spans without heap allocations,
+        making them ideal for performance-critical code paths in analyzers and source generators.
+    </p>
+
+    <ul><li>All operations are performed in-place without allocating intermediate collections</li><li>Methods mirror the standard LINQ API for familiarity</li></ul>
+  example: []
+  syntax:
+    content: public static class SpanExtensions
+    content.vb: Public Module SpanExtensions
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.EnumerableExtensions
+    commentId: T:ANcpLua.Roslyn.Utilities.EnumerableExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: ANcpLua.Roslyn.Utilities.SpanExtensions.MinBy``2(System.ReadOnlySpan{``0},System.Func{``0,``1})
+  commentId: M:ANcpLua.Roslyn.Utilities.SpanExtensions.MinBy``2(System.ReadOnlySpan{``0},System.Func{``0,``1})
+  id: MinBy``2(System.ReadOnlySpan{``0},System.Func{``0,``1})
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.SpanExtensions
+  langs:
+  - csharp
+  - vb
+  name: MinBy<T, TKey>(ReadOnlySpan<T>, Func<T, TKey>)
+  nameWithType: SpanExtensions.MinBy<T, TKey>(ReadOnlySpan<T>, Func<T, TKey>)
+  fullName: ANcpLua.Roslyn.Utilities.SpanExtensions.MinBy<T, TKey>(System.ReadOnlySpan<T>, System.Func<T, TKey>)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/EnumerableExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: MinBy
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/EnumerableExtensions.cs
+    startLine: 739
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Returns the element with the minimum value according to a key selector.
+  example: []
+  syntax:
+    content: 'public static T MinBy<T, TKey>(this ReadOnlySpan<T> span, Func<T, TKey> selector) where TKey : IComparable<TKey>'
+    parameters:
+    - id: span
+      type: System.ReadOnlySpan{{T}}
+      description: The source span.
+    - id: selector
+      type: System.Func{{T},{TKey}}
+      description: A function to extract the comparison key from each element.
+    typeParameters:
+    - id: T
+      description: The type of the elements in the span.
+    - id: TKey
+      description: The type of the key returned by <code class="paramref">selector</code>, which must implement <xref href="System.IComparable%601" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: '{T}'
+      description: The element with the minimum key value.
+    content.vb: Public Shared Function MinBy(Of T, TKey As IComparable(Of TKey))(span As ReadOnlySpan(Of T), selector As Func(Of T, TKey)) As T
+  overload: ANcpLua.Roslyn.Utilities.SpanExtensions.MinBy*
+  exceptions:
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: Thrown when <code class="paramref">span</code> is empty.
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.SpanExtensions.MaxBy``2(System.ReadOnlySpan{``0},System.Func{``0,``1})
+    commentId: M:ANcpLua.Roslyn.Utilities.SpanExtensions.MaxBy``2(System.ReadOnlySpan{``0},System.Func{``0,``1})
+  nameWithType.vb: SpanExtensions.MinBy(Of T, TKey)(ReadOnlySpan(Of T), Func(Of T, TKey))
+  fullName.vb: ANcpLua.Roslyn.Utilities.SpanExtensions.MinBy(Of T, TKey)(System.ReadOnlySpan(Of T), System.Func(Of T, TKey))
+  name.vb: MinBy(Of T, TKey)(ReadOnlySpan(Of T), Func(Of T, TKey))
+- uid: ANcpLua.Roslyn.Utilities.SpanExtensions.MaxBy``2(System.ReadOnlySpan{``0},System.Func{``0,``1})
+  commentId: M:ANcpLua.Roslyn.Utilities.SpanExtensions.MaxBy``2(System.ReadOnlySpan{``0},System.Func{``0,``1})
+  id: MaxBy``2(System.ReadOnlySpan{``0},System.Func{``0,``1})
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.SpanExtensions
+  langs:
+  - csharp
+  - vb
+  name: MaxBy<T, TKey>(ReadOnlySpan<T>, Func<T, TKey>)
+  nameWithType: SpanExtensions.MaxBy<T, TKey>(ReadOnlySpan<T>, Func<T, TKey>)
+  fullName: ANcpLua.Roslyn.Utilities.SpanExtensions.MaxBy<T, TKey>(System.ReadOnlySpan<T>, System.Func<T, TKey>)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/EnumerableExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: MaxBy
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/EnumerableExtensions.cs
+    startLine: 771
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Returns the element with the maximum value according to a key selector.
+  example: []
+  syntax:
+    content: 'public static T MaxBy<T, TKey>(this ReadOnlySpan<T> span, Func<T, TKey> selector) where TKey : IComparable<TKey>'
+    parameters:
+    - id: span
+      type: System.ReadOnlySpan{{T}}
+      description: The source span.
+    - id: selector
+      type: System.Func{{T},{TKey}}
+      description: A function to extract the comparison key from each element.
+    typeParameters:
+    - id: T
+      description: The type of the elements in the span.
+    - id: TKey
+      description: The type of the key returned by <code class="paramref">selector</code>, which must implement <xref href="System.IComparable%601" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: '{T}'
+      description: The element with the maximum key value.
+    content.vb: Public Shared Function MaxBy(Of T, TKey As IComparable(Of TKey))(span As ReadOnlySpan(Of T), selector As Func(Of T, TKey)) As T
+  overload: ANcpLua.Roslyn.Utilities.SpanExtensions.MaxBy*
+  exceptions:
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: Thrown when <code class="paramref">span</code> is empty.
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.SpanExtensions.MinBy``2(System.ReadOnlySpan{``0},System.Func{``0,``1})
+    commentId: M:ANcpLua.Roslyn.Utilities.SpanExtensions.MinBy``2(System.ReadOnlySpan{``0},System.Func{``0,``1})
+  nameWithType.vb: SpanExtensions.MaxBy(Of T, TKey)(ReadOnlySpan(Of T), Func(Of T, TKey))
+  fullName.vb: ANcpLua.Roslyn.Utilities.SpanExtensions.MaxBy(Of T, TKey)(System.ReadOnlySpan(Of T), System.Func(Of T, TKey))
+  name.vb: MaxBy(Of T, TKey)(ReadOnlySpan(Of T), Func(Of T, TKey))
+- uid: ANcpLua.Roslyn.Utilities.SpanExtensions.IndexOf``1(System.ReadOnlySpan{``0},System.Func{``0,System.Boolean})
+  commentId: M:ANcpLua.Roslyn.Utilities.SpanExtensions.IndexOf``1(System.ReadOnlySpan{``0},System.Func{``0,System.Boolean})
+  id: IndexOf``1(System.ReadOnlySpan{``0},System.Func{``0,System.Boolean})
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.SpanExtensions
+  langs:
+  - csharp
+  - vb
+  name: IndexOf<T>(ReadOnlySpan<T>, Func<T, bool>)
+  nameWithType: SpanExtensions.IndexOf<T>(ReadOnlySpan<T>, Func<T, bool>)
+  fullName: ANcpLua.Roslyn.Utilities.SpanExtensions.IndexOf<T>(System.ReadOnlySpan<T>, System.Func<T, bool>)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/EnumerableExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IndexOf
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/EnumerableExtensions.cs
+    startLine: 804
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Finds the zero-based index of the first element in the span that matches the predicate.
+  example: []
+  syntax:
+    content: public static int IndexOf<T>(this ReadOnlySpan<T> span, Func<T, bool> predicate)
+    parameters:
+    - id: span
+      type: System.ReadOnlySpan{{T}}
+      description: The span to search.
+    - id: predicate
+      type: System.Func{{T},System.Boolean}
+      description: A function to test each element for a condition.
+    typeParameters:
+    - id: T
+      description: The type of the elements in the span.
+    return:
+      type: System.Int32
+      description: >-
+        The zero-based index of the first element that matches the <code class="paramref">predicate</code>,
+
+        or -1 if no element matches.
+    content.vb: Public Shared Function IndexOf(Of T)(span As ReadOnlySpan(Of T), predicate As Func(Of T, Boolean)) As Integer
+  overload: ANcpLua.Roslyn.Utilities.SpanExtensions.IndexOf*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.SpanExtensions.FirstOrDefault``1(System.ReadOnlySpan{``0},System.Func{``0,System.Boolean})
+    commentId: M:ANcpLua.Roslyn.Utilities.SpanExtensions.FirstOrDefault``1(System.ReadOnlySpan{``0},System.Func{``0,System.Boolean})
+  nameWithType.vb: SpanExtensions.IndexOf(Of T)(ReadOnlySpan(Of T), Func(Of T, Boolean))
+  fullName.vb: ANcpLua.Roslyn.Utilities.SpanExtensions.IndexOf(Of T)(System.ReadOnlySpan(Of T), System.Func(Of T, Boolean))
+  name.vb: IndexOf(Of T)(ReadOnlySpan(Of T), Func(Of T, Boolean))
+- uid: ANcpLua.Roslyn.Utilities.SpanExtensions.Any``1(System.ReadOnlySpan{``0},System.Func{``0,System.Boolean})
+  commentId: M:ANcpLua.Roslyn.Utilities.SpanExtensions.Any``1(System.ReadOnlySpan{``0},System.Func{``0,System.Boolean})
+  id: Any``1(System.ReadOnlySpan{``0},System.Func{``0,System.Boolean})
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.SpanExtensions
+  langs:
+  - csharp
+  - vb
+  name: Any<T>(ReadOnlySpan<T>, Func<T, bool>)
+  nameWithType: SpanExtensions.Any<T>(ReadOnlySpan<T>, Func<T, bool>)
+  fullName: ANcpLua.Roslyn.Utilities.SpanExtensions.Any<T>(System.ReadOnlySpan<T>, System.Func<T, bool>)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/EnumerableExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Any
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/EnumerableExtensions.cs
+    startLine: 826
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Determines whether any element of the span satisfies the predicate.
+  example: []
+  syntax:
+    content: public static bool Any<T>(this ReadOnlySpan<T> span, Func<T, bool> predicate)
+    parameters:
+    - id: span
+      type: System.ReadOnlySpan{{T}}
+      description: The span to check.
+    - id: predicate
+      type: System.Func{{T},System.Boolean}
+      description: A function to test each element for a condition.
+    typeParameters:
+    - id: T
+      description: The type of the elements in the span.
+    return:
+      type: System.Boolean
+      description: >-
+        <code>true</code> if any element in <code class="paramref">span</code> passes the test in
+
+        <code class="paramref">predicate</code>; otherwise, <code>false</code>.
+    content.vb: Public Shared Function Any(Of T)(span As ReadOnlySpan(Of T), predicate As Func(Of T, Boolean)) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.SpanExtensions.Any*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.SpanExtensions.All``1(System.ReadOnlySpan{``0},System.Func{``0,System.Boolean})
+    commentId: M:ANcpLua.Roslyn.Utilities.SpanExtensions.All``1(System.ReadOnlySpan{``0},System.Func{``0,System.Boolean})
+  nameWithType.vb: SpanExtensions.Any(Of T)(ReadOnlySpan(Of T), Func(Of T, Boolean))
+  fullName.vb: ANcpLua.Roslyn.Utilities.SpanExtensions.Any(Of T)(System.ReadOnlySpan(Of T), System.Func(Of T, Boolean))
+  name.vb: Any(Of T)(ReadOnlySpan(Of T), Func(Of T, Boolean))
+- uid: ANcpLua.Roslyn.Utilities.SpanExtensions.All``1(System.ReadOnlySpan{``0},System.Func{``0,System.Boolean})
+  commentId: M:ANcpLua.Roslyn.Utilities.SpanExtensions.All``1(System.ReadOnlySpan{``0},System.Func{``0,System.Boolean})
+  id: All``1(System.ReadOnlySpan{``0},System.Func{``0,System.Boolean})
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.SpanExtensions
+  langs:
+  - csharp
+  - vb
+  name: All<T>(ReadOnlySpan<T>, Func<T, bool>)
+  nameWithType: SpanExtensions.All<T>(ReadOnlySpan<T>, Func<T, bool>)
+  fullName: ANcpLua.Roslyn.Utilities.SpanExtensions.All<T>(System.ReadOnlySpan<T>, System.Func<T, bool>)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/EnumerableExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: All
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/EnumerableExtensions.cs
+    startLine: 848
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Determines whether all elements of the span satisfy the predicate.
+  example: []
+  syntax:
+    content: public static bool All<T>(this ReadOnlySpan<T> span, Func<T, bool> predicate)
+    parameters:
+    - id: span
+      type: System.ReadOnlySpan{{T}}
+      description: The span to check.
+    - id: predicate
+      type: System.Func{{T},System.Boolean}
+      description: A function to test each element for a condition.
+    typeParameters:
+    - id: T
+      description: The type of the elements in the span.
+    return:
+      type: System.Boolean
+      description: >-
+        <code>true</code> if every element in <code class="paramref">span</code> passes the test in
+
+        <code class="paramref">predicate</code>, or if the span is empty; otherwise, <code>false</code>.
+    content.vb: Public Shared Function All(Of T)(span As ReadOnlySpan(Of T), predicate As Func(Of T, Boolean)) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.SpanExtensions.All*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.SpanExtensions.Any``1(System.ReadOnlySpan{``0},System.Func{``0,System.Boolean})
+    commentId: M:ANcpLua.Roslyn.Utilities.SpanExtensions.Any``1(System.ReadOnlySpan{``0},System.Func{``0,System.Boolean})
+  nameWithType.vb: SpanExtensions.All(Of T)(ReadOnlySpan(Of T), Func(Of T, Boolean))
+  fullName.vb: ANcpLua.Roslyn.Utilities.SpanExtensions.All(Of T)(System.ReadOnlySpan(Of T), System.Func(Of T, Boolean))
+  name.vb: All(Of T)(ReadOnlySpan(Of T), Func(Of T, Boolean))
+- uid: ANcpLua.Roslyn.Utilities.SpanExtensions.Count``1(System.ReadOnlySpan{``0},System.Func{``0,System.Boolean})
+  commentId: M:ANcpLua.Roslyn.Utilities.SpanExtensions.Count``1(System.ReadOnlySpan{``0},System.Func{``0,System.Boolean})
+  id: Count``1(System.ReadOnlySpan{``0},System.Func{``0,System.Boolean})
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.SpanExtensions
+  langs:
+  - csharp
+  - vb
+  name: Count<T>(ReadOnlySpan<T>, Func<T, bool>)
+  nameWithType: SpanExtensions.Count<T>(ReadOnlySpan<T>, Func<T, bool>)
+  fullName: ANcpLua.Roslyn.Utilities.SpanExtensions.Count<T>(System.ReadOnlySpan<T>, System.Func<T, bool>)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/EnumerableExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Count
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/EnumerableExtensions.cs
+    startLine: 869
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Returns the count of elements in the span that satisfy the predicate.
+  example: []
+  syntax:
+    content: public static int Count<T>(this ReadOnlySpan<T> span, Func<T, bool> predicate)
+    parameters:
+    - id: span
+      type: System.ReadOnlySpan{{T}}
+      description: The span to count elements in.
+    - id: predicate
+      type: System.Func{{T},System.Boolean}
+      description: A function to test each element for a condition.
+    typeParameters:
+    - id: T
+      description: The type of the elements in the span.
+    return:
+      type: System.Int32
+      description: >-
+        The number of elements in <code class="paramref">span</code> that satisfy the
+
+        <code class="paramref">predicate</code>.
+    content.vb: Public Shared Function Count(Of T)(span As ReadOnlySpan(Of T), predicate As Func(Of T, Boolean)) As Integer
+  overload: ANcpLua.Roslyn.Utilities.SpanExtensions.Count*
+  nameWithType.vb: SpanExtensions.Count(Of T)(ReadOnlySpan(Of T), Func(Of T, Boolean))
+  fullName.vb: ANcpLua.Roslyn.Utilities.SpanExtensions.Count(Of T)(System.ReadOnlySpan(Of T), System.Func(Of T, Boolean))
+  name.vb: Count(Of T)(ReadOnlySpan(Of T), Func(Of T, Boolean))
+- uid: ANcpLua.Roslyn.Utilities.SpanExtensions.FirstOrDefault``1(System.ReadOnlySpan{``0},System.Func{``0,System.Boolean})
+  commentId: M:ANcpLua.Roslyn.Utilities.SpanExtensions.FirstOrDefault``1(System.ReadOnlySpan{``0},System.Func{``0,System.Boolean})
+  id: FirstOrDefault``1(System.ReadOnlySpan{``0},System.Func{``0,System.Boolean})
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.SpanExtensions
+  langs:
+  - csharp
+  - vb
+  name: FirstOrDefault<T>(ReadOnlySpan<T>, Func<T, bool>)
+  nameWithType: SpanExtensions.FirstOrDefault<T>(ReadOnlySpan<T>, Func<T, bool>)
+  fullName: ANcpLua.Roslyn.Utilities.SpanExtensions.FirstOrDefault<T>(System.ReadOnlySpan<T>, System.Func<T, bool>)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/EnumerableExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: FirstOrDefault
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/EnumerableExtensions.cs
+    startLine: 893
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: >-
+    Returns the first element in the span that matches the predicate, or a default value
+
+    if no element matches.
+  example: []
+  syntax:
+    content: public static T? FirstOrDefault<T>(this ReadOnlySpan<T> span, Func<T, bool> predicate)
+    parameters:
+    - id: span
+      type: System.ReadOnlySpan{{T}}
+      description: The span to search.
+    - id: predicate
+      type: System.Func{{T},System.Boolean}
+      description: A function to test each element for a condition.
+    typeParameters:
+    - id: T
+      description: The type of the elements in the span.
+    return:
+      type: '{T}'
+      description: >-
+        The first element in <code class="paramref">span</code> that matches <code class="paramref">predicate</code>,
+
+        or <code>default</code> if no element matches.
+    content.vb: Public Shared Function FirstOrDefault(Of T)(span As ReadOnlySpan(Of T), predicate As Func(Of T, Boolean)) As T
+  overload: ANcpLua.Roslyn.Utilities.SpanExtensions.FirstOrDefault*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.SpanExtensions.IndexOf``1(System.ReadOnlySpan{``0},System.Func{``0,System.Boolean})
+    commentId: M:ANcpLua.Roslyn.Utilities.SpanExtensions.IndexOf``1(System.ReadOnlySpan{``0},System.Func{``0,System.Boolean})
+  nameWithType.vb: SpanExtensions.FirstOrDefault(Of T)(ReadOnlySpan(Of T), Func(Of T, Boolean))
+  fullName.vb: ANcpLua.Roslyn.Utilities.SpanExtensions.FirstOrDefault(Of T)(System.ReadOnlySpan(Of T), System.Func(Of T, Boolean))
+  name.vb: FirstOrDefault(Of T)(ReadOnlySpan(Of T), Func(Of T, Boolean))
+references:
+- uid: ANcpLua.Roslyn.Utilities.EnumerableExtensions
+  commentId: T:ANcpLua.Roslyn.Utilities.EnumerableExtensions
+  parent: ANcpLua.Roslyn.Utilities
+  href: ANcpLua.Roslyn.Utilities.EnumerableExtensions.html
+  name: EnumerableExtensions
+  nameWithType: EnumerableExtensions
+  fullName: ANcpLua.Roslyn.Utilities.EnumerableExtensions
+- uid: System.ReadOnlySpan`1
+  commentId: T:System.ReadOnlySpan`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  name: ReadOnlySpan<T>
+  nameWithType: ReadOnlySpan<T>
+  fullName: System.ReadOnlySpan<T>
+  nameWithType.vb: ReadOnlySpan(Of T)
+  fullName.vb: System.ReadOnlySpan(Of T)
+  name.vb: ReadOnlySpan(Of T)
+  spec.csharp:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities
+  commentId: N:ANcpLua.Roslyn.Utilities
+  href: ANcpLua.html
+  name: ANcpLua.Roslyn.Utilities
+  nameWithType: ANcpLua.Roslyn.Utilities
+  fullName: ANcpLua.Roslyn.Utilities
+  spec.csharp:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  spec.vb:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ANcpLua.Roslyn.Utilities.SpanExtensions.MaxBy``2(System.ReadOnlySpan{``0},System.Func{``0,``1})
+  commentId: M:ANcpLua.Roslyn.Utilities.SpanExtensions.MaxBy``2(System.ReadOnlySpan{``0},System.Func{``0,``1})
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.SpanExtensions.html#ANcpLua_Roslyn_Utilities_SpanExtensions_MaxBy__2_System_ReadOnlySpan___0__System_Func___0___1__
+  name: MaxBy<T, TKey>(ReadOnlySpan<T>, Func<T, TKey>)
+  nameWithType: SpanExtensions.MaxBy<T, TKey>(ReadOnlySpan<T>, Func<T, TKey>)
+  fullName: ANcpLua.Roslyn.Utilities.SpanExtensions.MaxBy<T, TKey>(System.ReadOnlySpan<T>, System.Func<T, TKey>)
+  nameWithType.vb: SpanExtensions.MaxBy(Of T, TKey)(ReadOnlySpan(Of T), Func(Of T, TKey))
+  fullName.vb: ANcpLua.Roslyn.Utilities.SpanExtensions.MaxBy(Of T, TKey)(System.ReadOnlySpan(Of T), System.Func(Of T, TKey))
+  name.vb: MaxBy(Of T, TKey)(ReadOnlySpan(Of T), Func(Of T, TKey))
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.SpanExtensions.MaxBy``2(System.ReadOnlySpan{``0},System.Func{``0,``1})
+    name: MaxBy
+    href: ANcpLua.Roslyn.Utilities.SpanExtensions.html#ANcpLua_Roslyn_Utilities_SpanExtensions_MaxBy__2_System_ReadOnlySpan___0__System_Func___0___1__
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TKey
+  - name: '>'
+  - name: (
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TKey
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.SpanExtensions.MaxBy``2(System.ReadOnlySpan{``0},System.Func{``0,``1})
+    name: MaxBy
+    href: ANcpLua.Roslyn.Utilities.SpanExtensions.html#ANcpLua_Roslyn_Utilities_SpanExtensions_MaxBy__2_System_ReadOnlySpan___0__System_Func___0___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TKey
+  - name: )
+  - name: (
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TKey
+  - name: )
+  - name: )
+- uid: System.IComparable`1
+  commentId: T:System.IComparable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.icomparable-1
+  name: IComparable<T>
+  nameWithType: IComparable<T>
+  fullName: System.IComparable<T>
+  nameWithType.vb: IComparable(Of T)
+  fullName.vb: System.IComparable(Of T)
+  name.vb: IComparable(Of T)
+  spec.csharp:
+  - uid: System.IComparable`1
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IComparable`1
+    name: IComparable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icomparable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.InvalidOperationException
+  commentId: T:System.InvalidOperationException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.invalidoperationexception
+  name: InvalidOperationException
+  nameWithType: InvalidOperationException
+  fullName: System.InvalidOperationException
+- uid: ANcpLua.Roslyn.Utilities.SpanExtensions.MinBy*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SpanExtensions.MinBy
+  href: ANcpLua.Roslyn.Utilities.SpanExtensions.html#ANcpLua_Roslyn_Utilities_SpanExtensions_MinBy__2_System_ReadOnlySpan___0__System_Func___0___1__
+  name: MinBy
+  nameWithType: SpanExtensions.MinBy
+  fullName: ANcpLua.Roslyn.Utilities.SpanExtensions.MinBy
+- uid: System.ReadOnlySpan{{T}}
+  commentId: T:System.ReadOnlySpan{``0}
+  parent: System
+  definition: System.ReadOnlySpan`1
+  href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  name: ReadOnlySpan<T>
+  nameWithType: ReadOnlySpan<T>
+  fullName: System.ReadOnlySpan<T>
+  nameWithType.vb: ReadOnlySpan(Of T)
+  fullName.vb: System.ReadOnlySpan(Of T)
+  name.vb: ReadOnlySpan(Of T)
+  spec.csharp:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Func{{T},{TKey}}
+  commentId: T:System.Func{``0,``1}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<T, TKey>
+  nameWithType: Func<T, TKey>
+  fullName: System.Func<T, TKey>
+  nameWithType.vb: Func(Of T, TKey)
+  fullName.vb: System.Func(Of T, TKey)
+  name.vb: Func(Of T, TKey)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TKey
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TKey
+  - name: )
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: System.Func`2
+  commentId: T:System.Func`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<T, TResult>
+  nameWithType: Func<T, TResult>
+  fullName: System.Func<T, TResult>
+  nameWithType.vb: Func(Of T, TResult)
+  fullName.vb: System.Func(Of T, TResult)
+  name.vb: Func(Of T, TResult)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: ANcpLua.Roslyn.Utilities.SpanExtensions.MinBy``2(System.ReadOnlySpan{``0},System.Func{``0,``1})
+  commentId: M:ANcpLua.Roslyn.Utilities.SpanExtensions.MinBy``2(System.ReadOnlySpan{``0},System.Func{``0,``1})
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.SpanExtensions.html#ANcpLua_Roslyn_Utilities_SpanExtensions_MinBy__2_System_ReadOnlySpan___0__System_Func___0___1__
+  name: MinBy<T, TKey>(ReadOnlySpan<T>, Func<T, TKey>)
+  nameWithType: SpanExtensions.MinBy<T, TKey>(ReadOnlySpan<T>, Func<T, TKey>)
+  fullName: ANcpLua.Roslyn.Utilities.SpanExtensions.MinBy<T, TKey>(System.ReadOnlySpan<T>, System.Func<T, TKey>)
+  nameWithType.vb: SpanExtensions.MinBy(Of T, TKey)(ReadOnlySpan(Of T), Func(Of T, TKey))
+  fullName.vb: ANcpLua.Roslyn.Utilities.SpanExtensions.MinBy(Of T, TKey)(System.ReadOnlySpan(Of T), System.Func(Of T, TKey))
+  name.vb: MinBy(Of T, TKey)(ReadOnlySpan(Of T), Func(Of T, TKey))
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.SpanExtensions.MinBy``2(System.ReadOnlySpan{``0},System.Func{``0,``1})
+    name: MinBy
+    href: ANcpLua.Roslyn.Utilities.SpanExtensions.html#ANcpLua_Roslyn_Utilities_SpanExtensions_MinBy__2_System_ReadOnlySpan___0__System_Func___0___1__
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TKey
+  - name: '>'
+  - name: (
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TKey
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.SpanExtensions.MinBy``2(System.ReadOnlySpan{``0},System.Func{``0,``1})
+    name: MinBy
+    href: ANcpLua.Roslyn.Utilities.SpanExtensions.html#ANcpLua_Roslyn_Utilities_SpanExtensions_MinBy__2_System_ReadOnlySpan___0__System_Func___0___1__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TKey
+  - name: )
+  - name: (
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TKey
+  - name: )
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.SpanExtensions.MaxBy*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SpanExtensions.MaxBy
+  href: ANcpLua.Roslyn.Utilities.SpanExtensions.html#ANcpLua_Roslyn_Utilities_SpanExtensions_MaxBy__2_System_ReadOnlySpan___0__System_Func___0___1__
+  name: MaxBy
+  nameWithType: SpanExtensions.MaxBy
+  fullName: ANcpLua.Roslyn.Utilities.SpanExtensions.MaxBy
+- uid: ANcpLua.Roslyn.Utilities.SpanExtensions.FirstOrDefault``1(System.ReadOnlySpan{``0},System.Func{``0,System.Boolean})
+  commentId: M:ANcpLua.Roslyn.Utilities.SpanExtensions.FirstOrDefault``1(System.ReadOnlySpan{``0},System.Func{``0,System.Boolean})
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.SpanExtensions.html#ANcpLua_Roslyn_Utilities_SpanExtensions_FirstOrDefault__1_System_ReadOnlySpan___0__System_Func___0_System_Boolean__
+  name: FirstOrDefault<T>(ReadOnlySpan<T>, Func<T, bool>)
+  nameWithType: SpanExtensions.FirstOrDefault<T>(ReadOnlySpan<T>, Func<T, bool>)
+  fullName: ANcpLua.Roslyn.Utilities.SpanExtensions.FirstOrDefault<T>(System.ReadOnlySpan<T>, System.Func<T, bool>)
+  nameWithType.vb: SpanExtensions.FirstOrDefault(Of T)(ReadOnlySpan(Of T), Func(Of T, Boolean))
+  fullName.vb: ANcpLua.Roslyn.Utilities.SpanExtensions.FirstOrDefault(Of T)(System.ReadOnlySpan(Of T), System.Func(Of T, Boolean))
+  name.vb: FirstOrDefault(Of T)(ReadOnlySpan(Of T), Func(Of T, Boolean))
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.SpanExtensions.FirstOrDefault``1(System.ReadOnlySpan{``0},System.Func{``0,System.Boolean})
+    name: FirstOrDefault
+    href: ANcpLua.Roslyn.Utilities.SpanExtensions.html#ANcpLua_Roslyn_Utilities_SpanExtensions_FirstOrDefault__1_System_ReadOnlySpan___0__System_Func___0_System_Boolean__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.SpanExtensions.FirstOrDefault``1(System.ReadOnlySpan{``0},System.Func{``0,System.Boolean})
+    name: FirstOrDefault
+    href: ANcpLua.Roslyn.Utilities.SpanExtensions.html#ANcpLua_Roslyn_Utilities_SpanExtensions_FirstOrDefault__1_System_ReadOnlySpan___0__System_Func___0_System_Boolean__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.SpanExtensions.IndexOf*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SpanExtensions.IndexOf
+  href: ANcpLua.Roslyn.Utilities.SpanExtensions.html#ANcpLua_Roslyn_Utilities_SpanExtensions_IndexOf__1_System_ReadOnlySpan___0__System_Func___0_System_Boolean__
+  name: IndexOf
+  nameWithType: SpanExtensions.IndexOf
+  fullName: ANcpLua.Roslyn.Utilities.SpanExtensions.IndexOf
+- uid: System.Func{{T},System.Boolean}
+  commentId: T:System.Func{`0,System.Boolean}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<T, bool>
+  nameWithType: Func<T, bool>
+  fullName: System.Func<T, bool>
+  nameWithType.vb: Func(Of T, Boolean)
+  fullName.vb: System.Func(Of T, Boolean)
+  name.vb: Func(Of T, Boolean)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: ANcpLua.Roslyn.Utilities.SpanExtensions.All``1(System.ReadOnlySpan{``0},System.Func{``0,System.Boolean})
+  commentId: M:ANcpLua.Roslyn.Utilities.SpanExtensions.All``1(System.ReadOnlySpan{``0},System.Func{``0,System.Boolean})
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.SpanExtensions.html#ANcpLua_Roslyn_Utilities_SpanExtensions_All__1_System_ReadOnlySpan___0__System_Func___0_System_Boolean__
+  name: All<T>(ReadOnlySpan<T>, Func<T, bool>)
+  nameWithType: SpanExtensions.All<T>(ReadOnlySpan<T>, Func<T, bool>)
+  fullName: ANcpLua.Roslyn.Utilities.SpanExtensions.All<T>(System.ReadOnlySpan<T>, System.Func<T, bool>)
+  nameWithType.vb: SpanExtensions.All(Of T)(ReadOnlySpan(Of T), Func(Of T, Boolean))
+  fullName.vb: ANcpLua.Roslyn.Utilities.SpanExtensions.All(Of T)(System.ReadOnlySpan(Of T), System.Func(Of T, Boolean))
+  name.vb: All(Of T)(ReadOnlySpan(Of T), Func(Of T, Boolean))
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.SpanExtensions.All``1(System.ReadOnlySpan{``0},System.Func{``0,System.Boolean})
+    name: All
+    href: ANcpLua.Roslyn.Utilities.SpanExtensions.html#ANcpLua_Roslyn_Utilities_SpanExtensions_All__1_System_ReadOnlySpan___0__System_Func___0_System_Boolean__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.SpanExtensions.All``1(System.ReadOnlySpan{``0},System.Func{``0,System.Boolean})
+    name: All
+    href: ANcpLua.Roslyn.Utilities.SpanExtensions.html#ANcpLua_Roslyn_Utilities_SpanExtensions_All__1_System_ReadOnlySpan___0__System_Func___0_System_Boolean__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.SpanExtensions.Any*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SpanExtensions.Any
+  href: ANcpLua.Roslyn.Utilities.SpanExtensions.html#ANcpLua_Roslyn_Utilities_SpanExtensions_Any__1_System_ReadOnlySpan___0__System_Func___0_System_Boolean__
+  name: Any
+  nameWithType: SpanExtensions.Any
+  fullName: ANcpLua.Roslyn.Utilities.SpanExtensions.Any
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: ANcpLua.Roslyn.Utilities.SpanExtensions.Any``1(System.ReadOnlySpan{``0},System.Func{``0,System.Boolean})
+  commentId: M:ANcpLua.Roslyn.Utilities.SpanExtensions.Any``1(System.ReadOnlySpan{``0},System.Func{``0,System.Boolean})
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.SpanExtensions.html#ANcpLua_Roslyn_Utilities_SpanExtensions_Any__1_System_ReadOnlySpan___0__System_Func___0_System_Boolean__
+  name: Any<T>(ReadOnlySpan<T>, Func<T, bool>)
+  nameWithType: SpanExtensions.Any<T>(ReadOnlySpan<T>, Func<T, bool>)
+  fullName: ANcpLua.Roslyn.Utilities.SpanExtensions.Any<T>(System.ReadOnlySpan<T>, System.Func<T, bool>)
+  nameWithType.vb: SpanExtensions.Any(Of T)(ReadOnlySpan(Of T), Func(Of T, Boolean))
+  fullName.vb: ANcpLua.Roslyn.Utilities.SpanExtensions.Any(Of T)(System.ReadOnlySpan(Of T), System.Func(Of T, Boolean))
+  name.vb: Any(Of T)(ReadOnlySpan(Of T), Func(Of T, Boolean))
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.SpanExtensions.Any``1(System.ReadOnlySpan{``0},System.Func{``0,System.Boolean})
+    name: Any
+    href: ANcpLua.Roslyn.Utilities.SpanExtensions.html#ANcpLua_Roslyn_Utilities_SpanExtensions_Any__1_System_ReadOnlySpan___0__System_Func___0_System_Boolean__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.SpanExtensions.Any``1(System.ReadOnlySpan{``0},System.Func{``0,System.Boolean})
+    name: Any
+    href: ANcpLua.Roslyn.Utilities.SpanExtensions.html#ANcpLua_Roslyn_Utilities_SpanExtensions_Any__1_System_ReadOnlySpan___0__System_Func___0_System_Boolean__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.SpanExtensions.All*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SpanExtensions.All
+  href: ANcpLua.Roslyn.Utilities.SpanExtensions.html#ANcpLua_Roslyn_Utilities_SpanExtensions_All__1_System_ReadOnlySpan___0__System_Func___0_System_Boolean__
+  name: All
+  nameWithType: SpanExtensions.All
+  fullName: ANcpLua.Roslyn.Utilities.SpanExtensions.All
+- uid: ANcpLua.Roslyn.Utilities.SpanExtensions.Count*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SpanExtensions.Count
+  href: ANcpLua.Roslyn.Utilities.SpanExtensions.html#ANcpLua_Roslyn_Utilities_SpanExtensions_Count__1_System_ReadOnlySpan___0__System_Func___0_System_Boolean__
+  name: Count
+  nameWithType: SpanExtensions.Count
+  fullName: ANcpLua.Roslyn.Utilities.SpanExtensions.Count
+- uid: ANcpLua.Roslyn.Utilities.SpanExtensions.IndexOf``1(System.ReadOnlySpan{``0},System.Func{``0,System.Boolean})
+  commentId: M:ANcpLua.Roslyn.Utilities.SpanExtensions.IndexOf``1(System.ReadOnlySpan{``0},System.Func{``0,System.Boolean})
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.SpanExtensions.html#ANcpLua_Roslyn_Utilities_SpanExtensions_IndexOf__1_System_ReadOnlySpan___0__System_Func___0_System_Boolean__
+  name: IndexOf<T>(ReadOnlySpan<T>, Func<T, bool>)
+  nameWithType: SpanExtensions.IndexOf<T>(ReadOnlySpan<T>, Func<T, bool>)
+  fullName: ANcpLua.Roslyn.Utilities.SpanExtensions.IndexOf<T>(System.ReadOnlySpan<T>, System.Func<T, bool>)
+  nameWithType.vb: SpanExtensions.IndexOf(Of T)(ReadOnlySpan(Of T), Func(Of T, Boolean))
+  fullName.vb: ANcpLua.Roslyn.Utilities.SpanExtensions.IndexOf(Of T)(System.ReadOnlySpan(Of T), System.Func(Of T, Boolean))
+  name.vb: IndexOf(Of T)(ReadOnlySpan(Of T), Func(Of T, Boolean))
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.SpanExtensions.IndexOf``1(System.ReadOnlySpan{``0},System.Func{``0,System.Boolean})
+    name: IndexOf
+    href: ANcpLua.Roslyn.Utilities.SpanExtensions.html#ANcpLua_Roslyn_Utilities_SpanExtensions_IndexOf__1_System_ReadOnlySpan___0__System_Func___0_System_Boolean__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.SpanExtensions.IndexOf``1(System.ReadOnlySpan{``0},System.Func{``0,System.Boolean})
+    name: IndexOf
+    href: ANcpLua.Roslyn.Utilities.SpanExtensions.html#ANcpLua_Roslyn_Utilities_SpanExtensions_IndexOf__1_System_ReadOnlySpan___0__System_Func___0_System_Boolean__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.SpanExtensions.FirstOrDefault*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SpanExtensions.FirstOrDefault
+  href: ANcpLua.Roslyn.Utilities.SpanExtensions.html#ANcpLua_Roslyn_Utilities_SpanExtensions_FirstOrDefault__1_System_ReadOnlySpan___0__System_Func___0_System_Boolean__
+  name: FirstOrDefault
+  nameWithType: SpanExtensions.FirstOrDefault
+  fullName: ANcpLua.Roslyn.Utilities.SpanExtensions.FirstOrDefault

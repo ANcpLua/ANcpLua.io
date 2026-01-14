@@ -1,0 +1,886 @@
+### YamlMime:ManagedReference
+items:
+- uid: ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions
+  commentId: T:ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions
+  id: AnalyzerOptionsExtensions
+  parent: ANcpLua.Roslyn.Utilities
+  children:
+  - ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions.GetConfigurationValue(Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions,Microsoft.CodeAnalysis.SyntaxTree,System.String,System.Boolean)
+  - ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions.GetConfigurationValue(Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions,Microsoft.CodeAnalysis.SyntaxTree,System.String,System.Int32)
+  - ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions.GetConfigurationValue(Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions,Microsoft.CodeAnalysis.SyntaxTree,System.String,System.String)
+  - ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions.GetConfigurationValue``1(Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions,Microsoft.CodeAnalysis.SyntaxTree,System.String,``0)
+  - ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions.TryGetConfigurationValue(Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions,Microsoft.CodeAnalysis.SyntaxTree,System.String,System.String@)
+  langs:
+  - csharp
+  - vb
+  name: AnalyzerOptionsExtensions
+  nameWithType: AnalyzerOptionsExtensions
+  fullName: ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions
+  type: Class
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/AnalyzerOptionsExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: AnalyzerOptionsExtensions
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/AnalyzerOptionsExtensions.cs
+    startLine: 22
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Provides fluent extension methods for <xref href="Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions" data-throw-if-not-resolved="false"></xref> to access configuration values.
+  remarks: >-
+    <p>
+        These extensions simplify reading configuration values from <code>.editorconfig</code> files and other
+        analyzer configuration sources in Roslyn analyzers and source generators.
+    </p>
+
+    <ul><li>Type-safe access to boolean, integer, string, and enum configuration values</li><li>Automatic fallback to default values when configuration is missing or unparseable</li><li>Syntax tree-scoped configuration lookup for file-specific settings</li></ul>
+  example: []
+  syntax:
+    content: public static class AnalyzerOptionsExtensions
+    content.vb: Public Module AnalyzerOptionsExtensions
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions
+    commentId: T:ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions.TryGetConfigurationValue(Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions,Microsoft.CodeAnalysis.SyntaxTree,System.String,System.String@)
+  commentId: M:ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions.TryGetConfigurationValue(Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions,Microsoft.CodeAnalysis.SyntaxTree,System.String,System.String@)
+  id: TryGetConfigurationValue(Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions,Microsoft.CodeAnalysis.SyntaxTree,System.String,System.String@)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions
+  langs:
+  - csharp
+  - vb
+  name: TryGetConfigurationValue(AnalyzerOptions, SyntaxTree, string, out string?)
+  nameWithType: AnalyzerOptionsExtensions.TryGetConfigurationValue(AnalyzerOptions, SyntaxTree, string, out string?)
+  fullName: ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions.TryGetConfigurationValue(Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions, Microsoft.CodeAnalysis.SyntaxTree, string, out string?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/AnalyzerOptionsExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: TryGetConfigurationValue
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/AnalyzerOptionsExtensions.cs
+    startLine: 42
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Tries to get a configuration value for a specific syntax tree.
+  example: []
+  syntax:
+    content: public static bool TryGetConfigurationValue(this AnalyzerOptions options, SyntaxTree syntaxTree, string key, out string? value)
+    parameters:
+    - id: options
+      type: Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions
+      description: The analyzer options to query.
+    - id: syntaxTree
+      type: Microsoft.CodeAnalysis.SyntaxTree
+      description: The syntax tree to get configuration for.
+    - id: key
+      type: System.String
+      description: The configuration key to look up.
+    - id: value
+      type: System.String
+      description: >-
+        When this method returns <code>true</code>, contains the configuration value;
+
+        otherwise, <code>null</code>.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if the configuration value was found; otherwise, <code>false</code>.
+    content.vb: Public Shared Function TryGetConfigurationValue(options As AnalyzerOptions, syntaxTree As SyntaxTree, key As String, value As String) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions.TryGetConfigurationValue*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions.GetConfigurationValue(Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions,Microsoft.CodeAnalysis.SyntaxTree,System.String,System.String)
+    commentId: M:ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions.GetConfigurationValue(Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions,Microsoft.CodeAnalysis.SyntaxTree,System.String,System.String)
+  nameWithType.vb: AnalyzerOptionsExtensions.TryGetConfigurationValue(AnalyzerOptions, SyntaxTree, String, String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions.TryGetConfigurationValue(Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions, Microsoft.CodeAnalysis.SyntaxTree, String, String)
+  name.vb: TryGetConfigurationValue(AnalyzerOptions, SyntaxTree, String, String)
+- uid: ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions.GetConfigurationValue(Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions,Microsoft.CodeAnalysis.SyntaxTree,System.String,System.Boolean)
+  commentId: M:ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions.GetConfigurationValue(Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions,Microsoft.CodeAnalysis.SyntaxTree,System.String,System.Boolean)
+  id: GetConfigurationValue(Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions,Microsoft.CodeAnalysis.SyntaxTree,System.String,System.Boolean)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetConfigurationValue(AnalyzerOptions, SyntaxTree, string, bool)
+  nameWithType: AnalyzerOptionsExtensions.GetConfigurationValue(AnalyzerOptions, SyntaxTree, string, bool)
+  fullName: ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions.GetConfigurationValue(Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions, Microsoft.CodeAnalysis.SyntaxTree, string, bool)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/AnalyzerOptionsExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: GetConfigurationValue
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/AnalyzerOptionsExtensions.cs
+    startLine: 69
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Gets a boolean configuration value, returning the default if not found or unparseable.
+  remarks: >-
+    <p>
+        This method supports standard boolean parsing (<code>true</code>/<code>false</code>) as well as
+        numeric representations (<code>1</code> for <code>true</code>, <code>0</code> for <code>false</code>).
+    </p>
+  example: []
+  syntax:
+    content: public static bool GetConfigurationValue(this AnalyzerOptions options, SyntaxTree syntaxTree, string key, bool defaultValue)
+    parameters:
+    - id: options
+      type: Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions
+      description: The analyzer options to query.
+    - id: syntaxTree
+      type: Microsoft.CodeAnalysis.SyntaxTree
+      description: The syntax tree to get configuration for.
+    - id: key
+      type: System.String
+      description: The configuration key to look up.
+    - id: defaultValue
+      type: System.Boolean
+      description: The default value to return if the key is not found or cannot be parsed.
+    return:
+      type: System.Boolean
+      description: The parsed boolean value if found and parseable; otherwise, <code class="paramref">defaultValue</code>.
+    content.vb: Public Shared Function GetConfigurationValue(options As AnalyzerOptions, syntaxTree As SyntaxTree, key As String, defaultValue As Boolean) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions.GetConfigurationValue*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions.TryGetConfigurationValue(Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions,Microsoft.CodeAnalysis.SyntaxTree,System.String,System.String@)
+    commentId: M:ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions.TryGetConfigurationValue(Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions,Microsoft.CodeAnalysis.SyntaxTree,System.String,System.String@)
+  nameWithType.vb: AnalyzerOptionsExtensions.GetConfigurationValue(AnalyzerOptions, SyntaxTree, String, Boolean)
+  fullName.vb: ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions.GetConfigurationValue(Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions, Microsoft.CodeAnalysis.SyntaxTree, String, Boolean)
+  name.vb: GetConfigurationValue(AnalyzerOptions, SyntaxTree, String, Boolean)
+- uid: ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions.GetConfigurationValue(Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions,Microsoft.CodeAnalysis.SyntaxTree,System.String,System.Int32)
+  commentId: M:ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions.GetConfigurationValue(Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions,Microsoft.CodeAnalysis.SyntaxTree,System.String,System.Int32)
+  id: GetConfigurationValue(Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions,Microsoft.CodeAnalysis.SyntaxTree,System.String,System.Int32)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetConfigurationValue(AnalyzerOptions, SyntaxTree, string, int)
+  nameWithType: AnalyzerOptionsExtensions.GetConfigurationValue(AnalyzerOptions, SyntaxTree, string, int)
+  fullName: ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions.GetConfigurationValue(Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions, Microsoft.CodeAnalysis.SyntaxTree, string, int)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/AnalyzerOptionsExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: GetConfigurationValue
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/AnalyzerOptionsExtensions.cs
+    startLine: 94
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Gets an integer configuration value, returning the default if not found or unparseable.
+  remarks: >-
+    <p>
+        Parsing uses <xref href="System.Globalization.NumberStyles.Integer" data-throw-if-not-resolved="false"></xref> with <xref href="System.Globalization.CultureInfo.InvariantCulture" data-throw-if-not-resolved="false"></xref>.
+    </p>
+  example: []
+  syntax:
+    content: public static int GetConfigurationValue(this AnalyzerOptions options, SyntaxTree syntaxTree, string key, int defaultValue)
+    parameters:
+    - id: options
+      type: Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions
+      description: The analyzer options to query.
+    - id: syntaxTree
+      type: Microsoft.CodeAnalysis.SyntaxTree
+      description: The syntax tree to get configuration for.
+    - id: key
+      type: System.String
+      description: The configuration key to look up.
+    - id: defaultValue
+      type: System.Int32
+      description: The default value to return if the key is not found or cannot be parsed.
+    return:
+      type: System.Int32
+      description: The parsed integer value if found and parseable; otherwise, <code class="paramref">defaultValue</code>.
+    content.vb: Public Shared Function GetConfigurationValue(options As AnalyzerOptions, syntaxTree As SyntaxTree, key As String, defaultValue As Integer) As Integer
+  overload: ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions.GetConfigurationValue*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions.TryGetConfigurationValue(Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions,Microsoft.CodeAnalysis.SyntaxTree,System.String,System.String@)
+    commentId: M:ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions.TryGetConfigurationValue(Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions,Microsoft.CodeAnalysis.SyntaxTree,System.String,System.String@)
+  nameWithType.vb: AnalyzerOptionsExtensions.GetConfigurationValue(AnalyzerOptions, SyntaxTree, String, Integer)
+  fullName.vb: ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions.GetConfigurationValue(Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions, Microsoft.CodeAnalysis.SyntaxTree, String, Integer)
+  name.vb: GetConfigurationValue(AnalyzerOptions, SyntaxTree, String, Integer)
+- uid: ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions.GetConfigurationValue(Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions,Microsoft.CodeAnalysis.SyntaxTree,System.String,System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions.GetConfigurationValue(Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions,Microsoft.CodeAnalysis.SyntaxTree,System.String,System.String)
+  id: GetConfigurationValue(Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions,Microsoft.CodeAnalysis.SyntaxTree,System.String,System.String)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetConfigurationValue(AnalyzerOptions, SyntaxTree, string, string)
+  nameWithType: AnalyzerOptionsExtensions.GetConfigurationValue(AnalyzerOptions, SyntaxTree, string, string)
+  fullName: ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions.GetConfigurationValue(Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions, Microsoft.CodeAnalysis.SyntaxTree, string, string)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/AnalyzerOptionsExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: GetConfigurationValue
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/AnalyzerOptionsExtensions.cs
+    startLine: 119
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Gets a string configuration value, returning the default if not found.
+  example: []
+  syntax:
+    content: public static string GetConfigurationValue(this AnalyzerOptions options, SyntaxTree syntaxTree, string key, string defaultValue)
+    parameters:
+    - id: options
+      type: Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions
+      description: The analyzer options to query.
+    - id: syntaxTree
+      type: Microsoft.CodeAnalysis.SyntaxTree
+      description: The syntax tree to get configuration for.
+    - id: key
+      type: System.String
+      description: The configuration key to look up.
+    - id: defaultValue
+      type: System.String
+      description: The default value to return if the key is not found.
+    return:
+      type: System.String
+      description: The configuration value if found; otherwise, <code class="paramref">defaultValue</code>.
+    content.vb: Public Shared Function GetConfigurationValue(options As AnalyzerOptions, syntaxTree As SyntaxTree, key As String, defaultValue As String) As String
+  overload: ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions.GetConfigurationValue*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions.TryGetConfigurationValue(Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions,Microsoft.CodeAnalysis.SyntaxTree,System.String,System.String@)
+    commentId: M:ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions.TryGetConfigurationValue(Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions,Microsoft.CodeAnalysis.SyntaxTree,System.String,System.String@)
+  nameWithType.vb: AnalyzerOptionsExtensions.GetConfigurationValue(AnalyzerOptions, SyntaxTree, String, String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions.GetConfigurationValue(Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions, Microsoft.CodeAnalysis.SyntaxTree, String, String)
+  name.vb: GetConfigurationValue(AnalyzerOptions, SyntaxTree, String, String)
+- uid: ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions.GetConfigurationValue``1(Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions,Microsoft.CodeAnalysis.SyntaxTree,System.String,``0)
+  commentId: M:ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions.GetConfigurationValue``1(Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions,Microsoft.CodeAnalysis.SyntaxTree,System.String,``0)
+  id: GetConfigurationValue``1(Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions,Microsoft.CodeAnalysis.SyntaxTree,System.String,``0)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetConfigurationValue<T>(AnalyzerOptions, SyntaxTree, string, T)
+  nameWithType: AnalyzerOptionsExtensions.GetConfigurationValue<T>(AnalyzerOptions, SyntaxTree, string, T)
+  fullName: ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions.GetConfigurationValue<T>(Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions, Microsoft.CodeAnalysis.SyntaxTree, string, T)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/AnalyzerOptionsExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: GetConfigurationValue
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/AnalyzerOptionsExtensions.cs
+    startLine: 145
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Gets an enum configuration value, returning the default if not found or unparseable.
+  remarks: >-
+    <p>
+        Parsing is case-insensitive to allow flexible configuration file formatting.
+    </p>
+  example: []
+  syntax:
+    content: 'public static T GetConfigurationValue<T>(this AnalyzerOptions options, SyntaxTree syntaxTree, string key, T defaultValue) where T : struct, Enum'
+    parameters:
+    - id: options
+      type: Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions
+      description: The analyzer options to query.
+    - id: syntaxTree
+      type: Microsoft.CodeAnalysis.SyntaxTree
+      description: The syntax tree to get configuration for.
+    - id: key
+      type: System.String
+      description: The configuration key to look up.
+    - id: defaultValue
+      type: '{T}'
+      description: The default value to return if the key is not found or cannot be parsed.
+    typeParameters:
+    - id: T
+      description: The enum type to parse the value as.
+    return:
+      type: '{T}'
+      description: The parsed enum value if found and parseable; otherwise, <code class="paramref">defaultValue</code>.
+    content.vb: Public Shared Function GetConfigurationValue(Of T As {Structure, [Enum]})(options As AnalyzerOptions, syntaxTree As SyntaxTree, key As String, defaultValue As T) As T
+  overload: ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions.GetConfigurationValue*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions.TryGetConfigurationValue(Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions,Microsoft.CodeAnalysis.SyntaxTree,System.String,System.String@)
+    commentId: M:ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions.TryGetConfigurationValue(Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions,Microsoft.CodeAnalysis.SyntaxTree,System.String,System.String@)
+  nameWithType.vb: AnalyzerOptionsExtensions.GetConfigurationValue(Of T)(AnalyzerOptions, SyntaxTree, String, T)
+  fullName.vb: ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions.GetConfigurationValue(Of T)(Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions, Microsoft.CodeAnalysis.SyntaxTree, String, T)
+  name.vb: GetConfigurationValue(Of T)(AnalyzerOptions, SyntaxTree, String, T)
+references:
+- uid: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions
+  commentId: T:ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions
+  href: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.html
+  name: AnalyzerConfigOptionsProviderExtensions
+  nameWithType: AnalyzerConfigOptionsProviderExtensions
+  fullName: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions
+- uid: Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions
+  commentId: T:Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions
+  parent: Microsoft.CodeAnalysis.Diagnostics
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.diagnostics.analyzeroptions
+  name: AnalyzerOptions
+  nameWithType: AnalyzerOptions
+  fullName: Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions
+- uid: ANcpLua.Roslyn.Utilities
+  commentId: N:ANcpLua.Roslyn.Utilities
+  href: ANcpLua.html
+  name: ANcpLua.Roslyn.Utilities
+  nameWithType: ANcpLua.Roslyn.Utilities
+  fullName: ANcpLua.Roslyn.Utilities
+  spec.csharp:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  spec.vb:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: Microsoft.CodeAnalysis.Diagnostics
+  commentId: N:Microsoft.CodeAnalysis.Diagnostics
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.CodeAnalysis.Diagnostics
+  nameWithType: Microsoft.CodeAnalysis.Diagnostics
+  fullName: Microsoft.CodeAnalysis.Diagnostics
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+  - name: .
+  - uid: Microsoft.CodeAnalysis.Diagnostics
+    name: Diagnostics
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.diagnostics
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+  - name: .
+  - uid: Microsoft.CodeAnalysis.Diagnostics
+    name: Diagnostics
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.diagnostics
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions.GetConfigurationValue(Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions,Microsoft.CodeAnalysis.SyntaxTree,System.String,System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions.GetConfigurationValue(Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions,Microsoft.CodeAnalysis.SyntaxTree,System.String,System.String)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions.html#ANcpLua_Roslyn_Utilities_AnalyzerOptionsExtensions_GetConfigurationValue_Microsoft_CodeAnalysis_Diagnostics_AnalyzerOptions_Microsoft_CodeAnalysis_SyntaxTree_System_String_System_String_
+  name: GetConfigurationValue(AnalyzerOptions, SyntaxTree, string, string)
+  nameWithType: AnalyzerOptionsExtensions.GetConfigurationValue(AnalyzerOptions, SyntaxTree, string, string)
+  fullName: ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions.GetConfigurationValue(Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions, Microsoft.CodeAnalysis.SyntaxTree, string, string)
+  nameWithType.vb: AnalyzerOptionsExtensions.GetConfigurationValue(AnalyzerOptions, SyntaxTree, String, String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions.GetConfigurationValue(Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions, Microsoft.CodeAnalysis.SyntaxTree, String, String)
+  name.vb: GetConfigurationValue(AnalyzerOptions, SyntaxTree, String, String)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions.GetConfigurationValue(Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions,Microsoft.CodeAnalysis.SyntaxTree,System.String,System.String)
+    name: GetConfigurationValue
+    href: ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions.html#ANcpLua_Roslyn_Utilities_AnalyzerOptionsExtensions_GetConfigurationValue_Microsoft_CodeAnalysis_Diagnostics_AnalyzerOptions_Microsoft_CodeAnalysis_SyntaxTree_System_String_System_String_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions
+    name: AnalyzerOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.diagnostics.analyzeroptions
+  - name: ','
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.SyntaxTree
+    name: SyntaxTree
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.syntaxtree
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions.GetConfigurationValue(Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions,Microsoft.CodeAnalysis.SyntaxTree,System.String,System.String)
+    name: GetConfigurationValue
+    href: ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions.html#ANcpLua_Roslyn_Utilities_AnalyzerOptionsExtensions_GetConfigurationValue_Microsoft_CodeAnalysis_Diagnostics_AnalyzerOptions_Microsoft_CodeAnalysis_SyntaxTree_System_String_System_String_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions
+    name: AnalyzerOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.diagnostics.analyzeroptions
+  - name: ','
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.SyntaxTree
+    name: SyntaxTree
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.syntaxtree
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions.TryGetConfigurationValue*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions.TryGetConfigurationValue
+  href: ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions.html#ANcpLua_Roslyn_Utilities_AnalyzerOptionsExtensions_TryGetConfigurationValue_Microsoft_CodeAnalysis_Diagnostics_AnalyzerOptions_Microsoft_CodeAnalysis_SyntaxTree_System_String_System_String__
+  name: TryGetConfigurationValue
+  nameWithType: AnalyzerOptionsExtensions.TryGetConfigurationValue
+  fullName: ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions.TryGetConfigurationValue
+- uid: Microsoft.CodeAnalysis.SyntaxTree
+  commentId: T:Microsoft.CodeAnalysis.SyntaxTree
+  parent: Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.syntaxtree
+  name: SyntaxTree
+  nameWithType: SyntaxTree
+  fullName: Microsoft.CodeAnalysis.SyntaxTree
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Microsoft.CodeAnalysis
+  commentId: N:Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.CodeAnalysis
+  nameWithType: Microsoft.CodeAnalysis
+  fullName: Microsoft.CodeAnalysis
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+- uid: ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions.TryGetConfigurationValue(Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions,Microsoft.CodeAnalysis.SyntaxTree,System.String,System.String@)
+  commentId: M:ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions.TryGetConfigurationValue(Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions,Microsoft.CodeAnalysis.SyntaxTree,System.String,System.String@)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions.html#ANcpLua_Roslyn_Utilities_AnalyzerOptionsExtensions_TryGetConfigurationValue_Microsoft_CodeAnalysis_Diagnostics_AnalyzerOptions_Microsoft_CodeAnalysis_SyntaxTree_System_String_System_String__
+  name: TryGetConfigurationValue(AnalyzerOptions, SyntaxTree, string, out string)
+  nameWithType: AnalyzerOptionsExtensions.TryGetConfigurationValue(AnalyzerOptions, SyntaxTree, string, out string)
+  fullName: ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions.TryGetConfigurationValue(Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions, Microsoft.CodeAnalysis.SyntaxTree, string, out string)
+  nameWithType.vb: AnalyzerOptionsExtensions.TryGetConfigurationValue(AnalyzerOptions, SyntaxTree, String, String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions.TryGetConfigurationValue(Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions, Microsoft.CodeAnalysis.SyntaxTree, String, String)
+  name.vb: TryGetConfigurationValue(AnalyzerOptions, SyntaxTree, String, String)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions.TryGetConfigurationValue(Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions,Microsoft.CodeAnalysis.SyntaxTree,System.String,System.String@)
+    name: TryGetConfigurationValue
+    href: ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions.html#ANcpLua_Roslyn_Utilities_AnalyzerOptionsExtensions_TryGetConfigurationValue_Microsoft_CodeAnalysis_Diagnostics_AnalyzerOptions_Microsoft_CodeAnalysis_SyntaxTree_System_String_System_String__
+  - name: (
+  - uid: Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions
+    name: AnalyzerOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.diagnostics.analyzeroptions
+  - name: ','
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.SyntaxTree
+    name: SyntaxTree
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.syntaxtree
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions.TryGetConfigurationValue(Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions,Microsoft.CodeAnalysis.SyntaxTree,System.String,System.String@)
+    name: TryGetConfigurationValue
+    href: ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions.html#ANcpLua_Roslyn_Utilities_AnalyzerOptionsExtensions_TryGetConfigurationValue_Microsoft_CodeAnalysis_Diagnostics_AnalyzerOptions_Microsoft_CodeAnalysis_SyntaxTree_System_String_System_String__
+  - name: (
+  - uid: Microsoft.CodeAnalysis.Diagnostics.AnalyzerOptions
+    name: AnalyzerOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.diagnostics.analyzeroptions
+  - name: ','
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.SyntaxTree
+    name: SyntaxTree
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.syntaxtree
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions.GetConfigurationValue*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions.GetConfigurationValue
+  href: ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions.html#ANcpLua_Roslyn_Utilities_AnalyzerOptionsExtensions_GetConfigurationValue_Microsoft_CodeAnalysis_Diagnostics_AnalyzerOptions_Microsoft_CodeAnalysis_SyntaxTree_System_String_System_Boolean_
+  name: GetConfigurationValue
+  nameWithType: AnalyzerOptionsExtensions.GetConfigurationValue
+  fullName: ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions.GetConfigurationValue
+- uid: System.Globalization.NumberStyles.Integer
+  commentId: F:System.Globalization.NumberStyles.Integer
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.globalization.numberstyles#system-globalization-numberstyles-integer
+  name: Integer
+  nameWithType: NumberStyles.Integer
+  fullName: System.Globalization.NumberStyles.Integer
+- uid: System.Globalization.CultureInfo.InvariantCulture
+  commentId: P:System.Globalization.CultureInfo.InvariantCulture
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo.invariantculture
+  name: InvariantCulture
+  nameWithType: CultureInfo.InvariantCulture
+  fullName: System.Globalization.CultureInfo.InvariantCulture
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T

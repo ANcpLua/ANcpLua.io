@@ -1,0 +1,1809 @@
+### YamlMime:ManagedReference
+items:
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuard`1
+  commentId: T:ANcpLua.Roslyn.Utilities.SemanticGuard`1
+  id: SemanticGuard`1
+  parent: ANcpLua.Roslyn.Utilities
+  children:
+  - ANcpLua.Roslyn.Utilities.SemanticGuard`1.IsValid
+  - ANcpLua.Roslyn.Utilities.SemanticGuard`1.Must(System.Func{`0,System.Boolean},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  - ANcpLua.Roslyn.Utilities.SemanticGuard`1.Must(System.Func{`0,System.Boolean},System.Func{`0,ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  - ANcpLua.Roslyn.Utilities.SemanticGuard`1.MustBePublic(ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  - ANcpLua.Roslyn.Utilities.SemanticGuard`1.MustBeStatic(ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  - ANcpLua.Roslyn.Utilities.SemanticGuard`1.MustBeVisibleOutsideAssembly(ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  - ANcpLua.Roslyn.Utilities.SemanticGuard`1.MustHaveAttribute(Microsoft.CodeAnalysis.ITypeSymbol,ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  - ANcpLua.Roslyn.Utilities.SemanticGuard`1.MustHaveAttribute(System.String,ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  - ANcpLua.Roslyn.Utilities.SemanticGuard`1.MustMatch(ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern{`0},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  - ANcpLua.Roslyn.Utilities.SemanticGuard`1.MustMatch(ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern{`0},System.Func{`0,ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  - ANcpLua.Roslyn.Utilities.SemanticGuard`1.MustNot(System.Func{`0,System.Boolean},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  - ANcpLua.Roslyn.Utilities.SemanticGuard`1.MustNotBeStatic(ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  - ANcpLua.Roslyn.Utilities.SemanticGuard`1.MustNotHaveAttribute(Microsoft.CodeAnalysis.ITypeSymbol,ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  - ANcpLua.Roslyn.Utilities.SemanticGuard`1.Symbol
+  - ANcpLua.Roslyn.Utilities.SemanticGuard`1.ToFlow
+  - ANcpLua.Roslyn.Utilities.SemanticGuard`1.Violations
+  langs:
+  - csharp
+  - vb
+  name: SemanticGuard<T>
+  nameWithType: SemanticGuard<T>
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuard<T>
+  type: Class
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: SemanticGuard
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+    startLine: 35
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Provides declarative validation for Roslyn symbols using a fluent API.
+  remarks: >-
+    <p>
+
+    <xref href="ANcpLua.Roslyn.Utilities.SemanticGuard%601" data-throw-if-not-resolved="false"></xref> enables building validation rules that read like intent
+
+    while accumulating violations for diagnostic reporting.
+
+    </p>
+
+    <ul><li>Chain multiple validation rules fluently</li><li>Accumulates all violations rather than short-circuiting</li><li>Converts to <xref href="ANcpLua.Roslyn.Utilities.DiagnosticFlow%601" data-throw-if-not-resolved="false"></xref> for railway-oriented programming</li></ul>
+  example:
+  - >-
+    <pre><code class="lang-csharp">SemanticGuard.ForMethod(method)
+        .MustBeAsync(asyncRequired)
+        .MustReturnTask(taskRequired)
+        .MustHaveCancellationToken(ctRequired)
+        .ToFlow();</code></pre>
+  syntax:
+    content: 'public sealed class SemanticGuard<T> where T : ISymbol'
+    typeParameters:
+    - id: T
+      description: The type of symbol being validated. Must implement <xref href="Microsoft.CodeAnalysis.ISymbol" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public NotInheritable Class SemanticGuard(Of T As ISymbol)
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.SemanticGuard
+    commentId: T:ANcpLua.Roslyn.Utilities.SemanticGuard
+  - linkId: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions
+    commentId: T:ANcpLua.Roslyn.Utilities.SemanticGuardExtensions
+  - linkId: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+    commentId: T:ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - ANcpLua.Roslyn.Utilities.SemanticGuard`1.ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1
+  - ANcpLua.Roslyn.Utilities.SemanticGuard`1.ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  nameWithType.vb: SemanticGuard(Of T)
+  fullName.vb: ANcpLua.Roslyn.Utilities.SemanticGuard(Of T)
+  name.vb: SemanticGuard(Of T)
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuard`1.Symbol
+  commentId: P:ANcpLua.Roslyn.Utilities.SemanticGuard`1.Symbol
+  id: Symbol
+  parent: ANcpLua.Roslyn.Utilities.SemanticGuard`1
+  langs:
+  - csharp
+  - vb
+  name: Symbol
+  nameWithType: SemanticGuard<T>.Symbol
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuard<T>.Symbol
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Symbol
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+    startLine: 54
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Gets the symbol being validated.
+  example: []
+  syntax:
+    content: public T Symbol { get; }
+    parameters: []
+    return:
+      type: '{T}'
+    content.vb: Public ReadOnly Property Symbol As T
+  overload: ANcpLua.Roslyn.Utilities.SemanticGuard`1.Symbol*
+  nameWithType.vb: SemanticGuard(Of T).Symbol
+  fullName.vb: ANcpLua.Roslyn.Utilities.SemanticGuard(Of T).Symbol
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuard`1.IsValid
+  commentId: P:ANcpLua.Roslyn.Utilities.SemanticGuard`1.IsValid
+  id: IsValid
+  parent: ANcpLua.Roslyn.Utilities.SemanticGuard`1
+  langs:
+  - csharp
+  - vb
+  name: IsValid
+  nameWithType: SemanticGuard<T>.IsValid
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuard<T>.IsValid
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsValid
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+    startLine: 60
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Gets a value indicating whether all validation rules have passed.
+  example: []
+  syntax:
+    content: public bool IsValid { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+      description: <code>true</code> if no violations have been recorded; otherwise, <code>false</code>.
+    content.vb: Public ReadOnly Property IsValid As Boolean
+  overload: ANcpLua.Roslyn.Utilities.SemanticGuard`1.IsValid*
+  nameWithType.vb: SemanticGuard(Of T).IsValid
+  fullName.vb: ANcpLua.Roslyn.Utilities.SemanticGuard(Of T).IsValid
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuard`1.Violations
+  commentId: P:ANcpLua.Roslyn.Utilities.SemanticGuard`1.Violations
+  id: Violations
+  parent: ANcpLua.Roslyn.Utilities.SemanticGuard`1
+  langs:
+  - csharp
+  - vb
+  name: Violations
+  nameWithType: SemanticGuard<T>.Violations
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuard<T>.Violations
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Violations
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+    startLine: 69
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Gets the collection of diagnostic violations accumulated during validation.
+  example: []
+  syntax:
+    content: public EquatableArray<DiagnosticInfo> Violations { get; }
+    parameters: []
+    return:
+      type: ANcpLua.Roslyn.Utilities.EquatableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo}
+      description: >-
+        An <xref href="ANcpLua.Roslyn.Utilities.EquatableArray%601" data-throw-if-not-resolved="false"></xref> containing all recorded violations,
+
+        or <code>default</code> if no violations occurred.
+    content.vb: Public ReadOnly Property Violations As EquatableArray(Of DiagnosticInfo)
+  overload: ANcpLua.Roslyn.Utilities.SemanticGuard`1.Violations*
+  nameWithType.vb: SemanticGuard(Of T).Violations
+  fullName.vb: ANcpLua.Roslyn.Utilities.SemanticGuard(Of T).Violations
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuard`1.MustMatch(ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern{`0},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  commentId: M:ANcpLua.Roslyn.Utilities.SemanticGuard`1.MustMatch(ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern{`0},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  id: MustMatch(ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern{`0},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  parent: ANcpLua.Roslyn.Utilities.SemanticGuard`1
+  langs:
+  - csharp
+  - vb
+  name: MustMatch(SymbolPattern<T>, DiagnosticInfo)
+  nameWithType: SemanticGuard<T>.MustMatch(SymbolPattern<T>, DiagnosticInfo)
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuard<T>.MustMatch(ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern<T>, ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: MustMatch
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+    startLine: 81
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Validates that the symbol matches the specified pattern.
+  example: []
+  syntax:
+    content: public SemanticGuard<T> MustMatch(SymbolPattern<T> pattern, DiagnosticInfo onFail)
+    parameters:
+    - id: pattern
+      type: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern{{T}}
+      description: The <xref href="ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern%601" data-throw-if-not-resolved="false"></xref> to match against.
+    - id: onFail
+      type: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+      description: The diagnostic to record if the pattern does not match.
+    return:
+      type: ANcpLua.Roslyn.Utilities.SemanticGuard`1
+      description: The current <xref href="ANcpLua.Roslyn.Utilities.SemanticGuard%601" data-throw-if-not-resolved="false"></xref> instance for method chaining.
+    content.vb: Public Function MustMatch(pattern As SymbolPattern(Of T), onFail As DiagnosticInfo) As SemanticGuard(Of T)
+  overload: ANcpLua.Roslyn.Utilities.SemanticGuard`1.MustMatch*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern`1
+    commentId: T:ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern`1
+  nameWithType.vb: SemanticGuard(Of T).MustMatch(SymbolPattern(Of T), DiagnosticInfo)
+  fullName.vb: ANcpLua.Roslyn.Utilities.SemanticGuard(Of T).MustMatch(ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern(Of T), ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  name.vb: MustMatch(SymbolPattern(Of T), DiagnosticInfo)
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuard`1.MustMatch(ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern{`0},System.Func{`0,ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  commentId: M:ANcpLua.Roslyn.Utilities.SemanticGuard`1.MustMatch(ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern{`0},System.Func{`0,ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  id: MustMatch(ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern{`0},System.Func{`0,ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  parent: ANcpLua.Roslyn.Utilities.SemanticGuard`1
+  langs:
+  - csharp
+  - vb
+  name: MustMatch(SymbolPattern<T>, Func<T, DiagnosticInfo>)
+  nameWithType: SemanticGuard<T>.MustMatch(SymbolPattern<T>, Func<T, DiagnosticInfo>)
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuard<T>.MustMatch(ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern<T>, System.Func<T, ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo>)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: MustMatch
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+    startLine: 95
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Validates that the symbol matches the specified pattern, with a dynamic diagnostic.
+  example: []
+  syntax:
+    content: public SemanticGuard<T> MustMatch(SymbolPattern<T> pattern, Func<T, DiagnosticInfo> onFail)
+    parameters:
+    - id: pattern
+      type: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern{{T}}
+      description: The <xref href="ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern%601" data-throw-if-not-resolved="false"></xref> to match against.
+    - id: onFail
+      type: System.Func{{T},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo}
+      description: A function that creates the diagnostic based on the symbol if the pattern does not match.
+    return:
+      type: ANcpLua.Roslyn.Utilities.SemanticGuard`1
+      description: The current <xref href="ANcpLua.Roslyn.Utilities.SemanticGuard%601" data-throw-if-not-resolved="false"></xref> instance for method chaining.
+    content.vb: Public Function MustMatch(pattern As SymbolPattern(Of T), onFail As Func(Of T, DiagnosticInfo)) As SemanticGuard(Of T)
+  overload: ANcpLua.Roslyn.Utilities.SemanticGuard`1.MustMatch*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern`1
+    commentId: T:ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern`1
+  nameWithType.vb: SemanticGuard(Of T).MustMatch(SymbolPattern(Of T), Func(Of T, DiagnosticInfo))
+  fullName.vb: ANcpLua.Roslyn.Utilities.SemanticGuard(Of T).MustMatch(ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern(Of T), System.Func(Of T, ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo))
+  name.vb: MustMatch(SymbolPattern(Of T), Func(Of T, DiagnosticInfo))
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuard`1.Must(System.Func{`0,System.Boolean},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  commentId: M:ANcpLua.Roslyn.Utilities.SemanticGuard`1.Must(System.Func{`0,System.Boolean},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  id: Must(System.Func{`0,System.Boolean},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  parent: ANcpLua.Roslyn.Utilities.SemanticGuard`1
+  langs:
+  - csharp
+  - vb
+  name: Must(Func<T, bool>, DiagnosticInfo)
+  nameWithType: SemanticGuard<T>.Must(Func<T, bool>, DiagnosticInfo)
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuard<T>.Must(System.Func<T, bool>, ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Must
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+    startLine: 108
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Validates that the symbol satisfies the specified predicate.
+  example: []
+  syntax:
+    content: public SemanticGuard<T> Must(Func<T, bool> predicate, DiagnosticInfo onFail)
+    parameters:
+    - id: predicate
+      type: System.Func{{T},System.Boolean}
+      description: A function that returns <code>true</code> if the symbol is valid.
+    - id: onFail
+      type: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+      description: The diagnostic to record if the predicate returns <code>false</code>.
+    return:
+      type: ANcpLua.Roslyn.Utilities.SemanticGuard`1
+      description: The current <xref href="ANcpLua.Roslyn.Utilities.SemanticGuard%601" data-throw-if-not-resolved="false"></xref> instance for method chaining.
+    content.vb: Public Function Must(predicate As Func(Of T, Boolean), onFail As DiagnosticInfo) As SemanticGuard(Of T)
+  overload: ANcpLua.Roslyn.Utilities.SemanticGuard`1.Must*
+  nameWithType.vb: SemanticGuard(Of T).Must(Func(Of T, Boolean), DiagnosticInfo)
+  fullName.vb: ANcpLua.Roslyn.Utilities.SemanticGuard(Of T).Must(System.Func(Of T, Boolean), ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  name.vb: Must(Func(Of T, Boolean), DiagnosticInfo)
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuard`1.Must(System.Func{`0,System.Boolean},System.Func{`0,ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  commentId: M:ANcpLua.Roslyn.Utilities.SemanticGuard`1.Must(System.Func{`0,System.Boolean},System.Func{`0,ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  id: Must(System.Func{`0,System.Boolean},System.Func{`0,ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  parent: ANcpLua.Roslyn.Utilities.SemanticGuard`1
+  langs:
+  - csharp
+  - vb
+  name: Must(Func<T, bool>, Func<T, DiagnosticInfo>)
+  nameWithType: SemanticGuard<T>.Must(Func<T, bool>, Func<T, DiagnosticInfo>)
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuard<T>.Must(System.Func<T, bool>, System.Func<T, ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo>)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Must
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+    startLine: 121
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Validates that the symbol satisfies the specified predicate, with a dynamic diagnostic.
+  example: []
+  syntax:
+    content: public SemanticGuard<T> Must(Func<T, bool> predicate, Func<T, DiagnosticInfo> onFail)
+    parameters:
+    - id: predicate
+      type: System.Func{{T},System.Boolean}
+      description: A function that returns <code>true</code> if the symbol is valid.
+    - id: onFail
+      type: System.Func{{T},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo}
+      description: A function that creates the diagnostic based on the symbol if the predicate returns <code>false</code>.
+    return:
+      type: ANcpLua.Roslyn.Utilities.SemanticGuard`1
+      description: The current <xref href="ANcpLua.Roslyn.Utilities.SemanticGuard%601" data-throw-if-not-resolved="false"></xref> instance for method chaining.
+    content.vb: Public Function Must(predicate As Func(Of T, Boolean), onFail As Func(Of T, DiagnosticInfo)) As SemanticGuard(Of T)
+  overload: ANcpLua.Roslyn.Utilities.SemanticGuard`1.Must*
+  nameWithType.vb: SemanticGuard(Of T).Must(Func(Of T, Boolean), Func(Of T, DiagnosticInfo))
+  fullName.vb: ANcpLua.Roslyn.Utilities.SemanticGuard(Of T).Must(System.Func(Of T, Boolean), System.Func(Of T, ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo))
+  name.vb: Must(Func(Of T, Boolean), Func(Of T, DiagnosticInfo))
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuard`1.MustNot(System.Func{`0,System.Boolean},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  commentId: M:ANcpLua.Roslyn.Utilities.SemanticGuard`1.MustNot(System.Func{`0,System.Boolean},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  id: MustNot(System.Func{`0,System.Boolean},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  parent: ANcpLua.Roslyn.Utilities.SemanticGuard`1
+  langs:
+  - csharp
+  - vb
+  name: MustNot(Func<T, bool>, DiagnosticInfo)
+  nameWithType: SemanticGuard<T>.MustNot(Func<T, bool>, DiagnosticInfo)
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuard<T>.MustNot(System.Func<T, bool>, ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: MustNot
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+    startLine: 134
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Validates that the symbol does not satisfy the specified predicate.
+  example: []
+  syntax:
+    content: public SemanticGuard<T> MustNot(Func<T, bool> predicate, DiagnosticInfo onFail)
+    parameters:
+    - id: predicate
+      type: System.Func{{T},System.Boolean}
+      description: A function that returns <code>true</code> for an invalid condition.
+    - id: onFail
+      type: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+      description: The diagnostic to record if the predicate returns <code>true</code>.
+    return:
+      type: ANcpLua.Roslyn.Utilities.SemanticGuard`1
+      description: The current <xref href="ANcpLua.Roslyn.Utilities.SemanticGuard%601" data-throw-if-not-resolved="false"></xref> instance for method chaining.
+    content.vb: Public Function MustNot(predicate As Func(Of T, Boolean), onFail As DiagnosticInfo) As SemanticGuard(Of T)
+  overload: ANcpLua.Roslyn.Utilities.SemanticGuard`1.MustNot*
+  nameWithType.vb: SemanticGuard(Of T).MustNot(Func(Of T, Boolean), DiagnosticInfo)
+  fullName.vb: ANcpLua.Roslyn.Utilities.SemanticGuard(Of T).MustNot(System.Func(Of T, Boolean), ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  name.vb: MustNot(Func(Of T, Boolean), DiagnosticInfo)
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuard`1.MustBePublic(ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  commentId: M:ANcpLua.Roslyn.Utilities.SemanticGuard`1.MustBePublic(ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  id: MustBePublic(ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  parent: ANcpLua.Roslyn.Utilities.SemanticGuard`1
+  langs:
+  - csharp
+  - vb
+  name: MustBePublic(DiagnosticInfo)
+  nameWithType: SemanticGuard<T>.MustBePublic(DiagnosticInfo)
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuard<T>.MustBePublic(ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: MustBePublic
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+    startLine: 146
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Validates that the symbol has public accessibility.
+  example: []
+  syntax:
+    content: public SemanticGuard<T> MustBePublic(DiagnosticInfo onFail)
+    parameters:
+    - id: onFail
+      type: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+      description: The diagnostic to record if the symbol is not public.
+    return:
+      type: ANcpLua.Roslyn.Utilities.SemanticGuard`1
+      description: The current <xref href="ANcpLua.Roslyn.Utilities.SemanticGuard%601" data-throw-if-not-resolved="false"></xref> instance for method chaining.
+    content.vb: Public Function MustBePublic(onFail As DiagnosticInfo) As SemanticGuard(Of T)
+  overload: ANcpLua.Roslyn.Utilities.SemanticGuard`1.MustBePublic*
+  nameWithType.vb: SemanticGuard(Of T).MustBePublic(DiagnosticInfo)
+  fullName.vb: ANcpLua.Roslyn.Utilities.SemanticGuard(Of T).MustBePublic(ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuard`1.MustBeStatic(ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  commentId: M:ANcpLua.Roslyn.Utilities.SemanticGuard`1.MustBeStatic(ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  id: MustBeStatic(ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  parent: ANcpLua.Roslyn.Utilities.SemanticGuard`1
+  langs:
+  - csharp
+  - vb
+  name: MustBeStatic(DiagnosticInfo)
+  nameWithType: SemanticGuard<T>.MustBeStatic(DiagnosticInfo)
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuard<T>.MustBeStatic(ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: MustBeStatic
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+    startLine: 158
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Validates that the symbol is static.
+  example: []
+  syntax:
+    content: public SemanticGuard<T> MustBeStatic(DiagnosticInfo onFail)
+    parameters:
+    - id: onFail
+      type: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+      description: The diagnostic to record if the symbol is not static.
+    return:
+      type: ANcpLua.Roslyn.Utilities.SemanticGuard`1
+      description: The current <xref href="ANcpLua.Roslyn.Utilities.SemanticGuard%601" data-throw-if-not-resolved="false"></xref> instance for method chaining.
+    content.vb: Public Function MustBeStatic(onFail As DiagnosticInfo) As SemanticGuard(Of T)
+  overload: ANcpLua.Roslyn.Utilities.SemanticGuard`1.MustBeStatic*
+  nameWithType.vb: SemanticGuard(Of T).MustBeStatic(DiagnosticInfo)
+  fullName.vb: ANcpLua.Roslyn.Utilities.SemanticGuard(Of T).MustBeStatic(ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuard`1.MustNotBeStatic(ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  commentId: M:ANcpLua.Roslyn.Utilities.SemanticGuard`1.MustNotBeStatic(ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  id: MustNotBeStatic(ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  parent: ANcpLua.Roslyn.Utilities.SemanticGuard`1
+  langs:
+  - csharp
+  - vb
+  name: MustNotBeStatic(DiagnosticInfo)
+  nameWithType: SemanticGuard<T>.MustNotBeStatic(DiagnosticInfo)
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuard<T>.MustNotBeStatic(ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: MustNotBeStatic
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+    startLine: 170
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Validates that the symbol is not static.
+  example: []
+  syntax:
+    content: public SemanticGuard<T> MustNotBeStatic(DiagnosticInfo onFail)
+    parameters:
+    - id: onFail
+      type: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+      description: The diagnostic to record if the symbol is static.
+    return:
+      type: ANcpLua.Roslyn.Utilities.SemanticGuard`1
+      description: The current <xref href="ANcpLua.Roslyn.Utilities.SemanticGuard%601" data-throw-if-not-resolved="false"></xref> instance for method chaining.
+    content.vb: Public Function MustNotBeStatic(onFail As DiagnosticInfo) As SemanticGuard(Of T)
+  overload: ANcpLua.Roslyn.Utilities.SemanticGuard`1.MustNotBeStatic*
+  nameWithType.vb: SemanticGuard(Of T).MustNotBeStatic(DiagnosticInfo)
+  fullName.vb: ANcpLua.Roslyn.Utilities.SemanticGuard(Of T).MustNotBeStatic(ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuard`1.MustHaveAttribute(Microsoft.CodeAnalysis.ITypeSymbol,ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  commentId: M:ANcpLua.Roslyn.Utilities.SemanticGuard`1.MustHaveAttribute(Microsoft.CodeAnalysis.ITypeSymbol,ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  id: MustHaveAttribute(Microsoft.CodeAnalysis.ITypeSymbol,ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  parent: ANcpLua.Roslyn.Utilities.SemanticGuard`1
+  langs:
+  - csharp
+  - vb
+  name: MustHaveAttribute(ITypeSymbol, DiagnosticInfo)
+  nameWithType: SemanticGuard<T>.MustHaveAttribute(ITypeSymbol, DiagnosticInfo)
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuard<T>.MustHaveAttribute(Microsoft.CodeAnalysis.ITypeSymbol, ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: MustHaveAttribute
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+    startLine: 183
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Validates that the symbol has the specified attribute.
+  example: []
+  syntax:
+    content: public SemanticGuard<T> MustHaveAttribute(ITypeSymbol attributeType, DiagnosticInfo onFail)
+    parameters:
+    - id: attributeType
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The <xref href="Microsoft.CodeAnalysis.ITypeSymbol" data-throw-if-not-resolved="false"></xref> representing the attribute type.
+    - id: onFail
+      type: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+      description: The diagnostic to record if the attribute is not present.
+    return:
+      type: ANcpLua.Roslyn.Utilities.SemanticGuard`1
+      description: The current <xref href="ANcpLua.Roslyn.Utilities.SemanticGuard%601" data-throw-if-not-resolved="false"></xref> instance for method chaining.
+    content.vb: Public Function MustHaveAttribute(attributeType As ITypeSymbol, onFail As DiagnosticInfo) As SemanticGuard(Of T)
+  overload: ANcpLua.Roslyn.Utilities.SemanticGuard`1.MustHaveAttribute*
+  nameWithType.vb: SemanticGuard(Of T).MustHaveAttribute(ITypeSymbol, DiagnosticInfo)
+  fullName.vb: ANcpLua.Roslyn.Utilities.SemanticGuard(Of T).MustHaveAttribute(Microsoft.CodeAnalysis.ITypeSymbol, ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuard`1.MustHaveAttribute(System.String,ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  commentId: M:ANcpLua.Roslyn.Utilities.SemanticGuard`1.MustHaveAttribute(System.String,ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  id: MustHaveAttribute(System.String,ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  parent: ANcpLua.Roslyn.Utilities.SemanticGuard`1
+  langs:
+  - csharp
+  - vb
+  name: MustHaveAttribute(string, DiagnosticInfo)
+  nameWithType: SemanticGuard<T>.MustHaveAttribute(string, DiagnosticInfo)
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuard<T>.MustHaveAttribute(string, ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: MustHaveAttribute
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+    startLine: 196
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Validates that the symbol has the specified attribute by its fully qualified name.
+  example: []
+  syntax:
+    content: public SemanticGuard<T> MustHaveAttribute(string fullyQualifiedName, DiagnosticInfo onFail)
+    parameters:
+    - id: fullyQualifiedName
+      type: System.String
+      description: The fully qualified metadata name of the attribute (e.g., "System.ObsoleteAttribute").
+    - id: onFail
+      type: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+      description: The diagnostic to record if the attribute is not present.
+    return:
+      type: ANcpLua.Roslyn.Utilities.SemanticGuard`1
+      description: The current <xref href="ANcpLua.Roslyn.Utilities.SemanticGuard%601" data-throw-if-not-resolved="false"></xref> instance for method chaining.
+    content.vb: Public Function MustHaveAttribute(fullyQualifiedName As String, onFail As DiagnosticInfo) As SemanticGuard(Of T)
+  overload: ANcpLua.Roslyn.Utilities.SemanticGuard`1.MustHaveAttribute*
+  nameWithType.vb: SemanticGuard(Of T).MustHaveAttribute(String, DiagnosticInfo)
+  fullName.vb: ANcpLua.Roslyn.Utilities.SemanticGuard(Of T).MustHaveAttribute(String, ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  name.vb: MustHaveAttribute(String, DiagnosticInfo)
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuard`1.MustNotHaveAttribute(Microsoft.CodeAnalysis.ITypeSymbol,ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  commentId: M:ANcpLua.Roslyn.Utilities.SemanticGuard`1.MustNotHaveAttribute(Microsoft.CodeAnalysis.ITypeSymbol,ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  id: MustNotHaveAttribute(Microsoft.CodeAnalysis.ITypeSymbol,ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  parent: ANcpLua.Roslyn.Utilities.SemanticGuard`1
+  langs:
+  - csharp
+  - vb
+  name: MustNotHaveAttribute(ITypeSymbol, DiagnosticInfo)
+  nameWithType: SemanticGuard<T>.MustNotHaveAttribute(ITypeSymbol, DiagnosticInfo)
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuard<T>.MustNotHaveAttribute(Microsoft.CodeAnalysis.ITypeSymbol, ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: MustNotHaveAttribute
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+    startLine: 209
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Validates that the symbol does not have the specified attribute.
+  example: []
+  syntax:
+    content: public SemanticGuard<T> MustNotHaveAttribute(ITypeSymbol attributeType, DiagnosticInfo onFail)
+    parameters:
+    - id: attributeType
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The <xref href="Microsoft.CodeAnalysis.ITypeSymbol" data-throw-if-not-resolved="false"></xref> representing the attribute type.
+    - id: onFail
+      type: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+      description: The diagnostic to record if the attribute is present.
+    return:
+      type: ANcpLua.Roslyn.Utilities.SemanticGuard`1
+      description: The current <xref href="ANcpLua.Roslyn.Utilities.SemanticGuard%601" data-throw-if-not-resolved="false"></xref> instance for method chaining.
+    content.vb: Public Function MustNotHaveAttribute(attributeType As ITypeSymbol, onFail As DiagnosticInfo) As SemanticGuard(Of T)
+  overload: ANcpLua.Roslyn.Utilities.SemanticGuard`1.MustNotHaveAttribute*
+  nameWithType.vb: SemanticGuard(Of T).MustNotHaveAttribute(ITypeSymbol, DiagnosticInfo)
+  fullName.vb: ANcpLua.Roslyn.Utilities.SemanticGuard(Of T).MustNotHaveAttribute(Microsoft.CodeAnalysis.ITypeSymbol, ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuard`1.MustBeVisibleOutsideAssembly(ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  commentId: M:ANcpLua.Roslyn.Utilities.SemanticGuard`1.MustBeVisibleOutsideAssembly(ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  id: MustBeVisibleOutsideAssembly(ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  parent: ANcpLua.Roslyn.Utilities.SemanticGuard`1
+  langs:
+  - csharp
+  - vb
+  name: MustBeVisibleOutsideAssembly(DiagnosticInfo)
+  nameWithType: SemanticGuard<T>.MustBeVisibleOutsideAssembly(DiagnosticInfo)
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuard<T>.MustBeVisibleOutsideAssembly(ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: MustBeVisibleOutsideAssembly
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+    startLine: 222
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Validates that the symbol is visible outside the assembly.
+  example: []
+  syntax:
+    content: public SemanticGuard<T> MustBeVisibleOutsideAssembly(DiagnosticInfo onFail)
+    parameters:
+    - id: onFail
+      type: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+      description: The diagnostic to record if the symbol is not externally visible.
+    return:
+      type: ANcpLua.Roslyn.Utilities.SemanticGuard`1
+      description: The current <xref href="ANcpLua.Roslyn.Utilities.SemanticGuard%601" data-throw-if-not-resolved="false"></xref> instance for method chaining.
+    content.vb: Public Function MustBeVisibleOutsideAssembly(onFail As DiagnosticInfo) As SemanticGuard(Of T)
+  overload: ANcpLua.Roslyn.Utilities.SemanticGuard`1.MustBeVisibleOutsideAssembly*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.SymbolExtensions.IsVisibleOutsideOfAssembly(Microsoft.CodeAnalysis.ISymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.IsVisibleOutsideOfAssembly(Microsoft.CodeAnalysis.ISymbol)
+  nameWithType.vb: SemanticGuard(Of T).MustBeVisibleOutsideAssembly(DiagnosticInfo)
+  fullName.vb: ANcpLua.Roslyn.Utilities.SemanticGuard(Of T).MustBeVisibleOutsideAssembly(ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuard`1.ToFlow
+  commentId: M:ANcpLua.Roslyn.Utilities.SemanticGuard`1.ToFlow
+  id: ToFlow
+  parent: ANcpLua.Roslyn.Utilities.SemanticGuard`1
+  langs:
+  - csharp
+  - vb
+  name: ToFlow()
+  nameWithType: SemanticGuard<T>.ToFlow()
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuard<T>.ToFlow()
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: ToFlow
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
+    startLine: 237
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Converts the validation result to a <xref href="ANcpLua.Roslyn.Utilities.DiagnosticFlow%601" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public DiagnosticFlow<T> ToFlow()
+    return:
+      type: ANcpLua.Roslyn.Utilities.DiagnosticFlow{{T}}
+      description: >-
+        A successful <xref href="ANcpLua.Roslyn.Utilities.DiagnosticFlow%601" data-throw-if-not-resolved="false"></xref> containing the symbol if <xref href="ANcpLua.Roslyn.Utilities.SemanticGuard%601.IsValid" data-throw-if-not-resolved="false"></xref> is <code>true</code>;
+
+        otherwise, a failed flow containing all accumulated <xref href="ANcpLua.Roslyn.Utilities.SemanticGuard%601.Violations" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Function ToFlow() As DiagnosticFlow(Of T)
+  overload: ANcpLua.Roslyn.Utilities.SemanticGuard`1.ToFlow*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+    commentId: T:ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+  nameWithType.vb: SemanticGuard(Of T).ToFlow()
+  fullName.vb: ANcpLua.Roslyn.Utilities.SemanticGuard(Of T).ToFlow()
+references:
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuard
+  commentId: T:ANcpLua.Roslyn.Utilities.SemanticGuard
+  href: ANcpLua.Roslyn.Utilities.SemanticGuard.html
+  name: SemanticGuard
+  nameWithType: SemanticGuard
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuard
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions
+  commentId: T:ANcpLua.Roslyn.Utilities.SemanticGuardExtensions
+  href: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.html
+  name: SemanticGuardExtensions
+  nameWithType: SemanticGuardExtensions
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions
+- uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+  commentId: T:ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+  parent: ANcpLua.Roslyn.Utilities
+  href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html
+  name: DiagnosticFlow<T>
+  nameWithType: DiagnosticFlow<T>
+  fullName: ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>
+  nameWithType.vb: DiagnosticFlow(Of T)
+  fullName.vb: ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T)
+  name.vb: DiagnosticFlow(Of T)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+    name: DiagnosticFlow
+    href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+    name: DiagnosticFlow
+    href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuard`1
+  commentId: T:ANcpLua.Roslyn.Utilities.SemanticGuard`1
+  parent: ANcpLua.Roslyn.Utilities
+  href: ANcpLua.Roslyn.Utilities.SemanticGuard-1.html
+  name: SemanticGuard<T>
+  nameWithType: SemanticGuard<T>
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuard<T>
+  nameWithType.vb: SemanticGuard(Of T)
+  fullName.vb: ANcpLua.Roslyn.Utilities.SemanticGuard(Of T)
+  name.vb: SemanticGuard(Of T)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.SemanticGuard`1
+    name: SemanticGuard
+    href: ANcpLua.Roslyn.Utilities.SemanticGuard-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.SemanticGuard`1
+    name: SemanticGuard
+    href: ANcpLua.Roslyn.Utilities.SemanticGuard-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Microsoft.CodeAnalysis.ISymbol
+  commentId: T:Microsoft.CodeAnalysis.ISymbol
+  parent: Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.isymbol
+  name: ISymbol
+  nameWithType: ISymbol
+  fullName: Microsoft.CodeAnalysis.ISymbol
+- uid: ANcpLua.Roslyn.Utilities
+  commentId: N:ANcpLua.Roslyn.Utilities
+  href: ANcpLua.html
+  name: ANcpLua.Roslyn.Utilities
+  nameWithType: ANcpLua.Roslyn.Utilities
+  fullName: ANcpLua.Roslyn.Utilities
+  spec.csharp:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  spec.vb:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuard`1.ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+  parent: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+  definition: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  name: ToResultWithDiagnostics<SemanticGuard<T>>(SemanticGuard<T>)
+  nameWithType: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<SemanticGuard<T>>(SemanticGuard<T>)
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<ANcpLua.Roslyn.Utilities.SemanticGuard<T>>(ANcpLua.Roslyn.Utilities.SemanticGuard<T>)
+  nameWithType.vb: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of SemanticGuard(Of T))(SemanticGuard(Of T))
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of ANcpLua.Roslyn.Utilities.SemanticGuard(Of T))(ANcpLua.Roslyn.Utilities.SemanticGuard(Of T))
+  name.vb: ToResultWithDiagnostics(Of SemanticGuard(Of T))(SemanticGuard(Of T))
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(ANcpLua.Roslyn.Utilities.SemanticGuard{`0})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.SemanticGuard`1
+    name: SemanticGuard
+    href: ANcpLua.Roslyn.Utilities.SemanticGuard-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.SemanticGuard`1
+    name: SemanticGuard
+    href: ANcpLua.Roslyn.Utilities.SemanticGuard-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(ANcpLua.Roslyn.Utilities.SemanticGuard{`0})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.SemanticGuard`1
+    name: SemanticGuard
+    href: ANcpLua.Roslyn.Utilities.SemanticGuard-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.SemanticGuard`1
+    name: SemanticGuard
+    href: ANcpLua.Roslyn.Utilities.SemanticGuard-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuard`1.ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  parent: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+  definition: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  name: ToResultWithDiagnostics<SemanticGuard<T>>(SemanticGuard<T>, ImmutableArray<DiagnosticInfo>)
+  nameWithType: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<SemanticGuard<T>>(SemanticGuard<T>, ImmutableArray<DiagnosticInfo>)
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<ANcpLua.Roslyn.Utilities.SemanticGuard<T>>(ANcpLua.Roslyn.Utilities.SemanticGuard<T>, System.Collections.Immutable.ImmutableArray<ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo>)
+  nameWithType.vb: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of SemanticGuard(Of T))(SemanticGuard(Of T), ImmutableArray(Of DiagnosticInfo))
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of ANcpLua.Roslyn.Utilities.SemanticGuard(Of T))(ANcpLua.Roslyn.Utilities.SemanticGuard(Of T), System.Collections.Immutable.ImmutableArray(Of ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo))
+  name.vb: ToResultWithDiagnostics(Of SemanticGuard(Of T))(SemanticGuard(Of T), ImmutableArray(Of DiagnosticInfo))
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(ANcpLua.Roslyn.Utilities.SemanticGuard{`0},System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.SemanticGuard`1
+    name: SemanticGuard
+    href: ANcpLua.Roslyn.Utilities.SemanticGuard-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.SemanticGuard`1
+    name: SemanticGuard
+    href: ANcpLua.Roslyn.Utilities.SemanticGuard-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(ANcpLua.Roslyn.Utilities.SemanticGuard{`0},System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.SemanticGuard`1
+    name: SemanticGuard
+    href: ANcpLua.Roslyn.Utilities.SemanticGuard-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.SemanticGuard`1
+    name: SemanticGuard
+    href: ANcpLua.Roslyn.Utilities.SemanticGuard-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: )
+  - name: )
+- uid: Microsoft.CodeAnalysis
+  commentId: N:Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.CodeAnalysis
+  nameWithType: Microsoft.CodeAnalysis
+  fullName: Microsoft.CodeAnalysis
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  name: ToResultWithDiagnostics<T>(T)
+  nameWithType: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<T>(T)
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<T>(T)
+  nameWithType.vb: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of T)(T)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of T)(T)
+  name.vb: ToResultWithDiagnostics(Of T)(T)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+  commentId: T:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+  parent: ANcpLua.Roslyn.Utilities.Models
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html
+  name: ResultWithDiagnosticsExtensions
+  nameWithType: ResultWithDiagnosticsExtensions
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+- uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  name: ToResultWithDiagnostics<T>(T, ImmutableArray<DiagnosticInfo>)
+  nameWithType: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<T>(T, ImmutableArray<DiagnosticInfo>)
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<T>(T, System.Collections.Immutable.ImmutableArray<ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo>)
+  nameWithType.vb: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of T)(T, ImmutableArray(Of DiagnosticInfo))
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of T)(T, System.Collections.Immutable.ImmutableArray(Of ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo))
+  name.vb: ToResultWithDiagnostics(Of T)(T, ImmutableArray(Of DiagnosticInfo))
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: )
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Models
+  commentId: N:ANcpLua.Roslyn.Utilities.Models
+  href: ANcpLua.html
+  name: ANcpLua.Roslyn.Utilities.Models
+  nameWithType: ANcpLua.Roslyn.Utilities.Models
+  fullName: ANcpLua.Roslyn.Utilities.Models
+  spec.csharp:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities.Models
+    name: Models
+    href: ANcpLua.Roslyn.Utilities.Models.html
+  spec.vb:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities.Models
+    name: Models
+    href: ANcpLua.Roslyn.Utilities.Models.html
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuard`1.Symbol*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SemanticGuard`1.Symbol
+  href: ANcpLua.Roslyn.Utilities.SemanticGuard-1.html#ANcpLua_Roslyn_Utilities_SemanticGuard_1_Symbol
+  name: Symbol
+  nameWithType: SemanticGuard<T>.Symbol
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuard<T>.Symbol
+  nameWithType.vb: SemanticGuard(Of T).Symbol
+  fullName.vb: ANcpLua.Roslyn.Utilities.SemanticGuard(Of T).Symbol
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuard`1.IsValid*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SemanticGuard`1.IsValid
+  href: ANcpLua.Roslyn.Utilities.SemanticGuard-1.html#ANcpLua_Roslyn_Utilities_SemanticGuard_1_IsValid
+  name: IsValid
+  nameWithType: SemanticGuard<T>.IsValid
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuard<T>.IsValid
+  nameWithType.vb: SemanticGuard(Of T).IsValid
+  fullName.vb: ANcpLua.Roslyn.Utilities.SemanticGuard(Of T).IsValid
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: ANcpLua.Roslyn.Utilities.EquatableArray`1
+  commentId: T:ANcpLua.Roslyn.Utilities.EquatableArray`1
+  parent: ANcpLua.Roslyn.Utilities
+  href: ANcpLua.Roslyn.Utilities.EquatableArray-1.html
+  name: EquatableArray<T>
+  nameWithType: EquatableArray<T>
+  fullName: ANcpLua.Roslyn.Utilities.EquatableArray<T>
+  nameWithType.vb: EquatableArray(Of T)
+  fullName.vb: ANcpLua.Roslyn.Utilities.EquatableArray(Of T)
+  name.vb: EquatableArray(Of T)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.EquatableArray`1
+    name: EquatableArray
+    href: ANcpLua.Roslyn.Utilities.EquatableArray-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.EquatableArray`1
+    name: EquatableArray
+    href: ANcpLua.Roslyn.Utilities.EquatableArray-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuard`1.Violations*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SemanticGuard`1.Violations
+  href: ANcpLua.Roslyn.Utilities.SemanticGuard-1.html#ANcpLua_Roslyn_Utilities_SemanticGuard_1_Violations
+  name: Violations
+  nameWithType: SemanticGuard<T>.Violations
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuard<T>.Violations
+  nameWithType.vb: SemanticGuard(Of T).Violations
+  fullName.vb: ANcpLua.Roslyn.Utilities.SemanticGuard(Of T).Violations
+- uid: ANcpLua.Roslyn.Utilities.EquatableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo}
+  commentId: T:ANcpLua.Roslyn.Utilities.EquatableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo}
+  parent: ANcpLua.Roslyn.Utilities
+  definition: ANcpLua.Roslyn.Utilities.EquatableArray`1
+  href: ANcpLua.Roslyn.Utilities.EquatableArray-1.html
+  name: EquatableArray<DiagnosticInfo>
+  nameWithType: EquatableArray<DiagnosticInfo>
+  fullName: ANcpLua.Roslyn.Utilities.EquatableArray<ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo>
+  nameWithType.vb: EquatableArray(Of DiagnosticInfo)
+  fullName.vb: ANcpLua.Roslyn.Utilities.EquatableArray(Of ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  name.vb: EquatableArray(Of DiagnosticInfo)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.EquatableArray`1
+    name: EquatableArray
+    href: ANcpLua.Roslyn.Utilities.EquatableArray-1.html
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: '>'
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.EquatableArray`1
+    name: EquatableArray
+    href: ANcpLua.Roslyn.Utilities.EquatableArray-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern`1
+  commentId: T:ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern`1
+  parent: ANcpLua.Roslyn.Utilities.Patterns
+  href: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern-1.html
+  name: SymbolPattern<T>
+  nameWithType: SymbolPattern<T>
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern<T>
+  nameWithType.vb: SymbolPattern(Of T)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern(Of T)
+  name.vb: SymbolPattern(Of T)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern`1
+    name: SymbolPattern
+    href: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern`1
+    name: SymbolPattern
+    href: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuard`1.MustMatch*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SemanticGuard`1.MustMatch
+  href: ANcpLua.Roslyn.Utilities.SemanticGuard-1.html#ANcpLua_Roslyn_Utilities_SemanticGuard_1_MustMatch_ANcpLua_Roslyn_Utilities_Patterns_SymbolPattern__0__ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_
+  name: MustMatch
+  nameWithType: SemanticGuard<T>.MustMatch
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuard<T>.MustMatch
+  nameWithType.vb: SemanticGuard(Of T).MustMatch
+  fullName.vb: ANcpLua.Roslyn.Utilities.SemanticGuard(Of T).MustMatch
+- uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern{{T}}
+  commentId: T:ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern{`0}
+  parent: ANcpLua.Roslyn.Utilities.Patterns
+  definition: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern`1
+  href: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern-1.html
+  name: SymbolPattern<T>
+  nameWithType: SymbolPattern<T>
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern<T>
+  nameWithType.vb: SymbolPattern(Of T)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern(Of T)
+  name.vb: SymbolPattern(Of T)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern`1
+    name: SymbolPattern
+    href: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern`1
+    name: SymbolPattern
+    href: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+  commentId: T:ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+  parent: ANcpLua.Roslyn.Utilities.Models
+  href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  name: DiagnosticInfo
+  nameWithType: DiagnosticInfo
+  fullName: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+- uid: ANcpLua.Roslyn.Utilities.Patterns
+  commentId: N:ANcpLua.Roslyn.Utilities.Patterns
+  href: ANcpLua.html
+  name: ANcpLua.Roslyn.Utilities.Patterns
+  nameWithType: ANcpLua.Roslyn.Utilities.Patterns
+  fullName: ANcpLua.Roslyn.Utilities.Patterns
+  spec.csharp:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities.Patterns
+    name: Patterns
+    href: ANcpLua.Roslyn.Utilities.Patterns.html
+  spec.vb:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities.Patterns
+    name: Patterns
+    href: ANcpLua.Roslyn.Utilities.Patterns.html
+- uid: System.Func{{T},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo}
+  commentId: T:System.Func{`0,ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<T, DiagnosticInfo>
+  nameWithType: Func<T, DiagnosticInfo>
+  fullName: System.Func<T, ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo>
+  nameWithType.vb: Func(Of T, DiagnosticInfo)
+  fullName.vb: System.Func(Of T, ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  name.vb: Func(Of T, DiagnosticInfo)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: )
+- uid: System.Func`2
+  commentId: T:System.Func`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<T, TResult>
+  nameWithType: Func<T, TResult>
+  fullName: System.Func<T, TResult>
+  nameWithType.vb: Func(Of T, TResult)
+  fullName.vb: System.Func(Of T, TResult)
+  name.vb: Func(Of T, TResult)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuard`1.Must*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SemanticGuard`1.Must
+  href: ANcpLua.Roslyn.Utilities.SemanticGuard-1.html#ANcpLua_Roslyn_Utilities_SemanticGuard_1_Must_System_Func__0_System_Boolean__ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_
+  name: Must
+  nameWithType: SemanticGuard<T>.Must
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuard<T>.Must
+  nameWithType.vb: SemanticGuard(Of T).Must
+  fullName.vb: ANcpLua.Roslyn.Utilities.SemanticGuard(Of T).Must
+- uid: System.Func{{T},System.Boolean}
+  commentId: T:System.Func{`0,System.Boolean}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<T, bool>
+  nameWithType: Func<T, bool>
+  fullName: System.Func<T, bool>
+  nameWithType.vb: Func(Of T, Boolean)
+  fullName.vb: System.Func(Of T, Boolean)
+  name.vb: Func(Of T, Boolean)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuard`1.MustNot*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SemanticGuard`1.MustNot
+  href: ANcpLua.Roslyn.Utilities.SemanticGuard-1.html#ANcpLua_Roslyn_Utilities_SemanticGuard_1_MustNot_System_Func__0_System_Boolean__ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_
+  name: MustNot
+  nameWithType: SemanticGuard<T>.MustNot
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuard<T>.MustNot
+  nameWithType.vb: SemanticGuard(Of T).MustNot
+  fullName.vb: ANcpLua.Roslyn.Utilities.SemanticGuard(Of T).MustNot
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuard`1.MustBePublic*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SemanticGuard`1.MustBePublic
+  href: ANcpLua.Roslyn.Utilities.SemanticGuard-1.html#ANcpLua_Roslyn_Utilities_SemanticGuard_1_MustBePublic_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_
+  name: MustBePublic
+  nameWithType: SemanticGuard<T>.MustBePublic
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuard<T>.MustBePublic
+  nameWithType.vb: SemanticGuard(Of T).MustBePublic
+  fullName.vb: ANcpLua.Roslyn.Utilities.SemanticGuard(Of T).MustBePublic
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuard`1.MustBeStatic*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SemanticGuard`1.MustBeStatic
+  href: ANcpLua.Roslyn.Utilities.SemanticGuard-1.html#ANcpLua_Roslyn_Utilities_SemanticGuard_1_MustBeStatic_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_
+  name: MustBeStatic
+  nameWithType: SemanticGuard<T>.MustBeStatic
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuard<T>.MustBeStatic
+  nameWithType.vb: SemanticGuard(Of T).MustBeStatic
+  fullName.vb: ANcpLua.Roslyn.Utilities.SemanticGuard(Of T).MustBeStatic
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuard`1.MustNotBeStatic*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SemanticGuard`1.MustNotBeStatic
+  href: ANcpLua.Roslyn.Utilities.SemanticGuard-1.html#ANcpLua_Roslyn_Utilities_SemanticGuard_1_MustNotBeStatic_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_
+  name: MustNotBeStatic
+  nameWithType: SemanticGuard<T>.MustNotBeStatic
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuard<T>.MustNotBeStatic
+  nameWithType.vb: SemanticGuard(Of T).MustNotBeStatic
+  fullName.vb: ANcpLua.Roslyn.Utilities.SemanticGuard(Of T).MustNotBeStatic
+- uid: Microsoft.CodeAnalysis.ITypeSymbol
+  commentId: T:Microsoft.CodeAnalysis.ITypeSymbol
+  parent: Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  name: ITypeSymbol
+  nameWithType: ITypeSymbol
+  fullName: Microsoft.CodeAnalysis.ITypeSymbol
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuard`1.MustHaveAttribute*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SemanticGuard`1.MustHaveAttribute
+  href: ANcpLua.Roslyn.Utilities.SemanticGuard-1.html#ANcpLua_Roslyn_Utilities_SemanticGuard_1_MustHaveAttribute_Microsoft_CodeAnalysis_ITypeSymbol_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_
+  name: MustHaveAttribute
+  nameWithType: SemanticGuard<T>.MustHaveAttribute
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuard<T>.MustHaveAttribute
+  nameWithType.vb: SemanticGuard(Of T).MustHaveAttribute
+  fullName.vb: ANcpLua.Roslyn.Utilities.SemanticGuard(Of T).MustHaveAttribute
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuard`1.MustNotHaveAttribute*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SemanticGuard`1.MustNotHaveAttribute
+  href: ANcpLua.Roslyn.Utilities.SemanticGuard-1.html#ANcpLua_Roslyn_Utilities_SemanticGuard_1_MustNotHaveAttribute_Microsoft_CodeAnalysis_ITypeSymbol_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_
+  name: MustNotHaveAttribute
+  nameWithType: SemanticGuard<T>.MustNotHaveAttribute
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuard<T>.MustNotHaveAttribute
+  nameWithType.vb: SemanticGuard(Of T).MustNotHaveAttribute
+  fullName.vb: ANcpLua.Roslyn.Utilities.SemanticGuard(Of T).MustNotHaveAttribute
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.IsVisibleOutsideOfAssembly(Microsoft.CodeAnalysis.ISymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.IsVisibleOutsideOfAssembly(Microsoft.CodeAnalysis.ISymbol)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_IsVisibleOutsideOfAssembly_Microsoft_CodeAnalysis_ISymbol_
+  name: IsVisibleOutsideOfAssembly(ISymbol)
+  nameWithType: SymbolExtensions.IsVisibleOutsideOfAssembly(ISymbol)
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.IsVisibleOutsideOfAssembly(Microsoft.CodeAnalysis.ISymbol)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.IsVisibleOutsideOfAssembly(Microsoft.CodeAnalysis.ISymbol)
+    name: IsVisibleOutsideOfAssembly
+    href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_IsVisibleOutsideOfAssembly_Microsoft_CodeAnalysis_ISymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ISymbol
+    name: ISymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.isymbol
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.IsVisibleOutsideOfAssembly(Microsoft.CodeAnalysis.ISymbol)
+    name: IsVisibleOutsideOfAssembly
+    href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_IsVisibleOutsideOfAssembly_Microsoft_CodeAnalysis_ISymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ISymbol
+    name: ISymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.isymbol
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuard`1.MustBeVisibleOutsideAssembly*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SemanticGuard`1.MustBeVisibleOutsideAssembly
+  href: ANcpLua.Roslyn.Utilities.SemanticGuard-1.html#ANcpLua_Roslyn_Utilities_SemanticGuard_1_MustBeVisibleOutsideAssembly_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_
+  name: MustBeVisibleOutsideAssembly
+  nameWithType: SemanticGuard<T>.MustBeVisibleOutsideAssembly
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuard<T>.MustBeVisibleOutsideAssembly
+  nameWithType.vb: SemanticGuard(Of T).MustBeVisibleOutsideAssembly
+  fullName.vb: ANcpLua.Roslyn.Utilities.SemanticGuard(Of T).MustBeVisibleOutsideAssembly
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuard`1.IsValid
+  commentId: P:ANcpLua.Roslyn.Utilities.SemanticGuard`1.IsValid
+  href: ANcpLua.Roslyn.Utilities.SemanticGuard-1.html#ANcpLua_Roslyn_Utilities_SemanticGuard_1_IsValid
+  name: IsValid
+  nameWithType: SemanticGuard<T>.IsValid
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuard<T>.IsValid
+  nameWithType.vb: SemanticGuard(Of T).IsValid
+  fullName.vb: ANcpLua.Roslyn.Utilities.SemanticGuard(Of T).IsValid
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuard`1.Violations
+  commentId: P:ANcpLua.Roslyn.Utilities.SemanticGuard`1.Violations
+  href: ANcpLua.Roslyn.Utilities.SemanticGuard-1.html#ANcpLua_Roslyn_Utilities_SemanticGuard_1_Violations
+  name: Violations
+  nameWithType: SemanticGuard<T>.Violations
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuard<T>.Violations
+  nameWithType.vb: SemanticGuard(Of T).Violations
+  fullName.vb: ANcpLua.Roslyn.Utilities.SemanticGuard(Of T).Violations
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuard`1.ToFlow*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SemanticGuard`1.ToFlow
+  href: ANcpLua.Roslyn.Utilities.SemanticGuard-1.html#ANcpLua_Roslyn_Utilities_SemanticGuard_1_ToFlow
+  name: ToFlow
+  nameWithType: SemanticGuard<T>.ToFlow
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuard<T>.ToFlow
+  nameWithType.vb: SemanticGuard(Of T).ToFlow
+  fullName.vb: ANcpLua.Roslyn.Utilities.SemanticGuard(Of T).ToFlow
+- uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow{{T}}
+  commentId: T:ANcpLua.Roslyn.Utilities.DiagnosticFlow{``0}
+  parent: ANcpLua.Roslyn.Utilities
+  definition: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+  href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html
+  name: DiagnosticFlow<T>
+  nameWithType: DiagnosticFlow<T>
+  fullName: ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>
+  nameWithType.vb: DiagnosticFlow(Of T)
+  fullName.vb: ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T)
+  name.vb: DiagnosticFlow(Of T)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+    name: DiagnosticFlow
+    href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+    name: DiagnosticFlow
+    href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )

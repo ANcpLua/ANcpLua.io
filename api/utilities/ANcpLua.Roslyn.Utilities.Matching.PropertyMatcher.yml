@@ -1,0 +1,2335 @@
+### YamlMime:ManagedReference
+items:
+- uid: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher
+  commentId: T:ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher
+  id: PropertyMatcher
+  parent: ANcpLua.Roslyn.Utilities.Matching
+  children:
+  - ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.Indexer
+  - ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.OfType(System.String)
+  - ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.ReadOnly
+  - ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.Required
+  - ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.WithGetter
+  - ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.WithInitSetter
+  - ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.WithSetter
+  langs:
+  - csharp
+  - vb
+  name: PropertyMatcher
+  nameWithType: PropertyMatcher
+  fullName: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher
+  type: Class
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/SymbolMatch.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: PropertyMatcher
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/SymbolMatch.cs
+    startLine: 752
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Matching
+  summary: Fluent matcher for <xref href="Microsoft.CodeAnalysis.IPropertySymbol" data-throw-if-not-resolved="false"></xref> instances.
+  remarks: >-
+    <p>
+        Provides property-specific matching predicates in addition to the common
+        symbol matching functionality from <xref href="ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase%602" data-throw-if-not-resolved="false"></xref>.
+    </p>
+
+    <ul><li>Match by accessor presence (getter, setter, init).</li><li>Match by property characteristics (indexer, required, read-only).</li><li>Match by property type.</li></ul>
+  example: []
+  syntax:
+    content: 'public sealed class PropertyMatcher : SymbolMatcherBase<PropertyMatcher, IPropertySymbol>'
+    content.vb: Public NotInheritable Class PropertyMatcher Inherits SymbolMatcherBase(Of PropertyMatcher, IPropertySymbol)
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Matching.Match.Property
+    commentId: M:ANcpLua.Roslyn.Utilities.Matching.Match.Property
+  - linkId: ANcpLua.Roslyn.Utilities.Matching.Match.Property(System.String)
+    commentId: M:ANcpLua.Roslyn.Utilities.Matching.Match.Property(System.String)
+  inheritance:
+  - System.Object
+  - ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}
+  inheritedMembers:
+  - ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.Matches(Microsoft.CodeAnalysis.ISymbol)
+  - ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.Matches(Microsoft.CodeAnalysis.IPropertySymbol)
+  - ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.Named(System.String)
+  - ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.NameMatches(System.String)
+  - ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.NameStartsWith(System.String)
+  - ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.NameEndsWith(System.String)
+  - ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.NameContains(System.String)
+  - ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.Public
+  - ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.Private
+  - ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.Internal
+  - ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.Protected
+  - ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.VisibleOutsideAssembly
+  - ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.Static
+  - ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.NotStatic
+  - ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.Abstract
+  - ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.Sealed
+  - ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.Virtual
+  - ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.Override
+  - ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.WithAttribute(System.String)
+  - ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.WithoutAttribute(System.String)
+  - ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.DeclaredIn(System.String)
+  - ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.InNamespace(System.String)
+  - ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.Where(System.Func{Microsoft.CodeAnalysis.IPropertySymbol,System.Boolean})
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1
+  - ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+- uid: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.WithGetter
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.WithGetter
+  id: WithGetter
+  parent: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher
+  langs:
+  - csharp
+  - vb
+  name: WithGetter()
+  nameWithType: PropertyMatcher.WithGetter()
+  fullName: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.WithGetter()
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/SymbolMatch.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: WithGetter
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/SymbolMatch.cs
+    startLine: 764
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Matching
+  summary: Matches properties that have a getter accessor.
+  example: []
+  syntax:
+    content: public PropertyMatcher WithGetter()
+    return:
+      type: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher
+      description: The current matcher instance for fluent chaining.
+    content.vb: Public Function WithGetter() As PropertyMatcher
+  overload: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.WithGetter*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.WithSetter
+    commentId: M:ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.WithSetter
+  - linkId: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.ReadOnly
+    commentId: M:ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.ReadOnly
+- uid: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.WithSetter
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.WithSetter
+  id: WithSetter
+  parent: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher
+  langs:
+  - csharp
+  - vb
+  name: WithSetter()
+  nameWithType: PropertyMatcher.WithSetter()
+  fullName: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.WithSetter()
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/SymbolMatch.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: WithSetter
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/SymbolMatch.cs
+    startLine: 772
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Matching
+  summary: Matches properties that have a setter accessor.
+  example: []
+  syntax:
+    content: public PropertyMatcher WithSetter()
+    return:
+      type: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher
+      description: The current matcher instance for fluent chaining.
+    content.vb: Public Function WithSetter() As PropertyMatcher
+  overload: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.WithSetter*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.WithGetter
+    commentId: M:ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.WithGetter
+  - linkId: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.WithInitSetter
+    commentId: M:ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.WithInitSetter
+- uid: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.WithInitSetter
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.WithInitSetter
+  id: WithInitSetter
+  parent: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher
+  langs:
+  - csharp
+  - vb
+  name: WithInitSetter()
+  nameWithType: PropertyMatcher.WithInitSetter()
+  fullName: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.WithInitSetter()
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/SymbolMatch.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: WithInitSetter
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/SymbolMatch.cs
+    startLine: 779
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Matching
+  summary: Matches properties that have an init-only setter.
+  example: []
+  syntax:
+    content: public PropertyMatcher WithInitSetter()
+    return:
+      type: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher
+      description: The current matcher instance for fluent chaining.
+    content.vb: Public Function WithInitSetter() As PropertyMatcher
+  overload: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.WithInitSetter*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.WithSetter
+    commentId: M:ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.WithSetter
+- uid: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.ReadOnly
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.ReadOnly
+  id: ReadOnly
+  parent: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher
+  langs:
+  - csharp
+  - vb
+  name: ReadOnly()
+  nameWithType: PropertyMatcher.ReadOnly()
+  fullName: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.ReadOnly()
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/SymbolMatch.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: ReadOnly
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/SymbolMatch.cs
+    startLine: 787
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Matching
+  summary: Matches read-only properties (properties with a getter but no setter).
+  example: []
+  syntax:
+    content: public PropertyMatcher ReadOnly()
+    return:
+      type: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher
+      description: The current matcher instance for fluent chaining.
+    content.vb: Public Function [ReadOnly]() As PropertyMatcher
+  overload: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.ReadOnly*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.WithGetter
+    commentId: M:ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.WithGetter
+  - linkId: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.WithSetter
+    commentId: M:ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.WithSetter
+- uid: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.Indexer
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.Indexer
+  id: Indexer
+  parent: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher
+  langs:
+  - csharp
+  - vb
+  name: Indexer()
+  nameWithType: PropertyMatcher.Indexer()
+  fullName: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.Indexer()
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/SymbolMatch.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Indexer
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/SymbolMatch.cs
+    startLine: 793
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Matching
+  summary: Matches indexer properties.
+  example: []
+  syntax:
+    content: public PropertyMatcher Indexer()
+    return:
+      type: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher
+      description: The current matcher instance for fluent chaining.
+    content.vb: Public Function Indexer() As PropertyMatcher
+  overload: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.Indexer*
+- uid: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.Required
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.Required
+  id: Required
+  parent: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher
+  langs:
+  - csharp
+  - vb
+  name: Required()
+  nameWithType: PropertyMatcher.Required()
+  fullName: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.Required()
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/SymbolMatch.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Required
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/SymbolMatch.cs
+    startLine: 799
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Matching
+  summary: Matches required properties (C# 11+).
+  example: []
+  syntax:
+    content: public PropertyMatcher Required()
+    return:
+      type: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher
+      description: The current matcher instance for fluent chaining.
+    content.vb: Public Function Required() As PropertyMatcher
+  overload: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.Required*
+- uid: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.OfType(System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.OfType(System.String)
+  id: OfType(System.String)
+  parent: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher
+  langs:
+  - csharp
+  - vb
+  name: OfType(string)
+  nameWithType: PropertyMatcher.OfType(string)
+  fullName: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.OfType(string)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/SymbolMatch.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: OfType
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/SymbolMatch.cs
+    startLine: 806
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Matching
+  summary: Matches properties with the specified type name.
+  example: []
+  syntax:
+    content: public PropertyMatcher OfType(string typeName)
+    parameters:
+    - id: typeName
+      type: System.String
+      description: The name of the property type to match.
+    return:
+      type: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher
+      description: The current matcher instance for fluent chaining.
+    content.vb: Public Function OfType(typeName As String) As PropertyMatcher
+  overload: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.OfType*
+  nameWithType.vb: PropertyMatcher.OfType(String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.OfType(String)
+  name.vb: OfType(String)
+references:
+- uid: ANcpLua.Roslyn.Utilities.Matching.Match.Property
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.Match.Property
+  href: ANcpLua.Roslyn.Utilities.Matching.Match.html#ANcpLua_Roslyn_Utilities_Matching_Match_Property
+  name: Property()
+  nameWithType: Match.Property()
+  fullName: ANcpLua.Roslyn.Utilities.Matching.Match.Property()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.Match.Property
+    name: Property
+    href: ANcpLua.Roslyn.Utilities.Matching.Match.html#ANcpLua_Roslyn_Utilities_Matching_Match_Property
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.Match.Property
+    name: Property
+    href: ANcpLua.Roslyn.Utilities.Matching.Match.html#ANcpLua_Roslyn_Utilities_Matching_Match_Property
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.Match.Property(System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.Match.Property(System.String)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Matching.Match.html#ANcpLua_Roslyn_Utilities_Matching_Match_Property_System_String_
+  name: Property(string)
+  nameWithType: Match.Property(string)
+  fullName: ANcpLua.Roslyn.Utilities.Matching.Match.Property(string)
+  nameWithType.vb: Match.Property(String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.Match.Property(String)
+  name.vb: Property(String)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.Match.Property(System.String)
+    name: Property
+    href: ANcpLua.Roslyn.Utilities.Matching.Match.html#ANcpLua_Roslyn_Utilities_Matching_Match_Property_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.Match.Property(System.String)
+    name: Property
+    href: ANcpLua.Roslyn.Utilities.Matching.Match.html#ANcpLua_Roslyn_Utilities_Matching_Match_Property_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Microsoft.CodeAnalysis.IPropertySymbol
+  commentId: T:Microsoft.CodeAnalysis.IPropertySymbol
+  parent: Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ipropertysymbol
+  name: IPropertySymbol
+  nameWithType: IPropertySymbol
+  fullName: Microsoft.CodeAnalysis.IPropertySymbol
+- uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2
+  commentId: T:ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2
+  href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html
+  name: SymbolMatcherBase<TSelf, TSymbol>
+  nameWithType: SymbolMatcherBase<TSelf, TSymbol>
+  fullName: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase<TSelf, TSymbol>
+  nameWithType.vb: SymbolMatcherBase(Of TSelf, TSymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase(Of TSelf, TSymbol)
+  name.vb: SymbolMatcherBase(Of TSelf, TSymbol)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2
+    name: SymbolMatcherBase
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html
+  - name: <
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TSymbol
+  - name: '>'
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2
+    name: SymbolMatcherBase
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TSymbol
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching
+  commentId: N:ANcpLua.Roslyn.Utilities.Matching
+  href: ANcpLua.html
+  name: ANcpLua.Roslyn.Utilities.Matching
+  nameWithType: ANcpLua.Roslyn.Utilities.Matching
+  fullName: ANcpLua.Roslyn.Utilities.Matching
+  spec.csharp:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities.Matching
+    name: Matching
+    href: ANcpLua.Roslyn.Utilities.Matching.html
+  spec.vb:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities.Matching
+    name: Matching
+    href: ANcpLua.Roslyn.Utilities.Matching.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}
+  commentId: T:ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}
+  parent: ANcpLua.Roslyn.Utilities.Matching
+  definition: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2
+  href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html
+  name: SymbolMatcherBase<PropertyMatcher, IPropertySymbol>
+  nameWithType: SymbolMatcherBase<PropertyMatcher, IPropertySymbol>
+  fullName: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase<ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher, Microsoft.CodeAnalysis.IPropertySymbol>
+  nameWithType.vb: SymbolMatcherBase(Of PropertyMatcher, IPropertySymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase(Of ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher, Microsoft.CodeAnalysis.IPropertySymbol)
+  name.vb: SymbolMatcherBase(Of PropertyMatcher, IPropertySymbol)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2
+    name: SymbolMatcherBase
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher
+    name: PropertyMatcher
+    href: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.html
+  - name: ','
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.IPropertySymbol
+    name: IPropertySymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ipropertysymbol
+  - name: '>'
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2
+    name: SymbolMatcherBase
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher
+    name: PropertyMatcher
+    href: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.html
+  - name: ','
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.IPropertySymbol
+    name: IPropertySymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ipropertysymbol
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.Matches(Microsoft.CodeAnalysis.ISymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.Matches(Microsoft.CodeAnalysis.ISymbol)
+  parent: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}
+  definition: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.Matches(Microsoft.CodeAnalysis.ISymbol)
+  href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Matches_Microsoft_CodeAnalysis_ISymbol_
+  name: Matches(ISymbol)
+  nameWithType: SymbolMatcherBase<PropertyMatcher, IPropertySymbol>.Matches(ISymbol)
+  fullName: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase<ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher, Microsoft.CodeAnalysis.IPropertySymbol>.Matches(Microsoft.CodeAnalysis.ISymbol)
+  nameWithType.vb: SymbolMatcherBase(Of PropertyMatcher, IPropertySymbol).Matches(ISymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase(Of ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher, Microsoft.CodeAnalysis.IPropertySymbol).Matches(Microsoft.CodeAnalysis.ISymbol)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.Matches(Microsoft.CodeAnalysis.ISymbol)
+    name: Matches
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Matches_Microsoft_CodeAnalysis_ISymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ISymbol
+    name: ISymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.isymbol
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.Matches(Microsoft.CodeAnalysis.ISymbol)
+    name: Matches
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Matches_Microsoft_CodeAnalysis_ISymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ISymbol
+    name: ISymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.isymbol
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.Matches(Microsoft.CodeAnalysis.IPropertySymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.Matches(Microsoft.CodeAnalysis.IPropertySymbol)
+  parent: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}
+  definition: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.Matches(`1)
+  href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Matches__1_
+  name: Matches(IPropertySymbol)
+  nameWithType: SymbolMatcherBase<PropertyMatcher, IPropertySymbol>.Matches(IPropertySymbol)
+  fullName: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase<ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher, Microsoft.CodeAnalysis.IPropertySymbol>.Matches(Microsoft.CodeAnalysis.IPropertySymbol)
+  nameWithType.vb: SymbolMatcherBase(Of PropertyMatcher, IPropertySymbol).Matches(IPropertySymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase(Of ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher, Microsoft.CodeAnalysis.IPropertySymbol).Matches(Microsoft.CodeAnalysis.IPropertySymbol)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.Matches(Microsoft.CodeAnalysis.IPropertySymbol)
+    name: Matches
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Matches__1_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IPropertySymbol
+    name: IPropertySymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ipropertysymbol
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.Matches(Microsoft.CodeAnalysis.IPropertySymbol)
+    name: Matches
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Matches__1_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IPropertySymbol
+    name: IPropertySymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ipropertysymbol
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.Named(System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.Named(System.String)
+  parent: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}
+  definition: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.Named(System.String)
+  href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Named_System_String_
+  name: Named(string)
+  nameWithType: SymbolMatcherBase<PropertyMatcher, IPropertySymbol>.Named(string)
+  fullName: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase<ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher, Microsoft.CodeAnalysis.IPropertySymbol>.Named(string)
+  nameWithType.vb: SymbolMatcherBase(Of PropertyMatcher, IPropertySymbol).Named(String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase(Of ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher, Microsoft.CodeAnalysis.IPropertySymbol).Named(String)
+  name.vb: Named(String)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.Named(System.String)
+    name: Named
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Named_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.Named(System.String)
+    name: Named
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Named_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.NameMatches(System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.NameMatches(System.String)
+  parent: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}
+  definition: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.NameMatches(System.String)
+  href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_NameMatches_System_String_
+  name: NameMatches(string)
+  nameWithType: SymbolMatcherBase<PropertyMatcher, IPropertySymbol>.NameMatches(string)
+  fullName: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase<ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher, Microsoft.CodeAnalysis.IPropertySymbol>.NameMatches(string)
+  nameWithType.vb: SymbolMatcherBase(Of PropertyMatcher, IPropertySymbol).NameMatches(String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase(Of ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher, Microsoft.CodeAnalysis.IPropertySymbol).NameMatches(String)
+  name.vb: NameMatches(String)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.NameMatches(System.String)
+    name: NameMatches
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_NameMatches_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.NameMatches(System.String)
+    name: NameMatches
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_NameMatches_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.NameStartsWith(System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.NameStartsWith(System.String)
+  parent: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}
+  definition: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.NameStartsWith(System.String)
+  href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_NameStartsWith_System_String_
+  name: NameStartsWith(string)
+  nameWithType: SymbolMatcherBase<PropertyMatcher, IPropertySymbol>.NameStartsWith(string)
+  fullName: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase<ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher, Microsoft.CodeAnalysis.IPropertySymbol>.NameStartsWith(string)
+  nameWithType.vb: SymbolMatcherBase(Of PropertyMatcher, IPropertySymbol).NameStartsWith(String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase(Of ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher, Microsoft.CodeAnalysis.IPropertySymbol).NameStartsWith(String)
+  name.vb: NameStartsWith(String)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.NameStartsWith(System.String)
+    name: NameStartsWith
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_NameStartsWith_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.NameStartsWith(System.String)
+    name: NameStartsWith
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_NameStartsWith_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.NameEndsWith(System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.NameEndsWith(System.String)
+  parent: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}
+  definition: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.NameEndsWith(System.String)
+  href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_NameEndsWith_System_String_
+  name: NameEndsWith(string)
+  nameWithType: SymbolMatcherBase<PropertyMatcher, IPropertySymbol>.NameEndsWith(string)
+  fullName: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase<ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher, Microsoft.CodeAnalysis.IPropertySymbol>.NameEndsWith(string)
+  nameWithType.vb: SymbolMatcherBase(Of PropertyMatcher, IPropertySymbol).NameEndsWith(String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase(Of ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher, Microsoft.CodeAnalysis.IPropertySymbol).NameEndsWith(String)
+  name.vb: NameEndsWith(String)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.NameEndsWith(System.String)
+    name: NameEndsWith
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_NameEndsWith_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.NameEndsWith(System.String)
+    name: NameEndsWith
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_NameEndsWith_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.NameContains(System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.NameContains(System.String)
+  parent: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}
+  definition: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.NameContains(System.String)
+  href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_NameContains_System_String_
+  name: NameContains(string)
+  nameWithType: SymbolMatcherBase<PropertyMatcher, IPropertySymbol>.NameContains(string)
+  fullName: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase<ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher, Microsoft.CodeAnalysis.IPropertySymbol>.NameContains(string)
+  nameWithType.vb: SymbolMatcherBase(Of PropertyMatcher, IPropertySymbol).NameContains(String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase(Of ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher, Microsoft.CodeAnalysis.IPropertySymbol).NameContains(String)
+  name.vb: NameContains(String)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.NameContains(System.String)
+    name: NameContains
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_NameContains_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.NameContains(System.String)
+    name: NameContains
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_NameContains_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.Public
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.Public
+  parent: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}
+  definition: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.Public
+  href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Public
+  name: Public()
+  nameWithType: SymbolMatcherBase<PropertyMatcher, IPropertySymbol>.Public()
+  fullName: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase<ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher, Microsoft.CodeAnalysis.IPropertySymbol>.Public()
+  nameWithType.vb: SymbolMatcherBase(Of PropertyMatcher, IPropertySymbol).Public()
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase(Of ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher, Microsoft.CodeAnalysis.IPropertySymbol).Public()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.Public
+    name: Public
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Public
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.Public
+    name: Public
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Public
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.Private
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.Private
+  parent: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}
+  definition: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.Private
+  href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Private
+  name: Private()
+  nameWithType: SymbolMatcherBase<PropertyMatcher, IPropertySymbol>.Private()
+  fullName: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase<ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher, Microsoft.CodeAnalysis.IPropertySymbol>.Private()
+  nameWithType.vb: SymbolMatcherBase(Of PropertyMatcher, IPropertySymbol).Private()
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase(Of ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher, Microsoft.CodeAnalysis.IPropertySymbol).Private()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.Private
+    name: Private
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Private
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.Private
+    name: Private
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Private
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.Internal
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.Internal
+  parent: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}
+  definition: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.Internal
+  href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Internal
+  name: Internal()
+  nameWithType: SymbolMatcherBase<PropertyMatcher, IPropertySymbol>.Internal()
+  fullName: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase<ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher, Microsoft.CodeAnalysis.IPropertySymbol>.Internal()
+  nameWithType.vb: SymbolMatcherBase(Of PropertyMatcher, IPropertySymbol).Internal()
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase(Of ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher, Microsoft.CodeAnalysis.IPropertySymbol).Internal()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.Internal
+    name: Internal
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Internal
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.Internal
+    name: Internal
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Internal
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.Protected
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.Protected
+  parent: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}
+  definition: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.Protected
+  href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Protected
+  name: Protected()
+  nameWithType: SymbolMatcherBase<PropertyMatcher, IPropertySymbol>.Protected()
+  fullName: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase<ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher, Microsoft.CodeAnalysis.IPropertySymbol>.Protected()
+  nameWithType.vb: SymbolMatcherBase(Of PropertyMatcher, IPropertySymbol).Protected()
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase(Of ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher, Microsoft.CodeAnalysis.IPropertySymbol).Protected()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.Protected
+    name: Protected
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Protected
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.Protected
+    name: Protected
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Protected
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.VisibleOutsideAssembly
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.VisibleOutsideAssembly
+  parent: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}
+  definition: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.VisibleOutsideAssembly
+  href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_VisibleOutsideAssembly
+  name: VisibleOutsideAssembly()
+  nameWithType: SymbolMatcherBase<PropertyMatcher, IPropertySymbol>.VisibleOutsideAssembly()
+  fullName: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase<ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher, Microsoft.CodeAnalysis.IPropertySymbol>.VisibleOutsideAssembly()
+  nameWithType.vb: SymbolMatcherBase(Of PropertyMatcher, IPropertySymbol).VisibleOutsideAssembly()
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase(Of ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher, Microsoft.CodeAnalysis.IPropertySymbol).VisibleOutsideAssembly()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.VisibleOutsideAssembly
+    name: VisibleOutsideAssembly
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_VisibleOutsideAssembly
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.VisibleOutsideAssembly
+    name: VisibleOutsideAssembly
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_VisibleOutsideAssembly
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.Static
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.Static
+  parent: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}
+  definition: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.Static
+  href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Static
+  name: Static()
+  nameWithType: SymbolMatcherBase<PropertyMatcher, IPropertySymbol>.Static()
+  fullName: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase<ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher, Microsoft.CodeAnalysis.IPropertySymbol>.Static()
+  nameWithType.vb: SymbolMatcherBase(Of PropertyMatcher, IPropertySymbol).Static()
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase(Of ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher, Microsoft.CodeAnalysis.IPropertySymbol).Static()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.Static
+    name: Static
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Static
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.Static
+    name: Static
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Static
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.NotStatic
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.NotStatic
+  parent: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}
+  definition: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.NotStatic
+  href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_NotStatic
+  name: NotStatic()
+  nameWithType: SymbolMatcherBase<PropertyMatcher, IPropertySymbol>.NotStatic()
+  fullName: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase<ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher, Microsoft.CodeAnalysis.IPropertySymbol>.NotStatic()
+  nameWithType.vb: SymbolMatcherBase(Of PropertyMatcher, IPropertySymbol).NotStatic()
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase(Of ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher, Microsoft.CodeAnalysis.IPropertySymbol).NotStatic()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.NotStatic
+    name: NotStatic
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_NotStatic
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.NotStatic
+    name: NotStatic
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_NotStatic
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.Abstract
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.Abstract
+  parent: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}
+  definition: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.Abstract
+  href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Abstract
+  name: Abstract()
+  nameWithType: SymbolMatcherBase<PropertyMatcher, IPropertySymbol>.Abstract()
+  fullName: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase<ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher, Microsoft.CodeAnalysis.IPropertySymbol>.Abstract()
+  nameWithType.vb: SymbolMatcherBase(Of PropertyMatcher, IPropertySymbol).Abstract()
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase(Of ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher, Microsoft.CodeAnalysis.IPropertySymbol).Abstract()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.Abstract
+    name: Abstract
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Abstract
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.Abstract
+    name: Abstract
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Abstract
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.Sealed
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.Sealed
+  parent: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}
+  definition: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.Sealed
+  href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Sealed
+  name: Sealed()
+  nameWithType: SymbolMatcherBase<PropertyMatcher, IPropertySymbol>.Sealed()
+  fullName: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase<ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher, Microsoft.CodeAnalysis.IPropertySymbol>.Sealed()
+  nameWithType.vb: SymbolMatcherBase(Of PropertyMatcher, IPropertySymbol).Sealed()
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase(Of ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher, Microsoft.CodeAnalysis.IPropertySymbol).Sealed()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.Sealed
+    name: Sealed
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Sealed
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.Sealed
+    name: Sealed
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Sealed
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.Virtual
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.Virtual
+  parent: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}
+  definition: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.Virtual
+  href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Virtual
+  name: Virtual()
+  nameWithType: SymbolMatcherBase<PropertyMatcher, IPropertySymbol>.Virtual()
+  fullName: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase<ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher, Microsoft.CodeAnalysis.IPropertySymbol>.Virtual()
+  nameWithType.vb: SymbolMatcherBase(Of PropertyMatcher, IPropertySymbol).Virtual()
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase(Of ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher, Microsoft.CodeAnalysis.IPropertySymbol).Virtual()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.Virtual
+    name: Virtual
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Virtual
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.Virtual
+    name: Virtual
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Virtual
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.Override
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.Override
+  parent: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}
+  definition: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.Override
+  href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Override
+  name: Override()
+  nameWithType: SymbolMatcherBase<PropertyMatcher, IPropertySymbol>.Override()
+  fullName: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase<ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher, Microsoft.CodeAnalysis.IPropertySymbol>.Override()
+  nameWithType.vb: SymbolMatcherBase(Of PropertyMatcher, IPropertySymbol).Override()
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase(Of ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher, Microsoft.CodeAnalysis.IPropertySymbol).Override()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.Override
+    name: Override
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Override
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.Override
+    name: Override
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Override
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.WithAttribute(System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.WithAttribute(System.String)
+  parent: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}
+  definition: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.WithAttribute(System.String)
+  href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_WithAttribute_System_String_
+  name: WithAttribute(string)
+  nameWithType: SymbolMatcherBase<PropertyMatcher, IPropertySymbol>.WithAttribute(string)
+  fullName: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase<ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher, Microsoft.CodeAnalysis.IPropertySymbol>.WithAttribute(string)
+  nameWithType.vb: SymbolMatcherBase(Of PropertyMatcher, IPropertySymbol).WithAttribute(String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase(Of ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher, Microsoft.CodeAnalysis.IPropertySymbol).WithAttribute(String)
+  name.vb: WithAttribute(String)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.WithAttribute(System.String)
+    name: WithAttribute
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_WithAttribute_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.WithAttribute(System.String)
+    name: WithAttribute
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_WithAttribute_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.WithoutAttribute(System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.WithoutAttribute(System.String)
+  parent: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}
+  definition: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.WithoutAttribute(System.String)
+  href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_WithoutAttribute_System_String_
+  name: WithoutAttribute(string)
+  nameWithType: SymbolMatcherBase<PropertyMatcher, IPropertySymbol>.WithoutAttribute(string)
+  fullName: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase<ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher, Microsoft.CodeAnalysis.IPropertySymbol>.WithoutAttribute(string)
+  nameWithType.vb: SymbolMatcherBase(Of PropertyMatcher, IPropertySymbol).WithoutAttribute(String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase(Of ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher, Microsoft.CodeAnalysis.IPropertySymbol).WithoutAttribute(String)
+  name.vb: WithoutAttribute(String)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.WithoutAttribute(System.String)
+    name: WithoutAttribute
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_WithoutAttribute_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.WithoutAttribute(System.String)
+    name: WithoutAttribute
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_WithoutAttribute_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.DeclaredIn(System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.DeclaredIn(System.String)
+  parent: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}
+  definition: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.DeclaredIn(System.String)
+  href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_DeclaredIn_System_String_
+  name: DeclaredIn(string)
+  nameWithType: SymbolMatcherBase<PropertyMatcher, IPropertySymbol>.DeclaredIn(string)
+  fullName: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase<ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher, Microsoft.CodeAnalysis.IPropertySymbol>.DeclaredIn(string)
+  nameWithType.vb: SymbolMatcherBase(Of PropertyMatcher, IPropertySymbol).DeclaredIn(String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase(Of ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher, Microsoft.CodeAnalysis.IPropertySymbol).DeclaredIn(String)
+  name.vb: DeclaredIn(String)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.DeclaredIn(System.String)
+    name: DeclaredIn
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_DeclaredIn_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.DeclaredIn(System.String)
+    name: DeclaredIn
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_DeclaredIn_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.InNamespace(System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.InNamespace(System.String)
+  parent: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}
+  definition: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.InNamespace(System.String)
+  href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_InNamespace_System_String_
+  name: InNamespace(string)
+  nameWithType: SymbolMatcherBase<PropertyMatcher, IPropertySymbol>.InNamespace(string)
+  fullName: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase<ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher, Microsoft.CodeAnalysis.IPropertySymbol>.InNamespace(string)
+  nameWithType.vb: SymbolMatcherBase(Of PropertyMatcher, IPropertySymbol).InNamespace(String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase(Of ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher, Microsoft.CodeAnalysis.IPropertySymbol).InNamespace(String)
+  name.vb: InNamespace(String)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.InNamespace(System.String)
+    name: InNamespace
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_InNamespace_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.InNamespace(System.String)
+    name: InNamespace
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_InNamespace_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.Where(System.Func{Microsoft.CodeAnalysis.IPropertySymbol,System.Boolean})
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.Where(System.Func{Microsoft.CodeAnalysis.IPropertySymbol,System.Boolean})
+  parent: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}
+  definition: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.Where(System.Func{`1,System.Boolean})
+  href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Where_System_Func__1_System_Boolean__
+  name: Where(Func<IPropertySymbol, bool>)
+  nameWithType: SymbolMatcherBase<PropertyMatcher, IPropertySymbol>.Where(Func<IPropertySymbol, bool>)
+  fullName: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase<ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher, Microsoft.CodeAnalysis.IPropertySymbol>.Where(System.Func<Microsoft.CodeAnalysis.IPropertySymbol, bool>)
+  nameWithType.vb: SymbolMatcherBase(Of PropertyMatcher, IPropertySymbol).Where(Func(Of IPropertySymbol, Boolean))
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase(Of ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher, Microsoft.CodeAnalysis.IPropertySymbol).Where(System.Func(Of Microsoft.CodeAnalysis.IPropertySymbol, Boolean))
+  name.vb: Where(Func(Of IPropertySymbol, Boolean))
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.Where(System.Func{Microsoft.CodeAnalysis.IPropertySymbol,System.Boolean})
+    name: Where
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Where_System_Func__1_System_Boolean__
+  - name: (
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: Microsoft.CodeAnalysis.IPropertySymbol
+    name: IPropertySymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ipropertysymbol
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase{ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,Microsoft.CodeAnalysis.IPropertySymbol}.Where(System.Func{Microsoft.CodeAnalysis.IPropertySymbol,System.Boolean})
+    name: Where
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Where_System_Func__1_System_Boolean__
+  - name: (
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.IPropertySymbol
+    name: IPropertySymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ipropertysymbol
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+  parent: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+  definition: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  name: ToResultWithDiagnostics<PropertyMatcher>(PropertyMatcher)
+  nameWithType: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<PropertyMatcher>(PropertyMatcher)
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher>(ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher)
+  nameWithType.vb: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of PropertyMatcher)(PropertyMatcher)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher)(ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher)
+  name.vb: ToResultWithDiagnostics(Of PropertyMatcher)(PropertyMatcher)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher)
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher
+    name: PropertyMatcher
+    href: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.html
+  - name: '>'
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher
+    name: PropertyMatcher
+    href: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.html
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher)
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher
+    name: PropertyMatcher
+    href: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.html
+  - name: )
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher
+    name: PropertyMatcher
+    href: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.html
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  parent: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+  definition: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  name: ToResultWithDiagnostics<PropertyMatcher>(PropertyMatcher, ImmutableArray<DiagnosticInfo>)
+  nameWithType: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<PropertyMatcher>(PropertyMatcher, ImmutableArray<DiagnosticInfo>)
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher>(ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher, System.Collections.Immutable.ImmutableArray<ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo>)
+  nameWithType.vb: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of PropertyMatcher)(PropertyMatcher, ImmutableArray(Of DiagnosticInfo))
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher)(ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher, System.Collections.Immutable.ImmutableArray(Of ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo))
+  name.vb: ToResultWithDiagnostics(Of PropertyMatcher)(PropertyMatcher, ImmutableArray(Of DiagnosticInfo))
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher
+    name: PropertyMatcher
+    href: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.html
+  - name: '>'
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher
+    name: PropertyMatcher
+    href: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher
+    name: PropertyMatcher
+    href: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.html
+  - name: )
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher
+    name: PropertyMatcher
+    href: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: )
+  - name: )
+- uid: Microsoft.CodeAnalysis
+  commentId: N:Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.CodeAnalysis
+  nameWithType: Microsoft.CodeAnalysis
+  fullName: Microsoft.CodeAnalysis
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.Matches(Microsoft.CodeAnalysis.ISymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.Matches(Microsoft.CodeAnalysis.ISymbol)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Matches_Microsoft_CodeAnalysis_ISymbol_
+  name: Matches(ISymbol)
+  nameWithType: SymbolMatcherBase<TSelf, TSymbol>.Matches(ISymbol)
+  fullName: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase<TSelf, TSymbol>.Matches(Microsoft.CodeAnalysis.ISymbol)
+  nameWithType.vb: SymbolMatcherBase(Of TSelf, TSymbol).Matches(ISymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase(Of TSelf, TSymbol).Matches(Microsoft.CodeAnalysis.ISymbol)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.Matches(Microsoft.CodeAnalysis.ISymbol)
+    name: Matches
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Matches_Microsoft_CodeAnalysis_ISymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ISymbol
+    name: ISymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.isymbol
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.Matches(Microsoft.CodeAnalysis.ISymbol)
+    name: Matches
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Matches_Microsoft_CodeAnalysis_ISymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ISymbol
+    name: ISymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.isymbol
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.Matches(`1)
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.Matches(`1)
+  href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Matches__1_
+  name: Matches(TSymbol)
+  nameWithType: SymbolMatcherBase<TSelf, TSymbol>.Matches(TSymbol)
+  fullName: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase<TSelf, TSymbol>.Matches(TSymbol)
+  nameWithType.vb: SymbolMatcherBase(Of TSelf, TSymbol).Matches(TSymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase(Of TSelf, TSymbol).Matches(TSymbol)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.Matches(`1)
+    name: Matches
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Matches__1_
+  - name: (
+  - name: TSymbol
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.Matches(`1)
+    name: Matches
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Matches__1_
+  - name: (
+  - name: TSymbol
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.Named(System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.Named(System.String)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Named_System_String_
+  name: Named(string)
+  nameWithType: SymbolMatcherBase<TSelf, TSymbol>.Named(string)
+  fullName: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase<TSelf, TSymbol>.Named(string)
+  nameWithType.vb: SymbolMatcherBase(Of TSelf, TSymbol).Named(String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase(Of TSelf, TSymbol).Named(String)
+  name.vb: Named(String)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.Named(System.String)
+    name: Named
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Named_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.Named(System.String)
+    name: Named
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Named_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.NameMatches(System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.NameMatches(System.String)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_NameMatches_System_String_
+  name: NameMatches(string)
+  nameWithType: SymbolMatcherBase<TSelf, TSymbol>.NameMatches(string)
+  fullName: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase<TSelf, TSymbol>.NameMatches(string)
+  nameWithType.vb: SymbolMatcherBase(Of TSelf, TSymbol).NameMatches(String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase(Of TSelf, TSymbol).NameMatches(String)
+  name.vb: NameMatches(String)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.NameMatches(System.String)
+    name: NameMatches
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_NameMatches_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.NameMatches(System.String)
+    name: NameMatches
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_NameMatches_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.NameStartsWith(System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.NameStartsWith(System.String)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_NameStartsWith_System_String_
+  name: NameStartsWith(string)
+  nameWithType: SymbolMatcherBase<TSelf, TSymbol>.NameStartsWith(string)
+  fullName: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase<TSelf, TSymbol>.NameStartsWith(string)
+  nameWithType.vb: SymbolMatcherBase(Of TSelf, TSymbol).NameStartsWith(String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase(Of TSelf, TSymbol).NameStartsWith(String)
+  name.vb: NameStartsWith(String)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.NameStartsWith(System.String)
+    name: NameStartsWith
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_NameStartsWith_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.NameStartsWith(System.String)
+    name: NameStartsWith
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_NameStartsWith_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.NameEndsWith(System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.NameEndsWith(System.String)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_NameEndsWith_System_String_
+  name: NameEndsWith(string)
+  nameWithType: SymbolMatcherBase<TSelf, TSymbol>.NameEndsWith(string)
+  fullName: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase<TSelf, TSymbol>.NameEndsWith(string)
+  nameWithType.vb: SymbolMatcherBase(Of TSelf, TSymbol).NameEndsWith(String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase(Of TSelf, TSymbol).NameEndsWith(String)
+  name.vb: NameEndsWith(String)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.NameEndsWith(System.String)
+    name: NameEndsWith
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_NameEndsWith_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.NameEndsWith(System.String)
+    name: NameEndsWith
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_NameEndsWith_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.NameContains(System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.NameContains(System.String)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_NameContains_System_String_
+  name: NameContains(string)
+  nameWithType: SymbolMatcherBase<TSelf, TSymbol>.NameContains(string)
+  fullName: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase<TSelf, TSymbol>.NameContains(string)
+  nameWithType.vb: SymbolMatcherBase(Of TSelf, TSymbol).NameContains(String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase(Of TSelf, TSymbol).NameContains(String)
+  name.vb: NameContains(String)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.NameContains(System.String)
+    name: NameContains
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_NameContains_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.NameContains(System.String)
+    name: NameContains
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_NameContains_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.Public
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.Public
+  href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Public
+  name: Public()
+  nameWithType: SymbolMatcherBase<TSelf, TSymbol>.Public()
+  fullName: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase<TSelf, TSymbol>.Public()
+  nameWithType.vb: SymbolMatcherBase(Of TSelf, TSymbol).Public()
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase(Of TSelf, TSymbol).Public()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.Public
+    name: Public
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Public
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.Public
+    name: Public
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Public
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.Private
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.Private
+  href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Private
+  name: Private()
+  nameWithType: SymbolMatcherBase<TSelf, TSymbol>.Private()
+  fullName: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase<TSelf, TSymbol>.Private()
+  nameWithType.vb: SymbolMatcherBase(Of TSelf, TSymbol).Private()
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase(Of TSelf, TSymbol).Private()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.Private
+    name: Private
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Private
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.Private
+    name: Private
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Private
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.Internal
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.Internal
+  href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Internal
+  name: Internal()
+  nameWithType: SymbolMatcherBase<TSelf, TSymbol>.Internal()
+  fullName: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase<TSelf, TSymbol>.Internal()
+  nameWithType.vb: SymbolMatcherBase(Of TSelf, TSymbol).Internal()
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase(Of TSelf, TSymbol).Internal()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.Internal
+    name: Internal
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Internal
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.Internal
+    name: Internal
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Internal
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.Protected
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.Protected
+  href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Protected
+  name: Protected()
+  nameWithType: SymbolMatcherBase<TSelf, TSymbol>.Protected()
+  fullName: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase<TSelf, TSymbol>.Protected()
+  nameWithType.vb: SymbolMatcherBase(Of TSelf, TSymbol).Protected()
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase(Of TSelf, TSymbol).Protected()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.Protected
+    name: Protected
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Protected
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.Protected
+    name: Protected
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Protected
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.VisibleOutsideAssembly
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.VisibleOutsideAssembly
+  href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_VisibleOutsideAssembly
+  name: VisibleOutsideAssembly()
+  nameWithType: SymbolMatcherBase<TSelf, TSymbol>.VisibleOutsideAssembly()
+  fullName: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase<TSelf, TSymbol>.VisibleOutsideAssembly()
+  nameWithType.vb: SymbolMatcherBase(Of TSelf, TSymbol).VisibleOutsideAssembly()
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase(Of TSelf, TSymbol).VisibleOutsideAssembly()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.VisibleOutsideAssembly
+    name: VisibleOutsideAssembly
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_VisibleOutsideAssembly
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.VisibleOutsideAssembly
+    name: VisibleOutsideAssembly
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_VisibleOutsideAssembly
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.Static
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.Static
+  href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Static
+  name: Static()
+  nameWithType: SymbolMatcherBase<TSelf, TSymbol>.Static()
+  fullName: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase<TSelf, TSymbol>.Static()
+  nameWithType.vb: SymbolMatcherBase(Of TSelf, TSymbol).Static()
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase(Of TSelf, TSymbol).Static()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.Static
+    name: Static
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Static
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.Static
+    name: Static
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Static
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.NotStatic
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.NotStatic
+  href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_NotStatic
+  name: NotStatic()
+  nameWithType: SymbolMatcherBase<TSelf, TSymbol>.NotStatic()
+  fullName: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase<TSelf, TSymbol>.NotStatic()
+  nameWithType.vb: SymbolMatcherBase(Of TSelf, TSymbol).NotStatic()
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase(Of TSelf, TSymbol).NotStatic()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.NotStatic
+    name: NotStatic
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_NotStatic
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.NotStatic
+    name: NotStatic
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_NotStatic
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.Abstract
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.Abstract
+  href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Abstract
+  name: Abstract()
+  nameWithType: SymbolMatcherBase<TSelf, TSymbol>.Abstract()
+  fullName: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase<TSelf, TSymbol>.Abstract()
+  nameWithType.vb: SymbolMatcherBase(Of TSelf, TSymbol).Abstract()
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase(Of TSelf, TSymbol).Abstract()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.Abstract
+    name: Abstract
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Abstract
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.Abstract
+    name: Abstract
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Abstract
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.Sealed
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.Sealed
+  href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Sealed
+  name: Sealed()
+  nameWithType: SymbolMatcherBase<TSelf, TSymbol>.Sealed()
+  fullName: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase<TSelf, TSymbol>.Sealed()
+  nameWithType.vb: SymbolMatcherBase(Of TSelf, TSymbol).Sealed()
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase(Of TSelf, TSymbol).Sealed()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.Sealed
+    name: Sealed
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Sealed
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.Sealed
+    name: Sealed
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Sealed
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.Virtual
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.Virtual
+  href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Virtual
+  name: Virtual()
+  nameWithType: SymbolMatcherBase<TSelf, TSymbol>.Virtual()
+  fullName: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase<TSelf, TSymbol>.Virtual()
+  nameWithType.vb: SymbolMatcherBase(Of TSelf, TSymbol).Virtual()
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase(Of TSelf, TSymbol).Virtual()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.Virtual
+    name: Virtual
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Virtual
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.Virtual
+    name: Virtual
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Virtual
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.Override
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.Override
+  href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Override
+  name: Override()
+  nameWithType: SymbolMatcherBase<TSelf, TSymbol>.Override()
+  fullName: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase<TSelf, TSymbol>.Override()
+  nameWithType.vb: SymbolMatcherBase(Of TSelf, TSymbol).Override()
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase(Of TSelf, TSymbol).Override()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.Override
+    name: Override
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Override
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.Override
+    name: Override
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Override
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.WithAttribute(System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.WithAttribute(System.String)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_WithAttribute_System_String_
+  name: WithAttribute(string)
+  nameWithType: SymbolMatcherBase<TSelf, TSymbol>.WithAttribute(string)
+  fullName: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase<TSelf, TSymbol>.WithAttribute(string)
+  nameWithType.vb: SymbolMatcherBase(Of TSelf, TSymbol).WithAttribute(String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase(Of TSelf, TSymbol).WithAttribute(String)
+  name.vb: WithAttribute(String)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.WithAttribute(System.String)
+    name: WithAttribute
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_WithAttribute_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.WithAttribute(System.String)
+    name: WithAttribute
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_WithAttribute_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.WithoutAttribute(System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.WithoutAttribute(System.String)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_WithoutAttribute_System_String_
+  name: WithoutAttribute(string)
+  nameWithType: SymbolMatcherBase<TSelf, TSymbol>.WithoutAttribute(string)
+  fullName: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase<TSelf, TSymbol>.WithoutAttribute(string)
+  nameWithType.vb: SymbolMatcherBase(Of TSelf, TSymbol).WithoutAttribute(String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase(Of TSelf, TSymbol).WithoutAttribute(String)
+  name.vb: WithoutAttribute(String)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.WithoutAttribute(System.String)
+    name: WithoutAttribute
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_WithoutAttribute_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.WithoutAttribute(System.String)
+    name: WithoutAttribute
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_WithoutAttribute_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.DeclaredIn(System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.DeclaredIn(System.String)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_DeclaredIn_System_String_
+  name: DeclaredIn(string)
+  nameWithType: SymbolMatcherBase<TSelf, TSymbol>.DeclaredIn(string)
+  fullName: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase<TSelf, TSymbol>.DeclaredIn(string)
+  nameWithType.vb: SymbolMatcherBase(Of TSelf, TSymbol).DeclaredIn(String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase(Of TSelf, TSymbol).DeclaredIn(String)
+  name.vb: DeclaredIn(String)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.DeclaredIn(System.String)
+    name: DeclaredIn
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_DeclaredIn_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.DeclaredIn(System.String)
+    name: DeclaredIn
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_DeclaredIn_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.InNamespace(System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.InNamespace(System.String)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_InNamespace_System_String_
+  name: InNamespace(string)
+  nameWithType: SymbolMatcherBase<TSelf, TSymbol>.InNamespace(string)
+  fullName: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase<TSelf, TSymbol>.InNamespace(string)
+  nameWithType.vb: SymbolMatcherBase(Of TSelf, TSymbol).InNamespace(String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase(Of TSelf, TSymbol).InNamespace(String)
+  name.vb: InNamespace(String)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.InNamespace(System.String)
+    name: InNamespace
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_InNamespace_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.InNamespace(System.String)
+    name: InNamespace
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_InNamespace_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.Where(System.Func{`1,System.Boolean})
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.Where(System.Func{`1,System.Boolean})
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Where_System_Func__1_System_Boolean__
+  name: Where(Func<TSymbol, bool>)
+  nameWithType: SymbolMatcherBase<TSelf, TSymbol>.Where(Func<TSymbol, bool>)
+  fullName: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase<TSelf, TSymbol>.Where(System.Func<TSymbol, bool>)
+  nameWithType.vb: SymbolMatcherBase(Of TSelf, TSymbol).Where(Func(Of TSymbol, Boolean))
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase(Of TSelf, TSymbol).Where(System.Func(Of TSymbol, Boolean))
+  name.vb: Where(Func(Of TSymbol, Boolean))
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.Where(System.Func{`1,System.Boolean})
+    name: Where
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Where_System_Func__1_System_Boolean__
+  - name: (
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: TSymbol
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2.Where(System.Func{`1,System.Boolean})
+    name: Where
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html#ANcpLua_Roslyn_Utilities_Matching_SymbolMatcherBase_2_Where_System_Func__1_System_Boolean__
+  - name: (
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSymbol
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  name: ToResultWithDiagnostics<T>(T)
+  nameWithType: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<T>(T)
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<T>(T)
+  nameWithType.vb: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of T)(T)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of T)(T)
+  name.vb: ToResultWithDiagnostics(Of T)(T)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+  commentId: T:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+  parent: ANcpLua.Roslyn.Utilities.Models
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html
+  name: ResultWithDiagnosticsExtensions
+  nameWithType: ResultWithDiagnosticsExtensions
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+- uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  name: ToResultWithDiagnostics<T>(T, ImmutableArray<DiagnosticInfo>)
+  nameWithType: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<T>(T, ImmutableArray<DiagnosticInfo>)
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<T>(T, System.Collections.Immutable.ImmutableArray<ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo>)
+  nameWithType.vb: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of T)(T, ImmutableArray(Of DiagnosticInfo))
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of T)(T, System.Collections.Immutable.ImmutableArray(Of ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo))
+  name.vb: ToResultWithDiagnostics(Of T)(T, ImmutableArray(Of DiagnosticInfo))
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: )
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Models
+  commentId: N:ANcpLua.Roslyn.Utilities.Models
+  href: ANcpLua.html
+  name: ANcpLua.Roslyn.Utilities.Models
+  nameWithType: ANcpLua.Roslyn.Utilities.Models
+  fullName: ANcpLua.Roslyn.Utilities.Models
+  spec.csharp:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities.Models
+    name: Models
+    href: ANcpLua.Roslyn.Utilities.Models.html
+  spec.vb:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities.Models
+    name: Models
+    href: ANcpLua.Roslyn.Utilities.Models.html
+- uid: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.WithSetter
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.WithSetter
+  href: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.html#ANcpLua_Roslyn_Utilities_Matching_PropertyMatcher_WithSetter
+  name: WithSetter()
+  nameWithType: PropertyMatcher.WithSetter()
+  fullName: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.WithSetter()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.WithSetter
+    name: WithSetter
+    href: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.html#ANcpLua_Roslyn_Utilities_Matching_PropertyMatcher_WithSetter
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.WithSetter
+    name: WithSetter
+    href: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.html#ANcpLua_Roslyn_Utilities_Matching_PropertyMatcher_WithSetter
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.ReadOnly
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.ReadOnly
+  href: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.html#ANcpLua_Roslyn_Utilities_Matching_PropertyMatcher_ReadOnly
+  name: ReadOnly()
+  nameWithType: PropertyMatcher.ReadOnly()
+  fullName: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.ReadOnly()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.ReadOnly
+    name: ReadOnly
+    href: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.html#ANcpLua_Roslyn_Utilities_Matching_PropertyMatcher_ReadOnly
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.ReadOnly
+    name: ReadOnly
+    href: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.html#ANcpLua_Roslyn_Utilities_Matching_PropertyMatcher_ReadOnly
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.WithGetter*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.WithGetter
+  href: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.html#ANcpLua_Roslyn_Utilities_Matching_PropertyMatcher_WithGetter
+  name: WithGetter
+  nameWithType: PropertyMatcher.WithGetter
+  fullName: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.WithGetter
+- uid: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher
+  commentId: T:ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher
+  parent: ANcpLua.Roslyn.Utilities.Matching
+  href: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.html
+  name: PropertyMatcher
+  nameWithType: PropertyMatcher
+  fullName: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher
+- uid: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.WithGetter
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.WithGetter
+  href: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.html#ANcpLua_Roslyn_Utilities_Matching_PropertyMatcher_WithGetter
+  name: WithGetter()
+  nameWithType: PropertyMatcher.WithGetter()
+  fullName: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.WithGetter()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.WithGetter
+    name: WithGetter
+    href: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.html#ANcpLua_Roslyn_Utilities_Matching_PropertyMatcher_WithGetter
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.WithGetter
+    name: WithGetter
+    href: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.html#ANcpLua_Roslyn_Utilities_Matching_PropertyMatcher_WithGetter
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.WithInitSetter
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.WithInitSetter
+  href: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.html#ANcpLua_Roslyn_Utilities_Matching_PropertyMatcher_WithInitSetter
+  name: WithInitSetter()
+  nameWithType: PropertyMatcher.WithInitSetter()
+  fullName: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.WithInitSetter()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.WithInitSetter
+    name: WithInitSetter
+    href: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.html#ANcpLua_Roslyn_Utilities_Matching_PropertyMatcher_WithInitSetter
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.WithInitSetter
+    name: WithInitSetter
+    href: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.html#ANcpLua_Roslyn_Utilities_Matching_PropertyMatcher_WithInitSetter
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.WithSetter*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.WithSetter
+  href: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.html#ANcpLua_Roslyn_Utilities_Matching_PropertyMatcher_WithSetter
+  name: WithSetter
+  nameWithType: PropertyMatcher.WithSetter
+  fullName: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.WithSetter
+- uid: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.WithInitSetter*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.WithInitSetter
+  href: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.html#ANcpLua_Roslyn_Utilities_Matching_PropertyMatcher_WithInitSetter
+  name: WithInitSetter
+  nameWithType: PropertyMatcher.WithInitSetter
+  fullName: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.WithInitSetter
+- uid: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.ReadOnly*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.ReadOnly
+  href: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.html#ANcpLua_Roslyn_Utilities_Matching_PropertyMatcher_ReadOnly
+  name: ReadOnly
+  nameWithType: PropertyMatcher.ReadOnly
+  fullName: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.ReadOnly
+- uid: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.Indexer*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.Indexer
+  href: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.html#ANcpLua_Roslyn_Utilities_Matching_PropertyMatcher_Indexer
+  name: Indexer
+  nameWithType: PropertyMatcher.Indexer
+  fullName: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.Indexer
+- uid: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.Required*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.Required
+  href: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.html#ANcpLua_Roslyn_Utilities_Matching_PropertyMatcher_Required
+  name: Required
+  nameWithType: PropertyMatcher.Required
+  fullName: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.Required
+- uid: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.OfType*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.OfType
+  href: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.html#ANcpLua_Roslyn_Utilities_Matching_PropertyMatcher_OfType_System_String_
+  name: OfType
+  nameWithType: PropertyMatcher.OfType
+  fullName: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.OfType
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String

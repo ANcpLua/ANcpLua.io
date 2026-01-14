@@ -1,0 +1,1136 @@
+### YamlMime:ManagedReference
+items:
+- uid: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext
+  commentId: T:ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext
+  id: ClassWithAttributesContext
+  parent: ANcpLua.Roslyn.Utilities.Models
+  children:
+  - ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.#ctor(Microsoft.CodeAnalysis.SemanticModel,System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.AttributeData},Microsoft.CodeAnalysis.CSharp.Syntax.ClassDeclarationSyntax,Microsoft.CodeAnalysis.INamedTypeSymbol)
+  - ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.Attributes
+  - ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.ClassSymbol
+  - ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.ClassSyntax
+  - ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.SemanticModel
+  langs:
+  - csharp
+  - vb
+  name: ClassWithAttributesContext
+  nameWithType: ClassWithAttributesContext
+  fullName: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext
+  type: Struct
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/ClassWithAttributesContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: ClassWithAttributesContext
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/ClassWithAttributesContext.cs
+    startLine: 63
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Models
+  summary: Provides context information for a class declaration along with its applied attributes.
+  remarks: >-
+    <p>
+        This record struct aggregates syntax and semantic information about a class declaration,
+        making it convenient for source generator pipelines that need to inspect class attributes.
+    </p>
+
+    <p>
+        <b>WARNING:</b> This type contains Roslyn symbols that use reference equality.
+        Do NOT store this in incremental generator pipelines as it will break caching.
+    </p>
+
+    <p>
+        Use this only in the initial <code>Select</code>/<code>SelectMany</code> transform, then extract
+        the data you need into equatable types (strings, primitives, <xref href="ANcpLua.Roslyn.Utilities.Models.LocationInfo" data-throw-if-not-resolved="false"></xref>, etc.).
+    </p>
+
+    <ul><li>
+                <xref href="ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.SemanticModel" data-throw-if-not-resolved="false"></xref> - Use for resolving symbols and type information
+            </li><li>
+                <xref href="ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.Attributes" data-throw-if-not-resolved="false"></xref> - Contains all <xref href="Microsoft.CodeAnalysis.AttributeData" data-throw-if-not-resolved="false"></xref> applied to the class
+            </li><li>
+                <xref href="ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.ClassSyntax" data-throw-if-not-resolved="false"></xref> - The syntax node for location and text span information
+            </li><li>
+                <xref href="ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.ClassSymbol" data-throw-if-not-resolved="false"></xref> - The type symbol for semantic analysis
+            </li></ul>
+  example: []
+  syntax:
+    content: 'public readonly record struct ClassWithAttributesContext : IEquatable<ClassWithAttributesContext>'
+    content.vb: Public Structure ClassWithAttributesContext Implements IEquatable(Of ClassWithAttributesContext)
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Models.LocationInfo
+    commentId: T:ANcpLua.Roslyn.Utilities.Models.LocationInfo
+  - linkId: ANcpLua.Roslyn.Utilities.EquatableArray`1
+    commentId: T:ANcpLua.Roslyn.Utilities.EquatableArray`1
+  implements:
+  - System.IEquatable{ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext}
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  extensionMethods:
+  - ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1
+  - ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+- uid: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.#ctor(Microsoft.CodeAnalysis.SemanticModel,System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.AttributeData},Microsoft.CodeAnalysis.CSharp.Syntax.ClassDeclarationSyntax,Microsoft.CodeAnalysis.INamedTypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.#ctor(Microsoft.CodeAnalysis.SemanticModel,System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.AttributeData},Microsoft.CodeAnalysis.CSharp.Syntax.ClassDeclarationSyntax,Microsoft.CodeAnalysis.INamedTypeSymbol)
+  id: '#ctor(Microsoft.CodeAnalysis.SemanticModel,System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.AttributeData},Microsoft.CodeAnalysis.CSharp.Syntax.ClassDeclarationSyntax,Microsoft.CodeAnalysis.INamedTypeSymbol)'
+  parent: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext
+  langs:
+  - csharp
+  - vb
+  name: ClassWithAttributesContext(SemanticModel, ImmutableArray<AttributeData>, ClassDeclarationSyntax, INamedTypeSymbol)
+  nameWithType: ClassWithAttributesContext.ClassWithAttributesContext(SemanticModel, ImmutableArray<AttributeData>, ClassDeclarationSyntax, INamedTypeSymbol)
+  fullName: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.ClassWithAttributesContext(Microsoft.CodeAnalysis.SemanticModel, System.Collections.Immutable.ImmutableArray<Microsoft.CodeAnalysis.AttributeData>, Microsoft.CodeAnalysis.CSharp.Syntax.ClassDeclarationSyntax, Microsoft.CodeAnalysis.INamedTypeSymbol)
+  type: Constructor
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/ClassWithAttributesContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: .ctor
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/ClassWithAttributesContext.cs
+    startLine: 63
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Models
+  summary: Provides context information for a class declaration along with its applied attributes.
+  remarks: >-
+    <p>
+        This record struct aggregates syntax and semantic information about a class declaration,
+        making it convenient for source generator pipelines that need to inspect class attributes.
+    </p>
+
+    <p>
+        <b>WARNING:</b> This type contains Roslyn symbols that use reference equality.
+        Do NOT store this in incremental generator pipelines as it will break caching.
+    </p>
+
+    <p>
+        Use this only in the initial <code>Select</code>/<code>SelectMany</code> transform, then extract
+        the data you need into equatable types (strings, primitives, <xref href="ANcpLua.Roslyn.Utilities.Models.LocationInfo" data-throw-if-not-resolved="false"></xref>, etc.).
+    </p>
+
+    <ul><li>
+                <xref href="ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.SemanticModel" data-throw-if-not-resolved="false"></xref> - Use for resolving symbols and type information
+            </li><li>
+                <xref href="ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.Attributes" data-throw-if-not-resolved="false"></xref> - Contains all <xref href="Microsoft.CodeAnalysis.AttributeData" data-throw-if-not-resolved="false"></xref> applied to the class
+            </li><li>
+                <xref href="ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.ClassSyntax" data-throw-if-not-resolved="false"></xref> - The syntax node for location and text span information
+            </li><li>
+                <xref href="ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.ClassSymbol" data-throw-if-not-resolved="false"></xref> - The type symbol for semantic analysis
+            </li></ul>
+  example: []
+  syntax:
+    content: public ClassWithAttributesContext(SemanticModel SemanticModel, ImmutableArray<AttributeData> Attributes, ClassDeclarationSyntax ClassSyntax, INamedTypeSymbol ClassSymbol)
+    parameters:
+    - id: SemanticModel
+      type: Microsoft.CodeAnalysis.SemanticModel
+      description: >-
+        The <xref href="Microsoft.CodeAnalysis.SemanticModel" data-throw-if-not-resolved="false"></xref> that provides semantic information
+
+        about the class and its containing compilation.
+    - id: Attributes
+      type: System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.AttributeData}
+      description: >-
+        An immutable array of <xref href="Microsoft.CodeAnalysis.AttributeData" data-throw-if-not-resolved="false"></xref> representing all attributes
+
+        applied to the class declaration.
+    - id: ClassSyntax
+      type: Microsoft.CodeAnalysis.CSharp.Syntax.ClassDeclarationSyntax
+      description: >-
+        The <xref href="Microsoft.CodeAnalysis.CSharp.Syntax.ClassDeclarationSyntax" data-throw-if-not-resolved="false"></xref> node representing the class declaration
+
+        in the syntax tree.
+    - id: ClassSymbol
+      type: Microsoft.CodeAnalysis.INamedTypeSymbol
+      description: The <xref href="Microsoft.CodeAnalysis.INamedTypeSymbol" data-throw-if-not-resolved="false"></xref> representing the semantic symbol for the class.
+    content.vb: Public Sub New(SemanticModel As SemanticModel, Attributes As ImmutableArray(Of AttributeData), ClassSyntax As ClassDeclarationSyntax, ClassSymbol As INamedTypeSymbol)
+  overload: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.#ctor*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Models.LocationInfo
+    commentId: T:ANcpLua.Roslyn.Utilities.Models.LocationInfo
+  - linkId: ANcpLua.Roslyn.Utilities.EquatableArray`1
+    commentId: T:ANcpLua.Roslyn.Utilities.EquatableArray`1
+  nameWithType.vb: ClassWithAttributesContext.New(SemanticModel, ImmutableArray(Of AttributeData), ClassDeclarationSyntax, INamedTypeSymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.New(Microsoft.CodeAnalysis.SemanticModel, System.Collections.Immutable.ImmutableArray(Of Microsoft.CodeAnalysis.AttributeData), Microsoft.CodeAnalysis.CSharp.Syntax.ClassDeclarationSyntax, Microsoft.CodeAnalysis.INamedTypeSymbol)
+  name.vb: New(SemanticModel, ImmutableArray(Of AttributeData), ClassDeclarationSyntax, INamedTypeSymbol)
+- uid: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.SemanticModel
+  commentId: P:ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.SemanticModel
+  id: SemanticModel
+  parent: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext
+  langs:
+  - csharp
+  - vb
+  name: SemanticModel
+  nameWithType: ClassWithAttributesContext.SemanticModel
+  fullName: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.SemanticModel
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/ClassWithAttributesContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: SemanticModel
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/ClassWithAttributesContext.cs
+    startLine: 68
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Models
+  summary: >-
+    The <xref href="Microsoft.CodeAnalysis.SemanticModel" data-throw-if-not-resolved="false"></xref> that provides semantic information
+
+    about the class and its containing compilation.
+  example: []
+  syntax:
+    content: public SemanticModel SemanticModel { get; init; }
+    parameters: []
+    return:
+      type: Microsoft.CodeAnalysis.SemanticModel
+    content.vb: Public Property SemanticModel As SemanticModel
+  overload: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.SemanticModel*
+- uid: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.Attributes
+  commentId: P:ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.Attributes
+  id: Attributes
+  parent: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext
+  langs:
+  - csharp
+  - vb
+  name: Attributes
+  nameWithType: ClassWithAttributesContext.Attributes
+  fullName: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.Attributes
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/ClassWithAttributesContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Attributes
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/ClassWithAttributesContext.cs
+    startLine: 69
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Models
+  summary: >-
+    An immutable array of <xref href="Microsoft.CodeAnalysis.AttributeData" data-throw-if-not-resolved="false"></xref> representing all attributes
+
+    applied to the class declaration.
+  example: []
+  syntax:
+    content: public ImmutableArray<AttributeData> Attributes { get; init; }
+    parameters: []
+    return:
+      type: System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.AttributeData}
+    content.vb: Public Property Attributes As ImmutableArray(Of AttributeData)
+  overload: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.Attributes*
+- uid: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.ClassSyntax
+  commentId: P:ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.ClassSyntax
+  id: ClassSyntax
+  parent: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext
+  langs:
+  - csharp
+  - vb
+  name: ClassSyntax
+  nameWithType: ClassWithAttributesContext.ClassSyntax
+  fullName: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.ClassSyntax
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/ClassWithAttributesContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: ClassSyntax
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/ClassWithAttributesContext.cs
+    startLine: 70
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Models
+  summary: >-
+    The <xref href="Microsoft.CodeAnalysis.CSharp.Syntax.ClassDeclarationSyntax" data-throw-if-not-resolved="false"></xref> node representing the class declaration
+
+    in the syntax tree.
+  example: []
+  syntax:
+    content: public ClassDeclarationSyntax ClassSyntax { get; init; }
+    parameters: []
+    return:
+      type: Microsoft.CodeAnalysis.CSharp.Syntax.ClassDeclarationSyntax
+    content.vb: Public Property ClassSyntax As ClassDeclarationSyntax
+  overload: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.ClassSyntax*
+- uid: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.ClassSymbol
+  commentId: P:ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.ClassSymbol
+  id: ClassSymbol
+  parent: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext
+  langs:
+  - csharp
+  - vb
+  name: ClassSymbol
+  nameWithType: ClassWithAttributesContext.ClassSymbol
+  fullName: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.ClassSymbol
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/ClassWithAttributesContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: ClassSymbol
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/ClassWithAttributesContext.cs
+    startLine: 71
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Models
+  summary: The <xref href="Microsoft.CodeAnalysis.INamedTypeSymbol" data-throw-if-not-resolved="false"></xref> representing the semantic symbol for the class.
+  example: []
+  syntax:
+    content: public INamedTypeSymbol ClassSymbol { get; init; }
+    parameters: []
+    return:
+      type: Microsoft.CodeAnalysis.INamedTypeSymbol
+    content.vb: Public Property ClassSymbol As INamedTypeSymbol
+  overload: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.ClassSymbol*
+references:
+- uid: ANcpLua.Roslyn.Utilities.Models.LocationInfo
+  commentId: T:ANcpLua.Roslyn.Utilities.Models.LocationInfo
+  parent: ANcpLua.Roslyn.Utilities.Models
+  href: ANcpLua.Roslyn.Utilities.Models.LocationInfo.html
+  name: LocationInfo
+  nameWithType: LocationInfo
+  fullName: ANcpLua.Roslyn.Utilities.Models.LocationInfo
+- uid: ANcpLua.Roslyn.Utilities.EquatableArray`1
+  commentId: T:ANcpLua.Roslyn.Utilities.EquatableArray`1
+  parent: ANcpLua.Roslyn.Utilities
+  href: ANcpLua.Roslyn.Utilities.EquatableArray-1.html
+  name: EquatableArray<T>
+  nameWithType: EquatableArray<T>
+  fullName: ANcpLua.Roslyn.Utilities.EquatableArray<T>
+  nameWithType.vb: EquatableArray(Of T)
+  fullName.vb: ANcpLua.Roslyn.Utilities.EquatableArray(Of T)
+  name.vb: EquatableArray(Of T)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.EquatableArray`1
+    name: EquatableArray
+    href: ANcpLua.Roslyn.Utilities.EquatableArray-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.EquatableArray`1
+    name: EquatableArray
+    href: ANcpLua.Roslyn.Utilities.EquatableArray-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Microsoft.CodeAnalysis.SemanticModel
+  commentId: T:Microsoft.CodeAnalysis.SemanticModel
+  parent: Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.semanticmodel
+  name: SemanticModel
+  nameWithType: SemanticModel
+  fullName: Microsoft.CodeAnalysis.SemanticModel
+- uid: Microsoft.CodeAnalysis.AttributeData
+  commentId: T:Microsoft.CodeAnalysis.AttributeData
+  parent: Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.attributedata
+  name: AttributeData
+  nameWithType: AttributeData
+  fullName: Microsoft.CodeAnalysis.AttributeData
+- uid: Microsoft.CodeAnalysis.CSharp.Syntax.ClassDeclarationSyntax
+  commentId: T:Microsoft.CodeAnalysis.CSharp.Syntax.ClassDeclarationSyntax
+  parent: Microsoft.CodeAnalysis.CSharp.Syntax
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.syntax.classdeclarationsyntax
+  name: ClassDeclarationSyntax
+  nameWithType: ClassDeclarationSyntax
+  fullName: Microsoft.CodeAnalysis.CSharp.Syntax.ClassDeclarationSyntax
+- uid: Microsoft.CodeAnalysis.INamedTypeSymbol
+  commentId: T:Microsoft.CodeAnalysis.INamedTypeSymbol
+  parent: Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.inamedtypesymbol
+  name: INamedTypeSymbol
+  nameWithType: INamedTypeSymbol
+  fullName: Microsoft.CodeAnalysis.INamedTypeSymbol
+- uid: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.SemanticModel
+  commentId: P:ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.SemanticModel
+  href: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.html#ANcpLua_Roslyn_Utilities_Models_ClassWithAttributesContext_SemanticModel
+  name: SemanticModel
+  nameWithType: ClassWithAttributesContext.SemanticModel
+  fullName: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.SemanticModel
+- uid: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.Attributes
+  commentId: P:ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.Attributes
+  href: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.html#ANcpLua_Roslyn_Utilities_Models_ClassWithAttributesContext_Attributes
+  name: Attributes
+  nameWithType: ClassWithAttributesContext.Attributes
+  fullName: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.Attributes
+- uid: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.ClassSyntax
+  commentId: P:ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.ClassSyntax
+  href: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.html#ANcpLua_Roslyn_Utilities_Models_ClassWithAttributesContext_ClassSyntax
+  name: ClassSyntax
+  nameWithType: ClassWithAttributesContext.ClassSyntax
+  fullName: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.ClassSyntax
+- uid: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.ClassSymbol
+  commentId: P:ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.ClassSymbol
+  href: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.html#ANcpLua_Roslyn_Utilities_Models_ClassWithAttributesContext_ClassSymbol
+  name: ClassSymbol
+  nameWithType: ClassWithAttributesContext.ClassSymbol
+  fullName: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.ClassSymbol
+- uid: ANcpLua.Roslyn.Utilities.Models
+  commentId: N:ANcpLua.Roslyn.Utilities.Models
+  href: ANcpLua.html
+  name: ANcpLua.Roslyn.Utilities.Models
+  nameWithType: ANcpLua.Roslyn.Utilities.Models
+  fullName: ANcpLua.Roslyn.Utilities.Models
+  spec.csharp:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities.Models
+    name: Models
+    href: ANcpLua.Roslyn.Utilities.Models.html
+  spec.vb:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities.Models
+    name: Models
+    href: ANcpLua.Roslyn.Utilities.Models.html
+- uid: System.IEquatable{ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext}
+  commentId: T:System.IEquatable{ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<ClassWithAttributesContext>
+  nameWithType: IEquatable<ClassWithAttributesContext>
+  fullName: System.IEquatable<ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext>
+  nameWithType.vb: IEquatable(Of ClassWithAttributesContext)
+  fullName.vb: System.IEquatable(Of ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext)
+  name.vb: IEquatable(Of ClassWithAttributesContext)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext
+    name: ClassWithAttributesContext
+    href: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext
+    name: ClassWithAttributesContext
+    href: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.html
+  - name: )
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+  parent: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+  definition: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  name: ToResultWithDiagnostics<ClassWithAttributesContext>(ClassWithAttributesContext)
+  nameWithType: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<ClassWithAttributesContext>(ClassWithAttributesContext)
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext>(ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext)
+  nameWithType.vb: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of ClassWithAttributesContext)(ClassWithAttributesContext)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext)(ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext)
+  name.vb: ToResultWithDiagnostics(Of ClassWithAttributesContext)(ClassWithAttributesContext)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext)
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext
+    name: ClassWithAttributesContext
+    href: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.html
+  - name: '>'
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext
+    name: ClassWithAttributesContext
+    href: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.html
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext)
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext
+    name: ClassWithAttributesContext
+    href: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.html
+  - name: )
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext
+    name: ClassWithAttributesContext
+    href: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.html
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  parent: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+  definition: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  name: ToResultWithDiagnostics<ClassWithAttributesContext>(ClassWithAttributesContext, ImmutableArray<DiagnosticInfo>)
+  nameWithType: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<ClassWithAttributesContext>(ClassWithAttributesContext, ImmutableArray<DiagnosticInfo>)
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext>(ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext, System.Collections.Immutable.ImmutableArray<ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo>)
+  nameWithType.vb: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of ClassWithAttributesContext)(ClassWithAttributesContext, ImmutableArray(Of DiagnosticInfo))
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext)(ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext, System.Collections.Immutable.ImmutableArray(Of ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo))
+  name.vb: ToResultWithDiagnostics(Of ClassWithAttributesContext)(ClassWithAttributesContext, ImmutableArray(Of DiagnosticInfo))
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext
+    name: ClassWithAttributesContext
+    href: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.html
+  - name: '>'
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext
+    name: ClassWithAttributesContext
+    href: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext
+    name: ClassWithAttributesContext
+    href: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.html
+  - name: )
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext
+    name: ClassWithAttributesContext
+    href: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: )
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities
+  commentId: N:ANcpLua.Roslyn.Utilities
+  href: ANcpLua.html
+  name: ANcpLua.Roslyn.Utilities
+  nameWithType: ANcpLua.Roslyn.Utilities
+  fullName: ANcpLua.Roslyn.Utilities
+  spec.csharp:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  spec.vb:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+- uid: Microsoft.CodeAnalysis
+  commentId: N:Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.CodeAnalysis
+  nameWithType: Microsoft.CodeAnalysis
+  fullName: Microsoft.CodeAnalysis
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+- uid: Microsoft.CodeAnalysis.CSharp.Syntax
+  commentId: N:Microsoft.CodeAnalysis.CSharp.Syntax
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.CodeAnalysis.CSharp.Syntax
+  nameWithType: Microsoft.CodeAnalysis.CSharp.Syntax
+  fullName: Microsoft.CodeAnalysis.CSharp.Syntax
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+  - name: .
+  - uid: Microsoft.CodeAnalysis.CSharp
+    name: CSharp
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp
+  - name: .
+  - uid: Microsoft.CodeAnalysis.CSharp.Syntax
+    name: Syntax
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.syntax
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+  - name: .
+  - uid: Microsoft.CodeAnalysis.CSharp
+    name: CSharp
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp
+  - name: .
+  - uid: Microsoft.CodeAnalysis.CSharp.Syntax
+    name: Syntax
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.syntax
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  name: ToResultWithDiagnostics<T>(T)
+  nameWithType: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<T>(T)
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<T>(T)
+  nameWithType.vb: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of T)(T)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of T)(T)
+  name.vb: ToResultWithDiagnostics(Of T)(T)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+  commentId: T:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+  parent: ANcpLua.Roslyn.Utilities.Models
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html
+  name: ResultWithDiagnosticsExtensions
+  nameWithType: ResultWithDiagnosticsExtensions
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+- uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  name: ToResultWithDiagnostics<T>(T, ImmutableArray<DiagnosticInfo>)
+  nameWithType: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<T>(T, ImmutableArray<DiagnosticInfo>)
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<T>(T, System.Collections.Immutable.ImmutableArray<ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo>)
+  nameWithType.vb: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of T)(T, ImmutableArray(Of DiagnosticInfo))
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of T)(T, System.Collections.Immutable.ImmutableArray(Of ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo))
+  name.vb: ToResultWithDiagnostics(Of T)(T, ImmutableArray(Of DiagnosticInfo))
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: )
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.#ctor*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.#ctor
+  href: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.html#ANcpLua_Roslyn_Utilities_Models_ClassWithAttributesContext__ctor_Microsoft_CodeAnalysis_SemanticModel_System_Collections_Immutable_ImmutableArray_Microsoft_CodeAnalysis_AttributeData__Microsoft_CodeAnalysis_CSharp_Syntax_ClassDeclarationSyntax_Microsoft_CodeAnalysis_INamedTypeSymbol_
+  name: ClassWithAttributesContext
+  nameWithType: ClassWithAttributesContext.ClassWithAttributesContext
+  fullName: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.ClassWithAttributesContext
+  nameWithType.vb: ClassWithAttributesContext.New
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.New
+  name.vb: New
+- uid: System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.AttributeData}
+  commentId: T:System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.AttributeData}
+  parent: System.Collections.Immutable
+  definition: System.Collections.Immutable.ImmutableArray`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  name: ImmutableArray<AttributeData>
+  nameWithType: ImmutableArray<AttributeData>
+  fullName: System.Collections.Immutable.ImmutableArray<Microsoft.CodeAnalysis.AttributeData>
+  nameWithType.vb: ImmutableArray(Of AttributeData)
+  fullName.vb: System.Collections.Immutable.ImmutableArray(Of Microsoft.CodeAnalysis.AttributeData)
+  name.vb: ImmutableArray(Of AttributeData)
+  spec.csharp:
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: <
+  - uid: Microsoft.CodeAnalysis.AttributeData
+    name: AttributeData
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.attributedata
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.AttributeData
+    name: AttributeData
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.attributedata
+  - name: )
+- uid: System.Collections.Immutable.ImmutableArray`1
+  commentId: T:System.Collections.Immutable.ImmutableArray`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  name: ImmutableArray<T>
+  nameWithType: ImmutableArray<T>
+  fullName: System.Collections.Immutable.ImmutableArray<T>
+  nameWithType.vb: ImmutableArray(Of T)
+  fullName.vb: System.Collections.Immutable.ImmutableArray(Of T)
+  name.vb: ImmutableArray(Of T)
+  spec.csharp:
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Immutable
+  commentId: N:System.Collections.Immutable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Immutable
+  nameWithType: System.Collections.Immutable
+  fullName: System.Collections.Immutable
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Immutable
+    name: Immutable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Immutable
+    name: Immutable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable
+- uid: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.SemanticModel*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.SemanticModel
+  href: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.html#ANcpLua_Roslyn_Utilities_Models_ClassWithAttributesContext_SemanticModel
+  name: SemanticModel
+  nameWithType: ClassWithAttributesContext.SemanticModel
+  fullName: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.SemanticModel
+- uid: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.Attributes*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.Attributes
+  href: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.html#ANcpLua_Roslyn_Utilities_Models_ClassWithAttributesContext_Attributes
+  name: Attributes
+  nameWithType: ClassWithAttributesContext.Attributes
+  fullName: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.Attributes
+- uid: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.ClassSyntax*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.ClassSyntax
+  href: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.html#ANcpLua_Roslyn_Utilities_Models_ClassWithAttributesContext_ClassSyntax
+  name: ClassSyntax
+  nameWithType: ClassWithAttributesContext.ClassSyntax
+  fullName: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.ClassSyntax
+- uid: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.ClassSymbol*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.ClassSymbol
+  href: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.html#ANcpLua_Roslyn_Utilities_Models_ClassWithAttributesContext_ClassSymbol
+  name: ClassSymbol
+  nameWithType: ClassWithAttributesContext.ClassSymbol
+  fullName: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.ClassSymbol

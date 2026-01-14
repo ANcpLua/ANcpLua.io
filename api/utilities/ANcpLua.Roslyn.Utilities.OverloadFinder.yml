@@ -1,0 +1,2018 @@
+### YamlMime:ManagedReference
+items:
+- uid: ANcpLua.Roslyn.Utilities.OverloadFinder
+  commentId: T:ANcpLua.Roslyn.Utilities.OverloadFinder
+  id: OverloadFinder
+  parent: ANcpLua.Roslyn.Utilities
+  children:
+  - ANcpLua.Roslyn.Utilities.OverloadFinder.#ctor(Microsoft.CodeAnalysis.Compilation)
+  - ANcpLua.Roslyn.Utilities.OverloadFinder.FindAllOverloads(Microsoft.CodeAnalysis.IMethodSymbol,System.Boolean)
+  - ANcpLua.Roslyn.Utilities.OverloadFinder.FindOverload(Microsoft.CodeAnalysis.IMethodSymbol,System.Func{Microsoft.CodeAnalysis.IMethodSymbol,System.Boolean},System.Boolean)
+  - ANcpLua.Roslyn.Utilities.OverloadFinder.FindOverloadWithParameter(Microsoft.CodeAnalysis.IMethodSymbol,Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)
+  - ANcpLua.Roslyn.Utilities.OverloadFinder.FindOverloadWithParameters(Microsoft.CodeAnalysis.IMethodSymbol,System.ReadOnlySpan{Microsoft.CodeAnalysis.ITypeSymbol},System.Boolean)
+  - ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithFewerParameters(Microsoft.CodeAnalysis.IMethodSymbol,System.Boolean)
+  - ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithMoreParameters(Microsoft.CodeAnalysis.IMethodSymbol,System.Boolean)
+  - ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithParameter(Microsoft.CodeAnalysis.IMethodSymbol,Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)
+  - ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithParameter(Microsoft.CodeAnalysis.Operations.IInvocationOperation,Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)
+  - ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithParameters(Microsoft.CodeAnalysis.IMethodSymbol,System.ReadOnlySpan{Microsoft.CodeAnalysis.ITypeSymbol},System.Boolean)
+  - ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithParameters(Microsoft.CodeAnalysis.Operations.IInvocationOperation,System.ReadOnlySpan{Microsoft.CodeAnalysis.ITypeSymbol},System.Boolean)
+  - ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithReturnType(Microsoft.CodeAnalysis.IMethodSymbol,Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)
+  langs:
+  - csharp
+  - vb
+  name: OverloadFinder
+  nameWithType: OverloadFinder
+  fullName: ANcpLua.Roslyn.Utilities.OverloadFinder
+  type: Class
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OverloadFinder.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: OverloadFinder
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OverloadFinder.cs
+    startLine: 24
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Provides utilities for finding method overloads in a compilation.
+  remarks: >-
+    <p>
+
+    This class enables analyzers and source generators to discover method overloads
+
+    based on various criteria such as parameter types, return types, and parameter counts.
+
+    </p>
+
+    <ul><li>Searches for overloads within the same containing type.</li><li>Supports filtering out obsolete methods via the <code>includeObsolete</code> parameter.</li><li>Handles single and multiple additional parameter type searches.</li><li>Provides both existence checks and overload retrieval methods.</li></ul>
+  example: []
+  syntax:
+    content: public sealed class OverloadFinder
+    content.vb: Public NotInheritable Class OverloadFinder
+  seealso:
+  - linkId: Microsoft.CodeAnalysis.IMethodSymbol
+    commentId: T:Microsoft.CodeAnalysis.IMethodSymbol
+  - linkId: Microsoft.CodeAnalysis.Operations.IInvocationOperation
+    commentId: T:Microsoft.CodeAnalysis.Operations.IInvocationOperation
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - ANcpLua.Roslyn.Utilities.OverloadFinder.ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1
+  - ANcpLua.Roslyn.Utilities.OverloadFinder.ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+- uid: ANcpLua.Roslyn.Utilities.OverloadFinder.#ctor(Microsoft.CodeAnalysis.Compilation)
+  commentId: M:ANcpLua.Roslyn.Utilities.OverloadFinder.#ctor(Microsoft.CodeAnalysis.Compilation)
+  id: '#ctor(Microsoft.CodeAnalysis.Compilation)'
+  parent: ANcpLua.Roslyn.Utilities.OverloadFinder
+  langs:
+  - csharp
+  - vb
+  name: OverloadFinder(Compilation)
+  nameWithType: OverloadFinder.OverloadFinder(Compilation)
+  fullName: ANcpLua.Roslyn.Utilities.OverloadFinder.OverloadFinder(Microsoft.CodeAnalysis.Compilation)
+  type: Constructor
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OverloadFinder.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: .ctor
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OverloadFinder.cs
+    startLine: 24
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Provides utilities for finding method overloads in a compilation.
+  remarks: >-
+    <p>
+
+    This class enables analyzers and source generators to discover method overloads
+
+    based on various criteria such as parameter types, return types, and parameter counts.
+
+    </p>
+
+    <ul><li>Searches for overloads within the same containing type.</li><li>Supports filtering out obsolete methods via the <code>includeObsolete</code> parameter.</li><li>Handles single and multiple additional parameter type searches.</li><li>Provides both existence checks and overload retrieval methods.</li></ul>
+  example: []
+  syntax:
+    content: public OverloadFinder(Compilation compilation)
+    parameters:
+    - id: compilation
+      type: Microsoft.CodeAnalysis.Compilation
+      description: The <xref href="Microsoft.CodeAnalysis.Compilation" data-throw-if-not-resolved="false"></xref> used to resolve the <code>System.ObsoleteAttribute</code> type.
+    content.vb: Public Sub New(compilation As Compilation)
+  overload: ANcpLua.Roslyn.Utilities.OverloadFinder.#ctor*
+  seealso:
+  - linkId: Microsoft.CodeAnalysis.IMethodSymbol
+    commentId: T:Microsoft.CodeAnalysis.IMethodSymbol
+  - linkId: Microsoft.CodeAnalysis.Operations.IInvocationOperation
+    commentId: T:Microsoft.CodeAnalysis.Operations.IInvocationOperation
+  nameWithType.vb: OverloadFinder.New(Compilation)
+  fullName.vb: ANcpLua.Roslyn.Utilities.OverloadFinder.New(Microsoft.CodeAnalysis.Compilation)
+  name.vb: New(Compilation)
+- uid: ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithParameter(Microsoft.CodeAnalysis.IMethodSymbol,Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)
+  commentId: M:ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithParameter(Microsoft.CodeAnalysis.IMethodSymbol,Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)
+  id: HasOverloadWithParameter(Microsoft.CodeAnalysis.IMethodSymbol,Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)
+  parent: ANcpLua.Roslyn.Utilities.OverloadFinder
+  langs:
+  - csharp
+  - vb
+  name: HasOverloadWithParameter(IMethodSymbol, ITypeSymbol, bool)
+  nameWithType: OverloadFinder.HasOverloadWithParameter(IMethodSymbol, ITypeSymbol, bool)
+  fullName: ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithParameter(Microsoft.CodeAnalysis.IMethodSymbol, Microsoft.CodeAnalysis.ITypeSymbol, bool)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OverloadFinder.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: HasOverloadWithParameter
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OverloadFinder.cs
+    startLine: 46
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Determines whether an overload of the specified method exists that includes an additional parameter of the given type.
+  example: []
+  syntax:
+    content: public bool HasOverloadWithParameter(IMethodSymbol method, ITypeSymbol additionalParamType, bool includeObsolete = false)
+    parameters:
+    - id: method
+      type: Microsoft.CodeAnalysis.IMethodSymbol
+      description: The method to find overloads for.
+    - id: additionalParamType
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The type of the additional parameter that the overload must have.
+    - id: includeObsolete
+      type: System.Boolean
+      description: >-
+        If <code>true</code>, includes methods marked with <xref href="System.ObsoleteAttribute" data-throw-if-not-resolved="false"></xref>;
+
+        otherwise, obsolete methods are excluded. Defaults to <code>false</code>.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if an overload exists with the additional parameter type; otherwise, <code>false</code>.
+    content.vb: Public Function HasOverloadWithParameter(method As IMethodSymbol, additionalParamType As ITypeSymbol, includeObsolete As Boolean = False) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithParameter*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.OverloadFinder.FindOverloadWithParameter(Microsoft.CodeAnalysis.IMethodSymbol,Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)
+    commentId: M:ANcpLua.Roslyn.Utilities.OverloadFinder.FindOverloadWithParameter(Microsoft.CodeAnalysis.IMethodSymbol,Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)
+  nameWithType.vb: OverloadFinder.HasOverloadWithParameter(IMethodSymbol, ITypeSymbol, Boolean)
+  fullName.vb: ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithParameter(Microsoft.CodeAnalysis.IMethodSymbol, Microsoft.CodeAnalysis.ITypeSymbol, Boolean)
+  name.vb: HasOverloadWithParameter(IMethodSymbol, ITypeSymbol, Boolean)
+- uid: ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithParameter(Microsoft.CodeAnalysis.Operations.IInvocationOperation,Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)
+  commentId: M:ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithParameter(Microsoft.CodeAnalysis.Operations.IInvocationOperation,Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)
+  id: HasOverloadWithParameter(Microsoft.CodeAnalysis.Operations.IInvocationOperation,Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)
+  parent: ANcpLua.Roslyn.Utilities.OverloadFinder
+  langs:
+  - csharp
+  - vb
+  name: HasOverloadWithParameter(IInvocationOperation, ITypeSymbol, bool)
+  nameWithType: OverloadFinder.HasOverloadWithParameter(IInvocationOperation, ITypeSymbol, bool)
+  fullName: ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithParameter(Microsoft.CodeAnalysis.Operations.IInvocationOperation, Microsoft.CodeAnalysis.ITypeSymbol, bool)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OverloadFinder.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: HasOverloadWithParameter
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OverloadFinder.cs
+    startLine: 63
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Determines whether an overload of the target method of the specified invocation exists that includes an additional parameter of the given type.
+  example: []
+  syntax:
+    content: public bool HasOverloadWithParameter(IInvocationOperation operation, ITypeSymbol additionalParamType, bool includeObsolete = false)
+    parameters:
+    - id: operation
+      type: Microsoft.CodeAnalysis.Operations.IInvocationOperation
+      description: The invocation operation whose target method is used to find overloads.
+    - id: additionalParamType
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The type of the additional parameter that the overload must have.
+    - id: includeObsolete
+      type: System.Boolean
+      description: >-
+        If <code>true</code>, includes methods marked with <xref href="System.ObsoleteAttribute" data-throw-if-not-resolved="false"></xref>;
+
+        otherwise, obsolete methods are excluded. Defaults to <code>false</code>.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if an overload exists with the additional parameter type; otherwise, <code>false</code>.
+    content.vb: Public Function HasOverloadWithParameter(operation As IInvocationOperation, additionalParamType As ITypeSymbol, includeObsolete As Boolean = False) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithParameter*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.OverloadFinder.FindOverloadWithParameter(Microsoft.CodeAnalysis.IMethodSymbol,Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)
+    commentId: M:ANcpLua.Roslyn.Utilities.OverloadFinder.FindOverloadWithParameter(Microsoft.CodeAnalysis.IMethodSymbol,Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)
+  nameWithType.vb: OverloadFinder.HasOverloadWithParameter(IInvocationOperation, ITypeSymbol, Boolean)
+  fullName.vb: ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithParameter(Microsoft.CodeAnalysis.Operations.IInvocationOperation, Microsoft.CodeAnalysis.ITypeSymbol, Boolean)
+  name.vb: HasOverloadWithParameter(IInvocationOperation, ITypeSymbol, Boolean)
+- uid: ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithParameters(Microsoft.CodeAnalysis.IMethodSymbol,System.ReadOnlySpan{Microsoft.CodeAnalysis.ITypeSymbol},System.Boolean)
+  commentId: M:ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithParameters(Microsoft.CodeAnalysis.IMethodSymbol,System.ReadOnlySpan{Microsoft.CodeAnalysis.ITypeSymbol},System.Boolean)
+  id: HasOverloadWithParameters(Microsoft.CodeAnalysis.IMethodSymbol,System.ReadOnlySpan{Microsoft.CodeAnalysis.ITypeSymbol},System.Boolean)
+  parent: ANcpLua.Roslyn.Utilities.OverloadFinder
+  langs:
+  - csharp
+  - vb
+  name: HasOverloadWithParameters(IMethodSymbol, ReadOnlySpan<ITypeSymbol>, bool)
+  nameWithType: OverloadFinder.HasOverloadWithParameters(IMethodSymbol, ReadOnlySpan<ITypeSymbol>, bool)
+  fullName: ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithParameters(Microsoft.CodeAnalysis.IMethodSymbol, System.ReadOnlySpan<Microsoft.CodeAnalysis.ITypeSymbol>, bool)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OverloadFinder.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: HasOverloadWithParameters
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OverloadFinder.cs
+    startLine: 80
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Determines whether an overload of the specified method exists that includes all of the specified additional parameter types.
+  example: []
+  syntax:
+    content: public bool HasOverloadWithParameters(IMethodSymbol method, ReadOnlySpan<ITypeSymbol> additionalParamTypes, bool includeObsolete = false)
+    parameters:
+    - id: method
+      type: Microsoft.CodeAnalysis.IMethodSymbol
+      description: The method to find overloads for.
+    - id: additionalParamTypes
+      type: System.ReadOnlySpan{Microsoft.CodeAnalysis.ITypeSymbol}
+      description: The types of the additional parameters that the overload must have.
+    - id: includeObsolete
+      type: System.Boolean
+      description: >-
+        If <code>true</code>, includes methods marked with <xref href="System.ObsoleteAttribute" data-throw-if-not-resolved="false"></xref>;
+
+        otherwise, obsolete methods are excluded. Defaults to <code>false</code>.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if an overload exists with all the additional parameter types; otherwise, <code>false</code>.
+    content.vb: Public Function HasOverloadWithParameters(method As IMethodSymbol, additionalParamTypes As ReadOnlySpan(Of ITypeSymbol), includeObsolete As Boolean = False) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithParameters*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.OverloadFinder.FindOverloadWithParameters(Microsoft.CodeAnalysis.IMethodSymbol,System.ReadOnlySpan{Microsoft.CodeAnalysis.ITypeSymbol},System.Boolean)
+    commentId: M:ANcpLua.Roslyn.Utilities.OverloadFinder.FindOverloadWithParameters(Microsoft.CodeAnalysis.IMethodSymbol,System.ReadOnlySpan{Microsoft.CodeAnalysis.ITypeSymbol},System.Boolean)
+  nameWithType.vb: OverloadFinder.HasOverloadWithParameters(IMethodSymbol, ReadOnlySpan(Of ITypeSymbol), Boolean)
+  fullName.vb: ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithParameters(Microsoft.CodeAnalysis.IMethodSymbol, System.ReadOnlySpan(Of Microsoft.CodeAnalysis.ITypeSymbol), Boolean)
+  name.vb: HasOverloadWithParameters(IMethodSymbol, ReadOnlySpan(Of ITypeSymbol), Boolean)
+- uid: ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithParameters(Microsoft.CodeAnalysis.Operations.IInvocationOperation,System.ReadOnlySpan{Microsoft.CodeAnalysis.ITypeSymbol},System.Boolean)
+  commentId: M:ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithParameters(Microsoft.CodeAnalysis.Operations.IInvocationOperation,System.ReadOnlySpan{Microsoft.CodeAnalysis.ITypeSymbol},System.Boolean)
+  id: HasOverloadWithParameters(Microsoft.CodeAnalysis.Operations.IInvocationOperation,System.ReadOnlySpan{Microsoft.CodeAnalysis.ITypeSymbol},System.Boolean)
+  parent: ANcpLua.Roslyn.Utilities.OverloadFinder
+  langs:
+  - csharp
+  - vb
+  name: HasOverloadWithParameters(IInvocationOperation, ReadOnlySpan<ITypeSymbol>, bool)
+  nameWithType: OverloadFinder.HasOverloadWithParameters(IInvocationOperation, ReadOnlySpan<ITypeSymbol>, bool)
+  fullName: ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithParameters(Microsoft.CodeAnalysis.Operations.IInvocationOperation, System.ReadOnlySpan<Microsoft.CodeAnalysis.ITypeSymbol>, bool)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OverloadFinder.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: HasOverloadWithParameters
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OverloadFinder.cs
+    startLine: 97
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Determines whether an overload of the target method of the specified invocation exists that includes all of the specified additional parameter types.
+  example: []
+  syntax:
+    content: public bool HasOverloadWithParameters(IInvocationOperation operation, ReadOnlySpan<ITypeSymbol> additionalParamTypes, bool includeObsolete = false)
+    parameters:
+    - id: operation
+      type: Microsoft.CodeAnalysis.Operations.IInvocationOperation
+      description: The invocation operation whose target method is used to find overloads.
+    - id: additionalParamTypes
+      type: System.ReadOnlySpan{Microsoft.CodeAnalysis.ITypeSymbol}
+      description: The types of the additional parameters that the overload must have.
+    - id: includeObsolete
+      type: System.Boolean
+      description: >-
+        If <code>true</code>, includes methods marked with <xref href="System.ObsoleteAttribute" data-throw-if-not-resolved="false"></xref>;
+
+        otherwise, obsolete methods are excluded. Defaults to <code>false</code>.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if an overload exists with all the additional parameter types; otherwise, <code>false</code>.
+    content.vb: Public Function HasOverloadWithParameters(operation As IInvocationOperation, additionalParamTypes As ReadOnlySpan(Of ITypeSymbol), includeObsolete As Boolean = False) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithParameters*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.OverloadFinder.FindOverloadWithParameters(Microsoft.CodeAnalysis.IMethodSymbol,System.ReadOnlySpan{Microsoft.CodeAnalysis.ITypeSymbol},System.Boolean)
+    commentId: M:ANcpLua.Roslyn.Utilities.OverloadFinder.FindOverloadWithParameters(Microsoft.CodeAnalysis.IMethodSymbol,System.ReadOnlySpan{Microsoft.CodeAnalysis.ITypeSymbol},System.Boolean)
+  nameWithType.vb: OverloadFinder.HasOverloadWithParameters(IInvocationOperation, ReadOnlySpan(Of ITypeSymbol), Boolean)
+  fullName.vb: ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithParameters(Microsoft.CodeAnalysis.Operations.IInvocationOperation, System.ReadOnlySpan(Of Microsoft.CodeAnalysis.ITypeSymbol), Boolean)
+  name.vb: HasOverloadWithParameters(IInvocationOperation, ReadOnlySpan(Of ITypeSymbol), Boolean)
+- uid: ANcpLua.Roslyn.Utilities.OverloadFinder.FindOverloadWithParameter(Microsoft.CodeAnalysis.IMethodSymbol,Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)
+  commentId: M:ANcpLua.Roslyn.Utilities.OverloadFinder.FindOverloadWithParameter(Microsoft.CodeAnalysis.IMethodSymbol,Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)
+  id: FindOverloadWithParameter(Microsoft.CodeAnalysis.IMethodSymbol,Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)
+  parent: ANcpLua.Roslyn.Utilities.OverloadFinder
+  langs:
+  - csharp
+  - vb
+  name: FindOverloadWithParameter(IMethodSymbol, ITypeSymbol, bool)
+  nameWithType: OverloadFinder.FindOverloadWithParameter(IMethodSymbol, ITypeSymbol, bool)
+  fullName: ANcpLua.Roslyn.Utilities.OverloadFinder.FindOverloadWithParameter(Microsoft.CodeAnalysis.IMethodSymbol, Microsoft.CodeAnalysis.ITypeSymbol, bool)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OverloadFinder.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: FindOverloadWithParameter
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OverloadFinder.cs
+    startLine: 118
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Finds an overload of the specified method that includes an additional parameter of the given type.
+  remarks: >-
+    The overload must have all parameters of the original method plus exactly one additional parameter
+
+    of the specified type, in any position.
+  example: []
+  syntax:
+    content: public IMethodSymbol? FindOverloadWithParameter(IMethodSymbol method, ITypeSymbol additionalParamType, bool includeObsolete = false)
+    parameters:
+    - id: method
+      type: Microsoft.CodeAnalysis.IMethodSymbol
+      description: The method to find overloads for.
+    - id: additionalParamType
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The type of the additional parameter that the overload must have.
+    - id: includeObsolete
+      type: System.Boolean
+      description: >-
+        If <code>true</code>, includes methods marked with <xref href="System.ObsoleteAttribute" data-throw-if-not-resolved="false"></xref>;
+
+        otherwise, obsolete methods are excluded. Defaults to <code>false</code>.
+    return:
+      type: Microsoft.CodeAnalysis.IMethodSymbol
+      description: The matching overload <xref href="Microsoft.CodeAnalysis.IMethodSymbol" data-throw-if-not-resolved="false"></xref> if found; otherwise, <code>null</code>.
+    content.vb: Public Function FindOverloadWithParameter(method As IMethodSymbol, additionalParamType As ITypeSymbol, includeObsolete As Boolean = False) As IMethodSymbol
+  overload: ANcpLua.Roslyn.Utilities.OverloadFinder.FindOverloadWithParameter*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithParameter(Microsoft.CodeAnalysis.IMethodSymbol,Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)
+    commentId: M:ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithParameter(Microsoft.CodeAnalysis.IMethodSymbol,Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)
+  nameWithType.vb: OverloadFinder.FindOverloadWithParameter(IMethodSymbol, ITypeSymbol, Boolean)
+  fullName.vb: ANcpLua.Roslyn.Utilities.OverloadFinder.FindOverloadWithParameter(Microsoft.CodeAnalysis.IMethodSymbol, Microsoft.CodeAnalysis.ITypeSymbol, Boolean)
+  name.vb: FindOverloadWithParameter(IMethodSymbol, ITypeSymbol, Boolean)
+- uid: ANcpLua.Roslyn.Utilities.OverloadFinder.FindOverloadWithParameters(Microsoft.CodeAnalysis.IMethodSymbol,System.ReadOnlySpan{Microsoft.CodeAnalysis.ITypeSymbol},System.Boolean)
+  commentId: M:ANcpLua.Roslyn.Utilities.OverloadFinder.FindOverloadWithParameters(Microsoft.CodeAnalysis.IMethodSymbol,System.ReadOnlySpan{Microsoft.CodeAnalysis.ITypeSymbol},System.Boolean)
+  id: FindOverloadWithParameters(Microsoft.CodeAnalysis.IMethodSymbol,System.ReadOnlySpan{Microsoft.CodeAnalysis.ITypeSymbol},System.Boolean)
+  parent: ANcpLua.Roslyn.Utilities.OverloadFinder
+  langs:
+  - csharp
+  - vb
+  name: FindOverloadWithParameters(IMethodSymbol, ReadOnlySpan<ITypeSymbol>, bool)
+  nameWithType: OverloadFinder.FindOverloadWithParameters(IMethodSymbol, ReadOnlySpan<ITypeSymbol>, bool)
+  fullName: ANcpLua.Roslyn.Utilities.OverloadFinder.FindOverloadWithParameters(Microsoft.CodeAnalysis.IMethodSymbol, System.ReadOnlySpan<Microsoft.CodeAnalysis.ITypeSymbol>, bool)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OverloadFinder.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: FindOverloadWithParameters
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OverloadFinder.cs
+    startLine: 160
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Finds an overload of the specified method that includes all of the specified additional parameter types.
+  remarks: >-
+    The overload must have all parameters of the original method plus all of the specified additional
+
+    parameter types, in any position.
+  example: []
+  syntax:
+    content: public IMethodSymbol? FindOverloadWithParameters(IMethodSymbol method, ReadOnlySpan<ITypeSymbol> additionalParamTypes, bool includeObsolete = false)
+    parameters:
+    - id: method
+      type: Microsoft.CodeAnalysis.IMethodSymbol
+      description: The method to find overloads for.
+    - id: additionalParamTypes
+      type: System.ReadOnlySpan{Microsoft.CodeAnalysis.ITypeSymbol}
+      description: The types of the additional parameters that the overload must have.
+    - id: includeObsolete
+      type: System.Boolean
+      description: >-
+        If <code>true</code>, includes methods marked with <xref href="System.ObsoleteAttribute" data-throw-if-not-resolved="false"></xref>;
+
+        otherwise, obsolete methods are excluded. Defaults to <code>false</code>.
+    return:
+      type: Microsoft.CodeAnalysis.IMethodSymbol
+      description: The matching overload <xref href="Microsoft.CodeAnalysis.IMethodSymbol" data-throw-if-not-resolved="false"></xref> if found; otherwise, <code>null</code>.
+    content.vb: Public Function FindOverloadWithParameters(method As IMethodSymbol, additionalParamTypes As ReadOnlySpan(Of ITypeSymbol), includeObsolete As Boolean = False) As IMethodSymbol
+  overload: ANcpLua.Roslyn.Utilities.OverloadFinder.FindOverloadWithParameters*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithParameters(Microsoft.CodeAnalysis.IMethodSymbol,System.ReadOnlySpan{Microsoft.CodeAnalysis.ITypeSymbol},System.Boolean)
+    commentId: M:ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithParameters(Microsoft.CodeAnalysis.IMethodSymbol,System.ReadOnlySpan{Microsoft.CodeAnalysis.ITypeSymbol},System.Boolean)
+  nameWithType.vb: OverloadFinder.FindOverloadWithParameters(IMethodSymbol, ReadOnlySpan(Of ITypeSymbol), Boolean)
+  fullName.vb: ANcpLua.Roslyn.Utilities.OverloadFinder.FindOverloadWithParameters(Microsoft.CodeAnalysis.IMethodSymbol, System.ReadOnlySpan(Of Microsoft.CodeAnalysis.ITypeSymbol), Boolean)
+  name.vb: FindOverloadWithParameters(IMethodSymbol, ReadOnlySpan(Of ITypeSymbol), Boolean)
+- uid: ANcpLua.Roslyn.Utilities.OverloadFinder.FindOverload(Microsoft.CodeAnalysis.IMethodSymbol,System.Func{Microsoft.CodeAnalysis.IMethodSymbol,System.Boolean},System.Boolean)
+  commentId: M:ANcpLua.Roslyn.Utilities.OverloadFinder.FindOverload(Microsoft.CodeAnalysis.IMethodSymbol,System.Func{Microsoft.CodeAnalysis.IMethodSymbol,System.Boolean},System.Boolean)
+  id: FindOverload(Microsoft.CodeAnalysis.IMethodSymbol,System.Func{Microsoft.CodeAnalysis.IMethodSymbol,System.Boolean},System.Boolean)
+  parent: ANcpLua.Roslyn.Utilities.OverloadFinder
+  langs:
+  - csharp
+  - vb
+  name: FindOverload(IMethodSymbol, Func<IMethodSymbol, bool>, bool)
+  nameWithType: OverloadFinder.FindOverload(IMethodSymbol, Func<IMethodSymbol, bool>, bool)
+  fullName: ANcpLua.Roslyn.Utilities.OverloadFinder.FindOverload(Microsoft.CodeAnalysis.IMethodSymbol, System.Func<Microsoft.CodeAnalysis.IMethodSymbol, bool>, bool)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OverloadFinder.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: FindOverload
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OverloadFinder.cs
+    startLine: 201
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Finds an overload of the specified method that matches the given predicate.
+  example: []
+  syntax:
+    content: public IMethodSymbol? FindOverload(IMethodSymbol method, Func<IMethodSymbol, bool> predicate, bool includeObsolete = false)
+    parameters:
+    - id: method
+      type: Microsoft.CodeAnalysis.IMethodSymbol
+      description: The method to find overloads for.
+    - id: predicate
+      type: System.Func{Microsoft.CodeAnalysis.IMethodSymbol,System.Boolean}
+      description: A function to test each candidate overload for a match.
+    - id: includeObsolete
+      type: System.Boolean
+      description: >-
+        If <code>true</code>, includes methods marked with <xref href="System.ObsoleteAttribute" data-throw-if-not-resolved="false"></xref>;
+
+        otherwise, obsolete methods are excluded. Defaults to <code>false</code>.
+    return:
+      type: Microsoft.CodeAnalysis.IMethodSymbol
+      description: The first matching overload <xref href="Microsoft.CodeAnalysis.IMethodSymbol" data-throw-if-not-resolved="false"></xref> if found; otherwise, <code>null</code>.
+    content.vb: Public Function FindOverload(method As IMethodSymbol, predicate As Func(Of IMethodSymbol, Boolean), includeObsolete As Boolean = False) As IMethodSymbol
+  overload: ANcpLua.Roslyn.Utilities.OverloadFinder.FindOverload*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.OverloadFinder.FindAllOverloads(Microsoft.CodeAnalysis.IMethodSymbol,System.Boolean)
+    commentId: M:ANcpLua.Roslyn.Utilities.OverloadFinder.FindAllOverloads(Microsoft.CodeAnalysis.IMethodSymbol,System.Boolean)
+  nameWithType.vb: OverloadFinder.FindOverload(IMethodSymbol, Func(Of IMethodSymbol, Boolean), Boolean)
+  fullName.vb: ANcpLua.Roslyn.Utilities.OverloadFinder.FindOverload(Microsoft.CodeAnalysis.IMethodSymbol, System.Func(Of Microsoft.CodeAnalysis.IMethodSymbol, Boolean), Boolean)
+  name.vb: FindOverload(IMethodSymbol, Func(Of IMethodSymbol, Boolean), Boolean)
+- uid: ANcpLua.Roslyn.Utilities.OverloadFinder.FindAllOverloads(Microsoft.CodeAnalysis.IMethodSymbol,System.Boolean)
+  commentId: M:ANcpLua.Roslyn.Utilities.OverloadFinder.FindAllOverloads(Microsoft.CodeAnalysis.IMethodSymbol,System.Boolean)
+  id: FindAllOverloads(Microsoft.CodeAnalysis.IMethodSymbol,System.Boolean)
+  parent: ANcpLua.Roslyn.Utilities.OverloadFinder
+  langs:
+  - csharp
+  - vb
+  name: FindAllOverloads(IMethodSymbol, bool)
+  nameWithType: OverloadFinder.FindAllOverloads(IMethodSymbol, bool)
+  fullName: ANcpLua.Roslyn.Utilities.OverloadFinder.FindAllOverloads(Microsoft.CodeAnalysis.IMethodSymbol, bool)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OverloadFinder.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: FindAllOverloads
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OverloadFinder.cs
+    startLine: 235
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Finds all overloads of the specified method.
+  example: []
+  syntax:
+    content: public IEnumerable<IMethodSymbol> FindAllOverloads(IMethodSymbol method, bool includeObsolete = false)
+    parameters:
+    - id: method
+      type: Microsoft.CodeAnalysis.IMethodSymbol
+      description: The method to find overloads for.
+    - id: includeObsolete
+      type: System.Boolean
+      description: >-
+        If <code>true</code>, includes methods marked with <xref href="System.ObsoleteAttribute" data-throw-if-not-resolved="false"></xref>;
+
+        otherwise, obsolete methods are excluded. Defaults to <code>false</code>.
+    return:
+      type: System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.IMethodSymbol}
+      description: An enumerable of all overload <xref href="Microsoft.CodeAnalysis.IMethodSymbol" data-throw-if-not-resolved="false"></xref> instances, excluding the original method.
+    content.vb: Public Function FindAllOverloads(method As IMethodSymbol, includeObsolete As Boolean = False) As IEnumerable(Of IMethodSymbol)
+  overload: ANcpLua.Roslyn.Utilities.OverloadFinder.FindAllOverloads*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.OverloadFinder.FindOverload(Microsoft.CodeAnalysis.IMethodSymbol,System.Func{Microsoft.CodeAnalysis.IMethodSymbol,System.Boolean},System.Boolean)
+    commentId: M:ANcpLua.Roslyn.Utilities.OverloadFinder.FindOverload(Microsoft.CodeAnalysis.IMethodSymbol,System.Func{Microsoft.CodeAnalysis.IMethodSymbol,System.Boolean},System.Boolean)
+  nameWithType.vb: OverloadFinder.FindAllOverloads(IMethodSymbol, Boolean)
+  fullName.vb: ANcpLua.Roslyn.Utilities.OverloadFinder.FindAllOverloads(Microsoft.CodeAnalysis.IMethodSymbol, Boolean)
+  name.vb: FindAllOverloads(IMethodSymbol, Boolean)
+- uid: ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithReturnType(Microsoft.CodeAnalysis.IMethodSymbol,Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)
+  commentId: M:ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithReturnType(Microsoft.CodeAnalysis.IMethodSymbol,Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)
+  id: HasOverloadWithReturnType(Microsoft.CodeAnalysis.IMethodSymbol,Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)
+  parent: ANcpLua.Roslyn.Utilities.OverloadFinder
+  langs:
+  - csharp
+  - vb
+  name: HasOverloadWithReturnType(IMethodSymbol, ITypeSymbol, bool)
+  nameWithType: OverloadFinder.HasOverloadWithReturnType(IMethodSymbol, ITypeSymbol, bool)
+  fullName: ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithReturnType(Microsoft.CodeAnalysis.IMethodSymbol, Microsoft.CodeAnalysis.ITypeSymbol, bool)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OverloadFinder.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: HasOverloadWithReturnType
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OverloadFinder.cs
+    startLine: 265
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Determines whether an overload of the specified method exists that has the given return type.
+  example: []
+  syntax:
+    content: public bool HasOverloadWithReturnType(IMethodSymbol method, ITypeSymbol returnType, bool includeObsolete = false)
+    parameters:
+    - id: method
+      type: Microsoft.CodeAnalysis.IMethodSymbol
+      description: The method to find overloads for.
+    - id: returnType
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The return type that the overload must have.
+    - id: includeObsolete
+      type: System.Boolean
+      description: >-
+        If <code>true</code>, includes methods marked with <xref href="System.ObsoleteAttribute" data-throw-if-not-resolved="false"></xref>;
+
+        otherwise, obsolete methods are excluded. Defaults to <code>false</code>.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if an overload exists with the specified return type; otherwise, <code>false</code>.
+    content.vb: Public Function HasOverloadWithReturnType(method As IMethodSymbol, returnType As ITypeSymbol, includeObsolete As Boolean = False) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithReturnType*
+  nameWithType.vb: OverloadFinder.HasOverloadWithReturnType(IMethodSymbol, ITypeSymbol, Boolean)
+  fullName.vb: ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithReturnType(Microsoft.CodeAnalysis.IMethodSymbol, Microsoft.CodeAnalysis.ITypeSymbol, Boolean)
+  name.vb: HasOverloadWithReturnType(IMethodSymbol, ITypeSymbol, Boolean)
+- uid: ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithFewerParameters(Microsoft.CodeAnalysis.IMethodSymbol,System.Boolean)
+  commentId: M:ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithFewerParameters(Microsoft.CodeAnalysis.IMethodSymbol,System.Boolean)
+  id: HasOverloadWithFewerParameters(Microsoft.CodeAnalysis.IMethodSymbol,System.Boolean)
+  parent: ANcpLua.Roslyn.Utilities.OverloadFinder
+  langs:
+  - csharp
+  - vb
+  name: HasOverloadWithFewerParameters(IMethodSymbol, bool)
+  nameWithType: OverloadFinder.HasOverloadWithFewerParameters(IMethodSymbol, bool)
+  fullName: ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithFewerParameters(Microsoft.CodeAnalysis.IMethodSymbol, bool)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OverloadFinder.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: HasOverloadWithFewerParameters
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OverloadFinder.cs
+    startLine: 288
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Determines whether an overload of the specified method exists that has fewer parameters.
+  example: []
+  syntax:
+    content: public bool HasOverloadWithFewerParameters(IMethodSymbol method, bool includeObsolete = false)
+    parameters:
+    - id: method
+      type: Microsoft.CodeAnalysis.IMethodSymbol
+      description: The method to find overloads for.
+    - id: includeObsolete
+      type: System.Boolean
+      description: >-
+        If <code>true</code>, includes methods marked with <xref href="System.ObsoleteAttribute" data-throw-if-not-resolved="false"></xref>;
+
+        otherwise, obsolete methods are excluded. Defaults to <code>false</code>.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if an overload exists with fewer parameters; otherwise, <code>false</code>.
+    content.vb: Public Function HasOverloadWithFewerParameters(method As IMethodSymbol, includeObsolete As Boolean = False) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithFewerParameters*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithMoreParameters(Microsoft.CodeAnalysis.IMethodSymbol,System.Boolean)
+    commentId: M:ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithMoreParameters(Microsoft.CodeAnalysis.IMethodSymbol,System.Boolean)
+  nameWithType.vb: OverloadFinder.HasOverloadWithFewerParameters(IMethodSymbol, Boolean)
+  fullName.vb: ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithFewerParameters(Microsoft.CodeAnalysis.IMethodSymbol, Boolean)
+  name.vb: HasOverloadWithFewerParameters(IMethodSymbol, Boolean)
+- uid: ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithMoreParameters(Microsoft.CodeAnalysis.IMethodSymbol,System.Boolean)
+  commentId: M:ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithMoreParameters(Microsoft.CodeAnalysis.IMethodSymbol,System.Boolean)
+  id: HasOverloadWithMoreParameters(Microsoft.CodeAnalysis.IMethodSymbol,System.Boolean)
+  parent: ANcpLua.Roslyn.Utilities.OverloadFinder
+  langs:
+  - csharp
+  - vb
+  name: HasOverloadWithMoreParameters(IMethodSymbol, bool)
+  nameWithType: OverloadFinder.HasOverloadWithMoreParameters(IMethodSymbol, bool)
+  fullName: ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithMoreParameters(Microsoft.CodeAnalysis.IMethodSymbol, bool)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OverloadFinder.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: HasOverloadWithMoreParameters
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OverloadFinder.cs
+    startLine: 311
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Determines whether an overload of the specified method exists that has more parameters.
+  example: []
+  syntax:
+    content: public bool HasOverloadWithMoreParameters(IMethodSymbol method, bool includeObsolete = false)
+    parameters:
+    - id: method
+      type: Microsoft.CodeAnalysis.IMethodSymbol
+      description: The method to find overloads for.
+    - id: includeObsolete
+      type: System.Boolean
+      description: >-
+        If <code>true</code>, includes methods marked with <xref href="System.ObsoleteAttribute" data-throw-if-not-resolved="false"></xref>;
+
+        otherwise, obsolete methods are excluded. Defaults to <code>false</code>.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if an overload exists with more parameters; otherwise, <code>false</code>.
+    content.vb: Public Function HasOverloadWithMoreParameters(method As IMethodSymbol, includeObsolete As Boolean = False) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithMoreParameters*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithFewerParameters(Microsoft.CodeAnalysis.IMethodSymbol,System.Boolean)
+    commentId: M:ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithFewerParameters(Microsoft.CodeAnalysis.IMethodSymbol,System.Boolean)
+  nameWithType.vb: OverloadFinder.HasOverloadWithMoreParameters(IMethodSymbol, Boolean)
+  fullName.vb: ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithMoreParameters(Microsoft.CodeAnalysis.IMethodSymbol, Boolean)
+  name.vb: HasOverloadWithMoreParameters(IMethodSymbol, Boolean)
+references:
+- uid: Microsoft.CodeAnalysis.IMethodSymbol
+  commentId: T:Microsoft.CodeAnalysis.IMethodSymbol
+  parent: Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.imethodsymbol
+  name: IMethodSymbol
+  nameWithType: IMethodSymbol
+  fullName: Microsoft.CodeAnalysis.IMethodSymbol
+- uid: Microsoft.CodeAnalysis.Operations.IInvocationOperation
+  commentId: T:Microsoft.CodeAnalysis.Operations.IInvocationOperation
+  parent: Microsoft.CodeAnalysis.Operations
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.operations.iinvocationoperation
+  name: IInvocationOperation
+  nameWithType: IInvocationOperation
+  fullName: Microsoft.CodeAnalysis.Operations.IInvocationOperation
+- uid: Microsoft.CodeAnalysis.Compilation
+  commentId: T:Microsoft.CodeAnalysis.Compilation
+  parent: Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.compilation
+  name: Compilation
+  nameWithType: Compilation
+  fullName: Microsoft.CodeAnalysis.Compilation
+- uid: ANcpLua.Roslyn.Utilities
+  commentId: N:ANcpLua.Roslyn.Utilities
+  href: ANcpLua.html
+  name: ANcpLua.Roslyn.Utilities
+  nameWithType: ANcpLua.Roslyn.Utilities
+  fullName: ANcpLua.Roslyn.Utilities
+  spec.csharp:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  spec.vb:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.OverloadFinder.ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+  parent: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+  definition: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  name: ToResultWithDiagnostics<OverloadFinder>(OverloadFinder)
+  nameWithType: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<OverloadFinder>(OverloadFinder)
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<ANcpLua.Roslyn.Utilities.OverloadFinder>(ANcpLua.Roslyn.Utilities.OverloadFinder)
+  nameWithType.vb: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of OverloadFinder)(OverloadFinder)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of ANcpLua.Roslyn.Utilities.OverloadFinder)(ANcpLua.Roslyn.Utilities.OverloadFinder)
+  name.vb: ToResultWithDiagnostics(Of OverloadFinder)(OverloadFinder)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(ANcpLua.Roslyn.Utilities.OverloadFinder)
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.OverloadFinder
+    name: OverloadFinder
+    href: ANcpLua.Roslyn.Utilities.OverloadFinder.html
+  - name: '>'
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.OverloadFinder
+    name: OverloadFinder
+    href: ANcpLua.Roslyn.Utilities.OverloadFinder.html
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(ANcpLua.Roslyn.Utilities.OverloadFinder)
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.OverloadFinder
+    name: OverloadFinder
+    href: ANcpLua.Roslyn.Utilities.OverloadFinder.html
+  - name: )
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.OverloadFinder
+    name: OverloadFinder
+    href: ANcpLua.Roslyn.Utilities.OverloadFinder.html
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.OverloadFinder.ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  parent: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+  definition: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  name: ToResultWithDiagnostics<OverloadFinder>(OverloadFinder, ImmutableArray<DiagnosticInfo>)
+  nameWithType: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<OverloadFinder>(OverloadFinder, ImmutableArray<DiagnosticInfo>)
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<ANcpLua.Roslyn.Utilities.OverloadFinder>(ANcpLua.Roslyn.Utilities.OverloadFinder, System.Collections.Immutable.ImmutableArray<ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo>)
+  nameWithType.vb: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of OverloadFinder)(OverloadFinder, ImmutableArray(Of DiagnosticInfo))
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of ANcpLua.Roslyn.Utilities.OverloadFinder)(ANcpLua.Roslyn.Utilities.OverloadFinder, System.Collections.Immutable.ImmutableArray(Of ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo))
+  name.vb: ToResultWithDiagnostics(Of OverloadFinder)(OverloadFinder, ImmutableArray(Of DiagnosticInfo))
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(ANcpLua.Roslyn.Utilities.OverloadFinder,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.OverloadFinder
+    name: OverloadFinder
+    href: ANcpLua.Roslyn.Utilities.OverloadFinder.html
+  - name: '>'
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.OverloadFinder
+    name: OverloadFinder
+    href: ANcpLua.Roslyn.Utilities.OverloadFinder.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(ANcpLua.Roslyn.Utilities.OverloadFinder,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.OverloadFinder
+    name: OverloadFinder
+    href: ANcpLua.Roslyn.Utilities.OverloadFinder.html
+  - name: )
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.OverloadFinder
+    name: OverloadFinder
+    href: ANcpLua.Roslyn.Utilities.OverloadFinder.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: )
+  - name: )
+- uid: Microsoft.CodeAnalysis
+  commentId: N:Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.CodeAnalysis
+  nameWithType: Microsoft.CodeAnalysis
+  fullName: Microsoft.CodeAnalysis
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+- uid: Microsoft.CodeAnalysis.Operations
+  commentId: N:Microsoft.CodeAnalysis.Operations
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.CodeAnalysis.Operations
+  nameWithType: Microsoft.CodeAnalysis.Operations
+  fullName: Microsoft.CodeAnalysis.Operations
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+  - name: .
+  - uid: Microsoft.CodeAnalysis.Operations
+    name: Operations
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.operations
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+  - name: .
+  - uid: Microsoft.CodeAnalysis.Operations
+    name: Operations
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.operations
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  name: ToResultWithDiagnostics<T>(T)
+  nameWithType: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<T>(T)
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<T>(T)
+  nameWithType.vb: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of T)(T)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of T)(T)
+  name.vb: ToResultWithDiagnostics(Of T)(T)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+  commentId: T:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+  parent: ANcpLua.Roslyn.Utilities.Models
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html
+  name: ResultWithDiagnosticsExtensions
+  nameWithType: ResultWithDiagnosticsExtensions
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+- uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  name: ToResultWithDiagnostics<T>(T, ImmutableArray<DiagnosticInfo>)
+  nameWithType: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<T>(T, ImmutableArray<DiagnosticInfo>)
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<T>(T, System.Collections.Immutable.ImmutableArray<ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo>)
+  nameWithType.vb: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of T)(T, ImmutableArray(Of DiagnosticInfo))
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of T)(T, System.Collections.Immutable.ImmutableArray(Of ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo))
+  name.vb: ToResultWithDiagnostics(Of T)(T, ImmutableArray(Of DiagnosticInfo))
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: )
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Models
+  commentId: N:ANcpLua.Roslyn.Utilities.Models
+  href: ANcpLua.html
+  name: ANcpLua.Roslyn.Utilities.Models
+  nameWithType: ANcpLua.Roslyn.Utilities.Models
+  fullName: ANcpLua.Roslyn.Utilities.Models
+  spec.csharp:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities.Models
+    name: Models
+    href: ANcpLua.Roslyn.Utilities.Models.html
+  spec.vb:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities.Models
+    name: Models
+    href: ANcpLua.Roslyn.Utilities.Models.html
+- uid: ANcpLua.Roslyn.Utilities.OverloadFinder.#ctor*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.OverloadFinder.#ctor
+  href: ANcpLua.Roslyn.Utilities.OverloadFinder.html#ANcpLua_Roslyn_Utilities_OverloadFinder__ctor_Microsoft_CodeAnalysis_Compilation_
+  name: OverloadFinder
+  nameWithType: OverloadFinder.OverloadFinder
+  fullName: ANcpLua.Roslyn.Utilities.OverloadFinder.OverloadFinder
+  nameWithType.vb: OverloadFinder.New
+  fullName.vb: ANcpLua.Roslyn.Utilities.OverloadFinder.New
+  name.vb: New
+- uid: ANcpLua.Roslyn.Utilities.OverloadFinder.FindOverloadWithParameter(Microsoft.CodeAnalysis.IMethodSymbol,Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)
+  commentId: M:ANcpLua.Roslyn.Utilities.OverloadFinder.FindOverloadWithParameter(Microsoft.CodeAnalysis.IMethodSymbol,Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.OverloadFinder.html#ANcpLua_Roslyn_Utilities_OverloadFinder_FindOverloadWithParameter_Microsoft_CodeAnalysis_IMethodSymbol_Microsoft_CodeAnalysis_ITypeSymbol_System_Boolean_
+  name: FindOverloadWithParameter(IMethodSymbol, ITypeSymbol, bool)
+  nameWithType: OverloadFinder.FindOverloadWithParameter(IMethodSymbol, ITypeSymbol, bool)
+  fullName: ANcpLua.Roslyn.Utilities.OverloadFinder.FindOverloadWithParameter(Microsoft.CodeAnalysis.IMethodSymbol, Microsoft.CodeAnalysis.ITypeSymbol, bool)
+  nameWithType.vb: OverloadFinder.FindOverloadWithParameter(IMethodSymbol, ITypeSymbol, Boolean)
+  fullName.vb: ANcpLua.Roslyn.Utilities.OverloadFinder.FindOverloadWithParameter(Microsoft.CodeAnalysis.IMethodSymbol, Microsoft.CodeAnalysis.ITypeSymbol, Boolean)
+  name.vb: FindOverloadWithParameter(IMethodSymbol, ITypeSymbol, Boolean)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.OverloadFinder.FindOverloadWithParameter(Microsoft.CodeAnalysis.IMethodSymbol,Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)
+    name: FindOverloadWithParameter
+    href: ANcpLua.Roslyn.Utilities.OverloadFinder.html#ANcpLua_Roslyn_Utilities_OverloadFinder_FindOverloadWithParameter_Microsoft_CodeAnalysis_IMethodSymbol_Microsoft_CodeAnalysis_ITypeSymbol_System_Boolean_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IMethodSymbol
+    name: IMethodSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.imethodsymbol
+  - name: ','
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.OverloadFinder.FindOverloadWithParameter(Microsoft.CodeAnalysis.IMethodSymbol,Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)
+    name: FindOverloadWithParameter
+    href: ANcpLua.Roslyn.Utilities.OverloadFinder.html#ANcpLua_Roslyn_Utilities_OverloadFinder_FindOverloadWithParameter_Microsoft_CodeAnalysis_IMethodSymbol_Microsoft_CodeAnalysis_ITypeSymbol_System_Boolean_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IMethodSymbol
+    name: IMethodSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.imethodsymbol
+  - name: ','
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System.ObsoleteAttribute
+  commentId: T:System.ObsoleteAttribute
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.obsoleteattribute
+  name: ObsoleteAttribute
+  nameWithType: ObsoleteAttribute
+  fullName: System.ObsoleteAttribute
+- uid: ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithParameter*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithParameter
+  href: ANcpLua.Roslyn.Utilities.OverloadFinder.html#ANcpLua_Roslyn_Utilities_OverloadFinder_HasOverloadWithParameter_Microsoft_CodeAnalysis_IMethodSymbol_Microsoft_CodeAnalysis_ITypeSymbol_System_Boolean_
+  name: HasOverloadWithParameter
+  nameWithType: OverloadFinder.HasOverloadWithParameter
+  fullName: ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithParameter
+- uid: Microsoft.CodeAnalysis.ITypeSymbol
+  commentId: T:Microsoft.CodeAnalysis.ITypeSymbol
+  parent: Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  name: ITypeSymbol
+  nameWithType: ITypeSymbol
+  fullName: Microsoft.CodeAnalysis.ITypeSymbol
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: ANcpLua.Roslyn.Utilities.OverloadFinder.FindOverloadWithParameters(Microsoft.CodeAnalysis.IMethodSymbol,System.ReadOnlySpan{Microsoft.CodeAnalysis.ITypeSymbol},System.Boolean)
+  commentId: M:ANcpLua.Roslyn.Utilities.OverloadFinder.FindOverloadWithParameters(Microsoft.CodeAnalysis.IMethodSymbol,System.ReadOnlySpan{Microsoft.CodeAnalysis.ITypeSymbol},System.Boolean)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.OverloadFinder.html#ANcpLua_Roslyn_Utilities_OverloadFinder_FindOverloadWithParameters_Microsoft_CodeAnalysis_IMethodSymbol_System_ReadOnlySpan_Microsoft_CodeAnalysis_ITypeSymbol__System_Boolean_
+  name: FindOverloadWithParameters(IMethodSymbol, ReadOnlySpan<ITypeSymbol>, bool)
+  nameWithType: OverloadFinder.FindOverloadWithParameters(IMethodSymbol, ReadOnlySpan<ITypeSymbol>, bool)
+  fullName: ANcpLua.Roslyn.Utilities.OverloadFinder.FindOverloadWithParameters(Microsoft.CodeAnalysis.IMethodSymbol, System.ReadOnlySpan<Microsoft.CodeAnalysis.ITypeSymbol>, bool)
+  nameWithType.vb: OverloadFinder.FindOverloadWithParameters(IMethodSymbol, ReadOnlySpan(Of ITypeSymbol), Boolean)
+  fullName.vb: ANcpLua.Roslyn.Utilities.OverloadFinder.FindOverloadWithParameters(Microsoft.CodeAnalysis.IMethodSymbol, System.ReadOnlySpan(Of Microsoft.CodeAnalysis.ITypeSymbol), Boolean)
+  name.vb: FindOverloadWithParameters(IMethodSymbol, ReadOnlySpan(Of ITypeSymbol), Boolean)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.OverloadFinder.FindOverloadWithParameters(Microsoft.CodeAnalysis.IMethodSymbol,System.ReadOnlySpan{Microsoft.CodeAnalysis.ITypeSymbol},System.Boolean)
+    name: FindOverloadWithParameters
+    href: ANcpLua.Roslyn.Utilities.OverloadFinder.html#ANcpLua_Roslyn_Utilities_OverloadFinder_FindOverloadWithParameters_Microsoft_CodeAnalysis_IMethodSymbol_System_ReadOnlySpan_Microsoft_CodeAnalysis_ITypeSymbol__System_Boolean_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IMethodSymbol
+    name: IMethodSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.imethodsymbol
+  - name: ','
+  - name: " "
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.OverloadFinder.FindOverloadWithParameters(Microsoft.CodeAnalysis.IMethodSymbol,System.ReadOnlySpan{Microsoft.CodeAnalysis.ITypeSymbol},System.Boolean)
+    name: FindOverloadWithParameters
+    href: ANcpLua.Roslyn.Utilities.OverloadFinder.html#ANcpLua_Roslyn_Utilities_OverloadFinder_FindOverloadWithParameters_Microsoft_CodeAnalysis_IMethodSymbol_System_ReadOnlySpan_Microsoft_CodeAnalysis_ITypeSymbol__System_Boolean_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IMethodSymbol
+    name: IMethodSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.imethodsymbol
+  - name: ','
+  - name: " "
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithParameters*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithParameters
+  href: ANcpLua.Roslyn.Utilities.OverloadFinder.html#ANcpLua_Roslyn_Utilities_OverloadFinder_HasOverloadWithParameters_Microsoft_CodeAnalysis_IMethodSymbol_System_ReadOnlySpan_Microsoft_CodeAnalysis_ITypeSymbol__System_Boolean_
+  name: HasOverloadWithParameters
+  nameWithType: OverloadFinder.HasOverloadWithParameters
+  fullName: ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithParameters
+- uid: System.ReadOnlySpan{Microsoft.CodeAnalysis.ITypeSymbol}
+  commentId: T:System.ReadOnlySpan{Microsoft.CodeAnalysis.ITypeSymbol}
+  parent: System
+  definition: System.ReadOnlySpan`1
+  href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  name: ReadOnlySpan<ITypeSymbol>
+  nameWithType: ReadOnlySpan<ITypeSymbol>
+  fullName: System.ReadOnlySpan<Microsoft.CodeAnalysis.ITypeSymbol>
+  nameWithType.vb: ReadOnlySpan(Of ITypeSymbol)
+  fullName.vb: System.ReadOnlySpan(Of Microsoft.CodeAnalysis.ITypeSymbol)
+  name.vb: ReadOnlySpan(Of ITypeSymbol)
+  spec.csharp:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+- uid: System.ReadOnlySpan`1
+  commentId: T:System.ReadOnlySpan`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  name: ReadOnlySpan<T>
+  nameWithType: ReadOnlySpan<T>
+  fullName: System.ReadOnlySpan<T>
+  nameWithType.vb: ReadOnlySpan(Of T)
+  fullName.vb: System.ReadOnlySpan(Of T)
+  name.vb: ReadOnlySpan(Of T)
+  spec.csharp:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithParameter(Microsoft.CodeAnalysis.IMethodSymbol,Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)
+  commentId: M:ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithParameter(Microsoft.CodeAnalysis.IMethodSymbol,Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.OverloadFinder.html#ANcpLua_Roslyn_Utilities_OverloadFinder_HasOverloadWithParameter_Microsoft_CodeAnalysis_IMethodSymbol_Microsoft_CodeAnalysis_ITypeSymbol_System_Boolean_
+  name: HasOverloadWithParameter(IMethodSymbol, ITypeSymbol, bool)
+  nameWithType: OverloadFinder.HasOverloadWithParameter(IMethodSymbol, ITypeSymbol, bool)
+  fullName: ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithParameter(Microsoft.CodeAnalysis.IMethodSymbol, Microsoft.CodeAnalysis.ITypeSymbol, bool)
+  nameWithType.vb: OverloadFinder.HasOverloadWithParameter(IMethodSymbol, ITypeSymbol, Boolean)
+  fullName.vb: ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithParameter(Microsoft.CodeAnalysis.IMethodSymbol, Microsoft.CodeAnalysis.ITypeSymbol, Boolean)
+  name.vb: HasOverloadWithParameter(IMethodSymbol, ITypeSymbol, Boolean)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithParameter(Microsoft.CodeAnalysis.IMethodSymbol,Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)
+    name: HasOverloadWithParameter
+    href: ANcpLua.Roslyn.Utilities.OverloadFinder.html#ANcpLua_Roslyn_Utilities_OverloadFinder_HasOverloadWithParameter_Microsoft_CodeAnalysis_IMethodSymbol_Microsoft_CodeAnalysis_ITypeSymbol_System_Boolean_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IMethodSymbol
+    name: IMethodSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.imethodsymbol
+  - name: ','
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithParameter(Microsoft.CodeAnalysis.IMethodSymbol,Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)
+    name: HasOverloadWithParameter
+    href: ANcpLua.Roslyn.Utilities.OverloadFinder.html#ANcpLua_Roslyn_Utilities_OverloadFinder_HasOverloadWithParameter_Microsoft_CodeAnalysis_IMethodSymbol_Microsoft_CodeAnalysis_ITypeSymbol_System_Boolean_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IMethodSymbol
+    name: IMethodSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.imethodsymbol
+  - name: ','
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.OverloadFinder.FindOverloadWithParameter*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.OverloadFinder.FindOverloadWithParameter
+  href: ANcpLua.Roslyn.Utilities.OverloadFinder.html#ANcpLua_Roslyn_Utilities_OverloadFinder_FindOverloadWithParameter_Microsoft_CodeAnalysis_IMethodSymbol_Microsoft_CodeAnalysis_ITypeSymbol_System_Boolean_
+  name: FindOverloadWithParameter
+  nameWithType: OverloadFinder.FindOverloadWithParameter
+  fullName: ANcpLua.Roslyn.Utilities.OverloadFinder.FindOverloadWithParameter
+- uid: ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithParameters(Microsoft.CodeAnalysis.IMethodSymbol,System.ReadOnlySpan{Microsoft.CodeAnalysis.ITypeSymbol},System.Boolean)
+  commentId: M:ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithParameters(Microsoft.CodeAnalysis.IMethodSymbol,System.ReadOnlySpan{Microsoft.CodeAnalysis.ITypeSymbol},System.Boolean)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.OverloadFinder.html#ANcpLua_Roslyn_Utilities_OverloadFinder_HasOverloadWithParameters_Microsoft_CodeAnalysis_IMethodSymbol_System_ReadOnlySpan_Microsoft_CodeAnalysis_ITypeSymbol__System_Boolean_
+  name: HasOverloadWithParameters(IMethodSymbol, ReadOnlySpan<ITypeSymbol>, bool)
+  nameWithType: OverloadFinder.HasOverloadWithParameters(IMethodSymbol, ReadOnlySpan<ITypeSymbol>, bool)
+  fullName: ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithParameters(Microsoft.CodeAnalysis.IMethodSymbol, System.ReadOnlySpan<Microsoft.CodeAnalysis.ITypeSymbol>, bool)
+  nameWithType.vb: OverloadFinder.HasOverloadWithParameters(IMethodSymbol, ReadOnlySpan(Of ITypeSymbol), Boolean)
+  fullName.vb: ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithParameters(Microsoft.CodeAnalysis.IMethodSymbol, System.ReadOnlySpan(Of Microsoft.CodeAnalysis.ITypeSymbol), Boolean)
+  name.vb: HasOverloadWithParameters(IMethodSymbol, ReadOnlySpan(Of ITypeSymbol), Boolean)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithParameters(Microsoft.CodeAnalysis.IMethodSymbol,System.ReadOnlySpan{Microsoft.CodeAnalysis.ITypeSymbol},System.Boolean)
+    name: HasOverloadWithParameters
+    href: ANcpLua.Roslyn.Utilities.OverloadFinder.html#ANcpLua_Roslyn_Utilities_OverloadFinder_HasOverloadWithParameters_Microsoft_CodeAnalysis_IMethodSymbol_System_ReadOnlySpan_Microsoft_CodeAnalysis_ITypeSymbol__System_Boolean_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IMethodSymbol
+    name: IMethodSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.imethodsymbol
+  - name: ','
+  - name: " "
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithParameters(Microsoft.CodeAnalysis.IMethodSymbol,System.ReadOnlySpan{Microsoft.CodeAnalysis.ITypeSymbol},System.Boolean)
+    name: HasOverloadWithParameters
+    href: ANcpLua.Roslyn.Utilities.OverloadFinder.html#ANcpLua_Roslyn_Utilities_OverloadFinder_HasOverloadWithParameters_Microsoft_CodeAnalysis_IMethodSymbol_System_ReadOnlySpan_Microsoft_CodeAnalysis_ITypeSymbol__System_Boolean_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IMethodSymbol
+    name: IMethodSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.imethodsymbol
+  - name: ','
+  - name: " "
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.OverloadFinder.FindOverloadWithParameters*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.OverloadFinder.FindOverloadWithParameters
+  href: ANcpLua.Roslyn.Utilities.OverloadFinder.html#ANcpLua_Roslyn_Utilities_OverloadFinder_FindOverloadWithParameters_Microsoft_CodeAnalysis_IMethodSymbol_System_ReadOnlySpan_Microsoft_CodeAnalysis_ITypeSymbol__System_Boolean_
+  name: FindOverloadWithParameters
+  nameWithType: OverloadFinder.FindOverloadWithParameters
+  fullName: ANcpLua.Roslyn.Utilities.OverloadFinder.FindOverloadWithParameters
+- uid: ANcpLua.Roslyn.Utilities.OverloadFinder.FindAllOverloads(Microsoft.CodeAnalysis.IMethodSymbol,System.Boolean)
+  commentId: M:ANcpLua.Roslyn.Utilities.OverloadFinder.FindAllOverloads(Microsoft.CodeAnalysis.IMethodSymbol,System.Boolean)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.OverloadFinder.html#ANcpLua_Roslyn_Utilities_OverloadFinder_FindAllOverloads_Microsoft_CodeAnalysis_IMethodSymbol_System_Boolean_
+  name: FindAllOverloads(IMethodSymbol, bool)
+  nameWithType: OverloadFinder.FindAllOverloads(IMethodSymbol, bool)
+  fullName: ANcpLua.Roslyn.Utilities.OverloadFinder.FindAllOverloads(Microsoft.CodeAnalysis.IMethodSymbol, bool)
+  nameWithType.vb: OverloadFinder.FindAllOverloads(IMethodSymbol, Boolean)
+  fullName.vb: ANcpLua.Roslyn.Utilities.OverloadFinder.FindAllOverloads(Microsoft.CodeAnalysis.IMethodSymbol, Boolean)
+  name.vb: FindAllOverloads(IMethodSymbol, Boolean)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.OverloadFinder.FindAllOverloads(Microsoft.CodeAnalysis.IMethodSymbol,System.Boolean)
+    name: FindAllOverloads
+    href: ANcpLua.Roslyn.Utilities.OverloadFinder.html#ANcpLua_Roslyn_Utilities_OverloadFinder_FindAllOverloads_Microsoft_CodeAnalysis_IMethodSymbol_System_Boolean_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IMethodSymbol
+    name: IMethodSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.imethodsymbol
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.OverloadFinder.FindAllOverloads(Microsoft.CodeAnalysis.IMethodSymbol,System.Boolean)
+    name: FindAllOverloads
+    href: ANcpLua.Roslyn.Utilities.OverloadFinder.html#ANcpLua_Roslyn_Utilities_OverloadFinder_FindAllOverloads_Microsoft_CodeAnalysis_IMethodSymbol_System_Boolean_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IMethodSymbol
+    name: IMethodSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.imethodsymbol
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.OverloadFinder.FindOverload*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.OverloadFinder.FindOverload
+  href: ANcpLua.Roslyn.Utilities.OverloadFinder.html#ANcpLua_Roslyn_Utilities_OverloadFinder_FindOverload_Microsoft_CodeAnalysis_IMethodSymbol_System_Func_Microsoft_CodeAnalysis_IMethodSymbol_System_Boolean__System_Boolean_
+  name: FindOverload
+  nameWithType: OverloadFinder.FindOverload
+  fullName: ANcpLua.Roslyn.Utilities.OverloadFinder.FindOverload
+- uid: System.Func{Microsoft.CodeAnalysis.IMethodSymbol,System.Boolean}
+  commentId: T:System.Func{Microsoft.CodeAnalysis.IMethodSymbol,System.Boolean}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<IMethodSymbol, bool>
+  nameWithType: Func<IMethodSymbol, bool>
+  fullName: System.Func<Microsoft.CodeAnalysis.IMethodSymbol, bool>
+  nameWithType.vb: Func(Of IMethodSymbol, Boolean)
+  fullName.vb: System.Func(Of Microsoft.CodeAnalysis.IMethodSymbol, Boolean)
+  name.vb: Func(Of IMethodSymbol, Boolean)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: Microsoft.CodeAnalysis.IMethodSymbol
+    name: IMethodSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.imethodsymbol
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.IMethodSymbol
+    name: IMethodSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.imethodsymbol
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System.Func`2
+  commentId: T:System.Func`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<T, TResult>
+  nameWithType: Func<T, TResult>
+  fullName: System.Func<T, TResult>
+  nameWithType.vb: Func(Of T, TResult)
+  fullName.vb: System.Func(Of T, TResult)
+  name.vb: Func(Of T, TResult)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.OverloadFinder.FindOverload(Microsoft.CodeAnalysis.IMethodSymbol,System.Func{Microsoft.CodeAnalysis.IMethodSymbol,System.Boolean},System.Boolean)
+  commentId: M:ANcpLua.Roslyn.Utilities.OverloadFinder.FindOverload(Microsoft.CodeAnalysis.IMethodSymbol,System.Func{Microsoft.CodeAnalysis.IMethodSymbol,System.Boolean},System.Boolean)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.OverloadFinder.html#ANcpLua_Roslyn_Utilities_OverloadFinder_FindOverload_Microsoft_CodeAnalysis_IMethodSymbol_System_Func_Microsoft_CodeAnalysis_IMethodSymbol_System_Boolean__System_Boolean_
+  name: FindOverload(IMethodSymbol, Func<IMethodSymbol, bool>, bool)
+  nameWithType: OverloadFinder.FindOverload(IMethodSymbol, Func<IMethodSymbol, bool>, bool)
+  fullName: ANcpLua.Roslyn.Utilities.OverloadFinder.FindOverload(Microsoft.CodeAnalysis.IMethodSymbol, System.Func<Microsoft.CodeAnalysis.IMethodSymbol, bool>, bool)
+  nameWithType.vb: OverloadFinder.FindOverload(IMethodSymbol, Func(Of IMethodSymbol, Boolean), Boolean)
+  fullName.vb: ANcpLua.Roslyn.Utilities.OverloadFinder.FindOverload(Microsoft.CodeAnalysis.IMethodSymbol, System.Func(Of Microsoft.CodeAnalysis.IMethodSymbol, Boolean), Boolean)
+  name.vb: FindOverload(IMethodSymbol, Func(Of IMethodSymbol, Boolean), Boolean)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.OverloadFinder.FindOverload(Microsoft.CodeAnalysis.IMethodSymbol,System.Func{Microsoft.CodeAnalysis.IMethodSymbol,System.Boolean},System.Boolean)
+    name: FindOverload
+    href: ANcpLua.Roslyn.Utilities.OverloadFinder.html#ANcpLua_Roslyn_Utilities_OverloadFinder_FindOverload_Microsoft_CodeAnalysis_IMethodSymbol_System_Func_Microsoft_CodeAnalysis_IMethodSymbol_System_Boolean__System_Boolean_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IMethodSymbol
+    name: IMethodSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.imethodsymbol
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: Microsoft.CodeAnalysis.IMethodSymbol
+    name: IMethodSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.imethodsymbol
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.OverloadFinder.FindOverload(Microsoft.CodeAnalysis.IMethodSymbol,System.Func{Microsoft.CodeAnalysis.IMethodSymbol,System.Boolean},System.Boolean)
+    name: FindOverload
+    href: ANcpLua.Roslyn.Utilities.OverloadFinder.html#ANcpLua_Roslyn_Utilities_OverloadFinder_FindOverload_Microsoft_CodeAnalysis_IMethodSymbol_System_Func_Microsoft_CodeAnalysis_IMethodSymbol_System_Boolean__System_Boolean_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IMethodSymbol
+    name: IMethodSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.imethodsymbol
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.IMethodSymbol
+    name: IMethodSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.imethodsymbol
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.OverloadFinder.FindAllOverloads*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.OverloadFinder.FindAllOverloads
+  href: ANcpLua.Roslyn.Utilities.OverloadFinder.html#ANcpLua_Roslyn_Utilities_OverloadFinder_FindAllOverloads_Microsoft_CodeAnalysis_IMethodSymbol_System_Boolean_
+  name: FindAllOverloads
+  nameWithType: OverloadFinder.FindAllOverloads
+  fullName: ANcpLua.Roslyn.Utilities.OverloadFinder.FindAllOverloads
+- uid: System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.IMethodSymbol}
+  commentId: T:System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.IMethodSymbol}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<IMethodSymbol>
+  nameWithType: IEnumerable<IMethodSymbol>
+  fullName: System.Collections.Generic.IEnumerable<Microsoft.CodeAnalysis.IMethodSymbol>
+  nameWithType.vb: IEnumerable(Of IMethodSymbol)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Microsoft.CodeAnalysis.IMethodSymbol)
+  name.vb: IEnumerable(Of IMethodSymbol)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: Microsoft.CodeAnalysis.IMethodSymbol
+    name: IMethodSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.imethodsymbol
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.IMethodSymbol
+    name: IMethodSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.imethodsymbol
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithReturnType*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithReturnType
+  href: ANcpLua.Roslyn.Utilities.OverloadFinder.html#ANcpLua_Roslyn_Utilities_OverloadFinder_HasOverloadWithReturnType_Microsoft_CodeAnalysis_IMethodSymbol_Microsoft_CodeAnalysis_ITypeSymbol_System_Boolean_
+  name: HasOverloadWithReturnType
+  nameWithType: OverloadFinder.HasOverloadWithReturnType
+  fullName: ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithReturnType
+- uid: ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithMoreParameters(Microsoft.CodeAnalysis.IMethodSymbol,System.Boolean)
+  commentId: M:ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithMoreParameters(Microsoft.CodeAnalysis.IMethodSymbol,System.Boolean)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.OverloadFinder.html#ANcpLua_Roslyn_Utilities_OverloadFinder_HasOverloadWithMoreParameters_Microsoft_CodeAnalysis_IMethodSymbol_System_Boolean_
+  name: HasOverloadWithMoreParameters(IMethodSymbol, bool)
+  nameWithType: OverloadFinder.HasOverloadWithMoreParameters(IMethodSymbol, bool)
+  fullName: ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithMoreParameters(Microsoft.CodeAnalysis.IMethodSymbol, bool)
+  nameWithType.vb: OverloadFinder.HasOverloadWithMoreParameters(IMethodSymbol, Boolean)
+  fullName.vb: ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithMoreParameters(Microsoft.CodeAnalysis.IMethodSymbol, Boolean)
+  name.vb: HasOverloadWithMoreParameters(IMethodSymbol, Boolean)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithMoreParameters(Microsoft.CodeAnalysis.IMethodSymbol,System.Boolean)
+    name: HasOverloadWithMoreParameters
+    href: ANcpLua.Roslyn.Utilities.OverloadFinder.html#ANcpLua_Roslyn_Utilities_OverloadFinder_HasOverloadWithMoreParameters_Microsoft_CodeAnalysis_IMethodSymbol_System_Boolean_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IMethodSymbol
+    name: IMethodSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.imethodsymbol
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithMoreParameters(Microsoft.CodeAnalysis.IMethodSymbol,System.Boolean)
+    name: HasOverloadWithMoreParameters
+    href: ANcpLua.Roslyn.Utilities.OverloadFinder.html#ANcpLua_Roslyn_Utilities_OverloadFinder_HasOverloadWithMoreParameters_Microsoft_CodeAnalysis_IMethodSymbol_System_Boolean_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IMethodSymbol
+    name: IMethodSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.imethodsymbol
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithFewerParameters*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithFewerParameters
+  href: ANcpLua.Roslyn.Utilities.OverloadFinder.html#ANcpLua_Roslyn_Utilities_OverloadFinder_HasOverloadWithFewerParameters_Microsoft_CodeAnalysis_IMethodSymbol_System_Boolean_
+  name: HasOverloadWithFewerParameters
+  nameWithType: OverloadFinder.HasOverloadWithFewerParameters
+  fullName: ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithFewerParameters
+- uid: ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithFewerParameters(Microsoft.CodeAnalysis.IMethodSymbol,System.Boolean)
+  commentId: M:ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithFewerParameters(Microsoft.CodeAnalysis.IMethodSymbol,System.Boolean)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.OverloadFinder.html#ANcpLua_Roslyn_Utilities_OverloadFinder_HasOverloadWithFewerParameters_Microsoft_CodeAnalysis_IMethodSymbol_System_Boolean_
+  name: HasOverloadWithFewerParameters(IMethodSymbol, bool)
+  nameWithType: OverloadFinder.HasOverloadWithFewerParameters(IMethodSymbol, bool)
+  fullName: ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithFewerParameters(Microsoft.CodeAnalysis.IMethodSymbol, bool)
+  nameWithType.vb: OverloadFinder.HasOverloadWithFewerParameters(IMethodSymbol, Boolean)
+  fullName.vb: ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithFewerParameters(Microsoft.CodeAnalysis.IMethodSymbol, Boolean)
+  name.vb: HasOverloadWithFewerParameters(IMethodSymbol, Boolean)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithFewerParameters(Microsoft.CodeAnalysis.IMethodSymbol,System.Boolean)
+    name: HasOverloadWithFewerParameters
+    href: ANcpLua.Roslyn.Utilities.OverloadFinder.html#ANcpLua_Roslyn_Utilities_OverloadFinder_HasOverloadWithFewerParameters_Microsoft_CodeAnalysis_IMethodSymbol_System_Boolean_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IMethodSymbol
+    name: IMethodSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.imethodsymbol
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithFewerParameters(Microsoft.CodeAnalysis.IMethodSymbol,System.Boolean)
+    name: HasOverloadWithFewerParameters
+    href: ANcpLua.Roslyn.Utilities.OverloadFinder.html#ANcpLua_Roslyn_Utilities_OverloadFinder_HasOverloadWithFewerParameters_Microsoft_CodeAnalysis_IMethodSymbol_System_Boolean_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IMethodSymbol
+    name: IMethodSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.imethodsymbol
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithMoreParameters*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithMoreParameters
+  href: ANcpLua.Roslyn.Utilities.OverloadFinder.html#ANcpLua_Roslyn_Utilities_OverloadFinder_HasOverloadWithMoreParameters_Microsoft_CodeAnalysis_IMethodSymbol_System_Boolean_
+  name: HasOverloadWithMoreParameters
+  nameWithType: OverloadFinder.HasOverloadWithMoreParameters
+  fullName: ANcpLua.Roslyn.Utilities.OverloadFinder.HasOverloadWithMoreParameters

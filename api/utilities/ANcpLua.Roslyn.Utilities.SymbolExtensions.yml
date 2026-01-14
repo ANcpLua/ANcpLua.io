@@ -1,0 +1,3003 @@
+### YamlMime:ManagedReference
+items:
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions
+  commentId: T:ANcpLua.Roslyn.Utilities.SymbolExtensions
+  id: SymbolExtensions
+  parent: ANcpLua.Roslyn.Utilities
+  children:
+  - ANcpLua.Roslyn.Utilities.SymbolExtensions.ExplicitInterfaceImplementations(Microsoft.CodeAnalysis.ISymbol)
+  - ANcpLua.Roslyn.Utilities.SymbolExtensions.ExplicitOrImplicitInterfaceImplementations(Microsoft.CodeAnalysis.ISymbol)
+  - ANcpLua.Roslyn.Utilities.SymbolExtensions.ExplicitlyImplements(Microsoft.CodeAnalysis.IMethodSymbol,Microsoft.CodeAnalysis.IMethodSymbol)
+  - ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllMembers(Microsoft.CodeAnalysis.INamespaceOrTypeSymbol,System.String)
+  - ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllMembers(Microsoft.CodeAnalysis.ITypeSymbol)
+  - ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllMembers(Microsoft.CodeAnalysis.ITypeSymbol,System.String)
+  - ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllTypeArguments(Microsoft.CodeAnalysis.ISymbol)
+  - ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllTypeParameters(Microsoft.CodeAnalysis.ISymbol)
+  - ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAttribute(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)
+  - ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAttribute(Microsoft.CodeAnalysis.ISymbol,System.String)
+  - ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAttributes(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)
+  - ANcpLua.Roslyn.Utilities.SymbolExtensions.GetFullyQualifiedName(Microsoft.CodeAnalysis.ITypeSymbol)
+  - ANcpLua.Roslyn.Utilities.SymbolExtensions.GetMetadataName(Microsoft.CodeAnalysis.ITypeSymbol)
+  - ANcpLua.Roslyn.Utilities.SymbolExtensions.GetMethod(Microsoft.CodeAnalysis.INamedTypeSymbol,System.String)
+  - ANcpLua.Roslyn.Utilities.SymbolExtensions.GetNamespaceName(Microsoft.CodeAnalysis.ISymbol)
+  - ANcpLua.Roslyn.Utilities.SymbolExtensions.GetOverriddenMember(Microsoft.CodeAnalysis.ISymbol)
+  - ANcpLua.Roslyn.Utilities.SymbolExtensions.GetProperty(Microsoft.CodeAnalysis.INamedTypeSymbol,System.String)
+  - ANcpLua.Roslyn.Utilities.SymbolExtensions.GetSymbolType(Microsoft.CodeAnalysis.ISymbol)
+  - ANcpLua.Roslyn.Utilities.SymbolExtensions.GetTypeArguments(Microsoft.CodeAnalysis.ISymbol)
+  - ANcpLua.Roslyn.Utilities.SymbolExtensions.GetTypeParameters(Microsoft.CodeAnalysis.ISymbol)
+  - ANcpLua.Roslyn.Utilities.SymbolExtensions.HasAttribute(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)
+  - ANcpLua.Roslyn.Utilities.SymbolExtensions.HasAttribute(Microsoft.CodeAnalysis.ISymbol,System.String)
+  - ANcpLua.Roslyn.Utilities.SymbolExtensions.IsConst(Microsoft.CodeAnalysis.ISymbol)
+  - ANcpLua.Roslyn.Utilities.SymbolExtensions.IsEqualTo(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.ISymbol)
+  - ANcpLua.Roslyn.Utilities.SymbolExtensions.IsOperator(Microsoft.CodeAnalysis.ISymbol)
+  - ANcpLua.Roslyn.Utilities.SymbolExtensions.IsTopLevelStatement(Microsoft.CodeAnalysis.ISymbol,System.Threading.CancellationToken)
+  - ANcpLua.Roslyn.Utilities.SymbolExtensions.IsVisibleOutsideOfAssembly(Microsoft.CodeAnalysis.ISymbol)
+  langs:
+  - csharp
+  - vb
+  name: SymbolExtensions
+  nameWithType: SymbolExtensions
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions
+  type: Class
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: SymbolExtensions
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
+    startLine: 28
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Provides extension methods for Roslyn symbol types.
+  remarks: >-
+    <p>
+        This class contains utility methods for working with <xref href="Microsoft.CodeAnalysis.ISymbol" data-throw-if-not-resolved="false"></xref> and its derived types,
+        including methods for symbol comparison, attribute lookup, accessibility checking, and member traversal.
+    </p>
+
+    <ul><li>Symbol comparison using <xref href="Microsoft.CodeAnalysis.SymbolEqualityComparer.Default" data-throw-if-not-resolved="false"></xref></li><li>Attribute lookup by name or type symbol with optional inheritance</li><li>Accessibility and visibility checks</li><li>Member traversal including inherited members</li><li>Type parameter and type argument retrieval</li><li>Interface implementation detection</li></ul>
+  example: []
+  syntax:
+    content: public static class SymbolExtensions
+    content.vb: Public Module SymbolExtensions
+  seealso:
+  - linkId: Microsoft.CodeAnalysis.ISymbol
+    commentId: T:Microsoft.CodeAnalysis.ISymbol
+  - linkId: Microsoft.CodeAnalysis.ITypeSymbol
+    commentId: T:Microsoft.CodeAnalysis.ITypeSymbol
+  - linkId: Microsoft.CodeAnalysis.IMethodSymbol
+    commentId: T:Microsoft.CodeAnalysis.IMethodSymbol
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.IsEqualTo(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.ISymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.IsEqualTo(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.ISymbol)
+  id: IsEqualTo(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.ISymbol)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.SymbolExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsEqualTo(ISymbol?, ISymbol?)
+  nameWithType: SymbolExtensions.IsEqualTo(ISymbol?, ISymbol?)
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.IsEqualTo(Microsoft.CodeAnalysis.ISymbol?, Microsoft.CodeAnalysis.ISymbol?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsEqualTo
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
+    startLine: 44
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Compares two symbols for equality using <xref href="Microsoft.CodeAnalysis.SymbolEqualityComparer.Default" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static bool IsEqualTo(this ISymbol? symbol, ISymbol? expectedType)
+    parameters:
+    - id: symbol
+      type: Microsoft.CodeAnalysis.ISymbol
+      description: The symbol to compare.
+    - id: expectedType
+      type: Microsoft.CodeAnalysis.ISymbol
+      description: The symbol to compare against.
+    return:
+      type: System.Boolean
+      description: >-
+        <code>true</code> if both symbols are non-null and equal according to <xref href="Microsoft.CodeAnalysis.SymbolEqualityComparer.Default" data-throw-if-not-resolved="false"></xref>;
+
+        otherwise, <code>false</code>.
+    content.vb: Public Shared Function IsEqualTo(symbol As ISymbol, expectedType As ISymbol) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.SymbolExtensions.IsEqualTo*
+  seealso:
+  - linkId: Microsoft.CodeAnalysis.SymbolEqualityComparer.Default
+    commentId: F:Microsoft.CodeAnalysis.SymbolEqualityComparer.Default
+  nameWithType.vb: SymbolExtensions.IsEqualTo(ISymbol, ISymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.SymbolExtensions.IsEqualTo(Microsoft.CodeAnalysis.ISymbol, Microsoft.CodeAnalysis.ISymbol)
+  name.vb: IsEqualTo(ISymbol, ISymbol)
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetFullyQualifiedName(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.GetFullyQualifiedName(Microsoft.CodeAnalysis.ITypeSymbol)
+  id: GetFullyQualifiedName(Microsoft.CodeAnalysis.ITypeSymbol)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.SymbolExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetFullyQualifiedName(ITypeSymbol)
+  nameWithType: SymbolExtensions.GetFullyQualifiedName(ITypeSymbol)
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetFullyQualifiedName(Microsoft.CodeAnalysis.ITypeSymbol)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: GetFullyQualifiedName
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
+    startLine: 59
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Gets the fully qualified name of a type symbol in the <code>global::Namespace.Type</code> format.
+  example: []
+  syntax:
+    content: public static string GetFullyQualifiedName(this ITypeSymbol symbol)
+    parameters:
+    - id: symbol
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The type symbol to get the name for.
+    return:
+      type: System.String
+      description: The fully qualified name including the <code>global::</code> prefix.
+    content.vb: Public Shared Function GetFullyQualifiedName(symbol As ITypeSymbol) As String
+  overload: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetFullyQualifiedName*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetMetadataName(Microsoft.CodeAnalysis.ITypeSymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.GetMetadataName(Microsoft.CodeAnalysis.ITypeSymbol)
+  - linkId: Microsoft.CodeAnalysis.SymbolDisplayFormat.FullyQualifiedFormat
+    commentId: P:Microsoft.CodeAnalysis.SymbolDisplayFormat.FullyQualifiedFormat
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetMetadataName(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.GetMetadataName(Microsoft.CodeAnalysis.ITypeSymbol)
+  id: GetMetadataName(Microsoft.CodeAnalysis.ITypeSymbol)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.SymbolExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetMetadataName(ITypeSymbol)
+  nameWithType: SymbolExtensions.GetMetadataName(ITypeSymbol)
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetMetadataName(Microsoft.CodeAnalysis.ITypeSymbol)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: GetMetadataName
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
+    startLine: 69
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Gets the metadata name of a type symbol in the <code>Namespace.Type</code> format.
+  example: []
+  syntax:
+    content: public static string GetMetadataName(this ITypeSymbol symbol)
+    parameters:
+    - id: symbol
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The type symbol to get the name for.
+    return:
+      type: System.String
+      description: The metadata name without the <code>global::</code> prefix.
+    content.vb: Public Shared Function GetMetadataName(symbol As ITypeSymbol) As String
+  overload: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetMetadataName*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetFullyQualifiedName(Microsoft.CodeAnalysis.ITypeSymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.GetFullyQualifiedName(Microsoft.CodeAnalysis.ITypeSymbol)
+  - linkId: Microsoft.CodeAnalysis.SymbolDisplayFormat.CSharpErrorMessageFormat
+    commentId: P:Microsoft.CodeAnalysis.SymbolDisplayFormat.CSharpErrorMessageFormat
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.HasAttribute(Microsoft.CodeAnalysis.ISymbol,System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.HasAttribute(Microsoft.CodeAnalysis.ISymbol,System.String)
+  id: HasAttribute(Microsoft.CodeAnalysis.ISymbol,System.String)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.SymbolExtensions
+  langs:
+  - csharp
+  - vb
+  name: HasAttribute(ISymbol, string)
+  nameWithType: SymbolExtensions.HasAttribute(ISymbol, string)
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.HasAttribute(Microsoft.CodeAnalysis.ISymbol, string)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: HasAttribute
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
+    startLine: 116
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Checks if a symbol has a specific attribute identified by its fully qualified name.
+  remarks: >-
+    <p>
+        The fully qualified name must match the format returned by
+        <code>ISymbol.ToDisplayString()</code> using the default format, which is
+        <code>Namespace.TypeName</code> without the <code>global::</code> prefix.
+    </p>
+
+    <ul><li>Include the full namespace path (e.g., <code>"System.Serializable"</code>)</li><li>Include the <code>Attribute</code> suffix if present in the type name</li><li>For nested types, use <code>+</code> separator (e.g., <code>"Outer+InnerAttribute"</code>)</li><li>For generic attributes, include type parameters (e.g., <code>"MyNamespace.GenericAttribute`1"</code>)</li></ul>
+  example:
+  - >-
+    <pre><code class="lang-csharp">// Check for common attributes
+
+    if (methodSymbol.HasAttribute("System.ObsoleteAttribute"))
+
+    {
+        // Method is marked obsolete
+    }
+
+
+    // Check for custom attributes
+
+    if (classSymbol.HasAttribute("MyNamespace.MyCustomAttribute"))
+
+    {
+        // Apply custom logic
+    }
+
+
+    // Check for serialization attributes
+
+    if (fieldSymbol.HasAttribute("System.NonSerializedAttribute"))
+
+    {
+        // Field should be excluded from serialization
+    }</code></pre>
+  syntax:
+    content: public static bool HasAttribute(this ISymbol symbol, string fullyQualifiedAttributeName)
+    parameters:
+    - id: symbol
+      type: Microsoft.CodeAnalysis.ISymbol
+      description: The symbol to check for the attribute.
+    - id: fullyQualifiedAttributeName
+      type: System.String
+      description: The fully qualified name of the attribute type (e.g., <code>"System.ObsoleteAttribute"</code>).
+    return:
+      type: System.Boolean
+      description: <code>true</code> if the symbol has the specified attribute; otherwise, <code>false</code>.
+    content.vb: Public Shared Function HasAttribute(symbol As ISymbol, fullyQualifiedAttributeName As String) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.SymbolExtensions.HasAttribute*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAttribute(Microsoft.CodeAnalysis.ISymbol,System.String)
+    commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAttribute(Microsoft.CodeAnalysis.ISymbol,System.String)
+  - linkId: ANcpLua.Roslyn.Utilities.SymbolExtensions.HasAttribute(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)
+    commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.HasAttribute(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)
+  nameWithType.vb: SymbolExtensions.HasAttribute(ISymbol, String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.SymbolExtensions.HasAttribute(Microsoft.CodeAnalysis.ISymbol, String)
+  name.vb: HasAttribute(ISymbol, String)
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAttribute(Microsoft.CodeAnalysis.ISymbol,System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAttribute(Microsoft.CodeAnalysis.ISymbol,System.String)
+  id: GetAttribute(Microsoft.CodeAnalysis.ISymbol,System.String)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.SymbolExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetAttribute(ISymbol, string)
+  nameWithType: SymbolExtensions.GetAttribute(ISymbol, string)
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAttribute(Microsoft.CodeAnalysis.ISymbol, string)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: GetAttribute
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
+    startLine: 139
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Gets the first attribute matching the specified fully qualified name.
+  example: []
+  syntax:
+    content: public static AttributeData? GetAttribute(this ISymbol symbol, string fullyQualifiedAttributeName)
+    parameters:
+    - id: symbol
+      type: Microsoft.CodeAnalysis.ISymbol
+      description: The symbol to search for the attribute.
+    - id: fullyQualifiedAttributeName
+      type: System.String
+      description: The fully qualified name of the attribute type (e.g., <code>"System.ObsoleteAttribute"</code>).
+    return:
+      type: Microsoft.CodeAnalysis.AttributeData
+      description: The <xref href="Microsoft.CodeAnalysis.AttributeData" data-throw-if-not-resolved="false"></xref> for the first matching attribute, or <code>null</code> if not found.
+    content.vb: Public Shared Function GetAttribute(symbol As ISymbol, fullyQualifiedAttributeName As String) As AttributeData
+  overload: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAttribute*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.SymbolExtensions.HasAttribute(Microsoft.CodeAnalysis.ISymbol,System.String)
+    commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.HasAttribute(Microsoft.CodeAnalysis.ISymbol,System.String)
+  - linkId: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAttribute(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)
+    commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAttribute(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)
+  nameWithType.vb: SymbolExtensions.GetAttribute(ISymbol, String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAttribute(Microsoft.CodeAnalysis.ISymbol, String)
+  name.vb: GetAttribute(ISymbol, String)
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAttributes(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)
+  commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAttributes(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)
+  id: GetAttributes(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.SymbolExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetAttributes(ISymbol, ITypeSymbol?, bool)
+  nameWithType: SymbolExtensions.GetAttributes(ISymbol, ITypeSymbol?, bool)
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAttributes(Microsoft.CodeAnalysis.ISymbol, Microsoft.CodeAnalysis.ITypeSymbol?, bool)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: GetAttributes
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
+    startLine: 166
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Gets all attributes of a specific type, optionally including inherited attribute types.
+  example: []
+  syntax:
+    content: public static IEnumerable<AttributeData> GetAttributes(this ISymbol symbol, ITypeSymbol? attributeType, bool inherits = true)
+    parameters:
+    - id: symbol
+      type: Microsoft.CodeAnalysis.ISymbol
+      description: The symbol to search for attributes.
+    - id: attributeType
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The type symbol representing the attribute type to find.
+    - id: inherits
+      type: System.Boolean
+      description: >-
+        <code>true</code> to include attributes that inherit from <code class="paramref">attributeType</code>;
+
+        <code>false</code> to match only exact types. Defaults to <code>true</code>.
+
+        This parameter is ignored if <code class="paramref">attributeType</code> is sealed.
+    return:
+      type: System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.AttributeData}
+      description: >-
+        An enumerable of <xref href="Microsoft.CodeAnalysis.AttributeData" data-throw-if-not-resolved="false"></xref> for all matching attributes.
+
+        Returns an empty enumerable if <code class="paramref">attributeType</code> is <code>null</code>.
+    content.vb: Public Shared Function GetAttributes(symbol As ISymbol, attributeType As ITypeSymbol, [inherits] As Boolean = True) As IEnumerable(Of AttributeData)
+  overload: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAttributes*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAttribute(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)
+    commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAttribute(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)
+  - linkId: ANcpLua.Roslyn.Utilities.SymbolExtensions.HasAttribute(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)
+    commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.HasAttribute(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)
+  nameWithType.vb: SymbolExtensions.GetAttributes(ISymbol, ITypeSymbol, Boolean)
+  fullName.vb: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAttributes(Microsoft.CodeAnalysis.ISymbol, Microsoft.CodeAnalysis.ITypeSymbol, Boolean)
+  name.vb: GetAttributes(ISymbol, ITypeSymbol, Boolean)
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAttribute(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)
+  commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAttribute(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)
+  id: GetAttribute(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.SymbolExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetAttribute(ISymbol, ITypeSymbol?, bool)
+  nameWithType: SymbolExtensions.GetAttribute(ISymbol, ITypeSymbol?, bool)
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAttribute(Microsoft.CodeAnalysis.ISymbol, Microsoft.CodeAnalysis.ITypeSymbol?, bool)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: GetAttribute
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
+    startLine: 207
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Gets the first attribute of a specific type, optionally including inherited attribute types.
+  example: []
+  syntax:
+    content: public static AttributeData? GetAttribute(this ISymbol symbol, ITypeSymbol? attributeType, bool inherits = true)
+    parameters:
+    - id: symbol
+      type: Microsoft.CodeAnalysis.ISymbol
+      description: The symbol to search for the attribute.
+    - id: attributeType
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The type symbol representing the attribute type to find.
+    - id: inherits
+      type: System.Boolean
+      description: >-
+        <code>true</code> to include attributes that inherit from <code class="paramref">attributeType</code>;
+
+        <code>false</code> to match only exact types. Defaults to <code>true</code>.
+    return:
+      type: Microsoft.CodeAnalysis.AttributeData
+      description: The <xref href="Microsoft.CodeAnalysis.AttributeData" data-throw-if-not-resolved="false"></xref> for the first matching attribute, or <code>null</code> if not found.
+    content.vb: Public Shared Function GetAttribute(symbol As ISymbol, attributeType As ITypeSymbol, [inherits] As Boolean = True) As AttributeData
+  overload: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAttribute*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAttributes(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)
+    commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAttributes(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)
+  - linkId: ANcpLua.Roslyn.Utilities.SymbolExtensions.HasAttribute(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)
+    commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.HasAttribute(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)
+  nameWithType.vb: SymbolExtensions.GetAttribute(ISymbol, ITypeSymbol, Boolean)
+  fullName.vb: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAttribute(Microsoft.CodeAnalysis.ISymbol, Microsoft.CodeAnalysis.ITypeSymbol, Boolean)
+  name.vb: GetAttribute(ISymbol, ITypeSymbol, Boolean)
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.HasAttribute(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)
+  commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.HasAttribute(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)
+  id: HasAttribute(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.SymbolExtensions
+  langs:
+  - csharp
+  - vb
+  name: HasAttribute(ISymbol, ITypeSymbol?, bool)
+  nameWithType: SymbolExtensions.HasAttribute(ISymbol, ITypeSymbol?, bool)
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.HasAttribute(Microsoft.CodeAnalysis.ISymbol, Microsoft.CodeAnalysis.ITypeSymbol?, bool)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: HasAttribute
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
+    startLine: 222
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Checks if a symbol has an attribute of a specific type.
+  example: []
+  syntax:
+    content: public static bool HasAttribute(this ISymbol symbol, ITypeSymbol? attributeType, bool inherits = true)
+    parameters:
+    - id: symbol
+      type: Microsoft.CodeAnalysis.ISymbol
+      description: The symbol to check for the attribute.
+    - id: attributeType
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The type symbol representing the attribute type to find.
+    - id: inherits
+      type: System.Boolean
+      description: >-
+        <code>true</code> to include attributes that inherit from <code class="paramref">attributeType</code>;
+
+        <code>false</code> to match only exact types. Defaults to <code>true</code>.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if the symbol has the specified attribute; otherwise, <code>false</code>.
+    content.vb: Public Shared Function HasAttribute(symbol As ISymbol, attributeType As ITypeSymbol, [inherits] As Boolean = True) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.SymbolExtensions.HasAttribute*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.SymbolExtensions.HasAttribute(Microsoft.CodeAnalysis.ISymbol,System.String)
+    commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.HasAttribute(Microsoft.CodeAnalysis.ISymbol,System.String)
+  - linkId: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAttribute(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)
+    commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAttribute(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)
+  nameWithType.vb: SymbolExtensions.HasAttribute(ISymbol, ITypeSymbol, Boolean)
+  fullName.vb: ANcpLua.Roslyn.Utilities.SymbolExtensions.HasAttribute(Microsoft.CodeAnalysis.ISymbol, Microsoft.CodeAnalysis.ITypeSymbol, Boolean)
+  name.vb: HasAttribute(ISymbol, ITypeSymbol, Boolean)
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.IsVisibleOutsideOfAssembly(Microsoft.CodeAnalysis.ISymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.IsVisibleOutsideOfAssembly(Microsoft.CodeAnalysis.ISymbol)
+  id: IsVisibleOutsideOfAssembly(Microsoft.CodeAnalysis.ISymbol)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.SymbolExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsVisibleOutsideOfAssembly(ISymbol?)
+  nameWithType: SymbolExtensions.IsVisibleOutsideOfAssembly(ISymbol?)
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.IsVisibleOutsideOfAssembly(Microsoft.CodeAnalysis.ISymbol?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsVisibleOutsideOfAssembly
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
+    startLine: 239
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Checks if a symbol is visible outside its containing assembly.
+  remarks: >-
+    <p>
+        This method recursively checks the containing type hierarchy to ensure
+        the symbol is accessible from outside the assembly.
+    </p>
+  example: []
+  syntax:
+    content: public static bool IsVisibleOutsideOfAssembly(this ISymbol? symbol)
+    parameters:
+    - id: symbol
+      type: Microsoft.CodeAnalysis.ISymbol
+      description: The symbol to check.
+    return:
+      type: System.Boolean
+      description: >-
+        <code>true</code> if the symbol and all its containing types have public, protected,
+
+        or protected internal accessibility; otherwise, <code>false</code>.
+    content.vb: Public Shared Function IsVisibleOutsideOfAssembly(symbol As ISymbol) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.SymbolExtensions.IsVisibleOutsideOfAssembly*
+  nameWithType.vb: SymbolExtensions.IsVisibleOutsideOfAssembly(ISymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.SymbolExtensions.IsVisibleOutsideOfAssembly(Microsoft.CodeAnalysis.ISymbol)
+  name.vb: IsVisibleOutsideOfAssembly(ISymbol)
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.IsOperator(Microsoft.CodeAnalysis.ISymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.IsOperator(Microsoft.CodeAnalysis.ISymbol)
+  id: IsOperator(Microsoft.CodeAnalysis.ISymbol)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.SymbolExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsOperator(ISymbol?)
+  nameWithType: SymbolExtensions.IsOperator(ISymbol?)
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.IsOperator(Microsoft.CodeAnalysis.ISymbol?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsOperator
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
+    startLine: 262
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Checks if a symbol is a user-defined operator or conversion method.
+  example: []
+  syntax:
+    content: public static bool IsOperator(this ISymbol? symbol)
+    parameters:
+    - id: symbol
+      type: Microsoft.CodeAnalysis.ISymbol
+      description: The symbol to check.
+    return:
+      type: System.Boolean
+      description: >-
+        <code>true</code> if the symbol is an <xref href="Microsoft.CodeAnalysis.IMethodSymbol" data-throw-if-not-resolved="false"></xref> with
+
+        <xref href="Microsoft.CodeAnalysis.MethodKind.UserDefinedOperator" data-throw-if-not-resolved="false"></xref> or <xref href="Microsoft.CodeAnalysis.MethodKind.Conversion" data-throw-if-not-resolved="false"></xref>;
+
+        otherwise, <code>false</code>.
+    content.vb: Public Shared Function IsOperator(symbol As ISymbol) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.SymbolExtensions.IsOperator*
+  nameWithType.vb: SymbolExtensions.IsOperator(ISymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.SymbolExtensions.IsOperator(Microsoft.CodeAnalysis.ISymbol)
+  name.vb: IsOperator(ISymbol)
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.IsConst(Microsoft.CodeAnalysis.ISymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.IsConst(Microsoft.CodeAnalysis.ISymbol)
+  id: IsConst(Microsoft.CodeAnalysis.ISymbol)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.SymbolExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsConst(ISymbol?)
+  nameWithType: SymbolExtensions.IsConst(ISymbol?)
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.IsConst(Microsoft.CodeAnalysis.ISymbol?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsConst
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
+    startLine: 275
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Checks if a symbol is a const field.
+  example: []
+  syntax:
+    content: public static bool IsConst(this ISymbol? symbol)
+    parameters:
+    - id: symbol
+      type: Microsoft.CodeAnalysis.ISymbol
+      description: The symbol to check.
+    return:
+      type: System.Boolean
+      description: >-
+        <code>true</code> if the symbol is an <xref href="Microsoft.CodeAnalysis.IFieldSymbol" data-throw-if-not-resolved="false"></xref> with <xref href="Microsoft.CodeAnalysis.IFieldSymbol.IsConst" data-throw-if-not-resolved="false"></xref>
+
+        set to <code>true</code>; otherwise, <code>false</code>.
+    content.vb: Public Shared Function IsConst(symbol As ISymbol) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.SymbolExtensions.IsConst*
+  nameWithType.vb: SymbolExtensions.IsConst(ISymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.SymbolExtensions.IsConst(Microsoft.CodeAnalysis.ISymbol)
+  name.vb: IsConst(ISymbol)
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllMembers(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllMembers(Microsoft.CodeAnalysis.ITypeSymbol)
+  id: GetAllMembers(Microsoft.CodeAnalysis.ITypeSymbol)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.SymbolExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetAllMembers(ITypeSymbol?)
+  nameWithType: SymbolExtensions.GetAllMembers(ITypeSymbol?)
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllMembers(Microsoft.CodeAnalysis.ITypeSymbol?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: GetAllMembers
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
+    startLine: 286
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Gets all members of a type including members inherited from base types.
+  example: []
+  syntax:
+    content: public static IEnumerable<ISymbol> GetAllMembers(this ITypeSymbol? symbol)
+    parameters:
+    - id: symbol
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The type symbol to get members from.
+    return:
+      type: System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.ISymbol}
+      description: An enumerable of all members from the type and its entire base type hierarchy.
+    content.vb: Public Shared Function GetAllMembers(symbol As ITypeSymbol) As IEnumerable(Of ISymbol)
+  overload: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllMembers*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllMembers(Microsoft.CodeAnalysis.ITypeSymbol,System.String)
+    commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllMembers(Microsoft.CodeAnalysis.ITypeSymbol,System.String)
+  - linkId: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllMembers(Microsoft.CodeAnalysis.INamespaceOrTypeSymbol,System.String)
+    commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllMembers(Microsoft.CodeAnalysis.INamespaceOrTypeSymbol,System.String)
+  nameWithType.vb: SymbolExtensions.GetAllMembers(ITypeSymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllMembers(Microsoft.CodeAnalysis.ITypeSymbol)
+  name.vb: GetAllMembers(ITypeSymbol)
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllMembers(Microsoft.CodeAnalysis.ITypeSymbol,System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllMembers(Microsoft.CodeAnalysis.ITypeSymbol,System.String)
+  id: GetAllMembers(Microsoft.CodeAnalysis.ITypeSymbol,System.String)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.SymbolExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetAllMembers(ITypeSymbol?, string)
+  nameWithType: SymbolExtensions.GetAllMembers(ITypeSymbol?, string)
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllMembers(Microsoft.CodeAnalysis.ITypeSymbol?, string)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: GetAllMembers
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
+    startLine: 307
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Gets all members with the specified name from a type including inherited members.
+  example: []
+  syntax:
+    content: public static IEnumerable<ISymbol> GetAllMembers(this ITypeSymbol? symbol, string name)
+    parameters:
+    - id: symbol
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The type symbol to get members from.
+    - id: name
+      type: System.String
+      description: The name of the members to find.
+    return:
+      type: System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.ISymbol}
+      description: An enumerable of all members with the specified name from the type and its base type hierarchy.
+    content.vb: Public Shared Function GetAllMembers(symbol As ITypeSymbol, name As String) As IEnumerable(Of ISymbol)
+  overload: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllMembers*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllMembers(Microsoft.CodeAnalysis.ITypeSymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllMembers(Microsoft.CodeAnalysis.ITypeSymbol)
+  - linkId: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllMembers(Microsoft.CodeAnalysis.INamespaceOrTypeSymbol,System.String)
+    commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllMembers(Microsoft.CodeAnalysis.INamespaceOrTypeSymbol,System.String)
+  nameWithType.vb: SymbolExtensions.GetAllMembers(ITypeSymbol, String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllMembers(Microsoft.CodeAnalysis.ITypeSymbol, String)
+  name.vb: GetAllMembers(ITypeSymbol, String)
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllMembers(Microsoft.CodeAnalysis.INamespaceOrTypeSymbol,System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllMembers(Microsoft.CodeAnalysis.INamespaceOrTypeSymbol,System.String)
+  id: GetAllMembers(Microsoft.CodeAnalysis.INamespaceOrTypeSymbol,System.String)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.SymbolExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetAllMembers(INamespaceOrTypeSymbol?, string)
+  nameWithType: SymbolExtensions.GetAllMembers(INamespaceOrTypeSymbol?, string)
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllMembers(Microsoft.CodeAnalysis.INamespaceOrTypeSymbol?, string)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: GetAllMembers
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
+    startLine: 330
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: >-
+    Gets all members with the specified name from a namespace or type symbol,
+
+    including inherited members and interface members for interface types.
+  example: []
+  syntax:
+    content: public static IEnumerable<ISymbol> GetAllMembers(this INamespaceOrTypeSymbol? symbol, string name)
+    parameters:
+    - id: symbol
+      type: Microsoft.CodeAnalysis.INamespaceOrTypeSymbol
+      description: The namespace or type symbol to get members from.
+    - id: name
+      type: System.String
+      description: The name of the members to find.
+    return:
+      type: System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.ISymbol}
+      description: >-
+        An enumerable of all members with the specified name. For interface types,
+
+        this includes members from all inherited interfaces.
+    content.vb: Public Shared Function GetAllMembers(symbol As INamespaceOrTypeSymbol, name As String) As IEnumerable(Of ISymbol)
+  overload: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllMembers*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllMembers(Microsoft.CodeAnalysis.ITypeSymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllMembers(Microsoft.CodeAnalysis.ITypeSymbol)
+  - linkId: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllMembers(Microsoft.CodeAnalysis.ITypeSymbol,System.String)
+    commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllMembers(Microsoft.CodeAnalysis.ITypeSymbol,System.String)
+  nameWithType.vb: SymbolExtensions.GetAllMembers(INamespaceOrTypeSymbol, String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllMembers(Microsoft.CodeAnalysis.INamespaceOrTypeSymbol, String)
+  name.vb: GetAllMembers(INamespaceOrTypeSymbol, String)
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.IsTopLevelStatement(Microsoft.CodeAnalysis.ISymbol,System.Threading.CancellationToken)
+  commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.IsTopLevelStatement(Microsoft.CodeAnalysis.ISymbol,System.Threading.CancellationToken)
+  id: IsTopLevelStatement(Microsoft.CodeAnalysis.ISymbol,System.Threading.CancellationToken)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.SymbolExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsTopLevelStatement(ISymbol, CancellationToken)
+  nameWithType: SymbolExtensions.IsTopLevelStatement(ISymbol, CancellationToken)
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.IsTopLevelStatement(Microsoft.CodeAnalysis.ISymbol, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsTopLevelStatement
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
+    startLine: 361
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Checks if a symbol is declared in a top-level statement.
+  example: []
+  syntax:
+    content: public static bool IsTopLevelStatement(this ISymbol symbol, CancellationToken cancellationToken)
+    parameters:
+    - id: symbol
+      type: Microsoft.CodeAnalysis.ISymbol
+      description: The symbol to check.
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: A token to monitor for cancellation requests.
+    return:
+      type: System.Boolean
+      description: >-
+        <code>true</code> if the symbol is declared in a compilation unit (top-level statements);
+
+        <code>false</code> if it has no declaring syntax references, is declared elsewhere,
+
+        or is in a generated file (ending with <code>.g.cs</code>).
+    content.vb: Public Shared Function IsTopLevelStatement(symbol As ISymbol, cancellationToken As CancellationToken) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.SymbolExtensions.IsTopLevelStatement*
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetSymbolType(Microsoft.CodeAnalysis.ISymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.GetSymbolType(Microsoft.CodeAnalysis.ISymbol)
+  id: GetSymbolType(Microsoft.CodeAnalysis.ISymbol)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.SymbolExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetSymbolType(ISymbol)
+  nameWithType: SymbolExtensions.GetSymbolType(ISymbol)
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetSymbolType(Microsoft.CodeAnalysis.ISymbol)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: GetSymbolType
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
+    startLine: 396
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Gets the type associated with a symbol, depending on the symbol kind.
+  example: []
+  syntax:
+    content: public static ITypeSymbol? GetSymbolType(this ISymbol symbol)
+    parameters:
+    - id: symbol
+      type: Microsoft.CodeAnalysis.ISymbol
+      description: The symbol to get the type from.
+    return:
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: >-
+        The associated <xref href="Microsoft.CodeAnalysis.ITypeSymbol" data-throw-if-not-resolved="false"></xref>:
+
+        <ul><li>For <xref href="Microsoft.CodeAnalysis.IParameterSymbol" data-throw-if-not-resolved="false"></xref>: the parameter type</li><li>For <xref href="Microsoft.CodeAnalysis.IFieldSymbol" data-throw-if-not-resolved="false"></xref>: the field type</li><li>For <xref href="Microsoft.CodeAnalysis.IPropertySymbol" data-throw-if-not-resolved="false"></xref> with a getter: the property type</li><li>For <xref href="Microsoft.CodeAnalysis.ILocalSymbol" data-throw-if-not-resolved="false"></xref>: the local variable type</li><li>For <xref href="Microsoft.CodeAnalysis.IMethodSymbol" data-throw-if-not-resolved="false"></xref>: the return type</li><li>For other symbols: <code>null</code></li></ul>
+    content.vb: Public Shared Function GetSymbolType(symbol As ISymbol) As ITypeSymbol
+  overload: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetSymbolType*
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetNamespaceName(Microsoft.CodeAnalysis.ISymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.GetNamespaceName(Microsoft.CodeAnalysis.ISymbol)
+  id: GetNamespaceName(Microsoft.CodeAnalysis.ISymbol)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.SymbolExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetNamespaceName(ISymbol)
+  nameWithType: SymbolExtensions.GetNamespaceName(ISymbol)
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetNamespaceName(Microsoft.CodeAnalysis.ISymbol)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: GetNamespaceName
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
+    startLine: 415
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Gets the containing namespace of a symbol as a string.
+  example: []
+  syntax:
+    content: public static string GetNamespaceName(this ISymbol symbol)
+    parameters:
+    - id: symbol
+      type: Microsoft.CodeAnalysis.ISymbol
+      description: The symbol to get the namespace from.
+    return:
+      type: System.String
+      description: >-
+        The fully qualified namespace name, or an empty string if the symbol
+
+        is in the global namespace.
+    content.vb: Public Shared Function GetNamespaceName(symbol As ISymbol) As String
+  overload: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetNamespaceName*
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetMethod(Microsoft.CodeAnalysis.INamedTypeSymbol,System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.GetMethod(Microsoft.CodeAnalysis.INamedTypeSymbol,System.String)
+  id: GetMethod(Microsoft.CodeAnalysis.INamedTypeSymbol,System.String)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.SymbolExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetMethod(INamedTypeSymbol, string)
+  nameWithType: SymbolExtensions.GetMethod(INamedTypeSymbol, string)
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetMethod(Microsoft.CodeAnalysis.INamedTypeSymbol, string)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: GetMethod
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
+    startLine: 431
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Gets a single method by name from a named type symbol.
+  example: []
+  syntax:
+    content: public static IMethodSymbol? GetMethod(this INamedTypeSymbol type, string name)
+    parameters:
+    - id: type
+      type: Microsoft.CodeAnalysis.INamedTypeSymbol
+      description: The type to search for the method.
+    - id: name
+      type: System.String
+      description: The name of the method to find.
+    return:
+      type: Microsoft.CodeAnalysis.IMethodSymbol
+      description: >-
+        The <xref href="Microsoft.CodeAnalysis.IMethodSymbol" data-throw-if-not-resolved="false"></xref> if exactly one method with the specified name exists;
+
+        <code>null</code> if no method is found or if multiple methods with the same name exist (overloads).
+    content.vb: Public Shared Function GetMethod(type As INamedTypeSymbol, name As String) As IMethodSymbol
+  overload: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetMethod*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetProperty(Microsoft.CodeAnalysis.INamedTypeSymbol,System.String)
+    commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.GetProperty(Microsoft.CodeAnalysis.INamedTypeSymbol,System.String)
+  nameWithType.vb: SymbolExtensions.GetMethod(INamedTypeSymbol, String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetMethod(Microsoft.CodeAnalysis.INamedTypeSymbol, String)
+  name.vb: GetMethod(INamedTypeSymbol, String)
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetProperty(Microsoft.CodeAnalysis.INamedTypeSymbol,System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.GetProperty(Microsoft.CodeAnalysis.INamedTypeSymbol,System.String)
+  id: GetProperty(Microsoft.CodeAnalysis.INamedTypeSymbol,System.String)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.SymbolExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetProperty(INamedTypeSymbol, string)
+  nameWithType: SymbolExtensions.GetProperty(INamedTypeSymbol, string)
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetProperty(Microsoft.CodeAnalysis.INamedTypeSymbol, string)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: GetProperty
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
+    startLine: 457
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Gets a single property by name from a named type symbol.
+  example: []
+  syntax:
+    content: public static IPropertySymbol? GetProperty(this INamedTypeSymbol type, string name)
+    parameters:
+    - id: type
+      type: Microsoft.CodeAnalysis.INamedTypeSymbol
+      description: The type to search for the property.
+    - id: name
+      type: System.String
+      description: The name of the property to find.
+    return:
+      type: Microsoft.CodeAnalysis.IPropertySymbol
+      description: >-
+        The <xref href="Microsoft.CodeAnalysis.IPropertySymbol" data-throw-if-not-resolved="false"></xref> if a property with the specified name exists;
+
+        otherwise, <code>null</code>.
+    content.vb: Public Shared Function GetProperty(type As INamedTypeSymbol, name As String) As IPropertySymbol
+  overload: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetProperty*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetMethod(Microsoft.CodeAnalysis.INamedTypeSymbol,System.String)
+    commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.GetMethod(Microsoft.CodeAnalysis.INamedTypeSymbol,System.String)
+  nameWithType.vb: SymbolExtensions.GetProperty(INamedTypeSymbol, String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetProperty(Microsoft.CodeAnalysis.INamedTypeSymbol, String)
+  name.vb: GetProperty(INamedTypeSymbol, String)
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.ExplicitlyImplements(Microsoft.CodeAnalysis.IMethodSymbol,Microsoft.CodeAnalysis.IMethodSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.ExplicitlyImplements(Microsoft.CodeAnalysis.IMethodSymbol,Microsoft.CodeAnalysis.IMethodSymbol)
+  id: ExplicitlyImplements(Microsoft.CodeAnalysis.IMethodSymbol,Microsoft.CodeAnalysis.IMethodSymbol)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.SymbolExtensions
+  langs:
+  - csharp
+  - vb
+  name: ExplicitlyImplements(IMethodSymbol, IMethodSymbol)
+  nameWithType: SymbolExtensions.ExplicitlyImplements(IMethodSymbol, IMethodSymbol)
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.ExplicitlyImplements(Microsoft.CodeAnalysis.IMethodSymbol, Microsoft.CodeAnalysis.IMethodSymbol)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: ExplicitlyImplements
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
+    startLine: 479
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Checks if a method explicitly implements a specific interface method.
+  example: []
+  syntax:
+    content: public static bool ExplicitlyImplements(this IMethodSymbol method, IMethodSymbol interfaceMethod)
+    parameters:
+    - id: method
+      type: Microsoft.CodeAnalysis.IMethodSymbol
+      description: The method to check.
+    - id: interfaceMethod
+      type: Microsoft.CodeAnalysis.IMethodSymbol
+      description: The interface method to check against.
+    return:
+      type: System.Boolean
+      description: >-
+        <code>true</code> if <code class="paramref">method</code> explicitly implements
+
+        <code class="paramref">interfaceMethod</code>; otherwise, <code>false</code>.
+    content.vb: Public Shared Function ExplicitlyImplements(method As IMethodSymbol, interfaceMethod As IMethodSymbol) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.SymbolExtensions.ExplicitlyImplements*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.SymbolExtensions.ExplicitOrImplicitInterfaceImplementations(Microsoft.CodeAnalysis.ISymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.ExplicitOrImplicitInterfaceImplementations(Microsoft.CodeAnalysis.ISymbol)
+  - linkId: ANcpLua.Roslyn.Utilities.SymbolExtensions.ExplicitInterfaceImplementations(Microsoft.CodeAnalysis.ISymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.ExplicitInterfaceImplementations(Microsoft.CodeAnalysis.ISymbol)
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.ExplicitOrImplicitInterfaceImplementations(Microsoft.CodeAnalysis.ISymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.ExplicitOrImplicitInterfaceImplementations(Microsoft.CodeAnalysis.ISymbol)
+  id: ExplicitOrImplicitInterfaceImplementations(Microsoft.CodeAnalysis.ISymbol)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.SymbolExtensions
+  langs:
+  - csharp
+  - vb
+  name: ExplicitOrImplicitInterfaceImplementations(ISymbol)
+  nameWithType: SymbolExtensions.ExplicitOrImplicitInterfaceImplementations(ISymbol)
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.ExplicitOrImplicitInterfaceImplementations(Microsoft.CodeAnalysis.ISymbol)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: ExplicitOrImplicitInterfaceImplementations
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
+    startLine: 501
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Gets all explicit and implicit interface implementations for a symbol.
+  example: []
+  syntax:
+    content: public static ImmutableArray<ISymbol> ExplicitOrImplicitInterfaceImplementations(this ISymbol symbol)
+    parameters:
+    - id: symbol
+      type: Microsoft.CodeAnalysis.ISymbol
+      description: The symbol to get implementations for.
+    return:
+      type: System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.ISymbol}
+      description: >-
+        An immutable array of interface members that <code class="paramref">symbol</code> implements,
+
+        both explicitly and implicitly. Returns an empty array if the symbol is not a
+
+        method, property, or event.
+    content.vb: Public Shared Function ExplicitOrImplicitInterfaceImplementations(symbol As ISymbol) As ImmutableArray(Of ISymbol)
+  overload: ANcpLua.Roslyn.Utilities.SymbolExtensions.ExplicitOrImplicitInterfaceImplementations*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.SymbolExtensions.ExplicitInterfaceImplementations(Microsoft.CodeAnalysis.ISymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.ExplicitInterfaceImplementations(Microsoft.CodeAnalysis.ISymbol)
+  - linkId: ANcpLua.Roslyn.Utilities.SymbolExtensions.ExplicitlyImplements(Microsoft.CodeAnalysis.IMethodSymbol,Microsoft.CodeAnalysis.IMethodSymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.ExplicitlyImplements(Microsoft.CodeAnalysis.IMethodSymbol,Microsoft.CodeAnalysis.IMethodSymbol)
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.ExplicitInterfaceImplementations(Microsoft.CodeAnalysis.ISymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.ExplicitInterfaceImplementations(Microsoft.CodeAnalysis.ISymbol)
+  id: ExplicitInterfaceImplementations(Microsoft.CodeAnalysis.ISymbol)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.SymbolExtensions
+  langs:
+  - csharp
+  - vb
+  name: ExplicitInterfaceImplementations(ISymbol)
+  nameWithType: SymbolExtensions.ExplicitInterfaceImplementations(ISymbol)
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.ExplicitInterfaceImplementations(Microsoft.CodeAnalysis.ISymbol)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: ExplicitInterfaceImplementations
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
+    startLine: 525
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Gets all explicit interface implementations for a symbol.
+  example: []
+  syntax:
+    content: public static ImmutableArray<ISymbol> ExplicitInterfaceImplementations(this ISymbol symbol)
+    parameters:
+    - id: symbol
+      type: Microsoft.CodeAnalysis.ISymbol
+      description: The symbol to get explicit implementations for.
+    return:
+      type: System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.ISymbol}
+      description: >-
+        An immutable array of interface members that <code class="paramref">symbol</code> explicitly implements.
+
+        Returns an empty array if the symbol is not an event, method, or property.
+    content.vb: Public Shared Function ExplicitInterfaceImplementations(symbol As ISymbol) As ImmutableArray(Of ISymbol)
+  overload: ANcpLua.Roslyn.Utilities.SymbolExtensions.ExplicitInterfaceImplementations*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.SymbolExtensions.ExplicitOrImplicitInterfaceImplementations(Microsoft.CodeAnalysis.ISymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.ExplicitOrImplicitInterfaceImplementations(Microsoft.CodeAnalysis.ISymbol)
+  - linkId: ANcpLua.Roslyn.Utilities.SymbolExtensions.ExplicitlyImplements(Microsoft.CodeAnalysis.IMethodSymbol,Microsoft.CodeAnalysis.IMethodSymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.ExplicitlyImplements(Microsoft.CodeAnalysis.IMethodSymbol,Microsoft.CodeAnalysis.IMethodSymbol)
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllTypeParameters(Microsoft.CodeAnalysis.ISymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllTypeParameters(Microsoft.CodeAnalysis.ISymbol)
+  id: GetAllTypeParameters(Microsoft.CodeAnalysis.ISymbol)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.SymbolExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetAllTypeParameters(ISymbol?)
+  nameWithType: SymbolExtensions.GetAllTypeParameters(ISymbol?)
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllTypeParameters(Microsoft.CodeAnalysis.ISymbol?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: GetAllTypeParameters
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
+    startLine: 544
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Gets all type parameters from a symbol and its containing types.
+  example: []
+  syntax:
+    content: public static ImmutableArray<ITypeParameterSymbol> GetAllTypeParameters(this ISymbol? symbol)
+    parameters:
+    - id: symbol
+      type: Microsoft.CodeAnalysis.ISymbol
+      description: The symbol to get type parameters from.
+    return:
+      type: System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.ITypeParameterSymbol}
+      description: >-
+        An immutable array containing all type parameters from the symbol
+
+        and its entire containing type hierarchy.
+    content.vb: Public Shared Function GetAllTypeParameters(symbol As ISymbol) As ImmutableArray(Of ITypeParameterSymbol)
+  overload: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllTypeParameters*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetTypeParameters(Microsoft.CodeAnalysis.ISymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.GetTypeParameters(Microsoft.CodeAnalysis.ISymbol)
+  - linkId: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllTypeArguments(Microsoft.CodeAnalysis.ISymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllTypeArguments(Microsoft.CodeAnalysis.ISymbol)
+  nameWithType.vb: SymbolExtensions.GetAllTypeParameters(ISymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllTypeParameters(Microsoft.CodeAnalysis.ISymbol)
+  name.vb: GetAllTypeParameters(ISymbol)
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetTypeParameters(Microsoft.CodeAnalysis.ISymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.GetTypeParameters(Microsoft.CodeAnalysis.ISymbol)
+  id: GetTypeParameters(Microsoft.CodeAnalysis.ISymbol)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.SymbolExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetTypeParameters(ISymbol?)
+  nameWithType: SymbolExtensions.GetTypeParameters(ISymbol?)
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetTypeParameters(Microsoft.CodeAnalysis.ISymbol?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: GetTypeParameters
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
+    startLine: 566
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Gets the type parameters of a method or named type symbol.
+  example: []
+  syntax:
+    content: public static ImmutableArray<ITypeParameterSymbol> GetTypeParameters(this ISymbol? symbol)
+    parameters:
+    - id: symbol
+      type: Microsoft.CodeAnalysis.ISymbol
+      description: The symbol to get type parameters from.
+    return:
+      type: System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.ITypeParameterSymbol}
+      description: >-
+        The type parameters of the symbol if it is an <xref href="Microsoft.CodeAnalysis.IMethodSymbol" data-throw-if-not-resolved="false"></xref> or
+
+        <xref href="Microsoft.CodeAnalysis.INamedTypeSymbol" data-throw-if-not-resolved="false"></xref>; otherwise, an empty immutable array.
+    content.vb: Public Shared Function GetTypeParameters(symbol As ISymbol) As ImmutableArray(Of ITypeParameterSymbol)
+  overload: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetTypeParameters*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllTypeParameters(Microsoft.CodeAnalysis.ISymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllTypeParameters(Microsoft.CodeAnalysis.ISymbol)
+  - linkId: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetTypeArguments(Microsoft.CodeAnalysis.ISymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.GetTypeArguments(Microsoft.CodeAnalysis.ISymbol)
+  nameWithType.vb: SymbolExtensions.GetTypeParameters(ISymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetTypeParameters(Microsoft.CodeAnalysis.ISymbol)
+  name.vb: GetTypeParameters(ISymbol)
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetTypeArguments(Microsoft.CodeAnalysis.ISymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.GetTypeArguments(Microsoft.CodeAnalysis.ISymbol)
+  id: GetTypeArguments(Microsoft.CodeAnalysis.ISymbol)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.SymbolExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetTypeArguments(ISymbol?)
+  nameWithType: SymbolExtensions.GetTypeArguments(ISymbol?)
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetTypeArguments(Microsoft.CodeAnalysis.ISymbol?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: GetTypeArguments
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
+    startLine: 584
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Gets the type arguments of a method or named type symbol.
+  example: []
+  syntax:
+    content: public static ImmutableArray<ITypeSymbol> GetTypeArguments(this ISymbol? symbol)
+    parameters:
+    - id: symbol
+      type: Microsoft.CodeAnalysis.ISymbol
+      description: The symbol to get type arguments from.
+    return:
+      type: System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.ITypeSymbol}
+      description: >-
+        The type arguments of the symbol if it is an <xref href="Microsoft.CodeAnalysis.IMethodSymbol" data-throw-if-not-resolved="false"></xref> or
+
+        <xref href="Microsoft.CodeAnalysis.INamedTypeSymbol" data-throw-if-not-resolved="false"></xref>; otherwise, an empty immutable array.
+    content.vb: Public Shared Function GetTypeArguments(symbol As ISymbol) As ImmutableArray(Of ITypeSymbol)
+  overload: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetTypeArguments*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllTypeArguments(Microsoft.CodeAnalysis.ISymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllTypeArguments(Microsoft.CodeAnalysis.ISymbol)
+  - linkId: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetTypeParameters(Microsoft.CodeAnalysis.ISymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.GetTypeParameters(Microsoft.CodeAnalysis.ISymbol)
+  nameWithType.vb: SymbolExtensions.GetTypeArguments(ISymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetTypeArguments(Microsoft.CodeAnalysis.ISymbol)
+  name.vb: GetTypeArguments(ISymbol)
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetOverriddenMember(Microsoft.CodeAnalysis.ISymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.GetOverriddenMember(Microsoft.CodeAnalysis.ISymbol)
+  id: GetOverriddenMember(Microsoft.CodeAnalysis.ISymbol)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.SymbolExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetOverriddenMember(ISymbol?)
+  nameWithType: SymbolExtensions.GetOverriddenMember(ISymbol?)
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetOverriddenMember(Microsoft.CodeAnalysis.ISymbol?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: GetOverriddenMember
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
+    startLine: 605
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Gets the overridden member for a method, property, or event.
+  example: []
+  syntax:
+    content: public static ISymbol? GetOverriddenMember(this ISymbol? symbol)
+    parameters:
+    - id: symbol
+      type: Microsoft.CodeAnalysis.ISymbol
+      description: The symbol to get the overridden member from.
+    return:
+      type: Microsoft.CodeAnalysis.ISymbol
+      description: >-
+        The overridden symbol:
+
+        <ul><li>For <xref href="Microsoft.CodeAnalysis.IMethodSymbol" data-throw-if-not-resolved="false"></xref>: <xref href="Microsoft.CodeAnalysis.IMethodSymbol.OverriddenMethod" data-throw-if-not-resolved="false"></xref></li><li>For <xref href="Microsoft.CodeAnalysis.IPropertySymbol" data-throw-if-not-resolved="false"></xref>: <xref href="Microsoft.CodeAnalysis.IPropertySymbol.OverriddenProperty" data-throw-if-not-resolved="false"></xref></li><li>For <xref href="Microsoft.CodeAnalysis.IEventSymbol" data-throw-if-not-resolved="false"></xref>: <xref href="Microsoft.CodeAnalysis.IEventSymbol.OverriddenEvent" data-throw-if-not-resolved="false"></xref></li><li>For other symbols: <code>null</code></li></ul>
+    content.vb: Public Shared Function GetOverriddenMember(symbol As ISymbol) As ISymbol
+  overload: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetOverriddenMember*
+  nameWithType.vb: SymbolExtensions.GetOverriddenMember(ISymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetOverriddenMember(Microsoft.CodeAnalysis.ISymbol)
+  name.vb: GetOverriddenMember(ISymbol)
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllTypeArguments(Microsoft.CodeAnalysis.ISymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllTypeArguments(Microsoft.CodeAnalysis.ISymbol)
+  id: GetAllTypeArguments(Microsoft.CodeAnalysis.ISymbol)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.SymbolExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetAllTypeArguments(ISymbol)
+  nameWithType: SymbolExtensions.GetAllTypeArguments(ISymbol)
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllTypeArguments(Microsoft.CodeAnalysis.ISymbol)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: GetAllTypeArguments
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
+    startLine: 624
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Gets all type arguments from a symbol and its containing types.
+  example: []
+  syntax:
+    content: public static ImmutableArray<ITypeSymbol> GetAllTypeArguments(this ISymbol symbol)
+    parameters:
+    - id: symbol
+      type: Microsoft.CodeAnalysis.ISymbol
+      description: The symbol to get type arguments from.
+    return:
+      type: System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.ITypeSymbol}
+      description: >-
+        An immutable array containing all type arguments from the symbol
+
+        and its entire containing type hierarchy.
+    content.vb: Public Shared Function GetAllTypeArguments(symbol As ISymbol) As ImmutableArray(Of ITypeSymbol)
+  overload: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllTypeArguments*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetTypeArguments(Microsoft.CodeAnalysis.ISymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.GetTypeArguments(Microsoft.CodeAnalysis.ISymbol)
+  - linkId: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllTypeParameters(Microsoft.CodeAnalysis.ISymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllTypeParameters(Microsoft.CodeAnalysis.ISymbol)
+references:
+- uid: Microsoft.CodeAnalysis.ISymbol
+  commentId: T:Microsoft.CodeAnalysis.ISymbol
+  parent: Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.isymbol
+  name: ISymbol
+  nameWithType: ISymbol
+  fullName: Microsoft.CodeAnalysis.ISymbol
+- uid: Microsoft.CodeAnalysis.ITypeSymbol
+  commentId: T:Microsoft.CodeAnalysis.ITypeSymbol
+  parent: Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  name: ITypeSymbol
+  nameWithType: ITypeSymbol
+  fullName: Microsoft.CodeAnalysis.ITypeSymbol
+- uid: Microsoft.CodeAnalysis.IMethodSymbol
+  commentId: T:Microsoft.CodeAnalysis.IMethodSymbol
+  parent: Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.imethodsymbol
+  name: IMethodSymbol
+  nameWithType: IMethodSymbol
+  fullName: Microsoft.CodeAnalysis.IMethodSymbol
+- uid: Microsoft.CodeAnalysis.SymbolEqualityComparer.Default
+  commentId: F:Microsoft.CodeAnalysis.SymbolEqualityComparer.Default
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.symbolequalitycomparer.default
+  name: Default
+  nameWithType: SymbolEqualityComparer.Default
+  fullName: Microsoft.CodeAnalysis.SymbolEqualityComparer.Default
+- uid: ANcpLua.Roslyn.Utilities
+  commentId: N:ANcpLua.Roslyn.Utilities
+  href: ANcpLua.html
+  name: ANcpLua.Roslyn.Utilities
+  nameWithType: ANcpLua.Roslyn.Utilities
+  fullName: ANcpLua.Roslyn.Utilities
+  spec.csharp:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  spec.vb:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: Microsoft.CodeAnalysis
+  commentId: N:Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.CodeAnalysis
+  nameWithType: Microsoft.CodeAnalysis
+  fullName: Microsoft.CodeAnalysis
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.IsEqualTo*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SymbolExtensions.IsEqualTo
+  href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_IsEqualTo_Microsoft_CodeAnalysis_ISymbol_Microsoft_CodeAnalysis_ISymbol_
+  name: IsEqualTo
+  nameWithType: SymbolExtensions.IsEqualTo
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.IsEqualTo
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetMetadataName(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.GetMetadataName(Microsoft.CodeAnalysis.ITypeSymbol)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_GetMetadataName_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: GetMetadataName(ITypeSymbol)
+  nameWithType: SymbolExtensions.GetMetadataName(ITypeSymbol)
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetMetadataName(Microsoft.CodeAnalysis.ITypeSymbol)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetMetadataName(Microsoft.CodeAnalysis.ITypeSymbol)
+    name: GetMetadataName
+    href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_GetMetadataName_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetMetadataName(Microsoft.CodeAnalysis.ITypeSymbol)
+    name: GetMetadataName
+    href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_GetMetadataName_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+- uid: Microsoft.CodeAnalysis.SymbolDisplayFormat.FullyQualifiedFormat
+  commentId: P:Microsoft.CodeAnalysis.SymbolDisplayFormat.FullyQualifiedFormat
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.symboldisplayformat.fullyqualifiedformat
+  name: FullyQualifiedFormat
+  nameWithType: SymbolDisplayFormat.FullyQualifiedFormat
+  fullName: Microsoft.CodeAnalysis.SymbolDisplayFormat.FullyQualifiedFormat
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetFullyQualifiedName*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SymbolExtensions.GetFullyQualifiedName
+  href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_GetFullyQualifiedName_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: GetFullyQualifiedName
+  nameWithType: SymbolExtensions.GetFullyQualifiedName
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetFullyQualifiedName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetFullyQualifiedName(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.GetFullyQualifiedName(Microsoft.CodeAnalysis.ITypeSymbol)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_GetFullyQualifiedName_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: GetFullyQualifiedName(ITypeSymbol)
+  nameWithType: SymbolExtensions.GetFullyQualifiedName(ITypeSymbol)
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetFullyQualifiedName(Microsoft.CodeAnalysis.ITypeSymbol)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetFullyQualifiedName(Microsoft.CodeAnalysis.ITypeSymbol)
+    name: GetFullyQualifiedName
+    href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_GetFullyQualifiedName_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetFullyQualifiedName(Microsoft.CodeAnalysis.ITypeSymbol)
+    name: GetFullyQualifiedName
+    href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_GetFullyQualifiedName_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+- uid: Microsoft.CodeAnalysis.SymbolDisplayFormat.CSharpErrorMessageFormat
+  commentId: P:Microsoft.CodeAnalysis.SymbolDisplayFormat.CSharpErrorMessageFormat
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.symboldisplayformat.csharperrormessageformat
+  name: CSharpErrorMessageFormat
+  nameWithType: SymbolDisplayFormat.CSharpErrorMessageFormat
+  fullName: Microsoft.CodeAnalysis.SymbolDisplayFormat.CSharpErrorMessageFormat
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetMetadataName*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SymbolExtensions.GetMetadataName
+  href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_GetMetadataName_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: GetMetadataName
+  nameWithType: SymbolExtensions.GetMetadataName
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetMetadataName
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAttribute(Microsoft.CodeAnalysis.ISymbol,System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAttribute(Microsoft.CodeAnalysis.ISymbol,System.String)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_GetAttribute_Microsoft_CodeAnalysis_ISymbol_System_String_
+  name: GetAttribute(ISymbol, string)
+  nameWithType: SymbolExtensions.GetAttribute(ISymbol, string)
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAttribute(Microsoft.CodeAnalysis.ISymbol, string)
+  nameWithType.vb: SymbolExtensions.GetAttribute(ISymbol, String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAttribute(Microsoft.CodeAnalysis.ISymbol, String)
+  name.vb: GetAttribute(ISymbol, String)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAttribute(Microsoft.CodeAnalysis.ISymbol,System.String)
+    name: GetAttribute
+    href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_GetAttribute_Microsoft_CodeAnalysis_ISymbol_System_String_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ISymbol
+    name: ISymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.isymbol
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAttribute(Microsoft.CodeAnalysis.ISymbol,System.String)
+    name: GetAttribute
+    href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_GetAttribute_Microsoft_CodeAnalysis_ISymbol_System_String_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ISymbol
+    name: ISymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.isymbol
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.HasAttribute(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)
+  commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.HasAttribute(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_HasAttribute_Microsoft_CodeAnalysis_ISymbol_Microsoft_CodeAnalysis_ITypeSymbol_System_Boolean_
+  name: HasAttribute(ISymbol, ITypeSymbol, bool)
+  nameWithType: SymbolExtensions.HasAttribute(ISymbol, ITypeSymbol, bool)
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.HasAttribute(Microsoft.CodeAnalysis.ISymbol, Microsoft.CodeAnalysis.ITypeSymbol, bool)
+  nameWithType.vb: SymbolExtensions.HasAttribute(ISymbol, ITypeSymbol, Boolean)
+  fullName.vb: ANcpLua.Roslyn.Utilities.SymbolExtensions.HasAttribute(Microsoft.CodeAnalysis.ISymbol, Microsoft.CodeAnalysis.ITypeSymbol, Boolean)
+  name.vb: HasAttribute(ISymbol, ITypeSymbol, Boolean)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.HasAttribute(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)
+    name: HasAttribute
+    href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_HasAttribute_Microsoft_CodeAnalysis_ISymbol_Microsoft_CodeAnalysis_ITypeSymbol_System_Boolean_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ISymbol
+    name: ISymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.isymbol
+  - name: ','
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.HasAttribute(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)
+    name: HasAttribute
+    href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_HasAttribute_Microsoft_CodeAnalysis_ISymbol_Microsoft_CodeAnalysis_ITypeSymbol_System_Boolean_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ISymbol
+    name: ISymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.isymbol
+  - name: ','
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.HasAttribute*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SymbolExtensions.HasAttribute
+  href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_HasAttribute_Microsoft_CodeAnalysis_ISymbol_System_String_
+  name: HasAttribute
+  nameWithType: SymbolExtensions.HasAttribute
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.HasAttribute
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.HasAttribute(Microsoft.CodeAnalysis.ISymbol,System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.HasAttribute(Microsoft.CodeAnalysis.ISymbol,System.String)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_HasAttribute_Microsoft_CodeAnalysis_ISymbol_System_String_
+  name: HasAttribute(ISymbol, string)
+  nameWithType: SymbolExtensions.HasAttribute(ISymbol, string)
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.HasAttribute(Microsoft.CodeAnalysis.ISymbol, string)
+  nameWithType.vb: SymbolExtensions.HasAttribute(ISymbol, String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.SymbolExtensions.HasAttribute(Microsoft.CodeAnalysis.ISymbol, String)
+  name.vb: HasAttribute(ISymbol, String)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.HasAttribute(Microsoft.CodeAnalysis.ISymbol,System.String)
+    name: HasAttribute
+    href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_HasAttribute_Microsoft_CodeAnalysis_ISymbol_System_String_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ISymbol
+    name: ISymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.isymbol
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.HasAttribute(Microsoft.CodeAnalysis.ISymbol,System.String)
+    name: HasAttribute
+    href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_HasAttribute_Microsoft_CodeAnalysis_ISymbol_System_String_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ISymbol
+    name: ISymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.isymbol
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAttribute(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)
+  commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAttribute(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_GetAttribute_Microsoft_CodeAnalysis_ISymbol_Microsoft_CodeAnalysis_ITypeSymbol_System_Boolean_
+  name: GetAttribute(ISymbol, ITypeSymbol, bool)
+  nameWithType: SymbolExtensions.GetAttribute(ISymbol, ITypeSymbol, bool)
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAttribute(Microsoft.CodeAnalysis.ISymbol, Microsoft.CodeAnalysis.ITypeSymbol, bool)
+  nameWithType.vb: SymbolExtensions.GetAttribute(ISymbol, ITypeSymbol, Boolean)
+  fullName.vb: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAttribute(Microsoft.CodeAnalysis.ISymbol, Microsoft.CodeAnalysis.ITypeSymbol, Boolean)
+  name.vb: GetAttribute(ISymbol, ITypeSymbol, Boolean)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAttribute(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)
+    name: GetAttribute
+    href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_GetAttribute_Microsoft_CodeAnalysis_ISymbol_Microsoft_CodeAnalysis_ITypeSymbol_System_Boolean_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ISymbol
+    name: ISymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.isymbol
+  - name: ','
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAttribute(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)
+    name: GetAttribute
+    href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_GetAttribute_Microsoft_CodeAnalysis_ISymbol_Microsoft_CodeAnalysis_ITypeSymbol_System_Boolean_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ISymbol
+    name: ISymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.isymbol
+  - name: ','
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Microsoft.CodeAnalysis.AttributeData
+  commentId: T:Microsoft.CodeAnalysis.AttributeData
+  parent: Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.attributedata
+  name: AttributeData
+  nameWithType: AttributeData
+  fullName: Microsoft.CodeAnalysis.AttributeData
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAttribute*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAttribute
+  href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_GetAttribute_Microsoft_CodeAnalysis_ISymbol_System_String_
+  name: GetAttribute
+  nameWithType: SymbolExtensions.GetAttribute
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAttribute
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAttributes*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAttributes
+  href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_GetAttributes_Microsoft_CodeAnalysis_ISymbol_Microsoft_CodeAnalysis_ITypeSymbol_System_Boolean_
+  name: GetAttributes
+  nameWithType: SymbolExtensions.GetAttributes
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAttributes
+- uid: System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.AttributeData}
+  commentId: T:System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.AttributeData}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<AttributeData>
+  nameWithType: IEnumerable<AttributeData>
+  fullName: System.Collections.Generic.IEnumerable<Microsoft.CodeAnalysis.AttributeData>
+  nameWithType.vb: IEnumerable(Of AttributeData)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Microsoft.CodeAnalysis.AttributeData)
+  name.vb: IEnumerable(Of AttributeData)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: Microsoft.CodeAnalysis.AttributeData
+    name: AttributeData
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.attributedata
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.AttributeData
+    name: AttributeData
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.attributedata
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAttributes(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)
+  commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAttributes(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_GetAttributes_Microsoft_CodeAnalysis_ISymbol_Microsoft_CodeAnalysis_ITypeSymbol_System_Boolean_
+  name: GetAttributes(ISymbol, ITypeSymbol, bool)
+  nameWithType: SymbolExtensions.GetAttributes(ISymbol, ITypeSymbol, bool)
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAttributes(Microsoft.CodeAnalysis.ISymbol, Microsoft.CodeAnalysis.ITypeSymbol, bool)
+  nameWithType.vb: SymbolExtensions.GetAttributes(ISymbol, ITypeSymbol, Boolean)
+  fullName.vb: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAttributes(Microsoft.CodeAnalysis.ISymbol, Microsoft.CodeAnalysis.ITypeSymbol, Boolean)
+  name.vb: GetAttributes(ISymbol, ITypeSymbol, Boolean)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAttributes(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)
+    name: GetAttributes
+    href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_GetAttributes_Microsoft_CodeAnalysis_ISymbol_Microsoft_CodeAnalysis_ITypeSymbol_System_Boolean_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ISymbol
+    name: ISymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.isymbol
+  - name: ','
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAttributes(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean)
+    name: GetAttributes
+    href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_GetAttributes_Microsoft_CodeAnalysis_ISymbol_Microsoft_CodeAnalysis_ITypeSymbol_System_Boolean_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ISymbol
+    name: ISymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.isymbol
+  - name: ','
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.IsVisibleOutsideOfAssembly*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SymbolExtensions.IsVisibleOutsideOfAssembly
+  href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_IsVisibleOutsideOfAssembly_Microsoft_CodeAnalysis_ISymbol_
+  name: IsVisibleOutsideOfAssembly
+  nameWithType: SymbolExtensions.IsVisibleOutsideOfAssembly
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.IsVisibleOutsideOfAssembly
+- uid: Microsoft.CodeAnalysis.MethodKind.UserDefinedOperator
+  commentId: F:Microsoft.CodeAnalysis.MethodKind.UserDefinedOperator
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.methodkind#microsoft-codeanalysis-methodkind-userdefinedoperator
+  name: UserDefinedOperator
+  nameWithType: MethodKind.UserDefinedOperator
+  fullName: Microsoft.CodeAnalysis.MethodKind.UserDefinedOperator
+- uid: Microsoft.CodeAnalysis.MethodKind.Conversion
+  commentId: F:Microsoft.CodeAnalysis.MethodKind.Conversion
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.methodkind#microsoft-codeanalysis-methodkind-conversion
+  name: Conversion
+  nameWithType: MethodKind.Conversion
+  fullName: Microsoft.CodeAnalysis.MethodKind.Conversion
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.IsOperator*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SymbolExtensions.IsOperator
+  href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_IsOperator_Microsoft_CodeAnalysis_ISymbol_
+  name: IsOperator
+  nameWithType: SymbolExtensions.IsOperator
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.IsOperator
+- uid: Microsoft.CodeAnalysis.IFieldSymbol
+  commentId: T:Microsoft.CodeAnalysis.IFieldSymbol
+  parent: Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ifieldsymbol
+  name: IFieldSymbol
+  nameWithType: IFieldSymbol
+  fullName: Microsoft.CodeAnalysis.IFieldSymbol
+- uid: Microsoft.CodeAnalysis.IFieldSymbol.IsConst
+  commentId: P:Microsoft.CodeAnalysis.IFieldSymbol.IsConst
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ifieldsymbol.isconst
+  name: IsConst
+  nameWithType: IFieldSymbol.IsConst
+  fullName: Microsoft.CodeAnalysis.IFieldSymbol.IsConst
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.IsConst*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SymbolExtensions.IsConst
+  href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_IsConst_Microsoft_CodeAnalysis_ISymbol_
+  name: IsConst
+  nameWithType: SymbolExtensions.IsConst
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.IsConst
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllMembers(Microsoft.CodeAnalysis.ITypeSymbol,System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllMembers(Microsoft.CodeAnalysis.ITypeSymbol,System.String)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_GetAllMembers_Microsoft_CodeAnalysis_ITypeSymbol_System_String_
+  name: GetAllMembers(ITypeSymbol, string)
+  nameWithType: SymbolExtensions.GetAllMembers(ITypeSymbol, string)
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllMembers(Microsoft.CodeAnalysis.ITypeSymbol, string)
+  nameWithType.vb: SymbolExtensions.GetAllMembers(ITypeSymbol, String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllMembers(Microsoft.CodeAnalysis.ITypeSymbol, String)
+  name.vb: GetAllMembers(ITypeSymbol, String)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllMembers(Microsoft.CodeAnalysis.ITypeSymbol,System.String)
+    name: GetAllMembers
+    href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_GetAllMembers_Microsoft_CodeAnalysis_ITypeSymbol_System_String_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllMembers(Microsoft.CodeAnalysis.ITypeSymbol,System.String)
+    name: GetAllMembers
+    href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_GetAllMembers_Microsoft_CodeAnalysis_ITypeSymbol_System_String_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllMembers(Microsoft.CodeAnalysis.INamespaceOrTypeSymbol,System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllMembers(Microsoft.CodeAnalysis.INamespaceOrTypeSymbol,System.String)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_GetAllMembers_Microsoft_CodeAnalysis_INamespaceOrTypeSymbol_System_String_
+  name: GetAllMembers(INamespaceOrTypeSymbol, string)
+  nameWithType: SymbolExtensions.GetAllMembers(INamespaceOrTypeSymbol, string)
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllMembers(Microsoft.CodeAnalysis.INamespaceOrTypeSymbol, string)
+  nameWithType.vb: SymbolExtensions.GetAllMembers(INamespaceOrTypeSymbol, String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllMembers(Microsoft.CodeAnalysis.INamespaceOrTypeSymbol, String)
+  name.vb: GetAllMembers(INamespaceOrTypeSymbol, String)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllMembers(Microsoft.CodeAnalysis.INamespaceOrTypeSymbol,System.String)
+    name: GetAllMembers
+    href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_GetAllMembers_Microsoft_CodeAnalysis_INamespaceOrTypeSymbol_System_String_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.INamespaceOrTypeSymbol
+    name: INamespaceOrTypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.inamespaceortypesymbol
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllMembers(Microsoft.CodeAnalysis.INamespaceOrTypeSymbol,System.String)
+    name: GetAllMembers
+    href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_GetAllMembers_Microsoft_CodeAnalysis_INamespaceOrTypeSymbol_System_String_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.INamespaceOrTypeSymbol
+    name: INamespaceOrTypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.inamespaceortypesymbol
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllMembers*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllMembers
+  href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_GetAllMembers_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: GetAllMembers
+  nameWithType: SymbolExtensions.GetAllMembers
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllMembers
+- uid: System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.ISymbol}
+  commentId: T:System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.ISymbol}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<ISymbol>
+  nameWithType: IEnumerable<ISymbol>
+  fullName: System.Collections.Generic.IEnumerable<Microsoft.CodeAnalysis.ISymbol>
+  nameWithType.vb: IEnumerable(Of ISymbol)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Microsoft.CodeAnalysis.ISymbol)
+  name.vb: IEnumerable(Of ISymbol)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: Microsoft.CodeAnalysis.ISymbol
+    name: ISymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.isymbol
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.ISymbol
+    name: ISymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.isymbol
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllMembers(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllMembers(Microsoft.CodeAnalysis.ITypeSymbol)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_GetAllMembers_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: GetAllMembers(ITypeSymbol)
+  nameWithType: SymbolExtensions.GetAllMembers(ITypeSymbol)
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllMembers(Microsoft.CodeAnalysis.ITypeSymbol)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllMembers(Microsoft.CodeAnalysis.ITypeSymbol)
+    name: GetAllMembers
+    href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_GetAllMembers_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllMembers(Microsoft.CodeAnalysis.ITypeSymbol)
+    name: GetAllMembers
+    href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_GetAllMembers_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+- uid: Microsoft.CodeAnalysis.INamespaceOrTypeSymbol
+  commentId: T:Microsoft.CodeAnalysis.INamespaceOrTypeSymbol
+  parent: Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.inamespaceortypesymbol
+  name: INamespaceOrTypeSymbol
+  nameWithType: INamespaceOrTypeSymbol
+  fullName: Microsoft.CodeAnalysis.INamespaceOrTypeSymbol
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.IsTopLevelStatement*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SymbolExtensions.IsTopLevelStatement
+  href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_IsTopLevelStatement_Microsoft_CodeAnalysis_ISymbol_System_Threading_CancellationToken_
+  name: IsTopLevelStatement
+  nameWithType: SymbolExtensions.IsTopLevelStatement
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.IsTopLevelStatement
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: Microsoft.CodeAnalysis.IParameterSymbol
+  commentId: T:Microsoft.CodeAnalysis.IParameterSymbol
+  parent: Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.iparametersymbol
+  name: IParameterSymbol
+  nameWithType: IParameterSymbol
+  fullName: Microsoft.CodeAnalysis.IParameterSymbol
+- uid: Microsoft.CodeAnalysis.IPropertySymbol
+  commentId: T:Microsoft.CodeAnalysis.IPropertySymbol
+  parent: Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ipropertysymbol
+  name: IPropertySymbol
+  nameWithType: IPropertySymbol
+  fullName: Microsoft.CodeAnalysis.IPropertySymbol
+- uid: Microsoft.CodeAnalysis.ILocalSymbol
+  commentId: T:Microsoft.CodeAnalysis.ILocalSymbol
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ilocalsymbol
+  name: ILocalSymbol
+  nameWithType: ILocalSymbol
+  fullName: Microsoft.CodeAnalysis.ILocalSymbol
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetSymbolType*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SymbolExtensions.GetSymbolType
+  href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_GetSymbolType_Microsoft_CodeAnalysis_ISymbol_
+  name: GetSymbolType
+  nameWithType: SymbolExtensions.GetSymbolType
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetSymbolType
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetNamespaceName*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SymbolExtensions.GetNamespaceName
+  href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_GetNamespaceName_Microsoft_CodeAnalysis_ISymbol_
+  name: GetNamespaceName
+  nameWithType: SymbolExtensions.GetNamespaceName
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetNamespaceName
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetProperty(Microsoft.CodeAnalysis.INamedTypeSymbol,System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.GetProperty(Microsoft.CodeAnalysis.INamedTypeSymbol,System.String)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_GetProperty_Microsoft_CodeAnalysis_INamedTypeSymbol_System_String_
+  name: GetProperty(INamedTypeSymbol, string)
+  nameWithType: SymbolExtensions.GetProperty(INamedTypeSymbol, string)
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetProperty(Microsoft.CodeAnalysis.INamedTypeSymbol, string)
+  nameWithType.vb: SymbolExtensions.GetProperty(INamedTypeSymbol, String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetProperty(Microsoft.CodeAnalysis.INamedTypeSymbol, String)
+  name.vb: GetProperty(INamedTypeSymbol, String)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetProperty(Microsoft.CodeAnalysis.INamedTypeSymbol,System.String)
+    name: GetProperty
+    href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_GetProperty_Microsoft_CodeAnalysis_INamedTypeSymbol_System_String_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.INamedTypeSymbol
+    name: INamedTypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.inamedtypesymbol
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetProperty(Microsoft.CodeAnalysis.INamedTypeSymbol,System.String)
+    name: GetProperty
+    href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_GetProperty_Microsoft_CodeAnalysis_INamedTypeSymbol_System_String_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.INamedTypeSymbol
+    name: INamedTypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.inamedtypesymbol
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetMethod*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SymbolExtensions.GetMethod
+  href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_GetMethod_Microsoft_CodeAnalysis_INamedTypeSymbol_System_String_
+  name: GetMethod
+  nameWithType: SymbolExtensions.GetMethod
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetMethod
+- uid: Microsoft.CodeAnalysis.INamedTypeSymbol
+  commentId: T:Microsoft.CodeAnalysis.INamedTypeSymbol
+  parent: Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.inamedtypesymbol
+  name: INamedTypeSymbol
+  nameWithType: INamedTypeSymbol
+  fullName: Microsoft.CodeAnalysis.INamedTypeSymbol
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetMethod(Microsoft.CodeAnalysis.INamedTypeSymbol,System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.GetMethod(Microsoft.CodeAnalysis.INamedTypeSymbol,System.String)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_GetMethod_Microsoft_CodeAnalysis_INamedTypeSymbol_System_String_
+  name: GetMethod(INamedTypeSymbol, string)
+  nameWithType: SymbolExtensions.GetMethod(INamedTypeSymbol, string)
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetMethod(Microsoft.CodeAnalysis.INamedTypeSymbol, string)
+  nameWithType.vb: SymbolExtensions.GetMethod(INamedTypeSymbol, String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetMethod(Microsoft.CodeAnalysis.INamedTypeSymbol, String)
+  name.vb: GetMethod(INamedTypeSymbol, String)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetMethod(Microsoft.CodeAnalysis.INamedTypeSymbol,System.String)
+    name: GetMethod
+    href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_GetMethod_Microsoft_CodeAnalysis_INamedTypeSymbol_System_String_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.INamedTypeSymbol
+    name: INamedTypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.inamedtypesymbol
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetMethod(Microsoft.CodeAnalysis.INamedTypeSymbol,System.String)
+    name: GetMethod
+    href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_GetMethod_Microsoft_CodeAnalysis_INamedTypeSymbol_System_String_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.INamedTypeSymbol
+    name: INamedTypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.inamedtypesymbol
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetProperty*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SymbolExtensions.GetProperty
+  href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_GetProperty_Microsoft_CodeAnalysis_INamedTypeSymbol_System_String_
+  name: GetProperty
+  nameWithType: SymbolExtensions.GetProperty
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetProperty
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.ExplicitOrImplicitInterfaceImplementations(Microsoft.CodeAnalysis.ISymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.ExplicitOrImplicitInterfaceImplementations(Microsoft.CodeAnalysis.ISymbol)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_ExplicitOrImplicitInterfaceImplementations_Microsoft_CodeAnalysis_ISymbol_
+  name: ExplicitOrImplicitInterfaceImplementations(ISymbol)
+  nameWithType: SymbolExtensions.ExplicitOrImplicitInterfaceImplementations(ISymbol)
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.ExplicitOrImplicitInterfaceImplementations(Microsoft.CodeAnalysis.ISymbol)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.ExplicitOrImplicitInterfaceImplementations(Microsoft.CodeAnalysis.ISymbol)
+    name: ExplicitOrImplicitInterfaceImplementations
+    href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_ExplicitOrImplicitInterfaceImplementations_Microsoft_CodeAnalysis_ISymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ISymbol
+    name: ISymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.isymbol
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.ExplicitOrImplicitInterfaceImplementations(Microsoft.CodeAnalysis.ISymbol)
+    name: ExplicitOrImplicitInterfaceImplementations
+    href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_ExplicitOrImplicitInterfaceImplementations_Microsoft_CodeAnalysis_ISymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ISymbol
+    name: ISymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.isymbol
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.ExplicitInterfaceImplementations(Microsoft.CodeAnalysis.ISymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.ExplicitInterfaceImplementations(Microsoft.CodeAnalysis.ISymbol)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_ExplicitInterfaceImplementations_Microsoft_CodeAnalysis_ISymbol_
+  name: ExplicitInterfaceImplementations(ISymbol)
+  nameWithType: SymbolExtensions.ExplicitInterfaceImplementations(ISymbol)
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.ExplicitInterfaceImplementations(Microsoft.CodeAnalysis.ISymbol)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.ExplicitInterfaceImplementations(Microsoft.CodeAnalysis.ISymbol)
+    name: ExplicitInterfaceImplementations
+    href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_ExplicitInterfaceImplementations_Microsoft_CodeAnalysis_ISymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ISymbol
+    name: ISymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.isymbol
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.ExplicitInterfaceImplementations(Microsoft.CodeAnalysis.ISymbol)
+    name: ExplicitInterfaceImplementations
+    href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_ExplicitInterfaceImplementations_Microsoft_CodeAnalysis_ISymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ISymbol
+    name: ISymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.isymbol
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.ExplicitlyImplements*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SymbolExtensions.ExplicitlyImplements
+  href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_ExplicitlyImplements_Microsoft_CodeAnalysis_IMethodSymbol_Microsoft_CodeAnalysis_IMethodSymbol_
+  name: ExplicitlyImplements
+  nameWithType: SymbolExtensions.ExplicitlyImplements
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.ExplicitlyImplements
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.ExplicitlyImplements(Microsoft.CodeAnalysis.IMethodSymbol,Microsoft.CodeAnalysis.IMethodSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.ExplicitlyImplements(Microsoft.CodeAnalysis.IMethodSymbol,Microsoft.CodeAnalysis.IMethodSymbol)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_ExplicitlyImplements_Microsoft_CodeAnalysis_IMethodSymbol_Microsoft_CodeAnalysis_IMethodSymbol_
+  name: ExplicitlyImplements(IMethodSymbol, IMethodSymbol)
+  nameWithType: SymbolExtensions.ExplicitlyImplements(IMethodSymbol, IMethodSymbol)
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.ExplicitlyImplements(Microsoft.CodeAnalysis.IMethodSymbol, Microsoft.CodeAnalysis.IMethodSymbol)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.ExplicitlyImplements(Microsoft.CodeAnalysis.IMethodSymbol,Microsoft.CodeAnalysis.IMethodSymbol)
+    name: ExplicitlyImplements
+    href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_ExplicitlyImplements_Microsoft_CodeAnalysis_IMethodSymbol_Microsoft_CodeAnalysis_IMethodSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IMethodSymbol
+    name: IMethodSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.imethodsymbol
+  - name: ','
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.IMethodSymbol
+    name: IMethodSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.imethodsymbol
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.ExplicitlyImplements(Microsoft.CodeAnalysis.IMethodSymbol,Microsoft.CodeAnalysis.IMethodSymbol)
+    name: ExplicitlyImplements
+    href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_ExplicitlyImplements_Microsoft_CodeAnalysis_IMethodSymbol_Microsoft_CodeAnalysis_IMethodSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IMethodSymbol
+    name: IMethodSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.imethodsymbol
+  - name: ','
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.IMethodSymbol
+    name: IMethodSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.imethodsymbol
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.ExplicitOrImplicitInterfaceImplementations*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SymbolExtensions.ExplicitOrImplicitInterfaceImplementations
+  href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_ExplicitOrImplicitInterfaceImplementations_Microsoft_CodeAnalysis_ISymbol_
+  name: ExplicitOrImplicitInterfaceImplementations
+  nameWithType: SymbolExtensions.ExplicitOrImplicitInterfaceImplementations
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.ExplicitOrImplicitInterfaceImplementations
+- uid: System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.ISymbol}
+  commentId: T:System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.ISymbol}
+  parent: System.Collections.Immutable
+  definition: System.Collections.Immutable.ImmutableArray`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  name: ImmutableArray<ISymbol>
+  nameWithType: ImmutableArray<ISymbol>
+  fullName: System.Collections.Immutable.ImmutableArray<Microsoft.CodeAnalysis.ISymbol>
+  nameWithType.vb: ImmutableArray(Of ISymbol)
+  fullName.vb: System.Collections.Immutable.ImmutableArray(Of Microsoft.CodeAnalysis.ISymbol)
+  name.vb: ImmutableArray(Of ISymbol)
+  spec.csharp:
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: <
+  - uid: Microsoft.CodeAnalysis.ISymbol
+    name: ISymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.isymbol
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.ISymbol
+    name: ISymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.isymbol
+  - name: )
+- uid: System.Collections.Immutable.ImmutableArray`1
+  commentId: T:System.Collections.Immutable.ImmutableArray`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  name: ImmutableArray<T>
+  nameWithType: ImmutableArray<T>
+  fullName: System.Collections.Immutable.ImmutableArray<T>
+  nameWithType.vb: ImmutableArray(Of T)
+  fullName.vb: System.Collections.Immutable.ImmutableArray(Of T)
+  name.vb: ImmutableArray(Of T)
+  spec.csharp:
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Immutable
+  commentId: N:System.Collections.Immutable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Immutable
+  nameWithType: System.Collections.Immutable
+  fullName: System.Collections.Immutable
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Immutable
+    name: Immutable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Immutable
+    name: Immutable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.ExplicitInterfaceImplementations*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SymbolExtensions.ExplicitInterfaceImplementations
+  href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_ExplicitInterfaceImplementations_Microsoft_CodeAnalysis_ISymbol_
+  name: ExplicitInterfaceImplementations
+  nameWithType: SymbolExtensions.ExplicitInterfaceImplementations
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.ExplicitInterfaceImplementations
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetTypeParameters(Microsoft.CodeAnalysis.ISymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.GetTypeParameters(Microsoft.CodeAnalysis.ISymbol)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_GetTypeParameters_Microsoft_CodeAnalysis_ISymbol_
+  name: GetTypeParameters(ISymbol)
+  nameWithType: SymbolExtensions.GetTypeParameters(ISymbol)
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetTypeParameters(Microsoft.CodeAnalysis.ISymbol)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetTypeParameters(Microsoft.CodeAnalysis.ISymbol)
+    name: GetTypeParameters
+    href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_GetTypeParameters_Microsoft_CodeAnalysis_ISymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ISymbol
+    name: ISymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.isymbol
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetTypeParameters(Microsoft.CodeAnalysis.ISymbol)
+    name: GetTypeParameters
+    href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_GetTypeParameters_Microsoft_CodeAnalysis_ISymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ISymbol
+    name: ISymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.isymbol
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllTypeArguments(Microsoft.CodeAnalysis.ISymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllTypeArguments(Microsoft.CodeAnalysis.ISymbol)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_GetAllTypeArguments_Microsoft_CodeAnalysis_ISymbol_
+  name: GetAllTypeArguments(ISymbol)
+  nameWithType: SymbolExtensions.GetAllTypeArguments(ISymbol)
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllTypeArguments(Microsoft.CodeAnalysis.ISymbol)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllTypeArguments(Microsoft.CodeAnalysis.ISymbol)
+    name: GetAllTypeArguments
+    href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_GetAllTypeArguments_Microsoft_CodeAnalysis_ISymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ISymbol
+    name: ISymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.isymbol
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllTypeArguments(Microsoft.CodeAnalysis.ISymbol)
+    name: GetAllTypeArguments
+    href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_GetAllTypeArguments_Microsoft_CodeAnalysis_ISymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ISymbol
+    name: ISymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.isymbol
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllTypeParameters*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllTypeParameters
+  href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_GetAllTypeParameters_Microsoft_CodeAnalysis_ISymbol_
+  name: GetAllTypeParameters
+  nameWithType: SymbolExtensions.GetAllTypeParameters
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllTypeParameters
+- uid: System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.ITypeParameterSymbol}
+  commentId: T:System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.ITypeParameterSymbol}
+  parent: System.Collections.Immutable
+  definition: System.Collections.Immutable.ImmutableArray`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  name: ImmutableArray<ITypeParameterSymbol>
+  nameWithType: ImmutableArray<ITypeParameterSymbol>
+  fullName: System.Collections.Immutable.ImmutableArray<Microsoft.CodeAnalysis.ITypeParameterSymbol>
+  nameWithType.vb: ImmutableArray(Of ITypeParameterSymbol)
+  fullName.vb: System.Collections.Immutable.ImmutableArray(Of Microsoft.CodeAnalysis.ITypeParameterSymbol)
+  name.vb: ImmutableArray(Of ITypeParameterSymbol)
+  spec.csharp:
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: <
+  - uid: Microsoft.CodeAnalysis.ITypeParameterSymbol
+    name: ITypeParameterSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypeparametersymbol
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.ITypeParameterSymbol
+    name: ITypeParameterSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypeparametersymbol
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllTypeParameters(Microsoft.CodeAnalysis.ISymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllTypeParameters(Microsoft.CodeAnalysis.ISymbol)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_GetAllTypeParameters_Microsoft_CodeAnalysis_ISymbol_
+  name: GetAllTypeParameters(ISymbol)
+  nameWithType: SymbolExtensions.GetAllTypeParameters(ISymbol)
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllTypeParameters(Microsoft.CodeAnalysis.ISymbol)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllTypeParameters(Microsoft.CodeAnalysis.ISymbol)
+    name: GetAllTypeParameters
+    href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_GetAllTypeParameters_Microsoft_CodeAnalysis_ISymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ISymbol
+    name: ISymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.isymbol
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllTypeParameters(Microsoft.CodeAnalysis.ISymbol)
+    name: GetAllTypeParameters
+    href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_GetAllTypeParameters_Microsoft_CodeAnalysis_ISymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ISymbol
+    name: ISymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.isymbol
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetTypeArguments(Microsoft.CodeAnalysis.ISymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.GetTypeArguments(Microsoft.CodeAnalysis.ISymbol)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_GetTypeArguments_Microsoft_CodeAnalysis_ISymbol_
+  name: GetTypeArguments(ISymbol)
+  nameWithType: SymbolExtensions.GetTypeArguments(ISymbol)
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetTypeArguments(Microsoft.CodeAnalysis.ISymbol)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetTypeArguments(Microsoft.CodeAnalysis.ISymbol)
+    name: GetTypeArguments
+    href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_GetTypeArguments_Microsoft_CodeAnalysis_ISymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ISymbol
+    name: ISymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.isymbol
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetTypeArguments(Microsoft.CodeAnalysis.ISymbol)
+    name: GetTypeArguments
+    href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_GetTypeArguments_Microsoft_CodeAnalysis_ISymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ISymbol
+    name: ISymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.isymbol
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetTypeParameters*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SymbolExtensions.GetTypeParameters
+  href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_GetTypeParameters_Microsoft_CodeAnalysis_ISymbol_
+  name: GetTypeParameters
+  nameWithType: SymbolExtensions.GetTypeParameters
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetTypeParameters
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetTypeArguments*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SymbolExtensions.GetTypeArguments
+  href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_GetTypeArguments_Microsoft_CodeAnalysis_ISymbol_
+  name: GetTypeArguments
+  nameWithType: SymbolExtensions.GetTypeArguments
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetTypeArguments
+- uid: System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.ITypeSymbol}
+  commentId: T:System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.ITypeSymbol}
+  parent: System.Collections.Immutable
+  definition: System.Collections.Immutable.ImmutableArray`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  name: ImmutableArray<ITypeSymbol>
+  nameWithType: ImmutableArray<ITypeSymbol>
+  fullName: System.Collections.Immutable.ImmutableArray<Microsoft.CodeAnalysis.ITypeSymbol>
+  nameWithType.vb: ImmutableArray(Of ITypeSymbol)
+  fullName.vb: System.Collections.Immutable.ImmutableArray(Of Microsoft.CodeAnalysis.ITypeSymbol)
+  name.vb: ImmutableArray(Of ITypeSymbol)
+  spec.csharp:
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: <
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+- uid: Microsoft.CodeAnalysis.IMethodSymbol.OverriddenMethod
+  commentId: P:Microsoft.CodeAnalysis.IMethodSymbol.OverriddenMethod
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.imethodsymbol.overriddenmethod
+  name: OverriddenMethod
+  nameWithType: IMethodSymbol.OverriddenMethod
+  fullName: Microsoft.CodeAnalysis.IMethodSymbol.OverriddenMethod
+- uid: Microsoft.CodeAnalysis.IPropertySymbol.OverriddenProperty
+  commentId: P:Microsoft.CodeAnalysis.IPropertySymbol.OverriddenProperty
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ipropertysymbol.overriddenproperty
+  name: OverriddenProperty
+  nameWithType: IPropertySymbol.OverriddenProperty
+  fullName: Microsoft.CodeAnalysis.IPropertySymbol.OverriddenProperty
+- uid: Microsoft.CodeAnalysis.IEventSymbol
+  commentId: T:Microsoft.CodeAnalysis.IEventSymbol
+  parent: Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ieventsymbol
+  name: IEventSymbol
+  nameWithType: IEventSymbol
+  fullName: Microsoft.CodeAnalysis.IEventSymbol
+- uid: Microsoft.CodeAnalysis.IEventSymbol.OverriddenEvent
+  commentId: P:Microsoft.CodeAnalysis.IEventSymbol.OverriddenEvent
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ieventsymbol.overriddenevent
+  name: OverriddenEvent
+  nameWithType: IEventSymbol.OverriddenEvent
+  fullName: Microsoft.CodeAnalysis.IEventSymbol.OverriddenEvent
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetOverriddenMember*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SymbolExtensions.GetOverriddenMember
+  href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_GetOverriddenMember_Microsoft_CodeAnalysis_ISymbol_
+  name: GetOverriddenMember
+  nameWithType: SymbolExtensions.GetOverriddenMember
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetOverriddenMember
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllTypeArguments*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllTypeArguments
+  href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_GetAllTypeArguments_Microsoft_CodeAnalysis_ISymbol_
+  name: GetAllTypeArguments
+  nameWithType: SymbolExtensions.GetAllTypeArguments
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetAllTypeArguments

@@ -1,0 +1,2625 @@
+### YamlMime:ManagedReference
+items:
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext
+  commentId: T:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext
+  id: DisposableContext
+  parent: ANcpLua.Roslyn.Utilities.Contexts
+  children:
+  - ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.#ctor(Microsoft.CodeAnalysis.Compilation)
+  - ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.CancellationTokenSource
+  - ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.DbCommand
+  - ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.DbConnection
+  - ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.DbDataReader
+  - ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.HasDisposeAsyncMethod(Microsoft.CodeAnalysis.ITypeSymbol)
+  - ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.HasDisposeMethod(Microsoft.CodeAnalysis.ITypeSymbol)
+  - ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.HttpClient
+  - ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.HttpMessageHandler
+  - ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IAsyncDisposable
+  - ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IDisposable
+  - ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsAsyncDisposable(Microsoft.CodeAnalysis.ITypeSymbol)
+  - ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsCancellationTokenSource(Microsoft.CodeAnalysis.ITypeSymbol)
+  - ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDbCommand(Microsoft.CodeAnalysis.ITypeSymbol)
+  - ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDbConnection(Microsoft.CodeAnalysis.ITypeSymbol)
+  - ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDbDataReader(Microsoft.CodeAnalysis.ITypeSymbol)
+  - ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDisposable(Microsoft.CodeAnalysis.ITypeSymbol)
+  - ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsHttpClient(Microsoft.CodeAnalysis.ITypeSymbol)
+  - ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsInsideUsing(Microsoft.CodeAnalysis.IOperation)
+  - ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsSafeHandle(Microsoft.CodeAnalysis.ITypeSymbol)
+  - ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsStream(Microsoft.CodeAnalysis.ITypeSymbol)
+  - ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsSyncDisposable(Microsoft.CodeAnalysis.ITypeSymbol)
+  - ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsSynchronizationPrimitive(Microsoft.CodeAnalysis.ITypeSymbol)
+  - ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsTextReaderOrWriter(Microsoft.CodeAnalysis.ITypeSymbol)
+  - ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsUsingStatement(Microsoft.CodeAnalysis.IOperation)
+  - ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.Mutex
+  - ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.ReaderWriterLock
+  - ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.ReaderWriterLockSlim
+  - ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.SafeHandle
+  - ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.Semaphore
+  - ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.SemaphoreSlim
+  - ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.ShouldBeDisposed(Microsoft.CodeAnalysis.ITypeSymbol)
+  - ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.Stream
+  - ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.TextReader
+  - ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.TextWriter
+  - ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.Timer
+  langs:
+  - csharp
+  - vb
+  name: DisposableContext
+  nameWithType: DisposableContext
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext
+  type: Class
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: DisposableContext
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+    startLine: 23
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: >-
+    Provides context and utilities for analyzing disposable types and disposal patterns in Roslyn compilations.
+
+    <p>
+
+    This context caches well-known disposable-related type symbols from the compilation and provides
+
+    methods to check whether types implement disposal interfaces or inherit from common disposable base classes.
+
+    </p>
+  remarks: <ul><li>Caches symbols for <xref href="System.IDisposable" data-throw-if-not-resolved="false"></xref>, <code>IAsyncDisposable</code>, and common disposable types.</li><li>Provides type classification methods for streams, database types, synchronization primitives, and more.</li><li>Includes static helpers for detecting <code>using</code> statements and dispose methods.</li><li>Properties may be <code>null</code> if the corresponding type is not available in the compilation.</li></ul>
+  example: []
+  syntax:
+    content: public sealed class DisposableContext
+    content.vb: Public NotInheritable Class DisposableContext
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Contexts.AwaitableContext
+    commentId: T:ANcpLua.Roslyn.Utilities.Contexts.AwaitableContext
+  - linkId: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext
+    commentId: T:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1
+  - ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IDisposable
+  commentId: P:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IDisposable
+  id: IDisposable
+  parent: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext
+  langs:
+  - csharp
+  - vb
+  name: IDisposable
+  nameWithType: DisposableContext.IDisposable
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IDisposable
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IDisposable
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+    startLine: 32
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Gets the <xref href="Microsoft.CodeAnalysis.INamedTypeSymbol" data-throw-if-not-resolved="false"></xref> for <xref href="System.IDisposable" data-throw-if-not-resolved="false"></xref>, or <code>null</code> if not available.
+  example: []
+  syntax:
+    content: public INamedTypeSymbol? IDisposable { get; }
+    parameters: []
+    return:
+      type: Microsoft.CodeAnalysis.INamedTypeSymbol
+    content.vb: Public ReadOnly Property IDisposable As INamedTypeSymbol
+  overload: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IDisposable*
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IAsyncDisposable
+  commentId: P:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IAsyncDisposable
+  id: IAsyncDisposable
+  parent: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext
+  langs:
+  - csharp
+  - vb
+  name: IAsyncDisposable
+  nameWithType: DisposableContext.IAsyncDisposable
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IAsyncDisposable
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IAsyncDisposable
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+    startLine: 37
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Gets the <xref href="Microsoft.CodeAnalysis.INamedTypeSymbol" data-throw-if-not-resolved="false"></xref> for <code>IAsyncDisposable</code>, or <code>null</code> if not available.
+  example: []
+  syntax:
+    content: public INamedTypeSymbol? IAsyncDisposable { get; }
+    parameters: []
+    return:
+      type: Microsoft.CodeAnalysis.INamedTypeSymbol
+    content.vb: Public ReadOnly Property IAsyncDisposable As INamedTypeSymbol
+  overload: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IAsyncDisposable*
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.SafeHandle
+  commentId: P:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.SafeHandle
+  id: SafeHandle
+  parent: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext
+  langs:
+  - csharp
+  - vb
+  name: SafeHandle
+  nameWithType: DisposableContext.SafeHandle
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.SafeHandle
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: SafeHandle
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+    startLine: 42
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Gets the <xref href="Microsoft.CodeAnalysis.INamedTypeSymbol" data-throw-if-not-resolved="false"></xref> for <xref href="System.Runtime.InteropServices.SafeHandle" data-throw-if-not-resolved="false"></xref>, or <code>null</code> if not available.
+  example: []
+  syntax:
+    content: public INamedTypeSymbol? SafeHandle { get; }
+    parameters: []
+    return:
+      type: Microsoft.CodeAnalysis.INamedTypeSymbol
+    content.vb: Public ReadOnly Property SafeHandle As INamedTypeSymbol
+  overload: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.SafeHandle*
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.Stream
+  commentId: P:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.Stream
+  id: Stream
+  parent: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext
+  langs:
+  - csharp
+  - vb
+  name: Stream
+  nameWithType: DisposableContext.Stream
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.Stream
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Stream
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+    startLine: 47
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Gets the <xref href="Microsoft.CodeAnalysis.INamedTypeSymbol" data-throw-if-not-resolved="false"></xref> for <xref href="System.IO.Stream" data-throw-if-not-resolved="false"></xref>, or <code>null</code> if not available.
+  example: []
+  syntax:
+    content: public INamedTypeSymbol? Stream { get; }
+    parameters: []
+    return:
+      type: Microsoft.CodeAnalysis.INamedTypeSymbol
+    content.vb: Public ReadOnly Property Stream As INamedTypeSymbol
+  overload: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.Stream*
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.TextReader
+  commentId: P:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.TextReader
+  id: TextReader
+  parent: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext
+  langs:
+  - csharp
+  - vb
+  name: TextReader
+  nameWithType: DisposableContext.TextReader
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.TextReader
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: TextReader
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+    startLine: 52
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Gets the <xref href="Microsoft.CodeAnalysis.INamedTypeSymbol" data-throw-if-not-resolved="false"></xref> for <xref href="System.IO.TextReader" data-throw-if-not-resolved="false"></xref>, or <code>null</code> if not available.
+  example: []
+  syntax:
+    content: public INamedTypeSymbol? TextReader { get; }
+    parameters: []
+    return:
+      type: Microsoft.CodeAnalysis.INamedTypeSymbol
+    content.vb: Public ReadOnly Property TextReader As INamedTypeSymbol
+  overload: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.TextReader*
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.TextWriter
+  commentId: P:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.TextWriter
+  id: TextWriter
+  parent: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext
+  langs:
+  - csharp
+  - vb
+  name: TextWriter
+  nameWithType: DisposableContext.TextWriter
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.TextWriter
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: TextWriter
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+    startLine: 57
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Gets the <xref href="Microsoft.CodeAnalysis.INamedTypeSymbol" data-throw-if-not-resolved="false"></xref> for <xref href="System.IO.TextWriter" data-throw-if-not-resolved="false"></xref>, or <code>null</code> if not available.
+  example: []
+  syntax:
+    content: public INamedTypeSymbol? TextWriter { get; }
+    parameters: []
+    return:
+      type: Microsoft.CodeAnalysis.INamedTypeSymbol
+    content.vb: Public ReadOnly Property TextWriter As INamedTypeSymbol
+  overload: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.TextWriter*
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.DbConnection
+  commentId: P:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.DbConnection
+  id: DbConnection
+  parent: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext
+  langs:
+  - csharp
+  - vb
+  name: DbConnection
+  nameWithType: DisposableContext.DbConnection
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.DbConnection
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: DbConnection
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+    startLine: 62
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Gets the <xref href="Microsoft.CodeAnalysis.INamedTypeSymbol" data-throw-if-not-resolved="false"></xref> for <xref href="System.Data.Common.DbConnection" data-throw-if-not-resolved="false"></xref>, or <code>null</code> if not available.
+  example: []
+  syntax:
+    content: public INamedTypeSymbol? DbConnection { get; }
+    parameters: []
+    return:
+      type: Microsoft.CodeAnalysis.INamedTypeSymbol
+    content.vb: Public ReadOnly Property DbConnection As INamedTypeSymbol
+  overload: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.DbConnection*
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.DbCommand
+  commentId: P:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.DbCommand
+  id: DbCommand
+  parent: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext
+  langs:
+  - csharp
+  - vb
+  name: DbCommand
+  nameWithType: DisposableContext.DbCommand
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.DbCommand
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: DbCommand
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+    startLine: 67
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Gets the <xref href="Microsoft.CodeAnalysis.INamedTypeSymbol" data-throw-if-not-resolved="false"></xref> for <xref href="System.Data.Common.DbCommand" data-throw-if-not-resolved="false"></xref>, or <code>null</code> if not available.
+  example: []
+  syntax:
+    content: public INamedTypeSymbol? DbCommand { get; }
+    parameters: []
+    return:
+      type: Microsoft.CodeAnalysis.INamedTypeSymbol
+    content.vb: Public ReadOnly Property DbCommand As INamedTypeSymbol
+  overload: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.DbCommand*
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.DbDataReader
+  commentId: P:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.DbDataReader
+  id: DbDataReader
+  parent: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext
+  langs:
+  - csharp
+  - vb
+  name: DbDataReader
+  nameWithType: DisposableContext.DbDataReader
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.DbDataReader
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: DbDataReader
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+    startLine: 72
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Gets the <xref href="Microsoft.CodeAnalysis.INamedTypeSymbol" data-throw-if-not-resolved="false"></xref> for <xref href="System.Data.Common.DbDataReader" data-throw-if-not-resolved="false"></xref>, or <code>null</code> if not available.
+  example: []
+  syntax:
+    content: public INamedTypeSymbol? DbDataReader { get; }
+    parameters: []
+    return:
+      type: Microsoft.CodeAnalysis.INamedTypeSymbol
+    content.vb: Public ReadOnly Property DbDataReader As INamedTypeSymbol
+  overload: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.DbDataReader*
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.HttpClient
+  commentId: P:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.HttpClient
+  id: HttpClient
+  parent: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext
+  langs:
+  - csharp
+  - vb
+  name: HttpClient
+  nameWithType: DisposableContext.HttpClient
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.HttpClient
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: HttpClient
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+    startLine: 77
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Gets the <xref href="Microsoft.CodeAnalysis.INamedTypeSymbol" data-throw-if-not-resolved="false"></xref> for <xref href="System.Net.Http.HttpClient" data-throw-if-not-resolved="false"></xref>, or <code>null</code> if not available.
+  example: []
+  syntax:
+    content: public INamedTypeSymbol? HttpClient { get; }
+    parameters: []
+    return:
+      type: Microsoft.CodeAnalysis.INamedTypeSymbol
+    content.vb: Public ReadOnly Property HttpClient As INamedTypeSymbol
+  overload: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.HttpClient*
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.HttpMessageHandler
+  commentId: P:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.HttpMessageHandler
+  id: HttpMessageHandler
+  parent: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext
+  langs:
+  - csharp
+  - vb
+  name: HttpMessageHandler
+  nameWithType: DisposableContext.HttpMessageHandler
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.HttpMessageHandler
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: HttpMessageHandler
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+    startLine: 82
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Gets the <xref href="Microsoft.CodeAnalysis.INamedTypeSymbol" data-throw-if-not-resolved="false"></xref> for <xref href="System.Net.Http.HttpMessageHandler" data-throw-if-not-resolved="false"></xref>, or <code>null</code> if not available.
+  example: []
+  syntax:
+    content: public INamedTypeSymbol? HttpMessageHandler { get; }
+    parameters: []
+    return:
+      type: Microsoft.CodeAnalysis.INamedTypeSymbol
+    content.vb: Public ReadOnly Property HttpMessageHandler As INamedTypeSymbol
+  overload: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.HttpMessageHandler*
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.CancellationTokenSource
+  commentId: P:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.CancellationTokenSource
+  id: CancellationTokenSource
+  parent: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext
+  langs:
+  - csharp
+  - vb
+  name: CancellationTokenSource
+  nameWithType: DisposableContext.CancellationTokenSource
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.CancellationTokenSource
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: CancellationTokenSource
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+    startLine: 87
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Gets the <xref href="Microsoft.CodeAnalysis.INamedTypeSymbol" data-throw-if-not-resolved="false"></xref> for <xref href="System.Threading.CancellationTokenSource" data-throw-if-not-resolved="false"></xref>, or <code>null</code> if not available.
+  example: []
+  syntax:
+    content: public INamedTypeSymbol? CancellationTokenSource { get; }
+    parameters: []
+    return:
+      type: Microsoft.CodeAnalysis.INamedTypeSymbol
+    content.vb: Public ReadOnly Property CancellationTokenSource As INamedTypeSymbol
+  overload: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.CancellationTokenSource*
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.Timer
+  commentId: P:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.Timer
+  id: Timer
+  parent: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext
+  langs:
+  - csharp
+  - vb
+  name: Timer
+  nameWithType: DisposableContext.Timer
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.Timer
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Timer
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+    startLine: 92
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Gets the <xref href="Microsoft.CodeAnalysis.INamedTypeSymbol" data-throw-if-not-resolved="false"></xref> for <xref href="System.Threading.Timer" data-throw-if-not-resolved="false"></xref>, or <code>null</code> if not available.
+  example: []
+  syntax:
+    content: public INamedTypeSymbol? Timer { get; }
+    parameters: []
+    return:
+      type: Microsoft.CodeAnalysis.INamedTypeSymbol
+    content.vb: Public ReadOnly Property Timer As INamedTypeSymbol
+  overload: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.Timer*
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.Semaphore
+  commentId: P:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.Semaphore
+  id: Semaphore
+  parent: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext
+  langs:
+  - csharp
+  - vb
+  name: Semaphore
+  nameWithType: DisposableContext.Semaphore
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.Semaphore
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Semaphore
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+    startLine: 97
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Gets the <xref href="Microsoft.CodeAnalysis.INamedTypeSymbol" data-throw-if-not-resolved="false"></xref> for <xref href="System.Threading.Semaphore" data-throw-if-not-resolved="false"></xref>, or <code>null</code> if not available.
+  example: []
+  syntax:
+    content: public INamedTypeSymbol? Semaphore { get; }
+    parameters: []
+    return:
+      type: Microsoft.CodeAnalysis.INamedTypeSymbol
+    content.vb: Public ReadOnly Property Semaphore As INamedTypeSymbol
+  overload: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.Semaphore*
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.SemaphoreSlim
+  commentId: P:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.SemaphoreSlim
+  id: SemaphoreSlim
+  parent: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext
+  langs:
+  - csharp
+  - vb
+  name: SemaphoreSlim
+  nameWithType: DisposableContext.SemaphoreSlim
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.SemaphoreSlim
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: SemaphoreSlim
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+    startLine: 102
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Gets the <xref href="Microsoft.CodeAnalysis.INamedTypeSymbol" data-throw-if-not-resolved="false"></xref> for <xref href="System.Threading.SemaphoreSlim" data-throw-if-not-resolved="false"></xref>, or <code>null</code> if not available.
+  example: []
+  syntax:
+    content: public INamedTypeSymbol? SemaphoreSlim { get; }
+    parameters: []
+    return:
+      type: Microsoft.CodeAnalysis.INamedTypeSymbol
+    content.vb: Public ReadOnly Property SemaphoreSlim As INamedTypeSymbol
+  overload: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.SemaphoreSlim*
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.Mutex
+  commentId: P:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.Mutex
+  id: Mutex
+  parent: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext
+  langs:
+  - csharp
+  - vb
+  name: Mutex
+  nameWithType: DisposableContext.Mutex
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.Mutex
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Mutex
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+    startLine: 107
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Gets the <xref href="Microsoft.CodeAnalysis.INamedTypeSymbol" data-throw-if-not-resolved="false"></xref> for <xref href="System.Threading.Mutex" data-throw-if-not-resolved="false"></xref>, or <code>null</code> if not available.
+  example: []
+  syntax:
+    content: public INamedTypeSymbol? Mutex { get; }
+    parameters: []
+    return:
+      type: Microsoft.CodeAnalysis.INamedTypeSymbol
+    content.vb: Public ReadOnly Property Mutex As INamedTypeSymbol
+  overload: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.Mutex*
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.ReaderWriterLock
+  commentId: P:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.ReaderWriterLock
+  id: ReaderWriterLock
+  parent: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext
+  langs:
+  - csharp
+  - vb
+  name: ReaderWriterLock
+  nameWithType: DisposableContext.ReaderWriterLock
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.ReaderWriterLock
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: ReaderWriterLock
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+    startLine: 112
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Gets the <xref href="Microsoft.CodeAnalysis.INamedTypeSymbol" data-throw-if-not-resolved="false"></xref> for <xref href="System.Threading.ReaderWriterLock" data-throw-if-not-resolved="false"></xref>, or <code>null</code> if not available.
+  example: []
+  syntax:
+    content: public INamedTypeSymbol? ReaderWriterLock { get; }
+    parameters: []
+    return:
+      type: Microsoft.CodeAnalysis.INamedTypeSymbol
+    content.vb: Public ReadOnly Property ReaderWriterLock As INamedTypeSymbol
+  overload: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.ReaderWriterLock*
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.ReaderWriterLockSlim
+  commentId: P:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.ReaderWriterLockSlim
+  id: ReaderWriterLockSlim
+  parent: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext
+  langs:
+  - csharp
+  - vb
+  name: ReaderWriterLockSlim
+  nameWithType: DisposableContext.ReaderWriterLockSlim
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.ReaderWriterLockSlim
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: ReaderWriterLockSlim
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+    startLine: 117
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Gets the <xref href="Microsoft.CodeAnalysis.INamedTypeSymbol" data-throw-if-not-resolved="false"></xref> for <xref href="System.Threading.ReaderWriterLockSlim" data-throw-if-not-resolved="false"></xref>, or <code>null</code> if not available.
+  example: []
+  syntax:
+    content: public INamedTypeSymbol? ReaderWriterLockSlim { get; }
+    parameters: []
+    return:
+      type: Microsoft.CodeAnalysis.INamedTypeSymbol
+    content.vb: Public ReadOnly Property ReaderWriterLockSlim As INamedTypeSymbol
+  overload: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.ReaderWriterLockSlim*
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.#ctor(Microsoft.CodeAnalysis.Compilation)
+  commentId: M:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.#ctor(Microsoft.CodeAnalysis.Compilation)
+  id: '#ctor(Microsoft.CodeAnalysis.Compilation)'
+  parent: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext
+  langs:
+  - csharp
+  - vb
+  name: DisposableContext(Compilation)
+  nameWithType: DisposableContext.DisposableContext(Compilation)
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.DisposableContext(Microsoft.CodeAnalysis.Compilation)
+  type: Constructor
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: .ctor
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+    startLine: 124
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: >-
+    Initializes a new instance of the <xref href="ANcpLua.Roslyn.Utilities.Contexts.DisposableContext" data-throw-if-not-resolved="false"></xref> class by resolving
+
+    well-known disposable type symbols from the specified compilation.
+  example: []
+  syntax:
+    content: public DisposableContext(Compilation compilation)
+    parameters:
+    - id: compilation
+      type: Microsoft.CodeAnalysis.Compilation
+      description: The <xref href="Microsoft.CodeAnalysis.Compilation" data-throw-if-not-resolved="false"></xref> from which to resolve type symbols.
+    content.vb: Public Sub New(compilation As Compilation)
+  overload: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.#ctor*
+  nameWithType.vb: DisposableContext.New(Compilation)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.New(Microsoft.CodeAnalysis.Compilation)
+  name.vb: New(Compilation)
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDisposable(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDisposable(Microsoft.CodeAnalysis.ITypeSymbol)
+  id: IsDisposable(Microsoft.CodeAnalysis.ITypeSymbol)
+  parent: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext
+  langs:
+  - csharp
+  - vb
+  name: IsDisposable(ITypeSymbol?)
+  nameWithType: DisposableContext.IsDisposable(ITypeSymbol?)
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDisposable(Microsoft.CodeAnalysis.ITypeSymbol?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsDisposable
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+    startLine: 156
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Determines whether the specified type implements <xref href="System.IDisposable" data-throw-if-not-resolved="false"></xref> or <code>IAsyncDisposable</code>.
+  example: []
+  syntax:
+    content: public bool IsDisposable(ITypeSymbol? type)
+    parameters:
+    - id: type
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The type symbol to check, or <code>null</code>.
+    return:
+      type: System.Boolean
+      description: >-
+        <code>true</code> if <code class="paramref">type</code> implements either <xref href="System.IDisposable" data-throw-if-not-resolved="false"></xref> or
+
+        <code>IAsyncDisposable</code>; otherwise, <code>false</code>.
+    content.vb: Public Function IsDisposable(type As ITypeSymbol) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDisposable*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsSyncDisposable(Microsoft.CodeAnalysis.ITypeSymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsSyncDisposable(Microsoft.CodeAnalysis.ITypeSymbol)
+  - linkId: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsAsyncDisposable(Microsoft.CodeAnalysis.ITypeSymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsAsyncDisposable(Microsoft.CodeAnalysis.ITypeSymbol)
+  nameWithType.vb: DisposableContext.IsDisposable(ITypeSymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDisposable(Microsoft.CodeAnalysis.ITypeSymbol)
+  name.vb: IsDisposable(ITypeSymbol)
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsSyncDisposable(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsSyncDisposable(Microsoft.CodeAnalysis.ITypeSymbol)
+  id: IsSyncDisposable(Microsoft.CodeAnalysis.ITypeSymbol)
+  parent: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext
+  langs:
+  - csharp
+  - vb
+  name: IsSyncDisposable(ITypeSymbol?)
+  nameWithType: DisposableContext.IsSyncDisposable(ITypeSymbol?)
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsSyncDisposable(Microsoft.CodeAnalysis.ITypeSymbol?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsSyncDisposable
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+    startLine: 179
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Determines whether the specified type implements <xref href="System.IDisposable" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public bool IsSyncDisposable(ITypeSymbol? type)
+    parameters:
+    - id: type
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The type symbol to check, or <code>null</code>.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if <code class="paramref">type</code> implements <xref href="System.IDisposable" data-throw-if-not-resolved="false"></xref>; otherwise, <code>false</code>.
+    content.vb: Public Function IsSyncDisposable(type As ITypeSymbol) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsSyncDisposable*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDisposable(Microsoft.CodeAnalysis.ITypeSymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDisposable(Microsoft.CodeAnalysis.ITypeSymbol)
+  - linkId: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsAsyncDisposable(Microsoft.CodeAnalysis.ITypeSymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsAsyncDisposable(Microsoft.CodeAnalysis.ITypeSymbol)
+  nameWithType.vb: DisposableContext.IsSyncDisposable(ITypeSymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsSyncDisposable(Microsoft.CodeAnalysis.ITypeSymbol)
+  name.vb: IsSyncDisposable(ITypeSymbol)
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsAsyncDisposable(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsAsyncDisposable(Microsoft.CodeAnalysis.ITypeSymbol)
+  id: IsAsyncDisposable(Microsoft.CodeAnalysis.ITypeSymbol)
+  parent: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext
+  langs:
+  - csharp
+  - vb
+  name: IsAsyncDisposable(ITypeSymbol?)
+  nameWithType: DisposableContext.IsAsyncDisposable(ITypeSymbol?)
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsAsyncDisposable(Microsoft.CodeAnalysis.ITypeSymbol?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsAsyncDisposable
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+    startLine: 191
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Determines whether the specified type implements <code>IAsyncDisposable</code>.
+  example: []
+  syntax:
+    content: public bool IsAsyncDisposable(ITypeSymbol? type)
+    parameters:
+    - id: type
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The type symbol to check, or <code>null</code>.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if <code class="paramref">type</code> implements <code>IAsyncDisposable</code>; otherwise, <code>false</code>.
+    content.vb: Public Function IsAsyncDisposable(type As ITypeSymbol) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsAsyncDisposable*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDisposable(Microsoft.CodeAnalysis.ITypeSymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDisposable(Microsoft.CodeAnalysis.ITypeSymbol)
+  - linkId: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsSyncDisposable(Microsoft.CodeAnalysis.ITypeSymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsSyncDisposable(Microsoft.CodeAnalysis.ITypeSymbol)
+  nameWithType.vb: DisposableContext.IsAsyncDisposable(ITypeSymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsAsyncDisposable(Microsoft.CodeAnalysis.ITypeSymbol)
+  name.vb: IsAsyncDisposable(ITypeSymbol)
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.HasDisposeMethod(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.HasDisposeMethod(Microsoft.CodeAnalysis.ITypeSymbol)
+  id: HasDisposeMethod(Microsoft.CodeAnalysis.ITypeSymbol)
+  parent: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext
+  langs:
+  - csharp
+  - vb
+  name: HasDisposeMethod(ITypeSymbol)
+  nameWithType: DisposableContext.HasDisposeMethod(ITypeSymbol)
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.HasDisposeMethod(Microsoft.CodeAnalysis.ITypeSymbol)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: HasDisposeMethod
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+    startLine: 202
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Determines whether the specified type has a parameterless <code>Dispose()</code> method that returns <code>void</code>.
+  example: []
+  syntax:
+    content: public static bool HasDisposeMethod(ITypeSymbol type)
+    parameters:
+    - id: type
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The type symbol to check.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if <code class="paramref">type</code> has a <code>void Dispose()</code> method with no parameters; otherwise, <code>false</code>.
+    content.vb: Public Shared Function HasDisposeMethod(type As ITypeSymbol) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.HasDisposeMethod*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.HasDisposeAsyncMethod(Microsoft.CodeAnalysis.ITypeSymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.HasDisposeAsyncMethod(Microsoft.CodeAnalysis.ITypeSymbol)
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.HasDisposeAsyncMethod(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.HasDisposeAsyncMethod(Microsoft.CodeAnalysis.ITypeSymbol)
+  id: HasDisposeAsyncMethod(Microsoft.CodeAnalysis.ITypeSymbol)
+  parent: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext
+  langs:
+  - csharp
+  - vb
+  name: HasDisposeAsyncMethod(ITypeSymbol)
+  nameWithType: DisposableContext.HasDisposeAsyncMethod(ITypeSymbol)
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.HasDisposeAsyncMethod(Microsoft.CodeAnalysis.ITypeSymbol)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: HasDisposeAsyncMethod
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+    startLine: 221
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Determines whether the specified type has a parameterless <code>DisposeAsync()</code> method.
+  example: []
+  syntax:
+    content: public static bool HasDisposeAsyncMethod(ITypeSymbol type)
+    parameters:
+    - id: type
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The type symbol to check.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if <code class="paramref">type</code> has a <code>DisposeAsync()</code> method with no parameters; otherwise, <code>false</code>.
+    content.vb: Public Shared Function HasDisposeAsyncMethod(type As ITypeSymbol) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.HasDisposeAsyncMethod*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.HasDisposeMethod(Microsoft.CodeAnalysis.ITypeSymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.HasDisposeMethod(Microsoft.CodeAnalysis.ITypeSymbol)
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsUsingStatement(Microsoft.CodeAnalysis.IOperation)
+  commentId: M:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsUsingStatement(Microsoft.CodeAnalysis.IOperation)
+  id: IsUsingStatement(Microsoft.CodeAnalysis.IOperation)
+  parent: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext
+  langs:
+  - csharp
+  - vb
+  name: IsUsingStatement(IOperation)
+  nameWithType: DisposableContext.IsUsingStatement(IOperation)
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsUsingStatement(Microsoft.CodeAnalysis.IOperation)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsUsingStatement
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+    startLine: 241
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Determines whether the specified operation is a <code>using</code> statement or <code>using</code> declaration.
+  example: []
+  syntax:
+    content: public static bool IsUsingStatement(IOperation operation)
+    parameters:
+    - id: operation
+      type: Microsoft.CodeAnalysis.IOperation
+      description: The operation to check.
+    return:
+      type: System.Boolean
+      description: >-
+        <code>true</code> if <code class="paramref">operation</code> is an <xref href="Microsoft.CodeAnalysis.Operations.IUsingOperation" data-throw-if-not-resolved="false"></xref> or
+
+        <xref href="Microsoft.CodeAnalysis.Operations.IUsingDeclarationOperation" data-throw-if-not-resolved="false"></xref>; otherwise, <code>false</code>.
+    content.vb: Public Shared Function IsUsingStatement(operation As IOperation) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsUsingStatement*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsInsideUsing(Microsoft.CodeAnalysis.IOperation)
+    commentId: M:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsInsideUsing(Microsoft.CodeAnalysis.IOperation)
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsInsideUsing(Microsoft.CodeAnalysis.IOperation)
+  commentId: M:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsInsideUsing(Microsoft.CodeAnalysis.IOperation)
+  id: IsInsideUsing(Microsoft.CodeAnalysis.IOperation)
+  parent: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext
+  langs:
+  - csharp
+  - vb
+  name: IsInsideUsing(IOperation)
+  nameWithType: DisposableContext.IsInsideUsing(IOperation)
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsInsideUsing(Microsoft.CodeAnalysis.IOperation)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsInsideUsing
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+    startLine: 253
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Determines whether the specified operation is contained within a <code>using</code> statement or <code>using</code> declaration.
+  example: []
+  syntax:
+    content: public static bool IsInsideUsing(IOperation operation)
+    parameters:
+    - id: operation
+      type: Microsoft.CodeAnalysis.IOperation
+      description: The operation to check.
+    return:
+      type: System.Boolean
+      description: >-
+        <code>true</code> if <code class="paramref">operation</code> has an ancestor that is a <code>using</code> statement
+
+        or <code>using</code> declaration; otherwise, <code>false</code>.
+    content.vb: Public Shared Function IsInsideUsing(operation As IOperation) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsInsideUsing*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsUsingStatement(Microsoft.CodeAnalysis.IOperation)
+    commentId: M:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsUsingStatement(Microsoft.CodeAnalysis.IOperation)
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsStream(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsStream(Microsoft.CodeAnalysis.ITypeSymbol)
+  id: IsStream(Microsoft.CodeAnalysis.ITypeSymbol)
+  parent: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext
+  langs:
+  - csharp
+  - vb
+  name: IsStream(ITypeSymbol?)
+  nameWithType: DisposableContext.IsStream(ITypeSymbol?)
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsStream(Microsoft.CodeAnalysis.ITypeSymbol?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsStream
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+    startLine: 273
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Determines whether the specified type is or inherits from <xref href="System.IO.Stream" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public bool IsStream(ITypeSymbol? type)
+    parameters:
+    - id: type
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The type symbol to check, or <code>null</code>.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if <code class="paramref">type</code> is or inherits from <xref href="System.IO.Stream" data-throw-if-not-resolved="false"></xref>; otherwise, <code>false</code>.
+    content.vb: Public Function IsStream(type As ITypeSymbol) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsStream*
+  nameWithType.vb: DisposableContext.IsStream(ITypeSymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsStream(Microsoft.CodeAnalysis.ITypeSymbol)
+  name.vb: IsStream(ITypeSymbol)
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsTextReaderOrWriter(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsTextReaderOrWriter(Microsoft.CodeAnalysis.ITypeSymbol)
+  id: IsTextReaderOrWriter(Microsoft.CodeAnalysis.ITypeSymbol)
+  parent: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext
+  langs:
+  - csharp
+  - vb
+  name: IsTextReaderOrWriter(ITypeSymbol?)
+  nameWithType: DisposableContext.IsTextReaderOrWriter(ITypeSymbol?)
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsTextReaderOrWriter(Microsoft.CodeAnalysis.ITypeSymbol?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsTextReaderOrWriter
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+    startLine: 284
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Determines whether the specified type is or inherits from <xref href="System.IO.TextReader" data-throw-if-not-resolved="false"></xref> or <xref href="System.IO.TextWriter" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public bool IsTextReaderOrWriter(ITypeSymbol? type)
+    parameters:
+    - id: type
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The type symbol to check, or <code>null</code>.
+    return:
+      type: System.Boolean
+      description: >-
+        <code>true</code> if <code class="paramref">type</code> is or inherits from <xref href="System.IO.TextReader" data-throw-if-not-resolved="false"></xref> or
+
+        <xref href="System.IO.TextWriter" data-throw-if-not-resolved="false"></xref>; otherwise, <code>false</code>.
+    content.vb: Public Function IsTextReaderOrWriter(type As ITypeSymbol) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsTextReaderOrWriter*
+  nameWithType.vb: DisposableContext.IsTextReaderOrWriter(ITypeSymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsTextReaderOrWriter(Microsoft.CodeAnalysis.ITypeSymbol)
+  name.vb: IsTextReaderOrWriter(ITypeSymbol)
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDbConnection(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDbConnection(Microsoft.CodeAnalysis.ITypeSymbol)
+  id: IsDbConnection(Microsoft.CodeAnalysis.ITypeSymbol)
+  parent: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext
+  langs:
+  - csharp
+  - vb
+  name: IsDbConnection(ITypeSymbol?)
+  nameWithType: DisposableContext.IsDbConnection(ITypeSymbol?)
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDbConnection(Microsoft.CodeAnalysis.ITypeSymbol?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsDbConnection
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+    startLine: 298
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Determines whether the specified type is or inherits from <xref href="System.Data.Common.DbConnection" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public bool IsDbConnection(ITypeSymbol? type)
+    parameters:
+    - id: type
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The type symbol to check, or <code>null</code>.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if <code class="paramref">type</code> is or inherits from <xref href="System.Data.Common.DbConnection" data-throw-if-not-resolved="false"></xref>; otherwise, <code>false</code>.
+    content.vb: Public Function IsDbConnection(type As ITypeSymbol) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDbConnection*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDbCommand(Microsoft.CodeAnalysis.ITypeSymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDbCommand(Microsoft.CodeAnalysis.ITypeSymbol)
+  - linkId: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDbDataReader(Microsoft.CodeAnalysis.ITypeSymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDbDataReader(Microsoft.CodeAnalysis.ITypeSymbol)
+  nameWithType.vb: DisposableContext.IsDbConnection(ITypeSymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDbConnection(Microsoft.CodeAnalysis.ITypeSymbol)
+  name.vb: IsDbConnection(ITypeSymbol)
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDbCommand(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDbCommand(Microsoft.CodeAnalysis.ITypeSymbol)
+  id: IsDbCommand(Microsoft.CodeAnalysis.ITypeSymbol)
+  parent: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext
+  langs:
+  - csharp
+  - vb
+  name: IsDbCommand(ITypeSymbol?)
+  nameWithType: DisposableContext.IsDbCommand(ITypeSymbol?)
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDbCommand(Microsoft.CodeAnalysis.ITypeSymbol?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsDbCommand
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+    startLine: 310
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Determines whether the specified type is or inherits from <xref href="System.Data.Common.DbCommand" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public bool IsDbCommand(ITypeSymbol? type)
+    parameters:
+    - id: type
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The type symbol to check, or <code>null</code>.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if <code class="paramref">type</code> is or inherits from <xref href="System.Data.Common.DbCommand" data-throw-if-not-resolved="false"></xref>; otherwise, <code>false</code>.
+    content.vb: Public Function IsDbCommand(type As ITypeSymbol) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDbCommand*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDbConnection(Microsoft.CodeAnalysis.ITypeSymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDbConnection(Microsoft.CodeAnalysis.ITypeSymbol)
+  - linkId: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDbDataReader(Microsoft.CodeAnalysis.ITypeSymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDbDataReader(Microsoft.CodeAnalysis.ITypeSymbol)
+  nameWithType.vb: DisposableContext.IsDbCommand(ITypeSymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDbCommand(Microsoft.CodeAnalysis.ITypeSymbol)
+  name.vb: IsDbCommand(ITypeSymbol)
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDbDataReader(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDbDataReader(Microsoft.CodeAnalysis.ITypeSymbol)
+  id: IsDbDataReader(Microsoft.CodeAnalysis.ITypeSymbol)
+  parent: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext
+  langs:
+  - csharp
+  - vb
+  name: IsDbDataReader(ITypeSymbol?)
+  nameWithType: DisposableContext.IsDbDataReader(ITypeSymbol?)
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDbDataReader(Microsoft.CodeAnalysis.ITypeSymbol?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsDbDataReader
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+    startLine: 322
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Determines whether the specified type is or inherits from <xref href="System.Data.Common.DbDataReader" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public bool IsDbDataReader(ITypeSymbol? type)
+    parameters:
+    - id: type
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The type symbol to check, or <code>null</code>.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if <code class="paramref">type</code> is or inherits from <xref href="System.Data.Common.DbDataReader" data-throw-if-not-resolved="false"></xref>; otherwise, <code>false</code>.
+    content.vb: Public Function IsDbDataReader(type As ITypeSymbol) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDbDataReader*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDbConnection(Microsoft.CodeAnalysis.ITypeSymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDbConnection(Microsoft.CodeAnalysis.ITypeSymbol)
+  - linkId: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDbCommand(Microsoft.CodeAnalysis.ITypeSymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDbCommand(Microsoft.CodeAnalysis.ITypeSymbol)
+  nameWithType.vb: DisposableContext.IsDbDataReader(ITypeSymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDbDataReader(Microsoft.CodeAnalysis.ITypeSymbol)
+  name.vb: IsDbDataReader(ITypeSymbol)
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsHttpClient(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsHttpClient(Microsoft.CodeAnalysis.ITypeSymbol)
+  id: IsHttpClient(Microsoft.CodeAnalysis.ITypeSymbol)
+  parent: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext
+  langs:
+  - csharp
+  - vb
+  name: IsHttpClient(ITypeSymbol?)
+  nameWithType: DisposableContext.IsHttpClient(ITypeSymbol?)
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsHttpClient(Microsoft.CodeAnalysis.ITypeSymbol?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsHttpClient
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+    startLine: 332
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Determines whether the specified type is or inherits from <xref href="System.Net.Http.HttpClient" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public bool IsHttpClient(ITypeSymbol? type)
+    parameters:
+    - id: type
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The type symbol to check, or <code>null</code>.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if <code class="paramref">type</code> is or inherits from <xref href="System.Net.Http.HttpClient" data-throw-if-not-resolved="false"></xref>; otherwise, <code>false</code>.
+    content.vb: Public Function IsHttpClient(type As ITypeSymbol) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsHttpClient*
+  nameWithType.vb: DisposableContext.IsHttpClient(ITypeSymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsHttpClient(Microsoft.CodeAnalysis.ITypeSymbol)
+  name.vb: IsHttpClient(ITypeSymbol)
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsSynchronizationPrimitive(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsSynchronizationPrimitive(Microsoft.CodeAnalysis.ITypeSymbol)
+  id: IsSynchronizationPrimitive(Microsoft.CodeAnalysis.ITypeSymbol)
+  parent: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext
+  langs:
+  - csharp
+  - vb
+  name: IsSynchronizationPrimitive(ITypeSymbol?)
+  nameWithType: DisposableContext.IsSynchronizationPrimitive(ITypeSymbol?)
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsSynchronizationPrimitive(Microsoft.CodeAnalysis.ITypeSymbol?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsSynchronizationPrimitive
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+    startLine: 343
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: >-
+    Determines whether the specified type is a synchronization primitive
+
+    (Semaphore, SemaphoreSlim, Mutex, ReaderWriterLock, or ReaderWriterLockSlim).
+  example: []
+  syntax:
+    content: public bool IsSynchronizationPrimitive(ITypeSymbol? type)
+    parameters:
+    - id: type
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The type symbol to check, or <code>null</code>.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if <code class="paramref">type</code> is or inherits from a synchronization primitive type; otherwise, <code>false</code>.
+    content.vb: Public Function IsSynchronizationPrimitive(type As ITypeSymbol) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsSynchronizationPrimitive*
+  nameWithType.vb: DisposableContext.IsSynchronizationPrimitive(ITypeSymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsSynchronizationPrimitive(Microsoft.CodeAnalysis.ITypeSymbol)
+  name.vb: IsSynchronizationPrimitive(ITypeSymbol)
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsCancellationTokenSource(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsCancellationTokenSource(Microsoft.CodeAnalysis.ITypeSymbol)
+  id: IsCancellationTokenSource(Microsoft.CodeAnalysis.ITypeSymbol)
+  parent: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext
+  langs:
+  - csharp
+  - vb
+  name: IsCancellationTokenSource(ITypeSymbol?)
+  nameWithType: DisposableContext.IsCancellationTokenSource(ITypeSymbol?)
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsCancellationTokenSource(Microsoft.CodeAnalysis.ITypeSymbol?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsCancellationTokenSource
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+    startLine: 362
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Determines whether the specified type is exactly <xref href="System.Threading.CancellationTokenSource" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public bool IsCancellationTokenSource(ITypeSymbol? type)
+    parameters:
+    - id: type
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The type symbol to check, or <code>null</code>.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if <code class="paramref">type</code> equals <xref href="System.Threading.CancellationTokenSource" data-throw-if-not-resolved="false"></xref>; otherwise, <code>false</code>.
+    content.vb: Public Function IsCancellationTokenSource(type As ITypeSymbol) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsCancellationTokenSource*
+  nameWithType.vb: DisposableContext.IsCancellationTokenSource(ITypeSymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsCancellationTokenSource(Microsoft.CodeAnalysis.ITypeSymbol)
+  name.vb: IsCancellationTokenSource(ITypeSymbol)
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsSafeHandle(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsSafeHandle(Microsoft.CodeAnalysis.ITypeSymbol)
+  id: IsSafeHandle(Microsoft.CodeAnalysis.ITypeSymbol)
+  parent: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext
+  langs:
+  - csharp
+  - vb
+  name: IsSafeHandle(ITypeSymbol?)
+  nameWithType: DisposableContext.IsSafeHandle(ITypeSymbol?)
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsSafeHandle(Microsoft.CodeAnalysis.ITypeSymbol?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsSafeHandle
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+    startLine: 372
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Determines whether the specified type is or inherits from <xref href="System.Runtime.InteropServices.SafeHandle" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public bool IsSafeHandle(ITypeSymbol? type)
+    parameters:
+    - id: type
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The type symbol to check, or <code>null</code>.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if <code class="paramref">type</code> is or inherits from <xref href="System.Runtime.InteropServices.SafeHandle" data-throw-if-not-resolved="false"></xref>; otherwise, <code>false</code>.
+    content.vb: Public Function IsSafeHandle(type As ITypeSymbol) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsSafeHandle*
+  nameWithType.vb: DisposableContext.IsSafeHandle(ITypeSymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsSafeHandle(Microsoft.CodeAnalysis.ITypeSymbol)
+  name.vb: IsSafeHandle(ITypeSymbol)
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.ShouldBeDisposed(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.ShouldBeDisposed(Microsoft.CodeAnalysis.ITypeSymbol)
+  id: ShouldBeDisposed(Microsoft.CodeAnalysis.ITypeSymbol)
+  parent: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext
+  langs:
+  - csharp
+  - vb
+  name: ShouldBeDisposed(ITypeSymbol?)
+  nameWithType: DisposableContext.ShouldBeDisposed(ITypeSymbol?)
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.ShouldBeDisposed(Microsoft.CodeAnalysis.ITypeSymbol?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: ShouldBeDisposed
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
+    startLine: 389
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: >-
+    Determines whether the specified type is disposable and should typically be disposed by the caller.
+
+    <p>
+
+    This method returns <code>false</code> for types that are commonly managed by dependency injection
+
+    or pooling mechanisms (such as <xref href="System.Net.Http.HttpClient" data-throw-if-not-resolved="false"></xref>).
+
+    </p>
+  example: []
+  syntax:
+    content: public bool ShouldBeDisposed(ITypeSymbol? type)
+    parameters:
+    - id: type
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The type symbol to check, or <code>null</code>.
+    return:
+      type: System.Boolean
+      description: >-
+        <code>true</code> if <code class="paramref">type</code> is disposable and should typically be disposed;
+
+        <code>false</code> if it is not disposable or is typically managed externally.
+    content.vb: Public Function ShouldBeDisposed(type As ITypeSymbol) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.ShouldBeDisposed*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDisposable(Microsoft.CodeAnalysis.ITypeSymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDisposable(Microsoft.CodeAnalysis.ITypeSymbol)
+  - linkId: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsHttpClient(Microsoft.CodeAnalysis.ITypeSymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsHttpClient(Microsoft.CodeAnalysis.ITypeSymbol)
+  nameWithType.vb: DisposableContext.ShouldBeDisposed(ITypeSymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.ShouldBeDisposed(Microsoft.CodeAnalysis.ITypeSymbol)
+  name.vb: ShouldBeDisposed(ITypeSymbol)
+references:
+- uid: ANcpLua.Roslyn.Utilities.Contexts.AwaitableContext
+  commentId: T:ANcpLua.Roslyn.Utilities.Contexts.AwaitableContext
+  href: ANcpLua.Roslyn.Utilities.Contexts.AwaitableContext.html
+  name: AwaitableContext
+  nameWithType: AwaitableContext
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.AwaitableContext
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext
+  commentId: T:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext
+  href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html
+  name: CollectionContext
+  nameWithType: CollectionContext
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: ANcpLua.Roslyn.Utilities.Contexts
+  commentId: N:ANcpLua.Roslyn.Utilities.Contexts
+  href: ANcpLua.html
+  name: ANcpLua.Roslyn.Utilities.Contexts
+  nameWithType: ANcpLua.Roslyn.Utilities.Contexts
+  fullName: ANcpLua.Roslyn.Utilities.Contexts
+  spec.csharp:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities.Contexts
+    name: Contexts
+    href: ANcpLua.Roslyn.Utilities.Contexts.html
+  spec.vb:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities.Contexts
+    name: Contexts
+    href: ANcpLua.Roslyn.Utilities.Contexts.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+  parent: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+  definition: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  name: ToResultWithDiagnostics<DisposableContext>(DisposableContext)
+  nameWithType: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<DisposableContext>(DisposableContext)
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<ANcpLua.Roslyn.Utilities.Contexts.DisposableContext>(ANcpLua.Roslyn.Utilities.Contexts.DisposableContext)
+  nameWithType.vb: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of DisposableContext)(DisposableContext)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of ANcpLua.Roslyn.Utilities.Contexts.DisposableContext)(ANcpLua.Roslyn.Utilities.Contexts.DisposableContext)
+  name.vb: ToResultWithDiagnostics(Of DisposableContext)(DisposableContext)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(ANcpLua.Roslyn.Utilities.Contexts.DisposableContext)
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext
+    name: DisposableContext
+    href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html
+  - name: '>'
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext
+    name: DisposableContext
+    href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(ANcpLua.Roslyn.Utilities.Contexts.DisposableContext)
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext
+    name: DisposableContext
+    href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html
+  - name: )
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext
+    name: DisposableContext
+    href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  parent: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+  definition: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  name: ToResultWithDiagnostics<DisposableContext>(DisposableContext, ImmutableArray<DiagnosticInfo>)
+  nameWithType: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<DisposableContext>(DisposableContext, ImmutableArray<DiagnosticInfo>)
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<ANcpLua.Roslyn.Utilities.Contexts.DisposableContext>(ANcpLua.Roslyn.Utilities.Contexts.DisposableContext, System.Collections.Immutable.ImmutableArray<ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo>)
+  nameWithType.vb: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of DisposableContext)(DisposableContext, ImmutableArray(Of DiagnosticInfo))
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of ANcpLua.Roslyn.Utilities.Contexts.DisposableContext)(ANcpLua.Roslyn.Utilities.Contexts.DisposableContext, System.Collections.Immutable.ImmutableArray(Of ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo))
+  name.vb: ToResultWithDiagnostics(Of DisposableContext)(DisposableContext, ImmutableArray(Of DiagnosticInfo))
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(ANcpLua.Roslyn.Utilities.Contexts.DisposableContext,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext
+    name: DisposableContext
+    href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html
+  - name: '>'
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext
+    name: DisposableContext
+    href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(ANcpLua.Roslyn.Utilities.Contexts.DisposableContext,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext
+    name: DisposableContext
+    href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html
+  - name: )
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext
+    name: DisposableContext
+    href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: )
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  name: ToResultWithDiagnostics<T>(T)
+  nameWithType: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<T>(T)
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<T>(T)
+  nameWithType.vb: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of T)(T)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of T)(T)
+  name.vb: ToResultWithDiagnostics(Of T)(T)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+  commentId: T:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+  parent: ANcpLua.Roslyn.Utilities.Models
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html
+  name: ResultWithDiagnosticsExtensions
+  nameWithType: ResultWithDiagnosticsExtensions
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+- uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  name: ToResultWithDiagnostics<T>(T, ImmutableArray<DiagnosticInfo>)
+  nameWithType: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<T>(T, ImmutableArray<DiagnosticInfo>)
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<T>(T, System.Collections.Immutable.ImmutableArray<ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo>)
+  nameWithType.vb: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of T)(T, ImmutableArray(Of DiagnosticInfo))
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of T)(T, System.Collections.Immutable.ImmutableArray(Of ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo))
+  name.vb: ToResultWithDiagnostics(Of T)(T, ImmutableArray(Of DiagnosticInfo))
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: )
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Models
+  commentId: N:ANcpLua.Roslyn.Utilities.Models
+  href: ANcpLua.html
+  name: ANcpLua.Roslyn.Utilities.Models
+  nameWithType: ANcpLua.Roslyn.Utilities.Models
+  fullName: ANcpLua.Roslyn.Utilities.Models
+  spec.csharp:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities.Models
+    name: Models
+    href: ANcpLua.Roslyn.Utilities.Models.html
+  spec.vb:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities.Models
+    name: Models
+    href: ANcpLua.Roslyn.Utilities.Models.html
+- uid: Microsoft.CodeAnalysis.INamedTypeSymbol
+  commentId: T:Microsoft.CodeAnalysis.INamedTypeSymbol
+  parent: Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.inamedtypesymbol
+  name: INamedTypeSymbol
+  nameWithType: INamedTypeSymbol
+  fullName: Microsoft.CodeAnalysis.INamedTypeSymbol
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IDisposable*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IDisposable
+  href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html#ANcpLua_Roslyn_Utilities_Contexts_DisposableContext_IDisposable
+  name: IDisposable
+  nameWithType: DisposableContext.IDisposable
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IDisposable
+- uid: Microsoft.CodeAnalysis
+  commentId: N:Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.CodeAnalysis
+  nameWithType: Microsoft.CodeAnalysis
+  fullName: Microsoft.CodeAnalysis
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IAsyncDisposable*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IAsyncDisposable
+  href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html#ANcpLua_Roslyn_Utilities_Contexts_DisposableContext_IAsyncDisposable
+  name: IAsyncDisposable
+  nameWithType: DisposableContext.IAsyncDisposable
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IAsyncDisposable
+- uid: System.Runtime.InteropServices.SafeHandle
+  commentId: T:System.Runtime.InteropServices.SafeHandle
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.runtime.interopservices.safehandle
+  name: SafeHandle
+  nameWithType: SafeHandle
+  fullName: System.Runtime.InteropServices.SafeHandle
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.SafeHandle*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.SafeHandle
+  href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html#ANcpLua_Roslyn_Utilities_Contexts_DisposableContext_SafeHandle
+  name: SafeHandle
+  nameWithType: DisposableContext.SafeHandle
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.SafeHandle
+- uid: System.IO.Stream
+  commentId: T:System.IO.Stream
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.stream
+  name: Stream
+  nameWithType: Stream
+  fullName: System.IO.Stream
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.Stream*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.Stream
+  href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html#ANcpLua_Roslyn_Utilities_Contexts_DisposableContext_Stream
+  name: Stream
+  nameWithType: DisposableContext.Stream
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.Stream
+- uid: System.IO.TextReader
+  commentId: T:System.IO.TextReader
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.textreader
+  name: TextReader
+  nameWithType: TextReader
+  fullName: System.IO.TextReader
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.TextReader*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.TextReader
+  href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html#ANcpLua_Roslyn_Utilities_Contexts_DisposableContext_TextReader
+  name: TextReader
+  nameWithType: DisposableContext.TextReader
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.TextReader
+- uid: System.IO.TextWriter
+  commentId: T:System.IO.TextWriter
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.textwriter
+  name: TextWriter
+  nameWithType: TextWriter
+  fullName: System.IO.TextWriter
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.TextWriter*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.TextWriter
+  href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html#ANcpLua_Roslyn_Utilities_Contexts_DisposableContext_TextWriter
+  name: TextWriter
+  nameWithType: DisposableContext.TextWriter
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.TextWriter
+- uid: System.Data.Common.DbConnection
+  commentId: T:System.Data.Common.DbConnection
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.data.common.dbconnection
+  name: DbConnection
+  nameWithType: DbConnection
+  fullName: System.Data.Common.DbConnection
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.DbConnection*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.DbConnection
+  href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html#ANcpLua_Roslyn_Utilities_Contexts_DisposableContext_DbConnection
+  name: DbConnection
+  nameWithType: DisposableContext.DbConnection
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.DbConnection
+- uid: System.Data.Common.DbCommand
+  commentId: T:System.Data.Common.DbCommand
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.data.common.dbcommand
+  name: DbCommand
+  nameWithType: DbCommand
+  fullName: System.Data.Common.DbCommand
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.DbCommand*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.DbCommand
+  href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html#ANcpLua_Roslyn_Utilities_Contexts_DisposableContext_DbCommand
+  name: DbCommand
+  nameWithType: DisposableContext.DbCommand
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.DbCommand
+- uid: System.Data.Common.DbDataReader
+  commentId: T:System.Data.Common.DbDataReader
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.data.common.dbdatareader
+  name: DbDataReader
+  nameWithType: DbDataReader
+  fullName: System.Data.Common.DbDataReader
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.DbDataReader*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.DbDataReader
+  href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html#ANcpLua_Roslyn_Utilities_Contexts_DisposableContext_DbDataReader
+  name: DbDataReader
+  nameWithType: DisposableContext.DbDataReader
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.DbDataReader
+- uid: System.Net.Http.HttpClient
+  commentId: T:System.Net.Http.HttpClient
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.net.http.httpclient
+  name: HttpClient
+  nameWithType: HttpClient
+  fullName: System.Net.Http.HttpClient
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.HttpClient*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.HttpClient
+  href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html#ANcpLua_Roslyn_Utilities_Contexts_DisposableContext_HttpClient
+  name: HttpClient
+  nameWithType: DisposableContext.HttpClient
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.HttpClient
+- uid: System.Net.Http.HttpMessageHandler
+  commentId: T:System.Net.Http.HttpMessageHandler
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.net.http.httpmessagehandler
+  name: HttpMessageHandler
+  nameWithType: HttpMessageHandler
+  fullName: System.Net.Http.HttpMessageHandler
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.HttpMessageHandler*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.HttpMessageHandler
+  href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html#ANcpLua_Roslyn_Utilities_Contexts_DisposableContext_HttpMessageHandler
+  name: HttpMessageHandler
+  nameWithType: DisposableContext.HttpMessageHandler
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.HttpMessageHandler
+- uid: System.Threading.CancellationTokenSource
+  commentId: T:System.Threading.CancellationTokenSource
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtokensource
+  name: CancellationTokenSource
+  nameWithType: CancellationTokenSource
+  fullName: System.Threading.CancellationTokenSource
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.CancellationTokenSource*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.CancellationTokenSource
+  href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html#ANcpLua_Roslyn_Utilities_Contexts_DisposableContext_CancellationTokenSource
+  name: CancellationTokenSource
+  nameWithType: DisposableContext.CancellationTokenSource
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.CancellationTokenSource
+- uid: System.Threading.Timer
+  commentId: T:System.Threading.Timer
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.timer
+  name: Timer
+  nameWithType: Timer
+  fullName: System.Threading.Timer
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.Timer*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.Timer
+  href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html#ANcpLua_Roslyn_Utilities_Contexts_DisposableContext_Timer
+  name: Timer
+  nameWithType: DisposableContext.Timer
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.Timer
+- uid: System.Threading.Semaphore
+  commentId: T:System.Threading.Semaphore
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.semaphore
+  name: Semaphore
+  nameWithType: Semaphore
+  fullName: System.Threading.Semaphore
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.Semaphore*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.Semaphore
+  href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html#ANcpLua_Roslyn_Utilities_Contexts_DisposableContext_Semaphore
+  name: Semaphore
+  nameWithType: DisposableContext.Semaphore
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.Semaphore
+- uid: System.Threading.SemaphoreSlim
+  commentId: T:System.Threading.SemaphoreSlim
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.semaphoreslim
+  name: SemaphoreSlim
+  nameWithType: SemaphoreSlim
+  fullName: System.Threading.SemaphoreSlim
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.SemaphoreSlim*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.SemaphoreSlim
+  href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html#ANcpLua_Roslyn_Utilities_Contexts_DisposableContext_SemaphoreSlim
+  name: SemaphoreSlim
+  nameWithType: DisposableContext.SemaphoreSlim
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.SemaphoreSlim
+- uid: System.Threading.Mutex
+  commentId: T:System.Threading.Mutex
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.mutex
+  name: Mutex
+  nameWithType: Mutex
+  fullName: System.Threading.Mutex
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.Mutex*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.Mutex
+  href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html#ANcpLua_Roslyn_Utilities_Contexts_DisposableContext_Mutex
+  name: Mutex
+  nameWithType: DisposableContext.Mutex
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.Mutex
+- uid: System.Threading.ReaderWriterLock
+  commentId: T:System.Threading.ReaderWriterLock
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.readerwriterlock
+  name: ReaderWriterLock
+  nameWithType: ReaderWriterLock
+  fullName: System.Threading.ReaderWriterLock
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.ReaderWriterLock*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.ReaderWriterLock
+  href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html#ANcpLua_Roslyn_Utilities_Contexts_DisposableContext_ReaderWriterLock
+  name: ReaderWriterLock
+  nameWithType: DisposableContext.ReaderWriterLock
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.ReaderWriterLock
+- uid: System.Threading.ReaderWriterLockSlim
+  commentId: T:System.Threading.ReaderWriterLockSlim
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.readerwriterlockslim
+  name: ReaderWriterLockSlim
+  nameWithType: ReaderWriterLockSlim
+  fullName: System.Threading.ReaderWriterLockSlim
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.ReaderWriterLockSlim*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.ReaderWriterLockSlim
+  href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html#ANcpLua_Roslyn_Utilities_Contexts_DisposableContext_ReaderWriterLockSlim
+  name: ReaderWriterLockSlim
+  nameWithType: DisposableContext.ReaderWriterLockSlim
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.ReaderWriterLockSlim
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext
+  commentId: T:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext
+  href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html
+  name: DisposableContext
+  nameWithType: DisposableContext
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext
+- uid: Microsoft.CodeAnalysis.Compilation
+  commentId: T:Microsoft.CodeAnalysis.Compilation
+  parent: Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.compilation
+  name: Compilation
+  nameWithType: Compilation
+  fullName: Microsoft.CodeAnalysis.Compilation
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.#ctor*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.#ctor
+  href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html#ANcpLua_Roslyn_Utilities_Contexts_DisposableContext__ctor_Microsoft_CodeAnalysis_Compilation_
+  name: DisposableContext
+  nameWithType: DisposableContext.DisposableContext
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.DisposableContext
+  nameWithType.vb: DisposableContext.New
+  fullName.vb: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.New
+  name.vb: New
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsSyncDisposable(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsSyncDisposable(Microsoft.CodeAnalysis.ITypeSymbol)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html#ANcpLua_Roslyn_Utilities_Contexts_DisposableContext_IsSyncDisposable_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsSyncDisposable(ITypeSymbol)
+  nameWithType: DisposableContext.IsSyncDisposable(ITypeSymbol)
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsSyncDisposable(Microsoft.CodeAnalysis.ITypeSymbol)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsSyncDisposable(Microsoft.CodeAnalysis.ITypeSymbol)
+    name: IsSyncDisposable
+    href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html#ANcpLua_Roslyn_Utilities_Contexts_DisposableContext_IsSyncDisposable_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsSyncDisposable(Microsoft.CodeAnalysis.ITypeSymbol)
+    name: IsSyncDisposable
+    href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html#ANcpLua_Roslyn_Utilities_Contexts_DisposableContext_IsSyncDisposable_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsAsyncDisposable(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsAsyncDisposable(Microsoft.CodeAnalysis.ITypeSymbol)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html#ANcpLua_Roslyn_Utilities_Contexts_DisposableContext_IsAsyncDisposable_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsAsyncDisposable(ITypeSymbol)
+  nameWithType: DisposableContext.IsAsyncDisposable(ITypeSymbol)
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsAsyncDisposable(Microsoft.CodeAnalysis.ITypeSymbol)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsAsyncDisposable(Microsoft.CodeAnalysis.ITypeSymbol)
+    name: IsAsyncDisposable
+    href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html#ANcpLua_Roslyn_Utilities_Contexts_DisposableContext_IsAsyncDisposable_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsAsyncDisposable(Microsoft.CodeAnalysis.ITypeSymbol)
+    name: IsAsyncDisposable
+    href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html#ANcpLua_Roslyn_Utilities_Contexts_DisposableContext_IsAsyncDisposable_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDisposable*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDisposable
+  href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html#ANcpLua_Roslyn_Utilities_Contexts_DisposableContext_IsDisposable_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsDisposable
+  nameWithType: DisposableContext.IsDisposable
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDisposable
+- uid: Microsoft.CodeAnalysis.ITypeSymbol
+  commentId: T:Microsoft.CodeAnalysis.ITypeSymbol
+  parent: Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  name: ITypeSymbol
+  nameWithType: ITypeSymbol
+  fullName: Microsoft.CodeAnalysis.ITypeSymbol
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDisposable(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDisposable(Microsoft.CodeAnalysis.ITypeSymbol)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html#ANcpLua_Roslyn_Utilities_Contexts_DisposableContext_IsDisposable_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsDisposable(ITypeSymbol)
+  nameWithType: DisposableContext.IsDisposable(ITypeSymbol)
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDisposable(Microsoft.CodeAnalysis.ITypeSymbol)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDisposable(Microsoft.CodeAnalysis.ITypeSymbol)
+    name: IsDisposable
+    href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html#ANcpLua_Roslyn_Utilities_Contexts_DisposableContext_IsDisposable_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDisposable(Microsoft.CodeAnalysis.ITypeSymbol)
+    name: IsDisposable
+    href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html#ANcpLua_Roslyn_Utilities_Contexts_DisposableContext_IsDisposable_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsSyncDisposable*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsSyncDisposable
+  href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html#ANcpLua_Roslyn_Utilities_Contexts_DisposableContext_IsSyncDisposable_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsSyncDisposable
+  nameWithType: DisposableContext.IsSyncDisposable
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsSyncDisposable
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsAsyncDisposable*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsAsyncDisposable
+  href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html#ANcpLua_Roslyn_Utilities_Contexts_DisposableContext_IsAsyncDisposable_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsAsyncDisposable
+  nameWithType: DisposableContext.IsAsyncDisposable
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsAsyncDisposable
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.HasDisposeAsyncMethod(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.HasDisposeAsyncMethod(Microsoft.CodeAnalysis.ITypeSymbol)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html#ANcpLua_Roslyn_Utilities_Contexts_DisposableContext_HasDisposeAsyncMethod_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: HasDisposeAsyncMethod(ITypeSymbol)
+  nameWithType: DisposableContext.HasDisposeAsyncMethod(ITypeSymbol)
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.HasDisposeAsyncMethod(Microsoft.CodeAnalysis.ITypeSymbol)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.HasDisposeAsyncMethod(Microsoft.CodeAnalysis.ITypeSymbol)
+    name: HasDisposeAsyncMethod
+    href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html#ANcpLua_Roslyn_Utilities_Contexts_DisposableContext_HasDisposeAsyncMethod_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.HasDisposeAsyncMethod(Microsoft.CodeAnalysis.ITypeSymbol)
+    name: HasDisposeAsyncMethod
+    href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html#ANcpLua_Roslyn_Utilities_Contexts_DisposableContext_HasDisposeAsyncMethod_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.HasDisposeMethod*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.HasDisposeMethod
+  href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html#ANcpLua_Roslyn_Utilities_Contexts_DisposableContext_HasDisposeMethod_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: HasDisposeMethod
+  nameWithType: DisposableContext.HasDisposeMethod
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.HasDisposeMethod
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.HasDisposeMethod(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.HasDisposeMethod(Microsoft.CodeAnalysis.ITypeSymbol)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html#ANcpLua_Roslyn_Utilities_Contexts_DisposableContext_HasDisposeMethod_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: HasDisposeMethod(ITypeSymbol)
+  nameWithType: DisposableContext.HasDisposeMethod(ITypeSymbol)
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.HasDisposeMethod(Microsoft.CodeAnalysis.ITypeSymbol)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.HasDisposeMethod(Microsoft.CodeAnalysis.ITypeSymbol)
+    name: HasDisposeMethod
+    href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html#ANcpLua_Roslyn_Utilities_Contexts_DisposableContext_HasDisposeMethod_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.HasDisposeMethod(Microsoft.CodeAnalysis.ITypeSymbol)
+    name: HasDisposeMethod
+    href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html#ANcpLua_Roslyn_Utilities_Contexts_DisposableContext_HasDisposeMethod_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.HasDisposeAsyncMethod*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.HasDisposeAsyncMethod
+  href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html#ANcpLua_Roslyn_Utilities_Contexts_DisposableContext_HasDisposeAsyncMethod_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: HasDisposeAsyncMethod
+  nameWithType: DisposableContext.HasDisposeAsyncMethod
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.HasDisposeAsyncMethod
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsInsideUsing(Microsoft.CodeAnalysis.IOperation)
+  commentId: M:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsInsideUsing(Microsoft.CodeAnalysis.IOperation)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html#ANcpLua_Roslyn_Utilities_Contexts_DisposableContext_IsInsideUsing_Microsoft_CodeAnalysis_IOperation_
+  name: IsInsideUsing(IOperation)
+  nameWithType: DisposableContext.IsInsideUsing(IOperation)
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsInsideUsing(Microsoft.CodeAnalysis.IOperation)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsInsideUsing(Microsoft.CodeAnalysis.IOperation)
+    name: IsInsideUsing
+    href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html#ANcpLua_Roslyn_Utilities_Contexts_DisposableContext_IsInsideUsing_Microsoft_CodeAnalysis_IOperation_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IOperation
+    name: IOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ioperation
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsInsideUsing(Microsoft.CodeAnalysis.IOperation)
+    name: IsInsideUsing
+    href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html#ANcpLua_Roslyn_Utilities_Contexts_DisposableContext_IsInsideUsing_Microsoft_CodeAnalysis_IOperation_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IOperation
+    name: IOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ioperation
+  - name: )
+- uid: Microsoft.CodeAnalysis.Operations.IUsingOperation
+  commentId: T:Microsoft.CodeAnalysis.Operations.IUsingOperation
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.operations.iusingoperation
+  name: IUsingOperation
+  nameWithType: IUsingOperation
+  fullName: Microsoft.CodeAnalysis.Operations.IUsingOperation
+- uid: Microsoft.CodeAnalysis.Operations.IUsingDeclarationOperation
+  commentId: T:Microsoft.CodeAnalysis.Operations.IUsingDeclarationOperation
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.operations.iusingdeclarationoperation
+  name: IUsingDeclarationOperation
+  nameWithType: IUsingDeclarationOperation
+  fullName: Microsoft.CodeAnalysis.Operations.IUsingDeclarationOperation
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsUsingStatement*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsUsingStatement
+  href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html#ANcpLua_Roslyn_Utilities_Contexts_DisposableContext_IsUsingStatement_Microsoft_CodeAnalysis_IOperation_
+  name: IsUsingStatement
+  nameWithType: DisposableContext.IsUsingStatement
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsUsingStatement
+- uid: Microsoft.CodeAnalysis.IOperation
+  commentId: T:Microsoft.CodeAnalysis.IOperation
+  parent: Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ioperation
+  name: IOperation
+  nameWithType: IOperation
+  fullName: Microsoft.CodeAnalysis.IOperation
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsUsingStatement(Microsoft.CodeAnalysis.IOperation)
+  commentId: M:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsUsingStatement(Microsoft.CodeAnalysis.IOperation)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html#ANcpLua_Roslyn_Utilities_Contexts_DisposableContext_IsUsingStatement_Microsoft_CodeAnalysis_IOperation_
+  name: IsUsingStatement(IOperation)
+  nameWithType: DisposableContext.IsUsingStatement(IOperation)
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsUsingStatement(Microsoft.CodeAnalysis.IOperation)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsUsingStatement(Microsoft.CodeAnalysis.IOperation)
+    name: IsUsingStatement
+    href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html#ANcpLua_Roslyn_Utilities_Contexts_DisposableContext_IsUsingStatement_Microsoft_CodeAnalysis_IOperation_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IOperation
+    name: IOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ioperation
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsUsingStatement(Microsoft.CodeAnalysis.IOperation)
+    name: IsUsingStatement
+    href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html#ANcpLua_Roslyn_Utilities_Contexts_DisposableContext_IsUsingStatement_Microsoft_CodeAnalysis_IOperation_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IOperation
+    name: IOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ioperation
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsInsideUsing*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsInsideUsing
+  href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html#ANcpLua_Roslyn_Utilities_Contexts_DisposableContext_IsInsideUsing_Microsoft_CodeAnalysis_IOperation_
+  name: IsInsideUsing
+  nameWithType: DisposableContext.IsInsideUsing
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsInsideUsing
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsStream*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsStream
+  href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html#ANcpLua_Roslyn_Utilities_Contexts_DisposableContext_IsStream_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsStream
+  nameWithType: DisposableContext.IsStream
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsStream
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsTextReaderOrWriter*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsTextReaderOrWriter
+  href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html#ANcpLua_Roslyn_Utilities_Contexts_DisposableContext_IsTextReaderOrWriter_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsTextReaderOrWriter
+  nameWithType: DisposableContext.IsTextReaderOrWriter
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsTextReaderOrWriter
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDbCommand(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDbCommand(Microsoft.CodeAnalysis.ITypeSymbol)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html#ANcpLua_Roslyn_Utilities_Contexts_DisposableContext_IsDbCommand_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsDbCommand(ITypeSymbol)
+  nameWithType: DisposableContext.IsDbCommand(ITypeSymbol)
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDbCommand(Microsoft.CodeAnalysis.ITypeSymbol)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDbCommand(Microsoft.CodeAnalysis.ITypeSymbol)
+    name: IsDbCommand
+    href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html#ANcpLua_Roslyn_Utilities_Contexts_DisposableContext_IsDbCommand_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDbCommand(Microsoft.CodeAnalysis.ITypeSymbol)
+    name: IsDbCommand
+    href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html#ANcpLua_Roslyn_Utilities_Contexts_DisposableContext_IsDbCommand_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDbDataReader(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDbDataReader(Microsoft.CodeAnalysis.ITypeSymbol)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html#ANcpLua_Roslyn_Utilities_Contexts_DisposableContext_IsDbDataReader_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsDbDataReader(ITypeSymbol)
+  nameWithType: DisposableContext.IsDbDataReader(ITypeSymbol)
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDbDataReader(Microsoft.CodeAnalysis.ITypeSymbol)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDbDataReader(Microsoft.CodeAnalysis.ITypeSymbol)
+    name: IsDbDataReader
+    href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html#ANcpLua_Roslyn_Utilities_Contexts_DisposableContext_IsDbDataReader_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDbDataReader(Microsoft.CodeAnalysis.ITypeSymbol)
+    name: IsDbDataReader
+    href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html#ANcpLua_Roslyn_Utilities_Contexts_DisposableContext_IsDbDataReader_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDbConnection*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDbConnection
+  href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html#ANcpLua_Roslyn_Utilities_Contexts_DisposableContext_IsDbConnection_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsDbConnection
+  nameWithType: DisposableContext.IsDbConnection
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDbConnection
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDbConnection(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDbConnection(Microsoft.CodeAnalysis.ITypeSymbol)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html#ANcpLua_Roslyn_Utilities_Contexts_DisposableContext_IsDbConnection_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsDbConnection(ITypeSymbol)
+  nameWithType: DisposableContext.IsDbConnection(ITypeSymbol)
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDbConnection(Microsoft.CodeAnalysis.ITypeSymbol)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDbConnection(Microsoft.CodeAnalysis.ITypeSymbol)
+    name: IsDbConnection
+    href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html#ANcpLua_Roslyn_Utilities_Contexts_DisposableContext_IsDbConnection_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDbConnection(Microsoft.CodeAnalysis.ITypeSymbol)
+    name: IsDbConnection
+    href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html#ANcpLua_Roslyn_Utilities_Contexts_DisposableContext_IsDbConnection_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDbCommand*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDbCommand
+  href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html#ANcpLua_Roslyn_Utilities_Contexts_DisposableContext_IsDbCommand_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsDbCommand
+  nameWithType: DisposableContext.IsDbCommand
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDbCommand
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDbDataReader*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDbDataReader
+  href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html#ANcpLua_Roslyn_Utilities_Contexts_DisposableContext_IsDbDataReader_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsDbDataReader
+  nameWithType: DisposableContext.IsDbDataReader
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDbDataReader
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsHttpClient*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsHttpClient
+  href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html#ANcpLua_Roslyn_Utilities_Contexts_DisposableContext_IsHttpClient_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsHttpClient
+  nameWithType: DisposableContext.IsHttpClient
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsHttpClient
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsSynchronizationPrimitive*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsSynchronizationPrimitive
+  href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html#ANcpLua_Roslyn_Utilities_Contexts_DisposableContext_IsSynchronizationPrimitive_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsSynchronizationPrimitive
+  nameWithType: DisposableContext.IsSynchronizationPrimitive
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsSynchronizationPrimitive
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsCancellationTokenSource*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsCancellationTokenSource
+  href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html#ANcpLua_Roslyn_Utilities_Contexts_DisposableContext_IsCancellationTokenSource_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsCancellationTokenSource
+  nameWithType: DisposableContext.IsCancellationTokenSource
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsCancellationTokenSource
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsSafeHandle*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsSafeHandle
+  href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html#ANcpLua_Roslyn_Utilities_Contexts_DisposableContext_IsSafeHandle_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsSafeHandle
+  nameWithType: DisposableContext.IsSafeHandle
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsSafeHandle
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsHttpClient(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsHttpClient(Microsoft.CodeAnalysis.ITypeSymbol)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html#ANcpLua_Roslyn_Utilities_Contexts_DisposableContext_IsHttpClient_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsHttpClient(ITypeSymbol)
+  nameWithType: DisposableContext.IsHttpClient(ITypeSymbol)
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsHttpClient(Microsoft.CodeAnalysis.ITypeSymbol)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsHttpClient(Microsoft.CodeAnalysis.ITypeSymbol)
+    name: IsHttpClient
+    href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html#ANcpLua_Roslyn_Utilities_Contexts_DisposableContext_IsHttpClient_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsHttpClient(Microsoft.CodeAnalysis.ITypeSymbol)
+    name: IsHttpClient
+    href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html#ANcpLua_Roslyn_Utilities_Contexts_DisposableContext_IsHttpClient_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.ShouldBeDisposed*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.ShouldBeDisposed
+  href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html#ANcpLua_Roslyn_Utilities_Contexts_DisposableContext_ShouldBeDisposed_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: ShouldBeDisposed
+  nameWithType: DisposableContext.ShouldBeDisposed
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.ShouldBeDisposed

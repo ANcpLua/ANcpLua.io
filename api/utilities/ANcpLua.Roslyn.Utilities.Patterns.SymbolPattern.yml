@@ -1,0 +1,1134 @@
+### YamlMime:ManagedReference
+items:
+- uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern
+  commentId: T:ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern
+  id: SymbolPattern
+  parent: ANcpLua.Roslyn.Utilities.Patterns
+  children:
+  - ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.All``1(ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern{``0}[])
+  - ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Any``1(ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern{``0}[])
+  - ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Field
+  - ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Method
+  - ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Parameter
+  - ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Property
+  - ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Type
+  - ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Where``1(System.Func{``0,System.Boolean})
+  langs:
+  - csharp
+  - vb
+  name: SymbolPattern
+  nameWithType: SymbolPattern
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern
+  type: Class
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/SymbolPattern.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: SymbolPattern
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/SymbolPattern.cs
+    startLine: 126
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Patterns
+  summary: Entry point for creating symbol patterns.
+  remarks: >-
+    <p>
+
+    This static class provides factory methods for creating pattern builders for different
+
+    symbol types. Each builder provides a fluent API for specifying matching criteria.
+
+    </p>
+
+    <ul><li>Use <xref href="ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Method" data-throw-if-not-resolved="false"></xref> to create patterns for <xref href="Microsoft.CodeAnalysis.IMethodSymbol" data-throw-if-not-resolved="false"></xref>.</li><li>Use <xref href="ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Type" data-throw-if-not-resolved="false"></xref> to create patterns for <xref href="Microsoft.CodeAnalysis.INamedTypeSymbol" data-throw-if-not-resolved="false"></xref>.</li><li>Use <xref href="ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Parameter" data-throw-if-not-resolved="false"></xref> to create patterns for <xref href="Microsoft.CodeAnalysis.IParameterSymbol" data-throw-if-not-resolved="false"></xref>.</li><li>Use <xref href="ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Property" data-throw-if-not-resolved="false"></xref> to create patterns for <xref href="Microsoft.CodeAnalysis.IPropertySymbol" data-throw-if-not-resolved="false"></xref>.</li><li>Use <xref href="ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Field" data-throw-if-not-resolved="false"></xref> to create patterns for <xref href="Microsoft.CodeAnalysis.IFieldSymbol" data-throw-if-not-resolved="false"></xref>.</li></ul>
+  example: []
+  syntax:
+    content: public static class SymbolPattern
+    content.vb: Public Module SymbolPattern
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern`1
+    commentId: T:ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern`1
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Method
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Method
+  id: Method
+  parent: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern
+  langs:
+  - csharp
+  - vb
+  name: Method()
+  nameWithType: SymbolPattern.Method()
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Method()
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/SymbolPattern.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Method
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/SymbolPattern.cs
+    startLine: 136
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Patterns
+  summary: Creates a new pattern builder for matching method symbols.
+  example: []
+  syntax:
+    content: public static MethodPatternBuilder Method()
+    return:
+      type: ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder
+      description: A new <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder" data-throw-if-not-resolved="false"></xref> for configuring method matching criteria.
+    content.vb: Public Shared Function Method() As MethodPatternBuilder
+  overload: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Method*
+- uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Type
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Type
+  id: Type
+  parent: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern
+  langs:
+  - csharp
+  - vb
+  name: Type()
+  nameWithType: SymbolPattern.Type()
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Type()
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/SymbolPattern.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Type
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/SymbolPattern.cs
+    startLine: 142
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Patterns
+  summary: Creates a new pattern builder for matching type symbols.
+  example: []
+  syntax:
+    content: public static TypePatternBuilder Type()
+    return:
+      type: ANcpLua.Roslyn.Utilities.Patterns.TypePatternBuilder
+      description: A new <xref href="ANcpLua.Roslyn.Utilities.Patterns.TypePatternBuilder" data-throw-if-not-resolved="false"></xref> for configuring type matching criteria.
+    content.vb: Public Shared Function Type() As TypePatternBuilder
+  overload: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Type*
+- uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Parameter
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Parameter
+  id: Parameter
+  parent: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern
+  langs:
+  - csharp
+  - vb
+  name: Parameter()
+  nameWithType: SymbolPattern.Parameter()
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Parameter()
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/SymbolPattern.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Parameter
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/SymbolPattern.cs
+    startLine: 148
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Patterns
+  summary: Creates a new pattern builder for matching parameter symbols.
+  example: []
+  syntax:
+    content: public static ParameterPatternBuilder Parameter()
+    return:
+      type: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+      description: A new <xref href="ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder" data-throw-if-not-resolved="false"></xref> for configuring parameter matching criteria.
+    content.vb: Public Shared Function Parameter() As ParameterPatternBuilder
+  overload: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Parameter*
+- uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Property
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Property
+  id: Property
+  parent: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern
+  langs:
+  - csharp
+  - vb
+  name: Property()
+  nameWithType: SymbolPattern.Property()
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Property()
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/SymbolPattern.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Property
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/SymbolPattern.cs
+    startLine: 154
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Patterns
+  summary: Creates a new pattern builder for matching property symbols.
+  example: []
+  syntax:
+    content: public static PropertyPatternBuilder Property()
+    return:
+      type: ANcpLua.Roslyn.Utilities.Patterns.PropertyPatternBuilder
+      description: A new <xref href="ANcpLua.Roslyn.Utilities.Patterns.PropertyPatternBuilder" data-throw-if-not-resolved="false"></xref> for configuring property matching criteria.
+    content.vb: Public Shared Function [Property]() As PropertyPatternBuilder
+  overload: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Property*
+- uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Field
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Field
+  id: Field
+  parent: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern
+  langs:
+  - csharp
+  - vb
+  name: Field()
+  nameWithType: SymbolPattern.Field()
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Field()
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/SymbolPattern.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Field
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/SymbolPattern.cs
+    startLine: 160
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Patterns
+  summary: Creates a new pattern builder for matching field symbols.
+  example: []
+  syntax:
+    content: public static FieldPatternBuilder Field()
+    return:
+      type: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder
+      description: A new <xref href="ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder" data-throw-if-not-resolved="false"></xref> for configuring field matching criteria.
+    content.vb: Public Shared Function Field() As FieldPatternBuilder
+  overload: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Field*
+- uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Any``1(ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern{``0}[])
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Any``1(ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern{``0}[])
+  id: Any``1(ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern{``0}[])
+  parent: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern
+  langs:
+  - csharp
+  - vb
+  name: Any<T>(params SymbolPattern<T>[])
+  nameWithType: SymbolPattern.Any<T>(params SymbolPattern<T>[])
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Any<T>(params ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern<T>[])
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/SymbolPattern.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Any
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/SymbolPattern.cs
+    startLine: 172
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Patterns
+  summary: Creates a pattern that matches if any of the specified patterns match.
+  example: []
+  syntax:
+    content: 'public static SymbolPattern<T> Any<T>(params SymbolPattern<T>[] patterns) where T : ISymbol'
+    parameters:
+    - id: patterns
+      type: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern{{T}}[]
+      description: The patterns to combine using logical OR.
+    typeParameters:
+    - id: T
+      description: The type of symbol the patterns match, constrained to <xref href="Microsoft.CodeAnalysis.ISymbol" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern{{T}}
+      description: >-
+        A <xref href="ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern%601" data-throw-if-not-resolved="false"></xref> that matches if any of the specified patterns match.
+
+        If <code class="paramref">patterns</code> is empty, returns a pattern that always matches.
+    content.vb: Public Shared Function Any(Of T As ISymbol)(ParamArray patterns As SymbolPattern(Of T)()) As SymbolPattern(Of T)
+  overload: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Any*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.All``1(ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern{``0}[])
+    commentId: M:ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.All``1(ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern{``0}[])
+  nameWithType.vb: SymbolPattern.Any(Of T)(ParamArray SymbolPattern(Of T)())
+  fullName.vb: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Any(Of T)(ParamArray ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern(Of T)())
+  name.vb: Any(Of T)(ParamArray SymbolPattern(Of T)())
+- uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.All``1(ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern{``0}[])
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.All``1(ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern{``0}[])
+  id: All``1(ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern{``0}[])
+  parent: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern
+  langs:
+  - csharp
+  - vb
+  name: All<T>(params SymbolPattern<T>[])
+  nameWithType: SymbolPattern.All<T>(params SymbolPattern<T>[])
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.All<T>(params ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern<T>[])
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/SymbolPattern.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: All
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/SymbolPattern.cs
+    startLine: 187
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Patterns
+  summary: Creates a pattern that matches only if all of the specified patterns match.
+  example: []
+  syntax:
+    content: 'public static SymbolPattern<T> All<T>(params SymbolPattern<T>[] patterns) where T : ISymbol'
+    parameters:
+    - id: patterns
+      type: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern{{T}}[]
+      description: The patterns to combine using logical AND.
+    typeParameters:
+    - id: T
+      description: The type of symbol the patterns match, constrained to <xref href="Microsoft.CodeAnalysis.ISymbol" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern{{T}}
+      description: >-
+        A <xref href="ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern%601" data-throw-if-not-resolved="false"></xref> that matches only if all specified patterns match.
+
+        If <code class="paramref">patterns</code> is empty, returns a pattern that always matches.
+    content.vb: Public Shared Function All(Of T As ISymbol)(ParamArray patterns As SymbolPattern(Of T)()) As SymbolPattern(Of T)
+  overload: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.All*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Any``1(ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern{``0}[])
+    commentId: M:ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Any``1(ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern{``0}[])
+  nameWithType.vb: SymbolPattern.All(Of T)(ParamArray SymbolPattern(Of T)())
+  fullName.vb: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.All(Of T)(ParamArray ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern(Of T)())
+  name.vb: All(Of T)(ParamArray SymbolPattern(Of T)())
+- uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Where``1(System.Func{``0,System.Boolean})
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Where``1(System.Func{``0,System.Boolean})
+  id: Where``1(System.Func{``0,System.Boolean})
+  parent: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern
+  langs:
+  - csharp
+  - vb
+  name: Where<T>(Func<T, bool>)
+  nameWithType: SymbolPattern.Where<T>(Func<T, bool>)
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Where<T>(System.Func<T, bool>)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/SymbolPattern.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Where
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/SymbolPattern.cs
+    startLine: 198
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Patterns
+  summary: Creates a pattern from a custom predicate function.
+  example: []
+  syntax:
+    content: 'public static SymbolPattern<T> Where<T>(Func<T, bool> predicate) where T : ISymbol'
+    parameters:
+    - id: predicate
+      type: System.Func{{T},System.Boolean}
+      description: A function that returns <code>true</code> if a symbol matches the desired criteria.
+    typeParameters:
+    - id: T
+      description: The type of symbol the pattern matches, constrained to <xref href="Microsoft.CodeAnalysis.ISymbol" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern{{T}}
+      description: A <xref href="ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern%601" data-throw-if-not-resolved="false"></xref> that uses the specified predicate for matching.
+    content.vb: Public Shared Function Where(Of T As ISymbol)(predicate As Func(Of T, Boolean)) As SymbolPattern(Of T)
+  overload: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Where*
+  nameWithType.vb: SymbolPattern.Where(Of T)(Func(Of T, Boolean))
+  fullName.vb: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Where(Of T)(System.Func(Of T, Boolean))
+  name.vb: Where(Of T)(Func(Of T, Boolean))
+references:
+- uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern`1
+  commentId: T:ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern`1
+  parent: ANcpLua.Roslyn.Utilities.Patterns
+  href: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern-1.html
+  name: SymbolPattern<T>
+  nameWithType: SymbolPattern<T>
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern<T>
+  nameWithType.vb: SymbolPattern(Of T)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern(Of T)
+  name.vb: SymbolPattern(Of T)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern`1
+    name: SymbolPattern
+    href: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern`1
+    name: SymbolPattern
+    href: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Method
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Method
+  href: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.html#ANcpLua_Roslyn_Utilities_Patterns_SymbolPattern_Method
+  name: Method()
+  nameWithType: SymbolPattern.Method()
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Method()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Method
+    name: Method
+    href: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.html#ANcpLua_Roslyn_Utilities_Patterns_SymbolPattern_Method
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Method
+    name: Method
+    href: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.html#ANcpLua_Roslyn_Utilities_Patterns_SymbolPattern_Method
+  - name: (
+  - name: )
+- uid: Microsoft.CodeAnalysis.IMethodSymbol
+  commentId: T:Microsoft.CodeAnalysis.IMethodSymbol
+  parent: Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.imethodsymbol
+  name: IMethodSymbol
+  nameWithType: IMethodSymbol
+  fullName: Microsoft.CodeAnalysis.IMethodSymbol
+- uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Type
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Type
+  href: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.html#ANcpLua_Roslyn_Utilities_Patterns_SymbolPattern_Type
+  name: Type()
+  nameWithType: SymbolPattern.Type()
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Type()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Type
+    name: Type
+    href: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.html#ANcpLua_Roslyn_Utilities_Patterns_SymbolPattern_Type
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Type
+    name: Type
+    href: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.html#ANcpLua_Roslyn_Utilities_Patterns_SymbolPattern_Type
+  - name: (
+  - name: )
+- uid: Microsoft.CodeAnalysis.INamedTypeSymbol
+  commentId: T:Microsoft.CodeAnalysis.INamedTypeSymbol
+  parent: Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.inamedtypesymbol
+  name: INamedTypeSymbol
+  nameWithType: INamedTypeSymbol
+  fullName: Microsoft.CodeAnalysis.INamedTypeSymbol
+- uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Parameter
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Parameter
+  href: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.html#ANcpLua_Roslyn_Utilities_Patterns_SymbolPattern_Parameter
+  name: Parameter()
+  nameWithType: SymbolPattern.Parameter()
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Parameter()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Parameter
+    name: Parameter
+    href: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.html#ANcpLua_Roslyn_Utilities_Patterns_SymbolPattern_Parameter
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Parameter
+    name: Parameter
+    href: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.html#ANcpLua_Roslyn_Utilities_Patterns_SymbolPattern_Parameter
+  - name: (
+  - name: )
+- uid: Microsoft.CodeAnalysis.IParameterSymbol
+  commentId: T:Microsoft.CodeAnalysis.IParameterSymbol
+  parent: Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.iparametersymbol
+  name: IParameterSymbol
+  nameWithType: IParameterSymbol
+  fullName: Microsoft.CodeAnalysis.IParameterSymbol
+- uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Property
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Property
+  href: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.html#ANcpLua_Roslyn_Utilities_Patterns_SymbolPattern_Property
+  name: Property()
+  nameWithType: SymbolPattern.Property()
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Property()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Property
+    name: Property
+    href: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.html#ANcpLua_Roslyn_Utilities_Patterns_SymbolPattern_Property
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Property
+    name: Property
+    href: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.html#ANcpLua_Roslyn_Utilities_Patterns_SymbolPattern_Property
+  - name: (
+  - name: )
+- uid: Microsoft.CodeAnalysis.IPropertySymbol
+  commentId: T:Microsoft.CodeAnalysis.IPropertySymbol
+  parent: Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ipropertysymbol
+  name: IPropertySymbol
+  nameWithType: IPropertySymbol
+  fullName: Microsoft.CodeAnalysis.IPropertySymbol
+- uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Field
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Field
+  href: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.html#ANcpLua_Roslyn_Utilities_Patterns_SymbolPattern_Field
+  name: Field()
+  nameWithType: SymbolPattern.Field()
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Field()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Field
+    name: Field
+    href: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.html#ANcpLua_Roslyn_Utilities_Patterns_SymbolPattern_Field
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Field
+    name: Field
+    href: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.html#ANcpLua_Roslyn_Utilities_Patterns_SymbolPattern_Field
+  - name: (
+  - name: )
+- uid: Microsoft.CodeAnalysis.IFieldSymbol
+  commentId: T:Microsoft.CodeAnalysis.IFieldSymbol
+  parent: Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ifieldsymbol
+  name: IFieldSymbol
+  nameWithType: IFieldSymbol
+  fullName: Microsoft.CodeAnalysis.IFieldSymbol
+- uid: ANcpLua.Roslyn.Utilities.Patterns
+  commentId: N:ANcpLua.Roslyn.Utilities.Patterns
+  href: ANcpLua.html
+  name: ANcpLua.Roslyn.Utilities.Patterns
+  nameWithType: ANcpLua.Roslyn.Utilities.Patterns
+  fullName: ANcpLua.Roslyn.Utilities.Patterns
+  spec.csharp:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities.Patterns
+    name: Patterns
+    href: ANcpLua.Roslyn.Utilities.Patterns.html
+  spec.vb:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities.Patterns
+    name: Patterns
+    href: ANcpLua.Roslyn.Utilities.Patterns.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: Microsoft.CodeAnalysis
+  commentId: N:Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.CodeAnalysis
+  nameWithType: Microsoft.CodeAnalysis
+  fullName: Microsoft.CodeAnalysis
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder
+  commentId: T:ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder
+  parent: ANcpLua.Roslyn.Utilities.Patterns
+  href: ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.html
+  name: MethodPatternBuilder
+  nameWithType: MethodPatternBuilder
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder
+- uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Method*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Method
+  href: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.html#ANcpLua_Roslyn_Utilities_Patterns_SymbolPattern_Method
+  name: Method
+  nameWithType: SymbolPattern.Method
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Method
+- uid: ANcpLua.Roslyn.Utilities.Patterns.TypePatternBuilder
+  commentId: T:ANcpLua.Roslyn.Utilities.Patterns.TypePatternBuilder
+  parent: ANcpLua.Roslyn.Utilities.Patterns
+  href: ANcpLua.Roslyn.Utilities.Patterns.TypePatternBuilder.html
+  name: TypePatternBuilder
+  nameWithType: TypePatternBuilder
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.TypePatternBuilder
+- uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Type*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Type
+  href: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.html#ANcpLua_Roslyn_Utilities_Patterns_SymbolPattern_Type
+  name: Type
+  nameWithType: SymbolPattern.Type
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Type
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+  commentId: T:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+  parent: ANcpLua.Roslyn.Utilities.Patterns
+  href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html
+  name: ParameterPatternBuilder
+  nameWithType: ParameterPatternBuilder
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+- uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Parameter*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Parameter
+  href: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.html#ANcpLua_Roslyn_Utilities_Patterns_SymbolPattern_Parameter
+  name: Parameter
+  nameWithType: SymbolPattern.Parameter
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Parameter
+- uid: ANcpLua.Roslyn.Utilities.Patterns.PropertyPatternBuilder
+  commentId: T:ANcpLua.Roslyn.Utilities.Patterns.PropertyPatternBuilder
+  parent: ANcpLua.Roslyn.Utilities.Patterns
+  href: ANcpLua.Roslyn.Utilities.Patterns.PropertyPatternBuilder.html
+  name: PropertyPatternBuilder
+  nameWithType: PropertyPatternBuilder
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.PropertyPatternBuilder
+- uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Property*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Property
+  href: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.html#ANcpLua_Roslyn_Utilities_Patterns_SymbolPattern_Property
+  name: Property
+  nameWithType: SymbolPattern.Property
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Property
+- uid: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder
+  commentId: T:ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder
+  parent: ANcpLua.Roslyn.Utilities.Patterns
+  href: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.html
+  name: FieldPatternBuilder
+  nameWithType: FieldPatternBuilder
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder
+- uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Field*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Field
+  href: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.html#ANcpLua_Roslyn_Utilities_Patterns_SymbolPattern_Field
+  name: Field
+  nameWithType: SymbolPattern.Field
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Field
+- uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.All``1(ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern{``0}[])
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.All``1(ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern{``0}[])
+  href: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.html#ANcpLua_Roslyn_Utilities_Patterns_SymbolPattern_All__1_ANcpLua_Roslyn_Utilities_Patterns_SymbolPattern___0____
+  name: All<T>(params SymbolPattern<T>[])
+  nameWithType: SymbolPattern.All<T>(params SymbolPattern<T>[])
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.All<T>(params ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern<T>[])
+  nameWithType.vb: SymbolPattern.All(Of T)(ParamArray SymbolPattern(Of T)())
+  fullName.vb: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.All(Of T)(ParamArray ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern(Of T)())
+  name.vb: All(Of T)(ParamArray SymbolPattern(Of T)())
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.All``1(ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern{``0}[])
+    name: All
+    href: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.html#ANcpLua_Roslyn_Utilities_Patterns_SymbolPattern_All__1_ANcpLua_Roslyn_Utilities_Patterns_SymbolPattern___0____
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: params
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern`1
+    name: SymbolPattern
+    href: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.All``1(ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern{``0}[])
+    name: All
+    href: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.html#ANcpLua_Roslyn_Utilities_Patterns_SymbolPattern_All__1_ANcpLua_Roslyn_Utilities_Patterns_SymbolPattern___0____
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: ParamArray
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern`1
+    name: SymbolPattern
+    href: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: )
+  - name: )
+- uid: Microsoft.CodeAnalysis.ISymbol
+  commentId: T:Microsoft.CodeAnalysis.ISymbol
+  parent: Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.isymbol
+  name: ISymbol
+  nameWithType: ISymbol
+  fullName: Microsoft.CodeAnalysis.ISymbol
+- uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Any*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Any
+  href: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.html#ANcpLua_Roslyn_Utilities_Patterns_SymbolPattern_Any__1_ANcpLua_Roslyn_Utilities_Patterns_SymbolPattern___0____
+  name: Any
+  nameWithType: SymbolPattern.Any
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Any
+- uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern{{T}}[]
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern-1.html
+  name: SymbolPattern<T>[]
+  nameWithType: SymbolPattern<T>[]
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern<T>[]
+  nameWithType.vb: SymbolPattern(Of T)()
+  fullName.vb: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern(Of T)()
+  name.vb: SymbolPattern(Of T)()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern`1
+    name: SymbolPattern
+    href: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern`1
+    name: SymbolPattern
+    href: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern{{T}}
+  commentId: T:ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern{`0}
+  parent: ANcpLua.Roslyn.Utilities.Patterns
+  definition: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern`1
+  href: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern-1.html
+  name: SymbolPattern<T>
+  nameWithType: SymbolPattern<T>
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern<T>
+  nameWithType.vb: SymbolPattern(Of T)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern(Of T)
+  name.vb: SymbolPattern(Of T)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern`1
+    name: SymbolPattern
+    href: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern`1
+    name: SymbolPattern
+    href: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Any``1(ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern{``0}[])
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Any``1(ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern{``0}[])
+  href: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.html#ANcpLua_Roslyn_Utilities_Patterns_SymbolPattern_Any__1_ANcpLua_Roslyn_Utilities_Patterns_SymbolPattern___0____
+  name: Any<T>(params SymbolPattern<T>[])
+  nameWithType: SymbolPattern.Any<T>(params SymbolPattern<T>[])
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Any<T>(params ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern<T>[])
+  nameWithType.vb: SymbolPattern.Any(Of T)(ParamArray SymbolPattern(Of T)())
+  fullName.vb: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Any(Of T)(ParamArray ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern(Of T)())
+  name.vb: Any(Of T)(ParamArray SymbolPattern(Of T)())
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Any``1(ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern{``0}[])
+    name: Any
+    href: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.html#ANcpLua_Roslyn_Utilities_Patterns_SymbolPattern_Any__1_ANcpLua_Roslyn_Utilities_Patterns_SymbolPattern___0____
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: params
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern`1
+    name: SymbolPattern
+    href: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Any``1(ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern{``0}[])
+    name: Any
+    href: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.html#ANcpLua_Roslyn_Utilities_Patterns_SymbolPattern_Any__1_ANcpLua_Roslyn_Utilities_Patterns_SymbolPattern___0____
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: ParamArray
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern`1
+    name: SymbolPattern
+    href: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: )
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.All*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.All
+  href: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.html#ANcpLua_Roslyn_Utilities_Patterns_SymbolPattern_All__1_ANcpLua_Roslyn_Utilities_Patterns_SymbolPattern___0____
+  name: All
+  nameWithType: SymbolPattern.All
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.All
+- uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Where*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Where
+  href: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.html#ANcpLua_Roslyn_Utilities_Patterns_SymbolPattern_Where__1_System_Func___0_System_Boolean__
+  name: Where
+  nameWithType: SymbolPattern.Where
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Where
+- uid: System.Func{{T},System.Boolean}
+  commentId: T:System.Func{`0,System.Boolean}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<T, bool>
+  nameWithType: Func<T, bool>
+  fullName: System.Func<T, bool>
+  nameWithType.vb: Func(Of T, Boolean)
+  fullName.vb: System.Func(Of T, Boolean)
+  name.vb: Func(Of T, Boolean)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System.Func`2
+  commentId: T:System.Func`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<T, TResult>
+  nameWithType: Func<T, TResult>
+  fullName: System.Func<T, TResult>
+  nameWithType.vb: Func(Of T, TResult)
+  fullName.vb: System.Func(Of T, TResult)
+  name.vb: Func(Of T, TResult)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )

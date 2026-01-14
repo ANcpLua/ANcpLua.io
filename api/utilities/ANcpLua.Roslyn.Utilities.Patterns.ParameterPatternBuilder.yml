@@ -1,0 +1,2484 @@
+### YamlMime:ManagedReference
+items:
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+  commentId: T:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+  id: ParameterPatternBuilder
+  parent: ANcpLua.Roslyn.Utilities.Patterns
+  children:
+  - ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.AtOrdinal(System.Int32)
+  - ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.Build
+  - ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.HasAttribute(Microsoft.CodeAnalysis.ITypeSymbol)
+  - ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.HasAttribute(System.String)
+  - ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.HasDefaultValue
+  - ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.HasDefaultValue``1(``0)
+  - ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsBool
+  - ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsByRef
+  - ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsByValue
+  - ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsCancellationToken
+  - ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsIn
+  - ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsInt
+  - ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsNotNullable
+  - ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsNullable
+  - ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsOptional
+  - ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsOut
+  - ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsParams
+  - ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsRef
+  - ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsRequired
+  - ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsString
+  - ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.Named(System.String)
+  - ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.OfType(Microsoft.CodeAnalysis.ITypeSymbol)
+  - ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.OfType(System.Func{Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean})
+  - ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.OfTypeNamed(System.String)
+  - ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.Where(System.Func{Microsoft.CodeAnalysis.IParameterSymbol,System.Boolean})
+  - ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.op_Implicit(ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder)~ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern{Microsoft.CodeAnalysis.IParameterSymbol}
+  langs:
+  - csharp
+  - vb
+  name: ParameterPatternBuilder
+  nameWithType: ParameterPatternBuilder
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+  type: Class
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/ParameterPattern.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: ParameterPatternBuilder
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/ParameterPattern.cs
+    startLine: 22
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Patterns
+  summary: >-
+    Provides a fluent builder for constructing <xref href="ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern%601" data-throw-if-not-resolved="false"></xref> instances
+
+    that match <xref href="Microsoft.CodeAnalysis.IParameterSymbol" data-throw-if-not-resolved="false"></xref> based on configurable predicates.
+  remarks: >-
+    <p>
+
+    This builder enables composable, declarative parameter matching by accumulating
+
+    predicates that are evaluated together when the pattern is built.
+
+    </p>
+
+    <ul><li>All predicates are combined with logical AND semantics.</li><li>The builder supports implicit conversion to <xref href="ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern%601" data-throw-if-not-resolved="false"></xref>.</li><li>Predicates are evaluated in the order they were added.</li></ul>
+  example: []
+  syntax:
+    content: public sealed class ParameterPatternBuilder
+    content.vb: Public NotInheritable Class ParameterPatternBuilder
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern`1
+    commentId: T:ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern`1
+  - linkId: ANcpLua.Roslyn.Utilities.Patterns.PredicatePattern`1
+    commentId: T:ANcpLua.Roslyn.Utilities.Patterns.PredicatePattern`1
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1
+  - ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.Named(System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.Named(System.String)
+  id: Named(System.String)
+  parent: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+  langs:
+  - csharp
+  - vb
+  name: Named(string)
+  nameWithType: ParameterPatternBuilder.Named(string)
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.Named(string)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/ParameterPattern.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Named
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/ParameterPattern.cs
+    startLine: 35
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Patterns
+  summary: Adds a predicate requiring the parameter to have the specified name.
+  example: []
+  syntax:
+    content: public ParameterPatternBuilder Named(string name)
+    parameters:
+    - id: name
+      type: System.String
+      description: The exact name the parameter must have.
+    return:
+      type: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+      description: This builder instance for method chaining.
+    content.vb: Public Function Named(name As String) As ParameterPatternBuilder
+  overload: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.Named*
+  nameWithType.vb: ParameterPatternBuilder.Named(String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.Named(String)
+  name.vb: Named(String)
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.OfType(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.OfType(Microsoft.CodeAnalysis.ITypeSymbol)
+  id: OfType(Microsoft.CodeAnalysis.ITypeSymbol)
+  parent: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+  langs:
+  - csharp
+  - vb
+  name: OfType(ITypeSymbol)
+  nameWithType: ParameterPatternBuilder.OfType(ITypeSymbol)
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.OfType(Microsoft.CodeAnalysis.ITypeSymbol)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/ParameterPattern.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: OfType
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/ParameterPattern.cs
+    startLine: 48
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Patterns
+  summary: Adds a predicate requiring the parameter's type to be equal to the specified type symbol.
+  example: []
+  syntax:
+    content: public ParameterPatternBuilder OfType(ITypeSymbol type)
+    parameters:
+    - id: type
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The <xref href="Microsoft.CodeAnalysis.ITypeSymbol" data-throw-if-not-resolved="false"></xref> the parameter's type must match.
+    return:
+      type: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+      description: This builder instance for method chaining.
+    content.vb: Public Function OfType(type As ITypeSymbol) As ParameterPatternBuilder
+  overload: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.OfType*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.OfType(System.Func{Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean})
+    commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.OfType(System.Func{Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean})
+  - linkId: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.OfTypeNamed(System.String)
+    commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.OfTypeNamed(System.String)
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.OfType(System.Func{Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean})
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.OfType(System.Func{Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean})
+  id: OfType(System.Func{Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean})
+  parent: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+  langs:
+  - csharp
+  - vb
+  name: OfType(Func<ITypeSymbol, bool>)
+  nameWithType: ParameterPatternBuilder.OfType(Func<ITypeSymbol, bool>)
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.OfType(System.Func<Microsoft.CodeAnalysis.ITypeSymbol, bool>)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/ParameterPattern.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: OfType
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/ParameterPattern.cs
+    startLine: 61
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Patterns
+  summary: Adds a predicate requiring the parameter's type to satisfy the specified condition.
+  example: []
+  syntax:
+    content: public ParameterPatternBuilder OfType(Func<ITypeSymbol, bool> predicate)
+    parameters:
+    - id: predicate
+      type: System.Func{Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean}
+      description: A function that evaluates the parameter's type and returns <code>true</code> if it matches.
+    return:
+      type: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+      description: This builder instance for method chaining.
+    content.vb: Public Function OfType(predicate As Func(Of ITypeSymbol, Boolean)) As ParameterPatternBuilder
+  overload: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.OfType*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.OfType(Microsoft.CodeAnalysis.ITypeSymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.OfType(Microsoft.CodeAnalysis.ITypeSymbol)
+  - linkId: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.OfTypeNamed(System.String)
+    commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.OfTypeNamed(System.String)
+  nameWithType.vb: ParameterPatternBuilder.OfType(Func(Of ITypeSymbol, Boolean))
+  fullName.vb: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.OfType(System.Func(Of Microsoft.CodeAnalysis.ITypeSymbol, Boolean))
+  name.vb: OfType(Func(Of ITypeSymbol, Boolean))
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.OfTypeNamed(System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.OfTypeNamed(System.String)
+  id: OfTypeNamed(System.String)
+  parent: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+  langs:
+  - csharp
+  - vb
+  name: OfTypeNamed(string)
+  nameWithType: ParameterPatternBuilder.OfTypeNamed(string)
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.OfTypeNamed(string)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/ParameterPattern.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: OfTypeNamed
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/ParameterPattern.cs
+    startLine: 74
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Patterns
+  summary: Adds a predicate requiring the parameter's type to have the specified fully qualified name.
+  example: []
+  syntax:
+    content: public ParameterPatternBuilder OfTypeNamed(string fullTypeName)
+    parameters:
+    - id: fullTypeName
+      type: System.String
+      description: The fully qualified type name (e.g., <code>"System.String"</code>).
+    return:
+      type: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+      description: This builder instance for method chaining.
+    content.vb: Public Function OfTypeNamed(fullTypeName As String) As ParameterPatternBuilder
+  overload: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.OfTypeNamed*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.OfType(Microsoft.CodeAnalysis.ITypeSymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.OfType(Microsoft.CodeAnalysis.ITypeSymbol)
+  - linkId: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.OfType(System.Func{Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean})
+    commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.OfType(System.Func{Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean})
+  nameWithType.vb: ParameterPatternBuilder.OfTypeNamed(String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.OfTypeNamed(String)
+  name.vb: OfTypeNamed(String)
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsString
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsString
+  id: IsString
+  parent: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+  langs:
+  - csharp
+  - vb
+  name: IsString()
+  nameWithType: ParameterPatternBuilder.IsString()
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsString()
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/ParameterPattern.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsString
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/ParameterPattern.cs
+    startLine: 86
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Patterns
+  summary: Adds a predicate requiring the parameter's type to be <xref href="System.String" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public ParameterPatternBuilder IsString()
+    return:
+      type: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+      description: This builder instance for method chaining.
+    content.vb: Public Function IsString() As ParameterPatternBuilder
+  overload: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsString*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsInt
+    commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsInt
+  - linkId: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsBool
+    commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsBool
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsInt
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsInt
+  id: IsInt
+  parent: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+  langs:
+  - csharp
+  - vb
+  name: IsInt()
+  nameWithType: ParameterPatternBuilder.IsInt()
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsInt()
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/ParameterPattern.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsInt
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/ParameterPattern.cs
+    startLine: 98
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Patterns
+  summary: Adds a predicate requiring the parameter's type to be <xref href="System.Int32" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public ParameterPatternBuilder IsInt()
+    return:
+      type: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+      description: This builder instance for method chaining.
+    content.vb: Public Function IsInt() As ParameterPatternBuilder
+  overload: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsInt*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsString
+    commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsString
+  - linkId: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsBool
+    commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsBool
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsBool
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsBool
+  id: IsBool
+  parent: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+  langs:
+  - csharp
+  - vb
+  name: IsBool()
+  nameWithType: ParameterPatternBuilder.IsBool()
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsBool()
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/ParameterPattern.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsBool
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/ParameterPattern.cs
+    startLine: 110
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Patterns
+  summary: Adds a predicate requiring the parameter's type to be <xref href="System.Boolean" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public ParameterPatternBuilder IsBool()
+    return:
+      type: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+      description: This builder instance for method chaining.
+    content.vb: Public Function IsBool() As ParameterPatternBuilder
+  overload: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsBool*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsString
+    commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsString
+  - linkId: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsInt
+    commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsInt
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsCancellationToken
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsCancellationToken
+  id: IsCancellationToken
+  parent: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+  langs:
+  - csharp
+  - vb
+  name: IsCancellationToken()
+  nameWithType: ParameterPatternBuilder.IsCancellationToken()
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsCancellationToken()
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/ParameterPattern.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsCancellationToken
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/ParameterPattern.cs
+    startLine: 120
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Patterns
+  summary: Adds a predicate requiring the parameter's type to be <xref href="System.Threading.CancellationToken" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public ParameterPatternBuilder IsCancellationToken()
+    return:
+      type: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+      description: This builder instance for method chaining.
+    content.vb: Public Function IsCancellationToken() As ParameterPatternBuilder
+  overload: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsCancellationToken*
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsNullable
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsNullable
+  id: IsNullable
+  parent: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+  langs:
+  - csharp
+  - vb
+  name: IsNullable()
+  nameWithType: ParameterPatternBuilder.IsNullable()
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsNullable()
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/ParameterPattern.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsNullable
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/ParameterPattern.cs
+    startLine: 131
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Patterns
+  summary: Adds a predicate requiring the parameter to have a nullable annotation.
+  example: []
+  syntax:
+    content: public ParameterPatternBuilder IsNullable()
+    return:
+      type: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+      description: This builder instance for method chaining.
+    content.vb: Public Function IsNullable() As ParameterPatternBuilder
+  overload: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsNullable*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsNotNullable
+    commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsNotNullable
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsNotNullable
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsNotNullable
+  id: IsNotNullable
+  parent: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+  langs:
+  - csharp
+  - vb
+  name: IsNotNullable()
+  nameWithType: ParameterPatternBuilder.IsNotNullable()
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsNotNullable()
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/ParameterPattern.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsNotNullable
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/ParameterPattern.cs
+    startLine: 142
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Patterns
+  summary: Adds a predicate requiring the parameter to not have a nullable annotation.
+  example: []
+  syntax:
+    content: public ParameterPatternBuilder IsNotNullable()
+    return:
+      type: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+      description: This builder instance for method chaining.
+    content.vb: Public Function IsNotNullable() As ParameterPatternBuilder
+  overload: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsNotNullable*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsNullable
+    commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsNullable
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsOptional
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsOptional
+  id: IsOptional
+  parent: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+  langs:
+  - csharp
+  - vb
+  name: IsOptional()
+  nameWithType: ParameterPatternBuilder.IsOptional()
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsOptional()
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/ParameterPattern.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsOptional
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/ParameterPattern.cs
+    startLine: 154
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Patterns
+  summary: Adds a predicate requiring the parameter to be optional (have a default value).
+  example: []
+  syntax:
+    content: public ParameterPatternBuilder IsOptional()
+    return:
+      type: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+      description: This builder instance for method chaining.
+    content.vb: Public Function IsOptional() As ParameterPatternBuilder
+  overload: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsOptional*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsRequired
+    commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsRequired
+  - linkId: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.HasDefaultValue
+    commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.HasDefaultValue
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsRequired
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsRequired
+  id: IsRequired
+  parent: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+  langs:
+  - csharp
+  - vb
+  name: IsRequired()
+  nameWithType: ParameterPatternBuilder.IsRequired()
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsRequired()
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/ParameterPattern.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsRequired
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/ParameterPattern.cs
+    startLine: 165
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Patterns
+  summary: Adds a predicate requiring the parameter to be required (not optional).
+  example: []
+  syntax:
+    content: public ParameterPatternBuilder IsRequired()
+    return:
+      type: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+      description: This builder instance for method chaining.
+    content.vb: Public Function IsRequired() As ParameterPatternBuilder
+  overload: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsRequired*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsOptional
+    commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsOptional
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsParams
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsParams
+  id: IsParams
+  parent: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+  langs:
+  - csharp
+  - vb
+  name: IsParams()
+  nameWithType: ParameterPatternBuilder.IsParams()
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsParams()
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/ParameterPattern.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsParams
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/ParameterPattern.cs
+    startLine: 175
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Patterns
+  summary: Adds a predicate requiring the parameter to be a params array parameter.
+  example: []
+  syntax:
+    content: public ParameterPatternBuilder IsParams()
+    return:
+      type: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+      description: This builder instance for method chaining.
+    content.vb: Public Function IsParams() As ParameterPatternBuilder
+  overload: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsParams*
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsRef
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsRef
+  id: IsRef
+  parent: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+  langs:
+  - csharp
+  - vb
+  name: IsRef()
+  nameWithType: ParameterPatternBuilder.IsRef()
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsRef()
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/ParameterPattern.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsRef
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/ParameterPattern.cs
+    startLine: 188
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Patterns
+  summary: Adds a predicate requiring the parameter to be passed by <code>ref</code>.
+  example: []
+  syntax:
+    content: public ParameterPatternBuilder IsRef()
+    return:
+      type: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+      description: This builder instance for method chaining.
+    content.vb: Public Function IsRef() As ParameterPatternBuilder
+  overload: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsRef*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsOut
+    commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsOut
+  - linkId: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsIn
+    commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsIn
+  - linkId: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsByRef
+    commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsByRef
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsOut
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsOut
+  id: IsOut
+  parent: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+  langs:
+  - csharp
+  - vb
+  name: IsOut()
+  nameWithType: ParameterPatternBuilder.IsOut()
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsOut()
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/ParameterPattern.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsOut
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/ParameterPattern.cs
+    startLine: 201
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Patterns
+  summary: Adds a predicate requiring the parameter to be passed by <code>out</code>.
+  example: []
+  syntax:
+    content: public ParameterPatternBuilder IsOut()
+    return:
+      type: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+      description: This builder instance for method chaining.
+    content.vb: Public Function IsOut() As ParameterPatternBuilder
+  overload: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsOut*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsRef
+    commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsRef
+  - linkId: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsIn
+    commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsIn
+  - linkId: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsByRef
+    commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsByRef
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsIn
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsIn
+  id: IsIn
+  parent: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+  langs:
+  - csharp
+  - vb
+  name: IsIn()
+  nameWithType: ParameterPatternBuilder.IsIn()
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsIn()
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/ParameterPattern.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsIn
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/ParameterPattern.cs
+    startLine: 214
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Patterns
+  summary: Adds a predicate requiring the parameter to be passed by <code>in</code> (readonly ref).
+  example: []
+  syntax:
+    content: public ParameterPatternBuilder IsIn()
+    return:
+      type: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+      description: This builder instance for method chaining.
+    content.vb: Public Function IsIn() As ParameterPatternBuilder
+  overload: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsIn*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsRef
+    commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsRef
+  - linkId: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsOut
+    commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsOut
+  - linkId: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsByRef
+    commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsByRef
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsByRef
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsByRef
+  id: IsByRef
+  parent: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+  langs:
+  - csharp
+  - vb
+  name: IsByRef()
+  nameWithType: ParameterPatternBuilder.IsByRef()
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsByRef()
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/ParameterPattern.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsByRef
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/ParameterPattern.cs
+    startLine: 229
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Patterns
+  summary: >-
+    Adds a predicate requiring the parameter to be passed by reference
+
+    (either <code>ref</code>, <code>out</code>, or <code>in</code>).
+  example: []
+  syntax:
+    content: public ParameterPatternBuilder IsByRef()
+    return:
+      type: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+      description: This builder instance for method chaining.
+    content.vb: Public Function IsByRef() As ParameterPatternBuilder
+  overload: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsByRef*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsByValue
+    commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsByValue
+  - linkId: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsRef
+    commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsRef
+  - linkId: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsOut
+    commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsOut
+  - linkId: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsIn
+    commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsIn
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsByValue
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsByValue
+  id: IsByValue
+  parent: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+  langs:
+  - csharp
+  - vb
+  name: IsByValue()
+  nameWithType: ParameterPatternBuilder.IsByValue()
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsByValue()
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/ParameterPattern.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsByValue
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/ParameterPattern.cs
+    startLine: 240
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Patterns
+  summary: Adds a predicate requiring the parameter to be passed by value (not by reference).
+  example: []
+  syntax:
+    content: public ParameterPatternBuilder IsByValue()
+    return:
+      type: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+      description: This builder instance for method chaining.
+    content.vb: Public Function IsByValue() As ParameterPatternBuilder
+  overload: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsByValue*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsByRef
+    commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsByRef
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.AtOrdinal(System.Int32)
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.AtOrdinal(System.Int32)
+  id: AtOrdinal(System.Int32)
+  parent: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+  langs:
+  - csharp
+  - vb
+  name: AtOrdinal(int)
+  nameWithType: ParameterPatternBuilder.AtOrdinal(int)
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.AtOrdinal(int)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/ParameterPattern.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: AtOrdinal
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/ParameterPattern.cs
+    startLine: 251
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Patterns
+  summary: Adds a predicate requiring the parameter to be at the specified ordinal position.
+  example: []
+  syntax:
+    content: public ParameterPatternBuilder AtOrdinal(int ordinal)
+    parameters:
+    - id: ordinal
+      type: System.Int32
+      description: The zero-based position of the parameter in the method signature.
+    return:
+      type: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+      description: This builder instance for method chaining.
+    content.vb: Public Function AtOrdinal(ordinal As Integer) As ParameterPatternBuilder
+  overload: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.AtOrdinal*
+  nameWithType.vb: ParameterPatternBuilder.AtOrdinal(Integer)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.AtOrdinal(Integer)
+  name.vb: AtOrdinal(Integer)
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.HasAttribute(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.HasAttribute(Microsoft.CodeAnalysis.ITypeSymbol)
+  id: HasAttribute(Microsoft.CodeAnalysis.ITypeSymbol)
+  parent: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+  langs:
+  - csharp
+  - vb
+  name: HasAttribute(ITypeSymbol)
+  nameWithType: ParameterPatternBuilder.HasAttribute(ITypeSymbol)
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.HasAttribute(Microsoft.CodeAnalysis.ITypeSymbol)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/ParameterPattern.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: HasAttribute
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/ParameterPattern.cs
+    startLine: 263
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Patterns
+  summary: Adds a predicate requiring the parameter to have an attribute of the specified type.
+  example: []
+  syntax:
+    content: public ParameterPatternBuilder HasAttribute(ITypeSymbol attributeType)
+    parameters:
+    - id: attributeType
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The <xref href="Microsoft.CodeAnalysis.ITypeSymbol" data-throw-if-not-resolved="false"></xref> of the attribute to check for.
+    return:
+      type: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+      description: This builder instance for method chaining.
+    content.vb: Public Function HasAttribute(attributeType As ITypeSymbol) As ParameterPatternBuilder
+  overload: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.HasAttribute*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.HasAttribute(System.String)
+    commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.HasAttribute(System.String)
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.HasAttribute(System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.HasAttribute(System.String)
+  id: HasAttribute(System.String)
+  parent: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+  langs:
+  - csharp
+  - vb
+  name: HasAttribute(string)
+  nameWithType: ParameterPatternBuilder.HasAttribute(string)
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.HasAttribute(string)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/ParameterPattern.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: HasAttribute
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/ParameterPattern.cs
+    startLine: 275
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Patterns
+  summary: Adds a predicate requiring the parameter to have an attribute with the specified fully qualified name.
+  example: []
+  syntax:
+    content: public ParameterPatternBuilder HasAttribute(string fullyQualifiedName)
+    parameters:
+    - id: fullyQualifiedName
+      type: System.String
+      description: The fully qualified name of the attribute (e.g., <code>"System.ComponentModel.DescriptionAttribute"</code>).
+    return:
+      type: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+      description: This builder instance for method chaining.
+    content.vb: Public Function HasAttribute(fullyQualifiedName As String) As ParameterPatternBuilder
+  overload: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.HasAttribute*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.HasAttribute(Microsoft.CodeAnalysis.ITypeSymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.HasAttribute(Microsoft.CodeAnalysis.ITypeSymbol)
+  nameWithType.vb: ParameterPatternBuilder.HasAttribute(String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.HasAttribute(String)
+  name.vb: HasAttribute(String)
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.HasDefaultValue
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.HasDefaultValue
+  id: HasDefaultValue
+  parent: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+  langs:
+  - csharp
+  - vb
+  name: HasDefaultValue()
+  nameWithType: ParameterPatternBuilder.HasDefaultValue()
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.HasDefaultValue()
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/ParameterPattern.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: HasDefaultValue
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/ParameterPattern.cs
+    startLine: 287
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Patterns
+  summary: Adds a predicate requiring the parameter to have an explicit default value.
+  example: []
+  syntax:
+    content: public ParameterPatternBuilder HasDefaultValue()
+    return:
+      type: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+      description: This builder instance for method chaining.
+    content.vb: Public Function HasDefaultValue() As ParameterPatternBuilder
+  overload: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.HasDefaultValue*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.HasDefaultValue``1(``0)
+    commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.HasDefaultValue``1(``0)
+  - linkId: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsOptional
+    commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsOptional
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.HasDefaultValue``1(``0)
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.HasDefaultValue``1(``0)
+  id: HasDefaultValue``1(``0)
+  parent: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+  langs:
+  - csharp
+  - vb
+  name: HasDefaultValue<T>(T)
+  nameWithType: ParameterPatternBuilder.HasDefaultValue<T>(T)
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.HasDefaultValue<T>(T)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/ParameterPattern.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: HasDefaultValue
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/ParameterPattern.cs
+    startLine: 300
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Patterns
+  summary: Adds a predicate requiring the parameter to have an explicit default value equal to the specified value.
+  example: []
+  syntax:
+    content: public ParameterPatternBuilder HasDefaultValue<T>(T value)
+    parameters:
+    - id: value
+      type: '{T}'
+      description: The expected default value.
+    typeParameters:
+    - id: T
+      description: The type of the default value to compare.
+    return:
+      type: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+      description: This builder instance for method chaining.
+    content.vb: Public Function HasDefaultValue(Of T)(value As T) As ParameterPatternBuilder
+  overload: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.HasDefaultValue*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.HasDefaultValue
+    commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.HasDefaultValue
+  nameWithType.vb: ParameterPatternBuilder.HasDefaultValue(Of T)(T)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.HasDefaultValue(Of T)(T)
+  name.vb: HasDefaultValue(Of T)(T)
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.Where(System.Func{Microsoft.CodeAnalysis.IParameterSymbol,System.Boolean})
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.Where(System.Func{Microsoft.CodeAnalysis.IParameterSymbol,System.Boolean})
+  id: Where(System.Func{Microsoft.CodeAnalysis.IParameterSymbol,System.Boolean})
+  parent: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+  langs:
+  - csharp
+  - vb
+  name: Where(Func<IParameterSymbol, bool>)
+  nameWithType: ParameterPatternBuilder.Where(Func<IParameterSymbol, bool>)
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.Where(System.Func<Microsoft.CodeAnalysis.IParameterSymbol, bool>)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/ParameterPattern.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Where
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/ParameterPattern.cs
+    startLine: 311
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Patterns
+  summary: Adds a custom predicate to the builder.
+  example: []
+  syntax:
+    content: public ParameterPatternBuilder Where(Func<IParameterSymbol, bool> predicate)
+    parameters:
+    - id: predicate
+      type: System.Func{Microsoft.CodeAnalysis.IParameterSymbol,System.Boolean}
+      description: A function that evaluates the parameter and returns <code>true</code> if it matches.
+    return:
+      type: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+      description: This builder instance for method chaining.
+    content.vb: Public Function Where(predicate As Func(Of IParameterSymbol, Boolean)) As ParameterPatternBuilder
+  overload: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.Where*
+  nameWithType.vb: ParameterPatternBuilder.Where(Func(Of IParameterSymbol, Boolean))
+  fullName.vb: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.Where(System.Func(Of Microsoft.CodeAnalysis.IParameterSymbol, Boolean))
+  name.vb: Where(Func(Of IParameterSymbol, Boolean))
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.Build
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.Build
+  id: Build
+  parent: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+  langs:
+  - csharp
+  - vb
+  name: Build()
+  nameWithType: ParameterPatternBuilder.Build()
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.Build()
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/ParameterPattern.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Build
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/ParameterPattern.cs
+    startLine: 327
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Patterns
+  summary: Builds the accumulated predicates into a <xref href="ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern%601" data-throw-if-not-resolved="false"></xref> for <xref href="Microsoft.CodeAnalysis.IParameterSymbol" data-throw-if-not-resolved="false"></xref>.
+  remarks: >-
+    All predicates are combined with logical AND semantics. A parameter must satisfy
+
+    every predicate added to this builder to match the resulting pattern.
+  example: []
+  syntax:
+    content: public SymbolPattern<IParameterSymbol> Build()
+    return:
+      type: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern{Microsoft.CodeAnalysis.IParameterSymbol}
+      description: A <xref href="ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern%601" data-throw-if-not-resolved="false"></xref> that matches parameters satisfying all configured predicates.
+    content.vb: Public Function Build() As SymbolPattern(Of IParameterSymbol)
+  overload: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.Build*
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.op_Implicit(ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder)~ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern{Microsoft.CodeAnalysis.IParameterSymbol}
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.op_Implicit(ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder)~ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern{Microsoft.CodeAnalysis.IParameterSymbol}
+  id: op_Implicit(ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder)~ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern{Microsoft.CodeAnalysis.IParameterSymbol}
+  parent: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+  langs:
+  - csharp
+  - vb
+  name: implicit operator SymbolPattern<IParameterSymbol>(ParameterPatternBuilder)
+  nameWithType: ParameterPatternBuilder.implicit operator SymbolPattern<IParameterSymbol>(ParameterPatternBuilder)
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.implicit operator ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern<Microsoft.CodeAnalysis.IParameterSymbol>(ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder)
+  type: Operator
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/ParameterPattern.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: op_Implicit
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/ParameterPattern.cs
+    startLine: 347
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Patterns
+  summary: >-
+    Implicitly converts a <xref href="ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder" data-throw-if-not-resolved="false"></xref> to a <xref href="ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern%601" data-throw-if-not-resolved="false"></xref>
+
+    by calling <xref href="ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.Build" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static implicit operator SymbolPattern<IParameterSymbol>(ParameterPatternBuilder builder)
+    parameters:
+    - id: builder
+      type: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+      description: The builder to convert.
+    return:
+      type: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern{Microsoft.CodeAnalysis.IParameterSymbol}
+      description: The built <xref href="ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern%601" data-throw-if-not-resolved="false"></xref> for <xref href="Microsoft.CodeAnalysis.IParameterSymbol" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Shared Widening Operator CType(builder As ParameterPatternBuilder) As SymbolPattern(Of IParameterSymbol)
+  overload: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.op_Implicit*
+  nameWithType.vb: ParameterPatternBuilder.CType(ParameterPatternBuilder)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.CType(ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder)
+  name.vb: CType(ParameterPatternBuilder)
+references:
+- uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern`1
+  commentId: T:ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern`1
+  parent: ANcpLua.Roslyn.Utilities.Patterns
+  href: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern-1.html
+  name: SymbolPattern<T>
+  nameWithType: SymbolPattern<T>
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern<T>
+  nameWithType.vb: SymbolPattern(Of T)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern(Of T)
+  name.vb: SymbolPattern(Of T)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern`1
+    name: SymbolPattern
+    href: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern`1
+    name: SymbolPattern
+    href: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Patterns.PredicatePattern`1
+  commentId: T:ANcpLua.Roslyn.Utilities.Patterns.PredicatePattern`1
+  name: PredicatePattern<T>
+  nameWithType: PredicatePattern<T>
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.PredicatePattern<T>
+  nameWithType.vb: PredicatePattern(Of T)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Patterns.PredicatePattern(Of T)
+  name.vb: PredicatePattern(Of T)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.PredicatePattern`1
+    name: PredicatePattern
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.PredicatePattern`1
+    name: PredicatePattern
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Microsoft.CodeAnalysis.IParameterSymbol
+  commentId: T:Microsoft.CodeAnalysis.IParameterSymbol
+  parent: Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.iparametersymbol
+  name: IParameterSymbol
+  nameWithType: IParameterSymbol
+  fullName: Microsoft.CodeAnalysis.IParameterSymbol
+- uid: ANcpLua.Roslyn.Utilities.Patterns
+  commentId: N:ANcpLua.Roslyn.Utilities.Patterns
+  href: ANcpLua.html
+  name: ANcpLua.Roslyn.Utilities.Patterns
+  nameWithType: ANcpLua.Roslyn.Utilities.Patterns
+  fullName: ANcpLua.Roslyn.Utilities.Patterns
+  spec.csharp:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities.Patterns
+    name: Patterns
+    href: ANcpLua.Roslyn.Utilities.Patterns.html
+  spec.vb:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities.Patterns
+    name: Patterns
+    href: ANcpLua.Roslyn.Utilities.Patterns.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+  parent: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+  definition: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  name: ToResultWithDiagnostics<ParameterPatternBuilder>(ParameterPatternBuilder)
+  nameWithType: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<ParameterPatternBuilder>(ParameterPatternBuilder)
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder>(ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder)
+  nameWithType.vb: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of ParameterPatternBuilder)(ParameterPatternBuilder)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder)(ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder)
+  name.vb: ToResultWithDiagnostics(Of ParameterPatternBuilder)(ParameterPatternBuilder)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder)
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+    name: ParameterPatternBuilder
+    href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html
+  - name: '>'
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+    name: ParameterPatternBuilder
+    href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder)
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+    name: ParameterPatternBuilder
+    href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html
+  - name: )
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+    name: ParameterPatternBuilder
+    href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  parent: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+  definition: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  name: ToResultWithDiagnostics<ParameterPatternBuilder>(ParameterPatternBuilder, ImmutableArray<DiagnosticInfo>)
+  nameWithType: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<ParameterPatternBuilder>(ParameterPatternBuilder, ImmutableArray<DiagnosticInfo>)
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder>(ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder, System.Collections.Immutable.ImmutableArray<ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo>)
+  nameWithType.vb: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of ParameterPatternBuilder)(ParameterPatternBuilder, ImmutableArray(Of DiagnosticInfo))
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder)(ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder, System.Collections.Immutable.ImmutableArray(Of ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo))
+  name.vb: ToResultWithDiagnostics(Of ParameterPatternBuilder)(ParameterPatternBuilder, ImmutableArray(Of DiagnosticInfo))
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+    name: ParameterPatternBuilder
+    href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html
+  - name: '>'
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+    name: ParameterPatternBuilder
+    href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+    name: ParameterPatternBuilder
+    href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html
+  - name: )
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+    name: ParameterPatternBuilder
+    href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: )
+  - name: )
+- uid: Microsoft.CodeAnalysis
+  commentId: N:Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.CodeAnalysis
+  nameWithType: Microsoft.CodeAnalysis
+  fullName: Microsoft.CodeAnalysis
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  name: ToResultWithDiagnostics<T>(T)
+  nameWithType: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<T>(T)
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<T>(T)
+  nameWithType.vb: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of T)(T)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of T)(T)
+  name.vb: ToResultWithDiagnostics(Of T)(T)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+  commentId: T:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+  parent: ANcpLua.Roslyn.Utilities.Models
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html
+  name: ResultWithDiagnosticsExtensions
+  nameWithType: ResultWithDiagnosticsExtensions
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+- uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  name: ToResultWithDiagnostics<T>(T, ImmutableArray<DiagnosticInfo>)
+  nameWithType: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<T>(T, ImmutableArray<DiagnosticInfo>)
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<T>(T, System.Collections.Immutable.ImmutableArray<ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo>)
+  nameWithType.vb: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of T)(T, ImmutableArray(Of DiagnosticInfo))
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of T)(T, System.Collections.Immutable.ImmutableArray(Of ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo))
+  name.vb: ToResultWithDiagnostics(Of T)(T, ImmutableArray(Of DiagnosticInfo))
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: )
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Models
+  commentId: N:ANcpLua.Roslyn.Utilities.Models
+  href: ANcpLua.html
+  name: ANcpLua.Roslyn.Utilities.Models
+  nameWithType: ANcpLua.Roslyn.Utilities.Models
+  fullName: ANcpLua.Roslyn.Utilities.Models
+  spec.csharp:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities.Models
+    name: Models
+    href: ANcpLua.Roslyn.Utilities.Models.html
+  spec.vb:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities.Models
+    name: Models
+    href: ANcpLua.Roslyn.Utilities.Models.html
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.Named*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.Named
+  href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_Named_System_String_
+  name: Named
+  nameWithType: ParameterPatternBuilder.Named
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.Named
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+  commentId: T:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+  parent: ANcpLua.Roslyn.Utilities.Patterns
+  href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html
+  name: ParameterPatternBuilder
+  nameWithType: ParameterPatternBuilder
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.OfType(System.Func{Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean})
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.OfType(System.Func{Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean})
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_OfType_System_Func_Microsoft_CodeAnalysis_ITypeSymbol_System_Boolean__
+  name: OfType(Func<ITypeSymbol, bool>)
+  nameWithType: ParameterPatternBuilder.OfType(Func<ITypeSymbol, bool>)
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.OfType(System.Func<Microsoft.CodeAnalysis.ITypeSymbol, bool>)
+  nameWithType.vb: ParameterPatternBuilder.OfType(Func(Of ITypeSymbol, Boolean))
+  fullName.vb: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.OfType(System.Func(Of Microsoft.CodeAnalysis.ITypeSymbol, Boolean))
+  name.vb: OfType(Func(Of ITypeSymbol, Boolean))
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.OfType(System.Func{Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean})
+    name: OfType
+    href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_OfType_System_Func_Microsoft_CodeAnalysis_ITypeSymbol_System_Boolean__
+  - name: (
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.OfType(System.Func{Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean})
+    name: OfType
+    href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_OfType_System_Func_Microsoft_CodeAnalysis_ITypeSymbol_System_Boolean__
+  - name: (
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.OfTypeNamed(System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.OfTypeNamed(System.String)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_OfTypeNamed_System_String_
+  name: OfTypeNamed(string)
+  nameWithType: ParameterPatternBuilder.OfTypeNamed(string)
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.OfTypeNamed(string)
+  nameWithType.vb: ParameterPatternBuilder.OfTypeNamed(String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.OfTypeNamed(String)
+  name.vb: OfTypeNamed(String)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.OfTypeNamed(System.String)
+    name: OfTypeNamed
+    href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_OfTypeNamed_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.OfTypeNamed(System.String)
+    name: OfTypeNamed
+    href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_OfTypeNamed_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Microsoft.CodeAnalysis.ITypeSymbol
+  commentId: T:Microsoft.CodeAnalysis.ITypeSymbol
+  parent: Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  name: ITypeSymbol
+  nameWithType: ITypeSymbol
+  fullName: Microsoft.CodeAnalysis.ITypeSymbol
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.OfType*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.OfType
+  href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_OfType_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: OfType
+  nameWithType: ParameterPatternBuilder.OfType
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.OfType
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.OfType(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.OfType(Microsoft.CodeAnalysis.ITypeSymbol)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_OfType_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: OfType(ITypeSymbol)
+  nameWithType: ParameterPatternBuilder.OfType(ITypeSymbol)
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.OfType(Microsoft.CodeAnalysis.ITypeSymbol)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.OfType(Microsoft.CodeAnalysis.ITypeSymbol)
+    name: OfType
+    href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_OfType_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.OfType(Microsoft.CodeAnalysis.ITypeSymbol)
+    name: OfType
+    href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_OfType_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+- uid: System.Func{Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean}
+  commentId: T:System.Func{Microsoft.CodeAnalysis.ITypeSymbol,System.Boolean}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<ITypeSymbol, bool>
+  nameWithType: Func<ITypeSymbol, bool>
+  fullName: System.Func<Microsoft.CodeAnalysis.ITypeSymbol, bool>
+  nameWithType.vb: Func(Of ITypeSymbol, Boolean)
+  fullName.vb: System.Func(Of Microsoft.CodeAnalysis.ITypeSymbol, Boolean)
+  name.vb: Func(Of ITypeSymbol, Boolean)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System.Func`2
+  commentId: T:System.Func`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<T, TResult>
+  nameWithType: Func<T, TResult>
+  fullName: System.Func<T, TResult>
+  nameWithType.vb: Func(Of T, TResult)
+  fullName.vb: System.Func(Of T, TResult)
+  name.vb: Func(Of T, TResult)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.OfTypeNamed*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.OfTypeNamed
+  href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_OfTypeNamed_System_String_
+  name: OfTypeNamed
+  nameWithType: ParameterPatternBuilder.OfTypeNamed
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.OfTypeNamed
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsInt
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsInt
+  href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_IsInt
+  name: IsInt()
+  nameWithType: ParameterPatternBuilder.IsInt()
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsInt()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsInt
+    name: IsInt
+    href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_IsInt
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsInt
+    name: IsInt
+    href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_IsInt
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsBool
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsBool
+  href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_IsBool
+  name: IsBool()
+  nameWithType: ParameterPatternBuilder.IsBool()
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsBool()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsBool
+    name: IsBool
+    href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_IsBool
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsBool
+    name: IsBool
+    href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_IsBool
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsString*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsString
+  href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_IsString
+  name: IsString
+  nameWithType: ParameterPatternBuilder.IsString
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsString
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsString
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsString
+  href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_IsString
+  name: IsString()
+  nameWithType: ParameterPatternBuilder.IsString()
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsString()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsString
+    name: IsString
+    href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_IsString
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsString
+    name: IsString
+    href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_IsString
+  - name: (
+  - name: )
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsInt*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsInt
+  href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_IsInt
+  name: IsInt
+  nameWithType: ParameterPatternBuilder.IsInt
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsInt
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsBool*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsBool
+  href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_IsBool
+  name: IsBool
+  nameWithType: ParameterPatternBuilder.IsBool
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsBool
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsCancellationToken*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsCancellationToken
+  href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_IsCancellationToken
+  name: IsCancellationToken
+  nameWithType: ParameterPatternBuilder.IsCancellationToken
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsCancellationToken
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsNotNullable
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsNotNullable
+  href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_IsNotNullable
+  name: IsNotNullable()
+  nameWithType: ParameterPatternBuilder.IsNotNullable()
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsNotNullable()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsNotNullable
+    name: IsNotNullable
+    href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_IsNotNullable
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsNotNullable
+    name: IsNotNullable
+    href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_IsNotNullable
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsNullable*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsNullable
+  href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_IsNullable
+  name: IsNullable
+  nameWithType: ParameterPatternBuilder.IsNullable
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsNullable
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsNullable
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsNullable
+  href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_IsNullable
+  name: IsNullable()
+  nameWithType: ParameterPatternBuilder.IsNullable()
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsNullable()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsNullable
+    name: IsNullable
+    href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_IsNullable
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsNullable
+    name: IsNullable
+    href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_IsNullable
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsNotNullable*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsNotNullable
+  href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_IsNotNullable
+  name: IsNotNullable
+  nameWithType: ParameterPatternBuilder.IsNotNullable
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsNotNullable
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsRequired
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsRequired
+  href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_IsRequired
+  name: IsRequired()
+  nameWithType: ParameterPatternBuilder.IsRequired()
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsRequired()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsRequired
+    name: IsRequired
+    href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_IsRequired
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsRequired
+    name: IsRequired
+    href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_IsRequired
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.HasDefaultValue
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.HasDefaultValue
+  href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_HasDefaultValue
+  name: HasDefaultValue()
+  nameWithType: ParameterPatternBuilder.HasDefaultValue()
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.HasDefaultValue()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.HasDefaultValue
+    name: HasDefaultValue
+    href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_HasDefaultValue
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.HasDefaultValue
+    name: HasDefaultValue
+    href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_HasDefaultValue
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsOptional*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsOptional
+  href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_IsOptional
+  name: IsOptional
+  nameWithType: ParameterPatternBuilder.IsOptional
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsOptional
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsOptional
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsOptional
+  href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_IsOptional
+  name: IsOptional()
+  nameWithType: ParameterPatternBuilder.IsOptional()
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsOptional()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsOptional
+    name: IsOptional
+    href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_IsOptional
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsOptional
+    name: IsOptional
+    href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_IsOptional
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsRequired*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsRequired
+  href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_IsRequired
+  name: IsRequired
+  nameWithType: ParameterPatternBuilder.IsRequired
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsRequired
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsParams*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsParams
+  href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_IsParams
+  name: IsParams
+  nameWithType: ParameterPatternBuilder.IsParams
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsParams
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsOut
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsOut
+  href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_IsOut
+  name: IsOut()
+  nameWithType: ParameterPatternBuilder.IsOut()
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsOut()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsOut
+    name: IsOut
+    href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_IsOut
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsOut
+    name: IsOut
+    href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_IsOut
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsIn
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsIn
+  href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_IsIn
+  name: IsIn()
+  nameWithType: ParameterPatternBuilder.IsIn()
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsIn()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsIn
+    name: IsIn
+    href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_IsIn
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsIn
+    name: IsIn
+    href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_IsIn
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsByRef
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsByRef
+  href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_IsByRef
+  name: IsByRef()
+  nameWithType: ParameterPatternBuilder.IsByRef()
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsByRef()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsByRef
+    name: IsByRef
+    href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_IsByRef
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsByRef
+    name: IsByRef
+    href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_IsByRef
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsRef*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsRef
+  href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_IsRef
+  name: IsRef
+  nameWithType: ParameterPatternBuilder.IsRef
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsRef
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsRef
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsRef
+  href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_IsRef
+  name: IsRef()
+  nameWithType: ParameterPatternBuilder.IsRef()
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsRef()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsRef
+    name: IsRef
+    href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_IsRef
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsRef
+    name: IsRef
+    href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_IsRef
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsOut*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsOut
+  href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_IsOut
+  name: IsOut
+  nameWithType: ParameterPatternBuilder.IsOut
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsOut
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsIn*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsIn
+  href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_IsIn
+  name: IsIn
+  nameWithType: ParameterPatternBuilder.IsIn
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsIn
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsByValue
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsByValue
+  href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_IsByValue
+  name: IsByValue()
+  nameWithType: ParameterPatternBuilder.IsByValue()
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsByValue()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsByValue
+    name: IsByValue
+    href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_IsByValue
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsByValue
+    name: IsByValue
+    href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_IsByValue
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsByRef*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsByRef
+  href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_IsByRef
+  name: IsByRef
+  nameWithType: ParameterPatternBuilder.IsByRef
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsByRef
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsByValue*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsByValue
+  href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_IsByValue
+  name: IsByValue
+  nameWithType: ParameterPatternBuilder.IsByValue
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.IsByValue
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.AtOrdinal*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.AtOrdinal
+  href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_AtOrdinal_System_Int32_
+  name: AtOrdinal
+  nameWithType: ParameterPatternBuilder.AtOrdinal
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.AtOrdinal
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.HasAttribute(System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.HasAttribute(System.String)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_HasAttribute_System_String_
+  name: HasAttribute(string)
+  nameWithType: ParameterPatternBuilder.HasAttribute(string)
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.HasAttribute(string)
+  nameWithType.vb: ParameterPatternBuilder.HasAttribute(String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.HasAttribute(String)
+  name.vb: HasAttribute(String)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.HasAttribute(System.String)
+    name: HasAttribute
+    href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_HasAttribute_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.HasAttribute(System.String)
+    name: HasAttribute
+    href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_HasAttribute_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.HasAttribute*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.HasAttribute
+  href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_HasAttribute_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: HasAttribute
+  nameWithType: ParameterPatternBuilder.HasAttribute
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.HasAttribute
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.HasAttribute(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.HasAttribute(Microsoft.CodeAnalysis.ITypeSymbol)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_HasAttribute_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: HasAttribute(ITypeSymbol)
+  nameWithType: ParameterPatternBuilder.HasAttribute(ITypeSymbol)
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.HasAttribute(Microsoft.CodeAnalysis.ITypeSymbol)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.HasAttribute(Microsoft.CodeAnalysis.ITypeSymbol)
+    name: HasAttribute
+    href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_HasAttribute_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.HasAttribute(Microsoft.CodeAnalysis.ITypeSymbol)
+    name: HasAttribute
+    href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_HasAttribute_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.HasDefaultValue``1(``0)
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.HasDefaultValue``1(``0)
+  href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_HasDefaultValue__1___0_
+  name: HasDefaultValue<T>(T)
+  nameWithType: ParameterPatternBuilder.HasDefaultValue<T>(T)
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.HasDefaultValue<T>(T)
+  nameWithType.vb: ParameterPatternBuilder.HasDefaultValue(Of T)(T)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.HasDefaultValue(Of T)(T)
+  name.vb: HasDefaultValue(Of T)(T)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.HasDefaultValue``1(``0)
+    name: HasDefaultValue
+    href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_HasDefaultValue__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.HasDefaultValue``1(``0)
+    name: HasDefaultValue
+    href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_HasDefaultValue__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.HasDefaultValue*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.HasDefaultValue
+  href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_HasDefaultValue
+  name: HasDefaultValue
+  nameWithType: ParameterPatternBuilder.HasDefaultValue
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.HasDefaultValue
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.Where*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.Where
+  href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_Where_System_Func_Microsoft_CodeAnalysis_IParameterSymbol_System_Boolean__
+  name: Where
+  nameWithType: ParameterPatternBuilder.Where
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.Where
+- uid: System.Func{Microsoft.CodeAnalysis.IParameterSymbol,System.Boolean}
+  commentId: T:System.Func{Microsoft.CodeAnalysis.IParameterSymbol,System.Boolean}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<IParameterSymbol, bool>
+  nameWithType: Func<IParameterSymbol, bool>
+  fullName: System.Func<Microsoft.CodeAnalysis.IParameterSymbol, bool>
+  nameWithType.vb: Func(Of IParameterSymbol, Boolean)
+  fullName.vb: System.Func(Of Microsoft.CodeAnalysis.IParameterSymbol, Boolean)
+  name.vb: Func(Of IParameterSymbol, Boolean)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: Microsoft.CodeAnalysis.IParameterSymbol
+    name: IParameterSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.iparametersymbol
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.IParameterSymbol
+    name: IParameterSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.iparametersymbol
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.Build*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.Build
+  href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_Build
+  name: Build
+  nameWithType: ParameterPatternBuilder.Build
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.Build
+- uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern{Microsoft.CodeAnalysis.IParameterSymbol}
+  commentId: T:ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern{Microsoft.CodeAnalysis.IParameterSymbol}
+  parent: ANcpLua.Roslyn.Utilities.Patterns
+  definition: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern`1
+  href: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern-1.html
+  name: SymbolPattern<IParameterSymbol>
+  nameWithType: SymbolPattern<IParameterSymbol>
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern<Microsoft.CodeAnalysis.IParameterSymbol>
+  nameWithType.vb: SymbolPattern(Of IParameterSymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern(Of Microsoft.CodeAnalysis.IParameterSymbol)
+  name.vb: SymbolPattern(Of IParameterSymbol)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern`1
+    name: SymbolPattern
+    href: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern-1.html
+  - name: <
+  - uid: Microsoft.CodeAnalysis.IParameterSymbol
+    name: IParameterSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.iparametersymbol
+  - name: '>'
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern`1
+    name: SymbolPattern
+    href: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.IParameterSymbol
+    name: IParameterSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.iparametersymbol
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.Build
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.Build
+  href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_Build
+  name: Build()
+  nameWithType: ParameterPatternBuilder.Build()
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.Build()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.Build
+    name: Build
+    href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_Build
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.Build
+    name: Build
+    href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_ParameterPatternBuilder_Build
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.op_Implicit*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.op_Implicit
+  name: implicit operator
+  nameWithType: ParameterPatternBuilder.implicit operator
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.implicit operator
+  nameWithType.vb: ParameterPatternBuilder.CType
+  fullName.vb: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.CType
+  name.vb: CType
+  spec.csharp:
+  - name: implicit
+  - name: " "
+  - name: operator

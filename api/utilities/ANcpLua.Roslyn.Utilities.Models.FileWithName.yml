@@ -1,0 +1,926 @@
+### YamlMime:ManagedReference
+items:
+- uid: ANcpLua.Roslyn.Utilities.Models.FileWithName
+  commentId: T:ANcpLua.Roslyn.Utilities.Models.FileWithName
+  id: FileWithName
+  parent: ANcpLua.Roslyn.Utilities.Models
+  children:
+  - ANcpLua.Roslyn.Utilities.Models.FileWithName.#ctor(System.String,System.String)
+  - ANcpLua.Roslyn.Utilities.Models.FileWithName.Empty
+  - ANcpLua.Roslyn.Utilities.Models.FileWithName.IsEmpty
+  - ANcpLua.Roslyn.Utilities.Models.FileWithName.Name
+  - ANcpLua.Roslyn.Utilities.Models.FileWithName.Text
+  langs:
+  - csharp
+  - vb
+  name: FileWithName
+  nameWithType: FileWithName
+  fullName: ANcpLua.Roslyn.Utilities.Models.FileWithName
+  type: Struct
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/FileWithName.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: FileWithName
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/FileWithName.cs
+    startLine: 32
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Models
+  summary: Represents a generated file with a name and text content.
+  remarks: >-
+    <p>
+        This record struct is used to pair a hint name with the corresponding source text
+        for use with Roslyn incremental source generators.
+    </p>
+
+    <ul><li>Immutable value type with value-based equality semantics.</li><li>Use <xref href="ANcpLua.Roslyn.Utilities.Models.FileWithName.Empty" data-throw-if-not-resolved="false"></xref> to obtain a sentinel value representing no file.</li><li>Check <xref href="ANcpLua.Roslyn.Utilities.Models.FileWithName.IsEmpty" data-throw-if-not-resolved="false"></xref> before adding to source output to avoid empty files.</li></ul>
+  example: []
+  syntax:
+    content: 'public readonly record struct FileWithName : IEquatable<FileWithName>'
+    content.vb: Public Structure FileWithName Implements IEquatable(Of FileWithName)
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.EquatableArray`1
+    commentId: T:ANcpLua.Roslyn.Utilities.EquatableArray`1
+  implements:
+  - System.IEquatable{ANcpLua.Roslyn.Utilities.Models.FileWithName}
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  extensionMethods:
+  - ANcpLua.Roslyn.Utilities.Models.FileWithName.ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1
+  - ANcpLua.Roslyn.Utilities.Models.FileWithName.ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+- uid: ANcpLua.Roslyn.Utilities.Models.FileWithName.#ctor(System.String,System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.FileWithName.#ctor(System.String,System.String)
+  id: '#ctor(System.String,System.String)'
+  parent: ANcpLua.Roslyn.Utilities.Models.FileWithName
+  langs:
+  - csharp
+  - vb
+  name: FileWithName(string, string)
+  nameWithType: FileWithName.FileWithName(string, string)
+  fullName: ANcpLua.Roslyn.Utilities.Models.FileWithName.FileWithName(string, string)
+  type: Constructor
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/FileWithName.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: .ctor
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/FileWithName.cs
+    startLine: 32
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Models
+  summary: Represents a generated file with a name and text content.
+  remarks: >-
+    <p>
+        This record struct is used to pair a hint name with the corresponding source text
+        for use with Roslyn incremental source generators.
+    </p>
+
+    <ul><li>Immutable value type with value-based equality semantics.</li><li>Use <xref href="ANcpLua.Roslyn.Utilities.Models.FileWithName.Empty" data-throw-if-not-resolved="false"></xref> to obtain a sentinel value representing no file.</li><li>Check <xref href="ANcpLua.Roslyn.Utilities.Models.FileWithName.IsEmpty" data-throw-if-not-resolved="false"></xref> before adding to source output to avoid empty files.</li></ul>
+  example: []
+  syntax:
+    content: public FileWithName(string Name, string Text)
+    parameters:
+    - id: Name
+      type: System.String
+      description: >-
+        The hint name for the generated file. This name is used by Roslyn to identify the generated source
+
+        and should typically include a file extension (e.g., <code>"MyType.g.cs"</code>).
+    - id: Text
+      type: System.String
+      description: >-
+        The source text content of the generated file. This should contain valid C# source code
+
+        that will be added to the compilation.
+    content.vb: Public Sub New(Name As String, Text As String)
+  overload: ANcpLua.Roslyn.Utilities.Models.FileWithName.#ctor*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.EquatableArray`1
+    commentId: T:ANcpLua.Roslyn.Utilities.EquatableArray`1
+  nameWithType.vb: FileWithName.New(String, String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.FileWithName.New(String, String)
+  name.vb: New(String, String)
+- uid: ANcpLua.Roslyn.Utilities.Models.FileWithName.Name
+  commentId: P:ANcpLua.Roslyn.Utilities.Models.FileWithName.Name
+  id: Name
+  parent: ANcpLua.Roslyn.Utilities.Models.FileWithName
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: FileWithName.Name
+  fullName: ANcpLua.Roslyn.Utilities.Models.FileWithName.Name
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/FileWithName.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Name
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/FileWithName.cs
+    startLine: 37
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Models
+  summary: >-
+    The hint name for the generated file. This name is used by Roslyn to identify the generated source
+
+    and should typically include a file extension (e.g., <code>"MyType.g.cs"</code>).
+  example: []
+  syntax:
+    content: public string Name { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: ANcpLua.Roslyn.Utilities.Models.FileWithName.Name*
+- uid: ANcpLua.Roslyn.Utilities.Models.FileWithName.Text
+  commentId: P:ANcpLua.Roslyn.Utilities.Models.FileWithName.Text
+  id: Text
+  parent: ANcpLua.Roslyn.Utilities.Models.FileWithName
+  langs:
+  - csharp
+  - vb
+  name: Text
+  nameWithType: FileWithName.Text
+  fullName: ANcpLua.Roslyn.Utilities.Models.FileWithName.Text
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/FileWithName.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Text
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/FileWithName.cs
+    startLine: 38
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Models
+  summary: >-
+    The source text content of the generated file. This should contain valid C# source code
+
+    that will be added to the compilation.
+  example: []
+  syntax:
+    content: public string Text { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Text As String
+  overload: ANcpLua.Roslyn.Utilities.Models.FileWithName.Text*
+- uid: ANcpLua.Roslyn.Utilities.Models.FileWithName.Empty
+  commentId: P:ANcpLua.Roslyn.Utilities.Models.FileWithName.Empty
+  id: Empty
+  parent: ANcpLua.Roslyn.Utilities.Models.FileWithName
+  langs:
+  - csharp
+  - vb
+  name: Empty
+  nameWithType: FileWithName.Empty
+  fullName: ANcpLua.Roslyn.Utilities.Models.FileWithName.Empty
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/FileWithName.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Empty
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/FileWithName.cs
+    startLine: 49
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Models
+  summary: Gets an empty file instance.
+  remarks: >-
+    This property returns a sentinel value where both <xref href="ANcpLua.Roslyn.Utilities.Models.FileWithName.Name" data-throw-if-not-resolved="false"></xref> and <xref href="ANcpLua.Roslyn.Utilities.Models.FileWithName.Text" data-throw-if-not-resolved="false"></xref>
+
+    are <xref href="System.String.Empty" data-throw-if-not-resolved="false"></xref>. Use this when a generator pipeline needs to return
+
+    a non-null value but has no file to produce.
+  example: []
+  syntax:
+    content: public static FileWithName Empty { get; }
+    parameters: []
+    return:
+      type: ANcpLua.Roslyn.Utilities.Models.FileWithName
+      description: A <xref href="ANcpLua.Roslyn.Utilities.Models.FileWithName" data-throw-if-not-resolved="false"></xref> with empty name and text.
+    content.vb: Public Shared ReadOnly Property Empty As FileWithName
+  overload: ANcpLua.Roslyn.Utilities.Models.FileWithName.Empty*
+- uid: ANcpLua.Roslyn.Utilities.Models.FileWithName.IsEmpty
+  commentId: P:ANcpLua.Roslyn.Utilities.Models.FileWithName.IsEmpty
+  id: IsEmpty
+  parent: ANcpLua.Roslyn.Utilities.Models.FileWithName
+  langs:
+  - csharp
+  - vb
+  name: IsEmpty
+  nameWithType: FileWithName.IsEmpty
+  fullName: ANcpLua.Roslyn.Utilities.Models.FileWithName.IsEmpty
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/FileWithName.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsEmpty
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/FileWithName.cs
+    startLine: 65
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Models
+  summary: Gets a value indicating whether this file is empty.
+  remarks: >-
+    A file is considered empty if either <xref href="ANcpLua.Roslyn.Utilities.Models.FileWithName.Name" data-throw-if-not-resolved="false"></xref> or <xref href="ANcpLua.Roslyn.Utilities.Models.FileWithName.Text" data-throw-if-not-resolved="false"></xref> is
+
+    <code>null</code> or an empty string. Check this property before adding the file to
+
+    source output to avoid generating empty or invalid source files.
+  example: []
+  syntax:
+    content: public bool IsEmpty { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if <xref href="ANcpLua.Roslyn.Utilities.Models.FileWithName.Name" data-throw-if-not-resolved="false"></xref> or <xref href="ANcpLua.Roslyn.Utilities.Models.FileWithName.Text" data-throw-if-not-resolved="false"></xref> is <code>null</code> or empty;
+
+        otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public ReadOnly Property IsEmpty As Boolean
+  overload: ANcpLua.Roslyn.Utilities.Models.FileWithName.IsEmpty*
+references:
+- uid: ANcpLua.Roslyn.Utilities.EquatableArray`1
+  commentId: T:ANcpLua.Roslyn.Utilities.EquatableArray`1
+  parent: ANcpLua.Roslyn.Utilities
+  href: ANcpLua.Roslyn.Utilities.EquatableArray-1.html
+  name: EquatableArray<T>
+  nameWithType: EquatableArray<T>
+  fullName: ANcpLua.Roslyn.Utilities.EquatableArray<T>
+  nameWithType.vb: EquatableArray(Of T)
+  fullName.vb: ANcpLua.Roslyn.Utilities.EquatableArray(Of T)
+  name.vb: EquatableArray(Of T)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.EquatableArray`1
+    name: EquatableArray
+    href: ANcpLua.Roslyn.Utilities.EquatableArray-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.EquatableArray`1
+    name: EquatableArray
+    href: ANcpLua.Roslyn.Utilities.EquatableArray-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Models.FileWithName.Empty
+  commentId: P:ANcpLua.Roslyn.Utilities.Models.FileWithName.Empty
+  href: ANcpLua.Roslyn.Utilities.Models.FileWithName.html#ANcpLua_Roslyn_Utilities_Models_FileWithName_Empty
+  name: Empty
+  nameWithType: FileWithName.Empty
+  fullName: ANcpLua.Roslyn.Utilities.Models.FileWithName.Empty
+- uid: ANcpLua.Roslyn.Utilities.Models.FileWithName.IsEmpty
+  commentId: P:ANcpLua.Roslyn.Utilities.Models.FileWithName.IsEmpty
+  href: ANcpLua.Roslyn.Utilities.Models.FileWithName.html#ANcpLua_Roslyn_Utilities_Models_FileWithName_IsEmpty
+  name: IsEmpty
+  nameWithType: FileWithName.IsEmpty
+  fullName: ANcpLua.Roslyn.Utilities.Models.FileWithName.IsEmpty
+- uid: ANcpLua.Roslyn.Utilities.Models
+  commentId: N:ANcpLua.Roslyn.Utilities.Models
+  href: ANcpLua.html
+  name: ANcpLua.Roslyn.Utilities.Models
+  nameWithType: ANcpLua.Roslyn.Utilities.Models
+  fullName: ANcpLua.Roslyn.Utilities.Models
+  spec.csharp:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities.Models
+    name: Models
+    href: ANcpLua.Roslyn.Utilities.Models.html
+  spec.vb:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities.Models
+    name: Models
+    href: ANcpLua.Roslyn.Utilities.Models.html
+- uid: System.IEquatable{ANcpLua.Roslyn.Utilities.Models.FileWithName}
+  commentId: T:System.IEquatable{ANcpLua.Roslyn.Utilities.Models.FileWithName}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<FileWithName>
+  nameWithType: IEquatable<FileWithName>
+  fullName: System.IEquatable<ANcpLua.Roslyn.Utilities.Models.FileWithName>
+  nameWithType.vb: IEquatable(Of FileWithName)
+  fullName.vb: System.IEquatable(Of ANcpLua.Roslyn.Utilities.Models.FileWithName)
+  name.vb: IEquatable(Of FileWithName)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.Models.FileWithName
+    name: FileWithName
+    href: ANcpLua.Roslyn.Utilities.Models.FileWithName.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Models.FileWithName
+    name: FileWithName
+    href: ANcpLua.Roslyn.Utilities.Models.FileWithName.html
+  - name: )
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Models.FileWithName.ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+  parent: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+  definition: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  name: ToResultWithDiagnostics<FileWithName>(FileWithName)
+  nameWithType: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<FileWithName>(FileWithName)
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<ANcpLua.Roslyn.Utilities.Models.FileWithName>(ANcpLua.Roslyn.Utilities.Models.FileWithName)
+  nameWithType.vb: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of FileWithName)(FileWithName)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of ANcpLua.Roslyn.Utilities.Models.FileWithName)(ANcpLua.Roslyn.Utilities.Models.FileWithName)
+  name.vb: ToResultWithDiagnostics(Of FileWithName)(FileWithName)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(ANcpLua.Roslyn.Utilities.Models.FileWithName)
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.Models.FileWithName
+    name: FileWithName
+    href: ANcpLua.Roslyn.Utilities.Models.FileWithName.html
+  - name: '>'
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.Models.FileWithName
+    name: FileWithName
+    href: ANcpLua.Roslyn.Utilities.Models.FileWithName.html
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(ANcpLua.Roslyn.Utilities.Models.FileWithName)
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Models.FileWithName
+    name: FileWithName
+    href: ANcpLua.Roslyn.Utilities.Models.FileWithName.html
+  - name: )
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.Models.FileWithName
+    name: FileWithName
+    href: ANcpLua.Roslyn.Utilities.Models.FileWithName.html
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Models.FileWithName.ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  parent: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+  definition: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  name: ToResultWithDiagnostics<FileWithName>(FileWithName, ImmutableArray<DiagnosticInfo>)
+  nameWithType: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<FileWithName>(FileWithName, ImmutableArray<DiagnosticInfo>)
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<ANcpLua.Roslyn.Utilities.Models.FileWithName>(ANcpLua.Roslyn.Utilities.Models.FileWithName, System.Collections.Immutable.ImmutableArray<ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo>)
+  nameWithType.vb: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of FileWithName)(FileWithName, ImmutableArray(Of DiagnosticInfo))
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of ANcpLua.Roslyn.Utilities.Models.FileWithName)(ANcpLua.Roslyn.Utilities.Models.FileWithName, System.Collections.Immutable.ImmutableArray(Of ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo))
+  name.vb: ToResultWithDiagnostics(Of FileWithName)(FileWithName, ImmutableArray(Of DiagnosticInfo))
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(ANcpLua.Roslyn.Utilities.Models.FileWithName,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.Models.FileWithName
+    name: FileWithName
+    href: ANcpLua.Roslyn.Utilities.Models.FileWithName.html
+  - name: '>'
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.Models.FileWithName
+    name: FileWithName
+    href: ANcpLua.Roslyn.Utilities.Models.FileWithName.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(ANcpLua.Roslyn.Utilities.Models.FileWithName,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Models.FileWithName
+    name: FileWithName
+    href: ANcpLua.Roslyn.Utilities.Models.FileWithName.html
+  - name: )
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.Models.FileWithName
+    name: FileWithName
+    href: ANcpLua.Roslyn.Utilities.Models.FileWithName.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: )
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities
+  commentId: N:ANcpLua.Roslyn.Utilities
+  href: ANcpLua.html
+  name: ANcpLua.Roslyn.Utilities
+  nameWithType: ANcpLua.Roslyn.Utilities
+  fullName: ANcpLua.Roslyn.Utilities
+  spec.csharp:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  spec.vb:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  name: ToResultWithDiagnostics<T>(T)
+  nameWithType: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<T>(T)
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<T>(T)
+  nameWithType.vb: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of T)(T)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of T)(T)
+  name.vb: ToResultWithDiagnostics(Of T)(T)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+  commentId: T:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+  parent: ANcpLua.Roslyn.Utilities.Models
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html
+  name: ResultWithDiagnosticsExtensions
+  nameWithType: ResultWithDiagnosticsExtensions
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+- uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  name: ToResultWithDiagnostics<T>(T, ImmutableArray<DiagnosticInfo>)
+  nameWithType: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<T>(T, ImmutableArray<DiagnosticInfo>)
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<T>(T, System.Collections.Immutable.ImmutableArray<ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo>)
+  nameWithType.vb: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of T)(T, ImmutableArray(Of DiagnosticInfo))
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of T)(T, System.Collections.Immutable.ImmutableArray(Of ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo))
+  name.vb: ToResultWithDiagnostics(Of T)(T, ImmutableArray(Of DiagnosticInfo))
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: )
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Models.FileWithName.#ctor*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Models.FileWithName.#ctor
+  href: ANcpLua.Roslyn.Utilities.Models.FileWithName.html#ANcpLua_Roslyn_Utilities_Models_FileWithName__ctor_System_String_System_String_
+  name: FileWithName
+  nameWithType: FileWithName.FileWithName
+  fullName: ANcpLua.Roslyn.Utilities.Models.FileWithName.FileWithName
+  nameWithType.vb: FileWithName.New
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.FileWithName.New
+  name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: ANcpLua.Roslyn.Utilities.Models.FileWithName.Name*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Models.FileWithName.Name
+  href: ANcpLua.Roslyn.Utilities.Models.FileWithName.html#ANcpLua_Roslyn_Utilities_Models_FileWithName_Name
+  name: Name
+  nameWithType: FileWithName.Name
+  fullName: ANcpLua.Roslyn.Utilities.Models.FileWithName.Name
+- uid: ANcpLua.Roslyn.Utilities.Models.FileWithName.Text*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Models.FileWithName.Text
+  href: ANcpLua.Roslyn.Utilities.Models.FileWithName.html#ANcpLua_Roslyn_Utilities_Models_FileWithName_Text
+  name: Text
+  nameWithType: FileWithName.Text
+  fullName: ANcpLua.Roslyn.Utilities.Models.FileWithName.Text
+- uid: ANcpLua.Roslyn.Utilities.Models.FileWithName.Name
+  commentId: P:ANcpLua.Roslyn.Utilities.Models.FileWithName.Name
+  href: ANcpLua.Roslyn.Utilities.Models.FileWithName.html#ANcpLua_Roslyn_Utilities_Models_FileWithName_Name
+  name: Name
+  nameWithType: FileWithName.Name
+  fullName: ANcpLua.Roslyn.Utilities.Models.FileWithName.Name
+- uid: ANcpLua.Roslyn.Utilities.Models.FileWithName.Text
+  commentId: P:ANcpLua.Roslyn.Utilities.Models.FileWithName.Text
+  href: ANcpLua.Roslyn.Utilities.Models.FileWithName.html#ANcpLua_Roslyn_Utilities_Models_FileWithName_Text
+  name: Text
+  nameWithType: FileWithName.Text
+  fullName: ANcpLua.Roslyn.Utilities.Models.FileWithName.Text
+- uid: System.String.Empty
+  commentId: F:System.String.Empty
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string.empty
+  name: Empty
+  nameWithType: string.Empty
+  fullName: string.Empty
+  nameWithType.vb: String.Empty
+  fullName.vb: String.Empty
+- uid: ANcpLua.Roslyn.Utilities.Models.FileWithName
+  commentId: T:ANcpLua.Roslyn.Utilities.Models.FileWithName
+  parent: ANcpLua.Roslyn.Utilities.Models
+  href: ANcpLua.Roslyn.Utilities.Models.FileWithName.html
+  name: FileWithName
+  nameWithType: FileWithName
+  fullName: ANcpLua.Roslyn.Utilities.Models.FileWithName
+- uid: ANcpLua.Roslyn.Utilities.Models.FileWithName.Empty*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Models.FileWithName.Empty
+  href: ANcpLua.Roslyn.Utilities.Models.FileWithName.html#ANcpLua_Roslyn_Utilities_Models_FileWithName_Empty
+  name: Empty
+  nameWithType: FileWithName.Empty
+  fullName: ANcpLua.Roslyn.Utilities.Models.FileWithName.Empty
+- uid: ANcpLua.Roslyn.Utilities.Models.FileWithName.IsEmpty*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Models.FileWithName.IsEmpty
+  href: ANcpLua.Roslyn.Utilities.Models.FileWithName.html#ANcpLua_Roslyn_Utilities_Models_FileWithName_IsEmpty
+  name: IsEmpty
+  nameWithType: FileWithName.IsEmpty
+  fullName: ANcpLua.Roslyn.Utilities.Models.FileWithName.IsEmpty
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean

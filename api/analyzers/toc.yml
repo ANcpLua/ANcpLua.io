@@ -1,0 +1,118 @@
+### YamlMime:TableOfContent
+items:
+- uid: ANcpLua.Analyzers.Analyzers
+  name: ANcpLua.Analyzers.Analyzers
+  type: Namespace
+  items:
+  - uid: ANcpLua.Analyzers.Analyzers.AL0001ProhibitPrimaryConstructorParameterReassignmentAnalyzer
+    name: AL0001ProhibitPrimaryConstructorParameterReassignmentAnalyzer
+    type: Class
+  - uid: ANcpLua.Analyzers.Analyzers.AL0002DontRepeatNegatedPatternAnalyzer
+    name: AL0002DontRepeatNegatedPatternAnalyzer
+    type: Class
+  - uid: ANcpLua.Analyzers.Analyzers.AL0003DontDivideByConstantZeroAnalyzer
+    name: AL0003DontDivideByConstantZeroAnalyzer
+    type: Class
+  - uid: ANcpLua.Analyzers.Analyzers.AL0004ToAL0005SpanComparisonAnalyzer
+    name: AL0004ToAL0005SpanComparisonAnalyzer
+    type: Class
+  - uid: ANcpLua.Analyzers.Analyzers.AL0006FieldNameConflictWithPrimaryConstructorAnalyzer
+    name: AL0006FieldNameConflictWithPrimaryConstructorAnalyzer
+    type: Class
+  - uid: ANcpLua.Analyzers.Analyzers.AL0007ToAL0009IXmlSerializableAnalyzer
+    name: AL0007ToAL0009IXmlSerializableAnalyzer
+    type: Class
+  - uid: ANcpLua.Analyzers.Analyzers.AL0010PartialTypeAnalyzer
+    name: AL0010PartialTypeAnalyzer
+    type: Class
+  - uid: ANcpLua.Analyzers.Analyzers.AL0011LockKeywordAnalyzer
+    name: AL0011LockKeywordAnalyzer
+    type: Class
+  - uid: ANcpLua.Analyzers.Analyzers.AL0012DeprecatedAttributeAnalyzer
+    name: AL0012DeprecatedAttributeAnalyzer
+    type: Class
+  - uid: ANcpLua.Analyzers.Analyzers.AL0013MissingSchemaUrlAnalyzer
+    name: AL0013MissingSchemaUrlAnalyzer
+    type: Class
+  - uid: ANcpLua.Analyzers.Analyzers.AL0014PreferPatternMatchingAnalyzer
+    name: AL0014PreferPatternMatchingAnalyzer
+    type: Class
+  - uid: ANcpLua.Analyzers.Analyzers.AL0015NormalizeNullGuardStyleAnalyzer
+    name: AL0015NormalizeNullGuardStyleAnalyzer
+    type: Class
+  - uid: ANcpLua.Analyzers.Analyzers.AL0016CombineDeclarationWithNullCheckAnalyzer
+    name: AL0016CombineDeclarationWithNullCheckAnalyzer
+    type: Class
+  - uid: ANcpLua.Analyzers.Analyzers.AL0017HardcodedPackageVersionAnalyzer
+    name: AL0017HardcodedPackageVersionAnalyzer
+    type: Class
+  - uid: ANcpLua.Analyzers.Analyzers.AL0020ToAL0024FormBindingAnalyzer
+    name: AL0020ToAL0024FormBindingAnalyzer
+    type: Class
+  - uid: ANcpLua.Analyzers.Analyzers.AL0025PreferStaticLambdaAnalyzer
+    name: AL0025PreferStaticLambdaAnalyzer
+    type: Class
+- uid: ANcpLua.Analyzers.CodeFixes.CodeFixes
+  name: ANcpLua.Analyzers.CodeFixes.CodeFixes
+  type: Namespace
+  items:
+  - uid: ANcpLua.Analyzers.CodeFixes.CodeFixes.AL0002CodeFixProvider
+    name: AL0002CodeFixProvider
+    type: Class
+  - uid: ANcpLua.Analyzers.CodeFixes.CodeFixes.AL0004CodeFixProvider
+    name: AL0004CodeFixProvider
+    type: Class
+  - uid: ANcpLua.Analyzers.CodeFixes.CodeFixes.AL0005CodeFixProvider
+    name: AL0005CodeFixProvider
+    type: Class
+  - uid: ANcpLua.Analyzers.CodeFixes.CodeFixes.AL0008IXmlSerializableCodeFixProvider
+    name: AL0008IXmlSerializableCodeFixProvider
+    type: Class
+  - uid: ANcpLua.Analyzers.CodeFixes.CodeFixes.AL0010PartialTypeCodeFixProvider
+    name: AL0010PartialTypeCodeFixProvider
+    type: Class
+  - uid: ANcpLua.Analyzers.CodeFixes.CodeFixes.AL0012DeprecatedAttributeCodeFixProvider
+    name: AL0012DeprecatedAttributeCodeFixProvider
+    type: Class
+  - uid: ANcpLua.Analyzers.CodeFixes.CodeFixes.AL0014CodeFixProvider
+    name: AL0014CodeFixProvider
+    type: Class
+  - uid: ANcpLua.Analyzers.CodeFixes.CodeFixes.AL0015NormalizeNullGuardStyleCodeFixProvider
+    name: AL0015NormalizeNullGuardStyleCodeFixProvider
+    type: Class
+  - uid: ANcpLua.Analyzers.CodeFixes.CodeFixes.AL0016CombineDeclarationWithNullCheckCodeFixProvider
+    name: AL0016CombineDeclarationWithNullCheckCodeFixProvider
+    type: Class
+  - uid: ANcpLua.Analyzers.CodeFixes.CodeFixes.AL0025StaticLambdaCodeFixProvider
+    name: AL0025StaticLambdaCodeFixProvider
+    type: Class
+  - uid: ANcpLua.Analyzers.CodeFixes.CodeFixes.ALCodeFixProvider`1
+    name: ALCodeFixProvider<TNode>
+    type: Class
+- uid: ANcpLua.Analyzers.CodeFixes.Refactorings
+  name: ANcpLua.Analyzers.CodeFixes.Refactorings
+  type: Namespace
+  items:
+  - uid: ANcpLua.Analyzers.CodeFixes.Refactorings.Ar0001SnakeCaseToPascalCaseRefactoring
+    name: Ar0001SnakeCaseToPascalCaseRefactoring
+    type: Class
+  - uid: ANcpLua.Analyzers.CodeFixes.Refactorings.Ar0002MakeStaticLambdaRefactoring
+    name: Ar0002MakeStaticLambdaRefactoring
+    type: Class
+- uid: ANcpLua.Analyzers.Core
+  name: ANcpLua.Analyzers.Core
+  type: Namespace
+  items:
+  - uid: ANcpLua.Analyzers.Core.ALAnalyzer
+    name: ALAnalyzer
+    type: Class
+  - uid: ANcpLua.Analyzers.Core.DeprecatedOtelAttributes
+    name: DeprecatedOtelAttributes
+    type: Class
+  - uid: ANcpLua.Analyzers.Core.DiagnosticCategories
+    name: DiagnosticCategories
+    type: Class
+  - uid: ANcpLua.Analyzers.Core.DiagnosticIds
+    name: DiagnosticIds
+    type: Class
+memberLayout: SamePage

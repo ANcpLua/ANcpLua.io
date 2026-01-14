@@ -1,0 +1,44 @@
+### YamlMime:ManagedReference
+items:
+- uid: ANcpLua.Roslyn.Utilities.Contexts
+  commentId: N:ANcpLua.Roslyn.Utilities.Contexts
+  id: ANcpLua.Roslyn.Utilities.Contexts
+  children:
+  - ANcpLua.Roslyn.Utilities.Contexts.AspNetContext
+  - ANcpLua.Roslyn.Utilities.Contexts.AwaitableContext
+  - ANcpLua.Roslyn.Utilities.Contexts.CollectionContext
+  - ANcpLua.Roslyn.Utilities.Contexts.DisposableContext
+  langs:
+  - csharp
+  - vb
+  name: ANcpLua.Roslyn.Utilities.Contexts
+  nameWithType: ANcpLua.Roslyn.Utilities.Contexts
+  fullName: ANcpLua.Roslyn.Utilities.Contexts
+  type: Namespace
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+references:
+- uid: ANcpLua.Roslyn.Utilities.Contexts.AspNetContext
+  commentId: T:ANcpLua.Roslyn.Utilities.Contexts.AspNetContext
+  href: ANcpLua.Roslyn.Utilities.Contexts.AspNetContext.html
+  name: AspNetContext
+  nameWithType: AspNetContext
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.AspNetContext
+- uid: ANcpLua.Roslyn.Utilities.Contexts.AwaitableContext
+  commentId: T:ANcpLua.Roslyn.Utilities.Contexts.AwaitableContext
+  href: ANcpLua.Roslyn.Utilities.Contexts.AwaitableContext.html
+  name: AwaitableContext
+  nameWithType: AwaitableContext
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.AwaitableContext
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext
+  commentId: T:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext
+  href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html
+  name: CollectionContext
+  nameWithType: CollectionContext
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext
+  commentId: T:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext
+  href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html
+  name: DisposableContext
+  nameWithType: DisposableContext
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext

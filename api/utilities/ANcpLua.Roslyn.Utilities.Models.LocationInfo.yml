@@ -1,0 +1,1080 @@
+### YamlMime:ManagedReference
+items:
+- uid: ANcpLua.Roslyn.Utilities.Models.LocationInfo
+  commentId: T:ANcpLua.Roslyn.Utilities.Models.LocationInfo
+  id: LocationInfo
+  parent: ANcpLua.Roslyn.Utilities.Models
+  children:
+  - ANcpLua.Roslyn.Utilities.Models.LocationInfo.#ctor(System.String,Microsoft.CodeAnalysis.Text.TextSpan,Microsoft.CodeAnalysis.Text.LinePositionSpan)
+  - ANcpLua.Roslyn.Utilities.Models.LocationInfo.From(Microsoft.CodeAnalysis.Location)
+  - ANcpLua.Roslyn.Utilities.Models.LocationInfo.From(Microsoft.CodeAnalysis.SyntaxNode)
+  - ANcpLua.Roslyn.Utilities.Models.LocationInfo.From(Microsoft.CodeAnalysis.SyntaxToken)
+  - ANcpLua.Roslyn.Utilities.Models.LocationInfo.LineSpan
+  - ANcpLua.Roslyn.Utilities.Models.LocationInfo.Path
+  - ANcpLua.Roslyn.Utilities.Models.LocationInfo.Span
+  - ANcpLua.Roslyn.Utilities.Models.LocationInfo.ToLocation
+  langs:
+  - csharp
+  - vb
+  name: LocationInfo
+  nameWithType: LocationInfo
+  fullName: ANcpLua.Roslyn.Utilities.Models.LocationInfo
+  type: Struct
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/LocationInfo.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: LocationInfo
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/LocationInfo.cs
+    startLine: 27
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Models
+  summary: An equatable representation of a source location for use in source generators.
+  remarks: >-
+    <p>
+        This type provides a value-equal wrapper around location information that can be safely
+        cached in incremental source generator pipelines. Unlike <xref href="Microsoft.CodeAnalysis.Location" data-throw-if-not-resolved="false"></xref>, which
+        is tied to a specific compilation, <xref href="ANcpLua.Roslyn.Utilities.Models.LocationInfo" data-throw-if-not-resolved="false"></xref> stores only the essential
+        location data (file path, span, and line span) as primitive values.
+    </p>
+
+    <ul><li>File path from the mapped line span or syntax tree</li><li>Source span for precise character positioning</li><li>Line span for human-readable line/column information</li></ul>
+  example: []
+  syntax:
+    content: 'public readonly record struct LocationInfo : IEquatable<LocationInfo>'
+    content.vb: Public Structure LocationInfo Implements IEquatable(Of LocationInfo)
+  seealso:
+  - linkId: Microsoft.CodeAnalysis.Location
+    commentId: T:Microsoft.CodeAnalysis.Location
+  - linkId: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    commentId: T:ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+  implements:
+  - System.IEquatable{ANcpLua.Roslyn.Utilities.Models.LocationInfo}
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  extensionMethods:
+  - ANcpLua.Roslyn.Utilities.Models.LocationInfo.ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1
+  - ANcpLua.Roslyn.Utilities.Models.LocationInfo.ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+- uid: ANcpLua.Roslyn.Utilities.Models.LocationInfo.#ctor(System.String,Microsoft.CodeAnalysis.Text.TextSpan,Microsoft.CodeAnalysis.Text.LinePositionSpan)
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.LocationInfo.#ctor(System.String,Microsoft.CodeAnalysis.Text.TextSpan,Microsoft.CodeAnalysis.Text.LinePositionSpan)
+  id: '#ctor(System.String,Microsoft.CodeAnalysis.Text.TextSpan,Microsoft.CodeAnalysis.Text.LinePositionSpan)'
+  parent: ANcpLua.Roslyn.Utilities.Models.LocationInfo
+  langs:
+  - csharp
+  - vb
+  name: LocationInfo(string, TextSpan, LinePositionSpan)
+  nameWithType: LocationInfo.LocationInfo(string, TextSpan, LinePositionSpan)
+  fullName: ANcpLua.Roslyn.Utilities.Models.LocationInfo.LocationInfo(string, Microsoft.CodeAnalysis.Text.TextSpan, Microsoft.CodeAnalysis.Text.LinePositionSpan)
+  type: Constructor
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/LocationInfo.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: .ctor
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/LocationInfo.cs
+    startLine: 27
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Models
+  summary: An equatable representation of a source location for use in source generators.
+  remarks: >-
+    <p>
+        This type provides a value-equal wrapper around location information that can be safely
+        cached in incremental source generator pipelines. Unlike <xref href="Microsoft.CodeAnalysis.Location" data-throw-if-not-resolved="false"></xref>, which
+        is tied to a specific compilation, <xref href="ANcpLua.Roslyn.Utilities.Models.LocationInfo" data-throw-if-not-resolved="false"></xref> stores only the essential
+        location data (file path, span, and line span) as primitive values.
+    </p>
+
+    <ul><li>File path from the mapped line span or syntax tree</li><li>Source span for precise character positioning</li><li>Line span for human-readable line/column information</li></ul>
+  example: []
+  syntax:
+    content: public LocationInfo(string Path, TextSpan Span, LinePositionSpan LineSpan)
+    parameters:
+    - id: Path
+      type: System.String
+      description: The file path of the source location.
+    - id: Span
+      type: Microsoft.CodeAnalysis.Text.TextSpan
+      description: The text span representing the character range in the source file.
+    - id: LineSpan
+      type: Microsoft.CodeAnalysis.Text.LinePositionSpan
+      description: The line and column position span for display purposes.
+    content.vb: Public Sub New(Path As String, Span As TextSpan, LineSpan As LinePositionSpan)
+  overload: ANcpLua.Roslyn.Utilities.Models.LocationInfo.#ctor*
+  seealso:
+  - linkId: Microsoft.CodeAnalysis.Location
+    commentId: T:Microsoft.CodeAnalysis.Location
+  - linkId: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    commentId: T:ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+  nameWithType.vb: LocationInfo.New(String, TextSpan, LinePositionSpan)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.LocationInfo.New(String, Microsoft.CodeAnalysis.Text.TextSpan, Microsoft.CodeAnalysis.Text.LinePositionSpan)
+  name.vb: New(String, TextSpan, LinePositionSpan)
+- uid: ANcpLua.Roslyn.Utilities.Models.LocationInfo.Path
+  commentId: P:ANcpLua.Roslyn.Utilities.Models.LocationInfo.Path
+  id: Path
+  parent: ANcpLua.Roslyn.Utilities.Models.LocationInfo
+  langs:
+  - csharp
+  - vb
+  name: Path
+  nameWithType: LocationInfo.Path
+  fullName: ANcpLua.Roslyn.Utilities.Models.LocationInfo.Path
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/LocationInfo.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Path
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/LocationInfo.cs
+    startLine: 31
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Models
+  summary: The file path of the source location.
+  example: []
+  syntax:
+    content: public string Path { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Path As String
+  overload: ANcpLua.Roslyn.Utilities.Models.LocationInfo.Path*
+- uid: ANcpLua.Roslyn.Utilities.Models.LocationInfo.Span
+  commentId: P:ANcpLua.Roslyn.Utilities.Models.LocationInfo.Span
+  id: Span
+  parent: ANcpLua.Roslyn.Utilities.Models.LocationInfo
+  langs:
+  - csharp
+  - vb
+  name: Span
+  nameWithType: LocationInfo.Span
+  fullName: ANcpLua.Roslyn.Utilities.Models.LocationInfo.Span
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/LocationInfo.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Span
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/LocationInfo.cs
+    startLine: 31
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Models
+  summary: The text span representing the character range in the source file.
+  example: []
+  syntax:
+    content: public TextSpan Span { get; init; }
+    parameters: []
+    return:
+      type: Microsoft.CodeAnalysis.Text.TextSpan
+    content.vb: Public Property Span As TextSpan
+  overload: ANcpLua.Roslyn.Utilities.Models.LocationInfo.Span*
+- uid: ANcpLua.Roslyn.Utilities.Models.LocationInfo.LineSpan
+  commentId: P:ANcpLua.Roslyn.Utilities.Models.LocationInfo.LineSpan
+  id: LineSpan
+  parent: ANcpLua.Roslyn.Utilities.Models.LocationInfo
+  langs:
+  - csharp
+  - vb
+  name: LineSpan
+  nameWithType: LocationInfo.LineSpan
+  fullName: ANcpLua.Roslyn.Utilities.Models.LocationInfo.LineSpan
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/LocationInfo.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: LineSpan
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/LocationInfo.cs
+    startLine: 31
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Models
+  summary: The line and column position span for display purposes.
+  example: []
+  syntax:
+    content: public LinePositionSpan LineSpan { get; init; }
+    parameters: []
+    return:
+      type: Microsoft.CodeAnalysis.Text.LinePositionSpan
+    content.vb: Public Property LineSpan As LinePositionSpan
+  overload: ANcpLua.Roslyn.Utilities.Models.LocationInfo.LineSpan*
+- uid: ANcpLua.Roslyn.Utilities.Models.LocationInfo.From(Microsoft.CodeAnalysis.Location)
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.LocationInfo.From(Microsoft.CodeAnalysis.Location)
+  id: From(Microsoft.CodeAnalysis.Location)
+  parent: ANcpLua.Roslyn.Utilities.Models.LocationInfo
+  langs:
+  - csharp
+  - vb
+  name: From(Location)
+  nameWithType: LocationInfo.From(Location)
+  fullName: ANcpLua.Roslyn.Utilities.Models.LocationInfo.From(Microsoft.CodeAnalysis.Location)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/LocationInfo.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: From
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/LocationInfo.cs
+    startLine: 45
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Models
+  summary: Creates a <xref href="ANcpLua.Roslyn.Utilities.Models.LocationInfo" data-throw-if-not-resolved="false"></xref> from a <xref href="Microsoft.CodeAnalysis.Location" data-throw-if-not-resolved="false"></xref>.
+  remarks: >-
+    The file path is determined from the mapped line span if available, falling back to
+
+    the syntax tree's file path if the mapped path is empty.
+  example: []
+  syntax:
+    content: public static LocationInfo From(Location location)
+    parameters:
+    - id: location
+      type: Microsoft.CodeAnalysis.Location
+      description: The location to convert.
+    return:
+      type: ANcpLua.Roslyn.Utilities.Models.LocationInfo
+      description: >-
+        A new <xref href="ANcpLua.Roslyn.Utilities.Models.LocationInfo" data-throw-if-not-resolved="false"></xref> containing the file path, text span, and line span
+
+        extracted from the specified <code class="paramref">location</code>.
+    content.vb: Public Shared Function From(location As Location) As LocationInfo
+  overload: ANcpLua.Roslyn.Utilities.Models.LocationInfo.From*
+- uid: ANcpLua.Roslyn.Utilities.Models.LocationInfo.From(Microsoft.CodeAnalysis.SyntaxNode)
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.LocationInfo.From(Microsoft.CodeAnalysis.SyntaxNode)
+  id: From(Microsoft.CodeAnalysis.SyntaxNode)
+  parent: ANcpLua.Roslyn.Utilities.Models.LocationInfo
+  langs:
+  - csharp
+  - vb
+  name: From(SyntaxNode)
+  nameWithType: LocationInfo.From(SyntaxNode)
+  fullName: ANcpLua.Roslyn.Utilities.Models.LocationInfo.From(Microsoft.CodeAnalysis.SyntaxNode)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/LocationInfo.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: From
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/LocationInfo.cs
+    startLine: 63
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Models
+  summary: Creates a <xref href="ANcpLua.Roslyn.Utilities.Models.LocationInfo" data-throw-if-not-resolved="false"></xref> from a <xref href="Microsoft.CodeAnalysis.SyntaxNode" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static LocationInfo From(SyntaxNode node)
+    parameters:
+    - id: node
+      type: Microsoft.CodeAnalysis.SyntaxNode
+      description: The syntax node whose location to capture.
+    return:
+      type: ANcpLua.Roslyn.Utilities.Models.LocationInfo
+      description: >-
+        A new <xref href="ANcpLua.Roslyn.Utilities.Models.LocationInfo" data-throw-if-not-resolved="false"></xref> representing the location of the specified
+
+        <code class="paramref">node</code>.
+    content.vb: Public Shared Function From(node As SyntaxNode) As LocationInfo
+  overload: ANcpLua.Roslyn.Utilities.Models.LocationInfo.From*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Models.LocationInfo.From(Microsoft.CodeAnalysis.Location)
+    commentId: M:ANcpLua.Roslyn.Utilities.Models.LocationInfo.From(Microsoft.CodeAnalysis.Location)
+- uid: ANcpLua.Roslyn.Utilities.Models.LocationInfo.From(Microsoft.CodeAnalysis.SyntaxToken)
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.LocationInfo.From(Microsoft.CodeAnalysis.SyntaxToken)
+  id: From(Microsoft.CodeAnalysis.SyntaxToken)
+  parent: ANcpLua.Roslyn.Utilities.Models.LocationInfo
+  langs:
+  - csharp
+  - vb
+  name: From(SyntaxToken)
+  nameWithType: LocationInfo.From(SyntaxToken)
+  fullName: ANcpLua.Roslyn.Utilities.Models.LocationInfo.From(Microsoft.CodeAnalysis.SyntaxToken)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/LocationInfo.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: From
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/LocationInfo.cs
+    startLine: 74
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Models
+  summary: Creates a <xref href="ANcpLua.Roslyn.Utilities.Models.LocationInfo" data-throw-if-not-resolved="false"></xref> from a <xref href="Microsoft.CodeAnalysis.SyntaxToken" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static LocationInfo From(SyntaxToken token)
+    parameters:
+    - id: token
+      type: Microsoft.CodeAnalysis.SyntaxToken
+      description: The syntax token whose location to capture.
+    return:
+      type: ANcpLua.Roslyn.Utilities.Models.LocationInfo
+      description: >-
+        A new <xref href="ANcpLua.Roslyn.Utilities.Models.LocationInfo" data-throw-if-not-resolved="false"></xref> representing the location of the specified
+
+        <code class="paramref">token</code>.
+    content.vb: Public Shared Function From(token As SyntaxToken) As LocationInfo
+  overload: ANcpLua.Roslyn.Utilities.Models.LocationInfo.From*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Models.LocationInfo.From(Microsoft.CodeAnalysis.Location)
+    commentId: M:ANcpLua.Roslyn.Utilities.Models.LocationInfo.From(Microsoft.CodeAnalysis.Location)
+- uid: ANcpLua.Roslyn.Utilities.Models.LocationInfo.ToLocation
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.LocationInfo.ToLocation
+  id: ToLocation
+  parent: ANcpLua.Roslyn.Utilities.Models.LocationInfo
+  langs:
+  - csharp
+  - vb
+  name: ToLocation()
+  nameWithType: LocationInfo.ToLocation()
+  fullName: ANcpLua.Roslyn.Utilities.Models.LocationInfo.ToLocation()
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/LocationInfo.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: ToLocation
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/LocationInfo.cs
+    startLine: 85
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Models
+  summary: Converts this <xref href="ANcpLua.Roslyn.Utilities.Models.LocationInfo" data-throw-if-not-resolved="false"></xref> back to a <xref href="Microsoft.CodeAnalysis.Location" data-throw-if-not-resolved="false"></xref>.
+  remarks: The returned location is suitable for use in diagnostic reporting.
+  example: []
+  syntax:
+    content: public Location ToLocation()
+    return:
+      type: Microsoft.CodeAnalysis.Location
+      description: A new <xref href="Microsoft.CodeAnalysis.Location" data-throw-if-not-resolved="false"></xref> instance created from the stored path, span, and line span.
+    content.vb: Public Function ToLocation() As Location
+  overload: ANcpLua.Roslyn.Utilities.Models.LocationInfo.ToLocation*
+references:
+- uid: Microsoft.CodeAnalysis.Location
+  commentId: T:Microsoft.CodeAnalysis.Location
+  parent: Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.location
+  name: Location
+  nameWithType: Location
+  fullName: Microsoft.CodeAnalysis.Location
+- uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+  commentId: T:ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+  parent: ANcpLua.Roslyn.Utilities.Models
+  href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  name: DiagnosticInfo
+  nameWithType: DiagnosticInfo
+  fullName: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+- uid: ANcpLua.Roslyn.Utilities.Models.LocationInfo
+  commentId: T:ANcpLua.Roslyn.Utilities.Models.LocationInfo
+  parent: ANcpLua.Roslyn.Utilities.Models
+  href: ANcpLua.Roslyn.Utilities.Models.LocationInfo.html
+  name: LocationInfo
+  nameWithType: LocationInfo
+  fullName: ANcpLua.Roslyn.Utilities.Models.LocationInfo
+- uid: ANcpLua.Roslyn.Utilities.Models
+  commentId: N:ANcpLua.Roslyn.Utilities.Models
+  href: ANcpLua.html
+  name: ANcpLua.Roslyn.Utilities.Models
+  nameWithType: ANcpLua.Roslyn.Utilities.Models
+  fullName: ANcpLua.Roslyn.Utilities.Models
+  spec.csharp:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities.Models
+    name: Models
+    href: ANcpLua.Roslyn.Utilities.Models.html
+  spec.vb:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities.Models
+    name: Models
+    href: ANcpLua.Roslyn.Utilities.Models.html
+- uid: System.IEquatable{ANcpLua.Roslyn.Utilities.Models.LocationInfo}
+  commentId: T:System.IEquatable{ANcpLua.Roslyn.Utilities.Models.LocationInfo}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<LocationInfo>
+  nameWithType: IEquatable<LocationInfo>
+  fullName: System.IEquatable<ANcpLua.Roslyn.Utilities.Models.LocationInfo>
+  nameWithType.vb: IEquatable(Of LocationInfo)
+  fullName.vb: System.IEquatable(Of ANcpLua.Roslyn.Utilities.Models.LocationInfo)
+  name.vb: IEquatable(Of LocationInfo)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.Models.LocationInfo
+    name: LocationInfo
+    href: ANcpLua.Roslyn.Utilities.Models.LocationInfo.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Models.LocationInfo
+    name: LocationInfo
+    href: ANcpLua.Roslyn.Utilities.Models.LocationInfo.html
+  - name: )
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Models.LocationInfo.ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+  parent: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+  definition: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  name: ToResultWithDiagnostics<LocationInfo>(LocationInfo)
+  nameWithType: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<LocationInfo>(LocationInfo)
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<ANcpLua.Roslyn.Utilities.Models.LocationInfo>(ANcpLua.Roslyn.Utilities.Models.LocationInfo)
+  nameWithType.vb: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of LocationInfo)(LocationInfo)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of ANcpLua.Roslyn.Utilities.Models.LocationInfo)(ANcpLua.Roslyn.Utilities.Models.LocationInfo)
+  name.vb: ToResultWithDiagnostics(Of LocationInfo)(LocationInfo)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(ANcpLua.Roslyn.Utilities.Models.LocationInfo)
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.Models.LocationInfo
+    name: LocationInfo
+    href: ANcpLua.Roslyn.Utilities.Models.LocationInfo.html
+  - name: '>'
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.Models.LocationInfo
+    name: LocationInfo
+    href: ANcpLua.Roslyn.Utilities.Models.LocationInfo.html
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(ANcpLua.Roslyn.Utilities.Models.LocationInfo)
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Models.LocationInfo
+    name: LocationInfo
+    href: ANcpLua.Roslyn.Utilities.Models.LocationInfo.html
+  - name: )
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.Models.LocationInfo
+    name: LocationInfo
+    href: ANcpLua.Roslyn.Utilities.Models.LocationInfo.html
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Models.LocationInfo.ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  parent: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+  definition: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  name: ToResultWithDiagnostics<LocationInfo>(LocationInfo, ImmutableArray<DiagnosticInfo>)
+  nameWithType: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<LocationInfo>(LocationInfo, ImmutableArray<DiagnosticInfo>)
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<ANcpLua.Roslyn.Utilities.Models.LocationInfo>(ANcpLua.Roslyn.Utilities.Models.LocationInfo, System.Collections.Immutable.ImmutableArray<ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo>)
+  nameWithType.vb: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of LocationInfo)(LocationInfo, ImmutableArray(Of DiagnosticInfo))
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of ANcpLua.Roslyn.Utilities.Models.LocationInfo)(ANcpLua.Roslyn.Utilities.Models.LocationInfo, System.Collections.Immutable.ImmutableArray(Of ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo))
+  name.vb: ToResultWithDiagnostics(Of LocationInfo)(LocationInfo, ImmutableArray(Of DiagnosticInfo))
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(ANcpLua.Roslyn.Utilities.Models.LocationInfo,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.Models.LocationInfo
+    name: LocationInfo
+    href: ANcpLua.Roslyn.Utilities.Models.LocationInfo.html
+  - name: '>'
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.Models.LocationInfo
+    name: LocationInfo
+    href: ANcpLua.Roslyn.Utilities.Models.LocationInfo.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(ANcpLua.Roslyn.Utilities.Models.LocationInfo,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Models.LocationInfo
+    name: LocationInfo
+    href: ANcpLua.Roslyn.Utilities.Models.LocationInfo.html
+  - name: )
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.Models.LocationInfo
+    name: LocationInfo
+    href: ANcpLua.Roslyn.Utilities.Models.LocationInfo.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: )
+  - name: )
+- uid: Microsoft.CodeAnalysis
+  commentId: N:Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.CodeAnalysis
+  nameWithType: Microsoft.CodeAnalysis
+  fullName: Microsoft.CodeAnalysis
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  name: ToResultWithDiagnostics<T>(T)
+  nameWithType: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<T>(T)
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<T>(T)
+  nameWithType.vb: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of T)(T)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of T)(T)
+  name.vb: ToResultWithDiagnostics(Of T)(T)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+  commentId: T:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+  parent: ANcpLua.Roslyn.Utilities.Models
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html
+  name: ResultWithDiagnosticsExtensions
+  nameWithType: ResultWithDiagnosticsExtensions
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+- uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  name: ToResultWithDiagnostics<T>(T, ImmutableArray<DiagnosticInfo>)
+  nameWithType: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<T>(T, ImmutableArray<DiagnosticInfo>)
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<T>(T, System.Collections.Immutable.ImmutableArray<ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo>)
+  nameWithType.vb: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of T)(T, ImmutableArray(Of DiagnosticInfo))
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of T)(T, System.Collections.Immutable.ImmutableArray(Of ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo))
+  name.vb: ToResultWithDiagnostics(Of T)(T, ImmutableArray(Of DiagnosticInfo))
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: )
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Models.LocationInfo.#ctor*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Models.LocationInfo.#ctor
+  href: ANcpLua.Roslyn.Utilities.Models.LocationInfo.html#ANcpLua_Roslyn_Utilities_Models_LocationInfo__ctor_System_String_Microsoft_CodeAnalysis_Text_TextSpan_Microsoft_CodeAnalysis_Text_LinePositionSpan_
+  name: LocationInfo
+  nameWithType: LocationInfo.LocationInfo
+  fullName: ANcpLua.Roslyn.Utilities.Models.LocationInfo.LocationInfo
+  nameWithType.vb: LocationInfo.New
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.LocationInfo.New
+  name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Microsoft.CodeAnalysis.Text.TextSpan
+  commentId: T:Microsoft.CodeAnalysis.Text.TextSpan
+  parent: Microsoft.CodeAnalysis.Text
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.text.textspan
+  name: TextSpan
+  nameWithType: TextSpan
+  fullName: Microsoft.CodeAnalysis.Text.TextSpan
+- uid: Microsoft.CodeAnalysis.Text.LinePositionSpan
+  commentId: T:Microsoft.CodeAnalysis.Text.LinePositionSpan
+  parent: Microsoft.CodeAnalysis.Text
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.text.linepositionspan
+  name: LinePositionSpan
+  nameWithType: LinePositionSpan
+  fullName: Microsoft.CodeAnalysis.Text.LinePositionSpan
+- uid: Microsoft.CodeAnalysis.Text
+  commentId: N:Microsoft.CodeAnalysis.Text
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.CodeAnalysis.Text
+  nameWithType: Microsoft.CodeAnalysis.Text
+  fullName: Microsoft.CodeAnalysis.Text
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+  - name: .
+  - uid: Microsoft.CodeAnalysis.Text
+    name: Text
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.text
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+  - name: .
+  - uid: Microsoft.CodeAnalysis.Text
+    name: Text
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.text
+- uid: ANcpLua.Roslyn.Utilities.Models.LocationInfo.Path*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Models.LocationInfo.Path
+  href: ANcpLua.Roslyn.Utilities.Models.LocationInfo.html#ANcpLua_Roslyn_Utilities_Models_LocationInfo_Path
+  name: Path
+  nameWithType: LocationInfo.Path
+  fullName: ANcpLua.Roslyn.Utilities.Models.LocationInfo.Path
+- uid: ANcpLua.Roslyn.Utilities.Models.LocationInfo.Span*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Models.LocationInfo.Span
+  href: ANcpLua.Roslyn.Utilities.Models.LocationInfo.html#ANcpLua_Roslyn_Utilities_Models_LocationInfo_Span
+  name: Span
+  nameWithType: LocationInfo.Span
+  fullName: ANcpLua.Roslyn.Utilities.Models.LocationInfo.Span
+- uid: ANcpLua.Roslyn.Utilities.Models.LocationInfo.LineSpan*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Models.LocationInfo.LineSpan
+  href: ANcpLua.Roslyn.Utilities.Models.LocationInfo.html#ANcpLua_Roslyn_Utilities_Models_LocationInfo_LineSpan
+  name: LineSpan
+  nameWithType: LocationInfo.LineSpan
+  fullName: ANcpLua.Roslyn.Utilities.Models.LocationInfo.LineSpan
+- uid: ANcpLua.Roslyn.Utilities.Models.LocationInfo.From*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Models.LocationInfo.From
+  href: ANcpLua.Roslyn.Utilities.Models.LocationInfo.html#ANcpLua_Roslyn_Utilities_Models_LocationInfo_From_Microsoft_CodeAnalysis_Location_
+  name: From
+  nameWithType: LocationInfo.From
+  fullName: ANcpLua.Roslyn.Utilities.Models.LocationInfo.From
+- uid: ANcpLua.Roslyn.Utilities.Models.LocationInfo.From(Microsoft.CodeAnalysis.Location)
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.LocationInfo.From(Microsoft.CodeAnalysis.Location)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Models.LocationInfo.html#ANcpLua_Roslyn_Utilities_Models_LocationInfo_From_Microsoft_CodeAnalysis_Location_
+  name: From(Location)
+  nameWithType: LocationInfo.From(Location)
+  fullName: ANcpLua.Roslyn.Utilities.Models.LocationInfo.From(Microsoft.CodeAnalysis.Location)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.LocationInfo.From(Microsoft.CodeAnalysis.Location)
+    name: From
+    href: ANcpLua.Roslyn.Utilities.Models.LocationInfo.html#ANcpLua_Roslyn_Utilities_Models_LocationInfo_From_Microsoft_CodeAnalysis_Location_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.Location
+    name: Location
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.location
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.LocationInfo.From(Microsoft.CodeAnalysis.Location)
+    name: From
+    href: ANcpLua.Roslyn.Utilities.Models.LocationInfo.html#ANcpLua_Roslyn_Utilities_Models_LocationInfo_From_Microsoft_CodeAnalysis_Location_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.Location
+    name: Location
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.location
+  - name: )
+- uid: Microsoft.CodeAnalysis.SyntaxNode
+  commentId: T:Microsoft.CodeAnalysis.SyntaxNode
+  parent: Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.syntaxnode
+  name: SyntaxNode
+  nameWithType: SyntaxNode
+  fullName: Microsoft.CodeAnalysis.SyntaxNode
+- uid: Microsoft.CodeAnalysis.SyntaxToken
+  commentId: T:Microsoft.CodeAnalysis.SyntaxToken
+  parent: Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.syntaxtoken
+  name: SyntaxToken
+  nameWithType: SyntaxToken
+  fullName: Microsoft.CodeAnalysis.SyntaxToken
+- uid: ANcpLua.Roslyn.Utilities.Models.LocationInfo.ToLocation*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Models.LocationInfo.ToLocation
+  href: ANcpLua.Roslyn.Utilities.Models.LocationInfo.html#ANcpLua_Roslyn_Utilities_Models_LocationInfo_ToLocation
+  name: ToLocation
+  nameWithType: LocationInfo.ToLocation
+  fullName: ANcpLua.Roslyn.Utilities.Models.LocationInfo.ToLocation

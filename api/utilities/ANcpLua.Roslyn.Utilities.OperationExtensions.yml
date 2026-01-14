@@ -1,0 +1,3265 @@
+### YamlMime:ManagedReference
+items:
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions
+  commentId: T:ANcpLua.Roslyn.Utilities.OperationExtensions
+  id: OperationExtensions
+  parent: ANcpLua.Roslyn.Utilities
+  children:
+  - ANcpLua.Roslyn.Utilities.OperationExtensions.Ancestors(Microsoft.CodeAnalysis.IOperation)
+  - ANcpLua.Roslyn.Utilities.OperationExtensions.ContainsOperation``1(Microsoft.CodeAnalysis.IOperation)
+  - ANcpLua.Roslyn.Utilities.OperationExtensions.Descendants(Microsoft.CodeAnalysis.IOperation)
+  - ANcpLua.Roslyn.Utilities.OperationExtensions.DescendantsAndSelf(Microsoft.CodeAnalysis.IOperation)
+  - ANcpLua.Roslyn.Utilities.OperationExtensions.DescendantsOfType``1(Microsoft.CodeAnalysis.IOperation)
+  - ANcpLua.Roslyn.Utilities.OperationExtensions.FindAncestor``1(Microsoft.CodeAnalysis.IOperation)
+  - ANcpLua.Roslyn.Utilities.OperationExtensions.GetActualType(Microsoft.CodeAnalysis.IOperation)
+  - ANcpLua.Roslyn.Utilities.OperationExtensions.GetCSharpLanguageVersion(Microsoft.CodeAnalysis.IOperation)
+  - ANcpLua.Roslyn.Utilities.OperationExtensions.GetContainingBlock(Microsoft.CodeAnalysis.IOperation)
+  - ANcpLua.Roslyn.Utilities.OperationExtensions.GetContainingMethod(Microsoft.CodeAnalysis.IOperation,System.Threading.CancellationToken)
+  - ANcpLua.Roslyn.Utilities.OperationExtensions.GetContainingType(Microsoft.CodeAnalysis.IOperation,System.Threading.CancellationToken)
+  - ANcpLua.Roslyn.Utilities.OperationExtensions.IsAssignmentTarget(Microsoft.CodeAnalysis.IOperation)
+  - ANcpLua.Roslyn.Utilities.OperationExtensions.IsConstant(Microsoft.CodeAnalysis.IOperation,System.Object@)
+  - ANcpLua.Roslyn.Utilities.OperationExtensions.IsConstantNull(Microsoft.CodeAnalysis.IOperation)
+  - ANcpLua.Roslyn.Utilities.OperationExtensions.IsConstantZero(Microsoft.CodeAnalysis.IOperation)
+  - ANcpLua.Roslyn.Utilities.OperationExtensions.IsDescendantOf``1(Microsoft.CodeAnalysis.IOperation)
+  - ANcpLua.Roslyn.Utilities.OperationExtensions.IsInExpressionTree(Microsoft.CodeAnalysis.IOperation,Microsoft.CodeAnalysis.INamedTypeSymbol)
+  - ANcpLua.Roslyn.Utilities.OperationExtensions.IsInNameofOperation(Microsoft.CodeAnalysis.IOperation)
+  - ANcpLua.Roslyn.Utilities.OperationExtensions.IsInStaticContext(Microsoft.CodeAnalysis.IOperation,System.Threading.CancellationToken)
+  - ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideCatchBlock(Microsoft.CodeAnalysis.IOperation)
+  - ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideFinallyBlock(Microsoft.CodeAnalysis.IOperation)
+  - ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideLockStatement(Microsoft.CodeAnalysis.IOperation)
+  - ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideLoop(Microsoft.CodeAnalysis.IOperation)
+  - ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideTryBlock(Microsoft.CodeAnalysis.IOperation)
+  - ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideUsingStatement(Microsoft.CodeAnalysis.IOperation)
+  - ANcpLua.Roslyn.Utilities.OperationExtensions.IsLeftSideOfAssignment(Microsoft.CodeAnalysis.IOperation)
+  - ANcpLua.Roslyn.Utilities.OperationExtensions.IsPassedByRef(Microsoft.CodeAnalysis.IOperation)
+  - ANcpLua.Roslyn.Utilities.OperationExtensions.TryGetConstantValue``1(Microsoft.CodeAnalysis.IOperation,``0@)
+  - ANcpLua.Roslyn.Utilities.OperationExtensions.UnwrapAllConversions(Microsoft.CodeAnalysis.IOperation)
+  - ANcpLua.Roslyn.Utilities.OperationExtensions.UnwrapImplicitConversions(Microsoft.CodeAnalysis.IOperation)
+  - ANcpLua.Roslyn.Utilities.OperationExtensions.UnwrapLabeledOperations(Microsoft.CodeAnalysis.IOperation)
+  - ANcpLua.Roslyn.Utilities.OperationExtensions.UnwrapParenthesized(Microsoft.CodeAnalysis.IOperation)
+  langs:
+  - csharp
+  - vb
+  name: OperationExtensions
+  nameWithType: OperationExtensions
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions
+  type: Class
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: OperationExtensions
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
+    startLine: 27
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Provides extension methods for working with <xref href="Microsoft.CodeAnalysis.IOperation" data-throw-if-not-resolved="false"></xref> instances.
+  remarks: >-
+    <p>
+
+    This class provides utilities for navigating, analyzing, and querying the operation tree
+
+    in Roslyn analyzers. Operations represent the semantic interpretation of syntax nodes
+
+    and provide a language-agnostic way to analyze code behavior.
+
+    </p>
+
+    <ul><li>Tree navigation: <xref href="ANcpLua.Roslyn.Utilities.OperationExtensions.Ancestors(Microsoft.CodeAnalysis.IOperation)" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.OperationExtensions.Descendants(Microsoft.CodeAnalysis.IOperation)" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.OperationExtensions.FindAncestor%60%601(Microsoft.CodeAnalysis.IOperation)" data-throw-if-not-resolved="false"></xref></li><li>Context detection: <xref href="ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideLoop(Microsoft.CodeAnalysis.IOperation)" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideTryBlock(Microsoft.CodeAnalysis.IOperation)" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.OperationExtensions.IsInExpressionTree(Microsoft.CodeAnalysis.IOperation%2cMicrosoft.CodeAnalysis.INamedTypeSymbol)" data-throw-if-not-resolved="false"></xref></li><li>Unwrapping: <xref href="ANcpLua.Roslyn.Utilities.OperationExtensions.UnwrapImplicitConversions(Microsoft.CodeAnalysis.IOperation)" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.OperationExtensions.UnwrapAllConversions(Microsoft.CodeAnalysis.IOperation)" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.OperationExtensions.UnwrapParenthesized(Microsoft.CodeAnalysis.IOperation)" data-throw-if-not-resolved="false"></xref></li><li>Value analysis: <xref href="ANcpLua.Roslyn.Utilities.OperationExtensions.IsConstantZero(Microsoft.CodeAnalysis.IOperation)" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.OperationExtensions.IsConstantNull(Microsoft.CodeAnalysis.IOperation)" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.OperationExtensions.TryGetConstantValue%60%601(Microsoft.CodeAnalysis.IOperation%2c%60%600%40)" data-throw-if-not-resolved="false"></xref></li><li>Assignment detection: <xref href="ANcpLua.Roslyn.Utilities.OperationExtensions.IsAssignmentTarget(Microsoft.CodeAnalysis.IOperation)" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.OperationExtensions.IsLeftSideOfAssignment(Microsoft.CodeAnalysis.IOperation)" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.OperationExtensions.IsPassedByRef(Microsoft.CodeAnalysis.IOperation)" data-throw-if-not-resolved="false"></xref></li></ul>
+  example: []
+  syntax:
+    content: public static class OperationExtensions
+    content.vb: Public Module OperationExtensions
+  seealso:
+  - linkId: Microsoft.CodeAnalysis.IOperation
+    commentId: T:Microsoft.CodeAnalysis.IOperation
+  - linkId: ANcpLua.Roslyn.Utilities.InvocationExtensions
+    commentId: T:ANcpLua.Roslyn.Utilities.InvocationExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.Ancestors(Microsoft.CodeAnalysis.IOperation)
+  commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.Ancestors(Microsoft.CodeAnalysis.IOperation)
+  id: Ancestors(Microsoft.CodeAnalysis.IOperation)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.OperationExtensions
+  langs:
+  - csharp
+  - vb
+  name: Ancestors(IOperation)
+  nameWithType: OperationExtensions.Ancestors(IOperation)
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.Ancestors(Microsoft.CodeAnalysis.IOperation)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Ancestors
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
+    startLine: 46
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Enumerates all ancestor operations of the specified operation.
+  remarks: The enumeration does not include <code class="paramref">operation</code> itself.
+  example: []
+  syntax:
+    content: public static IEnumerable<IOperation> Ancestors(this IOperation operation)
+    parameters:
+    - id: operation
+      type: Microsoft.CodeAnalysis.IOperation
+      description: The operation whose ancestors to enumerate.
+    return:
+      type: System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.IOperation}
+      description: >-
+        An enumerable sequence of ancestor operations, starting from the immediate parent
+
+        and proceeding upward to the root of the operation tree.
+    content.vb: Public Shared Function Ancestors(operation As IOperation) As IEnumerable(Of IOperation)
+  overload: ANcpLua.Roslyn.Utilities.OperationExtensions.Ancestors*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.OperationExtensions.FindAncestor``1(Microsoft.CodeAnalysis.IOperation)
+    commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.FindAncestor``1(Microsoft.CodeAnalysis.IOperation)
+  - linkId: ANcpLua.Roslyn.Utilities.OperationExtensions.IsDescendantOf``1(Microsoft.CodeAnalysis.IOperation)
+    commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.IsDescendantOf``1(Microsoft.CodeAnalysis.IOperation)
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.FindAncestor``1(Microsoft.CodeAnalysis.IOperation)
+  commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.FindAncestor``1(Microsoft.CodeAnalysis.IOperation)
+  id: FindAncestor``1(Microsoft.CodeAnalysis.IOperation)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.OperationExtensions
+  langs:
+  - csharp
+  - vb
+  name: FindAncestor<T>(IOperation)
+  nameWithType: OperationExtensions.FindAncestor<T>(IOperation)
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.FindAncestor<T>(Microsoft.CodeAnalysis.IOperation)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: FindAncestor
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
+    startLine: 66
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Finds the first ancestor operation of the specified type.
+  example: []
+  syntax:
+    content: 'public static T? FindAncestor<T>(this IOperation operation) where T : class, IOperation'
+    parameters:
+    - id: operation
+      type: Microsoft.CodeAnalysis.IOperation
+      description: The operation whose ancestors to search.
+    typeParameters:
+    - id: T
+      description: The type of operation to find. Must be a class implementing <xref href="Microsoft.CodeAnalysis.IOperation" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: '{T}'
+      description: The first ancestor of type <code class="typeparamref">T</code>, or <code>null</code> if no such ancestor exists.
+    content.vb: Public Shared Function FindAncestor(Of T As {Class, IOperation})(operation As IOperation) As T
+  overload: ANcpLua.Roslyn.Utilities.OperationExtensions.FindAncestor*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.OperationExtensions.Ancestors(Microsoft.CodeAnalysis.IOperation)
+    commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.Ancestors(Microsoft.CodeAnalysis.IOperation)
+  - linkId: ANcpLua.Roslyn.Utilities.OperationExtensions.IsDescendantOf``1(Microsoft.CodeAnalysis.IOperation)
+    commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.IsDescendantOf``1(Microsoft.CodeAnalysis.IOperation)
+  nameWithType.vb: OperationExtensions.FindAncestor(Of T)(IOperation)
+  fullName.vb: ANcpLua.Roslyn.Utilities.OperationExtensions.FindAncestor(Of T)(Microsoft.CodeAnalysis.IOperation)
+  name.vb: FindAncestor(Of T)(IOperation)
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsDescendantOf``1(Microsoft.CodeAnalysis.IOperation)
+  commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.IsDescendantOf``1(Microsoft.CodeAnalysis.IOperation)
+  id: IsDescendantOf``1(Microsoft.CodeAnalysis.IOperation)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.OperationExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsDescendantOf<T>(IOperation)
+  nameWithType: OperationExtensions.IsDescendantOf<T>(IOperation)
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.IsDescendantOf<T>(Microsoft.CodeAnalysis.IOperation)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsDescendantOf
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
+    startLine: 88
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Determines whether the operation is a descendant of an operation of the specified type.
+  example: []
+  syntax:
+    content: 'public static bool IsDescendantOf<T>(this IOperation operation) where T : class, IOperation'
+    parameters:
+    - id: operation
+      type: Microsoft.CodeAnalysis.IOperation
+      description: The operation to check.
+    typeParameters:
+    - id: T
+      description: The type of ancestor operation to check for. Must be a class implementing <xref href="Microsoft.CodeAnalysis.IOperation" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if an ancestor of type <code class="typeparamref">T</code> exists; otherwise, <code>false</code>.
+    content.vb: Public Shared Function IsDescendantOf(Of T As {Class, IOperation})(operation As IOperation) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.OperationExtensions.IsDescendantOf*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.OperationExtensions.FindAncestor``1(Microsoft.CodeAnalysis.IOperation)
+    commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.FindAncestor``1(Microsoft.CodeAnalysis.IOperation)
+  nameWithType.vb: OperationExtensions.IsDescendantOf(Of T)(IOperation)
+  fullName.vb: ANcpLua.Roslyn.Utilities.OperationExtensions.IsDescendantOf(Of T)(Microsoft.CodeAnalysis.IOperation)
+  name.vb: IsDescendantOf(Of T)(IOperation)
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInNameofOperation(Microsoft.CodeAnalysis.IOperation)
+  commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.IsInNameofOperation(Microsoft.CodeAnalysis.IOperation)
+  id: IsInNameofOperation(Microsoft.CodeAnalysis.IOperation)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.OperationExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsInNameofOperation(IOperation)
+  nameWithType: OperationExtensions.IsInNameofOperation(IOperation)
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInNameofOperation(Microsoft.CodeAnalysis.IOperation)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsInNameofOperation
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
+    startLine: 102
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Determines whether the operation is inside a <code>nameof</code> expression.
+  remarks: >-
+    Operations inside <code>nameof</code> expressions are not evaluated at runtime, so analyzers
+
+    may want to skip certain checks for these operations.
+  example: []
+  syntax:
+    content: public static bool IsInNameofOperation(this IOperation operation)
+    parameters:
+    - id: operation
+      type: Microsoft.CodeAnalysis.IOperation
+      description: The operation to check.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if the operation is within a <code>nameof</code> expression; otherwise, <code>false</code>.
+    content.vb: Public Shared Function IsInNameofOperation(operation As IOperation) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInNameofOperation*
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInExpressionTree(Microsoft.CodeAnalysis.IOperation,Microsoft.CodeAnalysis.INamedTypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.IsInExpressionTree(Microsoft.CodeAnalysis.IOperation,Microsoft.CodeAnalysis.INamedTypeSymbol)
+  id: IsInExpressionTree(Microsoft.CodeAnalysis.IOperation,Microsoft.CodeAnalysis.INamedTypeSymbol)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.OperationExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsInExpressionTree(IOperation, INamedTypeSymbol?)
+  nameWithType: OperationExtensions.IsInExpressionTree(IOperation, INamedTypeSymbol?)
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInExpressionTree(Microsoft.CodeAnalysis.IOperation, Microsoft.CodeAnalysis.INamedTypeSymbol?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsInExpressionTree
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
+    startLine: 132
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Determines whether the operation is inside an expression tree.
+  remarks: >-
+    Expression trees have different runtime semantics than regular code, as they are
+
+    compiled to data structures rather than executable code. Analyzers may need to
+
+    skip or modify checks for operations within expression trees.
+  example: []
+  syntax:
+    content: public static bool IsInExpressionTree(this IOperation operation, INamedTypeSymbol? expressionSymbol)
+    parameters:
+    - id: operation
+      type: Microsoft.CodeAnalysis.IOperation
+      description: The operation to check.
+    - id: expressionSymbol
+      type: Microsoft.CodeAnalysis.INamedTypeSymbol
+      description: >-
+        The <xref href="Microsoft.CodeAnalysis.INamedTypeSymbol" data-throw-if-not-resolved="false"></xref> for <code>System.Linq.Expressions.Expression</code>,
+
+        or <code>null</code> if unavailable.
+    return:
+      type: System.Boolean
+      description: >-
+        <code>true</code> if the operation is within an expression tree; otherwise, <code>false</code>.
+
+        Returns <code>false</code> if <code class="paramref">expressionSymbol</code> is <code>null</code>.
+    content.vb: Public Shared Function IsInExpressionTree(operation As IOperation, expressionSymbol As INamedTypeSymbol) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInExpressionTree*
+  nameWithType.vb: OperationExtensions.IsInExpressionTree(IOperation, INamedTypeSymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInExpressionTree(Microsoft.CodeAnalysis.IOperation, Microsoft.CodeAnalysis.INamedTypeSymbol)
+  name.vb: IsInExpressionTree(IOperation, INamedTypeSymbol)
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInStaticContext(Microsoft.CodeAnalysis.IOperation,System.Threading.CancellationToken)
+  commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.IsInStaticContext(Microsoft.CodeAnalysis.IOperation,System.Threading.CancellationToken)
+  id: IsInStaticContext(Microsoft.CodeAnalysis.IOperation,System.Threading.CancellationToken)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.OperationExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsInStaticContext(IOperation, CancellationToken)
+  nameWithType: OperationExtensions.IsInStaticContext(IOperation, CancellationToken)
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInStaticContext(Microsoft.CodeAnalysis.IOperation, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsInStaticContext
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
+    startLine: 163
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Determines whether the operation is in a static context.
+  remarks: >-
+    This method walks up the syntax tree to find enclosing members and checks their static
+
+    modifier. For local functions and lambdas, it checks the <code>static</code> keyword.
+
+    Field declarations are assumed to be in a static context for safety.
+  example: []
+  syntax:
+    content: public static bool IsInStaticContext(this IOperation operation, CancellationToken cancellationToken)
+    parameters:
+    - id: operation
+      type: Microsoft.CodeAnalysis.IOperation
+      description: The operation to check.
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: A token to monitor for cancellation requests.
+    return:
+      type: System.Boolean
+      description: >-
+        <code>true</code> if the operation is within a static member (method, property, local function,
+
+        static lambda, or field initializer); otherwise, <code>false</code>.
+    content.vb: Public Shared Function IsInStaticContext(operation As IOperation, cancellationToken As CancellationToken) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInStaticContext*
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.UnwrapImplicitConversions(Microsoft.CodeAnalysis.IOperation)
+  commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.UnwrapImplicitConversions(Microsoft.CodeAnalysis.IOperation)
+  id: UnwrapImplicitConversions(Microsoft.CodeAnalysis.IOperation)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.OperationExtensions
+  langs:
+  - csharp
+  - vb
+  name: UnwrapImplicitConversions(IOperation)
+  nameWithType: OperationExtensions.UnwrapImplicitConversions(IOperation)
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.UnwrapImplicitConversions(Microsoft.CodeAnalysis.IOperation)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: UnwrapImplicitConversions
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
+    startLine: 214
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Unwraps implicit conversion operations to get the underlying operand.
+  example: []
+  syntax:
+    content: public static IOperation UnwrapImplicitConversions(this IOperation operation)
+    parameters:
+    - id: operation
+      type: Microsoft.CodeAnalysis.IOperation
+      description: The operation to unwrap.
+    return:
+      type: Microsoft.CodeAnalysis.IOperation
+      description: >-
+        The innermost operation after removing all enclosing implicit conversions,
+
+        or <code class="paramref">operation</code> itself if it is not an implicit conversion.
+    content.vb: Public Shared Function UnwrapImplicitConversions(operation As IOperation) As IOperation
+  overload: ANcpLua.Roslyn.Utilities.OperationExtensions.UnwrapImplicitConversions*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.OperationExtensions.UnwrapAllConversions(Microsoft.CodeAnalysis.IOperation)
+    commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.UnwrapAllConversions(Microsoft.CodeAnalysis.IOperation)
+  - linkId: ANcpLua.Roslyn.Utilities.OperationExtensions.GetActualType(Microsoft.CodeAnalysis.IOperation)
+    commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.GetActualType(Microsoft.CodeAnalysis.IOperation)
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.UnwrapAllConversions(Microsoft.CodeAnalysis.IOperation)
+  commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.UnwrapAllConversions(Microsoft.CodeAnalysis.IOperation)
+  id: UnwrapAllConversions(Microsoft.CodeAnalysis.IOperation)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.OperationExtensions
+  langs:
+  - csharp
+  - vb
+  name: UnwrapAllConversions(IOperation)
+  nameWithType: OperationExtensions.UnwrapAllConversions(IOperation)
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.UnwrapAllConversions(Microsoft.CodeAnalysis.IOperation)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: UnwrapAllConversions
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
+    startLine: 231
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Unwraps all conversion operations (both implicit and explicit) to get the underlying operand.
+  example: []
+  syntax:
+    content: public static IOperation UnwrapAllConversions(this IOperation operation)
+    parameters:
+    - id: operation
+      type: Microsoft.CodeAnalysis.IOperation
+      description: The operation to unwrap.
+    return:
+      type: Microsoft.CodeAnalysis.IOperation
+      description: >-
+        The innermost operation after removing all enclosing conversions,
+
+        or <code class="paramref">operation</code> itself if it is not a conversion.
+    content.vb: Public Shared Function UnwrapAllConversions(operation As IOperation) As IOperation
+  overload: ANcpLua.Roslyn.Utilities.OperationExtensions.UnwrapAllConversions*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.OperationExtensions.UnwrapImplicitConversions(Microsoft.CodeAnalysis.IOperation)
+    commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.UnwrapImplicitConversions(Microsoft.CodeAnalysis.IOperation)
+  - linkId: ANcpLua.Roslyn.Utilities.OperationExtensions.GetActualType(Microsoft.CodeAnalysis.IOperation)
+    commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.GetActualType(Microsoft.CodeAnalysis.IOperation)
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.UnwrapParenthesized(Microsoft.CodeAnalysis.IOperation)
+  commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.UnwrapParenthesized(Microsoft.CodeAnalysis.IOperation)
+  id: UnwrapParenthesized(Microsoft.CodeAnalysis.IOperation)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.OperationExtensions
+  langs:
+  - csharp
+  - vb
+  name: UnwrapParenthesized(IOperation)
+  nameWithType: OperationExtensions.UnwrapParenthesized(IOperation)
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.UnwrapParenthesized(Microsoft.CodeAnalysis.IOperation)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: UnwrapParenthesized
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
+    startLine: 246
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Unwraps parenthesized operations to get the inner operand.
+  example: []
+  syntax:
+    content: public static IOperation UnwrapParenthesized(this IOperation operation)
+    parameters:
+    - id: operation
+      type: Microsoft.CodeAnalysis.IOperation
+      description: The operation to unwrap.
+    return:
+      type: Microsoft.CodeAnalysis.IOperation
+      description: >-
+        The innermost operation after removing all enclosing parentheses,
+
+        or <code class="paramref">operation</code> itself if it is not parenthesized.
+    content.vb: Public Shared Function UnwrapParenthesized(operation As IOperation) As IOperation
+  overload: ANcpLua.Roslyn.Utilities.OperationExtensions.UnwrapParenthesized*
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.UnwrapLabeledOperations(Microsoft.CodeAnalysis.IOperation)
+  commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.UnwrapLabeledOperations(Microsoft.CodeAnalysis.IOperation)
+  id: UnwrapLabeledOperations(Microsoft.CodeAnalysis.IOperation)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.OperationExtensions
+  langs:
+  - csharp
+  - vb
+  name: UnwrapLabeledOperations(IOperation)
+  nameWithType: OperationExtensions.UnwrapLabeledOperations(IOperation)
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.UnwrapLabeledOperations(Microsoft.CodeAnalysis.IOperation)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: UnwrapLabeledOperations
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
+    startLine: 262
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Unwraps labeled operations to get the inner operation.
+  example: []
+  syntax:
+    content: public static IOperation? UnwrapLabeledOperations(this IOperation operation)
+    parameters:
+    - id: operation
+      type: Microsoft.CodeAnalysis.IOperation
+      description: The operation to unwrap.
+    return:
+      type: Microsoft.CodeAnalysis.IOperation
+      description: >-
+        The innermost operation after removing all enclosing labels,
+
+        or <code>null</code> if the labeled operation has no inner operation.
+
+        Returns <code class="paramref">operation</code> if it is not a labeled operation.
+    content.vb: Public Shared Function UnwrapLabeledOperations(operation As IOperation) As IOperation
+  overload: ANcpLua.Roslyn.Utilities.OperationExtensions.UnwrapLabeledOperations*
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.GetActualType(Microsoft.CodeAnalysis.IOperation)
+  commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.GetActualType(Microsoft.CodeAnalysis.IOperation)
+  id: GetActualType(Microsoft.CodeAnalysis.IOperation)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.OperationExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetActualType(IOperation)
+  nameWithType: OperationExtensions.GetActualType(IOperation)
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.GetActualType(Microsoft.CodeAnalysis.IOperation)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: GetActualType
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
+    startLine: 278
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Gets the actual type of an operation after unwrapping all conversions.
+  example: []
+  syntax:
+    content: public static ITypeSymbol? GetActualType(this IOperation operation)
+    parameters:
+    - id: operation
+      type: Microsoft.CodeAnalysis.IOperation
+      description: The operation whose actual type to get.
+    return:
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: >-
+        The type of the innermost operation after removing all conversions,
+
+        or <code>null</code> if the operation has no type.
+    content.vb: Public Shared Function GetActualType(operation As IOperation) As ITypeSymbol
+  overload: ANcpLua.Roslyn.Utilities.OperationExtensions.GetActualType*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.OperationExtensions.UnwrapAllConversions(Microsoft.CodeAnalysis.IOperation)
+    commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.UnwrapAllConversions(Microsoft.CodeAnalysis.IOperation)
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsConstantZero(Microsoft.CodeAnalysis.IOperation)
+  commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.IsConstantZero(Microsoft.CodeAnalysis.IOperation)
+  id: IsConstantZero(Microsoft.CodeAnalysis.IOperation)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.OperationExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsConstantZero(IOperation)
+  nameWithType: OperationExtensions.IsConstantZero(IOperation)
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.IsConstantZero(Microsoft.CodeAnalysis.IOperation)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsConstantZero
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
+    startLine: 293
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Determines whether the operation represents a constant zero value.
+  example: []
+  syntax:
+    content: public static bool IsConstantZero(this IOperation operation)
+    parameters:
+    - id: operation
+      type: Microsoft.CodeAnalysis.IOperation
+      description: The operation to check.
+    return:
+      type: System.Boolean
+      description: >-
+        <code>true</code> if the operation is a compile-time constant with a value of zero
+
+        (as <xref href="System.Int32" data-throw-if-not-resolved="false"></xref>, <xref href="System.Int64" data-throw-if-not-resolved="false"></xref>, <xref href="System.UInt32" data-throw-if-not-resolved="false"></xref>, <xref href="System.UInt64" data-throw-if-not-resolved="false"></xref>,
+
+        <xref href="System.Single" data-throw-if-not-resolved="false"></xref>, <xref href="System.Double" data-throw-if-not-resolved="false"></xref>, or <xref href="System.Decimal" data-throw-if-not-resolved="false"></xref>);
+
+        otherwise, <code>false</code>.
+    content.vb: Public Shared Function IsConstantZero(operation As IOperation) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.OperationExtensions.IsConstantZero*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.OperationExtensions.IsConstantNull(Microsoft.CodeAnalysis.IOperation)
+    commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.IsConstantNull(Microsoft.CodeAnalysis.IOperation)
+  - linkId: ANcpLua.Roslyn.Utilities.OperationExtensions.IsConstant(Microsoft.CodeAnalysis.IOperation,System.Object@)
+    commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.IsConstant(Microsoft.CodeAnalysis.IOperation,System.Object@)
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsConstantNull(Microsoft.CodeAnalysis.IOperation)
+  commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.IsConstantNull(Microsoft.CodeAnalysis.IOperation)
+  id: IsConstantNull(Microsoft.CodeAnalysis.IOperation)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.OperationExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsConstantNull(IOperation)
+  nameWithType: OperationExtensions.IsConstantNull(IOperation)
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.IsConstantNull(Microsoft.CodeAnalysis.IOperation)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsConstantNull
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
+    startLine: 306
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Determines whether the operation represents a constant <code>null</code> value.
+  example: []
+  syntax:
+    content: public static bool IsConstantNull(this IOperation operation)
+    parameters:
+    - id: operation
+      type: Microsoft.CodeAnalysis.IOperation
+      description: The operation to check.
+    return:
+      type: System.Boolean
+      description: >-
+        <code>true</code> if the operation is a compile-time constant with a <code>null</code> value;
+
+        otherwise, <code>false</code>.
+    content.vb: Public Shared Function IsConstantNull(operation As IOperation) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.OperationExtensions.IsConstantNull*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.OperationExtensions.IsConstantZero(Microsoft.CodeAnalysis.IOperation)
+    commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.IsConstantZero(Microsoft.CodeAnalysis.IOperation)
+  - linkId: ANcpLua.Roslyn.Utilities.OperationExtensions.IsConstant(Microsoft.CodeAnalysis.IOperation,System.Object@)
+    commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.IsConstant(Microsoft.CodeAnalysis.IOperation,System.Object@)
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsConstant(Microsoft.CodeAnalysis.IOperation,System.Object@)
+  commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.IsConstant(Microsoft.CodeAnalysis.IOperation,System.Object@)
+  id: IsConstant(Microsoft.CodeAnalysis.IOperation,System.Object@)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.OperationExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsConstant(IOperation, out object?)
+  nameWithType: OperationExtensions.IsConstant(IOperation, out object?)
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.IsConstant(Microsoft.CodeAnalysis.IOperation, out object?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsConstant
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
+    startLine: 323
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Determines whether the operation represents a compile-time constant.
+  example: []
+  syntax:
+    content: public static bool IsConstant(this IOperation operation, out object? value)
+    parameters:
+    - id: operation
+      type: Microsoft.CodeAnalysis.IOperation
+      description: The operation to check.
+    - id: value
+      type: System.Object
+      description: >-
+        When this method returns <code>true</code>, contains the constant value.
+
+        When this method returns <code>false</code>, contains <code>null</code>.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if the operation is a compile-time constant; otherwise, <code>false</code>.
+    content.vb: Public Shared Function IsConstant(operation As IOperation, value As Object) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.OperationExtensions.IsConstant*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.OperationExtensions.TryGetConstantValue``1(Microsoft.CodeAnalysis.IOperation,``0@)
+    commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.TryGetConstantValue``1(Microsoft.CodeAnalysis.IOperation,``0@)
+  - linkId: ANcpLua.Roslyn.Utilities.OperationExtensions.IsConstantZero(Microsoft.CodeAnalysis.IOperation)
+    commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.IsConstantZero(Microsoft.CodeAnalysis.IOperation)
+  - linkId: ANcpLua.Roslyn.Utilities.OperationExtensions.IsConstantNull(Microsoft.CodeAnalysis.IOperation)
+    commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.IsConstantNull(Microsoft.CodeAnalysis.IOperation)
+  nameWithType.vb: OperationExtensions.IsConstant(IOperation, Object)
+  fullName.vb: ANcpLua.Roslyn.Utilities.OperationExtensions.IsConstant(Microsoft.CodeAnalysis.IOperation, Object)
+  name.vb: IsConstant(IOperation, Object)
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.TryGetConstantValue``1(Microsoft.CodeAnalysis.IOperation,``0@)
+  commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.TryGetConstantValue``1(Microsoft.CodeAnalysis.IOperation,``0@)
+  id: TryGetConstantValue``1(Microsoft.CodeAnalysis.IOperation,``0@)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.OperationExtensions
+  langs:
+  - csharp
+  - vb
+  name: TryGetConstantValue<T>(IOperation, out T)
+  nameWithType: OperationExtensions.TryGetConstantValue<T>(IOperation, out T)
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.TryGetConstantValue<T>(Microsoft.CodeAnalysis.IOperation, out T)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: TryGetConstantValue
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
+    startLine: 349
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Tries to get the constant value of the specified type from an operation.
+  example: []
+  syntax:
+    content: public static bool TryGetConstantValue<T>(this IOperation operation, out T value)
+    parameters:
+    - id: operation
+      type: Microsoft.CodeAnalysis.IOperation
+      description: The operation to check.
+    - id: value
+      type: '{T}'
+      description: >-
+        When this method returns <code>true</code>, contains the constant value of type <code class="typeparamref">T</code>.
+
+        When this method returns <code>false</code>, contains the default value of <code class="typeparamref">T</code>.
+    typeParameters:
+    - id: T
+      description: The expected type of the constant value.
+    return:
+      type: System.Boolean
+      description: >-
+        <code>true</code> if the operation is a compile-time constant of type <code class="typeparamref">T</code>;
+
+        otherwise, <code>false</code>.
+    content.vb: Public Shared Function TryGetConstantValue(Of T)(operation As IOperation, value As T) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.OperationExtensions.TryGetConstantValue*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.OperationExtensions.IsConstant(Microsoft.CodeAnalysis.IOperation,System.Object@)
+    commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.IsConstant(Microsoft.CodeAnalysis.IOperation,System.Object@)
+  nameWithType.vb: OperationExtensions.TryGetConstantValue(Of T)(IOperation, T)
+  fullName.vb: ANcpLua.Roslyn.Utilities.OperationExtensions.TryGetConstantValue(Of T)(Microsoft.CodeAnalysis.IOperation, T)
+  name.vb: TryGetConstantValue(Of T)(IOperation, T)
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.GetContainingMethod(Microsoft.CodeAnalysis.IOperation,System.Threading.CancellationToken)
+  commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.GetContainingMethod(Microsoft.CodeAnalysis.IOperation,System.Threading.CancellationToken)
+  id: GetContainingMethod(Microsoft.CodeAnalysis.IOperation,System.Threading.CancellationToken)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.OperationExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetContainingMethod(IOperation, CancellationToken)
+  nameWithType: OperationExtensions.GetContainingMethod(IOperation, CancellationToken)
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.GetContainingMethod(Microsoft.CodeAnalysis.IOperation, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: GetContainingMethod
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
+    startLine: 373
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Gets the method symbol that contains this operation.
+  example: []
+  syntax:
+    content: public static IMethodSymbol? GetContainingMethod(this IOperation operation, CancellationToken cancellationToken)
+    parameters:
+    - id: operation
+      type: Microsoft.CodeAnalysis.IOperation
+      description: The operation whose containing method to find.
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: A token to monitor for cancellation requests.
+    return:
+      type: Microsoft.CodeAnalysis.IMethodSymbol
+      description: >-
+        The <xref href="Microsoft.CodeAnalysis.IMethodSymbol" data-throw-if-not-resolved="false"></xref> for the containing method, local function, accessor,
+
+        or lambda expression; or <code>null</code> if the operation is not within a method-like construct
+
+        or the semantic model is unavailable.
+    content.vb: Public Shared Function GetContainingMethod(operation As IOperation, cancellationToken As CancellationToken) As IMethodSymbol
+  overload: ANcpLua.Roslyn.Utilities.OperationExtensions.GetContainingMethod*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.OperationExtensions.GetContainingType(Microsoft.CodeAnalysis.IOperation,System.Threading.CancellationToken)
+    commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.GetContainingType(Microsoft.CodeAnalysis.IOperation,System.Threading.CancellationToken)
+  - linkId: ANcpLua.Roslyn.Utilities.OperationExtensions.GetContainingBlock(Microsoft.CodeAnalysis.IOperation)
+    commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.GetContainingBlock(Microsoft.CodeAnalysis.IOperation)
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.GetContainingType(Microsoft.CodeAnalysis.IOperation,System.Threading.CancellationToken)
+  commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.GetContainingType(Microsoft.CodeAnalysis.IOperation,System.Threading.CancellationToken)
+  id: GetContainingType(Microsoft.CodeAnalysis.IOperation,System.Threading.CancellationToken)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.OperationExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetContainingType(IOperation, CancellationToken)
+  nameWithType: OperationExtensions.GetContainingType(IOperation, CancellationToken)
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.GetContainingType(Microsoft.CodeAnalysis.IOperation, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: GetContainingType
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
+    startLine: 406
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Gets the named type symbol that contains this operation.
+  example: []
+  syntax:
+    content: public static INamedTypeSymbol? GetContainingType(this IOperation operation, CancellationToken cancellationToken)
+    parameters:
+    - id: operation
+      type: Microsoft.CodeAnalysis.IOperation
+      description: The operation whose containing type to find.
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: A token to monitor for cancellation requests.
+    return:
+      type: Microsoft.CodeAnalysis.INamedTypeSymbol
+      description: >-
+        The <xref href="Microsoft.CodeAnalysis.INamedTypeSymbol" data-throw-if-not-resolved="false"></xref> for the containing type declaration,
+
+        or <code>null</code> if the operation is not within a type or the semantic model is unavailable.
+    content.vb: Public Shared Function GetContainingType(operation As IOperation, cancellationToken As CancellationToken) As INamedTypeSymbol
+  overload: ANcpLua.Roslyn.Utilities.OperationExtensions.GetContainingType*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.OperationExtensions.GetContainingMethod(Microsoft.CodeAnalysis.IOperation,System.Threading.CancellationToken)
+    commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.GetContainingMethod(Microsoft.CodeAnalysis.IOperation,System.Threading.CancellationToken)
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.GetCSharpLanguageVersion(Microsoft.CodeAnalysis.IOperation)
+  commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.GetCSharpLanguageVersion(Microsoft.CodeAnalysis.IOperation)
+  id: GetCSharpLanguageVersion(Microsoft.CodeAnalysis.IOperation)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.OperationExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetCSharpLanguageVersion(IOperation)
+  nameWithType: OperationExtensions.GetCSharpLanguageVersion(IOperation)
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.GetCSharpLanguageVersion(Microsoft.CodeAnalysis.IOperation)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: GetCSharpLanguageVersion
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
+    startLine: 428
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Gets the C# language version of the source containing this operation.
+  example: []
+  syntax:
+    content: public static LanguageVersion GetCSharpLanguageVersion(this IOperation operation)
+    parameters:
+    - id: operation
+      type: Microsoft.CodeAnalysis.IOperation
+      description: The operation whose language version to determine.
+    return:
+      type: Microsoft.CodeAnalysis.CSharp.LanguageVersion
+      description: >-
+        The <xref href="Microsoft.CodeAnalysis.CSharp.LanguageVersion" data-throw-if-not-resolved="false"></xref> of the source file, or <xref href="Microsoft.CodeAnalysis.CSharp.LanguageVersion.Default" data-throw-if-not-resolved="false"></xref>
+
+        if the syntax tree options are not C# parse options.
+    content.vb: Public Shared Function GetCSharpLanguageVersion(operation As IOperation) As LanguageVersion
+  overload: ANcpLua.Roslyn.Utilities.OperationExtensions.GetCSharpLanguageVersion*
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.DescendantsAndSelf(Microsoft.CodeAnalysis.IOperation)
+  commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.DescendantsAndSelf(Microsoft.CodeAnalysis.IOperation)
+  id: DescendantsAndSelf(Microsoft.CodeAnalysis.IOperation)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.OperationExtensions
+  langs:
+  - csharp
+  - vb
+  name: DescendantsAndSelf(IOperation)
+  nameWithType: OperationExtensions.DescendantsAndSelf(IOperation)
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.DescendantsAndSelf(Microsoft.CodeAnalysis.IOperation)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: DescendantsAndSelf
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
+    startLine: 444
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Enumerates the operation and all its descendants in depth-first order.
+  example: []
+  syntax:
+    content: public static IEnumerable<IOperation> DescendantsAndSelf(this IOperation operation)
+    parameters:
+    - id: operation
+      type: Microsoft.CodeAnalysis.IOperation
+      description: The root operation.
+    return:
+      type: System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.IOperation}
+      description: An enumerable sequence containing <code class="paramref">operation</code> followed by all its descendants.
+    content.vb: Public Shared Function DescendantsAndSelf(operation As IOperation) As IEnumerable(Of IOperation)
+  overload: ANcpLua.Roslyn.Utilities.OperationExtensions.DescendantsAndSelf*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.OperationExtensions.Descendants(Microsoft.CodeAnalysis.IOperation)
+    commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.Descendants(Microsoft.CodeAnalysis.IOperation)
+  - linkId: ANcpLua.Roslyn.Utilities.OperationExtensions.DescendantsOfType``1(Microsoft.CodeAnalysis.IOperation)
+    commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.DescendantsOfType``1(Microsoft.CodeAnalysis.IOperation)
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.Descendants(Microsoft.CodeAnalysis.IOperation)
+  commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.Descendants(Microsoft.CodeAnalysis.IOperation)
+  id: Descendants(Microsoft.CodeAnalysis.IOperation)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.OperationExtensions
+  langs:
+  - csharp
+  - vb
+  name: Descendants(IOperation)
+  nameWithType: OperationExtensions.Descendants(IOperation)
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.Descendants(Microsoft.CodeAnalysis.IOperation)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Descendants
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
+    startLine: 461
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Enumerates all descendants of the operation in depth-first order.
+  example: []
+  syntax:
+    content: public static IEnumerable<IOperation> Descendants(this IOperation operation)
+    parameters:
+    - id: operation
+      type: Microsoft.CodeAnalysis.IOperation
+      description: The root operation.
+    return:
+      type: System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.IOperation}
+      description: An enumerable sequence of all descendant operations, not including <code class="paramref">operation</code> itself.
+    content.vb: Public Shared Function Descendants(operation As IOperation) As IEnumerable(Of IOperation)
+  overload: ANcpLua.Roslyn.Utilities.OperationExtensions.Descendants*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.OperationExtensions.DescendantsAndSelf(Microsoft.CodeAnalysis.IOperation)
+    commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.DescendantsAndSelf(Microsoft.CodeAnalysis.IOperation)
+  - linkId: ANcpLua.Roslyn.Utilities.OperationExtensions.DescendantsOfType``1(Microsoft.CodeAnalysis.IOperation)
+    commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.DescendantsOfType``1(Microsoft.CodeAnalysis.IOperation)
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.DescendantsOfType``1(Microsoft.CodeAnalysis.IOperation)
+  commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.DescendantsOfType``1(Microsoft.CodeAnalysis.IOperation)
+  id: DescendantsOfType``1(Microsoft.CodeAnalysis.IOperation)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.OperationExtensions
+  langs:
+  - csharp
+  - vb
+  name: DescendantsOfType<T>(IOperation)
+  nameWithType: OperationExtensions.DescendantsOfType<T>(IOperation)
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.DescendantsOfType<T>(Microsoft.CodeAnalysis.IOperation)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: DescendantsOfType
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
+    startLine: 478
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Enumerates all descendants of a specific type in depth-first order.
+  example: []
+  syntax:
+    content: 'public static IEnumerable<T> DescendantsOfType<T>(this IOperation operation) where T : IOperation'
+    parameters:
+    - id: operation
+      type: Microsoft.CodeAnalysis.IOperation
+      description: The root operation.
+    typeParameters:
+    - id: T
+      description: The type of operations to find. Must implement <xref href="Microsoft.CodeAnalysis.IOperation" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: An enumerable sequence of all descendant operations of type <code class="typeparamref">T</code>.
+    content.vb: Public Shared Function DescendantsOfType(Of T As IOperation)(operation As IOperation) As IEnumerable(Of T)
+  overload: ANcpLua.Roslyn.Utilities.OperationExtensions.DescendantsOfType*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.OperationExtensions.Descendants(Microsoft.CodeAnalysis.IOperation)
+    commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.Descendants(Microsoft.CodeAnalysis.IOperation)
+  - linkId: ANcpLua.Roslyn.Utilities.OperationExtensions.ContainsOperation``1(Microsoft.CodeAnalysis.IOperation)
+    commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.ContainsOperation``1(Microsoft.CodeAnalysis.IOperation)
+  nameWithType.vb: OperationExtensions.DescendantsOfType(Of T)(IOperation)
+  fullName.vb: ANcpLua.Roslyn.Utilities.OperationExtensions.DescendantsOfType(Of T)(Microsoft.CodeAnalysis.IOperation)
+  name.vb: DescendantsOfType(Of T)(IOperation)
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.ContainsOperation``1(Microsoft.CodeAnalysis.IOperation)
+  commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.ContainsOperation``1(Microsoft.CodeAnalysis.IOperation)
+  id: ContainsOperation``1(Microsoft.CodeAnalysis.IOperation)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.OperationExtensions
+  langs:
+  - csharp
+  - vb
+  name: ContainsOperation<T>(IOperation)
+  nameWithType: OperationExtensions.ContainsOperation<T>(IOperation)
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.ContainsOperation<T>(Microsoft.CodeAnalysis.IOperation)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: ContainsOperation
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
+    startLine: 496
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Determines whether the operation contains any descendant of the specified type.
+  example: []
+  syntax:
+    content: 'public static bool ContainsOperation<T>(this IOperation operation) where T : IOperation'
+    parameters:
+    - id: operation
+      type: Microsoft.CodeAnalysis.IOperation
+      description: The operation to search within.
+    typeParameters:
+    - id: T
+      description: The type of operation to search for. Must implement <xref href="Microsoft.CodeAnalysis.IOperation" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if any descendant of type <code class="typeparamref">T</code> exists; otherwise, <code>false</code>.
+    content.vb: Public Shared Function ContainsOperation(Of T As IOperation)(operation As IOperation) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.OperationExtensions.ContainsOperation*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.OperationExtensions.DescendantsOfType``1(Microsoft.CodeAnalysis.IOperation)
+    commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.DescendantsOfType``1(Microsoft.CodeAnalysis.IOperation)
+  nameWithType.vb: OperationExtensions.ContainsOperation(Of T)(IOperation)
+  fullName.vb: ANcpLua.Roslyn.Utilities.OperationExtensions.ContainsOperation(Of T)(Microsoft.CodeAnalysis.IOperation)
+  name.vb: ContainsOperation(Of T)(IOperation)
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideLoop(Microsoft.CodeAnalysis.IOperation)
+  commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideLoop(Microsoft.CodeAnalysis.IOperation)
+  id: IsInsideLoop(Microsoft.CodeAnalysis.IOperation)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.OperationExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsInsideLoop(IOperation)
+  nameWithType: OperationExtensions.IsInsideLoop(IOperation)
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideLoop(Microsoft.CodeAnalysis.IOperation)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsInsideLoop
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
+    startLine: 509
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Determines whether the operation is inside a loop construct.
+  example: []
+  syntax:
+    content: public static bool IsInsideLoop(this IOperation operation)
+    parameters:
+    - id: operation
+      type: Microsoft.CodeAnalysis.IOperation
+      description: The operation to check.
+    return:
+      type: System.Boolean
+      description: >-
+        <code>true</code> if the operation is within a <code>for</code>, <code>foreach</code>, <code>while</code>,
+
+        or <code>do</code> loop; otherwise, <code>false</code>.
+    content.vb: Public Shared Function IsInsideLoop(operation As IOperation) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideLoop*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideTryBlock(Microsoft.CodeAnalysis.IOperation)
+    commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideTryBlock(Microsoft.CodeAnalysis.IOperation)
+  - linkId: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideLockStatement(Microsoft.CodeAnalysis.IOperation)
+    commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideLockStatement(Microsoft.CodeAnalysis.IOperation)
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideTryBlock(Microsoft.CodeAnalysis.IOperation)
+  commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideTryBlock(Microsoft.CodeAnalysis.IOperation)
+  id: IsInsideTryBlock(Microsoft.CodeAnalysis.IOperation)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.OperationExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsInsideTryBlock(IOperation)
+  nameWithType: OperationExtensions.IsInsideTryBlock(IOperation)
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideTryBlock(Microsoft.CodeAnalysis.IOperation)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsInsideTryBlock
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
+    startLine: 535
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Determines whether the operation is inside a try block.
+  remarks: >-
+    This checks if the operation is anywhere within a try operation, including in the
+
+    try block itself, catch blocks, or finally blocks.
+  example: []
+  syntax:
+    content: public static bool IsInsideTryBlock(this IOperation operation)
+    parameters:
+    - id: operation
+      type: Microsoft.CodeAnalysis.IOperation
+      description: The operation to check.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if the operation is within a <code>try</code> statement; otherwise, <code>false</code>.
+    content.vb: Public Shared Function IsInsideTryBlock(operation As IOperation) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideTryBlock*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideCatchBlock(Microsoft.CodeAnalysis.IOperation)
+    commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideCatchBlock(Microsoft.CodeAnalysis.IOperation)
+  - linkId: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideFinallyBlock(Microsoft.CodeAnalysis.IOperation)
+    commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideFinallyBlock(Microsoft.CodeAnalysis.IOperation)
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideCatchBlock(Microsoft.CodeAnalysis.IOperation)
+  commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideCatchBlock(Microsoft.CodeAnalysis.IOperation)
+  id: IsInsideCatchBlock(Microsoft.CodeAnalysis.IOperation)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.OperationExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsInsideCatchBlock(IOperation)
+  nameWithType: OperationExtensions.IsInsideCatchBlock(IOperation)
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideCatchBlock(Microsoft.CodeAnalysis.IOperation)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsInsideCatchBlock
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
+    startLine: 557
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Determines whether the operation is inside a catch block.
+  example: []
+  syntax:
+    content: public static bool IsInsideCatchBlock(this IOperation operation)
+    parameters:
+    - id: operation
+      type: Microsoft.CodeAnalysis.IOperation
+      description: The operation to check.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if the operation is within a <code>catch</code> clause; otherwise, <code>false</code>.
+    content.vb: Public Shared Function IsInsideCatchBlock(operation As IOperation) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideCatchBlock*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideTryBlock(Microsoft.CodeAnalysis.IOperation)
+    commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideTryBlock(Microsoft.CodeAnalysis.IOperation)
+  - linkId: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideFinallyBlock(Microsoft.CodeAnalysis.IOperation)
+    commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideFinallyBlock(Microsoft.CodeAnalysis.IOperation)
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideFinallyBlock(Microsoft.CodeAnalysis.IOperation)
+  commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideFinallyBlock(Microsoft.CodeAnalysis.IOperation)
+  id: IsInsideFinallyBlock(Microsoft.CodeAnalysis.IOperation)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.OperationExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsInsideFinallyBlock(IOperation)
+  nameWithType: OperationExtensions.IsInsideFinallyBlock(IOperation)
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideFinallyBlock(Microsoft.CodeAnalysis.IOperation)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsInsideFinallyBlock
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
+    startLine: 579
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Determines whether the operation is inside a finally block.
+  example: []
+  syntax:
+    content: public static bool IsInsideFinallyBlock(this IOperation operation)
+    parameters:
+    - id: operation
+      type: Microsoft.CodeAnalysis.IOperation
+      description: The operation to check.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if the operation is within a <code>finally</code> block; otherwise, <code>false</code>.
+    content.vb: Public Shared Function IsInsideFinallyBlock(operation As IOperation) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideFinallyBlock*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideTryBlock(Microsoft.CodeAnalysis.IOperation)
+    commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideTryBlock(Microsoft.CodeAnalysis.IOperation)
+  - linkId: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideCatchBlock(Microsoft.CodeAnalysis.IOperation)
+    commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideCatchBlock(Microsoft.CodeAnalysis.IOperation)
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideLockStatement(Microsoft.CodeAnalysis.IOperation)
+  commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideLockStatement(Microsoft.CodeAnalysis.IOperation)
+  id: IsInsideLockStatement(Microsoft.CodeAnalysis.IOperation)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.OperationExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsInsideLockStatement(IOperation)
+  nameWithType: OperationExtensions.IsInsideLockStatement(IOperation)
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideLockStatement(Microsoft.CodeAnalysis.IOperation)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsInsideLockStatement
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
+    startLine: 601
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Determines whether the operation is inside a lock statement.
+  example: []
+  syntax:
+    content: public static bool IsInsideLockStatement(this IOperation operation)
+    parameters:
+    - id: operation
+      type: Microsoft.CodeAnalysis.IOperation
+      description: The operation to check.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if the operation is within a <code>lock</code> statement; otherwise, <code>false</code>.
+    content.vb: Public Shared Function IsInsideLockStatement(operation As IOperation) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideLockStatement*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideUsingStatement(Microsoft.CodeAnalysis.IOperation)
+    commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideUsingStatement(Microsoft.CodeAnalysis.IOperation)
+  - linkId: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideLoop(Microsoft.CodeAnalysis.IOperation)
+    commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideLoop(Microsoft.CodeAnalysis.IOperation)
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideUsingStatement(Microsoft.CodeAnalysis.IOperation)
+  commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideUsingStatement(Microsoft.CodeAnalysis.IOperation)
+  id: IsInsideUsingStatement(Microsoft.CodeAnalysis.IOperation)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.OperationExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsInsideUsingStatement(IOperation)
+  nameWithType: OperationExtensions.IsInsideUsingStatement(IOperation)
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideUsingStatement(Microsoft.CodeAnalysis.IOperation)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsInsideUsingStatement
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
+    startLine: 623
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Determines whether the operation is inside a using statement or declaration.
+  example: []
+  syntax:
+    content: public static bool IsInsideUsingStatement(this IOperation operation)
+    parameters:
+    - id: operation
+      type: Microsoft.CodeAnalysis.IOperation
+      description: The operation to check.
+    return:
+      type: System.Boolean
+      description: >-
+        <code>true</code> if the operation is within a <code>using</code> statement or <code>using</code> declaration;
+
+        otherwise, <code>false</code>.
+    content.vb: Public Shared Function IsInsideUsingStatement(operation As IOperation) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideUsingStatement*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideLockStatement(Microsoft.CodeAnalysis.IOperation)
+    commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideLockStatement(Microsoft.CodeAnalysis.IOperation)
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.GetContainingBlock(Microsoft.CodeAnalysis.IOperation)
+  commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.GetContainingBlock(Microsoft.CodeAnalysis.IOperation)
+  id: GetContainingBlock(Microsoft.CodeAnalysis.IOperation)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.OperationExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetContainingBlock(IOperation)
+  nameWithType: OperationExtensions.GetContainingBlock(IOperation)
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.GetContainingBlock(Microsoft.CodeAnalysis.IOperation)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: GetContainingBlock
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
+    startLine: 646
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Gets the containing block operation for this operation.
+  example: []
+  syntax:
+    content: public static IBlockOperation? GetContainingBlock(this IOperation operation)
+    parameters:
+    - id: operation
+      type: Microsoft.CodeAnalysis.IOperation
+      description: The operation whose containing block to find.
+    return:
+      type: Microsoft.CodeAnalysis.Operations.IBlockOperation
+      description: >-
+        The <xref href="Microsoft.CodeAnalysis.Operations.IBlockOperation" data-throw-if-not-resolved="false"></xref> that contains this operation,
+
+        or <code>null</code> if no containing block exists.
+    content.vb: Public Shared Function GetContainingBlock(operation As IOperation) As IBlockOperation
+  overload: ANcpLua.Roslyn.Utilities.OperationExtensions.GetContainingBlock*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.OperationExtensions.GetContainingMethod(Microsoft.CodeAnalysis.IOperation,System.Threading.CancellationToken)
+    commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.GetContainingMethod(Microsoft.CodeAnalysis.IOperation,System.Threading.CancellationToken)
+  - linkId: ANcpLua.Roslyn.Utilities.OperationExtensions.FindAncestor``1(Microsoft.CodeAnalysis.IOperation)
+    commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.FindAncestor``1(Microsoft.CodeAnalysis.IOperation)
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsAssignmentTarget(Microsoft.CodeAnalysis.IOperation)
+  commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.IsAssignmentTarget(Microsoft.CodeAnalysis.IOperation)
+  id: IsAssignmentTarget(Microsoft.CodeAnalysis.IOperation)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.OperationExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsAssignmentTarget(IOperation)
+  nameWithType: OperationExtensions.IsAssignmentTarget(IOperation)
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.IsAssignmentTarget(Microsoft.CodeAnalysis.IOperation)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsAssignmentTarget
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
+    startLine: 659
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Determines whether the operation is the target of an assignment.
+  example: []
+  syntax:
+    content: public static bool IsAssignmentTarget(this IOperation operation)
+    parameters:
+    - id: operation
+      type: Microsoft.CodeAnalysis.IOperation
+      description: The operation to check.
+    return:
+      type: System.Boolean
+      description: >-
+        <code>true</code> if the operation is the left-hand side of a simple assignment,
+
+        compound assignment, or increment/decrement operation; otherwise, <code>false</code>.
+    content.vb: Public Shared Function IsAssignmentTarget(operation As IOperation) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.OperationExtensions.IsAssignmentTarget*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.OperationExtensions.IsLeftSideOfAssignment(Microsoft.CodeAnalysis.IOperation)
+    commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.IsLeftSideOfAssignment(Microsoft.CodeAnalysis.IOperation)
+  - linkId: ANcpLua.Roslyn.Utilities.OperationExtensions.IsPassedByRef(Microsoft.CodeAnalysis.IOperation)
+    commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.IsPassedByRef(Microsoft.CodeAnalysis.IOperation)
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsLeftSideOfAssignment(Microsoft.CodeAnalysis.IOperation)
+  commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.IsLeftSideOfAssignment(Microsoft.CodeAnalysis.IOperation)
+  id: IsLeftSideOfAssignment(Microsoft.CodeAnalysis.IOperation)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.OperationExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsLeftSideOfAssignment(IOperation)
+  nameWithType: OperationExtensions.IsLeftSideOfAssignment(IOperation)
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.IsLeftSideOfAssignment(Microsoft.CodeAnalysis.IOperation)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsLeftSideOfAssignment
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
+    startLine: 685
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Determines whether the operation is on the left side of an assignment.
+  remarks: >-
+    This method unwraps implicit conversions before checking, which is useful when
+
+    the left-hand side involves an implicit conversion (e.g., assigning to a property
+
+    of a different but compatible type).
+  example: []
+  syntax:
+    content: public static bool IsLeftSideOfAssignment(this IOperation operation)
+    parameters:
+    - id: operation
+      type: Microsoft.CodeAnalysis.IOperation
+      description: The operation to check.
+    return:
+      type: System.Boolean
+      description: >-
+        <code>true</code> if the operation (after unwrapping implicit conversions) is the target
+
+        of an assignment operation; otherwise, <code>false</code>.
+    content.vb: Public Shared Function IsLeftSideOfAssignment(operation As IOperation) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.OperationExtensions.IsLeftSideOfAssignment*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.OperationExtensions.IsAssignmentTarget(Microsoft.CodeAnalysis.IOperation)
+    commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.IsAssignmentTarget(Microsoft.CodeAnalysis.IOperation)
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsPassedByRef(Microsoft.CodeAnalysis.IOperation)
+  commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.IsPassedByRef(Microsoft.CodeAnalysis.IOperation)
+  id: IsPassedByRef(Microsoft.CodeAnalysis.IOperation)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.OperationExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsPassedByRef(IOperation)
+  nameWithType: OperationExtensions.IsPassedByRef(IOperation)
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.IsPassedByRef(Microsoft.CodeAnalysis.IOperation)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsPassedByRef
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
+    startLine: 700
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Determines whether the operation is passed by reference to a method.
+  example: []
+  syntax:
+    content: public static bool IsPassedByRef(this IOperation operation)
+    parameters:
+    - id: operation
+      type: Microsoft.CodeAnalysis.IOperation
+      description: The operation to check.
+    return:
+      type: System.Boolean
+      description: >-
+        <code>true</code> if the operation is an argument to a parameter with <code>ref</code>, <code>out</code>,
+
+        <code>in</code>, or <code>ref readonly</code> modifier; otherwise, <code>false</code>.
+    content.vb: Public Shared Function IsPassedByRef(operation As IOperation) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.OperationExtensions.IsPassedByRef*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.OperationExtensions.IsAssignmentTarget(Microsoft.CodeAnalysis.IOperation)
+    commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.IsAssignmentTarget(Microsoft.CodeAnalysis.IOperation)
+references:
+- uid: Microsoft.CodeAnalysis.IOperation
+  commentId: T:Microsoft.CodeAnalysis.IOperation
+  parent: Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ioperation
+  name: IOperation
+  nameWithType: IOperation
+  fullName: Microsoft.CodeAnalysis.IOperation
+- uid: ANcpLua.Roslyn.Utilities.InvocationExtensions
+  commentId: T:ANcpLua.Roslyn.Utilities.InvocationExtensions
+  href: ANcpLua.Roslyn.Utilities.InvocationExtensions.html
+  name: InvocationExtensions
+  nameWithType: InvocationExtensions
+  fullName: ANcpLua.Roslyn.Utilities.InvocationExtensions
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.Ancestors(Microsoft.CodeAnalysis.IOperation)
+  commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.Ancestors(Microsoft.CodeAnalysis.IOperation)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_Ancestors_Microsoft_CodeAnalysis_IOperation_
+  name: Ancestors(IOperation)
+  nameWithType: OperationExtensions.Ancestors(IOperation)
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.Ancestors(Microsoft.CodeAnalysis.IOperation)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.OperationExtensions.Ancestors(Microsoft.CodeAnalysis.IOperation)
+    name: Ancestors
+    href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_Ancestors_Microsoft_CodeAnalysis_IOperation_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IOperation
+    name: IOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ioperation
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.OperationExtensions.Ancestors(Microsoft.CodeAnalysis.IOperation)
+    name: Ancestors
+    href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_Ancestors_Microsoft_CodeAnalysis_IOperation_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IOperation
+    name: IOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ioperation
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.Descendants(Microsoft.CodeAnalysis.IOperation)
+  commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.Descendants(Microsoft.CodeAnalysis.IOperation)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_Descendants_Microsoft_CodeAnalysis_IOperation_
+  name: Descendants(IOperation)
+  nameWithType: OperationExtensions.Descendants(IOperation)
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.Descendants(Microsoft.CodeAnalysis.IOperation)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.OperationExtensions.Descendants(Microsoft.CodeAnalysis.IOperation)
+    name: Descendants
+    href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_Descendants_Microsoft_CodeAnalysis_IOperation_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IOperation
+    name: IOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ioperation
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.OperationExtensions.Descendants(Microsoft.CodeAnalysis.IOperation)
+    name: Descendants
+    href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_Descendants_Microsoft_CodeAnalysis_IOperation_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IOperation
+    name: IOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ioperation
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.FindAncestor``1(Microsoft.CodeAnalysis.IOperation)
+  commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.FindAncestor``1(Microsoft.CodeAnalysis.IOperation)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_FindAncestor__1_Microsoft_CodeAnalysis_IOperation_
+  name: FindAncestor<T>(IOperation)
+  nameWithType: OperationExtensions.FindAncestor<T>(IOperation)
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.FindAncestor<T>(Microsoft.CodeAnalysis.IOperation)
+  nameWithType.vb: OperationExtensions.FindAncestor(Of T)(IOperation)
+  fullName.vb: ANcpLua.Roslyn.Utilities.OperationExtensions.FindAncestor(Of T)(Microsoft.CodeAnalysis.IOperation)
+  name.vb: FindAncestor(Of T)(IOperation)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.OperationExtensions.FindAncestor``1(Microsoft.CodeAnalysis.IOperation)
+    name: FindAncestor
+    href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_FindAncestor__1_Microsoft_CodeAnalysis_IOperation_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IOperation
+    name: IOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ioperation
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.OperationExtensions.FindAncestor``1(Microsoft.CodeAnalysis.IOperation)
+    name: FindAncestor
+    href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_FindAncestor__1_Microsoft_CodeAnalysis_IOperation_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IOperation
+    name: IOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ioperation
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideLoop(Microsoft.CodeAnalysis.IOperation)
+  commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideLoop(Microsoft.CodeAnalysis.IOperation)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_IsInsideLoop_Microsoft_CodeAnalysis_IOperation_
+  name: IsInsideLoop(IOperation)
+  nameWithType: OperationExtensions.IsInsideLoop(IOperation)
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideLoop(Microsoft.CodeAnalysis.IOperation)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideLoop(Microsoft.CodeAnalysis.IOperation)
+    name: IsInsideLoop
+    href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_IsInsideLoop_Microsoft_CodeAnalysis_IOperation_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IOperation
+    name: IOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ioperation
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideLoop(Microsoft.CodeAnalysis.IOperation)
+    name: IsInsideLoop
+    href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_IsInsideLoop_Microsoft_CodeAnalysis_IOperation_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IOperation
+    name: IOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ioperation
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideTryBlock(Microsoft.CodeAnalysis.IOperation)
+  commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideTryBlock(Microsoft.CodeAnalysis.IOperation)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_IsInsideTryBlock_Microsoft_CodeAnalysis_IOperation_
+  name: IsInsideTryBlock(IOperation)
+  nameWithType: OperationExtensions.IsInsideTryBlock(IOperation)
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideTryBlock(Microsoft.CodeAnalysis.IOperation)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideTryBlock(Microsoft.CodeAnalysis.IOperation)
+    name: IsInsideTryBlock
+    href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_IsInsideTryBlock_Microsoft_CodeAnalysis_IOperation_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IOperation
+    name: IOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ioperation
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideTryBlock(Microsoft.CodeAnalysis.IOperation)
+    name: IsInsideTryBlock
+    href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_IsInsideTryBlock_Microsoft_CodeAnalysis_IOperation_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IOperation
+    name: IOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ioperation
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInExpressionTree(Microsoft.CodeAnalysis.IOperation,Microsoft.CodeAnalysis.INamedTypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.IsInExpressionTree(Microsoft.CodeAnalysis.IOperation,Microsoft.CodeAnalysis.INamedTypeSymbol)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_IsInExpressionTree_Microsoft_CodeAnalysis_IOperation_Microsoft_CodeAnalysis_INamedTypeSymbol_
+  name: IsInExpressionTree(IOperation, INamedTypeSymbol)
+  nameWithType: OperationExtensions.IsInExpressionTree(IOperation, INamedTypeSymbol)
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInExpressionTree(Microsoft.CodeAnalysis.IOperation, Microsoft.CodeAnalysis.INamedTypeSymbol)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInExpressionTree(Microsoft.CodeAnalysis.IOperation,Microsoft.CodeAnalysis.INamedTypeSymbol)
+    name: IsInExpressionTree
+    href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_IsInExpressionTree_Microsoft_CodeAnalysis_IOperation_Microsoft_CodeAnalysis_INamedTypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IOperation
+    name: IOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ioperation
+  - name: ','
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.INamedTypeSymbol
+    name: INamedTypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.inamedtypesymbol
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInExpressionTree(Microsoft.CodeAnalysis.IOperation,Microsoft.CodeAnalysis.INamedTypeSymbol)
+    name: IsInExpressionTree
+    href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_IsInExpressionTree_Microsoft_CodeAnalysis_IOperation_Microsoft_CodeAnalysis_INamedTypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IOperation
+    name: IOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ioperation
+  - name: ','
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.INamedTypeSymbol
+    name: INamedTypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.inamedtypesymbol
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.UnwrapImplicitConversions(Microsoft.CodeAnalysis.IOperation)
+  commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.UnwrapImplicitConversions(Microsoft.CodeAnalysis.IOperation)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_UnwrapImplicitConversions_Microsoft_CodeAnalysis_IOperation_
+  name: UnwrapImplicitConversions(IOperation)
+  nameWithType: OperationExtensions.UnwrapImplicitConversions(IOperation)
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.UnwrapImplicitConversions(Microsoft.CodeAnalysis.IOperation)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.OperationExtensions.UnwrapImplicitConversions(Microsoft.CodeAnalysis.IOperation)
+    name: UnwrapImplicitConversions
+    href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_UnwrapImplicitConversions_Microsoft_CodeAnalysis_IOperation_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IOperation
+    name: IOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ioperation
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.OperationExtensions.UnwrapImplicitConversions(Microsoft.CodeAnalysis.IOperation)
+    name: UnwrapImplicitConversions
+    href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_UnwrapImplicitConversions_Microsoft_CodeAnalysis_IOperation_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IOperation
+    name: IOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ioperation
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.UnwrapAllConversions(Microsoft.CodeAnalysis.IOperation)
+  commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.UnwrapAllConversions(Microsoft.CodeAnalysis.IOperation)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_UnwrapAllConversions_Microsoft_CodeAnalysis_IOperation_
+  name: UnwrapAllConversions(IOperation)
+  nameWithType: OperationExtensions.UnwrapAllConversions(IOperation)
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.UnwrapAllConversions(Microsoft.CodeAnalysis.IOperation)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.OperationExtensions.UnwrapAllConversions(Microsoft.CodeAnalysis.IOperation)
+    name: UnwrapAllConversions
+    href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_UnwrapAllConversions_Microsoft_CodeAnalysis_IOperation_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IOperation
+    name: IOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ioperation
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.OperationExtensions.UnwrapAllConversions(Microsoft.CodeAnalysis.IOperation)
+    name: UnwrapAllConversions
+    href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_UnwrapAllConversions_Microsoft_CodeAnalysis_IOperation_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IOperation
+    name: IOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ioperation
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.UnwrapParenthesized(Microsoft.CodeAnalysis.IOperation)
+  commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.UnwrapParenthesized(Microsoft.CodeAnalysis.IOperation)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_UnwrapParenthesized_Microsoft_CodeAnalysis_IOperation_
+  name: UnwrapParenthesized(IOperation)
+  nameWithType: OperationExtensions.UnwrapParenthesized(IOperation)
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.UnwrapParenthesized(Microsoft.CodeAnalysis.IOperation)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.OperationExtensions.UnwrapParenthesized(Microsoft.CodeAnalysis.IOperation)
+    name: UnwrapParenthesized
+    href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_UnwrapParenthesized_Microsoft_CodeAnalysis_IOperation_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IOperation
+    name: IOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ioperation
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.OperationExtensions.UnwrapParenthesized(Microsoft.CodeAnalysis.IOperation)
+    name: UnwrapParenthesized
+    href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_UnwrapParenthesized_Microsoft_CodeAnalysis_IOperation_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IOperation
+    name: IOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ioperation
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsConstantZero(Microsoft.CodeAnalysis.IOperation)
+  commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.IsConstantZero(Microsoft.CodeAnalysis.IOperation)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_IsConstantZero_Microsoft_CodeAnalysis_IOperation_
+  name: IsConstantZero(IOperation)
+  nameWithType: OperationExtensions.IsConstantZero(IOperation)
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.IsConstantZero(Microsoft.CodeAnalysis.IOperation)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsConstantZero(Microsoft.CodeAnalysis.IOperation)
+    name: IsConstantZero
+    href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_IsConstantZero_Microsoft_CodeAnalysis_IOperation_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IOperation
+    name: IOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ioperation
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsConstantZero(Microsoft.CodeAnalysis.IOperation)
+    name: IsConstantZero
+    href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_IsConstantZero_Microsoft_CodeAnalysis_IOperation_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IOperation
+    name: IOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ioperation
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsConstantNull(Microsoft.CodeAnalysis.IOperation)
+  commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.IsConstantNull(Microsoft.CodeAnalysis.IOperation)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_IsConstantNull_Microsoft_CodeAnalysis_IOperation_
+  name: IsConstantNull(IOperation)
+  nameWithType: OperationExtensions.IsConstantNull(IOperation)
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.IsConstantNull(Microsoft.CodeAnalysis.IOperation)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsConstantNull(Microsoft.CodeAnalysis.IOperation)
+    name: IsConstantNull
+    href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_IsConstantNull_Microsoft_CodeAnalysis_IOperation_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IOperation
+    name: IOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ioperation
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsConstantNull(Microsoft.CodeAnalysis.IOperation)
+    name: IsConstantNull
+    href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_IsConstantNull_Microsoft_CodeAnalysis_IOperation_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IOperation
+    name: IOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ioperation
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.TryGetConstantValue``1(Microsoft.CodeAnalysis.IOperation,``0@)
+  commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.TryGetConstantValue``1(Microsoft.CodeAnalysis.IOperation,``0@)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_TryGetConstantValue__1_Microsoft_CodeAnalysis_IOperation___0__
+  name: TryGetConstantValue<T>(IOperation, out T)
+  nameWithType: OperationExtensions.TryGetConstantValue<T>(IOperation, out T)
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.TryGetConstantValue<T>(Microsoft.CodeAnalysis.IOperation, out T)
+  nameWithType.vb: OperationExtensions.TryGetConstantValue(Of T)(IOperation, T)
+  fullName.vb: ANcpLua.Roslyn.Utilities.OperationExtensions.TryGetConstantValue(Of T)(Microsoft.CodeAnalysis.IOperation, T)
+  name.vb: TryGetConstantValue(Of T)(IOperation, T)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.OperationExtensions.TryGetConstantValue``1(Microsoft.CodeAnalysis.IOperation,``0@)
+    name: TryGetConstantValue
+    href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_TryGetConstantValue__1_Microsoft_CodeAnalysis_IOperation___0__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IOperation
+    name: IOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ioperation
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.OperationExtensions.TryGetConstantValue``1(Microsoft.CodeAnalysis.IOperation,``0@)
+    name: TryGetConstantValue
+    href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_TryGetConstantValue__1_Microsoft_CodeAnalysis_IOperation___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IOperation
+    name: IOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ioperation
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsAssignmentTarget(Microsoft.CodeAnalysis.IOperation)
+  commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.IsAssignmentTarget(Microsoft.CodeAnalysis.IOperation)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_IsAssignmentTarget_Microsoft_CodeAnalysis_IOperation_
+  name: IsAssignmentTarget(IOperation)
+  nameWithType: OperationExtensions.IsAssignmentTarget(IOperation)
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.IsAssignmentTarget(Microsoft.CodeAnalysis.IOperation)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsAssignmentTarget(Microsoft.CodeAnalysis.IOperation)
+    name: IsAssignmentTarget
+    href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_IsAssignmentTarget_Microsoft_CodeAnalysis_IOperation_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IOperation
+    name: IOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ioperation
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsAssignmentTarget(Microsoft.CodeAnalysis.IOperation)
+    name: IsAssignmentTarget
+    href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_IsAssignmentTarget_Microsoft_CodeAnalysis_IOperation_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IOperation
+    name: IOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ioperation
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsLeftSideOfAssignment(Microsoft.CodeAnalysis.IOperation)
+  commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.IsLeftSideOfAssignment(Microsoft.CodeAnalysis.IOperation)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_IsLeftSideOfAssignment_Microsoft_CodeAnalysis_IOperation_
+  name: IsLeftSideOfAssignment(IOperation)
+  nameWithType: OperationExtensions.IsLeftSideOfAssignment(IOperation)
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.IsLeftSideOfAssignment(Microsoft.CodeAnalysis.IOperation)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsLeftSideOfAssignment(Microsoft.CodeAnalysis.IOperation)
+    name: IsLeftSideOfAssignment
+    href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_IsLeftSideOfAssignment_Microsoft_CodeAnalysis_IOperation_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IOperation
+    name: IOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ioperation
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsLeftSideOfAssignment(Microsoft.CodeAnalysis.IOperation)
+    name: IsLeftSideOfAssignment
+    href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_IsLeftSideOfAssignment_Microsoft_CodeAnalysis_IOperation_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IOperation
+    name: IOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ioperation
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsPassedByRef(Microsoft.CodeAnalysis.IOperation)
+  commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.IsPassedByRef(Microsoft.CodeAnalysis.IOperation)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_IsPassedByRef_Microsoft_CodeAnalysis_IOperation_
+  name: IsPassedByRef(IOperation)
+  nameWithType: OperationExtensions.IsPassedByRef(IOperation)
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.IsPassedByRef(Microsoft.CodeAnalysis.IOperation)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsPassedByRef(Microsoft.CodeAnalysis.IOperation)
+    name: IsPassedByRef
+    href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_IsPassedByRef_Microsoft_CodeAnalysis_IOperation_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IOperation
+    name: IOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ioperation
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsPassedByRef(Microsoft.CodeAnalysis.IOperation)
+    name: IsPassedByRef
+    href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_IsPassedByRef_Microsoft_CodeAnalysis_IOperation_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IOperation
+    name: IOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ioperation
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities
+  commentId: N:ANcpLua.Roslyn.Utilities
+  href: ANcpLua.html
+  name: ANcpLua.Roslyn.Utilities
+  nameWithType: ANcpLua.Roslyn.Utilities
+  fullName: ANcpLua.Roslyn.Utilities
+  spec.csharp:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  spec.vb:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: Microsoft.CodeAnalysis
+  commentId: N:Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.CodeAnalysis
+  nameWithType: Microsoft.CodeAnalysis
+  fullName: Microsoft.CodeAnalysis
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsDescendantOf``1(Microsoft.CodeAnalysis.IOperation)
+  commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.IsDescendantOf``1(Microsoft.CodeAnalysis.IOperation)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_IsDescendantOf__1_Microsoft_CodeAnalysis_IOperation_
+  name: IsDescendantOf<T>(IOperation)
+  nameWithType: OperationExtensions.IsDescendantOf<T>(IOperation)
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.IsDescendantOf<T>(Microsoft.CodeAnalysis.IOperation)
+  nameWithType.vb: OperationExtensions.IsDescendantOf(Of T)(IOperation)
+  fullName.vb: ANcpLua.Roslyn.Utilities.OperationExtensions.IsDescendantOf(Of T)(Microsoft.CodeAnalysis.IOperation)
+  name.vb: IsDescendantOf(Of T)(IOperation)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsDescendantOf``1(Microsoft.CodeAnalysis.IOperation)
+    name: IsDescendantOf
+    href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_IsDescendantOf__1_Microsoft_CodeAnalysis_IOperation_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IOperation
+    name: IOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ioperation
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsDescendantOf``1(Microsoft.CodeAnalysis.IOperation)
+    name: IsDescendantOf
+    href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_IsDescendantOf__1_Microsoft_CodeAnalysis_IOperation_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IOperation
+    name: IOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ioperation
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.Ancestors*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.OperationExtensions.Ancestors
+  href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_Ancestors_Microsoft_CodeAnalysis_IOperation_
+  name: Ancestors
+  nameWithType: OperationExtensions.Ancestors
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.Ancestors
+- uid: System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.IOperation}
+  commentId: T:System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.IOperation}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<IOperation>
+  nameWithType: IEnumerable<IOperation>
+  fullName: System.Collections.Generic.IEnumerable<Microsoft.CodeAnalysis.IOperation>
+  nameWithType.vb: IEnumerable(Of IOperation)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Microsoft.CodeAnalysis.IOperation)
+  name.vb: IEnumerable(Of IOperation)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: Microsoft.CodeAnalysis.IOperation
+    name: IOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ioperation
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.IOperation
+    name: IOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ioperation
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.FindAncestor*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.OperationExtensions.FindAncestor
+  href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_FindAncestor__1_Microsoft_CodeAnalysis_IOperation_
+  name: FindAncestor
+  nameWithType: OperationExtensions.FindAncestor
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.FindAncestor
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsDescendantOf*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.OperationExtensions.IsDescendantOf
+  href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_IsDescendantOf__1_Microsoft_CodeAnalysis_IOperation_
+  name: IsDescendantOf
+  nameWithType: OperationExtensions.IsDescendantOf
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.IsDescendantOf
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInNameofOperation*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.OperationExtensions.IsInNameofOperation
+  href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_IsInNameofOperation_Microsoft_CodeAnalysis_IOperation_
+  name: IsInNameofOperation
+  nameWithType: OperationExtensions.IsInNameofOperation
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInNameofOperation
+- uid: Microsoft.CodeAnalysis.INamedTypeSymbol
+  commentId: T:Microsoft.CodeAnalysis.INamedTypeSymbol
+  parent: Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.inamedtypesymbol
+  name: INamedTypeSymbol
+  nameWithType: INamedTypeSymbol
+  fullName: Microsoft.CodeAnalysis.INamedTypeSymbol
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInExpressionTree*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.OperationExtensions.IsInExpressionTree
+  href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_IsInExpressionTree_Microsoft_CodeAnalysis_IOperation_Microsoft_CodeAnalysis_INamedTypeSymbol_
+  name: IsInExpressionTree
+  nameWithType: OperationExtensions.IsInExpressionTree
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInExpressionTree
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInStaticContext*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.OperationExtensions.IsInStaticContext
+  href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_IsInStaticContext_Microsoft_CodeAnalysis_IOperation_System_Threading_CancellationToken_
+  name: IsInStaticContext
+  nameWithType: OperationExtensions.IsInStaticContext
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInStaticContext
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.GetActualType(Microsoft.CodeAnalysis.IOperation)
+  commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.GetActualType(Microsoft.CodeAnalysis.IOperation)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_GetActualType_Microsoft_CodeAnalysis_IOperation_
+  name: GetActualType(IOperation)
+  nameWithType: OperationExtensions.GetActualType(IOperation)
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.GetActualType(Microsoft.CodeAnalysis.IOperation)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.OperationExtensions.GetActualType(Microsoft.CodeAnalysis.IOperation)
+    name: GetActualType
+    href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_GetActualType_Microsoft_CodeAnalysis_IOperation_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IOperation
+    name: IOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ioperation
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.OperationExtensions.GetActualType(Microsoft.CodeAnalysis.IOperation)
+    name: GetActualType
+    href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_GetActualType_Microsoft_CodeAnalysis_IOperation_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IOperation
+    name: IOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ioperation
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.UnwrapImplicitConversions*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.OperationExtensions.UnwrapImplicitConversions
+  href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_UnwrapImplicitConversions_Microsoft_CodeAnalysis_IOperation_
+  name: UnwrapImplicitConversions
+  nameWithType: OperationExtensions.UnwrapImplicitConversions
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.UnwrapImplicitConversions
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.UnwrapAllConversions*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.OperationExtensions.UnwrapAllConversions
+  href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_UnwrapAllConversions_Microsoft_CodeAnalysis_IOperation_
+  name: UnwrapAllConversions
+  nameWithType: OperationExtensions.UnwrapAllConversions
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.UnwrapAllConversions
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.UnwrapParenthesized*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.OperationExtensions.UnwrapParenthesized
+  href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_UnwrapParenthesized_Microsoft_CodeAnalysis_IOperation_
+  name: UnwrapParenthesized
+  nameWithType: OperationExtensions.UnwrapParenthesized
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.UnwrapParenthesized
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.UnwrapLabeledOperations*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.OperationExtensions.UnwrapLabeledOperations
+  href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_UnwrapLabeledOperations_Microsoft_CodeAnalysis_IOperation_
+  name: UnwrapLabeledOperations
+  nameWithType: OperationExtensions.UnwrapLabeledOperations
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.UnwrapLabeledOperations
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.GetActualType*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.OperationExtensions.GetActualType
+  href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_GetActualType_Microsoft_CodeAnalysis_IOperation_
+  name: GetActualType
+  nameWithType: OperationExtensions.GetActualType
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.GetActualType
+- uid: Microsoft.CodeAnalysis.ITypeSymbol
+  commentId: T:Microsoft.CodeAnalysis.ITypeSymbol
+  parent: Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  name: ITypeSymbol
+  nameWithType: ITypeSymbol
+  fullName: Microsoft.CodeAnalysis.ITypeSymbol
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsConstant(Microsoft.CodeAnalysis.IOperation,System.Object@)
+  commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.IsConstant(Microsoft.CodeAnalysis.IOperation,System.Object@)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_IsConstant_Microsoft_CodeAnalysis_IOperation_System_Object__
+  name: IsConstant(IOperation, out object)
+  nameWithType: OperationExtensions.IsConstant(IOperation, out object)
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.IsConstant(Microsoft.CodeAnalysis.IOperation, out object)
+  nameWithType.vb: OperationExtensions.IsConstant(IOperation, Object)
+  fullName.vb: ANcpLua.Roslyn.Utilities.OperationExtensions.IsConstant(Microsoft.CodeAnalysis.IOperation, Object)
+  name.vb: IsConstant(IOperation, Object)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsConstant(Microsoft.CodeAnalysis.IOperation,System.Object@)
+    name: IsConstant
+    href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_IsConstant_Microsoft_CodeAnalysis_IOperation_System_Object__
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IOperation
+    name: IOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ioperation
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsConstant(Microsoft.CodeAnalysis.IOperation,System.Object@)
+    name: IsConstant
+    href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_IsConstant_Microsoft_CodeAnalysis_IOperation_System_Object__
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IOperation
+    name: IOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ioperation
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Int64
+  commentId: T:System.Int64
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint64
+  name: ulong
+  nameWithType: ulong
+  fullName: ulong
+  nameWithType.vb: ULong
+  fullName.vb: ULong
+  name.vb: ULong
+- uid: System.Single
+  commentId: T:System.Single
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: System.Double
+  commentId: T:System.Double
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: System.Decimal
+  commentId: T:System.Decimal
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.decimal
+  name: decimal
+  nameWithType: decimal
+  fullName: decimal
+  nameWithType.vb: Decimal
+  fullName.vb: Decimal
+  name.vb: Decimal
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsConstantZero*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.OperationExtensions.IsConstantZero
+  href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_IsConstantZero_Microsoft_CodeAnalysis_IOperation_
+  name: IsConstantZero
+  nameWithType: OperationExtensions.IsConstantZero
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.IsConstantZero
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsConstantNull*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.OperationExtensions.IsConstantNull
+  href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_IsConstantNull_Microsoft_CodeAnalysis_IOperation_
+  name: IsConstantNull
+  nameWithType: OperationExtensions.IsConstantNull
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.IsConstantNull
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsConstant*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.OperationExtensions.IsConstant
+  href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_IsConstant_Microsoft_CodeAnalysis_IOperation_System_Object__
+  name: IsConstant
+  nameWithType: OperationExtensions.IsConstant
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.IsConstant
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.TryGetConstantValue*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.OperationExtensions.TryGetConstantValue
+  href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_TryGetConstantValue__1_Microsoft_CodeAnalysis_IOperation___0__
+  name: TryGetConstantValue
+  nameWithType: OperationExtensions.TryGetConstantValue
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.TryGetConstantValue
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.GetContainingType(Microsoft.CodeAnalysis.IOperation,System.Threading.CancellationToken)
+  commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.GetContainingType(Microsoft.CodeAnalysis.IOperation,System.Threading.CancellationToken)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_GetContainingType_Microsoft_CodeAnalysis_IOperation_System_Threading_CancellationToken_
+  name: GetContainingType(IOperation, CancellationToken)
+  nameWithType: OperationExtensions.GetContainingType(IOperation, CancellationToken)
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.GetContainingType(Microsoft.CodeAnalysis.IOperation, System.Threading.CancellationToken)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.OperationExtensions.GetContainingType(Microsoft.CodeAnalysis.IOperation,System.Threading.CancellationToken)
+    name: GetContainingType
+    href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_GetContainingType_Microsoft_CodeAnalysis_IOperation_System_Threading_CancellationToken_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IOperation
+    name: IOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ioperation
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.OperationExtensions.GetContainingType(Microsoft.CodeAnalysis.IOperation,System.Threading.CancellationToken)
+    name: GetContainingType
+    href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_GetContainingType_Microsoft_CodeAnalysis_IOperation_System_Threading_CancellationToken_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IOperation
+    name: IOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ioperation
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.GetContainingBlock(Microsoft.CodeAnalysis.IOperation)
+  commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.GetContainingBlock(Microsoft.CodeAnalysis.IOperation)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_GetContainingBlock_Microsoft_CodeAnalysis_IOperation_
+  name: GetContainingBlock(IOperation)
+  nameWithType: OperationExtensions.GetContainingBlock(IOperation)
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.GetContainingBlock(Microsoft.CodeAnalysis.IOperation)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.OperationExtensions.GetContainingBlock(Microsoft.CodeAnalysis.IOperation)
+    name: GetContainingBlock
+    href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_GetContainingBlock_Microsoft_CodeAnalysis_IOperation_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IOperation
+    name: IOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ioperation
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.OperationExtensions.GetContainingBlock(Microsoft.CodeAnalysis.IOperation)
+    name: GetContainingBlock
+    href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_GetContainingBlock_Microsoft_CodeAnalysis_IOperation_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IOperation
+    name: IOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ioperation
+  - name: )
+- uid: Microsoft.CodeAnalysis.IMethodSymbol
+  commentId: T:Microsoft.CodeAnalysis.IMethodSymbol
+  parent: Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.imethodsymbol
+  name: IMethodSymbol
+  nameWithType: IMethodSymbol
+  fullName: Microsoft.CodeAnalysis.IMethodSymbol
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.GetContainingMethod*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.OperationExtensions.GetContainingMethod
+  href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_GetContainingMethod_Microsoft_CodeAnalysis_IOperation_System_Threading_CancellationToken_
+  name: GetContainingMethod
+  nameWithType: OperationExtensions.GetContainingMethod
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.GetContainingMethod
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.GetContainingMethod(Microsoft.CodeAnalysis.IOperation,System.Threading.CancellationToken)
+  commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.GetContainingMethod(Microsoft.CodeAnalysis.IOperation,System.Threading.CancellationToken)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_GetContainingMethod_Microsoft_CodeAnalysis_IOperation_System_Threading_CancellationToken_
+  name: GetContainingMethod(IOperation, CancellationToken)
+  nameWithType: OperationExtensions.GetContainingMethod(IOperation, CancellationToken)
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.GetContainingMethod(Microsoft.CodeAnalysis.IOperation, System.Threading.CancellationToken)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.OperationExtensions.GetContainingMethod(Microsoft.CodeAnalysis.IOperation,System.Threading.CancellationToken)
+    name: GetContainingMethod
+    href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_GetContainingMethod_Microsoft_CodeAnalysis_IOperation_System_Threading_CancellationToken_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IOperation
+    name: IOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ioperation
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.OperationExtensions.GetContainingMethod(Microsoft.CodeAnalysis.IOperation,System.Threading.CancellationToken)
+    name: GetContainingMethod
+    href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_GetContainingMethod_Microsoft_CodeAnalysis_IOperation_System_Threading_CancellationToken_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IOperation
+    name: IOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ioperation
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.GetContainingType*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.OperationExtensions.GetContainingType
+  href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_GetContainingType_Microsoft_CodeAnalysis_IOperation_System_Threading_CancellationToken_
+  name: GetContainingType
+  nameWithType: OperationExtensions.GetContainingType
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.GetContainingType
+- uid: Microsoft.CodeAnalysis.CSharp.LanguageVersion
+  commentId: T:Microsoft.CodeAnalysis.CSharp.LanguageVersion
+  parent: Microsoft.CodeAnalysis.CSharp
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.languageversion
+  name: LanguageVersion
+  nameWithType: LanguageVersion
+  fullName: Microsoft.CodeAnalysis.CSharp.LanguageVersion
+- uid: Microsoft.CodeAnalysis.CSharp.LanguageVersion.Default
+  commentId: F:Microsoft.CodeAnalysis.CSharp.LanguageVersion.Default
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp.languageversion#microsoft-codeanalysis-csharp-languageversion-default
+  name: Default
+  nameWithType: LanguageVersion.Default
+  fullName: Microsoft.CodeAnalysis.CSharp.LanguageVersion.Default
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.GetCSharpLanguageVersion*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.OperationExtensions.GetCSharpLanguageVersion
+  href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_GetCSharpLanguageVersion_Microsoft_CodeAnalysis_IOperation_
+  name: GetCSharpLanguageVersion
+  nameWithType: OperationExtensions.GetCSharpLanguageVersion
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.GetCSharpLanguageVersion
+- uid: Microsoft.CodeAnalysis.CSharp
+  commentId: N:Microsoft.CodeAnalysis.CSharp
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.CodeAnalysis.CSharp
+  nameWithType: Microsoft.CodeAnalysis.CSharp
+  fullName: Microsoft.CodeAnalysis.CSharp
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+  - name: .
+  - uid: Microsoft.CodeAnalysis.CSharp
+    name: CSharp
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+  - name: .
+  - uid: Microsoft.CodeAnalysis.CSharp
+    name: CSharp
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.csharp
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.DescendantsOfType``1(Microsoft.CodeAnalysis.IOperation)
+  commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.DescendantsOfType``1(Microsoft.CodeAnalysis.IOperation)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_DescendantsOfType__1_Microsoft_CodeAnalysis_IOperation_
+  name: DescendantsOfType<T>(IOperation)
+  nameWithType: OperationExtensions.DescendantsOfType<T>(IOperation)
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.DescendantsOfType<T>(Microsoft.CodeAnalysis.IOperation)
+  nameWithType.vb: OperationExtensions.DescendantsOfType(Of T)(IOperation)
+  fullName.vb: ANcpLua.Roslyn.Utilities.OperationExtensions.DescendantsOfType(Of T)(Microsoft.CodeAnalysis.IOperation)
+  name.vb: DescendantsOfType(Of T)(IOperation)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.OperationExtensions.DescendantsOfType``1(Microsoft.CodeAnalysis.IOperation)
+    name: DescendantsOfType
+    href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_DescendantsOfType__1_Microsoft_CodeAnalysis_IOperation_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IOperation
+    name: IOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ioperation
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.OperationExtensions.DescendantsOfType``1(Microsoft.CodeAnalysis.IOperation)
+    name: DescendantsOfType
+    href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_DescendantsOfType__1_Microsoft_CodeAnalysis_IOperation_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IOperation
+    name: IOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ioperation
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.DescendantsAndSelf*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.OperationExtensions.DescendantsAndSelf
+  href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_DescendantsAndSelf_Microsoft_CodeAnalysis_IOperation_
+  name: DescendantsAndSelf
+  nameWithType: OperationExtensions.DescendantsAndSelf
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.DescendantsAndSelf
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.DescendantsAndSelf(Microsoft.CodeAnalysis.IOperation)
+  commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.DescendantsAndSelf(Microsoft.CodeAnalysis.IOperation)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_DescendantsAndSelf_Microsoft_CodeAnalysis_IOperation_
+  name: DescendantsAndSelf(IOperation)
+  nameWithType: OperationExtensions.DescendantsAndSelf(IOperation)
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.DescendantsAndSelf(Microsoft.CodeAnalysis.IOperation)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.OperationExtensions.DescendantsAndSelf(Microsoft.CodeAnalysis.IOperation)
+    name: DescendantsAndSelf
+    href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_DescendantsAndSelf_Microsoft_CodeAnalysis_IOperation_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IOperation
+    name: IOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ioperation
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.OperationExtensions.DescendantsAndSelf(Microsoft.CodeAnalysis.IOperation)
+    name: DescendantsAndSelf
+    href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_DescendantsAndSelf_Microsoft_CodeAnalysis_IOperation_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IOperation
+    name: IOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ioperation
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.Descendants*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.OperationExtensions.Descendants
+  href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_Descendants_Microsoft_CodeAnalysis_IOperation_
+  name: Descendants
+  nameWithType: OperationExtensions.Descendants
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.Descendants
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.ContainsOperation``1(Microsoft.CodeAnalysis.IOperation)
+  commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.ContainsOperation``1(Microsoft.CodeAnalysis.IOperation)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_ContainsOperation__1_Microsoft_CodeAnalysis_IOperation_
+  name: ContainsOperation<T>(IOperation)
+  nameWithType: OperationExtensions.ContainsOperation<T>(IOperation)
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.ContainsOperation<T>(Microsoft.CodeAnalysis.IOperation)
+  nameWithType.vb: OperationExtensions.ContainsOperation(Of T)(IOperation)
+  fullName.vb: ANcpLua.Roslyn.Utilities.OperationExtensions.ContainsOperation(Of T)(Microsoft.CodeAnalysis.IOperation)
+  name.vb: ContainsOperation(Of T)(IOperation)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.OperationExtensions.ContainsOperation``1(Microsoft.CodeAnalysis.IOperation)
+    name: ContainsOperation
+    href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_ContainsOperation__1_Microsoft_CodeAnalysis_IOperation_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IOperation
+    name: IOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ioperation
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.OperationExtensions.ContainsOperation``1(Microsoft.CodeAnalysis.IOperation)
+    name: ContainsOperation
+    href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_ContainsOperation__1_Microsoft_CodeAnalysis_IOperation_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IOperation
+    name: IOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ioperation
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.DescendantsOfType*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.OperationExtensions.DescendantsOfType
+  href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_DescendantsOfType__1_Microsoft_CodeAnalysis_IOperation_
+  name: DescendantsOfType
+  nameWithType: OperationExtensions.DescendantsOfType
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.DescendantsOfType
+- uid: System.Collections.Generic.IEnumerable{{T}}
+  commentId: T:System.Collections.Generic.IEnumerable{``0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.ContainsOperation*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.OperationExtensions.ContainsOperation
+  href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_ContainsOperation__1_Microsoft_CodeAnalysis_IOperation_
+  name: ContainsOperation
+  nameWithType: OperationExtensions.ContainsOperation
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.ContainsOperation
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideLockStatement(Microsoft.CodeAnalysis.IOperation)
+  commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideLockStatement(Microsoft.CodeAnalysis.IOperation)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_IsInsideLockStatement_Microsoft_CodeAnalysis_IOperation_
+  name: IsInsideLockStatement(IOperation)
+  nameWithType: OperationExtensions.IsInsideLockStatement(IOperation)
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideLockStatement(Microsoft.CodeAnalysis.IOperation)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideLockStatement(Microsoft.CodeAnalysis.IOperation)
+    name: IsInsideLockStatement
+    href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_IsInsideLockStatement_Microsoft_CodeAnalysis_IOperation_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IOperation
+    name: IOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ioperation
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideLockStatement(Microsoft.CodeAnalysis.IOperation)
+    name: IsInsideLockStatement
+    href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_IsInsideLockStatement_Microsoft_CodeAnalysis_IOperation_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IOperation
+    name: IOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ioperation
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideLoop*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideLoop
+  href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_IsInsideLoop_Microsoft_CodeAnalysis_IOperation_
+  name: IsInsideLoop
+  nameWithType: OperationExtensions.IsInsideLoop
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideLoop
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideCatchBlock(Microsoft.CodeAnalysis.IOperation)
+  commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideCatchBlock(Microsoft.CodeAnalysis.IOperation)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_IsInsideCatchBlock_Microsoft_CodeAnalysis_IOperation_
+  name: IsInsideCatchBlock(IOperation)
+  nameWithType: OperationExtensions.IsInsideCatchBlock(IOperation)
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideCatchBlock(Microsoft.CodeAnalysis.IOperation)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideCatchBlock(Microsoft.CodeAnalysis.IOperation)
+    name: IsInsideCatchBlock
+    href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_IsInsideCatchBlock_Microsoft_CodeAnalysis_IOperation_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IOperation
+    name: IOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ioperation
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideCatchBlock(Microsoft.CodeAnalysis.IOperation)
+    name: IsInsideCatchBlock
+    href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_IsInsideCatchBlock_Microsoft_CodeAnalysis_IOperation_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IOperation
+    name: IOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ioperation
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideFinallyBlock(Microsoft.CodeAnalysis.IOperation)
+  commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideFinallyBlock(Microsoft.CodeAnalysis.IOperation)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_IsInsideFinallyBlock_Microsoft_CodeAnalysis_IOperation_
+  name: IsInsideFinallyBlock(IOperation)
+  nameWithType: OperationExtensions.IsInsideFinallyBlock(IOperation)
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideFinallyBlock(Microsoft.CodeAnalysis.IOperation)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideFinallyBlock(Microsoft.CodeAnalysis.IOperation)
+    name: IsInsideFinallyBlock
+    href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_IsInsideFinallyBlock_Microsoft_CodeAnalysis_IOperation_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IOperation
+    name: IOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ioperation
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideFinallyBlock(Microsoft.CodeAnalysis.IOperation)
+    name: IsInsideFinallyBlock
+    href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_IsInsideFinallyBlock_Microsoft_CodeAnalysis_IOperation_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IOperation
+    name: IOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ioperation
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideTryBlock*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideTryBlock
+  href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_IsInsideTryBlock_Microsoft_CodeAnalysis_IOperation_
+  name: IsInsideTryBlock
+  nameWithType: OperationExtensions.IsInsideTryBlock
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideTryBlock
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideCatchBlock*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideCatchBlock
+  href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_IsInsideCatchBlock_Microsoft_CodeAnalysis_IOperation_
+  name: IsInsideCatchBlock
+  nameWithType: OperationExtensions.IsInsideCatchBlock
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideCatchBlock
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideFinallyBlock*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideFinallyBlock
+  href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_IsInsideFinallyBlock_Microsoft_CodeAnalysis_IOperation_
+  name: IsInsideFinallyBlock
+  nameWithType: OperationExtensions.IsInsideFinallyBlock
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideFinallyBlock
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideUsingStatement(Microsoft.CodeAnalysis.IOperation)
+  commentId: M:ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideUsingStatement(Microsoft.CodeAnalysis.IOperation)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_IsInsideUsingStatement_Microsoft_CodeAnalysis_IOperation_
+  name: IsInsideUsingStatement(IOperation)
+  nameWithType: OperationExtensions.IsInsideUsingStatement(IOperation)
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideUsingStatement(Microsoft.CodeAnalysis.IOperation)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideUsingStatement(Microsoft.CodeAnalysis.IOperation)
+    name: IsInsideUsingStatement
+    href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_IsInsideUsingStatement_Microsoft_CodeAnalysis_IOperation_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IOperation
+    name: IOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ioperation
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideUsingStatement(Microsoft.CodeAnalysis.IOperation)
+    name: IsInsideUsingStatement
+    href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_IsInsideUsingStatement_Microsoft_CodeAnalysis_IOperation_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IOperation
+    name: IOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ioperation
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideLockStatement*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideLockStatement
+  href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_IsInsideLockStatement_Microsoft_CodeAnalysis_IOperation_
+  name: IsInsideLockStatement
+  nameWithType: OperationExtensions.IsInsideLockStatement
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideLockStatement
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideUsingStatement*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideUsingStatement
+  href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_IsInsideUsingStatement_Microsoft_CodeAnalysis_IOperation_
+  name: IsInsideUsingStatement
+  nameWithType: OperationExtensions.IsInsideUsingStatement
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideUsingStatement
+- uid: Microsoft.CodeAnalysis.Operations.IBlockOperation
+  commentId: T:Microsoft.CodeAnalysis.Operations.IBlockOperation
+  parent: Microsoft.CodeAnalysis.Operations
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.operations.iblockoperation
+  name: IBlockOperation
+  nameWithType: IBlockOperation
+  fullName: Microsoft.CodeAnalysis.Operations.IBlockOperation
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.GetContainingBlock*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.OperationExtensions.GetContainingBlock
+  href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_GetContainingBlock_Microsoft_CodeAnalysis_IOperation_
+  name: GetContainingBlock
+  nameWithType: OperationExtensions.GetContainingBlock
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.GetContainingBlock
+- uid: Microsoft.CodeAnalysis.Operations
+  commentId: N:Microsoft.CodeAnalysis.Operations
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.CodeAnalysis.Operations
+  nameWithType: Microsoft.CodeAnalysis.Operations
+  fullName: Microsoft.CodeAnalysis.Operations
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+  - name: .
+  - uid: Microsoft.CodeAnalysis.Operations
+    name: Operations
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.operations
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+  - name: .
+  - uid: Microsoft.CodeAnalysis.Operations
+    name: Operations
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.operations
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsAssignmentTarget*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.OperationExtensions.IsAssignmentTarget
+  href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_IsAssignmentTarget_Microsoft_CodeAnalysis_IOperation_
+  name: IsAssignmentTarget
+  nameWithType: OperationExtensions.IsAssignmentTarget
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.IsAssignmentTarget
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsLeftSideOfAssignment*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.OperationExtensions.IsLeftSideOfAssignment
+  href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_IsLeftSideOfAssignment_Microsoft_CodeAnalysis_IOperation_
+  name: IsLeftSideOfAssignment
+  nameWithType: OperationExtensions.IsLeftSideOfAssignment
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.IsLeftSideOfAssignment
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions.IsPassedByRef*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.OperationExtensions.IsPassedByRef
+  href: ANcpLua.Roslyn.Utilities.OperationExtensions.html#ANcpLua_Roslyn_Utilities_OperationExtensions_IsPassedByRef_Microsoft_CodeAnalysis_IOperation_
+  name: IsPassedByRef
+  nameWithType: OperationExtensions.IsPassedByRef
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions.IsPassedByRef

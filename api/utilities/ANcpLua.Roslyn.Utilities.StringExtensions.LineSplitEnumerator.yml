@@ -1,0 +1,668 @@
+### YamlMime:ManagedReference
+items:
+- uid: ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEnumerator
+  commentId: T:ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEnumerator
+  id: StringExtensions.LineSplitEnumerator
+  parent: ANcpLua.Roslyn.Utilities
+  children:
+  - ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEnumerator.#ctor(System.ReadOnlySpan{System.Char})
+  - ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEnumerator.Current
+  - ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEnumerator.GetEnumerator
+  - ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEnumerator.MoveNext
+  langs:
+  - csharp
+  - vb
+  name: StringExtensions.LineSplitEnumerator
+  nameWithType: StringExtensions.LineSplitEnumerator
+  fullName: ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEnumerator
+  type: Struct
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/StringExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: LineSplitEnumerator
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/StringExtensions.cs
+    startLine: 423
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: A zero-allocation enumerator for splitting strings into lines.
+  remarks: >-
+    <p>
+        This ref struct provides efficient line-by-line iteration over a string
+        without allocating intermediate string arrays. It correctly handles
+        <code>\n</code>, <code>\r</code>, and <code>\r\n</code> line endings.
+    </p>
+
+    <p>
+        Use with the <xref href="ANcpLua.Roslyn.Utilities.StringExtensions.SplitLines(System.String)" data-throw-if-not-resolved="false"></xref> extension method:
+    </p>
+
+
+    <pre><code class="lang-csharp">foreach (var entry in text.SplitLines())
+
+    {
+        ReadOnlySpan&lt;char&gt; line = entry.Line;
+        ReadOnlySpan&lt;char&gt; separator = entry.Separator;
+    }</code></pre>
+  example: []
+  syntax:
+    content: public ref struct StringExtensions.LineSplitEnumerator
+    content.vb: Public Structure StringExtensions.LineSplitEnumerator
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.StringExtensions.SplitLines(System.String)
+    commentId: M:ANcpLua.Roslyn.Utilities.StringExtensions.SplitLines(System.String)
+  - linkId: ANcpLua.Roslyn.Utilities.StringExtensions.SplitLines(System.ReadOnlySpan{System.Char})
+    commentId: M:ANcpLua.Roslyn.Utilities.StringExtensions.SplitLines(System.ReadOnlySpan{System.Char})
+  - linkId: ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEntry
+    commentId: T:ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEntry
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEnumerator.#ctor(System.ReadOnlySpan{System.Char})
+  commentId: M:ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEnumerator.#ctor(System.ReadOnlySpan{System.Char})
+  id: '#ctor(System.ReadOnlySpan{System.Char})'
+  parent: ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEnumerator
+  langs:
+  - csharp
+  - vb
+  name: LineSplitEnumerator(ReadOnlySpan<char>)
+  nameWithType: StringExtensions.LineSplitEnumerator.LineSplitEnumerator(ReadOnlySpan<char>)
+  fullName: ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEnumerator.LineSplitEnumerator(System.ReadOnlySpan<char>)
+  type: Constructor
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/StringExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: .ctor
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/StringExtensions.cs
+    startLine: 433
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Initializes a new instance of the <xref href="ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEnumerator" data-throw-if-not-resolved="false"></xref> struct.
+  example: []
+  syntax:
+    content: public LineSplitEnumerator(ReadOnlySpan<char> str)
+    parameters:
+    - id: str
+      type: System.ReadOnlySpan{System.Char}
+      description: The span of characters to enumerate lines from.
+    content.vb: Public Sub New(str As ReadOnlySpan(Of Char))
+  overload: ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEnumerator.#ctor*
+  nameWithType.vb: StringExtensions.LineSplitEnumerator.New(ReadOnlySpan(Of Char))
+  fullName.vb: ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEnumerator.New(System.ReadOnlySpan(Of Char))
+  name.vb: New(ReadOnlySpan(Of Char))
+- uid: ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEnumerator.GetEnumerator
+  commentId: M:ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEnumerator.GetEnumerator
+  id: GetEnumerator
+  parent: ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEnumerator
+  langs:
+  - csharp
+  - vb
+  name: GetEnumerator()
+  nameWithType: StringExtensions.LineSplitEnumerator.GetEnumerator()
+  fullName: ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEnumerator.GetEnumerator()
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/StringExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: GetEnumerator
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/StringExtensions.cs
+    startLine: 446
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Returns this enumerator instance for use with foreach.
+  remarks: This method enables the use of this enumerator directly in a foreach statement.
+  example: []
+  syntax:
+    content: public readonly StringExtensions.LineSplitEnumerator GetEnumerator()
+    return:
+      type: ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEnumerator
+      description: This enumerator instance.
+    content.vb: Public Function GetEnumerator() As StringExtensions.LineSplitEnumerator
+  overload: ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEnumerator.GetEnumerator*
+- uid: ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEnumerator.MoveNext
+  commentId: M:ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEnumerator.MoveNext
+  id: MoveNext
+  parent: ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEnumerator
+  langs:
+  - csharp
+  - vb
+  name: MoveNext()
+  nameWithType: StringExtensions.LineSplitEnumerator.MoveNext()
+  fullName: ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEnumerator.MoveNext()
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/StringExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: MoveNext
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/StringExtensions.cs
+    startLine: 455
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Advances the enumerator to the next line in the span.
+  example: []
+  syntax:
+    content: public bool MoveNext()
+    return:
+      type: System.Boolean
+      description: >-
+        <code>true</code> if the enumerator was successfully advanced to the next line;
+
+        <code>false</code> if the enumerator has passed the end of the span.
+    content.vb: Public Function MoveNext() As Boolean
+  overload: ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEnumerator.MoveNext*
+- uid: ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEnumerator.Current
+  commentId: P:ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEnumerator.Current
+  id: Current
+  parent: ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEnumerator
+  langs:
+  - csharp
+  - vb
+  name: Current
+  nameWithType: StringExtensions.LineSplitEnumerator.Current
+  fullName: ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEnumerator.Current
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/StringExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Current
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/StringExtensions.cs
+    startLine: 491
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Gets the current line entry at the enumerator's position.
+  example: []
+  syntax:
+    content: public readonly StringExtensions.LineSplitEntry Current { get; }
+    parameters: []
+    return:
+      type: ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEntry
+      description: A <xref href="ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEntry" data-throw-if-not-resolved="false"></xref> containing the current line content and its separator.
+    content.vb: Public Property Current As StringExtensions.LineSplitEntry
+  overload: ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEnumerator.Current*
+references:
+- uid: ANcpLua.Roslyn.Utilities.StringExtensions.SplitLines(System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.StringExtensions.SplitLines(System.String)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.StringExtensions.html#ANcpLua_Roslyn_Utilities_StringExtensions_SplitLines_System_String_
+  name: SplitLines(string)
+  nameWithType: StringExtensions.SplitLines(string)
+  fullName: ANcpLua.Roslyn.Utilities.StringExtensions.SplitLines(string)
+  nameWithType.vb: StringExtensions.SplitLines(String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.StringExtensions.SplitLines(String)
+  name.vb: SplitLines(String)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.StringExtensions.SplitLines(System.String)
+    name: SplitLines
+    href: ANcpLua.Roslyn.Utilities.StringExtensions.html#ANcpLua_Roslyn_Utilities_StringExtensions_SplitLines_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.StringExtensions.SplitLines(System.String)
+    name: SplitLines
+    href: ANcpLua.Roslyn.Utilities.StringExtensions.html#ANcpLua_Roslyn_Utilities_StringExtensions_SplitLines_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.StringExtensions.SplitLines(System.ReadOnlySpan{System.Char})
+  commentId: M:ANcpLua.Roslyn.Utilities.StringExtensions.SplitLines(System.ReadOnlySpan{System.Char})
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.StringExtensions.html#ANcpLua_Roslyn_Utilities_StringExtensions_SplitLines_System_ReadOnlySpan_System_Char__
+  name: SplitLines(ReadOnlySpan<char>)
+  nameWithType: StringExtensions.SplitLines(ReadOnlySpan<char>)
+  fullName: ANcpLua.Roslyn.Utilities.StringExtensions.SplitLines(System.ReadOnlySpan<char>)
+  nameWithType.vb: StringExtensions.SplitLines(ReadOnlySpan(Of Char))
+  fullName.vb: ANcpLua.Roslyn.Utilities.StringExtensions.SplitLines(System.ReadOnlySpan(Of Char))
+  name.vb: SplitLines(ReadOnlySpan(Of Char))
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.StringExtensions.SplitLines(System.ReadOnlySpan{System.Char})
+    name: SplitLines
+    href: ANcpLua.Roslyn.Utilities.StringExtensions.html#ANcpLua_Roslyn_Utilities_StringExtensions_SplitLines_System_ReadOnlySpan_System_Char__
+  - name: (
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - uid: System.Char
+    name: char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.StringExtensions.SplitLines(System.ReadOnlySpan{System.Char})
+    name: SplitLines
+    href: ANcpLua.Roslyn.Utilities.StringExtensions.html#ANcpLua_Roslyn_Utilities_StringExtensions_SplitLines_System_ReadOnlySpan_System_Char__
+  - name: (
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Char
+    name: Char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: )
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEntry
+  commentId: T:ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEntry
+  parent: ANcpLua.Roslyn.Utilities
+  href: ANcpLua.Roslyn.Utilities.StringExtensions.html
+  name: StringExtensions.LineSplitEntry
+  nameWithType: StringExtensions.LineSplitEntry
+  fullName: ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEntry
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.StringExtensions
+    name: StringExtensions
+    href: ANcpLua.Roslyn.Utilities.StringExtensions.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEntry
+    name: LineSplitEntry
+    href: ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEntry.html
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.StringExtensions
+    name: StringExtensions
+    href: ANcpLua.Roslyn.Utilities.StringExtensions.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEntry
+    name: LineSplitEntry
+    href: ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEntry.html
+- uid: ANcpLua.Roslyn.Utilities
+  commentId: N:ANcpLua.Roslyn.Utilities
+  href: ANcpLua.html
+  name: ANcpLua.Roslyn.Utilities
+  nameWithType: ANcpLua.Roslyn.Utilities
+  fullName: ANcpLua.Roslyn.Utilities
+  spec.csharp:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  spec.vb:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEnumerator
+  commentId: T:ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEnumerator
+  parent: ANcpLua.Roslyn.Utilities
+  href: ANcpLua.Roslyn.Utilities.StringExtensions.html
+  name: StringExtensions.LineSplitEnumerator
+  nameWithType: StringExtensions.LineSplitEnumerator
+  fullName: ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEnumerator
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.StringExtensions
+    name: StringExtensions
+    href: ANcpLua.Roslyn.Utilities.StringExtensions.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEnumerator
+    name: LineSplitEnumerator
+    href: ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEnumerator.html
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.StringExtensions
+    name: StringExtensions
+    href: ANcpLua.Roslyn.Utilities.StringExtensions.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEnumerator
+    name: LineSplitEnumerator
+    href: ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEnumerator.html
+- uid: ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEnumerator.#ctor*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEnumerator.#ctor
+  href: ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEnumerator.html#ANcpLua_Roslyn_Utilities_StringExtensions_LineSplitEnumerator__ctor_System_ReadOnlySpan_System_Char__
+  name: LineSplitEnumerator
+  nameWithType: StringExtensions.LineSplitEnumerator.LineSplitEnumerator
+  fullName: ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEnumerator.LineSplitEnumerator
+  nameWithType.vb: StringExtensions.LineSplitEnumerator.New
+  fullName.vb: ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEnumerator.New
+  name.vb: New
+- uid: System.ReadOnlySpan{System.Char}
+  commentId: T:System.ReadOnlySpan{System.Char}
+  parent: System
+  definition: System.ReadOnlySpan`1
+  href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  name: ReadOnlySpan<char>
+  nameWithType: ReadOnlySpan<char>
+  fullName: System.ReadOnlySpan<char>
+  nameWithType.vb: ReadOnlySpan(Of Char)
+  fullName.vb: System.ReadOnlySpan(Of Char)
+  name.vb: ReadOnlySpan(Of Char)
+  spec.csharp:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - uid: System.Char
+    name: char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Char
+    name: Char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: )
+- uid: System.ReadOnlySpan`1
+  commentId: T:System.ReadOnlySpan`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  name: ReadOnlySpan<T>
+  nameWithType: ReadOnlySpan<T>
+  fullName: System.ReadOnlySpan<T>
+  nameWithType.vb: ReadOnlySpan(Of T)
+  fullName.vb: System.ReadOnlySpan(Of T)
+  name.vb: ReadOnlySpan(Of T)
+  spec.csharp:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEnumerator.GetEnumerator*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEnumerator.GetEnumerator
+  href: ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEnumerator.html#ANcpLua_Roslyn_Utilities_StringExtensions_LineSplitEnumerator_GetEnumerator
+  name: GetEnumerator
+  nameWithType: StringExtensions.LineSplitEnumerator.GetEnumerator
+  fullName: ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEnumerator.GetEnumerator
+- uid: ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEnumerator.MoveNext*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEnumerator.MoveNext
+  href: ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEnumerator.html#ANcpLua_Roslyn_Utilities_StringExtensions_LineSplitEnumerator_MoveNext
+  name: MoveNext
+  nameWithType: StringExtensions.LineSplitEnumerator.MoveNext
+  fullName: ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEnumerator.MoveNext
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEnumerator.Current*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEnumerator.Current
+  href: ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEnumerator.html#ANcpLua_Roslyn_Utilities_StringExtensions_LineSplitEnumerator_Current
+  name: Current
+  nameWithType: StringExtensions.LineSplitEnumerator.Current
+  fullName: ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEnumerator.Current

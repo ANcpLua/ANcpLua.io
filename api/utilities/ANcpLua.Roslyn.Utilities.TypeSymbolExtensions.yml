@@ -1,0 +1,2913 @@
+### YamlMime:ManagedReference
+items:
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions
+  commentId: T:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions
+  id: TypeSymbolExtensions
+  parent: ANcpLua.Roslyn.Utilities
+  children:
+  - ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.GetAllInterfacesIncludingThis(Microsoft.CodeAnalysis.ITypeSymbol)
+  - ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.GetElementType(Microsoft.CodeAnalysis.ITypeSymbol)
+  - ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.GetEnumerationType(Microsoft.CodeAnalysis.ITypeSymbol)
+  - ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.GetUnderlyingNullableTypeOrSelf(Microsoft.CodeAnalysis.ITypeSymbol)
+  - ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.Implements(Microsoft.CodeAnalysis.ITypeSymbol,Microsoft.CodeAnalysis.ITypeSymbol)
+  - ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.InheritsFrom(Microsoft.CodeAnalysis.ITypeSymbol,Microsoft.CodeAnalysis.ITypeSymbol)
+  - ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsBoolean(Microsoft.CodeAnalysis.ITypeSymbol)
+  - ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsByte(Microsoft.CodeAnalysis.ITypeSymbol)
+  - ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsChar(Microsoft.CodeAnalysis.ITypeSymbol)
+  - ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsDateTime(Microsoft.CodeAnalysis.ITypeSymbol)
+  - ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsDecimal(Microsoft.CodeAnalysis.ITypeSymbol)
+  - ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsDouble(Microsoft.CodeAnalysis.ITypeSymbol)
+  - ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsEnumerableType(Microsoft.CodeAnalysis.ITypeSymbol)
+  - ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsEnumeration(Microsoft.CodeAnalysis.ITypeSymbol)
+  - ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsInt16(Microsoft.CodeAnalysis.ITypeSymbol)
+  - ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsInt32(Microsoft.CodeAnalysis.ITypeSymbol)
+  - ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsInt64(Microsoft.CodeAnalysis.ITypeSymbol)
+  - ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsMemoryType(Microsoft.CodeAnalysis.ITypeSymbol)
+  - ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsNumberType(Microsoft.CodeAnalysis.ITypeSymbol)
+  - ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsObject(Microsoft.CodeAnalysis.ITypeSymbol)
+  - ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsOrImplements(Microsoft.CodeAnalysis.ITypeSymbol,Microsoft.CodeAnalysis.ITypeSymbol)
+  - ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsOrInheritsFrom(Microsoft.CodeAnalysis.ITypeSymbol,Microsoft.CodeAnalysis.ITypeSymbol)
+  - ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsPotentialStatic(Microsoft.CodeAnalysis.INamedTypeSymbol,System.Threading.CancellationToken)
+  - ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsSByte(Microsoft.CodeAnalysis.ITypeSymbol)
+  - ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsSingle(Microsoft.CodeAnalysis.ITypeSymbol)
+  - ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsSpanType(Microsoft.CodeAnalysis.ITypeSymbol)
+  - ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsString(Microsoft.CodeAnalysis.ITypeSymbol)
+  - ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsTaskType(Microsoft.CodeAnalysis.ITypeSymbol)
+  - ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsUInt16(Microsoft.CodeAnalysis.ITypeSymbol)
+  - ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsUInt32(Microsoft.CodeAnalysis.ITypeSymbol)
+  - ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsUInt64(Microsoft.CodeAnalysis.ITypeSymbol)
+  - ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsUnitTestClass(Microsoft.CodeAnalysis.INamedTypeSymbol)
+  langs:
+  - csharp
+  - vb
+  name: TypeSymbolExtensions
+  nameWithType: TypeSymbolExtensions
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions
+  type: Class
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: TypeSymbolExtensions
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
+    startLine: 24
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Extension methods for <xref href="Microsoft.CodeAnalysis.ITypeSymbol" data-throw-if-not-resolved="false"></xref>.
+  remarks: >-
+    <p>
+        This class provides extension methods for working with type symbols in Roslyn analyzers
+        and source generators. It includes functionality for:
+    </p>
+
+    <ul><li>Type inheritance and interface implementation checks</li><li>Special type detection (numeric, span, memory, task, enumerable)</li><li>Nullable type unwrapping</li><li>Unit test class detection</li><li>Static class candidacy analysis</li></ul>
+  example: []
+  syntax:
+    content: public static class TypeSymbolExtensions
+    content.vb: Public Module TypeSymbolExtensions
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.SymbolExtensions
+    commentId: T:ANcpLua.Roslyn.Utilities.SymbolExtensions
+  - linkId: ANcpLua.Roslyn.Utilities.MethodSymbolExtensions
+    commentId: T:ANcpLua.Roslyn.Utilities.MethodSymbolExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.GetAllInterfacesIncludingThis(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.GetAllInterfacesIncludingThis(Microsoft.CodeAnalysis.ITypeSymbol)
+  id: GetAllInterfacesIncludingThis(Microsoft.CodeAnalysis.ITypeSymbol)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetAllInterfacesIncludingThis(ITypeSymbol)
+  nameWithType: TypeSymbolExtensions.GetAllInterfacesIncludingThis(ITypeSymbol)
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.GetAllInterfacesIncludingThis(Microsoft.CodeAnalysis.ITypeSymbol)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: GetAllInterfacesIncludingThis
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
+    startLine: 44
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Gets all interfaces implemented by the type, including the type itself if it is an interface.
+  remarks: >-
+    Unlike <xref href="Microsoft.CodeAnalysis.ITypeSymbol.AllInterfaces" data-throw-if-not-resolved="false"></xref>, which only returns inherited interfaces,
+
+    this method includes the type itself when querying an interface type.
+  example: []
+  syntax:
+    content: public static IEnumerable<INamedTypeSymbol> GetAllInterfacesIncludingThis(this ITypeSymbol type)
+    parameters:
+    - id: type
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The type symbol to get interfaces from.
+    return:
+      type: System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.INamedTypeSymbol}
+      description: >-
+        An enumerable of all interfaces. If <code class="paramref">type</code> is an interface,
+
+        it is included in the result along with all its inherited interfaces.
+    content.vb: Public Shared Function GetAllInterfacesIncludingThis(type As ITypeSymbol) As IEnumerable(Of INamedTypeSymbol)
+  overload: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.GetAllInterfacesIncludingThis*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.Implements(Microsoft.CodeAnalysis.ITypeSymbol,Microsoft.CodeAnalysis.ITypeSymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.Implements(Microsoft.CodeAnalysis.ITypeSymbol,Microsoft.CodeAnalysis.ITypeSymbol)
+  - linkId: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsOrImplements(Microsoft.CodeAnalysis.ITypeSymbol,Microsoft.CodeAnalysis.ITypeSymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsOrImplements(Microsoft.CodeAnalysis.ITypeSymbol,Microsoft.CodeAnalysis.ITypeSymbol)
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.InheritsFrom(Microsoft.CodeAnalysis.ITypeSymbol,Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.InheritsFrom(Microsoft.CodeAnalysis.ITypeSymbol,Microsoft.CodeAnalysis.ITypeSymbol)
+  id: InheritsFrom(Microsoft.CodeAnalysis.ITypeSymbol,Microsoft.CodeAnalysis.ITypeSymbol)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions
+  langs:
+  - csharp
+  - vb
+  name: InheritsFrom(ITypeSymbol, ITypeSymbol?)
+  nameWithType: TypeSymbolExtensions.InheritsFrom(ITypeSymbol, ITypeSymbol?)
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.InheritsFrom(Microsoft.CodeAnalysis.ITypeSymbol, Microsoft.CodeAnalysis.ITypeSymbol?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: InheritsFrom
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
+    startLine: 97
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Determines whether a type inherits from a specified base type.
+  remarks: >-
+    <p>
+        This method walks the inheritance chain using <xref href="Microsoft.CodeAnalysis.SymbolEqualityComparer.Default" data-throw-if-not-resolved="false"></xref>
+        for comparison. It does not consider the type itself as inheriting from itself.
+    </p>
+
+    <ul><li>Returns <code>false</code> if <code class="paramref">classSymbol</code> equals <code class="paramref">baseClassType</code></li><li>Walks the entire base type chain until <xref href="System.Object" data-throw-if-not-resolved="false"></xref> or <code>null</code></li><li>Use <xref href="ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsOrInheritsFrom(Microsoft.CodeAnalysis.ITypeSymbol%2cMicrosoft.CodeAnalysis.ITypeSymbol)" data-throw-if-not-resolved="false"></xref> if you need to include the type itself in the check</li></ul>
+  example:
+  - >-
+    <pre><code class="lang-csharp">// Check if a type inherits from a specific base class
+
+    INamedTypeSymbol? exceptionType = compilation.GetTypeByMetadataName("System.Exception");
+
+    if (typeSymbol.InheritsFrom(exceptionType))
+
+    {
+        // Type is a custom exception (but not System.Exception itself)
+    }
+
+
+    // Walk inheritance chain manually for analysis
+
+    ITypeSymbol? current = typeSymbol.BaseType;
+
+    while (current is not null)
+
+    {
+        // Analyze each base type
+        current = current.BaseType;
+    }</code></pre>
+  syntax:
+    content: public static bool InheritsFrom(this ITypeSymbol classSymbol, ITypeSymbol? baseClassType)
+    parameters:
+    - id: classSymbol
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The type symbol to check.
+    - id: baseClassType
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The potential base type to check against.
+    return:
+      type: System.Boolean
+      description: >-
+        <code>true</code> if <code class="paramref">classSymbol</code> inherits from <code class="paramref">baseClassType</code>;
+
+        otherwise, <code>false</code>.
+    content.vb: Public Shared Function InheritsFrom(classSymbol As ITypeSymbol, baseClassType As ITypeSymbol) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.InheritsFrom*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsOrInheritsFrom(Microsoft.CodeAnalysis.ITypeSymbol,Microsoft.CodeAnalysis.ITypeSymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsOrInheritsFrom(Microsoft.CodeAnalysis.ITypeSymbol,Microsoft.CodeAnalysis.ITypeSymbol)
+  nameWithType.vb: TypeSymbolExtensions.InheritsFrom(ITypeSymbol, ITypeSymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.InheritsFrom(Microsoft.CodeAnalysis.ITypeSymbol, Microsoft.CodeAnalysis.ITypeSymbol)
+  name.vb: InheritsFrom(ITypeSymbol, ITypeSymbol)
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.Implements(Microsoft.CodeAnalysis.ITypeSymbol,Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.Implements(Microsoft.CodeAnalysis.ITypeSymbol,Microsoft.CodeAnalysis.ITypeSymbol)
+  id: Implements(Microsoft.CodeAnalysis.ITypeSymbol,Microsoft.CodeAnalysis.ITypeSymbol)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions
+  langs:
+  - csharp
+  - vb
+  name: Implements(ITypeSymbol, ITypeSymbol?)
+  nameWithType: TypeSymbolExtensions.Implements(ITypeSymbol, ITypeSymbol?)
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.Implements(Microsoft.CodeAnalysis.ITypeSymbol, Microsoft.CodeAnalysis.ITypeSymbol?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Implements
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
+    startLine: 129
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Determines whether a type implements a specified interface.
+  remarks: >-
+    This method uses <xref href="Microsoft.CodeAnalysis.SymbolEqualityComparer.Default" data-throw-if-not-resolved="false"></xref> for comparison
+
+    and checks against <xref href="Microsoft.CodeAnalysis.ITypeSymbol.AllInterfaces" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static bool Implements(this ITypeSymbol classSymbol, ITypeSymbol? interfaceType)
+    parameters:
+    - id: classSymbol
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The type symbol to check.
+    - id: interfaceType
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The interface type to check for.
+    return:
+      type: System.Boolean
+      description: >-
+        <code>true</code> if <code class="paramref">classSymbol</code> implements <code class="paramref">interfaceType</code>;
+
+        otherwise, <code>false</code>.
+    content.vb: Public Shared Function [Implements](classSymbol As ITypeSymbol, interfaceType As ITypeSymbol) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.Implements*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsOrImplements(Microsoft.CodeAnalysis.ITypeSymbol,Microsoft.CodeAnalysis.ITypeSymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsOrImplements(Microsoft.CodeAnalysis.ITypeSymbol,Microsoft.CodeAnalysis.ITypeSymbol)
+  - linkId: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.GetAllInterfacesIncludingThis(Microsoft.CodeAnalysis.ITypeSymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.GetAllInterfacesIncludingThis(Microsoft.CodeAnalysis.ITypeSymbol)
+  nameWithType.vb: TypeSymbolExtensions.Implements(ITypeSymbol, ITypeSymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.Implements(Microsoft.CodeAnalysis.ITypeSymbol, Microsoft.CodeAnalysis.ITypeSymbol)
+  name.vb: Implements(ITypeSymbol, ITypeSymbol)
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsOrImplements(Microsoft.CodeAnalysis.ITypeSymbol,Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsOrImplements(Microsoft.CodeAnalysis.ITypeSymbol,Microsoft.CodeAnalysis.ITypeSymbol)
+  id: IsOrImplements(Microsoft.CodeAnalysis.ITypeSymbol,Microsoft.CodeAnalysis.ITypeSymbol)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsOrImplements(ITypeSymbol, ITypeSymbol?)
+  nameWithType: TypeSymbolExtensions.IsOrImplements(ITypeSymbol, ITypeSymbol?)
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsOrImplements(Microsoft.CodeAnalysis.ITypeSymbol, Microsoft.CodeAnalysis.ITypeSymbol?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsOrImplements
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
+    startLine: 157
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Determines whether a type is or implements a specified interface.
+  remarks: >-
+    Unlike <xref href="ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.Implements(Microsoft.CodeAnalysis.ITypeSymbol%2cMicrosoft.CodeAnalysis.ITypeSymbol)" data-throw-if-not-resolved="false"></xref>, this method returns <code>true</code> if the symbol itself
+
+    is the interface being checked.
+  example: []
+  syntax:
+    content: public static bool IsOrImplements(this ITypeSymbol symbol, ITypeSymbol? interfaceType)
+    parameters:
+    - id: symbol
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The type symbol to check.
+    - id: interfaceType
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The interface type to check for.
+    return:
+      type: System.Boolean
+      description: >-
+        <code>true</code> if <code class="paramref">symbol</code> is or implements <code class="paramref">interfaceType</code>;
+
+        otherwise, <code>false</code>.
+    content.vb: Public Shared Function IsOrImplements(symbol As ITypeSymbol, interfaceType As ITypeSymbol) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsOrImplements*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.Implements(Microsoft.CodeAnalysis.ITypeSymbol,Microsoft.CodeAnalysis.ITypeSymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.Implements(Microsoft.CodeAnalysis.ITypeSymbol,Microsoft.CodeAnalysis.ITypeSymbol)
+  - linkId: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.GetAllInterfacesIncludingThis(Microsoft.CodeAnalysis.ITypeSymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.GetAllInterfacesIncludingThis(Microsoft.CodeAnalysis.ITypeSymbol)
+  nameWithType.vb: TypeSymbolExtensions.IsOrImplements(ITypeSymbol, ITypeSymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsOrImplements(Microsoft.CodeAnalysis.ITypeSymbol, Microsoft.CodeAnalysis.ITypeSymbol)
+  name.vb: IsOrImplements(ITypeSymbol, ITypeSymbol)
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsOrInheritsFrom(Microsoft.CodeAnalysis.ITypeSymbol,Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsOrInheritsFrom(Microsoft.CodeAnalysis.ITypeSymbol,Microsoft.CodeAnalysis.ITypeSymbol)
+  id: IsOrInheritsFrom(Microsoft.CodeAnalysis.ITypeSymbol,Microsoft.CodeAnalysis.ITypeSymbol)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsOrInheritsFrom(ITypeSymbol, ITypeSymbol?)
+  nameWithType: TypeSymbolExtensions.IsOrInheritsFrom(ITypeSymbol, ITypeSymbol?)
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsOrInheritsFrom(Microsoft.CodeAnalysis.ITypeSymbol, Microsoft.CodeAnalysis.ITypeSymbol?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsOrInheritsFrom
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
+    startLine: 184
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Determines whether a type is or inherits from a specified type.
+  remarks: This method first checks for equality, then checks inheritance if the expected type is not sealed.
+  example: []
+  syntax:
+    content: public static bool IsOrInheritsFrom(this ITypeSymbol symbol, ITypeSymbol? expectedType)
+    parameters:
+    - id: symbol
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The type symbol to check.
+    - id: expectedType
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The expected type or base type to check against.
+    return:
+      type: System.Boolean
+      description: >-
+        <code>true</code> if <code class="paramref">symbol</code> equals or inherits from <code class="paramref">expectedType</code>;
+
+        otherwise, <code>false</code>.
+    content.vb: Public Shared Function IsOrInheritsFrom(symbol As ITypeSymbol, expectedType As ITypeSymbol) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsOrInheritsFrom*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.InheritsFrom(Microsoft.CodeAnalysis.ITypeSymbol,Microsoft.CodeAnalysis.ITypeSymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.InheritsFrom(Microsoft.CodeAnalysis.ITypeSymbol,Microsoft.CodeAnalysis.ITypeSymbol)
+  nameWithType.vb: TypeSymbolExtensions.IsOrInheritsFrom(ITypeSymbol, ITypeSymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsOrInheritsFrom(Microsoft.CodeAnalysis.ITypeSymbol, Microsoft.CodeAnalysis.ITypeSymbol)
+  name.vb: IsOrInheritsFrom(ITypeSymbol, ITypeSymbol)
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsObject(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsObject(Microsoft.CodeAnalysis.ITypeSymbol)
+  id: IsObject(Microsoft.CodeAnalysis.ITypeSymbol)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsObject(ITypeSymbol?)
+  nameWithType: TypeSymbolExtensions.IsObject(ITypeSymbol?)
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsObject(Microsoft.CodeAnalysis.ITypeSymbol?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsObject
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
+    startLine: 198
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Determines whether the type symbol represents <xref href="System.Object" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static bool IsObject(this ITypeSymbol? symbol)
+    parameters:
+    - id: symbol
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The type symbol to check, or <code>null</code>.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if <code class="paramref">symbol</code> is <xref href="System.Object" data-throw-if-not-resolved="false"></xref>; otherwise, <code>false</code>.
+    content.vb: Public Shared Function IsObject(symbol As ITypeSymbol) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsObject*
+  nameWithType.vb: TypeSymbolExtensions.IsObject(ITypeSymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsObject(Microsoft.CodeAnalysis.ITypeSymbol)
+  name.vb: IsObject(ITypeSymbol)
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsString(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsString(Microsoft.CodeAnalysis.ITypeSymbol)
+  id: IsString(Microsoft.CodeAnalysis.ITypeSymbol)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsString(ITypeSymbol?)
+  nameWithType: TypeSymbolExtensions.IsString(ITypeSymbol?)
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsString(Microsoft.CodeAnalysis.ITypeSymbol?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsString
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
+    startLine: 205
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Determines whether the type symbol represents <xref href="System.String" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static bool IsString(this ITypeSymbol? symbol)
+    parameters:
+    - id: symbol
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The type symbol to check, or <code>null</code>.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if <code class="paramref">symbol</code> is <xref href="System.String" data-throw-if-not-resolved="false"></xref>; otherwise, <code>false</code>.
+    content.vb: Public Shared Function IsString(symbol As ITypeSymbol) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsString*
+  nameWithType.vb: TypeSymbolExtensions.IsString(ITypeSymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsString(Microsoft.CodeAnalysis.ITypeSymbol)
+  name.vb: IsString(ITypeSymbol)
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsChar(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsChar(Microsoft.CodeAnalysis.ITypeSymbol)
+  id: IsChar(Microsoft.CodeAnalysis.ITypeSymbol)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsChar(ITypeSymbol?)
+  nameWithType: TypeSymbolExtensions.IsChar(ITypeSymbol?)
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsChar(Microsoft.CodeAnalysis.ITypeSymbol?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsChar
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
+    startLine: 212
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Determines whether the type symbol represents <xref href="System.Char" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static bool IsChar(this ITypeSymbol? symbol)
+    parameters:
+    - id: symbol
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The type symbol to check, or <code>null</code>.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if <code class="paramref">symbol</code> is <xref href="System.Char" data-throw-if-not-resolved="false"></xref>; otherwise, <code>false</code>.
+    content.vb: Public Shared Function IsChar(symbol As ITypeSymbol) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsChar*
+  nameWithType.vb: TypeSymbolExtensions.IsChar(ITypeSymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsChar(Microsoft.CodeAnalysis.ITypeSymbol)
+  name.vb: IsChar(ITypeSymbol)
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsInt32(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsInt32(Microsoft.CodeAnalysis.ITypeSymbol)
+  id: IsInt32(Microsoft.CodeAnalysis.ITypeSymbol)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsInt32(ITypeSymbol?)
+  nameWithType: TypeSymbolExtensions.IsInt32(ITypeSymbol?)
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsInt32(Microsoft.CodeAnalysis.ITypeSymbol?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsInt32
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
+    startLine: 219
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Determines whether the type symbol represents <xref href="System.Int32" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static bool IsInt32(this ITypeSymbol? symbol)
+    parameters:
+    - id: symbol
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The type symbol to check, or <code>null</code>.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if <code class="paramref">symbol</code> is <xref href="System.Int32" data-throw-if-not-resolved="false"></xref>; otherwise, <code>false</code>.
+    content.vb: Public Shared Function IsInt32(symbol As ITypeSymbol) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsInt32*
+  nameWithType.vb: TypeSymbolExtensions.IsInt32(ITypeSymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsInt32(Microsoft.CodeAnalysis.ITypeSymbol)
+  name.vb: IsInt32(ITypeSymbol)
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsInt64(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsInt64(Microsoft.CodeAnalysis.ITypeSymbol)
+  id: IsInt64(Microsoft.CodeAnalysis.ITypeSymbol)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsInt64(ITypeSymbol?)
+  nameWithType: TypeSymbolExtensions.IsInt64(ITypeSymbol?)
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsInt64(Microsoft.CodeAnalysis.ITypeSymbol?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsInt64
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
+    startLine: 226
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Determines whether the type symbol represents <xref href="System.Int64" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static bool IsInt64(this ITypeSymbol? symbol)
+    parameters:
+    - id: symbol
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The type symbol to check, or <code>null</code>.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if <code class="paramref">symbol</code> is <xref href="System.Int64" data-throw-if-not-resolved="false"></xref>; otherwise, <code>false</code>.
+    content.vb: Public Shared Function IsInt64(symbol As ITypeSymbol) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsInt64*
+  nameWithType.vb: TypeSymbolExtensions.IsInt64(ITypeSymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsInt64(Microsoft.CodeAnalysis.ITypeSymbol)
+  name.vb: IsInt64(ITypeSymbol)
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsBoolean(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsBoolean(Microsoft.CodeAnalysis.ITypeSymbol)
+  id: IsBoolean(Microsoft.CodeAnalysis.ITypeSymbol)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsBoolean(ITypeSymbol?)
+  nameWithType: TypeSymbolExtensions.IsBoolean(ITypeSymbol?)
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsBoolean(Microsoft.CodeAnalysis.ITypeSymbol?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsBoolean
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
+    startLine: 233
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Determines whether the type symbol represents <xref href="System.Boolean" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static bool IsBoolean(this ITypeSymbol? symbol)
+    parameters:
+    - id: symbol
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The type symbol to check, or <code>null</code>.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if <code class="paramref">symbol</code> is <xref href="System.Boolean" data-throw-if-not-resolved="false"></xref>; otherwise, <code>false</code>.
+    content.vb: Public Shared Function IsBoolean(symbol As ITypeSymbol) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsBoolean*
+  nameWithType.vb: TypeSymbolExtensions.IsBoolean(ITypeSymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsBoolean(Microsoft.CodeAnalysis.ITypeSymbol)
+  name.vb: IsBoolean(ITypeSymbol)
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsDateTime(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsDateTime(Microsoft.CodeAnalysis.ITypeSymbol)
+  id: IsDateTime(Microsoft.CodeAnalysis.ITypeSymbol)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsDateTime(ITypeSymbol?)
+  nameWithType: TypeSymbolExtensions.IsDateTime(ITypeSymbol?)
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsDateTime(Microsoft.CodeAnalysis.ITypeSymbol?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsDateTime
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
+    startLine: 240
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Determines whether the type symbol represents <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static bool IsDateTime(this ITypeSymbol? symbol)
+    parameters:
+    - id: symbol
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The type symbol to check, or <code>null</code>.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if <code class="paramref">symbol</code> is <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref>; otherwise, <code>false</code>.
+    content.vb: Public Shared Function IsDateTime(symbol As ITypeSymbol) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsDateTime*
+  nameWithType.vb: TypeSymbolExtensions.IsDateTime(ITypeSymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsDateTime(Microsoft.CodeAnalysis.ITypeSymbol)
+  name.vb: IsDateTime(ITypeSymbol)
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsByte(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsByte(Microsoft.CodeAnalysis.ITypeSymbol)
+  id: IsByte(Microsoft.CodeAnalysis.ITypeSymbol)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsByte(ITypeSymbol?)
+  nameWithType: TypeSymbolExtensions.IsByte(ITypeSymbol?)
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsByte(Microsoft.CodeAnalysis.ITypeSymbol?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsByte
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
+    startLine: 247
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Determines whether the type symbol represents <xref href="System.Byte" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static bool IsByte(this ITypeSymbol? symbol)
+    parameters:
+    - id: symbol
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The type symbol to check, or <code>null</code>.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if <code class="paramref">symbol</code> is <xref href="System.Byte" data-throw-if-not-resolved="false"></xref>; otherwise, <code>false</code>.
+    content.vb: Public Shared Function IsByte(symbol As ITypeSymbol) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsByte*
+  nameWithType.vb: TypeSymbolExtensions.IsByte(ITypeSymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsByte(Microsoft.CodeAnalysis.ITypeSymbol)
+  name.vb: IsByte(ITypeSymbol)
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsSByte(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsSByte(Microsoft.CodeAnalysis.ITypeSymbol)
+  id: IsSByte(Microsoft.CodeAnalysis.ITypeSymbol)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsSByte(ITypeSymbol?)
+  nameWithType: TypeSymbolExtensions.IsSByte(ITypeSymbol?)
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsSByte(Microsoft.CodeAnalysis.ITypeSymbol?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsSByte
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
+    startLine: 254
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Determines whether the type symbol represents <xref href="System.SByte" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static bool IsSByte(this ITypeSymbol? symbol)
+    parameters:
+    - id: symbol
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The type symbol to check, or <code>null</code>.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if <code class="paramref">symbol</code> is <xref href="System.SByte" data-throw-if-not-resolved="false"></xref>; otherwise, <code>false</code>.
+    content.vb: Public Shared Function IsSByte(symbol As ITypeSymbol) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsSByte*
+  nameWithType.vb: TypeSymbolExtensions.IsSByte(ITypeSymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsSByte(Microsoft.CodeAnalysis.ITypeSymbol)
+  name.vb: IsSByte(ITypeSymbol)
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsInt16(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsInt16(Microsoft.CodeAnalysis.ITypeSymbol)
+  id: IsInt16(Microsoft.CodeAnalysis.ITypeSymbol)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsInt16(ITypeSymbol?)
+  nameWithType: TypeSymbolExtensions.IsInt16(ITypeSymbol?)
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsInt16(Microsoft.CodeAnalysis.ITypeSymbol?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsInt16
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
+    startLine: 261
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Determines whether the type symbol represents <xref href="System.Int16" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static bool IsInt16(this ITypeSymbol? symbol)
+    parameters:
+    - id: symbol
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The type symbol to check, or <code>null</code>.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if <code class="paramref">symbol</code> is <xref href="System.Int16" data-throw-if-not-resolved="false"></xref>; otherwise, <code>false</code>.
+    content.vb: Public Shared Function IsInt16(symbol As ITypeSymbol) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsInt16*
+  nameWithType.vb: TypeSymbolExtensions.IsInt16(ITypeSymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsInt16(Microsoft.CodeAnalysis.ITypeSymbol)
+  name.vb: IsInt16(ITypeSymbol)
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsUInt16(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsUInt16(Microsoft.CodeAnalysis.ITypeSymbol)
+  id: IsUInt16(Microsoft.CodeAnalysis.ITypeSymbol)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsUInt16(ITypeSymbol?)
+  nameWithType: TypeSymbolExtensions.IsUInt16(ITypeSymbol?)
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsUInt16(Microsoft.CodeAnalysis.ITypeSymbol?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsUInt16
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
+    startLine: 268
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Determines whether the type symbol represents <xref href="System.UInt16" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static bool IsUInt16(this ITypeSymbol? symbol)
+    parameters:
+    - id: symbol
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The type symbol to check, or <code>null</code>.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if <code class="paramref">symbol</code> is <xref href="System.UInt16" data-throw-if-not-resolved="false"></xref>; otherwise, <code>false</code>.
+    content.vb: Public Shared Function IsUInt16(symbol As ITypeSymbol) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsUInt16*
+  nameWithType.vb: TypeSymbolExtensions.IsUInt16(ITypeSymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsUInt16(Microsoft.CodeAnalysis.ITypeSymbol)
+  name.vb: IsUInt16(ITypeSymbol)
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsUInt32(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsUInt32(Microsoft.CodeAnalysis.ITypeSymbol)
+  id: IsUInt32(Microsoft.CodeAnalysis.ITypeSymbol)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsUInt32(ITypeSymbol?)
+  nameWithType: TypeSymbolExtensions.IsUInt32(ITypeSymbol?)
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsUInt32(Microsoft.CodeAnalysis.ITypeSymbol?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsUInt32
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
+    startLine: 275
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Determines whether the type symbol represents <xref href="System.UInt32" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static bool IsUInt32(this ITypeSymbol? symbol)
+    parameters:
+    - id: symbol
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The type symbol to check, or <code>null</code>.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if <code class="paramref">symbol</code> is <xref href="System.UInt32" data-throw-if-not-resolved="false"></xref>; otherwise, <code>false</code>.
+    content.vb: Public Shared Function IsUInt32(symbol As ITypeSymbol) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsUInt32*
+  nameWithType.vb: TypeSymbolExtensions.IsUInt32(ITypeSymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsUInt32(Microsoft.CodeAnalysis.ITypeSymbol)
+  name.vb: IsUInt32(ITypeSymbol)
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsUInt64(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsUInt64(Microsoft.CodeAnalysis.ITypeSymbol)
+  id: IsUInt64(Microsoft.CodeAnalysis.ITypeSymbol)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsUInt64(ITypeSymbol?)
+  nameWithType: TypeSymbolExtensions.IsUInt64(ITypeSymbol?)
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsUInt64(Microsoft.CodeAnalysis.ITypeSymbol?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsUInt64
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
+    startLine: 282
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Determines whether the type symbol represents <xref href="System.UInt64" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static bool IsUInt64(this ITypeSymbol? symbol)
+    parameters:
+    - id: symbol
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The type symbol to check, or <code>null</code>.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if <code class="paramref">symbol</code> is <xref href="System.UInt64" data-throw-if-not-resolved="false"></xref>; otherwise, <code>false</code>.
+    content.vb: Public Shared Function IsUInt64(symbol As ITypeSymbol) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsUInt64*
+  nameWithType.vb: TypeSymbolExtensions.IsUInt64(ITypeSymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsUInt64(Microsoft.CodeAnalysis.ITypeSymbol)
+  name.vb: IsUInt64(ITypeSymbol)
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsSingle(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsSingle(Microsoft.CodeAnalysis.ITypeSymbol)
+  id: IsSingle(Microsoft.CodeAnalysis.ITypeSymbol)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsSingle(ITypeSymbol?)
+  nameWithType: TypeSymbolExtensions.IsSingle(ITypeSymbol?)
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsSingle(Microsoft.CodeAnalysis.ITypeSymbol?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsSingle
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
+    startLine: 289
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Determines whether the type symbol represents <xref href="System.Single" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static bool IsSingle(this ITypeSymbol? symbol)
+    parameters:
+    - id: symbol
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The type symbol to check, or <code>null</code>.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if <code class="paramref">symbol</code> is <xref href="System.Single" data-throw-if-not-resolved="false"></xref>; otherwise, <code>false</code>.
+    content.vb: Public Shared Function IsSingle(symbol As ITypeSymbol) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsSingle*
+  nameWithType.vb: TypeSymbolExtensions.IsSingle(ITypeSymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsSingle(Microsoft.CodeAnalysis.ITypeSymbol)
+  name.vb: IsSingle(ITypeSymbol)
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsDouble(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsDouble(Microsoft.CodeAnalysis.ITypeSymbol)
+  id: IsDouble(Microsoft.CodeAnalysis.ITypeSymbol)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsDouble(ITypeSymbol?)
+  nameWithType: TypeSymbolExtensions.IsDouble(ITypeSymbol?)
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsDouble(Microsoft.CodeAnalysis.ITypeSymbol?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsDouble
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
+    startLine: 296
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Determines whether the type symbol represents <xref href="System.Double" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static bool IsDouble(this ITypeSymbol? symbol)
+    parameters:
+    - id: symbol
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The type symbol to check, or <code>null</code>.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if <code class="paramref">symbol</code> is <xref href="System.Double" data-throw-if-not-resolved="false"></xref>; otherwise, <code>false</code>.
+    content.vb: Public Shared Function IsDouble(symbol As ITypeSymbol) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsDouble*
+  nameWithType.vb: TypeSymbolExtensions.IsDouble(ITypeSymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsDouble(Microsoft.CodeAnalysis.ITypeSymbol)
+  name.vb: IsDouble(ITypeSymbol)
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsDecimal(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsDecimal(Microsoft.CodeAnalysis.ITypeSymbol)
+  id: IsDecimal(Microsoft.CodeAnalysis.ITypeSymbol)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsDecimal(ITypeSymbol?)
+  nameWithType: TypeSymbolExtensions.IsDecimal(ITypeSymbol?)
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsDecimal(Microsoft.CodeAnalysis.ITypeSymbol?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsDecimal
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
+    startLine: 303
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Determines whether the type symbol represents <xref href="System.Decimal" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static bool IsDecimal(this ITypeSymbol? symbol)
+    parameters:
+    - id: symbol
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The type symbol to check, or <code>null</code>.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if <code class="paramref">symbol</code> is <xref href="System.Decimal" data-throw-if-not-resolved="false"></xref>; otherwise, <code>false</code>.
+    content.vb: Public Shared Function IsDecimal(symbol As ITypeSymbol) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsDecimal*
+  nameWithType.vb: TypeSymbolExtensions.IsDecimal(ITypeSymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsDecimal(Microsoft.CodeAnalysis.ITypeSymbol)
+  name.vb: IsDecimal(ITypeSymbol)
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsEnumeration(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsEnumeration(Microsoft.CodeAnalysis.ITypeSymbol)
+  id: IsEnumeration(Microsoft.CodeAnalysis.ITypeSymbol)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsEnumeration(ITypeSymbol?)
+  nameWithType: TypeSymbolExtensions.IsEnumeration(ITypeSymbol?)
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsEnumeration(Microsoft.CodeAnalysis.ITypeSymbol?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsEnumeration
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
+    startLine: 311
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Determines whether the type symbol represents an enumeration type.
+  example: []
+  syntax:
+    content: public static bool IsEnumeration(this ITypeSymbol? symbol)
+    parameters:
+    - id: symbol
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The type symbol to check, or <code>null</code>.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if <code class="paramref">symbol</code> is an enumeration type; otherwise, <code>false</code>.
+    content.vb: Public Shared Function IsEnumeration(symbol As ITypeSymbol) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsEnumeration*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.GetEnumerationType(Microsoft.CodeAnalysis.ITypeSymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.GetEnumerationType(Microsoft.CodeAnalysis.ITypeSymbol)
+  nameWithType.vb: TypeSymbolExtensions.IsEnumeration(ITypeSymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsEnumeration(Microsoft.CodeAnalysis.ITypeSymbol)
+  name.vb: IsEnumeration(ITypeSymbol)
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.GetEnumerationType(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.GetEnumerationType(Microsoft.CodeAnalysis.ITypeSymbol)
+  id: GetEnumerationType(Microsoft.CodeAnalysis.ITypeSymbol)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetEnumerationType(ITypeSymbol?)
+  nameWithType: TypeSymbolExtensions.GetEnumerationType(ITypeSymbol?)
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.GetEnumerationType(Microsoft.CodeAnalysis.ITypeSymbol?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: GetEnumerationType
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
+    startLine: 323
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Gets the underlying type of an enumeration.
+  example: []
+  syntax:
+    content: public static INamedTypeSymbol? GetEnumerationType(this ITypeSymbol? symbol)
+    parameters:
+    - id: symbol
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The type symbol to get the underlying type from, or <code>null</code>.
+    return:
+      type: Microsoft.CodeAnalysis.INamedTypeSymbol
+      description: >-
+        The underlying type of the enumeration (e.g., <xref href="System.Int32" data-throw-if-not-resolved="false"></xref>), or <code>null</code>
+
+        if <code class="paramref">symbol</code> is not an enumeration.
+    content.vb: Public Shared Function GetEnumerationType(symbol As ITypeSymbol) As INamedTypeSymbol
+  overload: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.GetEnumerationType*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsEnumeration(Microsoft.CodeAnalysis.ITypeSymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsEnumeration(Microsoft.CodeAnalysis.ITypeSymbol)
+  nameWithType.vb: TypeSymbolExtensions.GetEnumerationType(ITypeSymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.GetEnumerationType(Microsoft.CodeAnalysis.ITypeSymbol)
+  name.vb: GetEnumerationType(ITypeSymbol)
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsNumberType(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsNumberType(Microsoft.CodeAnalysis.ITypeSymbol)
+  id: IsNumberType(Microsoft.CodeAnalysis.ITypeSymbol)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsNumberType(ITypeSymbol?)
+  nameWithType: TypeSymbolExtensions.IsNumberType(ITypeSymbol?)
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsNumberType(Microsoft.CodeAnalysis.ITypeSymbol?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsNumberType
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
+    startLine: 341
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Determines whether the type symbol represents a numeric type.
+  remarks: >-
+    <p>Numeric types include:</p>
+
+    <ul><li>Signed integers: <xref href="System.SByte" data-throw-if-not-resolved="false"></xref>, <xref href="System.Int16" data-throw-if-not-resolved="false"></xref>, <xref href="System.Int32" data-throw-if-not-resolved="false"></xref>, <xref href="System.Int64" data-throw-if-not-resolved="false"></xref></li><li>Unsigned integers: <xref href="System.Byte" data-throw-if-not-resolved="false"></xref>, <xref href="System.UInt16" data-throw-if-not-resolved="false"></xref>, <xref href="System.UInt32" data-throw-if-not-resolved="false"></xref>, <xref href="System.UInt64" data-throw-if-not-resolved="false"></xref></li><li>Floating-point: <xref href="System.Single" data-throw-if-not-resolved="false"></xref>, <xref href="System.Double" data-throw-if-not-resolved="false"></xref>, <xref href="System.Decimal" data-throw-if-not-resolved="false"></xref></li></ul>
+  example: []
+  syntax:
+    content: public static bool IsNumberType(this ITypeSymbol? symbol)
+    parameters:
+    - id: symbol
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The type symbol to check, or <code>null</code>.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if <code class="paramref">symbol</code> is a numeric type; otherwise, <code>false</code>.
+    content.vb: Public Shared Function IsNumberType(symbol As ITypeSymbol) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsNumberType*
+  nameWithType.vb: TypeSymbolExtensions.IsNumberType(ITypeSymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsNumberType(Microsoft.CodeAnalysis.ITypeSymbol)
+  name.vb: IsNumberType(ITypeSymbol)
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.GetUnderlyingNullableTypeOrSelf(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.GetUnderlyingNullableTypeOrSelf(Microsoft.CodeAnalysis.ITypeSymbol)
+  id: GetUnderlyingNullableTypeOrSelf(Microsoft.CodeAnalysis.ITypeSymbol)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetUnderlyingNullableTypeOrSelf(ITypeSymbol?)
+  nameWithType: TypeSymbolExtensions.GetUnderlyingNullableTypeOrSelf(ITypeSymbol?)
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.GetUnderlyingNullableTypeOrSelf(Microsoft.CodeAnalysis.ITypeSymbol?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: GetUnderlyingNullableTypeOrSelf
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
+    startLine: 367
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Gets the underlying type of a <xref href="System.Nullable%601" data-throw-if-not-resolved="false"></xref> or returns the type itself.
+  remarks: This method is useful for analyzing nullable value types without special-casing nullability.
+  example: []
+  syntax:
+    content: public static ITypeSymbol? GetUnderlyingNullableTypeOrSelf(this ITypeSymbol? typeSymbol)
+    parameters:
+    - id: typeSymbol
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The type symbol to unwrap, or <code>null</code>.
+    return:
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: >-
+        The underlying type if <code class="paramref">typeSymbol</code> is <xref href="System.Nullable%601" data-throw-if-not-resolved="false"></xref>;
+
+        otherwise, <code class="paramref">typeSymbol</code> itself.
+    content.vb: Public Shared Function GetUnderlyingNullableTypeOrSelf(typeSymbol As ITypeSymbol) As ITypeSymbol
+  overload: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.GetUnderlyingNullableTypeOrSelf*
+  nameWithType.vb: TypeSymbolExtensions.GetUnderlyingNullableTypeOrSelf(ITypeSymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.GetUnderlyingNullableTypeOrSelf(Microsoft.CodeAnalysis.ITypeSymbol)
+  name.vb: GetUnderlyingNullableTypeOrSelf(ITypeSymbol)
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsUnitTestClass(Microsoft.CodeAnalysis.INamedTypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsUnitTestClass(Microsoft.CodeAnalysis.INamedTypeSymbol)
+  id: IsUnitTestClass(Microsoft.CodeAnalysis.INamedTypeSymbol)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsUnitTestClass(INamedTypeSymbol)
+  nameWithType: TypeSymbolExtensions.IsUnitTestClass(INamedTypeSymbol)
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsUnitTestClass(Microsoft.CodeAnalysis.INamedTypeSymbol)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsUnitTestClass
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
+    startLine: 397
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Determines whether the type symbol represents a unit test class.
+  remarks: >-
+    <p>This method detects test classes from the following frameworks:</p>
+
+    <ul><li><b>MSTest:</b> Classes with <code>[TestClass]</code> attribute or methods with <code>[TestMethod]</code></li><li><b>NUnit:</b> Classes with <code>[TestFixture]</code> attribute or methods with <code>[Test]</code>/<code>[TestCase]</code></li><li><b>xUnit:</b> Classes with methods having <code>[Fact]</code>, <code>[Theory]</code>, or other Xunit.* attributes</li></ul>
+  example: []
+  syntax:
+    content: public static bool IsUnitTestClass(this INamedTypeSymbol symbol)
+    parameters:
+    - id: symbol
+      type: Microsoft.CodeAnalysis.INamedTypeSymbol
+      description: The named type symbol to check.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if <code class="paramref">symbol</code> is a unit test class; otherwise, <code>false</code>.
+    content.vb: Public Shared Function IsUnitTestClass(symbol As INamedTypeSymbol) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsUnitTestClass*
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsPotentialStatic(Microsoft.CodeAnalysis.INamedTypeSymbol,System.Threading.CancellationToken)
+  commentId: M:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsPotentialStatic(Microsoft.CodeAnalysis.INamedTypeSymbol,System.Threading.CancellationToken)
+  id: IsPotentialStatic(Microsoft.CodeAnalysis.INamedTypeSymbol,System.Threading.CancellationToken)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsPotentialStatic(INamedTypeSymbol, CancellationToken)
+  nameWithType: TypeSymbolExtensions.IsPotentialStatic(INamedTypeSymbol, CancellationToken)
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsPotentialStatic(Microsoft.CodeAnalysis.INamedTypeSymbol, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsPotentialStatic
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
+    startLine: 469
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Determines whether a type could potentially be made static.
+  remarks: >-
+    <p>A type is considered a candidate for being static if:</p>
+
+    <ul><li>It is not abstract or already static</li><li>It is not implicitly declared</li><li>It has no interfaces</li><li>It has no base class other than <xref href="System.Object" data-throw-if-not-resolved="false"></xref></li><li>It is not a unit test class</li><li>It is not a top-level statement container</li><li>All non-implicitly-declared members are static or operators</li></ul>
+  example: []
+  syntax:
+    content: public static bool IsPotentialStatic(this INamedTypeSymbol symbol, CancellationToken cancellationToken = default)
+    parameters:
+    - id: symbol
+      type: Microsoft.CodeAnalysis.INamedTypeSymbol
+      description: The named type symbol to check.
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: A cancellation token to observe.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if <code class="paramref">symbol</code> could be made static; otherwise, <code>false</code>.
+    content.vb: Public Shared Function IsPotentialStatic(symbol As INamedTypeSymbol, cancellationToken As CancellationToken = Nothing) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsPotentialStatic*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsUnitTestClass(Microsoft.CodeAnalysis.INamedTypeSymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsUnitTestClass(Microsoft.CodeAnalysis.INamedTypeSymbol)
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsSpanType(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsSpanType(Microsoft.CodeAnalysis.ITypeSymbol)
+  id: IsSpanType(Microsoft.CodeAnalysis.ITypeSymbol)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsSpanType(ITypeSymbol?)
+  nameWithType: TypeSymbolExtensions.IsSpanType(ITypeSymbol?)
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsSpanType(Microsoft.CodeAnalysis.ITypeSymbol?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsSpanType
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
+    startLine: 507
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Determines whether the type symbol represents <xref href="System.Span%601" data-throw-if-not-resolved="false"></xref> or <xref href="System.ReadOnlySpan%601" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static bool IsSpanType(this ITypeSymbol? symbol)
+    parameters:
+    - id: symbol
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The type symbol to check, or <code>null</code>.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if <code class="paramref">symbol</code> is a span type; otherwise, <code>false</code>.
+    content.vb: Public Shared Function IsSpanType(symbol As ITypeSymbol) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsSpanType*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsMemoryType(Microsoft.CodeAnalysis.ITypeSymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsMemoryType(Microsoft.CodeAnalysis.ITypeSymbol)
+  - linkId: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.GetElementType(Microsoft.CodeAnalysis.ITypeSymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.GetElementType(Microsoft.CodeAnalysis.ITypeSymbol)
+  nameWithType.vb: TypeSymbolExtensions.IsSpanType(ITypeSymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsSpanType(Microsoft.CodeAnalysis.ITypeSymbol)
+  name.vb: IsSpanType(ITypeSymbol)
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsMemoryType(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsMemoryType(Microsoft.CodeAnalysis.ITypeSymbol)
+  id: IsMemoryType(Microsoft.CodeAnalysis.ITypeSymbol)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsMemoryType(ITypeSymbol?)
+  nameWithType: TypeSymbolExtensions.IsMemoryType(ITypeSymbol?)
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsMemoryType(Microsoft.CodeAnalysis.ITypeSymbol?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsMemoryType
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
+    startLine: 525
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Determines whether the type symbol represents <xref href="System.Memory%601" data-throw-if-not-resolved="false"></xref> or <xref href="System.ReadOnlyMemory%601" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static bool IsMemoryType(this ITypeSymbol? symbol)
+    parameters:
+    - id: symbol
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The type symbol to check, or <code>null</code>.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if <code class="paramref">symbol</code> is a memory type; otherwise, <code>false</code>.
+    content.vb: Public Shared Function IsMemoryType(symbol As ITypeSymbol) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsMemoryType*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsSpanType(Microsoft.CodeAnalysis.ITypeSymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsSpanType(Microsoft.CodeAnalysis.ITypeSymbol)
+  - linkId: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.GetElementType(Microsoft.CodeAnalysis.ITypeSymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.GetElementType(Microsoft.CodeAnalysis.ITypeSymbol)
+  nameWithType.vb: TypeSymbolExtensions.IsMemoryType(ITypeSymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsMemoryType(Microsoft.CodeAnalysis.ITypeSymbol)
+  name.vb: IsMemoryType(ITypeSymbol)
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsTaskType(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsTaskType(Microsoft.CodeAnalysis.ITypeSymbol)
+  id: IsTaskType(Microsoft.CodeAnalysis.ITypeSymbol)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsTaskType(ITypeSymbol?)
+  nameWithType: TypeSymbolExtensions.IsTaskType(ITypeSymbol?)
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsTaskType(Microsoft.CodeAnalysis.ITypeSymbol?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsTaskType
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
+    startLine: 550
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Determines whether the type symbol represents a task type.
+  remarks: >-
+    <p>Task types include:</p>
+
+    <ul><li><xref href="System.Threading.Tasks.Task" data-throw-if-not-resolved="false"></xref></li><li><xref href="System.Threading.Tasks.Task%601" data-throw-if-not-resolved="false"></xref></li><li><xref href="System.Threading.Tasks.ValueTask" data-throw-if-not-resolved="false"></xref></li><li><xref href="System.Threading.Tasks.ValueTask%601" data-throw-if-not-resolved="false"></xref></li></ul>
+  example: []
+  syntax:
+    content: public static bool IsTaskType(this ITypeSymbol? symbol)
+    parameters:
+    - id: symbol
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The type symbol to check, or <code>null</code>.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if <code class="paramref">symbol</code> is a task type; otherwise, <code>false</code>.
+    content.vb: Public Shared Function IsTaskType(symbol As ITypeSymbol) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsTaskType*
+  nameWithType.vb: TypeSymbolExtensions.IsTaskType(ITypeSymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsTaskType(Microsoft.CodeAnalysis.ITypeSymbol)
+  name.vb: IsTaskType(ITypeSymbol)
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsEnumerableType(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsEnumerableType(Microsoft.CodeAnalysis.ITypeSymbol)
+  id: IsEnumerableType(Microsoft.CodeAnalysis.ITypeSymbol)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsEnumerableType(ITypeSymbol?)
+  nameWithType: TypeSymbolExtensions.IsEnumerableType(ITypeSymbol?)
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsEnumerableType(Microsoft.CodeAnalysis.ITypeSymbol?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsEnumerableType
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
+    startLine: 574
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Determines whether the type symbol represents an enumerable type.
+  example: []
+  syntax:
+    content: public static bool IsEnumerableType(this ITypeSymbol? symbol)
+    parameters:
+    - id: symbol
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The type symbol to check, or <code>null</code>.
+    return:
+      type: System.Boolean
+      description: >-
+        <code>true</code> if <code class="paramref">symbol</code> is <xref href="System.Collections.IEnumerable" data-throw-if-not-resolved="false"></xref>
+
+        or <xref href="System.Collections.Generic.IEnumerable%601" data-throw-if-not-resolved="false"></xref>; otherwise, <code>false</code>.
+    content.vb: Public Shared Function IsEnumerableType(symbol As ITypeSymbol) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsEnumerableType*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.GetElementType(Microsoft.CodeAnalysis.ITypeSymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.GetElementType(Microsoft.CodeAnalysis.ITypeSymbol)
+  nameWithType.vb: TypeSymbolExtensions.IsEnumerableType(ITypeSymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsEnumerableType(Microsoft.CodeAnalysis.ITypeSymbol)
+  name.vb: IsEnumerableType(ITypeSymbol)
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.GetElementType(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.GetElementType(Microsoft.CodeAnalysis.ITypeSymbol)
+  id: GetElementType(Microsoft.CodeAnalysis.ITypeSymbol)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetElementType(ITypeSymbol?)
+  nameWithType: TypeSymbolExtensions.GetElementType(ITypeSymbol?)
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.GetElementType(Microsoft.CodeAnalysis.ITypeSymbol?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: GetElementType
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
+    startLine: 608
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Gets the element type of a collection or span-like type.
+  remarks: >-
+    <p>This method extracts element types from:</p>
+
+    <ul><li>Arrays (e.g., <code>int[]</code> returns <code>int</code>)</li><li><xref href="System.Span%601" data-throw-if-not-resolved="false"></xref> and <xref href="System.ReadOnlySpan%601" data-throw-if-not-resolved="false"></xref></li><li><xref href="System.Memory%601" data-throw-if-not-resolved="false"></xref> and <xref href="System.ReadOnlyMemory%601" data-throw-if-not-resolved="false"></xref></li><li><xref href="System.Collections.Generic.IEnumerable%601" data-throw-if-not-resolved="false"></xref></li></ul>
+  example: []
+  syntax:
+    content: public static ITypeSymbol? GetElementType(this ITypeSymbol? symbol)
+    parameters:
+    - id: symbol
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The type symbol to get the element type from, or <code>null</code>.
+    return:
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: >-
+        The element type if <code class="paramref">symbol</code> is an array, span, memory, or generic enumerable;
+
+        otherwise, <code>null</code>.
+    content.vb: Public Shared Function GetElementType(symbol As ITypeSymbol) As ITypeSymbol
+  overload: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.GetElementType*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsSpanType(Microsoft.CodeAnalysis.ITypeSymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsSpanType(Microsoft.CodeAnalysis.ITypeSymbol)
+  - linkId: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsMemoryType(Microsoft.CodeAnalysis.ITypeSymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsMemoryType(Microsoft.CodeAnalysis.ITypeSymbol)
+  - linkId: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsEnumerableType(Microsoft.CodeAnalysis.ITypeSymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsEnumerableType(Microsoft.CodeAnalysis.ITypeSymbol)
+  nameWithType.vb: TypeSymbolExtensions.GetElementType(ITypeSymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.GetElementType(Microsoft.CodeAnalysis.ITypeSymbol)
+  name.vb: GetElementType(ITypeSymbol)
+references:
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions
+  commentId: T:ANcpLua.Roslyn.Utilities.SymbolExtensions
+  href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html
+  name: SymbolExtensions
+  nameWithType: SymbolExtensions
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions
+- uid: ANcpLua.Roslyn.Utilities.MethodSymbolExtensions
+  commentId: T:ANcpLua.Roslyn.Utilities.MethodSymbolExtensions
+  href: ANcpLua.Roslyn.Utilities.MethodSymbolExtensions.html
+  name: MethodSymbolExtensions
+  nameWithType: MethodSymbolExtensions
+  fullName: ANcpLua.Roslyn.Utilities.MethodSymbolExtensions
+- uid: Microsoft.CodeAnalysis.ITypeSymbol
+  commentId: T:Microsoft.CodeAnalysis.ITypeSymbol
+  parent: Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  name: ITypeSymbol
+  nameWithType: ITypeSymbol
+  fullName: Microsoft.CodeAnalysis.ITypeSymbol
+- uid: ANcpLua.Roslyn.Utilities
+  commentId: N:ANcpLua.Roslyn.Utilities
+  href: ANcpLua.html
+  name: ANcpLua.Roslyn.Utilities
+  nameWithType: ANcpLua.Roslyn.Utilities
+  fullName: ANcpLua.Roslyn.Utilities
+  spec.csharp:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  spec.vb:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: Microsoft.CodeAnalysis
+  commentId: N:Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.CodeAnalysis
+  nameWithType: Microsoft.CodeAnalysis
+  fullName: Microsoft.CodeAnalysis
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.Implements(Microsoft.CodeAnalysis.ITypeSymbol,Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.Implements(Microsoft.CodeAnalysis.ITypeSymbol,Microsoft.CodeAnalysis.ITypeSymbol)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_Implements_Microsoft_CodeAnalysis_ITypeSymbol_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: Implements(ITypeSymbol, ITypeSymbol)
+  nameWithType: TypeSymbolExtensions.Implements(ITypeSymbol, ITypeSymbol)
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.Implements(Microsoft.CodeAnalysis.ITypeSymbol, Microsoft.CodeAnalysis.ITypeSymbol)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.Implements(Microsoft.CodeAnalysis.ITypeSymbol,Microsoft.CodeAnalysis.ITypeSymbol)
+    name: Implements
+    href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_Implements_Microsoft_CodeAnalysis_ITypeSymbol_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: ','
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.Implements(Microsoft.CodeAnalysis.ITypeSymbol,Microsoft.CodeAnalysis.ITypeSymbol)
+    name: Implements
+    href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_Implements_Microsoft_CodeAnalysis_ITypeSymbol_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: ','
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsOrImplements(Microsoft.CodeAnalysis.ITypeSymbol,Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsOrImplements(Microsoft.CodeAnalysis.ITypeSymbol,Microsoft.CodeAnalysis.ITypeSymbol)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_IsOrImplements_Microsoft_CodeAnalysis_ITypeSymbol_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsOrImplements(ITypeSymbol, ITypeSymbol)
+  nameWithType: TypeSymbolExtensions.IsOrImplements(ITypeSymbol, ITypeSymbol)
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsOrImplements(Microsoft.CodeAnalysis.ITypeSymbol, Microsoft.CodeAnalysis.ITypeSymbol)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsOrImplements(Microsoft.CodeAnalysis.ITypeSymbol,Microsoft.CodeAnalysis.ITypeSymbol)
+    name: IsOrImplements
+    href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_IsOrImplements_Microsoft_CodeAnalysis_ITypeSymbol_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: ','
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsOrImplements(Microsoft.CodeAnalysis.ITypeSymbol,Microsoft.CodeAnalysis.ITypeSymbol)
+    name: IsOrImplements
+    href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_IsOrImplements_Microsoft_CodeAnalysis_ITypeSymbol_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: ','
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+- uid: Microsoft.CodeAnalysis.ITypeSymbol.AllInterfaces
+  commentId: P:Microsoft.CodeAnalysis.ITypeSymbol.AllInterfaces
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol.allinterfaces
+  name: AllInterfaces
+  nameWithType: ITypeSymbol.AllInterfaces
+  fullName: Microsoft.CodeAnalysis.ITypeSymbol.AllInterfaces
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.GetAllInterfacesIncludingThis*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.GetAllInterfacesIncludingThis
+  href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_GetAllInterfacesIncludingThis_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: GetAllInterfacesIncludingThis
+  nameWithType: TypeSymbolExtensions.GetAllInterfacesIncludingThis
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.GetAllInterfacesIncludingThis
+- uid: System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.INamedTypeSymbol}
+  commentId: T:System.Collections.Generic.IEnumerable{Microsoft.CodeAnalysis.INamedTypeSymbol}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<INamedTypeSymbol>
+  nameWithType: IEnumerable<INamedTypeSymbol>
+  fullName: System.Collections.Generic.IEnumerable<Microsoft.CodeAnalysis.INamedTypeSymbol>
+  nameWithType.vb: IEnumerable(Of INamedTypeSymbol)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Microsoft.CodeAnalysis.INamedTypeSymbol)
+  name.vb: IEnumerable(Of INamedTypeSymbol)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: Microsoft.CodeAnalysis.INamedTypeSymbol
+    name: INamedTypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.inamedtypesymbol
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.INamedTypeSymbol
+    name: INamedTypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.inamedtypesymbol
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsOrInheritsFrom(Microsoft.CodeAnalysis.ITypeSymbol,Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsOrInheritsFrom(Microsoft.CodeAnalysis.ITypeSymbol,Microsoft.CodeAnalysis.ITypeSymbol)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_IsOrInheritsFrom_Microsoft_CodeAnalysis_ITypeSymbol_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsOrInheritsFrom(ITypeSymbol, ITypeSymbol)
+  nameWithType: TypeSymbolExtensions.IsOrInheritsFrom(ITypeSymbol, ITypeSymbol)
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsOrInheritsFrom(Microsoft.CodeAnalysis.ITypeSymbol, Microsoft.CodeAnalysis.ITypeSymbol)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsOrInheritsFrom(Microsoft.CodeAnalysis.ITypeSymbol,Microsoft.CodeAnalysis.ITypeSymbol)
+    name: IsOrInheritsFrom
+    href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_IsOrInheritsFrom_Microsoft_CodeAnalysis_ITypeSymbol_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: ','
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsOrInheritsFrom(Microsoft.CodeAnalysis.ITypeSymbol,Microsoft.CodeAnalysis.ITypeSymbol)
+    name: IsOrInheritsFrom
+    href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_IsOrInheritsFrom_Microsoft_CodeAnalysis_ITypeSymbol_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: ','
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+- uid: Microsoft.CodeAnalysis.SymbolEqualityComparer.Default
+  commentId: F:Microsoft.CodeAnalysis.SymbolEqualityComparer.Default
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.symbolequalitycomparer.default
+  name: Default
+  nameWithType: SymbolEqualityComparer.Default
+  fullName: Microsoft.CodeAnalysis.SymbolEqualityComparer.Default
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.InheritsFrom*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.InheritsFrom
+  href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_InheritsFrom_Microsoft_CodeAnalysis_ITypeSymbol_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: InheritsFrom
+  nameWithType: TypeSymbolExtensions.InheritsFrom
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.InheritsFrom
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.GetAllInterfacesIncludingThis(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.GetAllInterfacesIncludingThis(Microsoft.CodeAnalysis.ITypeSymbol)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_GetAllInterfacesIncludingThis_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: GetAllInterfacesIncludingThis(ITypeSymbol)
+  nameWithType: TypeSymbolExtensions.GetAllInterfacesIncludingThis(ITypeSymbol)
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.GetAllInterfacesIncludingThis(Microsoft.CodeAnalysis.ITypeSymbol)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.GetAllInterfacesIncludingThis(Microsoft.CodeAnalysis.ITypeSymbol)
+    name: GetAllInterfacesIncludingThis
+    href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_GetAllInterfacesIncludingThis_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.GetAllInterfacesIncludingThis(Microsoft.CodeAnalysis.ITypeSymbol)
+    name: GetAllInterfacesIncludingThis
+    href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_GetAllInterfacesIncludingThis_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.Implements*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.Implements
+  href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_Implements_Microsoft_CodeAnalysis_ITypeSymbol_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: Implements
+  nameWithType: TypeSymbolExtensions.Implements
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.Implements
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsOrImplements*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsOrImplements
+  href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_IsOrImplements_Microsoft_CodeAnalysis_ITypeSymbol_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsOrImplements
+  nameWithType: TypeSymbolExtensions.IsOrImplements
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsOrImplements
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.InheritsFrom(Microsoft.CodeAnalysis.ITypeSymbol,Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.InheritsFrom(Microsoft.CodeAnalysis.ITypeSymbol,Microsoft.CodeAnalysis.ITypeSymbol)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_InheritsFrom_Microsoft_CodeAnalysis_ITypeSymbol_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: InheritsFrom(ITypeSymbol, ITypeSymbol)
+  nameWithType: TypeSymbolExtensions.InheritsFrom(ITypeSymbol, ITypeSymbol)
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.InheritsFrom(Microsoft.CodeAnalysis.ITypeSymbol, Microsoft.CodeAnalysis.ITypeSymbol)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.InheritsFrom(Microsoft.CodeAnalysis.ITypeSymbol,Microsoft.CodeAnalysis.ITypeSymbol)
+    name: InheritsFrom
+    href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_InheritsFrom_Microsoft_CodeAnalysis_ITypeSymbol_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: ','
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.InheritsFrom(Microsoft.CodeAnalysis.ITypeSymbol,Microsoft.CodeAnalysis.ITypeSymbol)
+    name: InheritsFrom
+    href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_InheritsFrom_Microsoft_CodeAnalysis_ITypeSymbol_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: ','
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsOrInheritsFrom*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsOrInheritsFrom
+  href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_IsOrInheritsFrom_Microsoft_CodeAnalysis_ITypeSymbol_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsOrInheritsFrom
+  nameWithType: TypeSymbolExtensions.IsOrInheritsFrom
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsOrInheritsFrom
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsObject*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsObject
+  href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_IsObject_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsObject
+  nameWithType: TypeSymbolExtensions.IsObject
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsObject
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsString*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsString
+  href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_IsString_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsString
+  nameWithType: TypeSymbolExtensions.IsString
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsString
+- uid: System.Char
+  commentId: T:System.Char
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.char
+  name: char
+  nameWithType: char
+  fullName: char
+  nameWithType.vb: Char
+  fullName.vb: Char
+  name.vb: Char
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsChar*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsChar
+  href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_IsChar_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsChar
+  nameWithType: TypeSymbolExtensions.IsChar
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsChar
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsInt32*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsInt32
+  href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_IsInt32_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsInt32
+  nameWithType: TypeSymbolExtensions.IsInt32
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsInt32
+- uid: System.Int64
+  commentId: T:System.Int64
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsInt64*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsInt64
+  href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_IsInt64_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsInt64
+  nameWithType: TypeSymbolExtensions.IsInt64
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsInt64
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsBoolean*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsBoolean
+  href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_IsBoolean_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsBoolean
+  nameWithType: TypeSymbolExtensions.IsBoolean
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsBoolean
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+  nameWithType.vb: Date
+  fullName.vb: Date
+  name.vb: Date
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsDateTime*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsDateTime
+  href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_IsDateTime_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsDateTime
+  nameWithType: TypeSymbolExtensions.IsDateTime
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsDateTime
+- uid: System.Byte
+  commentId: T:System.Byte
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte
+  nameWithType: byte
+  fullName: byte
+  nameWithType.vb: Byte
+  fullName.vb: Byte
+  name.vb: Byte
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsByte*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsByte
+  href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_IsByte_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsByte
+  nameWithType: TypeSymbolExtensions.IsByte
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsByte
+- uid: System.SByte
+  commentId: T:System.SByte
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.sbyte
+  name: sbyte
+  nameWithType: sbyte
+  fullName: sbyte
+  nameWithType.vb: SByte
+  fullName.vb: SByte
+  name.vb: SByte
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsSByte*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsSByte
+  href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_IsSByte_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsSByte
+  nameWithType: TypeSymbolExtensions.IsSByte
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsSByte
+- uid: System.Int16
+  commentId: T:System.Int16
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int16
+  name: short
+  nameWithType: short
+  fullName: short
+  nameWithType.vb: Short
+  fullName.vb: Short
+  name.vb: Short
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsInt16*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsInt16
+  href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_IsInt16_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsInt16
+  nameWithType: TypeSymbolExtensions.IsInt16
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsInt16
+- uid: System.UInt16
+  commentId: T:System.UInt16
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint16
+  name: ushort
+  nameWithType: ushort
+  fullName: ushort
+  nameWithType.vb: UShort
+  fullName.vb: UShort
+  name.vb: UShort
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsUInt16*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsUInt16
+  href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_IsUInt16_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsUInt16
+  nameWithType: TypeSymbolExtensions.IsUInt16
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsUInt16
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint32
+  name: uint
+  nameWithType: uint
+  fullName: uint
+  nameWithType.vb: UInteger
+  fullName.vb: UInteger
+  name.vb: UInteger
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsUInt32*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsUInt32
+  href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_IsUInt32_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsUInt32
+  nameWithType: TypeSymbolExtensions.IsUInt32
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsUInt32
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint64
+  name: ulong
+  nameWithType: ulong
+  fullName: ulong
+  nameWithType.vb: ULong
+  fullName.vb: ULong
+  name.vb: ULong
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsUInt64*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsUInt64
+  href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_IsUInt64_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsUInt64
+  nameWithType: TypeSymbolExtensions.IsUInt64
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsUInt64
+- uid: System.Single
+  commentId: T:System.Single
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsSingle*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsSingle
+  href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_IsSingle_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsSingle
+  nameWithType: TypeSymbolExtensions.IsSingle
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsSingle
+- uid: System.Double
+  commentId: T:System.Double
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsDouble*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsDouble
+  href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_IsDouble_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsDouble
+  nameWithType: TypeSymbolExtensions.IsDouble
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsDouble
+- uid: System.Decimal
+  commentId: T:System.Decimal
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.decimal
+  name: decimal
+  nameWithType: decimal
+  fullName: decimal
+  nameWithType.vb: Decimal
+  fullName.vb: Decimal
+  name.vb: Decimal
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsDecimal*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsDecimal
+  href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_IsDecimal_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsDecimal
+  nameWithType: TypeSymbolExtensions.IsDecimal
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsDecimal
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.GetEnumerationType(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.GetEnumerationType(Microsoft.CodeAnalysis.ITypeSymbol)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_GetEnumerationType_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: GetEnumerationType(ITypeSymbol)
+  nameWithType: TypeSymbolExtensions.GetEnumerationType(ITypeSymbol)
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.GetEnumerationType(Microsoft.CodeAnalysis.ITypeSymbol)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.GetEnumerationType(Microsoft.CodeAnalysis.ITypeSymbol)
+    name: GetEnumerationType
+    href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_GetEnumerationType_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.GetEnumerationType(Microsoft.CodeAnalysis.ITypeSymbol)
+    name: GetEnumerationType
+    href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_GetEnumerationType_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsEnumeration*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsEnumeration
+  href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_IsEnumeration_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsEnumeration
+  nameWithType: TypeSymbolExtensions.IsEnumeration
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsEnumeration
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsEnumeration(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsEnumeration(Microsoft.CodeAnalysis.ITypeSymbol)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_IsEnumeration_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsEnumeration(ITypeSymbol)
+  nameWithType: TypeSymbolExtensions.IsEnumeration(ITypeSymbol)
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsEnumeration(Microsoft.CodeAnalysis.ITypeSymbol)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsEnumeration(Microsoft.CodeAnalysis.ITypeSymbol)
+    name: IsEnumeration
+    href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_IsEnumeration_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsEnumeration(Microsoft.CodeAnalysis.ITypeSymbol)
+    name: IsEnumeration
+    href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_IsEnumeration_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.GetEnumerationType*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.GetEnumerationType
+  href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_GetEnumerationType_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: GetEnumerationType
+  nameWithType: TypeSymbolExtensions.GetEnumerationType
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.GetEnumerationType
+- uid: Microsoft.CodeAnalysis.INamedTypeSymbol
+  commentId: T:Microsoft.CodeAnalysis.INamedTypeSymbol
+  parent: Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.inamedtypesymbol
+  name: INamedTypeSymbol
+  nameWithType: INamedTypeSymbol
+  fullName: Microsoft.CodeAnalysis.INamedTypeSymbol
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsNumberType*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsNumberType
+  href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_IsNumberType_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsNumberType
+  nameWithType: TypeSymbolExtensions.IsNumberType
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsNumberType
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.GetUnderlyingNullableTypeOrSelf*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.GetUnderlyingNullableTypeOrSelf
+  href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_GetUnderlyingNullableTypeOrSelf_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: GetUnderlyingNullableTypeOrSelf
+  nameWithType: TypeSymbolExtensions.GetUnderlyingNullableTypeOrSelf
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.GetUnderlyingNullableTypeOrSelf
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsUnitTestClass*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsUnitTestClass
+  href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_IsUnitTestClass_Microsoft_CodeAnalysis_INamedTypeSymbol_
+  name: IsUnitTestClass
+  nameWithType: TypeSymbolExtensions.IsUnitTestClass
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsUnitTestClass
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsUnitTestClass(Microsoft.CodeAnalysis.INamedTypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsUnitTestClass(Microsoft.CodeAnalysis.INamedTypeSymbol)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_IsUnitTestClass_Microsoft_CodeAnalysis_INamedTypeSymbol_
+  name: IsUnitTestClass(INamedTypeSymbol)
+  nameWithType: TypeSymbolExtensions.IsUnitTestClass(INamedTypeSymbol)
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsUnitTestClass(Microsoft.CodeAnalysis.INamedTypeSymbol)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsUnitTestClass(Microsoft.CodeAnalysis.INamedTypeSymbol)
+    name: IsUnitTestClass
+    href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_IsUnitTestClass_Microsoft_CodeAnalysis_INamedTypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.INamedTypeSymbol
+    name: INamedTypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.inamedtypesymbol
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsUnitTestClass(Microsoft.CodeAnalysis.INamedTypeSymbol)
+    name: IsUnitTestClass
+    href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_IsUnitTestClass_Microsoft_CodeAnalysis_INamedTypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.INamedTypeSymbol
+    name: INamedTypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.inamedtypesymbol
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsPotentialStatic*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsPotentialStatic
+  href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_IsPotentialStatic_Microsoft_CodeAnalysis_INamedTypeSymbol_System_Threading_CancellationToken_
+  name: IsPotentialStatic
+  nameWithType: TypeSymbolExtensions.IsPotentialStatic
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsPotentialStatic
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsMemoryType(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsMemoryType(Microsoft.CodeAnalysis.ITypeSymbol)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_IsMemoryType_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsMemoryType(ITypeSymbol)
+  nameWithType: TypeSymbolExtensions.IsMemoryType(ITypeSymbol)
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsMemoryType(Microsoft.CodeAnalysis.ITypeSymbol)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsMemoryType(Microsoft.CodeAnalysis.ITypeSymbol)
+    name: IsMemoryType
+    href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_IsMemoryType_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsMemoryType(Microsoft.CodeAnalysis.ITypeSymbol)
+    name: IsMemoryType
+    href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_IsMemoryType_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.GetElementType(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.GetElementType(Microsoft.CodeAnalysis.ITypeSymbol)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_GetElementType_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: GetElementType(ITypeSymbol)
+  nameWithType: TypeSymbolExtensions.GetElementType(ITypeSymbol)
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.GetElementType(Microsoft.CodeAnalysis.ITypeSymbol)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.GetElementType(Microsoft.CodeAnalysis.ITypeSymbol)
+    name: GetElementType
+    href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_GetElementType_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.GetElementType(Microsoft.CodeAnalysis.ITypeSymbol)
+    name: GetElementType
+    href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_GetElementType_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+- uid: System.Span`1
+  commentId: T:System.Span`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.span-1
+  name: Span<T>
+  nameWithType: Span<T>
+  fullName: System.Span<T>
+  nameWithType.vb: Span(Of T)
+  fullName.vb: System.Span(Of T)
+  name.vb: Span(Of T)
+  spec.csharp:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.ReadOnlySpan`1
+  commentId: T:System.ReadOnlySpan`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  name: ReadOnlySpan<T>
+  nameWithType: ReadOnlySpan<T>
+  fullName: System.ReadOnlySpan<T>
+  nameWithType.vb: ReadOnlySpan(Of T)
+  fullName.vb: System.ReadOnlySpan(Of T)
+  name.vb: ReadOnlySpan(Of T)
+  spec.csharp:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsSpanType*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsSpanType
+  href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_IsSpanType_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsSpanType
+  nameWithType: TypeSymbolExtensions.IsSpanType
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsSpanType
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsSpanType(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsSpanType(Microsoft.CodeAnalysis.ITypeSymbol)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_IsSpanType_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsSpanType(ITypeSymbol)
+  nameWithType: TypeSymbolExtensions.IsSpanType(ITypeSymbol)
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsSpanType(Microsoft.CodeAnalysis.ITypeSymbol)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsSpanType(Microsoft.CodeAnalysis.ITypeSymbol)
+    name: IsSpanType
+    href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_IsSpanType_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsSpanType(Microsoft.CodeAnalysis.ITypeSymbol)
+    name: IsSpanType
+    href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_IsSpanType_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+- uid: System.Memory`1
+  commentId: T:System.Memory`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.memory-1
+  name: Memory<T>
+  nameWithType: Memory<T>
+  fullName: System.Memory<T>
+  nameWithType.vb: Memory(Of T)
+  fullName.vb: System.Memory(Of T)
+  name.vb: Memory(Of T)
+  spec.csharp:
+  - uid: System.Memory`1
+    name: Memory
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.memory-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Memory`1
+    name: Memory
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.memory-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.ReadOnlyMemory`1
+  commentId: T:System.ReadOnlyMemory`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.readonlymemory-1
+  name: ReadOnlyMemory<T>
+  nameWithType: ReadOnlyMemory<T>
+  fullName: System.ReadOnlyMemory<T>
+  nameWithType.vb: ReadOnlyMemory(Of T)
+  fullName.vb: System.ReadOnlyMemory(Of T)
+  name.vb: ReadOnlyMemory(Of T)
+  spec.csharp:
+  - uid: System.ReadOnlyMemory`1
+    name: ReadOnlyMemory
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlymemory-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlyMemory`1
+    name: ReadOnlyMemory
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlymemory-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsMemoryType*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsMemoryType
+  href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_IsMemoryType_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsMemoryType
+  nameWithType: TypeSymbolExtensions.IsMemoryType
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsMemoryType
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks.ValueTask
+  commentId: T:System.Threading.Tasks.ValueTask
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask
+  name: ValueTask
+  nameWithType: ValueTask
+  fullName: System.Threading.Tasks.ValueTask
+- uid: System.Threading.Tasks.ValueTask`1
+  commentId: T:System.Threading.Tasks.ValueTask`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1
+  name: ValueTask<TResult>
+  nameWithType: ValueTask<TResult>
+  fullName: System.Threading.Tasks.ValueTask<TResult>
+  nameWithType.vb: ValueTask(Of TResult)
+  fullName.vb: System.Threading.Tasks.ValueTask(Of TResult)
+  name.vb: ValueTask(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.ValueTask`1
+    name: ValueTask
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.ValueTask`1
+    name: ValueTask
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsTaskType*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsTaskType
+  href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_IsTaskType_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsTaskType
+  nameWithType: TypeSymbolExtensions.IsTaskType
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsTaskType
+- uid: System.Collections.IEnumerable
+  commentId: T:System.Collections.IEnumerable
+  parent: System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.ienumerable
+  name: IEnumerable
+  nameWithType: IEnumerable
+  fullName: System.Collections.IEnumerable
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsEnumerableType*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsEnumerableType
+  href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_IsEnumerableType_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsEnumerableType
+  nameWithType: TypeSymbolExtensions.IsEnumerableType
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsEnumerableType
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsEnumerableType(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsEnumerableType(Microsoft.CodeAnalysis.ITypeSymbol)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_IsEnumerableType_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsEnumerableType(ITypeSymbol)
+  nameWithType: TypeSymbolExtensions.IsEnumerableType(ITypeSymbol)
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsEnumerableType(Microsoft.CodeAnalysis.ITypeSymbol)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsEnumerableType(Microsoft.CodeAnalysis.ITypeSymbol)
+    name: IsEnumerableType
+    href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_IsEnumerableType_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsEnumerableType(Microsoft.CodeAnalysis.ITypeSymbol)
+    name: IsEnumerableType
+    href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_IsEnumerableType_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.GetElementType*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.GetElementType
+  href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html#ANcpLua_Roslyn_Utilities_TypeSymbolExtensions_GetElementType_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: GetElementType
+  nameWithType: TypeSymbolExtensions.GetElementType
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.GetElementType

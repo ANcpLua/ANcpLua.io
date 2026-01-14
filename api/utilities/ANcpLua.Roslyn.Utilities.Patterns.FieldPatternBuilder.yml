@@ -1,0 +1,1554 @@
+### YamlMime:ManagedReference
+items:
+- uid: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder
+  commentId: T:ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder
+  id: FieldPatternBuilder
+  parent: ANcpLua.Roslyn.Utilities.Patterns
+  children:
+  - ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Build
+  - ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.HasAttribute(Microsoft.CodeAnalysis.ITypeSymbol)
+  - ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.HasAttribute(System.String)
+  - ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Instance
+  - ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.IsConst
+  - ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.IsReadOnly
+  - ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.IsVolatile
+  - ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Named(System.String)
+  - ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.OfType(Microsoft.CodeAnalysis.ITypeSymbol)
+  - ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Private
+  - ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Public
+  - ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Static
+  - ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Where(System.Func{Microsoft.CodeAnalysis.IFieldSymbol,System.Boolean})
+  - ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.op_Implicit(ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder)~ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern{Microsoft.CodeAnalysis.IFieldSymbol}
+  langs:
+  - csharp
+  - vb
+  name: FieldPatternBuilder
+  nameWithType: FieldPatternBuilder
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder
+  type: Class
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/PropertyPattern.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: FieldPatternBuilder
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/PropertyPattern.cs
+    startLine: 303
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Patterns
+  summary: Provides a fluent builder for constructing field symbol patterns.
+  remarks: >-
+    <p>
+
+    This builder enables declarative matching of <xref href="Microsoft.CodeAnalysis.IFieldSymbol" data-throw-if-not-resolved="false"></xref> instances
+
+    by composing multiple predicates that must all be satisfied for a match.
+
+    </p>
+
+    <ul><li>Supports filtering by name, type, accessibility, and modifiers.</li><li>Can match fields based on const, readonly, and volatile characteristics.</li><li>Supports attribute-based filtering.</li><li>Implicitly converts to <xref href="ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern%601" data-throw-if-not-resolved="false"></xref> for seamless integration.</li></ul>
+  example: []
+  syntax:
+    content: public sealed class FieldPatternBuilder
+    content.vb: Public NotInheritable Class FieldPatternBuilder
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern`1
+    commentId: T:ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern`1
+  - linkId: ANcpLua.Roslyn.Utilities.Patterns.PropertyPatternBuilder
+    commentId: T:ANcpLua.Roslyn.Utilities.Patterns.PropertyPatternBuilder
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1
+  - ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+- uid: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Named(System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Named(System.String)
+  id: Named(System.String)
+  parent: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder
+  langs:
+  - csharp
+  - vb
+  name: Named(string)
+  nameWithType: FieldPatternBuilder.Named(string)
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Named(string)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/PropertyPattern.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Named
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/PropertyPattern.cs
+    startLine: 316
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Patterns
+  summary: Adds a predicate requiring the field to have the specified name.
+  example: []
+  syntax:
+    content: public FieldPatternBuilder Named(string name)
+    parameters:
+    - id: name
+      type: System.String
+      description: The exact name the field must have.
+    return:
+      type: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder
+      description: This builder instance for method chaining.
+    content.vb: Public Function Named(name As String) As FieldPatternBuilder
+  overload: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Named*
+  nameWithType.vb: FieldPatternBuilder.Named(String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Named(String)
+  name.vb: Named(String)
+- uid: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.OfType(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.OfType(Microsoft.CodeAnalysis.ITypeSymbol)
+  id: OfType(Microsoft.CodeAnalysis.ITypeSymbol)
+  parent: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder
+  langs:
+  - csharp
+  - vb
+  name: OfType(ITypeSymbol)
+  nameWithType: FieldPatternBuilder.OfType(ITypeSymbol)
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.OfType(Microsoft.CodeAnalysis.ITypeSymbol)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/PropertyPattern.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: OfType
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/PropertyPattern.cs
+    startLine: 328
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Patterns
+  summary: Adds a predicate requiring the field type to match the specified type symbol.
+  example: []
+  syntax:
+    content: public FieldPatternBuilder OfType(ITypeSymbol type)
+    parameters:
+    - id: type
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The type symbol that the field type must equal.
+    return:
+      type: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder
+      description: This builder instance for method chaining.
+    content.vb: Public Function OfType(type As ITypeSymbol) As FieldPatternBuilder
+  overload: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.OfType*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.SymbolExtensions.IsEqualTo(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.ISymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.IsEqualTo(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.ISymbol)
+- uid: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Public
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Public
+  id: Public
+  parent: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder
+  langs:
+  - csharp
+  - vb
+  name: Public()
+  nameWithType: FieldPatternBuilder.Public()
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Public()
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/PropertyPattern.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Public
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/PropertyPattern.cs
+    startLine: 339
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Patterns
+  summary: Adds a predicate requiring the field to have public accessibility.
+  example: []
+  syntax:
+    content: public FieldPatternBuilder Public()
+    return:
+      type: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder
+      description: This builder instance for method chaining.
+    content.vb: Public Function [Public]() As FieldPatternBuilder
+  overload: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Public*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Private
+    commentId: M:ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Private
+- uid: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Private
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Private
+  id: Private
+  parent: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder
+  langs:
+  - csharp
+  - vb
+  name: Private()
+  nameWithType: FieldPatternBuilder.Private()
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Private()
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/PropertyPattern.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Private
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/PropertyPattern.cs
+    startLine: 350
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Patterns
+  summary: Adds a predicate requiring the field to have private accessibility.
+  example: []
+  syntax:
+    content: public FieldPatternBuilder Private()
+    return:
+      type: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder
+      description: This builder instance for method chaining.
+    content.vb: Public Function [Private]() As FieldPatternBuilder
+  overload: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Private*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Public
+    commentId: M:ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Public
+- uid: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Static
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Static
+  id: Static
+  parent: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder
+  langs:
+  - csharp
+  - vb
+  name: Static()
+  nameWithType: FieldPatternBuilder.Static()
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Static()
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/PropertyPattern.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Static
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/PropertyPattern.cs
+    startLine: 361
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Patterns
+  summary: Adds a predicate requiring the field to be static.
+  example: []
+  syntax:
+    content: public FieldPatternBuilder Static()
+    return:
+      type: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder
+      description: This builder instance for method chaining.
+    content.vb: Public Function [Static]() As FieldPatternBuilder
+  overload: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Static*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Instance
+    commentId: M:ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Instance
+- uid: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Instance
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Instance
+  id: Instance
+  parent: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder
+  langs:
+  - csharp
+  - vb
+  name: Instance()
+  nameWithType: FieldPatternBuilder.Instance()
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Instance()
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/PropertyPattern.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Instance
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/PropertyPattern.cs
+    startLine: 372
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Patterns
+  summary: Adds a predicate requiring the field to be an instance member (not static).
+  example: []
+  syntax:
+    content: public FieldPatternBuilder Instance()
+    return:
+      type: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder
+      description: This builder instance for method chaining.
+    content.vb: Public Function Instance() As FieldPatternBuilder
+  overload: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Instance*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Static
+    commentId: M:ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Static
+- uid: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.IsConst
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.IsConst
+  id: IsConst
+  parent: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder
+  langs:
+  - csharp
+  - vb
+  name: IsConst()
+  nameWithType: FieldPatternBuilder.IsConst()
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.IsConst()
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/PropertyPattern.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsConst
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/PropertyPattern.cs
+    startLine: 383
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Patterns
+  summary: Adds a predicate requiring the field to be a compile-time constant.
+  example: []
+  syntax:
+    content: public FieldPatternBuilder IsConst()
+    return:
+      type: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder
+      description: This builder instance for method chaining.
+    content.vb: Public Function IsConst() As FieldPatternBuilder
+  overload: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.IsConst*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.IsReadOnly
+    commentId: M:ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.IsReadOnly
+- uid: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.IsReadOnly
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.IsReadOnly
+  id: IsReadOnly
+  parent: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder
+  langs:
+  - csharp
+  - vb
+  name: IsReadOnly()
+  nameWithType: FieldPatternBuilder.IsReadOnly()
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.IsReadOnly()
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/PropertyPattern.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsReadOnly
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/PropertyPattern.cs
+    startLine: 394
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Patterns
+  summary: Adds a predicate requiring the field to be read-only.
+  example: []
+  syntax:
+    content: public FieldPatternBuilder IsReadOnly()
+    return:
+      type: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder
+      description: This builder instance for method chaining.
+    content.vb: Public Function IsReadOnly() As FieldPatternBuilder
+  overload: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.IsReadOnly*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.IsConst
+    commentId: M:ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.IsConst
+- uid: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.IsVolatile
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.IsVolatile
+  id: IsVolatile
+  parent: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder
+  langs:
+  - csharp
+  - vb
+  name: IsVolatile()
+  nameWithType: FieldPatternBuilder.IsVolatile()
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.IsVolatile()
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/PropertyPattern.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsVolatile
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/PropertyPattern.cs
+    startLine: 404
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Patterns
+  summary: Adds a predicate requiring the field to be volatile.
+  example: []
+  syntax:
+    content: public FieldPatternBuilder IsVolatile()
+    return:
+      type: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder
+      description: This builder instance for method chaining.
+    content.vb: Public Function IsVolatile() As FieldPatternBuilder
+  overload: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.IsVolatile*
+- uid: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.HasAttribute(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.HasAttribute(Microsoft.CodeAnalysis.ITypeSymbol)
+  id: HasAttribute(Microsoft.CodeAnalysis.ITypeSymbol)
+  parent: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder
+  langs:
+  - csharp
+  - vb
+  name: HasAttribute(ITypeSymbol)
+  nameWithType: FieldPatternBuilder.HasAttribute(ITypeSymbol)
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.HasAttribute(Microsoft.CodeAnalysis.ITypeSymbol)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/PropertyPattern.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: HasAttribute
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/PropertyPattern.cs
+    startLine: 416
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Patterns
+  summary: Adds a predicate requiring the field to have the specified attribute.
+  example: []
+  syntax:
+    content: public FieldPatternBuilder HasAttribute(ITypeSymbol attributeType)
+    parameters:
+    - id: attributeType
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The type symbol of the attribute that must be present.
+    return:
+      type: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder
+      description: This builder instance for method chaining.
+    content.vb: Public Function HasAttribute(attributeType As ITypeSymbol) As FieldPatternBuilder
+  overload: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.HasAttribute*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.HasAttribute(System.String)
+    commentId: M:ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.HasAttribute(System.String)
+- uid: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.HasAttribute(System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.HasAttribute(System.String)
+  id: HasAttribute(System.String)
+  parent: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder
+  langs:
+  - csharp
+  - vb
+  name: HasAttribute(string)
+  nameWithType: FieldPatternBuilder.HasAttribute(string)
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.HasAttribute(string)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/PropertyPattern.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: HasAttribute
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/PropertyPattern.cs
+    startLine: 428
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Patterns
+  summary: Adds a predicate requiring the field to have an attribute with the specified fully qualified name.
+  example: []
+  syntax:
+    content: public FieldPatternBuilder HasAttribute(string fullyQualifiedName)
+    parameters:
+    - id: fullyQualifiedName
+      type: System.String
+      description: The fully qualified name of the attribute that must be present.
+    return:
+      type: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder
+      description: This builder instance for method chaining.
+    content.vb: Public Function HasAttribute(fullyQualifiedName As String) As FieldPatternBuilder
+  overload: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.HasAttribute*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.HasAttribute(Microsoft.CodeAnalysis.ITypeSymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.HasAttribute(Microsoft.CodeAnalysis.ITypeSymbol)
+  nameWithType.vb: FieldPatternBuilder.HasAttribute(String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.HasAttribute(String)
+  name.vb: HasAttribute(String)
+- uid: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Where(System.Func{Microsoft.CodeAnalysis.IFieldSymbol,System.Boolean})
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Where(System.Func{Microsoft.CodeAnalysis.IFieldSymbol,System.Boolean})
+  id: Where(System.Func{Microsoft.CodeAnalysis.IFieldSymbol,System.Boolean})
+  parent: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder
+  langs:
+  - csharp
+  - vb
+  name: Where(Func<IFieldSymbol, bool>)
+  nameWithType: FieldPatternBuilder.Where(Func<IFieldSymbol, bool>)
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Where(System.Func<Microsoft.CodeAnalysis.IFieldSymbol, bool>)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/PropertyPattern.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Where
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/PropertyPattern.cs
+    startLine: 439
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Patterns
+  summary: Adds a custom predicate for matching fields.
+  example: []
+  syntax:
+    content: public FieldPatternBuilder Where(Func<IFieldSymbol, bool> predicate)
+    parameters:
+    - id: predicate
+      type: System.Func{Microsoft.CodeAnalysis.IFieldSymbol,System.Boolean}
+      description: A function that evaluates the field and returns <code>true</code> if it matches.
+    return:
+      type: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder
+      description: This builder instance for method chaining.
+    content.vb: Public Function Where(predicate As Func(Of IFieldSymbol, Boolean)) As FieldPatternBuilder
+  overload: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Where*
+  nameWithType.vb: FieldPatternBuilder.Where(Func(Of IFieldSymbol, Boolean))
+  fullName.vb: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Where(System.Func(Of Microsoft.CodeAnalysis.IFieldSymbol, Boolean))
+  name.vb: Where(Func(Of IFieldSymbol, Boolean))
+- uid: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Build
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Build
+  id: Build
+  parent: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder
+  langs:
+  - csharp
+  - vb
+  name: Build()
+  nameWithType: FieldPatternBuilder.Build()
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Build()
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/PropertyPattern.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Build
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/PropertyPattern.cs
+    startLine: 449
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Patterns
+  summary: Builds the composed pattern from all added predicates.
+  example: []
+  syntax:
+    content: public SymbolPattern<IFieldSymbol> Build()
+    return:
+      type: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern{Microsoft.CodeAnalysis.IFieldSymbol}
+      description: A <xref href="ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern%601" data-throw-if-not-resolved="false"></xref> that matches fields satisfying all predicates.
+    content.vb: Public Function Build() As SymbolPattern(Of IFieldSymbol)
+  overload: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Build*
+- uid: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.op_Implicit(ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder)~ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern{Microsoft.CodeAnalysis.IFieldSymbol}
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.op_Implicit(ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder)~ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern{Microsoft.CodeAnalysis.IFieldSymbol}
+  id: op_Implicit(ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder)~ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern{Microsoft.CodeAnalysis.IFieldSymbol}
+  parent: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder
+  langs:
+  - csharp
+  - vb
+  name: implicit operator SymbolPattern<IFieldSymbol>(FieldPatternBuilder)
+  nameWithType: FieldPatternBuilder.implicit operator SymbolPattern<IFieldSymbol>(FieldPatternBuilder)
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.implicit operator ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern<Microsoft.CodeAnalysis.IFieldSymbol>(ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder)
+  type: Operator
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/PropertyPattern.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: op_Implicit
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/PropertyPattern.cs
+    startLine: 468
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Patterns
+  summary: Implicitly converts a <xref href="ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder" data-throw-if-not-resolved="false"></xref> to a <xref href="ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern%601" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static implicit operator SymbolPattern<IFieldSymbol>(FieldPatternBuilder builder)
+    parameters:
+    - id: builder
+      type: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder
+      description: The builder to convert.
+    return:
+      type: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern{Microsoft.CodeAnalysis.IFieldSymbol}
+      description: A symbol pattern built from the builder's predicates.
+    content.vb: Public Shared Widening Operator CType(builder As FieldPatternBuilder) As SymbolPattern(Of IFieldSymbol)
+  overload: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.op_Implicit*
+  nameWithType.vb: FieldPatternBuilder.CType(FieldPatternBuilder)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.CType(ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder)
+  name.vb: CType(FieldPatternBuilder)
+references:
+- uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern`1
+  commentId: T:ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern`1
+  parent: ANcpLua.Roslyn.Utilities.Patterns
+  href: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern-1.html
+  name: SymbolPattern<T>
+  nameWithType: SymbolPattern<T>
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern<T>
+  nameWithType.vb: SymbolPattern(Of T)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern(Of T)
+  name.vb: SymbolPattern(Of T)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern`1
+    name: SymbolPattern
+    href: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern`1
+    name: SymbolPattern
+    href: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Patterns.PropertyPatternBuilder
+  commentId: T:ANcpLua.Roslyn.Utilities.Patterns.PropertyPatternBuilder
+  parent: ANcpLua.Roslyn.Utilities.Patterns
+  href: ANcpLua.Roslyn.Utilities.Patterns.PropertyPatternBuilder.html
+  name: PropertyPatternBuilder
+  nameWithType: PropertyPatternBuilder
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.PropertyPatternBuilder
+- uid: Microsoft.CodeAnalysis.IFieldSymbol
+  commentId: T:Microsoft.CodeAnalysis.IFieldSymbol
+  parent: Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ifieldsymbol
+  name: IFieldSymbol
+  nameWithType: IFieldSymbol
+  fullName: Microsoft.CodeAnalysis.IFieldSymbol
+- uid: ANcpLua.Roslyn.Utilities.Patterns
+  commentId: N:ANcpLua.Roslyn.Utilities.Patterns
+  href: ANcpLua.html
+  name: ANcpLua.Roslyn.Utilities.Patterns
+  nameWithType: ANcpLua.Roslyn.Utilities.Patterns
+  fullName: ANcpLua.Roslyn.Utilities.Patterns
+  spec.csharp:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities.Patterns
+    name: Patterns
+    href: ANcpLua.Roslyn.Utilities.Patterns.html
+  spec.vb:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities.Patterns
+    name: Patterns
+    href: ANcpLua.Roslyn.Utilities.Patterns.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+  parent: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+  definition: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  name: ToResultWithDiagnostics<FieldPatternBuilder>(FieldPatternBuilder)
+  nameWithType: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<FieldPatternBuilder>(FieldPatternBuilder)
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder>(ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder)
+  nameWithType.vb: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of FieldPatternBuilder)(FieldPatternBuilder)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder)(ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder)
+  name.vb: ToResultWithDiagnostics(Of FieldPatternBuilder)(FieldPatternBuilder)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder)
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder
+    name: FieldPatternBuilder
+    href: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.html
+  - name: '>'
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder
+    name: FieldPatternBuilder
+    href: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.html
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder)
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder
+    name: FieldPatternBuilder
+    href: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.html
+  - name: )
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder
+    name: FieldPatternBuilder
+    href: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.html
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  parent: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+  definition: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  name: ToResultWithDiagnostics<FieldPatternBuilder>(FieldPatternBuilder, ImmutableArray<DiagnosticInfo>)
+  nameWithType: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<FieldPatternBuilder>(FieldPatternBuilder, ImmutableArray<DiagnosticInfo>)
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder>(ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder, System.Collections.Immutable.ImmutableArray<ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo>)
+  nameWithType.vb: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of FieldPatternBuilder)(FieldPatternBuilder, ImmutableArray(Of DiagnosticInfo))
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder)(ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder, System.Collections.Immutable.ImmutableArray(Of ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo))
+  name.vb: ToResultWithDiagnostics(Of FieldPatternBuilder)(FieldPatternBuilder, ImmutableArray(Of DiagnosticInfo))
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder
+    name: FieldPatternBuilder
+    href: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.html
+  - name: '>'
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder
+    name: FieldPatternBuilder
+    href: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder
+    name: FieldPatternBuilder
+    href: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.html
+  - name: )
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder
+    name: FieldPatternBuilder
+    href: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: )
+  - name: )
+- uid: Microsoft.CodeAnalysis
+  commentId: N:Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.CodeAnalysis
+  nameWithType: Microsoft.CodeAnalysis
+  fullName: Microsoft.CodeAnalysis
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  name: ToResultWithDiagnostics<T>(T)
+  nameWithType: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<T>(T)
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<T>(T)
+  nameWithType.vb: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of T)(T)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of T)(T)
+  name.vb: ToResultWithDiagnostics(Of T)(T)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+  commentId: T:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+  parent: ANcpLua.Roslyn.Utilities.Models
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html
+  name: ResultWithDiagnosticsExtensions
+  nameWithType: ResultWithDiagnosticsExtensions
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+- uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  name: ToResultWithDiagnostics<T>(T, ImmutableArray<DiagnosticInfo>)
+  nameWithType: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<T>(T, ImmutableArray<DiagnosticInfo>)
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<T>(T, System.Collections.Immutable.ImmutableArray<ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo>)
+  nameWithType.vb: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of T)(T, ImmutableArray(Of DiagnosticInfo))
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of T)(T, System.Collections.Immutable.ImmutableArray(Of ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo))
+  name.vb: ToResultWithDiagnostics(Of T)(T, ImmutableArray(Of DiagnosticInfo))
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: )
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Models
+  commentId: N:ANcpLua.Roslyn.Utilities.Models
+  href: ANcpLua.html
+  name: ANcpLua.Roslyn.Utilities.Models
+  nameWithType: ANcpLua.Roslyn.Utilities.Models
+  fullName: ANcpLua.Roslyn.Utilities.Models
+  spec.csharp:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities.Models
+    name: Models
+    href: ANcpLua.Roslyn.Utilities.Models.html
+  spec.vb:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities.Models
+    name: Models
+    href: ANcpLua.Roslyn.Utilities.Models.html
+- uid: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Named*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Named
+  href: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_FieldPatternBuilder_Named_System_String_
+  name: Named
+  nameWithType: FieldPatternBuilder.Named
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Named
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder
+  commentId: T:ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder
+  parent: ANcpLua.Roslyn.Utilities.Patterns
+  href: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.html
+  name: FieldPatternBuilder
+  nameWithType: FieldPatternBuilder
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.IsEqualTo(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.ISymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.SymbolExtensions.IsEqualTo(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.ISymbol)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_IsEqualTo_Microsoft_CodeAnalysis_ISymbol_Microsoft_CodeAnalysis_ISymbol_
+  name: IsEqualTo(ISymbol, ISymbol)
+  nameWithType: SymbolExtensions.IsEqualTo(ISymbol, ISymbol)
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions.IsEqualTo(Microsoft.CodeAnalysis.ISymbol, Microsoft.CodeAnalysis.ISymbol)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.IsEqualTo(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.ISymbol)
+    name: IsEqualTo
+    href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_IsEqualTo_Microsoft_CodeAnalysis_ISymbol_Microsoft_CodeAnalysis_ISymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ISymbol
+    name: ISymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.isymbol
+  - name: ','
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.ISymbol
+    name: ISymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.isymbol
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.SymbolExtensions.IsEqualTo(Microsoft.CodeAnalysis.ISymbol,Microsoft.CodeAnalysis.ISymbol)
+    name: IsEqualTo
+    href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html#ANcpLua_Roslyn_Utilities_SymbolExtensions_IsEqualTo_Microsoft_CodeAnalysis_ISymbol_Microsoft_CodeAnalysis_ISymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ISymbol
+    name: ISymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.isymbol
+  - name: ','
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.ISymbol
+    name: ISymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.isymbol
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.OfType*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.OfType
+  href: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_FieldPatternBuilder_OfType_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: OfType
+  nameWithType: FieldPatternBuilder.OfType
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.OfType
+- uid: Microsoft.CodeAnalysis.ITypeSymbol
+  commentId: T:Microsoft.CodeAnalysis.ITypeSymbol
+  parent: Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  name: ITypeSymbol
+  nameWithType: ITypeSymbol
+  fullName: Microsoft.CodeAnalysis.ITypeSymbol
+- uid: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Private
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Private
+  href: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_FieldPatternBuilder_Private
+  name: Private()
+  nameWithType: FieldPatternBuilder.Private()
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Private()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Private
+    name: Private
+    href: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_FieldPatternBuilder_Private
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Private
+    name: Private
+    href: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_FieldPatternBuilder_Private
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Public*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Public
+  href: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_FieldPatternBuilder_Public
+  name: Public
+  nameWithType: FieldPatternBuilder.Public
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Public
+- uid: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Public
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Public
+  href: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_FieldPatternBuilder_Public
+  name: Public()
+  nameWithType: FieldPatternBuilder.Public()
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Public()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Public
+    name: Public
+    href: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_FieldPatternBuilder_Public
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Public
+    name: Public
+    href: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_FieldPatternBuilder_Public
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Private*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Private
+  href: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_FieldPatternBuilder_Private
+  name: Private
+  nameWithType: FieldPatternBuilder.Private
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Private
+- uid: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Instance
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Instance
+  href: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_FieldPatternBuilder_Instance
+  name: Instance()
+  nameWithType: FieldPatternBuilder.Instance()
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Instance()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Instance
+    name: Instance
+    href: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_FieldPatternBuilder_Instance
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Instance
+    name: Instance
+    href: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_FieldPatternBuilder_Instance
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Static*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Static
+  href: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_FieldPatternBuilder_Static
+  name: Static
+  nameWithType: FieldPatternBuilder.Static
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Static
+- uid: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Static
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Static
+  href: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_FieldPatternBuilder_Static
+  name: Static()
+  nameWithType: FieldPatternBuilder.Static()
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Static()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Static
+    name: Static
+    href: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_FieldPatternBuilder_Static
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Static
+    name: Static
+    href: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_FieldPatternBuilder_Static
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Instance*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Instance
+  href: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_FieldPatternBuilder_Instance
+  name: Instance
+  nameWithType: FieldPatternBuilder.Instance
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Instance
+- uid: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.IsReadOnly
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.IsReadOnly
+  href: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_FieldPatternBuilder_IsReadOnly
+  name: IsReadOnly()
+  nameWithType: FieldPatternBuilder.IsReadOnly()
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.IsReadOnly()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.IsReadOnly
+    name: IsReadOnly
+    href: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_FieldPatternBuilder_IsReadOnly
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.IsReadOnly
+    name: IsReadOnly
+    href: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_FieldPatternBuilder_IsReadOnly
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.IsConst*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.IsConst
+  href: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_FieldPatternBuilder_IsConst
+  name: IsConst
+  nameWithType: FieldPatternBuilder.IsConst
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.IsConst
+- uid: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.IsConst
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.IsConst
+  href: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_FieldPatternBuilder_IsConst
+  name: IsConst()
+  nameWithType: FieldPatternBuilder.IsConst()
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.IsConst()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.IsConst
+    name: IsConst
+    href: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_FieldPatternBuilder_IsConst
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.IsConst
+    name: IsConst
+    href: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_FieldPatternBuilder_IsConst
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.IsReadOnly*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.IsReadOnly
+  href: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_FieldPatternBuilder_IsReadOnly
+  name: IsReadOnly
+  nameWithType: FieldPatternBuilder.IsReadOnly
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.IsReadOnly
+- uid: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.IsVolatile*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.IsVolatile
+  href: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_FieldPatternBuilder_IsVolatile
+  name: IsVolatile
+  nameWithType: FieldPatternBuilder.IsVolatile
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.IsVolatile
+- uid: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.HasAttribute(System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.HasAttribute(System.String)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_FieldPatternBuilder_HasAttribute_System_String_
+  name: HasAttribute(string)
+  nameWithType: FieldPatternBuilder.HasAttribute(string)
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.HasAttribute(string)
+  nameWithType.vb: FieldPatternBuilder.HasAttribute(String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.HasAttribute(String)
+  name.vb: HasAttribute(String)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.HasAttribute(System.String)
+    name: HasAttribute
+    href: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_FieldPatternBuilder_HasAttribute_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.HasAttribute(System.String)
+    name: HasAttribute
+    href: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_FieldPatternBuilder_HasAttribute_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.HasAttribute*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.HasAttribute
+  href: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_FieldPatternBuilder_HasAttribute_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: HasAttribute
+  nameWithType: FieldPatternBuilder.HasAttribute
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.HasAttribute
+- uid: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.HasAttribute(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.HasAttribute(Microsoft.CodeAnalysis.ITypeSymbol)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_FieldPatternBuilder_HasAttribute_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: HasAttribute(ITypeSymbol)
+  nameWithType: FieldPatternBuilder.HasAttribute(ITypeSymbol)
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.HasAttribute(Microsoft.CodeAnalysis.ITypeSymbol)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.HasAttribute(Microsoft.CodeAnalysis.ITypeSymbol)
+    name: HasAttribute
+    href: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_FieldPatternBuilder_HasAttribute_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.HasAttribute(Microsoft.CodeAnalysis.ITypeSymbol)
+    name: HasAttribute
+    href: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_FieldPatternBuilder_HasAttribute_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Where*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Where
+  href: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_FieldPatternBuilder_Where_System_Func_Microsoft_CodeAnalysis_IFieldSymbol_System_Boolean__
+  name: Where
+  nameWithType: FieldPatternBuilder.Where
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Where
+- uid: System.Func{Microsoft.CodeAnalysis.IFieldSymbol,System.Boolean}
+  commentId: T:System.Func{Microsoft.CodeAnalysis.IFieldSymbol,System.Boolean}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<IFieldSymbol, bool>
+  nameWithType: Func<IFieldSymbol, bool>
+  fullName: System.Func<Microsoft.CodeAnalysis.IFieldSymbol, bool>
+  nameWithType.vb: Func(Of IFieldSymbol, Boolean)
+  fullName.vb: System.Func(Of Microsoft.CodeAnalysis.IFieldSymbol, Boolean)
+  name.vb: Func(Of IFieldSymbol, Boolean)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: Microsoft.CodeAnalysis.IFieldSymbol
+    name: IFieldSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ifieldsymbol
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.IFieldSymbol
+    name: IFieldSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ifieldsymbol
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System.Func`2
+  commentId: T:System.Func`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<T, TResult>
+  nameWithType: Func<T, TResult>
+  fullName: System.Func<T, TResult>
+  nameWithType.vb: Func(Of T, TResult)
+  fullName.vb: System.Func(Of T, TResult)
+  name.vb: Func(Of T, TResult)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Build*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Build
+  href: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.html#ANcpLua_Roslyn_Utilities_Patterns_FieldPatternBuilder_Build
+  name: Build
+  nameWithType: FieldPatternBuilder.Build
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.Build
+- uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern{Microsoft.CodeAnalysis.IFieldSymbol}
+  commentId: T:ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern{Microsoft.CodeAnalysis.IFieldSymbol}
+  parent: ANcpLua.Roslyn.Utilities.Patterns
+  definition: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern`1
+  href: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern-1.html
+  name: SymbolPattern<IFieldSymbol>
+  nameWithType: SymbolPattern<IFieldSymbol>
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern<Microsoft.CodeAnalysis.IFieldSymbol>
+  nameWithType.vb: SymbolPattern(Of IFieldSymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern(Of Microsoft.CodeAnalysis.IFieldSymbol)
+  name.vb: SymbolPattern(Of IFieldSymbol)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern`1
+    name: SymbolPattern
+    href: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern-1.html
+  - name: <
+  - uid: Microsoft.CodeAnalysis.IFieldSymbol
+    name: IFieldSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ifieldsymbol
+  - name: '>'
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern`1
+    name: SymbolPattern
+    href: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.IFieldSymbol
+    name: IFieldSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ifieldsymbol
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.op_Implicit*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.op_Implicit
+  name: implicit operator
+  nameWithType: FieldPatternBuilder.implicit operator
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.implicit operator
+  nameWithType.vb: FieldPatternBuilder.CType
+  fullName.vb: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.CType
+  name.vb: CType
+  spec.csharp:
+  - name: implicit
+  - name: " "
+  - name: operator

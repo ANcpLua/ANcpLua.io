@@ -1,0 +1,127 @@
+### YamlMime:ManagedReference
+items:
+- uid: ANcpLua.Roslyn.Utilities.Models
+  commentId: N:ANcpLua.Roslyn.Utilities.Models
+  id: ANcpLua.Roslyn.Utilities.Models
+  children:
+  - ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext
+  - ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+  - ANcpLua.Roslyn.Utilities.Models.EquatableMessageArgs
+  - ANcpLua.Roslyn.Utilities.Models.FileWithName
+  - ANcpLua.Roslyn.Utilities.Models.LocationInfo
+  - ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+  - ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics`1
+  langs:
+  - csharp
+  - vb
+  name: ANcpLua.Roslyn.Utilities.Models
+  nameWithType: ANcpLua.Roslyn.Utilities.Models
+  fullName: ANcpLua.Roslyn.Utilities.Models
+  type: Namespace
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+references:
+- uid: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext
+  commentId: T:ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext
+  href: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext.html
+  name: ClassWithAttributesContext
+  nameWithType: ClassWithAttributesContext
+  fullName: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext
+- uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+  commentId: T:ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+  parent: ANcpLua.Roslyn.Utilities.Models
+  href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  name: DiagnosticInfo
+  nameWithType: DiagnosticInfo
+  fullName: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+- uid: ANcpLua.Roslyn.Utilities.Models.EquatableMessageArgs
+  commentId: T:ANcpLua.Roslyn.Utilities.Models.EquatableMessageArgs
+  parent: ANcpLua.Roslyn.Utilities.Models
+  href: ANcpLua.Roslyn.Utilities.Models.EquatableMessageArgs.html
+  name: EquatableMessageArgs
+  nameWithType: EquatableMessageArgs
+  fullName: ANcpLua.Roslyn.Utilities.Models.EquatableMessageArgs
+- uid: ANcpLua.Roslyn.Utilities.Models.FileWithName
+  commentId: T:ANcpLua.Roslyn.Utilities.Models.FileWithName
+  parent: ANcpLua.Roslyn.Utilities.Models
+  href: ANcpLua.Roslyn.Utilities.Models.FileWithName.html
+  name: FileWithName
+  nameWithType: FileWithName
+  fullName: ANcpLua.Roslyn.Utilities.Models.FileWithName
+- uid: ANcpLua.Roslyn.Utilities.Models.LocationInfo
+  commentId: T:ANcpLua.Roslyn.Utilities.Models.LocationInfo
+  parent: ANcpLua.Roslyn.Utilities.Models
+  href: ANcpLua.Roslyn.Utilities.Models.LocationInfo.html
+  name: LocationInfo
+  nameWithType: LocationInfo
+  fullName: ANcpLua.Roslyn.Utilities.Models.LocationInfo
+- uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics`1
+  commentId: T:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics`1
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics-1.html
+  name: ResultWithDiagnostics<T>
+  nameWithType: ResultWithDiagnostics<T>
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics<T>
+  nameWithType.vb: ResultWithDiagnostics(Of T)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics(Of T)
+  name.vb: ResultWithDiagnostics(Of T)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics`1
+    name: ResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics`1
+    name: ResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+  commentId: T:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+  parent: ANcpLua.Roslyn.Utilities.Models
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html
+  name: ResultWithDiagnosticsExtensions
+  nameWithType: ResultWithDiagnosticsExtensions
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+- uid: ANcpLua.Roslyn.Utilities.Models
+  commentId: N:ANcpLua.Roslyn.Utilities.Models
+  href: ANcpLua.html
+  name: ANcpLua.Roslyn.Utilities.Models
+  nameWithType: ANcpLua.Roslyn.Utilities.Models
+  fullName: ANcpLua.Roslyn.Utilities.Models
+  spec.csharp:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities.Models
+    name: Models
+    href: ANcpLua.Roslyn.Utilities.Models.html
+  spec.vb:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities.Models
+    name: Models
+    href: ANcpLua.Roslyn.Utilities.Models.html

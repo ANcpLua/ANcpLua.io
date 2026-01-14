@@ -1,0 +1,3053 @@
+### YamlMime:ManagedReference
+items:
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+  commentId: T:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+  id: InvocationMatcher
+  parent: ANcpLua.Roslyn.Utilities.Matching
+  children:
+  - ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Async
+  - ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Extension
+  - ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Generic
+  - ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.InNamespace(System.String)
+  - ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.InNamespaceStartingWith(System.String)
+  - ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Instance
+  - ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Linq
+  - ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Matches(Microsoft.CodeAnalysis.IOperation)
+  - ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Matches(Microsoft.CodeAnalysis.Operations.IInvocationOperation)
+  - ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NameContains(System.String)
+  - ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NameEndsWith(System.String)
+  - ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NameStartsWith(System.String)
+  - ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Named(System.String)
+  - ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NotExtension
+  - ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnConsole
+  - ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnString
+  - ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnTask
+  - ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnType(System.String)
+  - ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnTypeImplementing(System.String)
+  - ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnTypeInheritingFrom(System.String)
+  - ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Returning(System.String)
+  - ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.ReturningTask
+  - ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.ReturningVoid
+  - ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Static
+  - ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Where(System.Func{Microsoft.CodeAnalysis.Operations.IInvocationOperation,System.Boolean})
+  - ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithAllConstantArgs
+  - ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithArgOfType(System.Int32,System.String)
+  - ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithArguments(System.Int32)
+  - ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithConstantArg(System.Int32)
+  - ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithConstantStringArg(System.Int32)
+  - ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithMinArguments(System.Int32)
+  - ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithNoArguments
+  - ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithNullArg(System.Int32)
+  langs:
+  - csharp
+  - vb
+  name: InvocationMatcher
+  nameWithType: InvocationMatcher
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+  type: Class
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/InvocationMatch.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: InvocationMatcher
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/InvocationMatch.cs
+    startLine: 78
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Matching
+  summary: Fluent matcher for <xref href="Microsoft.CodeAnalysis.Operations.IInvocationOperation" data-throw-if-not-resolved="false"></xref> - the bread and butter of analyzers.
+  remarks: >-
+    <p>
+        This class provides a fluent API for building predicates to match method invocations
+        in Roslyn operation trees. Predicates are combined with AND semantics - all predicates
+        must match for the overall match to succeed.
+    </p>
+
+    <ul><li>Chain method calls to build complex matching criteria.</li><li>Use <xref href="ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Matches(Microsoft.CodeAnalysis.Operations.IInvocationOperation)" data-throw-if-not-resolved="false"></xref> to test invocations.</li><li>Use <xref href="ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Where(System.Func%7bMicrosoft.CodeAnalysis.Operations.IInvocationOperation%2cSystem.Boolean%7d)" data-throw-if-not-resolved="false"></xref> for custom conditions.</li></ul>
+  example:
+  - >-
+    <pre><code class="lang-csharp">var matcher = Invoke.Method("Dispose")
+        .OnTypeImplementing("IDisposable")
+        .WithNoArguments();
+
+    if (matcher.Matches(invocation))
+
+    {
+        // Handle Dispose call
+    }</code></pre>
+  syntax:
+    content: public sealed class InvocationMatcher
+    content.vb: Public NotInheritable Class InvocationMatcher
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Matching.Invoke
+    commentId: T:ANcpLua.Roslyn.Utilities.Matching.Invoke
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1
+  - ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Matches(Microsoft.CodeAnalysis.Operations.IInvocationOperation)
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Matches(Microsoft.CodeAnalysis.Operations.IInvocationOperation)
+  id: Matches(Microsoft.CodeAnalysis.Operations.IInvocationOperation)
+  parent: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+  langs:
+  - csharp
+  - vb
+  name: Matches(IInvocationOperation?)
+  nameWithType: InvocationMatcher.Matches(IInvocationOperation?)
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Matches(Microsoft.CodeAnalysis.Operations.IInvocationOperation?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/InvocationMatch.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Matches
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/InvocationMatch.cs
+    startLine: 101
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Matching
+  summary: Tests if an invocation matches all configured predicates.
+  example: []
+  syntax:
+    content: public bool Matches(IInvocationOperation? invocation)
+    parameters:
+    - id: invocation
+      type: Microsoft.CodeAnalysis.Operations.IInvocationOperation
+      description: The invocation operation to test, or <code>null</code>.
+    return:
+      type: System.Boolean
+      description: >-
+        <code>true</code> if <code class="paramref">invocation</code> is not <code>null</code> and satisfies
+
+        all configured predicates; otherwise, <code>false</code>.
+    content.vb: Public Function Matches(invocation As IInvocationOperation) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Matches*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Matches(Microsoft.CodeAnalysis.IOperation)
+    commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Matches(Microsoft.CodeAnalysis.IOperation)
+  nameWithType.vb: InvocationMatcher.Matches(IInvocationOperation)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Matches(Microsoft.CodeAnalysis.Operations.IInvocationOperation)
+  name.vb: Matches(IInvocationOperation)
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Matches(Microsoft.CodeAnalysis.IOperation)
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Matches(Microsoft.CodeAnalysis.IOperation)
+  id: Matches(Microsoft.CodeAnalysis.IOperation)
+  parent: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+  langs:
+  - csharp
+  - vb
+  name: Matches(IOperation?)
+  nameWithType: InvocationMatcher.Matches(IOperation?)
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Matches(Microsoft.CodeAnalysis.IOperation?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/InvocationMatch.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Matches
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/InvocationMatch.cs
+    startLine: 124
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Matching
+  summary: Tests if an operation is an invocation that matches all configured predicates.
+  example: []
+  syntax:
+    content: public bool Matches(IOperation? operation)
+    parameters:
+    - id: operation
+      type: Microsoft.CodeAnalysis.IOperation
+      description: The operation to test, or <code>null</code>.
+    return:
+      type: System.Boolean
+      description: >-
+        <code>true</code> if <code class="paramref">operation</code> is an <xref href="Microsoft.CodeAnalysis.Operations.IInvocationOperation" data-throw-if-not-resolved="false"></xref>
+
+        that satisfies all configured predicates; otherwise, <code>false</code>.
+    content.vb: Public Function Matches(operation As IOperation) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Matches*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Matches(Microsoft.CodeAnalysis.Operations.IInvocationOperation)
+    commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Matches(Microsoft.CodeAnalysis.Operations.IInvocationOperation)
+  nameWithType.vb: InvocationMatcher.Matches(IOperation)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Matches(Microsoft.CodeAnalysis.IOperation)
+  name.vb: Matches(IOperation)
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Named(System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Named(System.String)
+  id: Named(System.String)
+  parent: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+  langs:
+  - csharp
+  - vb
+  name: Named(string)
+  nameWithType: InvocationMatcher.Named(string)
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Named(string)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/InvocationMatch.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Named
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/InvocationMatch.cs
+    startLine: 137
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Matching
+  summary: Matches invocations of methods with the specified exact name.
+  example: []
+  syntax:
+    content: public InvocationMatcher Named(string name)
+    parameters:
+    - id: name
+      type: System.String
+      description: The exact method name to match.
+    return:
+      type: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+      description: This matcher for method chaining.
+    content.vb: Public Function Named(name As String) As InvocationMatcher
+  overload: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Named*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NameStartsWith(System.String)
+    commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NameStartsWith(System.String)
+  - linkId: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NameEndsWith(System.String)
+    commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NameEndsWith(System.String)
+  - linkId: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NameContains(System.String)
+    commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NameContains(System.String)
+  nameWithType.vb: InvocationMatcher.Named(String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Named(String)
+  name.vb: Named(String)
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NameStartsWith(System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NameStartsWith(System.String)
+  id: NameStartsWith(System.String)
+  parent: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+  langs:
+  - csharp
+  - vb
+  name: NameStartsWith(string)
+  nameWithType: InvocationMatcher.NameStartsWith(string)
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NameStartsWith(string)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/InvocationMatch.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: NameStartsWith
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/InvocationMatch.cs
+    startLine: 148
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Matching
+  summary: Matches invocations where the method name starts with the specified prefix.
+  example: []
+  syntax:
+    content: public InvocationMatcher NameStartsWith(string prefix)
+    parameters:
+    - id: prefix
+      type: System.String
+      description: The prefix to match against method names.
+    return:
+      type: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+      description: This matcher for method chaining.
+    content.vb: Public Function NameStartsWith(prefix As String) As InvocationMatcher
+  overload: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NameStartsWith*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Named(System.String)
+    commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Named(System.String)
+  - linkId: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NameEndsWith(System.String)
+    commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NameEndsWith(System.String)
+  - linkId: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NameContains(System.String)
+    commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NameContains(System.String)
+  nameWithType.vb: InvocationMatcher.NameStartsWith(String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NameStartsWith(String)
+  name.vb: NameStartsWith(String)
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NameEndsWith(System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NameEndsWith(System.String)
+  id: NameEndsWith(System.String)
+  parent: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+  langs:
+  - csharp
+  - vb
+  name: NameEndsWith(string)
+  nameWithType: InvocationMatcher.NameEndsWith(string)
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NameEndsWith(string)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/InvocationMatch.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: NameEndsWith
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/InvocationMatch.cs
+    startLine: 159
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Matching
+  summary: Matches invocations where the method name ends with the specified suffix.
+  example: []
+  syntax:
+    content: public InvocationMatcher NameEndsWith(string suffix)
+    parameters:
+    - id: suffix
+      type: System.String
+      description: The suffix to match against method names.
+    return:
+      type: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+      description: This matcher for method chaining.
+    content.vb: Public Function NameEndsWith(suffix As String) As InvocationMatcher
+  overload: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NameEndsWith*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Named(System.String)
+    commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Named(System.String)
+  - linkId: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NameStartsWith(System.String)
+    commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NameStartsWith(System.String)
+  - linkId: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NameContains(System.String)
+    commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NameContains(System.String)
+  nameWithType.vb: InvocationMatcher.NameEndsWith(String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NameEndsWith(String)
+  name.vb: NameEndsWith(String)
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NameContains(System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NameContains(System.String)
+  id: NameContains(System.String)
+  parent: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+  langs:
+  - csharp
+  - vb
+  name: NameContains(string)
+  nameWithType: InvocationMatcher.NameContains(string)
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NameContains(string)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/InvocationMatch.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: NameContains
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/InvocationMatch.cs
+    startLine: 170
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Matching
+  summary: Matches invocations where the method name contains the specified substring.
+  example: []
+  syntax:
+    content: public InvocationMatcher NameContains(string substring)
+    parameters:
+    - id: substring
+      type: System.String
+      description: The substring to search for in method names.
+    return:
+      type: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+      description: This matcher for method chaining.
+    content.vb: Public Function NameContains(substring As String) As InvocationMatcher
+  overload: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NameContains*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Named(System.String)
+    commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Named(System.String)
+  - linkId: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NameStartsWith(System.String)
+    commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NameStartsWith(System.String)
+  - linkId: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NameEndsWith(System.String)
+    commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NameEndsWith(System.String)
+  nameWithType.vb: InvocationMatcher.NameContains(String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NameContains(String)
+  name.vb: NameContains(String)
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnType(System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnType(System.String)
+  id: OnType(System.String)
+  parent: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+  langs:
+  - csharp
+  - vb
+  name: OnType(string)
+  nameWithType: InvocationMatcher.OnType(string)
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnType(string)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/InvocationMatch.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: OnType
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/InvocationMatch.cs
+    startLine: 186
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Matching
+  summary: Matches invocations on a receiver with the specified type name.
+  remarks: >-
+    For extension methods, the receiver is the first argument.
+
+    For static methods, the containing type is used.
+  example: []
+  syntax:
+    content: public InvocationMatcher OnType(string typeName)
+    parameters:
+    - id: typeName
+      type: System.String
+      description: The simple type name of the receiver.
+    return:
+      type: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+      description: This matcher for method chaining.
+    content.vb: Public Function OnType(typeName As String) As InvocationMatcher
+  overload: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnType*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnTypeInheritingFrom(System.String)
+    commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnTypeInheritingFrom(System.String)
+  - linkId: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnTypeImplementing(System.String)
+    commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnTypeImplementing(System.String)
+  nameWithType.vb: InvocationMatcher.OnType(String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnType(String)
+  name.vb: OnType(String)
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnTypeInheritingFrom(System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnTypeInheritingFrom(System.String)
+  id: OnTypeInheritingFrom(System.String)
+  parent: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+  langs:
+  - csharp
+  - vb
+  name: OnTypeInheritingFrom(string)
+  nameWithType: InvocationMatcher.OnTypeInheritingFrom(string)
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnTypeInheritingFrom(string)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/InvocationMatch.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: OnTypeInheritingFrom
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/InvocationMatch.cs
+    startLine: 196
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Matching
+  summary: Matches invocations where the receiver type inherits from the specified base type.
+  example: []
+  syntax:
+    content: public InvocationMatcher OnTypeInheritingFrom(string baseTypeName)
+    parameters:
+    - id: baseTypeName
+      type: System.String
+      description: The simple name or fully qualified name of the base type.
+    return:
+      type: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+      description: This matcher for method chaining.
+    content.vb: Public Function OnTypeInheritingFrom(baseTypeName As String) As InvocationMatcher
+  overload: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnTypeInheritingFrom*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnType(System.String)
+    commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnType(System.String)
+  - linkId: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnTypeImplementing(System.String)
+    commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnTypeImplementing(System.String)
+  nameWithType.vb: InvocationMatcher.OnTypeInheritingFrom(String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnTypeInheritingFrom(String)
+  name.vb: OnTypeInheritingFrom(String)
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnTypeImplementing(System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnTypeImplementing(System.String)
+  id: OnTypeImplementing(System.String)
+  parent: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+  langs:
+  - csharp
+  - vb
+  name: OnTypeImplementing(string)
+  nameWithType: InvocationMatcher.OnTypeImplementing(string)
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnTypeImplementing(string)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/InvocationMatch.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: OnTypeImplementing
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/InvocationMatch.cs
+    startLine: 210
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Matching
+  summary: Matches invocations where the receiver type implements the specified interface.
+  example: []
+  syntax:
+    content: public InvocationMatcher OnTypeImplementing(string interfaceName)
+    parameters:
+    - id: interfaceName
+      type: System.String
+      description: The simple name or fully qualified name of the interface.
+    return:
+      type: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+      description: This matcher for method chaining.
+    content.vb: Public Function OnTypeImplementing(interfaceName As String) As InvocationMatcher
+  overload: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnTypeImplementing*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnType(System.String)
+    commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnType(System.String)
+  - linkId: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnTypeInheritingFrom(System.String)
+    commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnTypeInheritingFrom(System.String)
+  nameWithType.vb: InvocationMatcher.OnTypeImplementing(String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnTypeImplementing(String)
+  name.vb: OnTypeImplementing(String)
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Extension
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Extension
+  id: Extension
+  parent: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+  langs:
+  - csharp
+  - vb
+  name: Extension()
+  nameWithType: InvocationMatcher.Extension()
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Extension()
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/InvocationMatch.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Extension
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/InvocationMatch.cs
+    startLine: 226
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Matching
+  summary: Matches extension method invocations.
+  example: []
+  syntax:
+    content: public InvocationMatcher Extension()
+    return:
+      type: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+      description: This matcher for method chaining.
+    content.vb: Public Function Extension() As InvocationMatcher
+  overload: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Extension*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NotExtension
+    commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NotExtension
+  - linkId: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Static
+    commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Static
+  - linkId: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Instance
+    commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Instance
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NotExtension
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NotExtension
+  id: NotExtension
+  parent: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+  langs:
+  - csharp
+  - vb
+  name: NotExtension()
+  nameWithType: InvocationMatcher.NotExtension()
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NotExtension()
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/InvocationMatch.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: NotExtension
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/InvocationMatch.cs
+    startLine: 234
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Matching
+  summary: Matches non-extension method invocations.
+  example: []
+  syntax:
+    content: public InvocationMatcher NotExtension()
+    return:
+      type: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+      description: This matcher for method chaining.
+    content.vb: Public Function NotExtension() As InvocationMatcher
+  overload: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NotExtension*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Extension
+    commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Extension
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Static
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Static
+  id: Static
+  parent: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+  langs:
+  - csharp
+  - vb
+  name: Static()
+  nameWithType: InvocationMatcher.Static()
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Static()
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/InvocationMatch.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Static
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/InvocationMatch.cs
+    startLine: 243
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Matching
+  summary: Matches static method invocations that are not extension methods.
+  example: []
+  syntax:
+    content: public InvocationMatcher Static()
+    return:
+      type: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+      description: This matcher for method chaining.
+    content.vb: Public Function [Static]() As InvocationMatcher
+  overload: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Static*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Instance
+    commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Instance
+  - linkId: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Extension
+    commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Extension
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Instance
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Instance
+  id: Instance
+  parent: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+  langs:
+  - csharp
+  - vb
+  name: Instance()
+  nameWithType: InvocationMatcher.Instance()
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Instance()
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/InvocationMatch.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Instance
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/InvocationMatch.cs
+    startLine: 252
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Matching
+  summary: Matches instance method invocations, including extension methods called on an instance.
+  example: []
+  syntax:
+    content: public InvocationMatcher Instance()
+    return:
+      type: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+      description: This matcher for method chaining.
+    content.vb: Public Function Instance() As InvocationMatcher
+  overload: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Instance*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Static
+    commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Static
+  - linkId: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Extension
+    commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Extension
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Async
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Async
+  id: Async
+  parent: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+  langs:
+  - csharp
+  - vb
+  name: Async()
+  nameWithType: InvocationMatcher.Async()
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Async()
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/InvocationMatch.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Async
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/InvocationMatch.cs
+    startLine: 260
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Matching
+  summary: Matches async method invocations.
+  example: []
+  syntax:
+    content: public InvocationMatcher Async()
+    return:
+      type: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+      description: This matcher for method chaining.
+    content.vb: Public Function Async() As InvocationMatcher
+  overload: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Async*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.ReturningTask
+    commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.ReturningTask
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Generic
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Generic
+  id: Generic
+  parent: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+  langs:
+  - csharp
+  - vb
+  name: Generic()
+  nameWithType: InvocationMatcher.Generic()
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Generic()
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/InvocationMatch.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Generic
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/InvocationMatch.cs
+    startLine: 267
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Matching
+  summary: Matches generic method invocations.
+  example: []
+  syntax:
+    content: public InvocationMatcher Generic()
+    return:
+      type: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+      description: This matcher for method chaining.
+    content.vb: Public Function Generic() As InvocationMatcher
+  overload: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Generic*
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.ReturningVoid
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.ReturningVoid
+  id: ReturningVoid
+  parent: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+  langs:
+  - csharp
+  - vb
+  name: ReturningVoid()
+  nameWithType: InvocationMatcher.ReturningVoid()
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.ReturningVoid()
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/InvocationMatch.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: ReturningVoid
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/InvocationMatch.cs
+    startLine: 278
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Matching
+  summary: Matches invocations of methods that return void.
+  example: []
+  syntax:
+    content: public InvocationMatcher ReturningVoid()
+    return:
+      type: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+      description: This matcher for method chaining.
+    content.vb: Public Function ReturningVoid() As InvocationMatcher
+  overload: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.ReturningVoid*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.ReturningTask
+    commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.ReturningTask
+  - linkId: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Returning(System.String)
+    commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Returning(System.String)
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.ReturningTask
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.ReturningTask
+  id: ReturningTask
+  parent: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+  langs:
+  - csharp
+  - vb
+  name: ReturningTask()
+  nameWithType: InvocationMatcher.ReturningTask()
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.ReturningTask()
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/InvocationMatch.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: ReturningTask
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/InvocationMatch.cs
+    startLine: 289
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Matching
+  summary: >-
+    Matches invocations of methods that return <xref href="System.Threading.Tasks.Task" data-throw-if-not-resolved="false"></xref>
+
+    or <xref href="System.Threading.Tasks.ValueTask" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public InvocationMatcher ReturningTask()
+    return:
+      type: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+      description: This matcher for method chaining.
+    content.vb: Public Function ReturningTask() As InvocationMatcher
+  overload: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.ReturningTask*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Async
+    commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Async
+  - linkId: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.ReturningVoid
+    commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.ReturningVoid
+  - linkId: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Returning(System.String)
+    commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Returning(System.String)
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Returning(System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Returning(System.String)
+  id: Returning(System.String)
+  parent: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+  langs:
+  - csharp
+  - vb
+  name: Returning(string)
+  nameWithType: InvocationMatcher.Returning(string)
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Returning(string)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/InvocationMatch.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Returning
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/InvocationMatch.cs
+    startLine: 300
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Matching
+  summary: Matches invocations of methods that return the specified type.
+  example: []
+  syntax:
+    content: public InvocationMatcher Returning(string typeName)
+    parameters:
+    - id: typeName
+      type: System.String
+      description: The simple type name of the return type.
+    return:
+      type: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+      description: This matcher for method chaining.
+    content.vb: Public Function Returning(typeName As String) As InvocationMatcher
+  overload: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Returning*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.ReturningVoid
+    commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.ReturningVoid
+  - linkId: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.ReturningTask
+    commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.ReturningTask
+  nameWithType.vb: InvocationMatcher.Returning(String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Returning(String)
+  name.vb: Returning(String)
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithArguments(System.Int32)
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithArguments(System.Int32)
+  id: WithArguments(System.Int32)
+  parent: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+  langs:
+  - csharp
+  - vb
+  name: WithArguments(int)
+  nameWithType: InvocationMatcher.WithArguments(int)
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithArguments(int)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/InvocationMatch.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: WithArguments
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/InvocationMatch.cs
+    startLine: 312
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Matching
+  summary: Matches invocations with exactly the specified number of arguments.
+  example: []
+  syntax:
+    content: public InvocationMatcher WithArguments(int count)
+    parameters:
+    - id: count
+      type: System.Int32
+      description: The exact number of arguments required.
+    return:
+      type: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+      description: This matcher for method chaining.
+    content.vb: Public Function WithArguments(count As Integer) As InvocationMatcher
+  overload: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithArguments*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithNoArguments
+    commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithNoArguments
+  - linkId: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithMinArguments(System.Int32)
+    commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithMinArguments(System.Int32)
+  nameWithType.vb: InvocationMatcher.WithArguments(Integer)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithArguments(Integer)
+  name.vb: WithArguments(Integer)
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithNoArguments
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithNoArguments
+  id: WithNoArguments
+  parent: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+  langs:
+  - csharp
+  - vb
+  name: WithNoArguments()
+  nameWithType: InvocationMatcher.WithNoArguments()
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithNoArguments()
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/InvocationMatch.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: WithNoArguments
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/InvocationMatch.cs
+    startLine: 321
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Matching
+  summary: Matches invocations with no arguments.
+  example: []
+  syntax:
+    content: public InvocationMatcher WithNoArguments()
+    return:
+      type: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+      description: This matcher for method chaining.
+    content.vb: Public Function WithNoArguments() As InvocationMatcher
+  overload: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithNoArguments*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithArguments(System.Int32)
+    commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithArguments(System.Int32)
+  - linkId: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithMinArguments(System.Int32)
+    commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithMinArguments(System.Int32)
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithMinArguments(System.Int32)
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithMinArguments(System.Int32)
+  id: WithMinArguments(System.Int32)
+  parent: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+  langs:
+  - csharp
+  - vb
+  name: WithMinArguments(int)
+  nameWithType: InvocationMatcher.WithMinArguments(int)
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithMinArguments(int)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/InvocationMatch.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: WithMinArguments
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/InvocationMatch.cs
+    startLine: 331
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Matching
+  summary: Matches invocations with at least the specified number of arguments.
+  example: []
+  syntax:
+    content: public InvocationMatcher WithMinArguments(int count)
+    parameters:
+    - id: count
+      type: System.Int32
+      description: The minimum number of arguments required.
+    return:
+      type: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+      description: This matcher for method chaining.
+    content.vb: Public Function WithMinArguments(count As Integer) As InvocationMatcher
+  overload: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithMinArguments*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithArguments(System.Int32)
+    commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithArguments(System.Int32)
+  - linkId: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithNoArguments
+    commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithNoArguments
+  nameWithType.vb: InvocationMatcher.WithMinArguments(Integer)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithMinArguments(Integer)
+  name.vb: WithMinArguments(Integer)
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithConstantArg(System.Int32)
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithConstantArg(System.Int32)
+  id: WithConstantArg(System.Int32)
+  parent: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+  langs:
+  - csharp
+  - vb
+  name: WithConstantArg(int)
+  nameWithType: InvocationMatcher.WithConstantArg(int)
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithConstantArg(int)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/InvocationMatch.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: WithConstantArg
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/InvocationMatch.cs
+    startLine: 342
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Matching
+  summary: Matches invocations where the argument at the specified index is a constant value.
+  example: []
+  syntax:
+    content: public InvocationMatcher WithConstantArg(int index)
+    parameters:
+    - id: index
+      type: System.Int32
+      description: The zero-based index of the argument to check.
+    return:
+      type: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+      description: This matcher for method chaining.
+    content.vb: Public Function WithConstantArg(index As Integer) As InvocationMatcher
+  overload: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithConstantArg*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithConstantStringArg(System.Int32)
+    commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithConstantStringArg(System.Int32)
+  - linkId: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithNullArg(System.Int32)
+    commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithNullArg(System.Int32)
+  - linkId: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithAllConstantArgs
+    commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithAllConstantArgs
+  nameWithType.vb: InvocationMatcher.WithConstantArg(Integer)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithConstantArg(Integer)
+  name.vb: WithConstantArg(Integer)
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithConstantStringArg(System.Int32)
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithConstantStringArg(System.Int32)
+  id: WithConstantStringArg(System.Int32)
+  parent: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+  langs:
+  - csharp
+  - vb
+  name: WithConstantStringArg(int)
+  nameWithType: InvocationMatcher.WithConstantStringArg(int)
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithConstantStringArg(int)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/InvocationMatch.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: WithConstantStringArg
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/InvocationMatch.cs
+    startLine: 353
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Matching
+  summary: Matches invocations where the argument at the specified index is a constant string.
+  example: []
+  syntax:
+    content: public InvocationMatcher WithConstantStringArg(int index)
+    parameters:
+    - id: index
+      type: System.Int32
+      description: The zero-based index of the argument to check.
+    return:
+      type: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+      description: This matcher for method chaining.
+    content.vb: Public Function WithConstantStringArg(index As Integer) As InvocationMatcher
+  overload: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithConstantStringArg*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithConstantArg(System.Int32)
+    commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithConstantArg(System.Int32)
+  - linkId: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithNullArg(System.Int32)
+    commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithNullArg(System.Int32)
+  nameWithType.vb: InvocationMatcher.WithConstantStringArg(Integer)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithConstantStringArg(Integer)
+  name.vb: WithConstantStringArg(Integer)
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithNullArg(System.Int32)
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithNullArg(System.Int32)
+  id: WithNullArg(System.Int32)
+  parent: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+  langs:
+  - csharp
+  - vb
+  name: WithNullArg(int)
+  nameWithType: InvocationMatcher.WithNullArg(int)
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithNullArg(int)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/InvocationMatch.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: WithNullArg
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/InvocationMatch.cs
+    startLine: 364
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Matching
+  summary: Matches invocations where the argument at the specified index is <code>null</code>.
+  example: []
+  syntax:
+    content: public InvocationMatcher WithNullArg(int index)
+    parameters:
+    - id: index
+      type: System.Int32
+      description: The zero-based index of the argument to check.
+    return:
+      type: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+      description: This matcher for method chaining.
+    content.vb: Public Function WithNullArg(index As Integer) As InvocationMatcher
+  overload: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithNullArg*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithConstantArg(System.Int32)
+    commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithConstantArg(System.Int32)
+  - linkId: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithConstantStringArg(System.Int32)
+    commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithConstantStringArg(System.Int32)
+  nameWithType.vb: InvocationMatcher.WithNullArg(Integer)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithNullArg(Integer)
+  name.vb: WithNullArg(Integer)
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithArgOfType(System.Int32,System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithArgOfType(System.Int32,System.String)
+  id: WithArgOfType(System.Int32,System.String)
+  parent: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+  langs:
+  - csharp
+  - vb
+  name: WithArgOfType(int, string)
+  nameWithType: InvocationMatcher.WithArgOfType(int, string)
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithArgOfType(int, string)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/InvocationMatch.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: WithArgOfType
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/InvocationMatch.cs
+    startLine: 375
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Matching
+  summary: Matches invocations where the argument at the specified index has the specified type.
+  example: []
+  syntax:
+    content: public InvocationMatcher WithArgOfType(int index, string typeName)
+    parameters:
+    - id: index
+      type: System.Int32
+      description: The zero-based index of the argument to check.
+    - id: typeName
+      type: System.String
+      description: The simple type name of the expected argument type.
+    return:
+      type: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+      description: This matcher for method chaining.
+    content.vb: Public Function WithArgOfType(index As Integer, typeName As String) As InvocationMatcher
+  overload: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithArgOfType*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithConstantArg(System.Int32)
+    commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithConstantArg(System.Int32)
+  nameWithType.vb: InvocationMatcher.WithArgOfType(Integer, String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithArgOfType(Integer, String)
+  name.vb: WithArgOfType(Integer, String)
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithAllConstantArgs
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithAllConstantArgs
+  id: WithAllConstantArgs
+  parent: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+  langs:
+  - csharp
+  - vb
+  name: WithAllConstantArgs()
+  nameWithType: InvocationMatcher.WithAllConstantArgs()
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithAllConstantArgs()
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/InvocationMatch.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: WithAllConstantArgs
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/InvocationMatch.cs
+    startLine: 384
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Matching
+  summary: Matches invocations where all arguments are constant values.
+  example: []
+  syntax:
+    content: public InvocationMatcher WithAllConstantArgs()
+    return:
+      type: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+      description: This matcher for method chaining.
+    content.vb: Public Function WithAllConstantArgs() As InvocationMatcher
+  overload: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithAllConstantArgs*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithConstantArg(System.Int32)
+    commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithConstantArg(System.Int32)
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.InNamespace(System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.InNamespace(System.String)
+  id: InNamespace(System.String)
+  parent: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+  langs:
+  - csharp
+  - vb
+  name: InNamespace(string)
+  nameWithType: InvocationMatcher.InNamespace(string)
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.InNamespace(string)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/InvocationMatch.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: InNamespace
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/InvocationMatch.cs
+    startLine: 395
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Matching
+  summary: Matches invocations of methods defined in the specified namespace.
+  example: []
+  syntax:
+    content: public InvocationMatcher InNamespace(string namespaceName)
+    parameters:
+    - id: namespaceName
+      type: System.String
+      description: The fully qualified namespace name.
+    return:
+      type: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+      description: This matcher for method chaining.
+    content.vb: Public Function InNamespace(namespaceName As String) As InvocationMatcher
+  overload: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.InNamespace*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.InNamespaceStartingWith(System.String)
+    commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.InNamespaceStartingWith(System.String)
+  nameWithType.vb: InvocationMatcher.InNamespace(String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.InNamespace(String)
+  name.vb: InNamespace(String)
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.InNamespaceStartingWith(System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.InNamespaceStartingWith(System.String)
+  id: InNamespaceStartingWith(System.String)
+  parent: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+  langs:
+  - csharp
+  - vb
+  name: InNamespaceStartingWith(string)
+  nameWithType: InvocationMatcher.InNamespaceStartingWith(string)
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.InNamespaceStartingWith(string)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/InvocationMatch.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: InNamespaceStartingWith
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/InvocationMatch.cs
+    startLine: 404
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Matching
+  summary: Matches invocations of methods defined in namespaces starting with the specified prefix.
+  example: []
+  syntax:
+    content: public InvocationMatcher InNamespaceStartingWith(string prefix)
+    parameters:
+    - id: prefix
+      type: System.String
+      description: The namespace prefix to match.
+    return:
+      type: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+      description: This matcher for method chaining.
+    content.vb: Public Function InNamespaceStartingWith(prefix As String) As InvocationMatcher
+  overload: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.InNamespaceStartingWith*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.InNamespace(System.String)
+    commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.InNamespace(System.String)
+  nameWithType.vb: InvocationMatcher.InNamespaceStartingWith(String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.InNamespaceStartingWith(String)
+  name.vb: InNamespaceStartingWith(String)
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Linq
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Linq
+  id: Linq
+  parent: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+  langs:
+  - csharp
+  - vb
+  name: Linq()
+  nameWithType: InvocationMatcher.Linq()
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Linq()
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/InvocationMatch.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Linq
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/InvocationMatch.cs
+    startLine: 416
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Matching
+  summary: Matches LINQ extension method invocations from the <code>System.Linq</code> namespace.
+  example: []
+  syntax:
+    content: public InvocationMatcher Linq()
+    return:
+      type: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+      description: This matcher for method chaining.
+    content.vb: Public Function Linq() As InvocationMatcher
+  overload: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Linq*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Extension
+    commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Extension
+  - linkId: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.InNamespace(System.String)
+    commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.InNamespace(System.String)
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnString
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnString
+  id: OnString
+  parent: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+  langs:
+  - csharp
+  - vb
+  name: OnString()
+  nameWithType: InvocationMatcher.OnString()
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnString()
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/InvocationMatch.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: OnString
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/InvocationMatch.cs
+    startLine: 424
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Matching
+  summary: Matches method invocations on <xref href="System.String" data-throw-if-not-resolved="false"></xref> instances.
+  example: []
+  syntax:
+    content: public InvocationMatcher OnString()
+    return:
+      type: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+      description: This matcher for method chaining.
+    content.vb: Public Function OnString() As InvocationMatcher
+  overload: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnString*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnType(System.String)
+    commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnType(System.String)
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnTask
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnTask
+  id: OnTask
+  parent: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+  langs:
+  - csharp
+  - vb
+  name: OnTask()
+  nameWithType: InvocationMatcher.OnTask()
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnTask()
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/InvocationMatch.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: OnTask
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/InvocationMatch.cs
+    startLine: 432
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Matching
+  summary: Matches method invocations on <xref href="System.Threading.Tasks.Task" data-throw-if-not-resolved="false"></xref> instances.
+  example: []
+  syntax:
+    content: public InvocationMatcher OnTask()
+    return:
+      type: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+      description: This matcher for method chaining.
+    content.vb: Public Function OnTask() As InvocationMatcher
+  overload: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnTask*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnType(System.String)
+    commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnType(System.String)
+  - linkId: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.ReturningTask
+    commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.ReturningTask
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnConsole
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnConsole
+  id: OnConsole
+  parent: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+  langs:
+  - csharp
+  - vb
+  name: OnConsole()
+  nameWithType: InvocationMatcher.OnConsole()
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnConsole()
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/InvocationMatch.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: OnConsole
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/InvocationMatch.cs
+    startLine: 439
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Matching
+  summary: Matches method invocations on <xref href="System.Console" data-throw-if-not-resolved="false"></xref> instances.
+  example: []
+  syntax:
+    content: public InvocationMatcher OnConsole()
+    return:
+      type: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+      description: This matcher for method chaining.
+    content.vb: Public Function OnConsole() As InvocationMatcher
+  overload: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnConsole*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnType(System.String)
+    commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnType(System.String)
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Where(System.Func{Microsoft.CodeAnalysis.Operations.IInvocationOperation,System.Boolean})
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Where(System.Func{Microsoft.CodeAnalysis.Operations.IInvocationOperation,System.Boolean})
+  id: Where(System.Func{Microsoft.CodeAnalysis.Operations.IInvocationOperation,System.Boolean})
+  parent: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+  langs:
+  - csharp
+  - vb
+  name: Where(Func<IInvocationOperation, bool>)
+  nameWithType: InvocationMatcher.Where(Func<IInvocationOperation, bool>)
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Where(System.Func<Microsoft.CodeAnalysis.Operations.IInvocationOperation, bool>)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/InvocationMatch.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Where
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/InvocationMatch.cs
+    startLine: 452
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Matching
+  summary: Adds a custom matching condition to this matcher.
+  remarks: >-
+    Use this method when the built-in matching methods are insufficient
+
+    for your use case.
+  example: []
+  syntax:
+    content: public InvocationMatcher Where(Func<IInvocationOperation, bool> predicate)
+    parameters:
+    - id: predicate
+      type: System.Func{Microsoft.CodeAnalysis.Operations.IInvocationOperation,System.Boolean}
+      description: A function that returns <code>true</code> if the invocation matches the custom condition.
+    return:
+      type: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+      description: This matcher for method chaining.
+    content.vb: Public Function Where(predicate As Func(Of IInvocationOperation, Boolean)) As InvocationMatcher
+  overload: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Where*
+  nameWithType.vb: InvocationMatcher.Where(Func(Of IInvocationOperation, Boolean))
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Where(System.Func(Of Microsoft.CodeAnalysis.Operations.IInvocationOperation, Boolean))
+  name.vb: Where(Func(Of IInvocationOperation, Boolean))
+references:
+- uid: ANcpLua.Roslyn.Utilities.Matching.Invoke
+  commentId: T:ANcpLua.Roslyn.Utilities.Matching.Invoke
+  href: ANcpLua.Roslyn.Utilities.Matching.Invoke.html
+  name: Invoke
+  nameWithType: Invoke
+  fullName: ANcpLua.Roslyn.Utilities.Matching.Invoke
+- uid: Microsoft.CodeAnalysis.Operations.IInvocationOperation
+  commentId: T:Microsoft.CodeAnalysis.Operations.IInvocationOperation
+  parent: Microsoft.CodeAnalysis.Operations
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.operations.iinvocationoperation
+  name: IInvocationOperation
+  nameWithType: IInvocationOperation
+  fullName: Microsoft.CodeAnalysis.Operations.IInvocationOperation
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Matches(Microsoft.CodeAnalysis.Operations.IInvocationOperation)
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Matches(Microsoft.CodeAnalysis.Operations.IInvocationOperation)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_Matches_Microsoft_CodeAnalysis_Operations_IInvocationOperation_
+  name: Matches(IInvocationOperation)
+  nameWithType: InvocationMatcher.Matches(IInvocationOperation)
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Matches(Microsoft.CodeAnalysis.Operations.IInvocationOperation)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Matches(Microsoft.CodeAnalysis.Operations.IInvocationOperation)
+    name: Matches
+    href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_Matches_Microsoft_CodeAnalysis_Operations_IInvocationOperation_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.Operations.IInvocationOperation
+    name: IInvocationOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.operations.iinvocationoperation
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Matches(Microsoft.CodeAnalysis.Operations.IInvocationOperation)
+    name: Matches
+    href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_Matches_Microsoft_CodeAnalysis_Operations_IInvocationOperation_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.Operations.IInvocationOperation
+    name: IInvocationOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.operations.iinvocationoperation
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Where(System.Func{Microsoft.CodeAnalysis.Operations.IInvocationOperation,System.Boolean})
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Where(System.Func{Microsoft.CodeAnalysis.Operations.IInvocationOperation,System.Boolean})
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_Where_System_Func_Microsoft_CodeAnalysis_Operations_IInvocationOperation_System_Boolean__
+  name: Where(Func<IInvocationOperation, bool>)
+  nameWithType: InvocationMatcher.Where(Func<IInvocationOperation, bool>)
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Where(System.Func<Microsoft.CodeAnalysis.Operations.IInvocationOperation, bool>)
+  nameWithType.vb: InvocationMatcher.Where(Func(Of IInvocationOperation, Boolean))
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Where(System.Func(Of Microsoft.CodeAnalysis.Operations.IInvocationOperation, Boolean))
+  name.vb: Where(Func(Of IInvocationOperation, Boolean))
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Where(System.Func{Microsoft.CodeAnalysis.Operations.IInvocationOperation,System.Boolean})
+    name: Where
+    href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_Where_System_Func_Microsoft_CodeAnalysis_Operations_IInvocationOperation_System_Boolean__
+  - name: (
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: Microsoft.CodeAnalysis.Operations.IInvocationOperation
+    name: IInvocationOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.operations.iinvocationoperation
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Where(System.Func{Microsoft.CodeAnalysis.Operations.IInvocationOperation,System.Boolean})
+    name: Where
+    href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_Where_System_Func_Microsoft_CodeAnalysis_Operations_IInvocationOperation_System_Boolean__
+  - name: (
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.Operations.IInvocationOperation
+    name: IInvocationOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.operations.iinvocationoperation
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching
+  commentId: N:ANcpLua.Roslyn.Utilities.Matching
+  href: ANcpLua.html
+  name: ANcpLua.Roslyn.Utilities.Matching
+  nameWithType: ANcpLua.Roslyn.Utilities.Matching
+  fullName: ANcpLua.Roslyn.Utilities.Matching
+  spec.csharp:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities.Matching
+    name: Matching
+    href: ANcpLua.Roslyn.Utilities.Matching.html
+  spec.vb:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities.Matching
+    name: Matching
+    href: ANcpLua.Roslyn.Utilities.Matching.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+  parent: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+  definition: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  name: ToResultWithDiagnostics<InvocationMatcher>(InvocationMatcher)
+  nameWithType: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<InvocationMatcher>(InvocationMatcher)
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher>(ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher)
+  nameWithType.vb: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of InvocationMatcher)(InvocationMatcher)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher)(ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher)
+  name.vb: ToResultWithDiagnostics(Of InvocationMatcher)(InvocationMatcher)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher)
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+    name: InvocationMatcher
+    href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html
+  - name: '>'
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+    name: InvocationMatcher
+    href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher)
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+    name: InvocationMatcher
+    href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html
+  - name: )
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+    name: InvocationMatcher
+    href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  parent: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+  definition: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  name: ToResultWithDiagnostics<InvocationMatcher>(InvocationMatcher, ImmutableArray<DiagnosticInfo>)
+  nameWithType: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<InvocationMatcher>(InvocationMatcher, ImmutableArray<DiagnosticInfo>)
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher>(ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher, System.Collections.Immutable.ImmutableArray<ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo>)
+  nameWithType.vb: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of InvocationMatcher)(InvocationMatcher, ImmutableArray(Of DiagnosticInfo))
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher)(ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher, System.Collections.Immutable.ImmutableArray(Of ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo))
+  name.vb: ToResultWithDiagnostics(Of InvocationMatcher)(InvocationMatcher, ImmutableArray(Of DiagnosticInfo))
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+    name: InvocationMatcher
+    href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html
+  - name: '>'
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+    name: InvocationMatcher
+    href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+    name: InvocationMatcher
+    href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html
+  - name: )
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+    name: InvocationMatcher
+    href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: )
+  - name: )
+- uid: Microsoft.CodeAnalysis.Operations
+  commentId: N:Microsoft.CodeAnalysis.Operations
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.CodeAnalysis.Operations
+  nameWithType: Microsoft.CodeAnalysis.Operations
+  fullName: Microsoft.CodeAnalysis.Operations
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+  - name: .
+  - uid: Microsoft.CodeAnalysis.Operations
+    name: Operations
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.operations
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+  - name: .
+  - uid: Microsoft.CodeAnalysis.Operations
+    name: Operations
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.operations
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  name: ToResultWithDiagnostics<T>(T)
+  nameWithType: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<T>(T)
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<T>(T)
+  nameWithType.vb: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of T)(T)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of T)(T)
+  name.vb: ToResultWithDiagnostics(Of T)(T)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+  commentId: T:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+  parent: ANcpLua.Roslyn.Utilities.Models
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html
+  name: ResultWithDiagnosticsExtensions
+  nameWithType: ResultWithDiagnosticsExtensions
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+- uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  name: ToResultWithDiagnostics<T>(T, ImmutableArray<DiagnosticInfo>)
+  nameWithType: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<T>(T, ImmutableArray<DiagnosticInfo>)
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<T>(T, System.Collections.Immutable.ImmutableArray<ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo>)
+  nameWithType.vb: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of T)(T, ImmutableArray(Of DiagnosticInfo))
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of T)(T, System.Collections.Immutable.ImmutableArray(Of ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo))
+  name.vb: ToResultWithDiagnostics(Of T)(T, ImmutableArray(Of DiagnosticInfo))
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: )
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Models
+  commentId: N:ANcpLua.Roslyn.Utilities.Models
+  href: ANcpLua.html
+  name: ANcpLua.Roslyn.Utilities.Models
+  nameWithType: ANcpLua.Roslyn.Utilities.Models
+  fullName: ANcpLua.Roslyn.Utilities.Models
+  spec.csharp:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities.Models
+    name: Models
+    href: ANcpLua.Roslyn.Utilities.Models.html
+  spec.vb:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities.Models
+    name: Models
+    href: ANcpLua.Roslyn.Utilities.Models.html
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Matches(Microsoft.CodeAnalysis.IOperation)
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Matches(Microsoft.CodeAnalysis.IOperation)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_Matches_Microsoft_CodeAnalysis_IOperation_
+  name: Matches(IOperation)
+  nameWithType: InvocationMatcher.Matches(IOperation)
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Matches(Microsoft.CodeAnalysis.IOperation)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Matches(Microsoft.CodeAnalysis.IOperation)
+    name: Matches
+    href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_Matches_Microsoft_CodeAnalysis_IOperation_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IOperation
+    name: IOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ioperation
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Matches(Microsoft.CodeAnalysis.IOperation)
+    name: Matches
+    href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_Matches_Microsoft_CodeAnalysis_IOperation_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.IOperation
+    name: IOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ioperation
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Matches*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Matches
+  href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_Matches_Microsoft_CodeAnalysis_Operations_IInvocationOperation_
+  name: Matches
+  nameWithType: InvocationMatcher.Matches
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Matches
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Microsoft.CodeAnalysis.IOperation
+  commentId: T:Microsoft.CodeAnalysis.IOperation
+  parent: Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.ioperation
+  name: IOperation
+  nameWithType: IOperation
+  fullName: Microsoft.CodeAnalysis.IOperation
+- uid: Microsoft.CodeAnalysis
+  commentId: N:Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.CodeAnalysis
+  nameWithType: Microsoft.CodeAnalysis
+  fullName: Microsoft.CodeAnalysis
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NameStartsWith(System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NameStartsWith(System.String)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_NameStartsWith_System_String_
+  name: NameStartsWith(string)
+  nameWithType: InvocationMatcher.NameStartsWith(string)
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NameStartsWith(string)
+  nameWithType.vb: InvocationMatcher.NameStartsWith(String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NameStartsWith(String)
+  name.vb: NameStartsWith(String)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NameStartsWith(System.String)
+    name: NameStartsWith
+    href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_NameStartsWith_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NameStartsWith(System.String)
+    name: NameStartsWith
+    href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_NameStartsWith_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NameEndsWith(System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NameEndsWith(System.String)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_NameEndsWith_System_String_
+  name: NameEndsWith(string)
+  nameWithType: InvocationMatcher.NameEndsWith(string)
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NameEndsWith(string)
+  nameWithType.vb: InvocationMatcher.NameEndsWith(String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NameEndsWith(String)
+  name.vb: NameEndsWith(String)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NameEndsWith(System.String)
+    name: NameEndsWith
+    href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_NameEndsWith_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NameEndsWith(System.String)
+    name: NameEndsWith
+    href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_NameEndsWith_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NameContains(System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NameContains(System.String)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_NameContains_System_String_
+  name: NameContains(string)
+  nameWithType: InvocationMatcher.NameContains(string)
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NameContains(string)
+  nameWithType.vb: InvocationMatcher.NameContains(String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NameContains(String)
+  name.vb: NameContains(String)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NameContains(System.String)
+    name: NameContains
+    href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_NameContains_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NameContains(System.String)
+    name: NameContains
+    href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_NameContains_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Named*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Named
+  href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_Named_System_String_
+  name: Named
+  nameWithType: InvocationMatcher.Named
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Named
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+  commentId: T:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+  parent: ANcpLua.Roslyn.Utilities.Matching
+  href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html
+  name: InvocationMatcher
+  nameWithType: InvocationMatcher
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Named(System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Named(System.String)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_Named_System_String_
+  name: Named(string)
+  nameWithType: InvocationMatcher.Named(string)
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Named(string)
+  nameWithType.vb: InvocationMatcher.Named(String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Named(String)
+  name.vb: Named(String)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Named(System.String)
+    name: Named
+    href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_Named_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Named(System.String)
+    name: Named
+    href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_Named_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NameStartsWith*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NameStartsWith
+  href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_NameStartsWith_System_String_
+  name: NameStartsWith
+  nameWithType: InvocationMatcher.NameStartsWith
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NameStartsWith
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NameEndsWith*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NameEndsWith
+  href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_NameEndsWith_System_String_
+  name: NameEndsWith
+  nameWithType: InvocationMatcher.NameEndsWith
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NameEndsWith
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NameContains*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NameContains
+  href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_NameContains_System_String_
+  name: NameContains
+  nameWithType: InvocationMatcher.NameContains
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NameContains
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnTypeInheritingFrom(System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnTypeInheritingFrom(System.String)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_OnTypeInheritingFrom_System_String_
+  name: OnTypeInheritingFrom(string)
+  nameWithType: InvocationMatcher.OnTypeInheritingFrom(string)
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnTypeInheritingFrom(string)
+  nameWithType.vb: InvocationMatcher.OnTypeInheritingFrom(String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnTypeInheritingFrom(String)
+  name.vb: OnTypeInheritingFrom(String)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnTypeInheritingFrom(System.String)
+    name: OnTypeInheritingFrom
+    href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_OnTypeInheritingFrom_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnTypeInheritingFrom(System.String)
+    name: OnTypeInheritingFrom
+    href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_OnTypeInheritingFrom_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnTypeImplementing(System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnTypeImplementing(System.String)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_OnTypeImplementing_System_String_
+  name: OnTypeImplementing(string)
+  nameWithType: InvocationMatcher.OnTypeImplementing(string)
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnTypeImplementing(string)
+  nameWithType.vb: InvocationMatcher.OnTypeImplementing(String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnTypeImplementing(String)
+  name.vb: OnTypeImplementing(String)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnTypeImplementing(System.String)
+    name: OnTypeImplementing
+    href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_OnTypeImplementing_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnTypeImplementing(System.String)
+    name: OnTypeImplementing
+    href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_OnTypeImplementing_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnType*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnType
+  href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_OnType_System_String_
+  name: OnType
+  nameWithType: InvocationMatcher.OnType
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnType
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnType(System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnType(System.String)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_OnType_System_String_
+  name: OnType(string)
+  nameWithType: InvocationMatcher.OnType(string)
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnType(string)
+  nameWithType.vb: InvocationMatcher.OnType(String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnType(String)
+  name.vb: OnType(String)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnType(System.String)
+    name: OnType
+    href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_OnType_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnType(System.String)
+    name: OnType
+    href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_OnType_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnTypeInheritingFrom*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnTypeInheritingFrom
+  href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_OnTypeInheritingFrom_System_String_
+  name: OnTypeInheritingFrom
+  nameWithType: InvocationMatcher.OnTypeInheritingFrom
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnTypeInheritingFrom
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnTypeImplementing*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnTypeImplementing
+  href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_OnTypeImplementing_System_String_
+  name: OnTypeImplementing
+  nameWithType: InvocationMatcher.OnTypeImplementing
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnTypeImplementing
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NotExtension
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NotExtension
+  href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_NotExtension
+  name: NotExtension()
+  nameWithType: InvocationMatcher.NotExtension()
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NotExtension()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NotExtension
+    name: NotExtension
+    href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_NotExtension
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NotExtension
+    name: NotExtension
+    href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_NotExtension
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Static
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Static
+  href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_Static
+  name: Static()
+  nameWithType: InvocationMatcher.Static()
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Static()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Static
+    name: Static
+    href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_Static
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Static
+    name: Static
+    href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_Static
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Instance
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Instance
+  href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_Instance
+  name: Instance()
+  nameWithType: InvocationMatcher.Instance()
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Instance()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Instance
+    name: Instance
+    href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_Instance
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Instance
+    name: Instance
+    href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_Instance
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Extension*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Extension
+  href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_Extension
+  name: Extension
+  nameWithType: InvocationMatcher.Extension
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Extension
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Extension
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Extension
+  href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_Extension
+  name: Extension()
+  nameWithType: InvocationMatcher.Extension()
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Extension()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Extension
+    name: Extension
+    href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_Extension
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Extension
+    name: Extension
+    href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_Extension
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NotExtension*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NotExtension
+  href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_NotExtension
+  name: NotExtension
+  nameWithType: InvocationMatcher.NotExtension
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.NotExtension
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Static*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Static
+  href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_Static
+  name: Static
+  nameWithType: InvocationMatcher.Static
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Static
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Instance*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Instance
+  href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_Instance
+  name: Instance
+  nameWithType: InvocationMatcher.Instance
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Instance
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.ReturningTask
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.ReturningTask
+  href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_ReturningTask
+  name: ReturningTask()
+  nameWithType: InvocationMatcher.ReturningTask()
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.ReturningTask()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.ReturningTask
+    name: ReturningTask
+    href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_ReturningTask
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.ReturningTask
+    name: ReturningTask
+    href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_ReturningTask
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Async*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Async
+  href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_Async
+  name: Async
+  nameWithType: InvocationMatcher.Async
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Async
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Generic*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Generic
+  href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_Generic
+  name: Generic
+  nameWithType: InvocationMatcher.Generic
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Generic
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Returning(System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Returning(System.String)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_Returning_System_String_
+  name: Returning(string)
+  nameWithType: InvocationMatcher.Returning(string)
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Returning(string)
+  nameWithType.vb: InvocationMatcher.Returning(String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Returning(String)
+  name.vb: Returning(String)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Returning(System.String)
+    name: Returning
+    href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_Returning_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Returning(System.String)
+    name: Returning
+    href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_Returning_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.ReturningVoid*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.ReturningVoid
+  href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_ReturningVoid
+  name: ReturningVoid
+  nameWithType: InvocationMatcher.ReturningVoid
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.ReturningVoid
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Async
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Async
+  href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_Async
+  name: Async()
+  nameWithType: InvocationMatcher.Async()
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Async()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Async
+    name: Async
+    href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_Async
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Async
+    name: Async
+    href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_Async
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.ReturningVoid
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.ReturningVoid
+  href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_ReturningVoid
+  name: ReturningVoid()
+  nameWithType: InvocationMatcher.ReturningVoid()
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.ReturningVoid()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.ReturningVoid
+    name: ReturningVoid
+    href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_ReturningVoid
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.ReturningVoid
+    name: ReturningVoid
+    href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_ReturningVoid
+  - name: (
+  - name: )
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading.Tasks.ValueTask
+  commentId: T:System.Threading.Tasks.ValueTask
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask
+  name: ValueTask
+  nameWithType: ValueTask
+  fullName: System.Threading.Tasks.ValueTask
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.ReturningTask*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.ReturningTask
+  href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_ReturningTask
+  name: ReturningTask
+  nameWithType: InvocationMatcher.ReturningTask
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.ReturningTask
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Returning*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Returning
+  href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_Returning_System_String_
+  name: Returning
+  nameWithType: InvocationMatcher.Returning
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Returning
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithNoArguments
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithNoArguments
+  href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_WithNoArguments
+  name: WithNoArguments()
+  nameWithType: InvocationMatcher.WithNoArguments()
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithNoArguments()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithNoArguments
+    name: WithNoArguments
+    href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_WithNoArguments
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithNoArguments
+    name: WithNoArguments
+    href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_WithNoArguments
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithMinArguments(System.Int32)
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithMinArguments(System.Int32)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_WithMinArguments_System_Int32_
+  name: WithMinArguments(int)
+  nameWithType: InvocationMatcher.WithMinArguments(int)
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithMinArguments(int)
+  nameWithType.vb: InvocationMatcher.WithMinArguments(Integer)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithMinArguments(Integer)
+  name.vb: WithMinArguments(Integer)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithMinArguments(System.Int32)
+    name: WithMinArguments
+    href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_WithMinArguments_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithMinArguments(System.Int32)
+    name: WithMinArguments
+    href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_WithMinArguments_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithArguments*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithArguments
+  href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_WithArguments_System_Int32_
+  name: WithArguments
+  nameWithType: InvocationMatcher.WithArguments
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithArguments
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithArguments(System.Int32)
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithArguments(System.Int32)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_WithArguments_System_Int32_
+  name: WithArguments(int)
+  nameWithType: InvocationMatcher.WithArguments(int)
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithArguments(int)
+  nameWithType.vb: InvocationMatcher.WithArguments(Integer)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithArguments(Integer)
+  name.vb: WithArguments(Integer)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithArguments(System.Int32)
+    name: WithArguments
+    href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_WithArguments_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithArguments(System.Int32)
+    name: WithArguments
+    href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_WithArguments_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithNoArguments*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithNoArguments
+  href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_WithNoArguments
+  name: WithNoArguments
+  nameWithType: InvocationMatcher.WithNoArguments
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithNoArguments
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithMinArguments*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithMinArguments
+  href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_WithMinArguments_System_Int32_
+  name: WithMinArguments
+  nameWithType: InvocationMatcher.WithMinArguments
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithMinArguments
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithConstantStringArg(System.Int32)
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithConstantStringArg(System.Int32)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_WithConstantStringArg_System_Int32_
+  name: WithConstantStringArg(int)
+  nameWithType: InvocationMatcher.WithConstantStringArg(int)
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithConstantStringArg(int)
+  nameWithType.vb: InvocationMatcher.WithConstantStringArg(Integer)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithConstantStringArg(Integer)
+  name.vb: WithConstantStringArg(Integer)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithConstantStringArg(System.Int32)
+    name: WithConstantStringArg
+    href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_WithConstantStringArg_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithConstantStringArg(System.Int32)
+    name: WithConstantStringArg
+    href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_WithConstantStringArg_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithNullArg(System.Int32)
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithNullArg(System.Int32)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_WithNullArg_System_Int32_
+  name: WithNullArg(int)
+  nameWithType: InvocationMatcher.WithNullArg(int)
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithNullArg(int)
+  nameWithType.vb: InvocationMatcher.WithNullArg(Integer)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithNullArg(Integer)
+  name.vb: WithNullArg(Integer)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithNullArg(System.Int32)
+    name: WithNullArg
+    href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_WithNullArg_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithNullArg(System.Int32)
+    name: WithNullArg
+    href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_WithNullArg_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithAllConstantArgs
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithAllConstantArgs
+  href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_WithAllConstantArgs
+  name: WithAllConstantArgs()
+  nameWithType: InvocationMatcher.WithAllConstantArgs()
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithAllConstantArgs()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithAllConstantArgs
+    name: WithAllConstantArgs
+    href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_WithAllConstantArgs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithAllConstantArgs
+    name: WithAllConstantArgs
+    href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_WithAllConstantArgs
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithConstantArg*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithConstantArg
+  href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_WithConstantArg_System_Int32_
+  name: WithConstantArg
+  nameWithType: InvocationMatcher.WithConstantArg
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithConstantArg
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithConstantArg(System.Int32)
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithConstantArg(System.Int32)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_WithConstantArg_System_Int32_
+  name: WithConstantArg(int)
+  nameWithType: InvocationMatcher.WithConstantArg(int)
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithConstantArg(int)
+  nameWithType.vb: InvocationMatcher.WithConstantArg(Integer)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithConstantArg(Integer)
+  name.vb: WithConstantArg(Integer)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithConstantArg(System.Int32)
+    name: WithConstantArg
+    href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_WithConstantArg_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithConstantArg(System.Int32)
+    name: WithConstantArg
+    href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_WithConstantArg_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithConstantStringArg*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithConstantStringArg
+  href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_WithConstantStringArg_System_Int32_
+  name: WithConstantStringArg
+  nameWithType: InvocationMatcher.WithConstantStringArg
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithConstantStringArg
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithNullArg*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithNullArg
+  href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_WithNullArg_System_Int32_
+  name: WithNullArg
+  nameWithType: InvocationMatcher.WithNullArg
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithNullArg
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithArgOfType*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithArgOfType
+  href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_WithArgOfType_System_Int32_System_String_
+  name: WithArgOfType
+  nameWithType: InvocationMatcher.WithArgOfType
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithArgOfType
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithAllConstantArgs*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithAllConstantArgs
+  href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_WithAllConstantArgs
+  name: WithAllConstantArgs
+  nameWithType: InvocationMatcher.WithAllConstantArgs
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.WithAllConstantArgs
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.InNamespaceStartingWith(System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.InNamespaceStartingWith(System.String)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_InNamespaceStartingWith_System_String_
+  name: InNamespaceStartingWith(string)
+  nameWithType: InvocationMatcher.InNamespaceStartingWith(string)
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.InNamespaceStartingWith(string)
+  nameWithType.vb: InvocationMatcher.InNamespaceStartingWith(String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.InNamespaceStartingWith(String)
+  name.vb: InNamespaceStartingWith(String)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.InNamespaceStartingWith(System.String)
+    name: InNamespaceStartingWith
+    href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_InNamespaceStartingWith_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.InNamespaceStartingWith(System.String)
+    name: InNamespaceStartingWith
+    href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_InNamespaceStartingWith_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.InNamespace*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.InNamespace
+  href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_InNamespace_System_String_
+  name: InNamespace
+  nameWithType: InvocationMatcher.InNamespace
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.InNamespace
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.InNamespace(System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.InNamespace(System.String)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_InNamespace_System_String_
+  name: InNamespace(string)
+  nameWithType: InvocationMatcher.InNamespace(string)
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.InNamespace(string)
+  nameWithType.vb: InvocationMatcher.InNamespace(String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.InNamespace(String)
+  name.vb: InNamespace(String)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.InNamespace(System.String)
+    name: InNamespace
+    href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_InNamespace_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.InNamespace(System.String)
+    name: InNamespace
+    href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_InNamespace_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.InNamespaceStartingWith*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.InNamespaceStartingWith
+  href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_InNamespaceStartingWith_System_String_
+  name: InNamespaceStartingWith
+  nameWithType: InvocationMatcher.InNamespaceStartingWith
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.InNamespaceStartingWith
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Linq*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Linq
+  href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_Linq
+  name: Linq
+  nameWithType: InvocationMatcher.Linq
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Linq
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnString*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnString
+  href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_OnString
+  name: OnString
+  nameWithType: InvocationMatcher.OnString
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnString
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnTask*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnTask
+  href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_OnTask
+  name: OnTask
+  nameWithType: InvocationMatcher.OnTask
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnTask
+- uid: System.Console
+  commentId: T:System.Console
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.console
+  name: Console
+  nameWithType: Console
+  fullName: System.Console
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnConsole*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnConsole
+  href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_OnConsole
+  name: OnConsole
+  nameWithType: InvocationMatcher.OnConsole
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.OnConsole
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Where*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Where
+  href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html#ANcpLua_Roslyn_Utilities_Matching_InvocationMatcher_Where_System_Func_Microsoft_CodeAnalysis_Operations_IInvocationOperation_System_Boolean__
+  name: Where
+  nameWithType: InvocationMatcher.Where
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.Where
+- uid: System.Func{Microsoft.CodeAnalysis.Operations.IInvocationOperation,System.Boolean}
+  commentId: T:System.Func{Microsoft.CodeAnalysis.Operations.IInvocationOperation,System.Boolean}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<IInvocationOperation, bool>
+  nameWithType: Func<IInvocationOperation, bool>
+  fullName: System.Func<Microsoft.CodeAnalysis.Operations.IInvocationOperation, bool>
+  nameWithType.vb: Func(Of IInvocationOperation, Boolean)
+  fullName.vb: System.Func(Of Microsoft.CodeAnalysis.Operations.IInvocationOperation, Boolean)
+  name.vb: Func(Of IInvocationOperation, Boolean)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: Microsoft.CodeAnalysis.Operations.IInvocationOperation
+    name: IInvocationOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.operations.iinvocationoperation
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.Operations.IInvocationOperation
+    name: IInvocationOperation
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.operations.iinvocationoperation
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System.Func`2
+  commentId: T:System.Func`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<T, TResult>
+  nameWithType: Func<T, TResult>
+  fullName: System.Func<T, TResult>
+  nameWithType.vb: Func(Of T, TResult)
+  fullName.vb: System.Func(Of T, TResult)
+  name.vb: Func(Of T, TResult)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )

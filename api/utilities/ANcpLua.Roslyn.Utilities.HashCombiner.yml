@@ -1,0 +1,1547 @@
+### YamlMime:ManagedReference
+items:
+- uid: ANcpLua.Roslyn.Utilities.HashCombiner
+  commentId: T:ANcpLua.Roslyn.Utilities.HashCombiner
+  id: HashCombiner
+  parent: ANcpLua.Roslyn.Utilities
+  children:
+  - ANcpLua.Roslyn.Utilities.HashCombiner.Add(System.Boolean)
+  - ANcpLua.Roslyn.Utilities.HashCombiner.Add(System.Int32)
+  - ANcpLua.Roslyn.Utilities.HashCombiner.Add(System.String,System.StringComparer)
+  - ANcpLua.Roslyn.Utilities.HashCombiner.AddRange``1(System.Collections.Generic.IEnumerable{``0})
+  - ANcpLua.Roslyn.Utilities.HashCombiner.AddRange``1(System.ReadOnlySpan{``0})
+  - ANcpLua.Roslyn.Utilities.HashCombiner.Add``1(``0)
+  - ANcpLua.Roslyn.Utilities.HashCombiner.Create(System.Int32)
+  - ANcpLua.Roslyn.Utilities.HashCombiner.HashCode
+  - ANcpLua.Roslyn.Utilities.HashCombiner.ToHashCode
+  langs:
+  - csharp
+  - vb
+  name: HashCombiner
+  nameWithType: HashCombiner
+  fullName: ANcpLua.Roslyn.Utilities.HashCombiner
+  type: Struct
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/HashCombiner.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: HashCombiner
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/HashCombiner.cs
+    startLine: 22
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Murmur3-based hash combiner for implementing <xref href="System.Object.GetHashCode" data-throw-if-not-resolved="false"></xref> in equatable types.
+  remarks: >-
+    <p>
+
+    This struct provides a high-quality hash combining algorithm based on MurmurHash3, offering
+
+    excellent distribution and minimal collisions for use in hash tables and equality comparisons.
+
+    </p>
+
+    <ul><li>This is a mutable struct for performance; use it within a single method scope only.</li><li>Do not store or pass instances across method boundaries as the state may be copied unexpectedly.</li><li>Use <xref href="ANcpLua.Roslyn.Utilities.HashCombiner.Create(System.Int32)" data-throw-if-not-resolved="false"></xref> to initialize a new instance, then call <xref href="ANcpLua.Roslyn.Utilities.HashCombiner.Add(System.Int32)" data-throw-if-not-resolved="false"></xref> or overloads to combine values.</li><li>Retrieve the final hash via <xref href="ANcpLua.Roslyn.Utilities.HashCombiner.HashCode" data-throw-if-not-resolved="false"></xref> or <xref href="ANcpLua.Roslyn.Utilities.HashCombiner.ToHashCode" data-throw-if-not-resolved="false"></xref>.</li></ul>
+  example: []
+  syntax:
+    content: public struct HashCombiner
+    content.vb: Public Structure HashCombiner
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.EquatableArray`1
+    commentId: T:ANcpLua.Roslyn.Utilities.EquatableArray`1
+  - linkId: ANcpLua.Roslyn.Utilities.EqualityExtensions.GetSequenceHashCode``1(System.Collections.Immutable.ImmutableArray{``0})
+    commentId: M:ANcpLua.Roslyn.Utilities.EqualityExtensions.GetSequenceHashCode``1(System.Collections.Immutable.ImmutableArray{``0})
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  extensionMethods:
+  - ANcpLua.Roslyn.Utilities.HashCombiner.ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1
+  - ANcpLua.Roslyn.Utilities.HashCombiner.ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+- uid: ANcpLua.Roslyn.Utilities.HashCombiner.HashCode
+  commentId: P:ANcpLua.Roslyn.Utilities.HashCombiner.HashCode
+  id: HashCode
+  parent: ANcpLua.Roslyn.Utilities.HashCombiner
+  langs:
+  - csharp
+  - vb
+  name: HashCode
+  nameWithType: HashCombiner.HashCode
+  fullName: ANcpLua.Roslyn.Utilities.HashCombiner.HashCode
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/HashCombiner.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: HashCode
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/HashCombiner.cs
+    startLine: 41
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Gets the combined hash code computed from all added values.
+  remarks: >-
+    <p>
+
+    The returned value incorporates finalization mixing to ensure good bit distribution,
+
+    making it suitable for use in hash tables and dictionaries.
+
+    </p>
+  example: []
+  syntax:
+    content: public readonly int HashCode { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property HashCode As Integer
+  overload: ANcpLua.Roslyn.Utilities.HashCombiner.HashCode*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.HashCombiner.ToHashCode
+    commentId: M:ANcpLua.Roslyn.Utilities.HashCombiner.ToHashCode
+- uid: ANcpLua.Roslyn.Utilities.HashCombiner.Create(System.Int32)
+  commentId: M:ANcpLua.Roslyn.Utilities.HashCombiner.Create(System.Int32)
+  id: Create(System.Int32)
+  parent: ANcpLua.Roslyn.Utilities.HashCombiner
+  langs:
+  - csharp
+  - vb
+  name: Create(int)
+  nameWithType: HashCombiner.Create(int)
+  fullName: ANcpLua.Roslyn.Utilities.HashCombiner.Create(int)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/HashCombiner.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Create
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/HashCombiner.cs
+    startLine: 71
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Creates a new <xref href="ANcpLua.Roslyn.Utilities.HashCombiner" data-throw-if-not-resolved="false"></xref> instance with the specified seed value.
+  remarks: >-
+    <p>
+
+    Use different seed values when you need distinct hash sequences for the same input values,
+
+    such as when implementing multiple hash functions for bloom filters.
+
+    </p>
+  example: []
+  syntax:
+    content: public static HashCombiner Create(int seed = -2128831035)
+    parameters:
+    - id: seed
+      type: System.Int32
+      description: The initial seed value for the hash computation. Defaults to the FNV-1a offset basis (2166136261).
+    return:
+      type: ANcpLua.Roslyn.Utilities.HashCombiner
+      description: A new <xref href="ANcpLua.Roslyn.Utilities.HashCombiner" data-throw-if-not-resolved="false"></xref> initialized with the specified seed.
+    content.vb: Public Shared Function Create(seed As Integer = -2128831035) As HashCombiner
+  overload: ANcpLua.Roslyn.Utilities.HashCombiner.Create*
+  nameWithType.vb: HashCombiner.Create(Integer)
+  fullName.vb: ANcpLua.Roslyn.Utilities.HashCombiner.Create(Integer)
+  name.vb: Create(Integer)
+- uid: ANcpLua.Roslyn.Utilities.HashCombiner.Add(System.Int32)
+  commentId: M:ANcpLua.Roslyn.Utilities.HashCombiner.Add(System.Int32)
+  id: Add(System.Int32)
+  parent: ANcpLua.Roslyn.Utilities.HashCombiner
+  langs:
+  - csharp
+  - vb
+  name: Add(int)
+  nameWithType: HashCombiner.Add(int)
+  fullName: ANcpLua.Roslyn.Utilities.HashCombiner.Add(int)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/HashCombiner.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Add
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/HashCombiner.cs
+    startLine: 90
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Adds an integer value to the hash computation.
+  remarks: >-
+    <p>
+
+    This is the core hashing method that implements the MurmurHash3 mixing function.
+
+    All other <code>Add</code> overloads ultimately delegate to this method.
+
+    </p>
+  example: []
+  syntax:
+    content: public void Add(int value)
+    parameters:
+    - id: value
+      type: System.Int32
+      description: The integer value to incorporate into the hash.
+    content.vb: Public Sub Add(value As Integer)
+  overload: ANcpLua.Roslyn.Utilities.HashCombiner.Add*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.HashCombiner.Add``1(``0)
+    commentId: M:ANcpLua.Roslyn.Utilities.HashCombiner.Add``1(``0)
+  - linkId: ANcpLua.Roslyn.Utilities.HashCombiner.AddRange``1(System.Collections.Generic.IEnumerable{``0})
+    commentId: M:ANcpLua.Roslyn.Utilities.HashCombiner.AddRange``1(System.Collections.Generic.IEnumerable{``0})
+  nameWithType.vb: HashCombiner.Add(Integer)
+  fullName.vb: ANcpLua.Roslyn.Utilities.HashCombiner.Add(Integer)
+  name.vb: Add(Integer)
+- uid: ANcpLua.Roslyn.Utilities.HashCombiner.Add``1(``0)
+  commentId: M:ANcpLua.Roslyn.Utilities.HashCombiner.Add``1(``0)
+  id: Add``1(``0)
+  parent: ANcpLua.Roslyn.Utilities.HashCombiner
+  langs:
+  - csharp
+  - vb
+  name: Add<T>(T?)
+  nameWithType: HashCombiner.Add<T>(T?)
+  fullName: ANcpLua.Roslyn.Utilities.HashCombiner.Add<T>(T?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/HashCombiner.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Add
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/HashCombiner.cs
+    startLine: 121
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Adds a value of any type to the hash computation using its <xref href="System.Object.GetHashCode" data-throw-if-not-resolved="false"></xref> result.
+  remarks: >-
+    <p>
+
+    This method uses the value's <xref href="System.Object.GetHashCode" data-throw-if-not-resolved="false"></xref> method to obtain an integer
+
+    hash code, which is then incorporated using the MurmurHash3 algorithm.
+
+    </p>
+  example: []
+  syntax:
+    content: public void Add<T>(T? value)
+    parameters:
+    - id: value
+      type: '{T}'
+      description: The value to incorporate into the hash. If <code>null</code>, adds 0 to the hash.
+    typeParameters:
+    - id: T
+      description: The type of the value to add.
+    content.vb: Public Sub Add(Of T)(value As T)
+  overload: ANcpLua.Roslyn.Utilities.HashCombiner.Add*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.HashCombiner.Add(System.Int32)
+    commentId: M:ANcpLua.Roslyn.Utilities.HashCombiner.Add(System.Int32)
+  - linkId: ANcpLua.Roslyn.Utilities.HashCombiner.AddRange``1(System.Collections.Generic.IEnumerable{``0})
+    commentId: M:ANcpLua.Roslyn.Utilities.HashCombiner.AddRange``1(System.Collections.Generic.IEnumerable{``0})
+  nameWithType.vb: HashCombiner.Add(Of T)(T)
+  fullName.vb: ANcpLua.Roslyn.Utilities.HashCombiner.Add(Of T)(T)
+  name.vb: Add(Of T)(T)
+- uid: ANcpLua.Roslyn.Utilities.HashCombiner.Add(System.Boolean)
+  commentId: M:ANcpLua.Roslyn.Utilities.HashCombiner.Add(System.Boolean)
+  id: Add(System.Boolean)
+  parent: ANcpLua.Roslyn.Utilities.HashCombiner
+  langs:
+  - csharp
+  - vb
+  name: Add(bool)
+  nameWithType: HashCombiner.Add(bool)
+  fullName: ANcpLua.Roslyn.Utilities.HashCombiner.Add(bool)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/HashCombiner.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Add
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/HashCombiner.cs
+    startLine: 133
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Adds a boolean value to the hash computation.
+  remarks: >-
+    <p>
+
+    Converts <code>true</code> to 1 and <code>false</code> to 0 for consistent hashing behavior.
+
+    </p>
+  example: []
+  syntax:
+    content: public void Add(bool value)
+    parameters:
+    - id: value
+      type: System.Boolean
+      description: The boolean value to incorporate into the hash.
+    content.vb: Public Sub Add(value As Boolean)
+  overload: ANcpLua.Roslyn.Utilities.HashCombiner.Add*
+  nameWithType.vb: HashCombiner.Add(Boolean)
+  fullName.vb: ANcpLua.Roslyn.Utilities.HashCombiner.Add(Boolean)
+  name.vb: Add(Boolean)
+- uid: ANcpLua.Roslyn.Utilities.HashCombiner.Add(System.String,System.StringComparer)
+  commentId: M:ANcpLua.Roslyn.Utilities.HashCombiner.Add(System.String,System.StringComparer)
+  id: Add(System.String,System.StringComparer)
+  parent: ANcpLua.Roslyn.Utilities.HashCombiner
+  langs:
+  - csharp
+  - vb
+  name: Add(string?, StringComparer?)
+  nameWithType: HashCombiner.Add(string?, StringComparer?)
+  fullName: ANcpLua.Roslyn.Utilities.HashCombiner.Add(string?, System.StringComparer?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/HashCombiner.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Add
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/HashCombiner.cs
+    startLine: 152
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Adds a string value to the hash computation using the specified comparer.
+  remarks: >-
+    <p>
+
+    Use a consistent comparer that matches your equality comparison semantics.
+
+    For example, use <xref href="System.StringComparer.OrdinalIgnoreCase" data-throw-if-not-resolved="false"></xref> if your equality
+
+    comparison is case-insensitive.
+
+    </p>
+  example: []
+  syntax:
+    content: public void Add(string? value, StringComparer? comparer = null)
+    parameters:
+    - id: value
+      type: System.String
+      description: The string value to incorporate into the hash. If <code>null</code>, adds 0 to the hash.
+    - id: comparer
+      type: System.StringComparer
+      description: The string comparer to use for computing the hash code. If <code>null</code>, uses <xref href="System.StringComparer.Ordinal" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Sub Add(value As String, comparer As StringComparer = Nothing)
+  overload: ANcpLua.Roslyn.Utilities.HashCombiner.Add*
+  nameWithType.vb: HashCombiner.Add(String, StringComparer)
+  fullName.vb: ANcpLua.Roslyn.Utilities.HashCombiner.Add(String, System.StringComparer)
+  name.vb: Add(String, StringComparer)
+- uid: ANcpLua.Roslyn.Utilities.HashCombiner.AddRange``1(System.Collections.Generic.IEnumerable{``0})
+  commentId: M:ANcpLua.Roslyn.Utilities.HashCombiner.AddRange``1(System.Collections.Generic.IEnumerable{``0})
+  id: AddRange``1(System.Collections.Generic.IEnumerable{``0})
+  parent: ANcpLua.Roslyn.Utilities.HashCombiner
+  langs:
+  - csharp
+  - vb
+  name: AddRange<T>(IEnumerable<T>?)
+  nameWithType: HashCombiner.AddRange<T>(IEnumerable<T>?)
+  fullName: ANcpLua.Roslyn.Utilities.HashCombiner.AddRange<T>(System.Collections.Generic.IEnumerable<T>?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/HashCombiner.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: AddRange
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/HashCombiner.cs
+    startLine: 179
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Adds all values from a sequence to the hash computation.
+  remarks: >-
+    <p>
+
+    Each element's hash code is added in order, so the hash will differ for sequences
+
+    with the same elements in different orders.
+
+    </p>
+  example: []
+  syntax:
+    content: public void AddRange<T>(IEnumerable<T>? values)
+    parameters:
+    - id: values
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: The sequence of values to incorporate into the hash. If <code>null</code>, adds 0 to the hash.
+    typeParameters:
+    - id: T
+      description: The type of elements in the sequence.
+    content.vb: Public Sub AddRange(Of T)(values As IEnumerable(Of T))
+  overload: ANcpLua.Roslyn.Utilities.HashCombiner.AddRange*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.HashCombiner.AddRange``1(System.ReadOnlySpan{``0})
+    commentId: M:ANcpLua.Roslyn.Utilities.HashCombiner.AddRange``1(System.ReadOnlySpan{``0})
+  - linkId: ANcpLua.Roslyn.Utilities.HashCombiner.Add``1(``0)
+    commentId: M:ANcpLua.Roslyn.Utilities.HashCombiner.Add``1(``0)
+  nameWithType.vb: HashCombiner.AddRange(Of T)(IEnumerable(Of T))
+  fullName.vb: ANcpLua.Roslyn.Utilities.HashCombiner.AddRange(Of T)(System.Collections.Generic.IEnumerable(Of T))
+  name.vb: AddRange(Of T)(IEnumerable(Of T))
+- uid: ANcpLua.Roslyn.Utilities.HashCombiner.AddRange``1(System.ReadOnlySpan{``0})
+  commentId: M:ANcpLua.Roslyn.Utilities.HashCombiner.AddRange``1(System.ReadOnlySpan{``0})
+  id: AddRange``1(System.ReadOnlySpan{``0})
+  parent: ANcpLua.Roslyn.Utilities.HashCombiner
+  langs:
+  - csharp
+  - vb
+  name: AddRange<T>(ReadOnlySpan<T>)
+  nameWithType: HashCombiner.AddRange<T>(ReadOnlySpan<T>)
+  fullName: ANcpLua.Roslyn.Utilities.HashCombiner.AddRange<T>(System.ReadOnlySpan<T>)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/HashCombiner.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: AddRange
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/HashCombiner.cs
+    startLine: 204
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Adds all values from a span to the hash computation.
+  remarks: >-
+    <p>
+
+    This overload avoids allocation when iterating over contiguous memory regions.
+
+    Each element's hash code is added in order.
+
+    </p>
+  example: []
+  syntax:
+    content: public void AddRange<T>(ReadOnlySpan<T> values)
+    parameters:
+    - id: values
+      type: System.ReadOnlySpan{{T}}
+      description: The span of values to incorporate into the hash.
+    typeParameters:
+    - id: T
+      description: The type of elements in the span.
+    content.vb: Public Sub AddRange(Of T)(values As ReadOnlySpan(Of T))
+  overload: ANcpLua.Roslyn.Utilities.HashCombiner.AddRange*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.HashCombiner.AddRange``1(System.Collections.Generic.IEnumerable{``0})
+    commentId: M:ANcpLua.Roslyn.Utilities.HashCombiner.AddRange``1(System.Collections.Generic.IEnumerable{``0})
+  - linkId: ANcpLua.Roslyn.Utilities.HashCombiner.Add``1(``0)
+    commentId: M:ANcpLua.Roslyn.Utilities.HashCombiner.Add``1(``0)
+  nameWithType.vb: HashCombiner.AddRange(Of T)(ReadOnlySpan(Of T))
+  fullName.vb: ANcpLua.Roslyn.Utilities.HashCombiner.AddRange(Of T)(System.ReadOnlySpan(Of T))
+  name.vb: AddRange(Of T)(ReadOnlySpan(Of T))
+- uid: ANcpLua.Roslyn.Utilities.HashCombiner.ToHashCode
+  commentId: M:ANcpLua.Roslyn.Utilities.HashCombiner.ToHashCode
+  id: ToHashCode
+  parent: ANcpLua.Roslyn.Utilities.HashCombiner
+  langs:
+  - csharp
+  - vb
+  name: ToHashCode()
+  nameWithType: HashCombiner.ToHashCode()
+  fullName: ANcpLua.Roslyn.Utilities.HashCombiner.ToHashCode()
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/HashCombiner.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: ToHashCode
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/HashCombiner.cs
+    startLine: 221
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Returns the combined hash code computed from all added values.
+  remarks: >-
+    <p>
+
+    This method is equivalent to reading the <xref href="ANcpLua.Roslyn.Utilities.HashCombiner.HashCode" data-throw-if-not-resolved="false"></xref> property and is provided
+
+    for API compatibility with <xref href="System.HashCode.ToHashCode" data-throw-if-not-resolved="false"></xref>.
+
+    </p>
+  example: []
+  syntax:
+    content: public readonly int ToHashCode()
+    return:
+      type: System.Int32
+      description: The finalized hash code as an integer.
+    content.vb: Public Function ToHashCode() As Integer
+  overload: ANcpLua.Roslyn.Utilities.HashCombiner.ToHashCode*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.HashCombiner.HashCode
+    commentId: P:ANcpLua.Roslyn.Utilities.HashCombiner.HashCode
+references:
+- uid: ANcpLua.Roslyn.Utilities.EquatableArray`1
+  commentId: T:ANcpLua.Roslyn.Utilities.EquatableArray`1
+  parent: ANcpLua.Roslyn.Utilities
+  href: ANcpLua.Roslyn.Utilities.EquatableArray-1.html
+  name: EquatableArray<T>
+  nameWithType: EquatableArray<T>
+  fullName: ANcpLua.Roslyn.Utilities.EquatableArray<T>
+  nameWithType.vb: EquatableArray(Of T)
+  fullName.vb: ANcpLua.Roslyn.Utilities.EquatableArray(Of T)
+  name.vb: EquatableArray(Of T)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.EquatableArray`1
+    name: EquatableArray
+    href: ANcpLua.Roslyn.Utilities.EquatableArray-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.EquatableArray`1
+    name: EquatableArray
+    href: ANcpLua.Roslyn.Utilities.EquatableArray-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.EqualityExtensions.GetSequenceHashCode``1(System.Collections.Immutable.ImmutableArray{``0})
+  commentId: M:ANcpLua.Roslyn.Utilities.EqualityExtensions.GetSequenceHashCode``1(System.Collections.Immutable.ImmutableArray{``0})
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.EqualityExtensions.html#ANcpLua_Roslyn_Utilities_EqualityExtensions_GetSequenceHashCode__1_System_Collections_Immutable_ImmutableArray___0__
+  name: GetSequenceHashCode<T>(ImmutableArray<T>)
+  nameWithType: EqualityExtensions.GetSequenceHashCode<T>(ImmutableArray<T>)
+  fullName: ANcpLua.Roslyn.Utilities.EqualityExtensions.GetSequenceHashCode<T>(System.Collections.Immutable.ImmutableArray<T>)
+  nameWithType.vb: EqualityExtensions.GetSequenceHashCode(Of T)(ImmutableArray(Of T))
+  fullName.vb: ANcpLua.Roslyn.Utilities.EqualityExtensions.GetSequenceHashCode(Of T)(System.Collections.Immutable.ImmutableArray(Of T))
+  name.vb: GetSequenceHashCode(Of T)(ImmutableArray(Of T))
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.EqualityExtensions.GetSequenceHashCode``1(System.Collections.Immutable.ImmutableArray{``0})
+    name: GetSequenceHashCode
+    href: ANcpLua.Roslyn.Utilities.EqualityExtensions.html#ANcpLua_Roslyn_Utilities_EqualityExtensions_GetSequenceHashCode__1_System_Collections_Immutable_ImmutableArray___0__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.EqualityExtensions.GetSequenceHashCode``1(System.Collections.Immutable.ImmutableArray{``0})
+    name: GetSequenceHashCode
+    href: ANcpLua.Roslyn.Utilities.EqualityExtensions.html#ANcpLua_Roslyn_Utilities_EqualityExtensions_GetSequenceHashCode__1_System_Collections_Immutable_ImmutableArray___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.HashCombiner.Create(System.Int32)
+  commentId: M:ANcpLua.Roslyn.Utilities.HashCombiner.Create(System.Int32)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.HashCombiner.html#ANcpLua_Roslyn_Utilities_HashCombiner_Create_System_Int32_
+  name: Create(int)
+  nameWithType: HashCombiner.Create(int)
+  fullName: ANcpLua.Roslyn.Utilities.HashCombiner.Create(int)
+  nameWithType.vb: HashCombiner.Create(Integer)
+  fullName.vb: ANcpLua.Roslyn.Utilities.HashCombiner.Create(Integer)
+  name.vb: Create(Integer)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.HashCombiner.Create(System.Int32)
+    name: Create
+    href: ANcpLua.Roslyn.Utilities.HashCombiner.html#ANcpLua_Roslyn_Utilities_HashCombiner_Create_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.HashCombiner.Create(System.Int32)
+    name: Create
+    href: ANcpLua.Roslyn.Utilities.HashCombiner.html#ANcpLua_Roslyn_Utilities_HashCombiner_Create_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.HashCombiner.Add(System.Int32)
+  commentId: M:ANcpLua.Roslyn.Utilities.HashCombiner.Add(System.Int32)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.HashCombiner.html#ANcpLua_Roslyn_Utilities_HashCombiner_Add_System_Int32_
+  name: Add(int)
+  nameWithType: HashCombiner.Add(int)
+  fullName: ANcpLua.Roslyn.Utilities.HashCombiner.Add(int)
+  nameWithType.vb: HashCombiner.Add(Integer)
+  fullName.vb: ANcpLua.Roslyn.Utilities.HashCombiner.Add(Integer)
+  name.vb: Add(Integer)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.HashCombiner.Add(System.Int32)
+    name: Add
+    href: ANcpLua.Roslyn.Utilities.HashCombiner.html#ANcpLua_Roslyn_Utilities_HashCombiner_Add_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.HashCombiner.Add(System.Int32)
+    name: Add
+    href: ANcpLua.Roslyn.Utilities.HashCombiner.html#ANcpLua_Roslyn_Utilities_HashCombiner_Add_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.HashCombiner.HashCode
+  commentId: P:ANcpLua.Roslyn.Utilities.HashCombiner.HashCode
+  href: ANcpLua.Roslyn.Utilities.HashCombiner.html#ANcpLua_Roslyn_Utilities_HashCombiner_HashCode
+  name: HashCode
+  nameWithType: HashCombiner.HashCode
+  fullName: ANcpLua.Roslyn.Utilities.HashCombiner.HashCode
+- uid: ANcpLua.Roslyn.Utilities.HashCombiner.ToHashCode
+  commentId: M:ANcpLua.Roslyn.Utilities.HashCombiner.ToHashCode
+  href: ANcpLua.Roslyn.Utilities.HashCombiner.html#ANcpLua_Roslyn_Utilities_HashCombiner_ToHashCode
+  name: ToHashCode()
+  nameWithType: HashCombiner.ToHashCode()
+  fullName: ANcpLua.Roslyn.Utilities.HashCombiner.ToHashCode()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.HashCombiner.ToHashCode
+    name: ToHashCode
+    href: ANcpLua.Roslyn.Utilities.HashCombiner.html#ANcpLua_Roslyn_Utilities_HashCombiner_ToHashCode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.HashCombiner.ToHashCode
+    name: ToHashCode
+    href: ANcpLua.Roslyn.Utilities.HashCombiner.html#ANcpLua_Roslyn_Utilities_HashCombiner_ToHashCode
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities
+  commentId: N:ANcpLua.Roslyn.Utilities
+  href: ANcpLua.html
+  name: ANcpLua.Roslyn.Utilities
+  nameWithType: ANcpLua.Roslyn.Utilities
+  fullName: ANcpLua.Roslyn.Utilities
+  spec.csharp:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  spec.vb:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.HashCombiner.ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+  parent: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+  definition: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  name: ToResultWithDiagnostics<HashCombiner>(HashCombiner)
+  nameWithType: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<HashCombiner>(HashCombiner)
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<ANcpLua.Roslyn.Utilities.HashCombiner>(ANcpLua.Roslyn.Utilities.HashCombiner)
+  nameWithType.vb: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of HashCombiner)(HashCombiner)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of ANcpLua.Roslyn.Utilities.HashCombiner)(ANcpLua.Roslyn.Utilities.HashCombiner)
+  name.vb: ToResultWithDiagnostics(Of HashCombiner)(HashCombiner)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(ANcpLua.Roslyn.Utilities.HashCombiner)
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.HashCombiner
+    name: HashCombiner
+    href: ANcpLua.Roslyn.Utilities.HashCombiner.html
+  - name: '>'
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.HashCombiner
+    name: HashCombiner
+    href: ANcpLua.Roslyn.Utilities.HashCombiner.html
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(ANcpLua.Roslyn.Utilities.HashCombiner)
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.HashCombiner
+    name: HashCombiner
+    href: ANcpLua.Roslyn.Utilities.HashCombiner.html
+  - name: )
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.HashCombiner
+    name: HashCombiner
+    href: ANcpLua.Roslyn.Utilities.HashCombiner.html
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.HashCombiner.ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  parent: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+  definition: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  name: ToResultWithDiagnostics<HashCombiner>(HashCombiner, ImmutableArray<DiagnosticInfo>)
+  nameWithType: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<HashCombiner>(HashCombiner, ImmutableArray<DiagnosticInfo>)
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<ANcpLua.Roslyn.Utilities.HashCombiner>(ANcpLua.Roslyn.Utilities.HashCombiner, System.Collections.Immutable.ImmutableArray<ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo>)
+  nameWithType.vb: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of HashCombiner)(HashCombiner, ImmutableArray(Of DiagnosticInfo))
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of ANcpLua.Roslyn.Utilities.HashCombiner)(ANcpLua.Roslyn.Utilities.HashCombiner, System.Collections.Immutable.ImmutableArray(Of ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo))
+  name.vb: ToResultWithDiagnostics(Of HashCombiner)(HashCombiner, ImmutableArray(Of DiagnosticInfo))
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(ANcpLua.Roslyn.Utilities.HashCombiner,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.HashCombiner
+    name: HashCombiner
+    href: ANcpLua.Roslyn.Utilities.HashCombiner.html
+  - name: '>'
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.HashCombiner
+    name: HashCombiner
+    href: ANcpLua.Roslyn.Utilities.HashCombiner.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(ANcpLua.Roslyn.Utilities.HashCombiner,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.HashCombiner
+    name: HashCombiner
+    href: ANcpLua.Roslyn.Utilities.HashCombiner.html
+  - name: )
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.HashCombiner
+    name: HashCombiner
+    href: ANcpLua.Roslyn.Utilities.HashCombiner.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: )
+  - name: )
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  name: ToResultWithDiagnostics<T>(T)
+  nameWithType: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<T>(T)
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<T>(T)
+  nameWithType.vb: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of T)(T)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of T)(T)
+  name.vb: ToResultWithDiagnostics(Of T)(T)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+  commentId: T:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+  parent: ANcpLua.Roslyn.Utilities.Models
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html
+  name: ResultWithDiagnosticsExtensions
+  nameWithType: ResultWithDiagnosticsExtensions
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+- uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  name: ToResultWithDiagnostics<T>(T, ImmutableArray<DiagnosticInfo>)
+  nameWithType: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<T>(T, ImmutableArray<DiagnosticInfo>)
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<T>(T, System.Collections.Immutable.ImmutableArray<ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo>)
+  nameWithType.vb: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of T)(T, ImmutableArray(Of DiagnosticInfo))
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of T)(T, System.Collections.Immutable.ImmutableArray(Of ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo))
+  name.vb: ToResultWithDiagnostics(Of T)(T, ImmutableArray(Of DiagnosticInfo))
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: )
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ANcpLua.Roslyn.Utilities.Models
+  commentId: N:ANcpLua.Roslyn.Utilities.Models
+  href: ANcpLua.html
+  name: ANcpLua.Roslyn.Utilities.Models
+  nameWithType: ANcpLua.Roslyn.Utilities.Models
+  fullName: ANcpLua.Roslyn.Utilities.Models
+  spec.csharp:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities.Models
+    name: Models
+    href: ANcpLua.Roslyn.Utilities.Models.html
+  spec.vb:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities.Models
+    name: Models
+    href: ANcpLua.Roslyn.Utilities.Models.html
+- uid: ANcpLua.Roslyn.Utilities.HashCombiner.HashCode*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.HashCombiner.HashCode
+  href: ANcpLua.Roslyn.Utilities.HashCombiner.html#ANcpLua_Roslyn_Utilities_HashCombiner_HashCode
+  name: HashCode
+  nameWithType: HashCombiner.HashCode
+  fullName: ANcpLua.Roslyn.Utilities.HashCombiner.HashCode
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: ANcpLua.Roslyn.Utilities.HashCombiner
+  commentId: T:ANcpLua.Roslyn.Utilities.HashCombiner
+  parent: ANcpLua.Roslyn.Utilities
+  href: ANcpLua.Roslyn.Utilities.HashCombiner.html
+  name: HashCombiner
+  nameWithType: HashCombiner
+  fullName: ANcpLua.Roslyn.Utilities.HashCombiner
+- uid: ANcpLua.Roslyn.Utilities.HashCombiner.Create*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.HashCombiner.Create
+  href: ANcpLua.Roslyn.Utilities.HashCombiner.html#ANcpLua_Roslyn_Utilities_HashCombiner_Create_System_Int32_
+  name: Create
+  nameWithType: HashCombiner.Create
+  fullName: ANcpLua.Roslyn.Utilities.HashCombiner.Create
+- uid: ANcpLua.Roslyn.Utilities.HashCombiner.Add``1(``0)
+  commentId: M:ANcpLua.Roslyn.Utilities.HashCombiner.Add``1(``0)
+  href: ANcpLua.Roslyn.Utilities.HashCombiner.html#ANcpLua_Roslyn_Utilities_HashCombiner_Add__1___0_
+  name: Add<T>(T)
+  nameWithType: HashCombiner.Add<T>(T)
+  fullName: ANcpLua.Roslyn.Utilities.HashCombiner.Add<T>(T)
+  nameWithType.vb: HashCombiner.Add(Of T)(T)
+  fullName.vb: ANcpLua.Roslyn.Utilities.HashCombiner.Add(Of T)(T)
+  name.vb: Add(Of T)(T)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.HashCombiner.Add``1(``0)
+    name: Add
+    href: ANcpLua.Roslyn.Utilities.HashCombiner.html#ANcpLua_Roslyn_Utilities_HashCombiner_Add__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.HashCombiner.Add``1(``0)
+    name: Add
+    href: ANcpLua.Roslyn.Utilities.HashCombiner.html#ANcpLua_Roslyn_Utilities_HashCombiner_Add__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.HashCombiner.AddRange``1(System.Collections.Generic.IEnumerable{``0})
+  commentId: M:ANcpLua.Roslyn.Utilities.HashCombiner.AddRange``1(System.Collections.Generic.IEnumerable{``0})
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.HashCombiner.html#ANcpLua_Roslyn_Utilities_HashCombiner_AddRange__1_System_Collections_Generic_IEnumerable___0__
+  name: AddRange<T>(IEnumerable<T>)
+  nameWithType: HashCombiner.AddRange<T>(IEnumerable<T>)
+  fullName: ANcpLua.Roslyn.Utilities.HashCombiner.AddRange<T>(System.Collections.Generic.IEnumerable<T>)
+  nameWithType.vb: HashCombiner.AddRange(Of T)(IEnumerable(Of T))
+  fullName.vb: ANcpLua.Roslyn.Utilities.HashCombiner.AddRange(Of T)(System.Collections.Generic.IEnumerable(Of T))
+  name.vb: AddRange(Of T)(IEnumerable(Of T))
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.HashCombiner.AddRange``1(System.Collections.Generic.IEnumerable{``0})
+    name: AddRange
+    href: ANcpLua.Roslyn.Utilities.HashCombiner.html#ANcpLua_Roslyn_Utilities_HashCombiner_AddRange__1_System_Collections_Generic_IEnumerable___0__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.HashCombiner.AddRange``1(System.Collections.Generic.IEnumerable{``0})
+    name: AddRange
+    href: ANcpLua.Roslyn.Utilities.HashCombiner.html#ANcpLua_Roslyn_Utilities_HashCombiner_AddRange__1_System_Collections_Generic_IEnumerable___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.HashCombiner.Add*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.HashCombiner.Add
+  href: ANcpLua.Roslyn.Utilities.HashCombiner.html#ANcpLua_Roslyn_Utilities_HashCombiner_Add_System_Int32_
+  name: Add
+  nameWithType: HashCombiner.Add
+  fullName: ANcpLua.Roslyn.Utilities.HashCombiner.Add
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.StringComparer.Ordinal
+  commentId: P:System.StringComparer.Ordinal
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.stringcomparer.ordinal
+  name: Ordinal
+  nameWithType: StringComparer.Ordinal
+  fullName: System.StringComparer.Ordinal
+- uid: System.StringComparer.OrdinalIgnoreCase
+  commentId: P:System.StringComparer.OrdinalIgnoreCase
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.stringcomparer.ordinalignorecase
+  name: OrdinalIgnoreCase
+  nameWithType: StringComparer.OrdinalIgnoreCase
+  fullName: System.StringComparer.OrdinalIgnoreCase
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.StringComparer
+  commentId: T:System.StringComparer
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.stringcomparer
+  name: StringComparer
+  nameWithType: StringComparer
+  fullName: System.StringComparer
+- uid: ANcpLua.Roslyn.Utilities.HashCombiner.AddRange``1(System.ReadOnlySpan{``0})
+  commentId: M:ANcpLua.Roslyn.Utilities.HashCombiner.AddRange``1(System.ReadOnlySpan{``0})
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.HashCombiner.html#ANcpLua_Roslyn_Utilities_HashCombiner_AddRange__1_System_ReadOnlySpan___0__
+  name: AddRange<T>(ReadOnlySpan<T>)
+  nameWithType: HashCombiner.AddRange<T>(ReadOnlySpan<T>)
+  fullName: ANcpLua.Roslyn.Utilities.HashCombiner.AddRange<T>(System.ReadOnlySpan<T>)
+  nameWithType.vb: HashCombiner.AddRange(Of T)(ReadOnlySpan(Of T))
+  fullName.vb: ANcpLua.Roslyn.Utilities.HashCombiner.AddRange(Of T)(System.ReadOnlySpan(Of T))
+  name.vb: AddRange(Of T)(ReadOnlySpan(Of T))
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.HashCombiner.AddRange``1(System.ReadOnlySpan{``0})
+    name: AddRange
+    href: ANcpLua.Roslyn.Utilities.HashCombiner.html#ANcpLua_Roslyn_Utilities_HashCombiner_AddRange__1_System_ReadOnlySpan___0__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.HashCombiner.AddRange``1(System.ReadOnlySpan{``0})
+    name: AddRange
+    href: ANcpLua.Roslyn.Utilities.HashCombiner.html#ANcpLua_Roslyn_Utilities_HashCombiner_AddRange__1_System_ReadOnlySpan___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.HashCombiner.AddRange*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.HashCombiner.AddRange
+  href: ANcpLua.Roslyn.Utilities.HashCombiner.html#ANcpLua_Roslyn_Utilities_HashCombiner_AddRange__1_System_Collections_Generic_IEnumerable___0__
+  name: AddRange
+  nameWithType: HashCombiner.AddRange
+  fullName: ANcpLua.Roslyn.Utilities.HashCombiner.AddRange
+- uid: System.Collections.Generic.IEnumerable{{T}}
+  commentId: T:System.Collections.Generic.IEnumerable{``0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.ReadOnlySpan{{T}}
+  commentId: T:System.ReadOnlySpan{``0}
+  parent: System
+  definition: System.ReadOnlySpan`1
+  href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  name: ReadOnlySpan<T>
+  nameWithType: ReadOnlySpan<T>
+  fullName: System.ReadOnlySpan<T>
+  nameWithType.vb: ReadOnlySpan(Of T)
+  fullName.vb: System.ReadOnlySpan(Of T)
+  name.vb: ReadOnlySpan(Of T)
+  spec.csharp:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.ReadOnlySpan`1
+  commentId: T:System.ReadOnlySpan`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  name: ReadOnlySpan<T>
+  nameWithType: ReadOnlySpan<T>
+  fullName: System.ReadOnlySpan<T>
+  nameWithType.vb: ReadOnlySpan(Of T)
+  fullName.vb: System.ReadOnlySpan(Of T)
+  name.vb: ReadOnlySpan(Of T)
+  spec.csharp:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.HashCode.ToHashCode
+  commentId: M:System.HashCode.ToHashCode
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.hashcode.tohashcode
+  name: ToHashCode()
+  nameWithType: HashCode.ToHashCode()
+  fullName: System.HashCode.ToHashCode()
+  spec.csharp:
+  - uid: System.HashCode.ToHashCode
+    name: ToHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.hashcode.tohashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.HashCode.ToHashCode
+    name: ToHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.hashcode.tohashcode
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.HashCombiner.ToHashCode*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.HashCombiner.ToHashCode
+  href: ANcpLua.Roslyn.Utilities.HashCombiner.html#ANcpLua_Roslyn_Utilities_HashCombiner_ToHashCode
+  name: ToHashCode
+  nameWithType: HashCombiner.ToHashCode
+  fullName: ANcpLua.Roslyn.Utilities.HashCombiner.ToHashCode

@@ -1,0 +1,507 @@
+### YamlMime:ManagedReference
+items:
+- uid: ANcpLua.Analyzers.CodeFixes.Refactorings.Ar0001SnakeCaseToPascalCaseRefactoring
+  commentId: T:ANcpLua.Analyzers.CodeFixes.Refactorings.Ar0001SnakeCaseToPascalCaseRefactoring
+  id: Ar0001SnakeCaseToPascalCaseRefactoring
+  parent: ANcpLua.Analyzers.CodeFixes.Refactorings
+  children:
+  - ANcpLua.Analyzers.CodeFixes.Refactorings.Ar0001SnakeCaseToPascalCaseRefactoring.ComputeRefactoringsAsync(Microsoft.CodeAnalysis.CodeRefactorings.CodeRefactoringContext)
+  langs:
+  - csharp
+  - vb
+  name: Ar0001SnakeCaseToPascalCaseRefactoring
+  nameWithType: Ar0001SnakeCaseToPascalCaseRefactoring
+  fullName: ANcpLua.Analyzers.CodeFixes.Refactorings.Ar0001SnakeCaseToPascalCaseRefactoring
+  type: Class
+  source:
+    remote:
+      path: src/ANcpLua.Analyzers.CodeFixes/Refactorings/AR0001SnakeCaseToPascalCaseRefactoring.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Analyzers.git
+    id: Ar0001SnakeCaseToPascalCaseRefactoring
+    path: .repos/analyzers/src/ANcpLua.Analyzers.CodeFixes/Refactorings/AR0001SnakeCaseToPascalCaseRefactoring.cs
+    startLine: 10
+  assemblies:
+  - ANcpLua.Analyzers.CodeFixes
+  namespace: ANcpLua.Analyzers.CodeFixes.Refactorings
+  summary: 'AR0001: Refactoring to convert SCREAMING_SNAKE_CASE identifiers to PascalCase.'
+  example: []
+  syntax:
+    content: >-
+      [ExportCodeRefactoringProvider("C#", new string[] { }, Name = "Ar0001SnakeCaseToPascalCaseRefactoring")]
+
+      [Shared]
+
+      public sealed class Ar0001SnakeCaseToPascalCaseRefactoring : CodeRefactoringProvider
+    content.vb: >-
+      <ExportCodeRefactoringProvider("C#", New String() { }, Name:="Ar0001SnakeCaseToPascalCaseRefactoring")>
+
+      <Shared>
+
+      Public NotInheritable Class Ar0001SnakeCaseToPascalCaseRefactoring Inherits CodeRefactoringProvider
+  inheritance:
+  - System.Object
+  - Microsoft.CodeAnalysis.CodeRefactorings.CodeRefactoringProvider
+  inheritedMembers:
+  - Microsoft.CodeAnalysis.CodeRefactorings.CodeRefactoringProvider.GetRefactorAllProvider
+  - Microsoft.CodeAnalysis.CodeRefactorings.CodeRefactoringProvider.RequestPriority
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  attributes:
+  - type: System.Composition.SharedAttribute
+    ctor: System.Composition.SharedAttribute.#ctor
+    arguments: []
+- uid: ANcpLua.Analyzers.CodeFixes.Refactorings.Ar0001SnakeCaseToPascalCaseRefactoring.ComputeRefactoringsAsync(Microsoft.CodeAnalysis.CodeRefactorings.CodeRefactoringContext)
+  commentId: M:ANcpLua.Analyzers.CodeFixes.Refactorings.Ar0001SnakeCaseToPascalCaseRefactoring.ComputeRefactoringsAsync(Microsoft.CodeAnalysis.CodeRefactorings.CodeRefactoringContext)
+  id: ComputeRefactoringsAsync(Microsoft.CodeAnalysis.CodeRefactorings.CodeRefactoringContext)
+  parent: ANcpLua.Analyzers.CodeFixes.Refactorings.Ar0001SnakeCaseToPascalCaseRefactoring
+  langs:
+  - csharp
+  - vb
+  name: ComputeRefactoringsAsync(CodeRefactoringContext)
+  nameWithType: Ar0001SnakeCaseToPascalCaseRefactoring.ComputeRefactoringsAsync(CodeRefactoringContext)
+  fullName: ANcpLua.Analyzers.CodeFixes.Refactorings.Ar0001SnakeCaseToPascalCaseRefactoring.ComputeRefactoringsAsync(Microsoft.CodeAnalysis.CodeRefactorings.CodeRefactoringContext)
+  type: Method
+  source:
+    remote:
+      path: src/ANcpLua.Analyzers.CodeFixes/Refactorings/AR0001SnakeCaseToPascalCaseRefactoring.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Analyzers.git
+    id: ComputeRefactoringsAsync
+    path: .repos/analyzers/src/ANcpLua.Analyzers.CodeFixes/Refactorings/AR0001SnakeCaseToPascalCaseRefactoring.cs
+    startLine: 15
+  assemblies:
+  - ANcpLua.Analyzers.CodeFixes
+  namespace: ANcpLua.Analyzers.CodeFixes.Refactorings
+  summary: Computes one or more refactorings for the specified <xref href="Microsoft.CodeAnalysis.CodeRefactorings.CodeRefactoringContext" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public override Task ComputeRefactoringsAsync(CodeRefactoringContext context)
+    parameters:
+    - id: context
+      type: Microsoft.CodeAnalysis.CodeRefactorings.CodeRefactoringContext
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Public Overrides Function ComputeRefactoringsAsync(context As CodeRefactoringContext) As Task
+  overridden: Microsoft.CodeAnalysis.CodeRefactorings.CodeRefactoringProvider.ComputeRefactoringsAsync(Microsoft.CodeAnalysis.CodeRefactorings.CodeRefactoringContext)
+  overload: ANcpLua.Analyzers.CodeFixes.Refactorings.Ar0001SnakeCaseToPascalCaseRefactoring.ComputeRefactoringsAsync*
+references:
+- uid: ANcpLua.Analyzers.CodeFixes.Refactorings
+  commentId: N:ANcpLua.Analyzers.CodeFixes.Refactorings
+  href: ANcpLua.html
+  name: ANcpLua.Analyzers.CodeFixes.Refactorings
+  nameWithType: ANcpLua.Analyzers.CodeFixes.Refactorings
+  fullName: ANcpLua.Analyzers.CodeFixes.Refactorings
+  spec.csharp:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Analyzers
+    name: Analyzers
+    href: ANcpLua.Analyzers.html
+  - name: .
+  - uid: ANcpLua.Analyzers.CodeFixes
+    name: CodeFixes
+    href: ANcpLua.Analyzers.CodeFixes.html
+  - name: .
+  - uid: ANcpLua.Analyzers.CodeFixes.Refactorings
+    name: Refactorings
+    href: ANcpLua.Analyzers.CodeFixes.Refactorings.html
+  spec.vb:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Analyzers
+    name: Analyzers
+    href: ANcpLua.Analyzers.html
+  - name: .
+  - uid: ANcpLua.Analyzers.CodeFixes
+    name: CodeFixes
+    href: ANcpLua.Analyzers.CodeFixes.html
+  - name: .
+  - uid: ANcpLua.Analyzers.CodeFixes.Refactorings
+    name: Refactorings
+    href: ANcpLua.Analyzers.CodeFixes.Refactorings.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Microsoft.CodeAnalysis.CodeRefactorings.CodeRefactoringProvider
+  commentId: T:Microsoft.CodeAnalysis.CodeRefactorings.CodeRefactoringProvider
+  parent: Microsoft.CodeAnalysis.CodeRefactorings
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.coderefactorings.coderefactoringprovider
+  name: CodeRefactoringProvider
+  nameWithType: CodeRefactoringProvider
+  fullName: Microsoft.CodeAnalysis.CodeRefactorings.CodeRefactoringProvider
+- uid: Microsoft.CodeAnalysis.CodeRefactorings.CodeRefactoringProvider.GetRefactorAllProvider
+  commentId: M:Microsoft.CodeAnalysis.CodeRefactorings.CodeRefactoringProvider.GetRefactorAllProvider
+  parent: Microsoft.CodeAnalysis.CodeRefactorings.CodeRefactoringProvider
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.coderefactorings.coderefactoringprovider.getrefactorallprovider
+  name: GetRefactorAllProvider()
+  nameWithType: CodeRefactoringProvider.GetRefactorAllProvider()
+  fullName: Microsoft.CodeAnalysis.CodeRefactorings.CodeRefactoringProvider.GetRefactorAllProvider()
+  spec.csharp:
+  - uid: Microsoft.CodeAnalysis.CodeRefactorings.CodeRefactoringProvider.GetRefactorAllProvider
+    name: GetRefactorAllProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.coderefactorings.coderefactoringprovider.getrefactorallprovider
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Microsoft.CodeAnalysis.CodeRefactorings.CodeRefactoringProvider.GetRefactorAllProvider
+    name: GetRefactorAllProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.coderefactorings.coderefactoringprovider.getrefactorallprovider
+  - name: (
+  - name: )
+- uid: Microsoft.CodeAnalysis.CodeRefactorings.CodeRefactoringProvider.RequestPriority
+  commentId: P:Microsoft.CodeAnalysis.CodeRefactorings.CodeRefactoringProvider.RequestPriority
+  parent: Microsoft.CodeAnalysis.CodeRefactorings.CodeRefactoringProvider
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.coderefactorings.coderefactoringprovider.requestpriority
+  name: RequestPriority
+  nameWithType: CodeRefactoringProvider.RequestPriority
+  fullName: Microsoft.CodeAnalysis.CodeRefactorings.CodeRefactoringProvider.RequestPriority
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Microsoft.CodeAnalysis.CodeRefactorings
+  commentId: N:Microsoft.CodeAnalysis.CodeRefactorings
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.CodeAnalysis.CodeRefactorings
+  nameWithType: Microsoft.CodeAnalysis.CodeRefactorings
+  fullName: Microsoft.CodeAnalysis.CodeRefactorings
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+  - name: .
+  - uid: Microsoft.CodeAnalysis.CodeRefactorings
+    name: CodeRefactorings
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.coderefactorings
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+  - name: .
+  - uid: Microsoft.CodeAnalysis.CodeRefactorings
+    name: CodeRefactorings
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.coderefactorings
+- uid: Microsoft.CodeAnalysis.CodeRefactorings.CodeRefactoringContext
+  commentId: T:Microsoft.CodeAnalysis.CodeRefactorings.CodeRefactoringContext
+  parent: Microsoft.CodeAnalysis.CodeRefactorings
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.coderefactorings.coderefactoringcontext
+  name: CodeRefactoringContext
+  nameWithType: CodeRefactoringContext
+  fullName: Microsoft.CodeAnalysis.CodeRefactorings.CodeRefactoringContext
+- uid: Microsoft.CodeAnalysis.CodeRefactorings.CodeRefactoringProvider.ComputeRefactoringsAsync(Microsoft.CodeAnalysis.CodeRefactorings.CodeRefactoringContext)
+  commentId: M:Microsoft.CodeAnalysis.CodeRefactorings.CodeRefactoringProvider.ComputeRefactoringsAsync(Microsoft.CodeAnalysis.CodeRefactorings.CodeRefactoringContext)
+  parent: Microsoft.CodeAnalysis.CodeRefactorings.CodeRefactoringProvider
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.coderefactorings.coderefactoringprovider.computerefactoringsasync
+  name: ComputeRefactoringsAsync(CodeRefactoringContext)
+  nameWithType: CodeRefactoringProvider.ComputeRefactoringsAsync(CodeRefactoringContext)
+  fullName: Microsoft.CodeAnalysis.CodeRefactorings.CodeRefactoringProvider.ComputeRefactoringsAsync(Microsoft.CodeAnalysis.CodeRefactorings.CodeRefactoringContext)
+  spec.csharp:
+  - uid: Microsoft.CodeAnalysis.CodeRefactorings.CodeRefactoringProvider.ComputeRefactoringsAsync(Microsoft.CodeAnalysis.CodeRefactorings.CodeRefactoringContext)
+    name: ComputeRefactoringsAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.coderefactorings.coderefactoringprovider.computerefactoringsasync
+  - name: (
+  - uid: Microsoft.CodeAnalysis.CodeRefactorings.CodeRefactoringContext
+    name: CodeRefactoringContext
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.coderefactorings.coderefactoringcontext
+  - name: )
+  spec.vb:
+  - uid: Microsoft.CodeAnalysis.CodeRefactorings.CodeRefactoringProvider.ComputeRefactoringsAsync(Microsoft.CodeAnalysis.CodeRefactorings.CodeRefactoringContext)
+    name: ComputeRefactoringsAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.coderefactorings.coderefactoringprovider.computerefactoringsasync
+  - name: (
+  - uid: Microsoft.CodeAnalysis.CodeRefactorings.CodeRefactoringContext
+    name: CodeRefactoringContext
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.coderefactorings.coderefactoringcontext
+  - name: )
+- uid: ANcpLua.Analyzers.CodeFixes.Refactorings.Ar0001SnakeCaseToPascalCaseRefactoring.ComputeRefactoringsAsync*
+  commentId: Overload:ANcpLua.Analyzers.CodeFixes.Refactorings.Ar0001SnakeCaseToPascalCaseRefactoring.ComputeRefactoringsAsync
+  href: ANcpLua.Analyzers.CodeFixes.Refactorings.Ar0001SnakeCaseToPascalCaseRefactoring.html#ANcpLua_Analyzers_CodeFixes_Refactorings_Ar0001SnakeCaseToPascalCaseRefactoring_ComputeRefactoringsAsync_Microsoft_CodeAnalysis_CodeRefactorings_CodeRefactoringContext_
+  name: ComputeRefactoringsAsync
+  nameWithType: Ar0001SnakeCaseToPascalCaseRefactoring.ComputeRefactoringsAsync
+  fullName: ANcpLua.Analyzers.CodeFixes.Refactorings.Ar0001SnakeCaseToPascalCaseRefactoring.ComputeRefactoringsAsync
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks

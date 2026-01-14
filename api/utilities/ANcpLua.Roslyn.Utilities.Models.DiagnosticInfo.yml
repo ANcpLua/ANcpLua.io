@@ -1,0 +1,1506 @@
+### YamlMime:ManagedReference
+items:
+- uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+  commentId: T:ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+  id: DiagnosticInfo
+  parent: ANcpLua.Roslyn.Utilities.Models
+  children:
+  - ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.#ctor(Microsoft.CodeAnalysis.DiagnosticDescriptor,ANcpLua.Roslyn.Utilities.Models.LocationInfo,ANcpLua.Roslyn.Utilities.Models.EquatableMessageArgs)
+  - ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor,Microsoft.CodeAnalysis.ISymbol,System.Object[])
+  - ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor,Microsoft.CodeAnalysis.Location)
+  - ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor,Microsoft.CodeAnalysis.Location,System.Object[])
+  - ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor,Microsoft.CodeAnalysis.SyntaxNode,System.Object)
+  - ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor,Microsoft.CodeAnalysis.SyntaxNode,System.Object[])
+  - ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor,Microsoft.CodeAnalysis.SyntaxToken,System.Object)
+  - ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Descriptor
+  - ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Location
+  - ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.MessageArgs
+  - ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.ToDiagnostic
+  langs:
+  - csharp
+  - vb
+  name: DiagnosticInfo
+  nameWithType: DiagnosticInfo
+  fullName: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+  type: Struct
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/DiagnosticInfo.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: DiagnosticInfo
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/DiagnosticInfo.cs
+    startLine: 34
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Models
+  summary: An equatable representation of a diagnostic for use in incremental source generators.
+  remarks: >-
+    <p>
+        This type provides a value-equal wrapper around diagnostic information that can be safely
+        cached and compared in incremental generator pipelines. Unlike <xref href="Microsoft.CodeAnalysis.Diagnostic" data-throw-if-not-resolved="false"></xref>,
+        which contains non-equatable reference types, <xref href="ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo" data-throw-if-not-resolved="false"></xref> uses
+        <xref href="ANcpLua.Roslyn.Utilities.Models.LocationInfo" data-throw-if-not-resolved="false"></xref> and <xref href="ANcpLua.Roslyn.Utilities.Models.EquatableMessageArgs" data-throw-if-not-resolved="false"></xref> to ensure proper
+        equality semantics.
+    </p>
+
+    <ul><li>Use factory methods to create instances from syntax nodes, tokens, symbols, or locations.</li><li>Call <xref href="ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.ToDiagnostic" data-throw-if-not-resolved="false"></xref> to convert back to a <xref href="Microsoft.CodeAnalysis.Diagnostic" data-throw-if-not-resolved="false"></xref> for reporting.</li><li>Safe for use in generator caching scenarios due to value equality.</li></ul>
+  example: []
+  syntax:
+    content: 'public readonly record struct DiagnosticInfo : IEquatable<DiagnosticInfo>'
+    content.vb: Public Structure DiagnosticInfo Implements IEquatable(Of DiagnosticInfo)
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Models.LocationInfo
+    commentId: T:ANcpLua.Roslyn.Utilities.Models.LocationInfo
+  - linkId: ANcpLua.Roslyn.Utilities.Models.EquatableMessageArgs
+    commentId: T:ANcpLua.Roslyn.Utilities.Models.EquatableMessageArgs
+  - linkId: Microsoft.CodeAnalysis.Diagnostic
+    commentId: T:Microsoft.CodeAnalysis.Diagnostic
+  implements:
+  - System.IEquatable{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo}
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  extensionMethods:
+  - ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1
+  - ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+- uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.#ctor(Microsoft.CodeAnalysis.DiagnosticDescriptor,ANcpLua.Roslyn.Utilities.Models.LocationInfo,ANcpLua.Roslyn.Utilities.Models.EquatableMessageArgs)
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.#ctor(Microsoft.CodeAnalysis.DiagnosticDescriptor,ANcpLua.Roslyn.Utilities.Models.LocationInfo,ANcpLua.Roslyn.Utilities.Models.EquatableMessageArgs)
+  id: '#ctor(Microsoft.CodeAnalysis.DiagnosticDescriptor,ANcpLua.Roslyn.Utilities.Models.LocationInfo,ANcpLua.Roslyn.Utilities.Models.EquatableMessageArgs)'
+  parent: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+  langs:
+  - csharp
+  - vb
+  name: DiagnosticInfo(DiagnosticDescriptor, LocationInfo, EquatableMessageArgs)
+  nameWithType: DiagnosticInfo.DiagnosticInfo(DiagnosticDescriptor, LocationInfo, EquatableMessageArgs)
+  fullName: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.DiagnosticInfo(Microsoft.CodeAnalysis.DiagnosticDescriptor, ANcpLua.Roslyn.Utilities.Models.LocationInfo, ANcpLua.Roslyn.Utilities.Models.EquatableMessageArgs)
+  type: Constructor
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/DiagnosticInfo.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: .ctor
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/DiagnosticInfo.cs
+    startLine: 34
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Models
+  summary: An equatable representation of a diagnostic for use in incremental source generators.
+  remarks: >-
+    <p>
+        This type provides a value-equal wrapper around diagnostic information that can be safely
+        cached and compared in incremental generator pipelines. Unlike <xref href="Microsoft.CodeAnalysis.Diagnostic" data-throw-if-not-resolved="false"></xref>,
+        which contains non-equatable reference types, <xref href="ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo" data-throw-if-not-resolved="false"></xref> uses
+        <xref href="ANcpLua.Roslyn.Utilities.Models.LocationInfo" data-throw-if-not-resolved="false"></xref> and <xref href="ANcpLua.Roslyn.Utilities.Models.EquatableMessageArgs" data-throw-if-not-resolved="false"></xref> to ensure proper
+        equality semantics.
+    </p>
+
+    <ul><li>Use factory methods to create instances from syntax nodes, tokens, symbols, or locations.</li><li>Call <xref href="ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.ToDiagnostic" data-throw-if-not-resolved="false"></xref> to convert back to a <xref href="Microsoft.CodeAnalysis.Diagnostic" data-throw-if-not-resolved="false"></xref> for reporting.</li><li>Safe for use in generator caching scenarios due to value equality.</li></ul>
+  example: []
+  syntax:
+    content: public DiagnosticInfo(DiagnosticDescriptor Descriptor, LocationInfo Location, EquatableMessageArgs MessageArgs)
+    parameters:
+    - id: Descriptor
+      type: Microsoft.CodeAnalysis.DiagnosticDescriptor
+      description: The diagnostic descriptor that defines the diagnostic's ID, title, message format, and severity.
+    - id: Location
+      type: ANcpLua.Roslyn.Utilities.Models.LocationInfo
+      description: The equatable location information where the diagnostic should be reported.
+    - id: MessageArgs
+      type: ANcpLua.Roslyn.Utilities.Models.EquatableMessageArgs
+      description: The equatable message arguments to format into the diagnostic message.
+    content.vb: Public Sub New(Descriptor As DiagnosticDescriptor, Location As LocationInfo, MessageArgs As EquatableMessageArgs)
+  overload: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.#ctor*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Models.LocationInfo
+    commentId: T:ANcpLua.Roslyn.Utilities.Models.LocationInfo
+  - linkId: ANcpLua.Roslyn.Utilities.Models.EquatableMessageArgs
+    commentId: T:ANcpLua.Roslyn.Utilities.Models.EquatableMessageArgs
+  - linkId: Microsoft.CodeAnalysis.Diagnostic
+    commentId: T:Microsoft.CodeAnalysis.Diagnostic
+  nameWithType.vb: DiagnosticInfo.New(DiagnosticDescriptor, LocationInfo, EquatableMessageArgs)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.New(Microsoft.CodeAnalysis.DiagnosticDescriptor, ANcpLua.Roslyn.Utilities.Models.LocationInfo, ANcpLua.Roslyn.Utilities.Models.EquatableMessageArgs)
+  name.vb: New(DiagnosticDescriptor, LocationInfo, EquatableMessageArgs)
+- uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Descriptor
+  commentId: P:ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Descriptor
+  id: Descriptor
+  parent: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+  langs:
+  - csharp
+  - vb
+  name: Descriptor
+  nameWithType: DiagnosticInfo.Descriptor
+  fullName: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Descriptor
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/DiagnosticInfo.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Descriptor
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/DiagnosticInfo.cs
+    startLine: 39
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Models
+  summary: The diagnostic descriptor that defines the diagnostic's ID, title, message format, and severity.
+  example: []
+  syntax:
+    content: public DiagnosticDescriptor Descriptor { get; init; }
+    parameters: []
+    return:
+      type: Microsoft.CodeAnalysis.DiagnosticDescriptor
+    content.vb: Public Property Descriptor As DiagnosticDescriptor
+  overload: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Descriptor*
+- uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Location
+  commentId: P:ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Location
+  id: Location
+  parent: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+  langs:
+  - csharp
+  - vb
+  name: Location
+  nameWithType: DiagnosticInfo.Location
+  fullName: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Location
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/DiagnosticInfo.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Location
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/DiagnosticInfo.cs
+    startLine: 40
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Models
+  summary: The equatable location information where the diagnostic should be reported.
+  example: []
+  syntax:
+    content: public LocationInfo Location { get; init; }
+    parameters: []
+    return:
+      type: ANcpLua.Roslyn.Utilities.Models.LocationInfo
+    content.vb: Public Property Location As LocationInfo
+  overload: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Location*
+- uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.MessageArgs
+  commentId: P:ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.MessageArgs
+  id: MessageArgs
+  parent: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+  langs:
+  - csharp
+  - vb
+  name: MessageArgs
+  nameWithType: DiagnosticInfo.MessageArgs
+  fullName: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.MessageArgs
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/DiagnosticInfo.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: MessageArgs
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/DiagnosticInfo.cs
+    startLine: 41
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Models
+  summary: The equatable message arguments to format into the diagnostic message.
+  example: []
+  syntax:
+    content: public EquatableMessageArgs MessageArgs { get; init; }
+    parameters: []
+    return:
+      type: ANcpLua.Roslyn.Utilities.Models.EquatableMessageArgs
+    content.vb: Public Property MessageArgs As EquatableMessageArgs
+  overload: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.MessageArgs*
+- uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor,Microsoft.CodeAnalysis.SyntaxToken,System.Object)
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor,Microsoft.CodeAnalysis.SyntaxToken,System.Object)
+  id: Create(Microsoft.CodeAnalysis.DiagnosticDescriptor,Microsoft.CodeAnalysis.SyntaxToken,System.Object)
+  parent: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+  langs:
+  - csharp
+  - vb
+  name: Create(DiagnosticDescriptor, SyntaxToken, object?)
+  nameWithType: DiagnosticInfo.Create(DiagnosticDescriptor, SyntaxToken, object?)
+  fullName: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor, Microsoft.CodeAnalysis.SyntaxToken, object?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/DiagnosticInfo.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Create
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/DiagnosticInfo.cs
+    startLine: 51
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Models
+  summary: Creates a <xref href="ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo" data-throw-if-not-resolved="false"></xref> with a single argument from a syntax token.
+  example: []
+  syntax:
+    content: public static DiagnosticInfo Create(DiagnosticDescriptor descriptor, SyntaxToken token, object? arg0)
+    parameters:
+    - id: descriptor
+      type: Microsoft.CodeAnalysis.DiagnosticDescriptor
+      description: The diagnostic descriptor defining the diagnostic metadata.
+    - id: token
+      type: Microsoft.CodeAnalysis.SyntaxToken
+      description: The syntax token whose location will be used for the diagnostic.
+    - id: arg0
+      type: System.Object
+      description: The single argument to format into the diagnostic message.
+    return:
+      type: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+      description: A new <xref href="ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo" data-throw-if-not-resolved="false"></xref> instance.
+    content.vb: Public Shared Function Create(descriptor As DiagnosticDescriptor, token As SyntaxToken, arg0 As Object) As DiagnosticInfo
+  overload: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor,Microsoft.CodeAnalysis.SyntaxNode,System.Object)
+    commentId: M:ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor,Microsoft.CodeAnalysis.SyntaxNode,System.Object)
+  nameWithType.vb: DiagnosticInfo.Create(DiagnosticDescriptor, SyntaxToken, Object)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor, Microsoft.CodeAnalysis.SyntaxToken, Object)
+  name.vb: Create(DiagnosticDescriptor, SyntaxToken, Object)
+- uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor,Microsoft.CodeAnalysis.SyntaxNode,System.Object)
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor,Microsoft.CodeAnalysis.SyntaxNode,System.Object)
+  id: Create(Microsoft.CodeAnalysis.DiagnosticDescriptor,Microsoft.CodeAnalysis.SyntaxNode,System.Object)
+  parent: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+  langs:
+  - csharp
+  - vb
+  name: Create(DiagnosticDescriptor, SyntaxNode, object?)
+  nameWithType: DiagnosticInfo.Create(DiagnosticDescriptor, SyntaxNode, object?)
+  fullName: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor, Microsoft.CodeAnalysis.SyntaxNode, object?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/DiagnosticInfo.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Create
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/DiagnosticInfo.cs
+    startLine: 62
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Models
+  summary: Creates a <xref href="ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo" data-throw-if-not-resolved="false"></xref> with a single argument from a syntax node.
+  example: []
+  syntax:
+    content: public static DiagnosticInfo Create(DiagnosticDescriptor descriptor, SyntaxNode node, object? arg0)
+    parameters:
+    - id: descriptor
+      type: Microsoft.CodeAnalysis.DiagnosticDescriptor
+      description: The diagnostic descriptor defining the diagnostic metadata.
+    - id: node
+      type: Microsoft.CodeAnalysis.SyntaxNode
+      description: The syntax node whose location will be used for the diagnostic.
+    - id: arg0
+      type: System.Object
+      description: The single argument to format into the diagnostic message.
+    return:
+      type: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+      description: A new <xref href="ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo" data-throw-if-not-resolved="false"></xref> instance.
+    content.vb: Public Shared Function Create(descriptor As DiagnosticDescriptor, node As SyntaxNode, arg0 As Object) As DiagnosticInfo
+  overload: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor,Microsoft.CodeAnalysis.SyntaxToken,System.Object)
+    commentId: M:ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor,Microsoft.CodeAnalysis.SyntaxToken,System.Object)
+  nameWithType.vb: DiagnosticInfo.Create(DiagnosticDescriptor, SyntaxNode, Object)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor, Microsoft.CodeAnalysis.SyntaxNode, Object)
+  name.vb: Create(DiagnosticDescriptor, SyntaxNode, Object)
+- uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor,Microsoft.CodeAnalysis.SyntaxNode,System.Object[])
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor,Microsoft.CodeAnalysis.SyntaxNode,System.Object[])
+  id: Create(Microsoft.CodeAnalysis.DiagnosticDescriptor,Microsoft.CodeAnalysis.SyntaxNode,System.Object[])
+  parent: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+  langs:
+  - csharp
+  - vb
+  name: Create(DiagnosticDescriptor, SyntaxNode, params object?[])
+  nameWithType: DiagnosticInfo.Create(DiagnosticDescriptor, SyntaxNode, params object?[])
+  fullName: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor, Microsoft.CodeAnalysis.SyntaxNode, params object?[])
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/DiagnosticInfo.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Create
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/DiagnosticInfo.cs
+    startLine: 73
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Models
+  summary: Creates a <xref href="ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo" data-throw-if-not-resolved="false"></xref> with multiple arguments from a syntax node.
+  example: []
+  syntax:
+    content: public static DiagnosticInfo Create(DiagnosticDescriptor descriptor, SyntaxNode node, params object?[] args)
+    parameters:
+    - id: descriptor
+      type: Microsoft.CodeAnalysis.DiagnosticDescriptor
+      description: The diagnostic descriptor defining the diagnostic metadata.
+    - id: node
+      type: Microsoft.CodeAnalysis.SyntaxNode
+      description: The syntax node whose location will be used for the diagnostic.
+    - id: args
+      type: System.Object[]
+      description: The arguments to format into the diagnostic message.
+    return:
+      type: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+      description: A new <xref href="ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo" data-throw-if-not-resolved="false"></xref> instance.
+    content.vb: Public Shared Function Create(descriptor As DiagnosticDescriptor, node As SyntaxNode, ParamArray args As Object()) As DiagnosticInfo
+  overload: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor,Microsoft.CodeAnalysis.Location,System.Object[])
+    commentId: M:ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor,Microsoft.CodeAnalysis.Location,System.Object[])
+  nameWithType.vb: DiagnosticInfo.Create(DiagnosticDescriptor, SyntaxNode, ParamArray Object())
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor, Microsoft.CodeAnalysis.SyntaxNode, ParamArray Object())
+  name.vb: Create(DiagnosticDescriptor, SyntaxNode, ParamArray Object())
+- uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor,Microsoft.CodeAnalysis.Location)
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor,Microsoft.CodeAnalysis.Location)
+  id: Create(Microsoft.CodeAnalysis.DiagnosticDescriptor,Microsoft.CodeAnalysis.Location)
+  parent: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+  langs:
+  - csharp
+  - vb
+  name: Create(DiagnosticDescriptor, Location)
+  nameWithType: DiagnosticInfo.Create(DiagnosticDescriptor, Location)
+  fullName: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor, Microsoft.CodeAnalysis.Location)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/DiagnosticInfo.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Create
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/DiagnosticInfo.cs
+    startLine: 83
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Models
+  summary: Creates a <xref href="ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo" data-throw-if-not-resolved="false"></xref> with no arguments from a location.
+  example: []
+  syntax:
+    content: public static DiagnosticInfo Create(DiagnosticDescriptor descriptor, Location location)
+    parameters:
+    - id: descriptor
+      type: Microsoft.CodeAnalysis.DiagnosticDescriptor
+      description: The diagnostic descriptor defining the diagnostic metadata.
+    - id: location
+      type: Microsoft.CodeAnalysis.Location
+      description: The location where the diagnostic should be reported.
+    return:
+      type: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+      description: A new <xref href="ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo" data-throw-if-not-resolved="false"></xref> instance with empty message arguments.
+    content.vb: Public Shared Function Create(descriptor As DiagnosticDescriptor, location As Location) As DiagnosticInfo
+  overload: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor,Microsoft.CodeAnalysis.Location,System.Object[])
+    commentId: M:ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor,Microsoft.CodeAnalysis.Location,System.Object[])
+- uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor,Microsoft.CodeAnalysis.Location,System.Object[])
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor,Microsoft.CodeAnalysis.Location,System.Object[])
+  id: Create(Microsoft.CodeAnalysis.DiagnosticDescriptor,Microsoft.CodeAnalysis.Location,System.Object[])
+  parent: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+  langs:
+  - csharp
+  - vb
+  name: Create(DiagnosticDescriptor, Location, params object?[])
+  nameWithType: DiagnosticInfo.Create(DiagnosticDescriptor, Location, params object?[])
+  fullName: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor, Microsoft.CodeAnalysis.Location, params object?[])
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/DiagnosticInfo.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Create
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/DiagnosticInfo.cs
+    startLine: 94
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Models
+  summary: Creates a <xref href="ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo" data-throw-if-not-resolved="false"></xref> with multiple arguments from a location.
+  example: []
+  syntax:
+    content: public static DiagnosticInfo Create(DiagnosticDescriptor descriptor, Location location, params object?[] args)
+    parameters:
+    - id: descriptor
+      type: Microsoft.CodeAnalysis.DiagnosticDescriptor
+      description: The diagnostic descriptor defining the diagnostic metadata.
+    - id: location
+      type: Microsoft.CodeAnalysis.Location
+      description: The location where the diagnostic should be reported.
+    - id: args
+      type: System.Object[]
+      description: The arguments to format into the diagnostic message.
+    return:
+      type: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+      description: A new <xref href="ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo" data-throw-if-not-resolved="false"></xref> instance.
+    content.vb: Public Shared Function Create(descriptor As DiagnosticDescriptor, location As Location, ParamArray args As Object()) As DiagnosticInfo
+  overload: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor,Microsoft.CodeAnalysis.SyntaxNode,System.Object[])
+    commentId: M:ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor,Microsoft.CodeAnalysis.SyntaxNode,System.Object[])
+  nameWithType.vb: DiagnosticInfo.Create(DiagnosticDescriptor, Location, ParamArray Object())
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor, Microsoft.CodeAnalysis.Location, ParamArray Object())
+  name.vb: Create(DiagnosticDescriptor, Location, ParamArray Object())
+- uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor,Microsoft.CodeAnalysis.ISymbol,System.Object[])
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor,Microsoft.CodeAnalysis.ISymbol,System.Object[])
+  id: Create(Microsoft.CodeAnalysis.DiagnosticDescriptor,Microsoft.CodeAnalysis.ISymbol,System.Object[])
+  parent: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+  langs:
+  - csharp
+  - vb
+  name: Create(DiagnosticDescriptor, ISymbol, params object?[])
+  nameWithType: DiagnosticInfo.Create(DiagnosticDescriptor, ISymbol, params object?[])
+  fullName: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor, Microsoft.CodeAnalysis.ISymbol, params object?[])
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/DiagnosticInfo.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Create
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/DiagnosticInfo.cs
+    startLine: 109
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Models
+  summary: Creates a <xref href="ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo" data-throw-if-not-resolved="false"></xref> from a symbol with multiple arguments.
+  remarks: >-
+    The location is taken from the first declared location of the symbol. If the symbol
+
+    has no locations, <xref href="Microsoft.CodeAnalysis.Location.None" data-throw-if-not-resolved="false"></xref> is used.
+  example: []
+  syntax:
+    content: public static DiagnosticInfo Create(DiagnosticDescriptor descriptor, ISymbol symbol, params object?[] args)
+    parameters:
+    - id: descriptor
+      type: Microsoft.CodeAnalysis.DiagnosticDescriptor
+      description: The diagnostic descriptor defining the diagnostic metadata.
+    - id: symbol
+      type: Microsoft.CodeAnalysis.ISymbol
+      description: The symbol whose first location will be used for the diagnostic.
+    - id: args
+      type: System.Object[]
+      description: The arguments to format into the diagnostic message.
+    return:
+      type: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+      description: A new <xref href="ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo" data-throw-if-not-resolved="false"></xref> instance.
+    content.vb: Public Shared Function Create(descriptor As DiagnosticDescriptor, symbol As ISymbol, ParamArray args As Object()) As DiagnosticInfo
+  overload: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor,Microsoft.CodeAnalysis.Location,System.Object[])
+    commentId: M:ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor,Microsoft.CodeAnalysis.Location,System.Object[])
+  nameWithType.vb: DiagnosticInfo.Create(DiagnosticDescriptor, ISymbol, ParamArray Object())
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor, Microsoft.CodeAnalysis.ISymbol, ParamArray Object())
+  name.vb: Create(DiagnosticDescriptor, ISymbol, ParamArray Object())
+- uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.ToDiagnostic
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.ToDiagnostic
+  id: ToDiagnostic
+  parent: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+  langs:
+  - csharp
+  - vb
+  name: ToDiagnostic()
+  nameWithType: DiagnosticInfo.ToDiagnostic()
+  fullName: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.ToDiagnostic()
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/DiagnosticInfo.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: ToDiagnostic
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/DiagnosticInfo.cs
+    startLine: 126
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Models
+  summary: Converts this <xref href="ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo" data-throw-if-not-resolved="false"></xref> to a <xref href="Microsoft.CodeAnalysis.Diagnostic" data-throw-if-not-resolved="false"></xref> for reporting.
+  remarks: >-
+    This method reconstructs the <xref href="ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Location" data-throw-if-not-resolved="false"></xref> from the stored <xref href="ANcpLua.Roslyn.Utilities.Models.LocationInfo" data-throw-if-not-resolved="false"></xref>
+
+    and applies the message arguments to the descriptor's message format.
+  example: []
+  syntax:
+    content: public Diagnostic ToDiagnostic()
+    return:
+      type: Microsoft.CodeAnalysis.Diagnostic
+      description: >-
+        A <xref href="Microsoft.CodeAnalysis.Diagnostic" data-throw-if-not-resolved="false"></xref> instance that can be reported via
+
+        <xref href="Microsoft.CodeAnalysis.SourceProductionContext.ReportDiagnostic(Microsoft.CodeAnalysis.Diagnostic)" data-throw-if-not-resolved="false"></xref> or similar methods.
+    content.vb: Public Function ToDiagnostic() As Diagnostic
+  overload: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.ToDiagnostic*
+references:
+- uid: ANcpLua.Roslyn.Utilities.Models.LocationInfo
+  commentId: T:ANcpLua.Roslyn.Utilities.Models.LocationInfo
+  parent: ANcpLua.Roslyn.Utilities.Models
+  href: ANcpLua.Roslyn.Utilities.Models.LocationInfo.html
+  name: LocationInfo
+  nameWithType: LocationInfo
+  fullName: ANcpLua.Roslyn.Utilities.Models.LocationInfo
+- uid: ANcpLua.Roslyn.Utilities.Models.EquatableMessageArgs
+  commentId: T:ANcpLua.Roslyn.Utilities.Models.EquatableMessageArgs
+  parent: ANcpLua.Roslyn.Utilities.Models
+  href: ANcpLua.Roslyn.Utilities.Models.EquatableMessageArgs.html
+  name: EquatableMessageArgs
+  nameWithType: EquatableMessageArgs
+  fullName: ANcpLua.Roslyn.Utilities.Models.EquatableMessageArgs
+- uid: Microsoft.CodeAnalysis.Diagnostic
+  commentId: T:Microsoft.CodeAnalysis.Diagnostic
+  parent: Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.diagnostic
+  name: Diagnostic
+  nameWithType: Diagnostic
+  fullName: Microsoft.CodeAnalysis.Diagnostic
+- uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+  commentId: T:ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+  parent: ANcpLua.Roslyn.Utilities.Models
+  href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  name: DiagnosticInfo
+  nameWithType: DiagnosticInfo
+  fullName: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+- uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.ToDiagnostic
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.ToDiagnostic
+  href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html#ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_ToDiagnostic
+  name: ToDiagnostic()
+  nameWithType: DiagnosticInfo.ToDiagnostic()
+  fullName: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.ToDiagnostic()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.ToDiagnostic
+    name: ToDiagnostic
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html#ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_ToDiagnostic
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.ToDiagnostic
+    name: ToDiagnostic
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html#ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_ToDiagnostic
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Models
+  commentId: N:ANcpLua.Roslyn.Utilities.Models
+  href: ANcpLua.html
+  name: ANcpLua.Roslyn.Utilities.Models
+  nameWithType: ANcpLua.Roslyn.Utilities.Models
+  fullName: ANcpLua.Roslyn.Utilities.Models
+  spec.csharp:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities.Models
+    name: Models
+    href: ANcpLua.Roslyn.Utilities.Models.html
+  spec.vb:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities.Models
+    name: Models
+    href: ANcpLua.Roslyn.Utilities.Models.html
+- uid: System.IEquatable{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo}
+  commentId: T:System.IEquatable{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<DiagnosticInfo>
+  nameWithType: IEquatable<DiagnosticInfo>
+  fullName: System.IEquatable<ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo>
+  nameWithType.vb: IEquatable(Of DiagnosticInfo)
+  fullName.vb: System.IEquatable(Of ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  name.vb: IEquatable(Of DiagnosticInfo)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: )
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+  parent: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+  definition: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  name: ToResultWithDiagnostics<DiagnosticInfo>(DiagnosticInfo)
+  nameWithType: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<DiagnosticInfo>(DiagnosticInfo)
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo>(ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  nameWithType.vb: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of DiagnosticInfo)(DiagnosticInfo)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)(ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  name.vb: ToResultWithDiagnostics(Of DiagnosticInfo)(DiagnosticInfo)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: '>'
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: )
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  parent: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+  definition: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  name: ToResultWithDiagnostics<DiagnosticInfo>(DiagnosticInfo, ImmutableArray<DiagnosticInfo>)
+  nameWithType: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<DiagnosticInfo>(DiagnosticInfo, ImmutableArray<DiagnosticInfo>)
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo>(ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo, System.Collections.Immutable.ImmutableArray<ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo>)
+  nameWithType.vb: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of DiagnosticInfo)(DiagnosticInfo, ImmutableArray(Of DiagnosticInfo))
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)(ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo, System.Collections.Immutable.ImmutableArray(Of ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo))
+  name.vb: ToResultWithDiagnostics(Of DiagnosticInfo)(DiagnosticInfo, ImmutableArray(Of DiagnosticInfo))
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: '>'
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: )
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: )
+  - name: )
+- uid: Microsoft.CodeAnalysis
+  commentId: N:Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.CodeAnalysis
+  nameWithType: Microsoft.CodeAnalysis
+  fullName: Microsoft.CodeAnalysis
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  name: ToResultWithDiagnostics<T>(T)
+  nameWithType: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<T>(T)
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<T>(T)
+  nameWithType.vb: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of T)(T)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of T)(T)
+  name.vb: ToResultWithDiagnostics(Of T)(T)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+  commentId: T:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+  parent: ANcpLua.Roslyn.Utilities.Models
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html
+  name: ResultWithDiagnosticsExtensions
+  nameWithType: ResultWithDiagnosticsExtensions
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+- uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  name: ToResultWithDiagnostics<T>(T, ImmutableArray<DiagnosticInfo>)
+  nameWithType: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<T>(T, ImmutableArray<DiagnosticInfo>)
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<T>(T, System.Collections.Immutable.ImmutableArray<ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo>)
+  nameWithType.vb: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of T)(T, ImmutableArray(Of DiagnosticInfo))
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of T)(T, System.Collections.Immutable.ImmutableArray(Of ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo))
+  name.vb: ToResultWithDiagnostics(Of T)(T, ImmutableArray(Of DiagnosticInfo))
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: )
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.#ctor*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.#ctor
+  href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html#ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__ctor_Microsoft_CodeAnalysis_DiagnosticDescriptor_ANcpLua_Roslyn_Utilities_Models_LocationInfo_ANcpLua_Roslyn_Utilities_Models_EquatableMessageArgs_
+  name: DiagnosticInfo
+  nameWithType: DiagnosticInfo.DiagnosticInfo
+  fullName: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.DiagnosticInfo
+  nameWithType.vb: DiagnosticInfo.New
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.New
+  name.vb: New
+- uid: Microsoft.CodeAnalysis.DiagnosticDescriptor
+  commentId: T:Microsoft.CodeAnalysis.DiagnosticDescriptor
+  parent: Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.diagnosticdescriptor
+  name: DiagnosticDescriptor
+  nameWithType: DiagnosticDescriptor
+  fullName: Microsoft.CodeAnalysis.DiagnosticDescriptor
+- uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Descriptor*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Descriptor
+  href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html#ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_Descriptor
+  name: Descriptor
+  nameWithType: DiagnosticInfo.Descriptor
+  fullName: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Descriptor
+- uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Location*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Location
+  href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html#ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_Location
+  name: Location
+  nameWithType: DiagnosticInfo.Location
+  fullName: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Location
+- uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.MessageArgs*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.MessageArgs
+  href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html#ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_MessageArgs
+  name: MessageArgs
+  nameWithType: DiagnosticInfo.MessageArgs
+  fullName: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.MessageArgs
+- uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor,Microsoft.CodeAnalysis.SyntaxNode,System.Object)
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor,Microsoft.CodeAnalysis.SyntaxNode,System.Object)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html#ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_Create_Microsoft_CodeAnalysis_DiagnosticDescriptor_Microsoft_CodeAnalysis_SyntaxNode_System_Object_
+  name: Create(DiagnosticDescriptor, SyntaxNode, object)
+  nameWithType: DiagnosticInfo.Create(DiagnosticDescriptor, SyntaxNode, object)
+  fullName: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor, Microsoft.CodeAnalysis.SyntaxNode, object)
+  nameWithType.vb: DiagnosticInfo.Create(DiagnosticDescriptor, SyntaxNode, Object)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor, Microsoft.CodeAnalysis.SyntaxNode, Object)
+  name.vb: Create(DiagnosticDescriptor, SyntaxNode, Object)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor,Microsoft.CodeAnalysis.SyntaxNode,System.Object)
+    name: Create
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html#ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_Create_Microsoft_CodeAnalysis_DiagnosticDescriptor_Microsoft_CodeAnalysis_SyntaxNode_System_Object_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.DiagnosticDescriptor
+    name: DiagnosticDescriptor
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.diagnosticdescriptor
+  - name: ','
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.SyntaxNode
+    name: SyntaxNode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.syntaxnode
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor,Microsoft.CodeAnalysis.SyntaxNode,System.Object)
+    name: Create
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html#ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_Create_Microsoft_CodeAnalysis_DiagnosticDescriptor_Microsoft_CodeAnalysis_SyntaxNode_System_Object_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.DiagnosticDescriptor
+    name: DiagnosticDescriptor
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.diagnosticdescriptor
+  - name: ','
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.SyntaxNode
+    name: SyntaxNode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.syntaxnode
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create
+  href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html#ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_Create_Microsoft_CodeAnalysis_DiagnosticDescriptor_Microsoft_CodeAnalysis_SyntaxToken_System_Object_
+  name: Create
+  nameWithType: DiagnosticInfo.Create
+  fullName: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create
+- uid: Microsoft.CodeAnalysis.SyntaxToken
+  commentId: T:Microsoft.CodeAnalysis.SyntaxToken
+  parent: Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.syntaxtoken
+  name: SyntaxToken
+  nameWithType: SyntaxToken
+  fullName: Microsoft.CodeAnalysis.SyntaxToken
+- uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor,Microsoft.CodeAnalysis.SyntaxToken,System.Object)
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor,Microsoft.CodeAnalysis.SyntaxToken,System.Object)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html#ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_Create_Microsoft_CodeAnalysis_DiagnosticDescriptor_Microsoft_CodeAnalysis_SyntaxToken_System_Object_
+  name: Create(DiagnosticDescriptor, SyntaxToken, object)
+  nameWithType: DiagnosticInfo.Create(DiagnosticDescriptor, SyntaxToken, object)
+  fullName: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor, Microsoft.CodeAnalysis.SyntaxToken, object)
+  nameWithType.vb: DiagnosticInfo.Create(DiagnosticDescriptor, SyntaxToken, Object)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor, Microsoft.CodeAnalysis.SyntaxToken, Object)
+  name.vb: Create(DiagnosticDescriptor, SyntaxToken, Object)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor,Microsoft.CodeAnalysis.SyntaxToken,System.Object)
+    name: Create
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html#ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_Create_Microsoft_CodeAnalysis_DiagnosticDescriptor_Microsoft_CodeAnalysis_SyntaxToken_System_Object_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.DiagnosticDescriptor
+    name: DiagnosticDescriptor
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.diagnosticdescriptor
+  - name: ','
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.SyntaxToken
+    name: SyntaxToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.syntaxtoken
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor,Microsoft.CodeAnalysis.SyntaxToken,System.Object)
+    name: Create
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html#ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_Create_Microsoft_CodeAnalysis_DiagnosticDescriptor_Microsoft_CodeAnalysis_SyntaxToken_System_Object_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.DiagnosticDescriptor
+    name: DiagnosticDescriptor
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.diagnosticdescriptor
+  - name: ','
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.SyntaxToken
+    name: SyntaxToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.syntaxtoken
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Microsoft.CodeAnalysis.SyntaxNode
+  commentId: T:Microsoft.CodeAnalysis.SyntaxNode
+  parent: Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.syntaxnode
+  name: SyntaxNode
+  nameWithType: SyntaxNode
+  fullName: Microsoft.CodeAnalysis.SyntaxNode
+- uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor,Microsoft.CodeAnalysis.Location,System.Object[])
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor,Microsoft.CodeAnalysis.Location,System.Object[])
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html#ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_Create_Microsoft_CodeAnalysis_DiagnosticDescriptor_Microsoft_CodeAnalysis_Location_System_Object___
+  name: Create(DiagnosticDescriptor, Location, params object[])
+  nameWithType: DiagnosticInfo.Create(DiagnosticDescriptor, Location, params object[])
+  fullName: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor, Microsoft.CodeAnalysis.Location, params object[])
+  nameWithType.vb: DiagnosticInfo.Create(DiagnosticDescriptor, Location, ParamArray Object())
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor, Microsoft.CodeAnalysis.Location, ParamArray Object())
+  name.vb: Create(DiagnosticDescriptor, Location, ParamArray Object())
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor,Microsoft.CodeAnalysis.Location,System.Object[])
+    name: Create
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html#ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_Create_Microsoft_CodeAnalysis_DiagnosticDescriptor_Microsoft_CodeAnalysis_Location_System_Object___
+  - name: (
+  - uid: Microsoft.CodeAnalysis.DiagnosticDescriptor
+    name: DiagnosticDescriptor
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.diagnosticdescriptor
+  - name: ','
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.Location
+    name: Location
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.location
+  - name: ','
+  - name: " "
+  - name: params
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor,Microsoft.CodeAnalysis.Location,System.Object[])
+    name: Create
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html#ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_Create_Microsoft_CodeAnalysis_DiagnosticDescriptor_Microsoft_CodeAnalysis_Location_System_Object___
+  - name: (
+  - uid: Microsoft.CodeAnalysis.DiagnosticDescriptor
+    name: DiagnosticDescriptor
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.diagnosticdescriptor
+  - name: ','
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.Location
+    name: Location
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.location
+  - name: ','
+  - name: " "
+  - name: ParamArray
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: (
+  - name: )
+  - name: )
+- uid: System.Object[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object[]
+  nameWithType: object[]
+  fullName: object[]
+  nameWithType.vb: Object()
+  fullName.vb: Object()
+  name.vb: Object()
+  spec.csharp:
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: (
+  - name: )
+- uid: Microsoft.CodeAnalysis.Location
+  commentId: T:Microsoft.CodeAnalysis.Location
+  parent: Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.location
+  name: Location
+  nameWithType: Location
+  fullName: Microsoft.CodeAnalysis.Location
+- uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor,Microsoft.CodeAnalysis.SyntaxNode,System.Object[])
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor,Microsoft.CodeAnalysis.SyntaxNode,System.Object[])
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html#ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_Create_Microsoft_CodeAnalysis_DiagnosticDescriptor_Microsoft_CodeAnalysis_SyntaxNode_System_Object___
+  name: Create(DiagnosticDescriptor, SyntaxNode, params object[])
+  nameWithType: DiagnosticInfo.Create(DiagnosticDescriptor, SyntaxNode, params object[])
+  fullName: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor, Microsoft.CodeAnalysis.SyntaxNode, params object[])
+  nameWithType.vb: DiagnosticInfo.Create(DiagnosticDescriptor, SyntaxNode, ParamArray Object())
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor, Microsoft.CodeAnalysis.SyntaxNode, ParamArray Object())
+  name.vb: Create(DiagnosticDescriptor, SyntaxNode, ParamArray Object())
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor,Microsoft.CodeAnalysis.SyntaxNode,System.Object[])
+    name: Create
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html#ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_Create_Microsoft_CodeAnalysis_DiagnosticDescriptor_Microsoft_CodeAnalysis_SyntaxNode_System_Object___
+  - name: (
+  - uid: Microsoft.CodeAnalysis.DiagnosticDescriptor
+    name: DiagnosticDescriptor
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.diagnosticdescriptor
+  - name: ','
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.SyntaxNode
+    name: SyntaxNode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.syntaxnode
+  - name: ','
+  - name: " "
+  - name: params
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Create(Microsoft.CodeAnalysis.DiagnosticDescriptor,Microsoft.CodeAnalysis.SyntaxNode,System.Object[])
+    name: Create
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html#ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_Create_Microsoft_CodeAnalysis_DiagnosticDescriptor_Microsoft_CodeAnalysis_SyntaxNode_System_Object___
+  - name: (
+  - uid: Microsoft.CodeAnalysis.DiagnosticDescriptor
+    name: DiagnosticDescriptor
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.diagnosticdescriptor
+  - name: ','
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.SyntaxNode
+    name: SyntaxNode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.syntaxnode
+  - name: ','
+  - name: " "
+  - name: ParamArray
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: (
+  - name: )
+  - name: )
+- uid: Microsoft.CodeAnalysis.Location.None
+  commentId: P:Microsoft.CodeAnalysis.Location.None
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.location.none
+  name: None
+  nameWithType: Location.None
+  fullName: Microsoft.CodeAnalysis.Location.None
+- uid: Microsoft.CodeAnalysis.ISymbol
+  commentId: T:Microsoft.CodeAnalysis.ISymbol
+  parent: Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.isymbol
+  name: ISymbol
+  nameWithType: ISymbol
+  fullName: Microsoft.CodeAnalysis.ISymbol
+- uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Location
+  commentId: P:ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Location
+  href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html#ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_Location
+  name: Location
+  nameWithType: DiagnosticInfo.Location
+  fullName: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.Location
+- uid: Microsoft.CodeAnalysis.SourceProductionContext.ReportDiagnostic(Microsoft.CodeAnalysis.Diagnostic)
+  commentId: M:Microsoft.CodeAnalysis.SourceProductionContext.ReportDiagnostic(Microsoft.CodeAnalysis.Diagnostic)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.sourceproductioncontext.reportdiagnostic
+  name: ReportDiagnostic(Diagnostic)
+  nameWithType: SourceProductionContext.ReportDiagnostic(Diagnostic)
+  fullName: Microsoft.CodeAnalysis.SourceProductionContext.ReportDiagnostic(Microsoft.CodeAnalysis.Diagnostic)
+  spec.csharp:
+  - uid: Microsoft.CodeAnalysis.SourceProductionContext.ReportDiagnostic(Microsoft.CodeAnalysis.Diagnostic)
+    name: ReportDiagnostic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.sourceproductioncontext.reportdiagnostic
+  - name: (
+  - uid: Microsoft.CodeAnalysis.Diagnostic
+    name: Diagnostic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.diagnostic
+  - name: )
+  spec.vb:
+  - uid: Microsoft.CodeAnalysis.SourceProductionContext.ReportDiagnostic(Microsoft.CodeAnalysis.Diagnostic)
+    name: ReportDiagnostic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.sourceproductioncontext.reportdiagnostic
+  - name: (
+  - uid: Microsoft.CodeAnalysis.Diagnostic
+    name: Diagnostic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.diagnostic
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.ToDiagnostic*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.ToDiagnostic
+  href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html#ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_ToDiagnostic
+  name: ToDiagnostic
+  nameWithType: DiagnosticInfo.ToDiagnostic
+  fullName: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.ToDiagnostic

@@ -1,0 +1,1635 @@
+### YamlMime:ManagedReference
+items:
+- uid: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions
+  commentId: T:ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions
+  id: AnalyzerConfigOptionsProviderExtensions
+  parent: ANcpLua.Roslyn.Utilities
+  children:
+  - ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetAdditionalTextMetadata(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,Microsoft.CodeAnalysis.AdditionalText,System.String,System.String,System.String)
+  - ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetGlobalBoolOrDefault(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,System.String,System.Boolean,System.String)
+  - ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetGlobalIntOrDefault(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,System.String,System.Int32,System.String)
+  - ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetGlobalProperty(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,System.String,System.String)
+  - ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetRequiredAdditionalTextMetadata(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,Microsoft.CodeAnalysis.AdditionalText,System.String,System.String,System.String)
+  - ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetRequiredGlobalProperty(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,System.String,System.String)
+  - ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetValueOrNull(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptions,System.String)
+  - ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.IsDesignTimeBuild(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider)
+  - ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.TryGetGlobalBool(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,System.String,System.Boolean@,System.String)
+  - ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.TryGetGlobalInt(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,System.String,System.Int32@,System.String)
+  langs:
+  - csharp
+  - vb
+  name: AnalyzerConfigOptionsProviderExtensions
+  nameWithType: AnalyzerConfigOptionsProviderExtensions
+  fullName: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions
+  type: Class
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/AnalyzerConfigOptionsProviderExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: AnalyzerConfigOptionsProviderExtensions
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/AnalyzerConfigOptionsProviderExtensions.cs
+    startLine: 43
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Provides extension methods for reading MSBuild-provided values surfaced through Roslyn analyzer config options.
+  remarks: >-
+    <p>
+        MSBuild injects "virtual" keys into <xref href="Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptions" data-throw-if-not-resolved="false"></xref>:
+    </p>
+
+    <ul><li>
+                <code>build_property.&lt;PropertyName&gt;</code> for MSBuild properties
+            </li><li>
+                <code>build_metadata.&lt;ItemGroup&gt;.&lt;MetadataName&gt;</code> for item metadata (commonly AdditionalFiles)
+            </li></ul>
+    <p>
+        Conventions in this helper:
+    </p>
+
+    <ul><li>
+                Missing keys or empty/whitespace values are treated as "unset" and return <code>null</code>.
+            </li><li>
+                Typed helpers parse the common MSBuild forms (e.g. boolean "true/false" and "1/0").
+            </li></ul>
+  example: []
+  syntax:
+    content: public static class AnalyzerConfigOptionsProviderExtensions
+    content.vb: Public Module AnalyzerConfigOptionsProviderExtensions
+  seealso:
+  - linkId: Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptions
+    commentId: T:Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptions
+  - linkId: Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider
+    commentId: T:Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetValueOrNull(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptions,System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetValueOrNull(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptions,System.String)
+  id: GetValueOrNull(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptions,System.String)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetValueOrNull(AnalyzerConfigOptions, string)
+  nameWithType: AnalyzerConfigOptionsProviderExtensions.GetValueOrNull(AnalyzerConfigOptions, string)
+  fullName: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetValueOrNull(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptions, string)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/AnalyzerConfigOptionsProviderExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: GetValueOrNull
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/AnalyzerConfigOptionsProviderExtensions.cs
+    startLine: 67
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Gets a configuration value by its exact key.
+  example: []
+  syntax:
+    content: public static string? GetValueOrNull(this AnalyzerConfigOptions options, string key)
+    parameters:
+    - id: options
+      type: Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptions
+      description: The <xref href="Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptions" data-throw-if-not-resolved="false"></xref> to read from.
+    - id: key
+      type: System.String
+      description: The exact key to look up.
+    return:
+      type: System.String
+      description: >-
+        The value associated with <code class="paramref">key</code>, or <code>null</code> if the key is missing
+
+        or the value is empty or whitespace.
+    content.vb: Public Shared Function GetValueOrNull(options As AnalyzerConfigOptions, key As String) As String
+  overload: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetValueOrNull*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: Thrown when <code class="paramref">options</code> or <code class="paramref">key</code> is <code>null</code>.
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetGlobalProperty(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,System.String,System.String)
+    commentId: M:ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetGlobalProperty(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,System.String,System.String)
+  - linkId: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetAdditionalTextMetadata(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,Microsoft.CodeAnalysis.AdditionalText,System.String,System.String,System.String)
+    commentId: M:ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetAdditionalTextMetadata(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,Microsoft.CodeAnalysis.AdditionalText,System.String,System.String,System.String)
+  nameWithType.vb: AnalyzerConfigOptionsProviderExtensions.GetValueOrNull(AnalyzerConfigOptions, String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetValueOrNull(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptions, String)
+  name.vb: GetValueOrNull(AnalyzerConfigOptions, String)
+- uid: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetGlobalProperty(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,System.String,System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetGlobalProperty(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,System.String,System.String)
+  id: GetGlobalProperty(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,System.String,System.String)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetGlobalProperty(AnalyzerConfigOptionsProvider, string, string?)
+  nameWithType: AnalyzerConfigOptionsProviderExtensions.GetGlobalProperty(AnalyzerConfigOptionsProvider, string, string?)
+  fullName: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetGlobalProperty(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider, string, string?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/AnalyzerConfigOptionsProviderExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: GetGlobalProperty
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/AnalyzerConfigOptionsProviderExtensions.cs
+    startLine: 96
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Reads an MSBuild property from the global options.
+  example: []
+  syntax:
+    content: public static string? GetGlobalProperty(this AnalyzerConfigOptionsProvider provider, string name, string? prefix = null)
+    parameters:
+    - id: provider
+      type: Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider
+      description: The <xref href="Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider" data-throw-if-not-resolved="false"></xref> to read from.
+    - id: name
+      type: System.String
+      description: The MSBuild property name (without the <code>build_property.</code> prefix).
+    - id: prefix
+      type: System.String
+      description: >-
+        An optional prefix to prepend to <code class="paramref">name</code> with an underscore separator.
+
+        For example, if <code class="paramref">prefix</code> is <code>"MyPrefix"</code> and <code class="paramref">name</code> is <code>"TargetFramework"</code>,
+
+        the resulting key is <code>build_property.MyPrefix_TargetFramework</code>.
+    return:
+      type: System.String
+      description: The value of the MSBuild property, or <code>null</code> if not found or empty.
+    content.vb: Public Shared Function GetGlobalProperty(provider As AnalyzerConfigOptionsProvider, name As String, prefix As String = Nothing) As String
+  overload: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetGlobalProperty*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: Thrown when <code class="paramref">provider</code> or <code class="paramref">name</code> is <code>null</code>.
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetRequiredGlobalProperty(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,System.String,System.String)
+    commentId: M:ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetRequiredGlobalProperty(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,System.String,System.String)
+  - linkId: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.TryGetGlobalBool(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,System.String,System.Boolean@,System.String)
+    commentId: M:ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.TryGetGlobalBool(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,System.String,System.Boolean@,System.String)
+  - linkId: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.TryGetGlobalInt(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,System.String,System.Int32@,System.String)
+    commentId: M:ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.TryGetGlobalInt(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,System.String,System.Int32@,System.String)
+  nameWithType.vb: AnalyzerConfigOptionsProviderExtensions.GetGlobalProperty(AnalyzerConfigOptionsProvider, String, String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetGlobalProperty(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider, String, String)
+  name.vb: GetGlobalProperty(AnalyzerConfigOptionsProvider, String, String)
+- uid: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetAdditionalTextMetadata(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,Microsoft.CodeAnalysis.AdditionalText,System.String,System.String,System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetAdditionalTextMetadata(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,Microsoft.CodeAnalysis.AdditionalText,System.String,System.String,System.String)
+  id: GetAdditionalTextMetadata(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,Microsoft.CodeAnalysis.AdditionalText,System.String,System.String,System.String)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetAdditionalTextMetadata(AnalyzerConfigOptionsProvider, AdditionalText, string, string?, string?)
+  nameWithType: AnalyzerConfigOptionsProviderExtensions.GetAdditionalTextMetadata(AnalyzerConfigOptionsProvider, AdditionalText, string, string?, string?)
+  fullName: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetAdditionalTextMetadata(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider, Microsoft.CodeAnalysis.AdditionalText, string, string?, string?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/AnalyzerConfigOptionsProviderExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: GetAdditionalTextMetadata
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/AnalyzerConfigOptionsProviderExtensions.cs
+    startLine: 128
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Reads metadata for an <xref href="Microsoft.CodeAnalysis.AdditionalText" data-throw-if-not-resolved="false"></xref> item.
+  remarks: >-
+    The resulting key format is <code>build_metadata.{group}.{prefix}_{name}</code> when prefix is specified,
+
+    or <code>build_metadata.{group}.{name}</code> otherwise.
+  example: []
+  syntax:
+    content: public static string? GetAdditionalTextMetadata(this AnalyzerConfigOptionsProvider provider, AdditionalText text, string name, string? group = null, string? prefix = null)
+    parameters:
+    - id: provider
+      type: Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider
+      description: The <xref href="Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider" data-throw-if-not-resolved="false"></xref> to read from.
+    - id: text
+      type: Microsoft.CodeAnalysis.AdditionalText
+      description: The <xref href="Microsoft.CodeAnalysis.AdditionalText" data-throw-if-not-resolved="false"></xref> file to get metadata for.
+    - id: name
+      type: System.String
+      description: The metadata name (without the <code>build_metadata.</code> prefix).
+    - id: group
+      type: System.String
+      description: The item group name. Defaults to <code>"AdditionalFiles"</code> if not specified.
+    - id: prefix
+      type: System.String
+      description: An optional prefix to prepend to <code class="paramref">name</code> with an underscore separator.
+    return:
+      type: System.String
+      description: The metadata value, or <code>null</code> if not found or empty.
+    content.vb: Public Shared Function GetAdditionalTextMetadata(provider As AnalyzerConfigOptionsProvider, text As AdditionalText, name As String, group As String = Nothing, prefix As String = Nothing) As String
+  overload: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetAdditionalTextMetadata*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: Thrown when <code class="paramref">provider</code>, <code class="paramref">text</code>, or <code class="paramref">name</code> is <code>null</code>.
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetRequiredAdditionalTextMetadata(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,Microsoft.CodeAnalysis.AdditionalText,System.String,System.String,System.String)
+    commentId: M:ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetRequiredAdditionalTextMetadata(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,Microsoft.CodeAnalysis.AdditionalText,System.String,System.String,System.String)
+  nameWithType.vb: AnalyzerConfigOptionsProviderExtensions.GetAdditionalTextMetadata(AnalyzerConfigOptionsProvider, AdditionalText, String, String, String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetAdditionalTextMetadata(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider, Microsoft.CodeAnalysis.AdditionalText, String, String, String)
+  name.vb: GetAdditionalTextMetadata(AnalyzerConfigOptionsProvider, AdditionalText, String, String, String)
+- uid: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetRequiredGlobalProperty(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,System.String,System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetRequiredGlobalProperty(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,System.String,System.String)
+  id: GetRequiredGlobalProperty(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,System.String,System.String)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetRequiredGlobalProperty(AnalyzerConfigOptionsProvider, string, string?)
+  nameWithType: AnalyzerConfigOptionsProviderExtensions.GetRequiredGlobalProperty(AnalyzerConfigOptionsProvider, string, string?)
+  fullName: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetRequiredGlobalProperty(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider, string, string?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/AnalyzerConfigOptionsProviderExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: GetRequiredGlobalProperty
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/AnalyzerConfigOptionsProviderExtensions.cs
+    startLine: 157
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Reads an MSBuild property or throws when missing or unset.
+  example: []
+  syntax:
+    content: public static string GetRequiredGlobalProperty(this AnalyzerConfigOptionsProvider provider, string name, string? prefix = null)
+    parameters:
+    - id: provider
+      type: Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider
+      description: The <xref href="Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider" data-throw-if-not-resolved="false"></xref> to read from.
+    - id: name
+      type: System.String
+      description: The MSBuild property name (without the <code>build_property.</code> prefix).
+    - id: prefix
+      type: System.String
+      description: An optional prefix to prepend to <code class="paramref">name</code> with an underscore separator.
+    return:
+      type: System.String
+      description: The value of the MSBuild property.
+    content.vb: Public Shared Function GetRequiredGlobalProperty(provider As AnalyzerConfigOptionsProvider, name As String, prefix As String = Nothing) As String
+  overload: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetRequiredGlobalProperty*
+  exceptions:
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: Thrown when the property is not found, empty, or whitespace.
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetGlobalProperty(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,System.String,System.String)
+    commentId: M:ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetGlobalProperty(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,System.String,System.String)
+  nameWithType.vb: AnalyzerConfigOptionsProviderExtensions.GetRequiredGlobalProperty(AnalyzerConfigOptionsProvider, String, String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetRequiredGlobalProperty(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider, String, String)
+  name.vb: GetRequiredGlobalProperty(AnalyzerConfigOptionsProvider, String, String)
+- uid: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetRequiredAdditionalTextMetadata(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,Microsoft.CodeAnalysis.AdditionalText,System.String,System.String,System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetRequiredAdditionalTextMetadata(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,Microsoft.CodeAnalysis.AdditionalText,System.String,System.String,System.String)
+  id: GetRequiredAdditionalTextMetadata(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,Microsoft.CodeAnalysis.AdditionalText,System.String,System.String,System.String)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetRequiredAdditionalTextMetadata(AnalyzerConfigOptionsProvider, AdditionalText, string, string?, string?)
+  nameWithType: AnalyzerConfigOptionsProviderExtensions.GetRequiredAdditionalTextMetadata(AnalyzerConfigOptionsProvider, AdditionalText, string, string?, string?)
+  fullName: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetRequiredAdditionalTextMetadata(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider, Microsoft.CodeAnalysis.AdditionalText, string, string?, string?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/AnalyzerConfigOptionsProviderExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: GetRequiredAdditionalTextMetadata
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/AnalyzerConfigOptionsProviderExtensions.cs
+    startLine: 179
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Reads <xref href="Microsoft.CodeAnalysis.AdditionalText" data-throw-if-not-resolved="false"></xref> metadata or throws when missing or unset.
+  example: []
+  syntax:
+    content: public static string GetRequiredAdditionalTextMetadata(this AnalyzerConfigOptionsProvider provider, AdditionalText text, string name, string? group = null, string? prefix = null)
+    parameters:
+    - id: provider
+      type: Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider
+      description: The <xref href="Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider" data-throw-if-not-resolved="false"></xref> to read from.
+    - id: text
+      type: Microsoft.CodeAnalysis.AdditionalText
+      description: The <xref href="Microsoft.CodeAnalysis.AdditionalText" data-throw-if-not-resolved="false"></xref> file to get metadata for.
+    - id: name
+      type: System.String
+      description: The metadata name (without the <code>build_metadata.</code> prefix).
+    - id: group
+      type: System.String
+      description: The item group name. Defaults to <code>"AdditionalFiles"</code> if not specified.
+    - id: prefix
+      type: System.String
+      description: An optional prefix to prepend to <code class="paramref">name</code> with an underscore separator.
+    return:
+      type: System.String
+      description: The metadata value.
+    content.vb: Public Shared Function GetRequiredAdditionalTextMetadata(provider As AnalyzerConfigOptionsProvider, text As AdditionalText, name As String, group As String = Nothing, prefix As String = Nothing) As String
+  overload: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetRequiredAdditionalTextMetadata*
+  exceptions:
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: Thrown when the metadata is not found, empty, or whitespace.
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetAdditionalTextMetadata(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,Microsoft.CodeAnalysis.AdditionalText,System.String,System.String,System.String)
+    commentId: M:ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetAdditionalTextMetadata(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,Microsoft.CodeAnalysis.AdditionalText,System.String,System.String,System.String)
+  nameWithType.vb: AnalyzerConfigOptionsProviderExtensions.GetRequiredAdditionalTextMetadata(AnalyzerConfigOptionsProvider, AdditionalText, String, String, String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetRequiredAdditionalTextMetadata(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider, Microsoft.CodeAnalysis.AdditionalText, String, String, String)
+  name.vb: GetRequiredAdditionalTextMetadata(AnalyzerConfigOptionsProvider, AdditionalText, String, String, String)
+- uid: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.TryGetGlobalBool(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,System.String,System.Boolean@,System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.TryGetGlobalBool(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,System.String,System.Boolean@,System.String)
+  id: TryGetGlobalBool(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,System.String,System.Boolean@,System.String)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions
+  langs:
+  - csharp
+  - vb
+  name: TryGetGlobalBool(AnalyzerConfigOptionsProvider, string, out bool, string?)
+  nameWithType: AnalyzerConfigOptionsProviderExtensions.TryGetGlobalBool(AnalyzerConfigOptionsProvider, string, out bool, string?)
+  fullName: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.TryGetGlobalBool(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider, string, out bool, string?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/AnalyzerConfigOptionsProviderExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: TryGetGlobalBool
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/AnalyzerConfigOptionsProviderExtensions.cs
+    startLine: 212
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Tries to read and parse an MSBuild property as a boolean.
+  remarks: >-
+    Accepts the following values (case-insensitive):
+
+    <ul><li><code>"true"</code> or <code>"1"</code> for <code>true</code></li><li><code>"false"</code> or <code>"0"</code> for <code>false</code></li></ul>
+  example: []
+  syntax:
+    content: public static bool TryGetGlobalBool(this AnalyzerConfigOptionsProvider provider, string name, out bool value, string? prefix = null)
+    parameters:
+    - id: provider
+      type: Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider
+      description: The <xref href="Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider" data-throw-if-not-resolved="false"></xref> to read from.
+    - id: name
+      type: System.String
+      description: The MSBuild property name (without the <code>build_property.</code> prefix).
+    - id: value
+      type: System.Boolean
+      description: >-
+        When this method returns <code>true</code>, contains the parsed boolean value.
+
+        When this method returns <code>false</code>, contains <code>false</code>.
+    - id: prefix
+      type: System.String
+      description: An optional prefix to prepend to <code class="paramref">name</code> with an underscore separator.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if the property was found and successfully parsed as a boolean; otherwise, <code>false</code>.
+    content.vb: Public Shared Function TryGetGlobalBool(provider As AnalyzerConfigOptionsProvider, name As String, value As Boolean, prefix As String = Nothing) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.TryGetGlobalBool*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetGlobalBoolOrDefault(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,System.String,System.Boolean,System.String)
+    commentId: M:ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetGlobalBoolOrDefault(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,System.String,System.Boolean,System.String)
+  nameWithType.vb: AnalyzerConfigOptionsProviderExtensions.TryGetGlobalBool(AnalyzerConfigOptionsProvider, String, Boolean, String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.TryGetGlobalBool(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider, String, Boolean, String)
+  name.vb: TryGetGlobalBool(AnalyzerConfigOptionsProvider, String, Boolean, String)
+- uid: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetGlobalBoolOrDefault(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,System.String,System.Boolean,System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetGlobalBoolOrDefault(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,System.String,System.Boolean,System.String)
+  id: GetGlobalBoolOrDefault(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,System.String,System.Boolean,System.String)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetGlobalBoolOrDefault(AnalyzerConfigOptionsProvider, string, bool, string?)
+  nameWithType: AnalyzerConfigOptionsProviderExtensions.GetGlobalBoolOrDefault(AnalyzerConfigOptionsProvider, string, bool, string?)
+  fullName: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetGlobalBoolOrDefault(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider, string, bool, string?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/AnalyzerConfigOptionsProviderExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: GetGlobalBoolOrDefault
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/AnalyzerConfigOptionsProviderExtensions.cs
+    startLine: 229
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Reads a boolean MSBuild property or returns a default value when missing or invalid.
+  example: []
+  syntax:
+    content: public static bool GetGlobalBoolOrDefault(this AnalyzerConfigOptionsProvider provider, string name, bool defaultValue, string? prefix = null)
+    parameters:
+    - id: provider
+      type: Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider
+      description: The <xref href="Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider" data-throw-if-not-resolved="false"></xref> to read from.
+    - id: name
+      type: System.String
+      description: The MSBuild property name (without the <code>build_property.</code> prefix).
+    - id: defaultValue
+      type: System.Boolean
+      description: The value to return if the property is missing or cannot be parsed.
+    - id: prefix
+      type: System.String
+      description: An optional prefix to prepend to <code class="paramref">name</code> with an underscore separator.
+    return:
+      type: System.Boolean
+      description: The parsed boolean value, or <code class="paramref">defaultValue</code> if the property is missing or invalid.
+    content.vb: Public Shared Function GetGlobalBoolOrDefault(provider As AnalyzerConfigOptionsProvider, name As String, defaultValue As Boolean, prefix As String = Nothing) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetGlobalBoolOrDefault*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.TryGetGlobalBool(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,System.String,System.Boolean@,System.String)
+    commentId: M:ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.TryGetGlobalBool(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,System.String,System.Boolean@,System.String)
+  nameWithType.vb: AnalyzerConfigOptionsProviderExtensions.GetGlobalBoolOrDefault(AnalyzerConfigOptionsProvider, String, Boolean, String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetGlobalBoolOrDefault(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider, String, Boolean, String)
+  name.vb: GetGlobalBoolOrDefault(AnalyzerConfigOptionsProvider, String, Boolean, String)
+- uid: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.TryGetGlobalInt(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,System.String,System.Int32@,System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.TryGetGlobalInt(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,System.String,System.Int32@,System.String)
+  id: TryGetGlobalInt(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,System.String,System.Int32@,System.String)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions
+  langs:
+  - csharp
+  - vb
+  name: TryGetGlobalInt(AnalyzerConfigOptionsProvider, string, out int, string?)
+  nameWithType: AnalyzerConfigOptionsProviderExtensions.TryGetGlobalInt(AnalyzerConfigOptionsProvider, string, out int, string?)
+  fullName: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.TryGetGlobalInt(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider, string, out int, string?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/AnalyzerConfigOptionsProviderExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: TryGetGlobalInt
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/AnalyzerConfigOptionsProviderExtensions.cs
+    startLine: 252
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Tries to read and parse an MSBuild property as an integer.
+  remarks: Parsing uses <xref href="System.Globalization.CultureInfo.InvariantCulture" data-throw-if-not-resolved="false"></xref> and <xref href="System.Globalization.NumberStyles.Integer" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static bool TryGetGlobalInt(this AnalyzerConfigOptionsProvider provider, string name, out int value, string? prefix = null)
+    parameters:
+    - id: provider
+      type: Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider
+      description: The <xref href="Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider" data-throw-if-not-resolved="false"></xref> to read from.
+    - id: name
+      type: System.String
+      description: The MSBuild property name (without the <code>build_property.</code> prefix).
+    - id: value
+      type: System.Int32
+      description: >-
+        When this method returns <code>true</code>, contains the parsed integer value.
+
+        When this method returns <code>false</code>, contains <code>0</code>.
+    - id: prefix
+      type: System.String
+      description: An optional prefix to prepend to <code class="paramref">name</code> with an underscore separator.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if the property was found and successfully parsed as an integer; otherwise, <code>false</code>.
+    content.vb: Public Shared Function TryGetGlobalInt(provider As AnalyzerConfigOptionsProvider, name As String, value As Integer, prefix As String = Nothing) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.TryGetGlobalInt*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetGlobalIntOrDefault(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,System.String,System.Int32,System.String)
+    commentId: M:ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetGlobalIntOrDefault(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,System.String,System.Int32,System.String)
+  nameWithType.vb: AnalyzerConfigOptionsProviderExtensions.TryGetGlobalInt(AnalyzerConfigOptionsProvider, String, Integer, String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.TryGetGlobalInt(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider, String, Integer, String)
+  name.vb: TryGetGlobalInt(AnalyzerConfigOptionsProvider, String, Integer, String)
+- uid: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetGlobalIntOrDefault(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,System.String,System.Int32,System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetGlobalIntOrDefault(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,System.String,System.Int32,System.String)
+  id: GetGlobalIntOrDefault(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,System.String,System.Int32,System.String)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetGlobalIntOrDefault(AnalyzerConfigOptionsProvider, string, int, string?)
+  nameWithType: AnalyzerConfigOptionsProviderExtensions.GetGlobalIntOrDefault(AnalyzerConfigOptionsProvider, string, int, string?)
+  fullName: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetGlobalIntOrDefault(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider, string, int, string?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/AnalyzerConfigOptionsProviderExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: GetGlobalIntOrDefault
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/AnalyzerConfigOptionsProviderExtensions.cs
+    startLine: 272
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Reads an integer MSBuild property or returns a default value when missing or invalid.
+  example: []
+  syntax:
+    content: public static int GetGlobalIntOrDefault(this AnalyzerConfigOptionsProvider provider, string name, int defaultValue, string? prefix = null)
+    parameters:
+    - id: provider
+      type: Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider
+      description: The <xref href="Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider" data-throw-if-not-resolved="false"></xref> to read from.
+    - id: name
+      type: System.String
+      description: The MSBuild property name (without the <code>build_property.</code> prefix).
+    - id: defaultValue
+      type: System.Int32
+      description: The value to return if the property is missing or cannot be parsed.
+    - id: prefix
+      type: System.String
+      description: An optional prefix to prepend to <code class="paramref">name</code> with an underscore separator.
+    return:
+      type: System.Int32
+      description: The parsed integer value, or <code class="paramref">defaultValue</code> if the property is missing or invalid.
+    content.vb: Public Shared Function GetGlobalIntOrDefault(provider As AnalyzerConfigOptionsProvider, name As String, defaultValue As Integer, prefix As String = Nothing) As Integer
+  overload: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetGlobalIntOrDefault*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.TryGetGlobalInt(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,System.String,System.Int32@,System.String)
+    commentId: M:ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.TryGetGlobalInt(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,System.String,System.Int32@,System.String)
+  nameWithType.vb: AnalyzerConfigOptionsProviderExtensions.GetGlobalIntOrDefault(AnalyzerConfigOptionsProvider, String, Integer, String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetGlobalIntOrDefault(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider, String, Integer, String)
+  name.vb: GetGlobalIntOrDefault(AnalyzerConfigOptionsProvider, String, Integer, String)
+- uid: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.IsDesignTimeBuild(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider)
+  commentId: M:ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.IsDesignTimeBuild(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider)
+  id: IsDesignTimeBuild(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsDesignTimeBuild(AnalyzerConfigOptionsProvider)
+  nameWithType: AnalyzerConfigOptionsProviderExtensions.IsDesignTimeBuild(AnalyzerConfigOptionsProvider)
+  fullName: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.IsDesignTimeBuild(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/AnalyzerConfigOptionsProviderExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsDesignTimeBuild
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/AnalyzerConfigOptionsProviderExtensions.cs
+    startLine: 303
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Determines whether the current build is an IDE design-time build.
+  remarks: >-
+    <p>
+        Uses the following heuristics to detect design-time builds:
+    </p>
+
+    <ul><li>
+                SDK-style projects: <code>DesignTimeBuild=true</code>
+            </li><li>
+                Legacy projects: <code>BuildingProject=false</code>
+            </li></ul>
+  example: []
+  syntax:
+    content: public static bool IsDesignTimeBuild(this AnalyzerConfigOptionsProvider provider)
+    parameters:
+    - id: provider
+      type: Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider
+      description: The <xref href="Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider" data-throw-if-not-resolved="false"></xref> to read from.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if the build is a design-time build; otherwise, <code>false</code>.
+    content.vb: Public Shared Function IsDesignTimeBuild(provider As AnalyzerConfigOptionsProvider) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.IsDesignTimeBuild*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: Thrown when <code class="paramref">provider</code> is <code>null</code>.
+references:
+- uid: Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptions
+  commentId: T:Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptions
+  parent: Microsoft.CodeAnalysis.Diagnostics
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.diagnostics.analyzerconfigoptions
+  name: AnalyzerConfigOptions
+  nameWithType: AnalyzerConfigOptions
+  fullName: Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptions
+- uid: Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider
+  commentId: T:Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider
+  parent: Microsoft.CodeAnalysis.Diagnostics
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.diagnostics.analyzerconfigoptionsprovider
+  name: AnalyzerConfigOptionsProvider
+  nameWithType: AnalyzerConfigOptionsProvider
+  fullName: Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider
+- uid: ANcpLua.Roslyn.Utilities
+  commentId: N:ANcpLua.Roslyn.Utilities
+  href: ANcpLua.html
+  name: ANcpLua.Roslyn.Utilities
+  nameWithType: ANcpLua.Roslyn.Utilities
+  fullName: ANcpLua.Roslyn.Utilities
+  spec.csharp:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  spec.vb:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: Microsoft.CodeAnalysis.Diagnostics
+  commentId: N:Microsoft.CodeAnalysis.Diagnostics
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.CodeAnalysis.Diagnostics
+  nameWithType: Microsoft.CodeAnalysis.Diagnostics
+  fullName: Microsoft.CodeAnalysis.Diagnostics
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+  - name: .
+  - uid: Microsoft.CodeAnalysis.Diagnostics
+    name: Diagnostics
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.diagnostics
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+  - name: .
+  - uid: Microsoft.CodeAnalysis.Diagnostics
+    name: Diagnostics
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.diagnostics
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetGlobalProperty(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,System.String,System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetGlobalProperty(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,System.String,System.String)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.html#ANcpLua_Roslyn_Utilities_AnalyzerConfigOptionsProviderExtensions_GetGlobalProperty_Microsoft_CodeAnalysis_Diagnostics_AnalyzerConfigOptionsProvider_System_String_System_String_
+  name: GetGlobalProperty(AnalyzerConfigOptionsProvider, string, string)
+  nameWithType: AnalyzerConfigOptionsProviderExtensions.GetGlobalProperty(AnalyzerConfigOptionsProvider, string, string)
+  fullName: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetGlobalProperty(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider, string, string)
+  nameWithType.vb: AnalyzerConfigOptionsProviderExtensions.GetGlobalProperty(AnalyzerConfigOptionsProvider, String, String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetGlobalProperty(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider, String, String)
+  name.vb: GetGlobalProperty(AnalyzerConfigOptionsProvider, String, String)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetGlobalProperty(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,System.String,System.String)
+    name: GetGlobalProperty
+    href: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.html#ANcpLua_Roslyn_Utilities_AnalyzerConfigOptionsProviderExtensions_GetGlobalProperty_Microsoft_CodeAnalysis_Diagnostics_AnalyzerConfigOptionsProvider_System_String_System_String_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider
+    name: AnalyzerConfigOptionsProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.diagnostics.analyzerconfigoptionsprovider
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetGlobalProperty(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,System.String,System.String)
+    name: GetGlobalProperty
+    href: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.html#ANcpLua_Roslyn_Utilities_AnalyzerConfigOptionsProviderExtensions_GetGlobalProperty_Microsoft_CodeAnalysis_Diagnostics_AnalyzerConfigOptionsProvider_System_String_System_String_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider
+    name: AnalyzerConfigOptionsProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.diagnostics.analyzerconfigoptionsprovider
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetAdditionalTextMetadata(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,Microsoft.CodeAnalysis.AdditionalText,System.String,System.String,System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetAdditionalTextMetadata(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,Microsoft.CodeAnalysis.AdditionalText,System.String,System.String,System.String)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.html#ANcpLua_Roslyn_Utilities_AnalyzerConfigOptionsProviderExtensions_GetAdditionalTextMetadata_Microsoft_CodeAnalysis_Diagnostics_AnalyzerConfigOptionsProvider_Microsoft_CodeAnalysis_AdditionalText_System_String_System_String_System_String_
+  name: GetAdditionalTextMetadata(AnalyzerConfigOptionsProvider, AdditionalText, string, string, string)
+  nameWithType: AnalyzerConfigOptionsProviderExtensions.GetAdditionalTextMetadata(AnalyzerConfigOptionsProvider, AdditionalText, string, string, string)
+  fullName: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetAdditionalTextMetadata(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider, Microsoft.CodeAnalysis.AdditionalText, string, string, string)
+  nameWithType.vb: AnalyzerConfigOptionsProviderExtensions.GetAdditionalTextMetadata(AnalyzerConfigOptionsProvider, AdditionalText, String, String, String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetAdditionalTextMetadata(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider, Microsoft.CodeAnalysis.AdditionalText, String, String, String)
+  name.vb: GetAdditionalTextMetadata(AnalyzerConfigOptionsProvider, AdditionalText, String, String, String)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetAdditionalTextMetadata(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,Microsoft.CodeAnalysis.AdditionalText,System.String,System.String,System.String)
+    name: GetAdditionalTextMetadata
+    href: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.html#ANcpLua_Roslyn_Utilities_AnalyzerConfigOptionsProviderExtensions_GetAdditionalTextMetadata_Microsoft_CodeAnalysis_Diagnostics_AnalyzerConfigOptionsProvider_Microsoft_CodeAnalysis_AdditionalText_System_String_System_String_System_String_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider
+    name: AnalyzerConfigOptionsProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.diagnostics.analyzerconfigoptionsprovider
+  - name: ','
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.AdditionalText
+    name: AdditionalText
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.additionaltext
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetAdditionalTextMetadata(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,Microsoft.CodeAnalysis.AdditionalText,System.String,System.String,System.String)
+    name: GetAdditionalTextMetadata
+    href: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.html#ANcpLua_Roslyn_Utilities_AnalyzerConfigOptionsProviderExtensions_GetAdditionalTextMetadata_Microsoft_CodeAnalysis_Diagnostics_AnalyzerConfigOptionsProvider_Microsoft_CodeAnalysis_AdditionalText_System_String_System_String_System_String_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider
+    name: AnalyzerConfigOptionsProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.diagnostics.analyzerconfigoptionsprovider
+  - name: ','
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.AdditionalText
+    name: AdditionalText
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.additionaltext
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.ArgumentNullException
+  commentId: T:System.ArgumentNullException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentnullexception
+  name: ArgumentNullException
+  nameWithType: ArgumentNullException
+  fullName: System.ArgumentNullException
+- uid: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetValueOrNull*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetValueOrNull
+  href: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.html#ANcpLua_Roslyn_Utilities_AnalyzerConfigOptionsProviderExtensions_GetValueOrNull_Microsoft_CodeAnalysis_Diagnostics_AnalyzerConfigOptions_System_String_
+  name: GetValueOrNull
+  nameWithType: AnalyzerConfigOptionsProviderExtensions.GetValueOrNull
+  fullName: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetValueOrNull
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetRequiredGlobalProperty(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,System.String,System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetRequiredGlobalProperty(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,System.String,System.String)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.html#ANcpLua_Roslyn_Utilities_AnalyzerConfigOptionsProviderExtensions_GetRequiredGlobalProperty_Microsoft_CodeAnalysis_Diagnostics_AnalyzerConfigOptionsProvider_System_String_System_String_
+  name: GetRequiredGlobalProperty(AnalyzerConfigOptionsProvider, string, string)
+  nameWithType: AnalyzerConfigOptionsProviderExtensions.GetRequiredGlobalProperty(AnalyzerConfigOptionsProvider, string, string)
+  fullName: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetRequiredGlobalProperty(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider, string, string)
+  nameWithType.vb: AnalyzerConfigOptionsProviderExtensions.GetRequiredGlobalProperty(AnalyzerConfigOptionsProvider, String, String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetRequiredGlobalProperty(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider, String, String)
+  name.vb: GetRequiredGlobalProperty(AnalyzerConfigOptionsProvider, String, String)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetRequiredGlobalProperty(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,System.String,System.String)
+    name: GetRequiredGlobalProperty
+    href: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.html#ANcpLua_Roslyn_Utilities_AnalyzerConfigOptionsProviderExtensions_GetRequiredGlobalProperty_Microsoft_CodeAnalysis_Diagnostics_AnalyzerConfigOptionsProvider_System_String_System_String_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider
+    name: AnalyzerConfigOptionsProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.diagnostics.analyzerconfigoptionsprovider
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetRequiredGlobalProperty(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,System.String,System.String)
+    name: GetRequiredGlobalProperty
+    href: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.html#ANcpLua_Roslyn_Utilities_AnalyzerConfigOptionsProviderExtensions_GetRequiredGlobalProperty_Microsoft_CodeAnalysis_Diagnostics_AnalyzerConfigOptionsProvider_System_String_System_String_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider
+    name: AnalyzerConfigOptionsProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.diagnostics.analyzerconfigoptionsprovider
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.TryGetGlobalBool(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,System.String,System.Boolean@,System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.TryGetGlobalBool(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,System.String,System.Boolean@,System.String)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.html#ANcpLua_Roslyn_Utilities_AnalyzerConfigOptionsProviderExtensions_TryGetGlobalBool_Microsoft_CodeAnalysis_Diagnostics_AnalyzerConfigOptionsProvider_System_String_System_Boolean__System_String_
+  name: TryGetGlobalBool(AnalyzerConfigOptionsProvider, string, out bool, string)
+  nameWithType: AnalyzerConfigOptionsProviderExtensions.TryGetGlobalBool(AnalyzerConfigOptionsProvider, string, out bool, string)
+  fullName: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.TryGetGlobalBool(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider, string, out bool, string)
+  nameWithType.vb: AnalyzerConfigOptionsProviderExtensions.TryGetGlobalBool(AnalyzerConfigOptionsProvider, String, Boolean, String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.TryGetGlobalBool(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider, String, Boolean, String)
+  name.vb: TryGetGlobalBool(AnalyzerConfigOptionsProvider, String, Boolean, String)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.TryGetGlobalBool(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,System.String,System.Boolean@,System.String)
+    name: TryGetGlobalBool
+    href: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.html#ANcpLua_Roslyn_Utilities_AnalyzerConfigOptionsProviderExtensions_TryGetGlobalBool_Microsoft_CodeAnalysis_Diagnostics_AnalyzerConfigOptionsProvider_System_String_System_Boolean__System_String_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider
+    name: AnalyzerConfigOptionsProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.diagnostics.analyzerconfigoptionsprovider
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.TryGetGlobalBool(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,System.String,System.Boolean@,System.String)
+    name: TryGetGlobalBool
+    href: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.html#ANcpLua_Roslyn_Utilities_AnalyzerConfigOptionsProviderExtensions_TryGetGlobalBool_Microsoft_CodeAnalysis_Diagnostics_AnalyzerConfigOptionsProvider_System_String_System_Boolean__System_String_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider
+    name: AnalyzerConfigOptionsProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.diagnostics.analyzerconfigoptionsprovider
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.TryGetGlobalInt(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,System.String,System.Int32@,System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.TryGetGlobalInt(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,System.String,System.Int32@,System.String)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.html#ANcpLua_Roslyn_Utilities_AnalyzerConfigOptionsProviderExtensions_TryGetGlobalInt_Microsoft_CodeAnalysis_Diagnostics_AnalyzerConfigOptionsProvider_System_String_System_Int32__System_String_
+  name: TryGetGlobalInt(AnalyzerConfigOptionsProvider, string, out int, string)
+  nameWithType: AnalyzerConfigOptionsProviderExtensions.TryGetGlobalInt(AnalyzerConfigOptionsProvider, string, out int, string)
+  fullName: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.TryGetGlobalInt(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider, string, out int, string)
+  nameWithType.vb: AnalyzerConfigOptionsProviderExtensions.TryGetGlobalInt(AnalyzerConfigOptionsProvider, String, Integer, String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.TryGetGlobalInt(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider, String, Integer, String)
+  name.vb: TryGetGlobalInt(AnalyzerConfigOptionsProvider, String, Integer, String)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.TryGetGlobalInt(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,System.String,System.Int32@,System.String)
+    name: TryGetGlobalInt
+    href: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.html#ANcpLua_Roslyn_Utilities_AnalyzerConfigOptionsProviderExtensions_TryGetGlobalInt_Microsoft_CodeAnalysis_Diagnostics_AnalyzerConfigOptionsProvider_System_String_System_Int32__System_String_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider
+    name: AnalyzerConfigOptionsProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.diagnostics.analyzerconfigoptionsprovider
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.TryGetGlobalInt(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,System.String,System.Int32@,System.String)
+    name: TryGetGlobalInt
+    href: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.html#ANcpLua_Roslyn_Utilities_AnalyzerConfigOptionsProviderExtensions_TryGetGlobalInt_Microsoft_CodeAnalysis_Diagnostics_AnalyzerConfigOptionsProvider_System_String_System_Int32__System_String_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider
+    name: AnalyzerConfigOptionsProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.diagnostics.analyzerconfigoptionsprovider
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetGlobalProperty*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetGlobalProperty
+  href: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.html#ANcpLua_Roslyn_Utilities_AnalyzerConfigOptionsProviderExtensions_GetGlobalProperty_Microsoft_CodeAnalysis_Diagnostics_AnalyzerConfigOptionsProvider_System_String_System_String_
+  name: GetGlobalProperty
+  nameWithType: AnalyzerConfigOptionsProviderExtensions.GetGlobalProperty
+  fullName: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetGlobalProperty
+- uid: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetRequiredAdditionalTextMetadata(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,Microsoft.CodeAnalysis.AdditionalText,System.String,System.String,System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetRequiredAdditionalTextMetadata(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,Microsoft.CodeAnalysis.AdditionalText,System.String,System.String,System.String)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.html#ANcpLua_Roslyn_Utilities_AnalyzerConfigOptionsProviderExtensions_GetRequiredAdditionalTextMetadata_Microsoft_CodeAnalysis_Diagnostics_AnalyzerConfigOptionsProvider_Microsoft_CodeAnalysis_AdditionalText_System_String_System_String_System_String_
+  name: GetRequiredAdditionalTextMetadata(AnalyzerConfigOptionsProvider, AdditionalText, string, string, string)
+  nameWithType: AnalyzerConfigOptionsProviderExtensions.GetRequiredAdditionalTextMetadata(AnalyzerConfigOptionsProvider, AdditionalText, string, string, string)
+  fullName: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetRequiredAdditionalTextMetadata(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider, Microsoft.CodeAnalysis.AdditionalText, string, string, string)
+  nameWithType.vb: AnalyzerConfigOptionsProviderExtensions.GetRequiredAdditionalTextMetadata(AnalyzerConfigOptionsProvider, AdditionalText, String, String, String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetRequiredAdditionalTextMetadata(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider, Microsoft.CodeAnalysis.AdditionalText, String, String, String)
+  name.vb: GetRequiredAdditionalTextMetadata(AnalyzerConfigOptionsProvider, AdditionalText, String, String, String)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetRequiredAdditionalTextMetadata(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,Microsoft.CodeAnalysis.AdditionalText,System.String,System.String,System.String)
+    name: GetRequiredAdditionalTextMetadata
+    href: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.html#ANcpLua_Roslyn_Utilities_AnalyzerConfigOptionsProviderExtensions_GetRequiredAdditionalTextMetadata_Microsoft_CodeAnalysis_Diagnostics_AnalyzerConfigOptionsProvider_Microsoft_CodeAnalysis_AdditionalText_System_String_System_String_System_String_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider
+    name: AnalyzerConfigOptionsProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.diagnostics.analyzerconfigoptionsprovider
+  - name: ','
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.AdditionalText
+    name: AdditionalText
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.additionaltext
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetRequiredAdditionalTextMetadata(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,Microsoft.CodeAnalysis.AdditionalText,System.String,System.String,System.String)
+    name: GetRequiredAdditionalTextMetadata
+    href: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.html#ANcpLua_Roslyn_Utilities_AnalyzerConfigOptionsProviderExtensions_GetRequiredAdditionalTextMetadata_Microsoft_CodeAnalysis_Diagnostics_AnalyzerConfigOptionsProvider_Microsoft_CodeAnalysis_AdditionalText_System_String_System_String_System_String_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider
+    name: AnalyzerConfigOptionsProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.diagnostics.analyzerconfigoptionsprovider
+  - name: ','
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.AdditionalText
+    name: AdditionalText
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.additionaltext
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Microsoft.CodeAnalysis.AdditionalText
+  commentId: T:Microsoft.CodeAnalysis.AdditionalText
+  parent: Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.additionaltext
+  name: AdditionalText
+  nameWithType: AdditionalText
+  fullName: Microsoft.CodeAnalysis.AdditionalText
+- uid: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetAdditionalTextMetadata*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetAdditionalTextMetadata
+  href: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.html#ANcpLua_Roslyn_Utilities_AnalyzerConfigOptionsProviderExtensions_GetAdditionalTextMetadata_Microsoft_CodeAnalysis_Diagnostics_AnalyzerConfigOptionsProvider_Microsoft_CodeAnalysis_AdditionalText_System_String_System_String_System_String_
+  name: GetAdditionalTextMetadata
+  nameWithType: AnalyzerConfigOptionsProviderExtensions.GetAdditionalTextMetadata
+  fullName: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetAdditionalTextMetadata
+- uid: Microsoft.CodeAnalysis
+  commentId: N:Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.CodeAnalysis
+  nameWithType: Microsoft.CodeAnalysis
+  fullName: Microsoft.CodeAnalysis
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+- uid: System.InvalidOperationException
+  commentId: T:System.InvalidOperationException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.invalidoperationexception
+  name: InvalidOperationException
+  nameWithType: InvalidOperationException
+  fullName: System.InvalidOperationException
+- uid: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetRequiredGlobalProperty*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetRequiredGlobalProperty
+  href: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.html#ANcpLua_Roslyn_Utilities_AnalyzerConfigOptionsProviderExtensions_GetRequiredGlobalProperty_Microsoft_CodeAnalysis_Diagnostics_AnalyzerConfigOptionsProvider_System_String_System_String_
+  name: GetRequiredGlobalProperty
+  nameWithType: AnalyzerConfigOptionsProviderExtensions.GetRequiredGlobalProperty
+  fullName: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetRequiredGlobalProperty
+- uid: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetRequiredAdditionalTextMetadata*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetRequiredAdditionalTextMetadata
+  href: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.html#ANcpLua_Roslyn_Utilities_AnalyzerConfigOptionsProviderExtensions_GetRequiredAdditionalTextMetadata_Microsoft_CodeAnalysis_Diagnostics_AnalyzerConfigOptionsProvider_Microsoft_CodeAnalysis_AdditionalText_System_String_System_String_System_String_
+  name: GetRequiredAdditionalTextMetadata
+  nameWithType: AnalyzerConfigOptionsProviderExtensions.GetRequiredAdditionalTextMetadata
+  fullName: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetRequiredAdditionalTextMetadata
+- uid: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetGlobalBoolOrDefault(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,System.String,System.Boolean,System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetGlobalBoolOrDefault(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,System.String,System.Boolean,System.String)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.html#ANcpLua_Roslyn_Utilities_AnalyzerConfigOptionsProviderExtensions_GetGlobalBoolOrDefault_Microsoft_CodeAnalysis_Diagnostics_AnalyzerConfigOptionsProvider_System_String_System_Boolean_System_String_
+  name: GetGlobalBoolOrDefault(AnalyzerConfigOptionsProvider, string, bool, string)
+  nameWithType: AnalyzerConfigOptionsProviderExtensions.GetGlobalBoolOrDefault(AnalyzerConfigOptionsProvider, string, bool, string)
+  fullName: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetGlobalBoolOrDefault(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider, string, bool, string)
+  nameWithType.vb: AnalyzerConfigOptionsProviderExtensions.GetGlobalBoolOrDefault(AnalyzerConfigOptionsProvider, String, Boolean, String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetGlobalBoolOrDefault(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider, String, Boolean, String)
+  name.vb: GetGlobalBoolOrDefault(AnalyzerConfigOptionsProvider, String, Boolean, String)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetGlobalBoolOrDefault(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,System.String,System.Boolean,System.String)
+    name: GetGlobalBoolOrDefault
+    href: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.html#ANcpLua_Roslyn_Utilities_AnalyzerConfigOptionsProviderExtensions_GetGlobalBoolOrDefault_Microsoft_CodeAnalysis_Diagnostics_AnalyzerConfigOptionsProvider_System_String_System_Boolean_System_String_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider
+    name: AnalyzerConfigOptionsProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.diagnostics.analyzerconfigoptionsprovider
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetGlobalBoolOrDefault(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,System.String,System.Boolean,System.String)
+    name: GetGlobalBoolOrDefault
+    href: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.html#ANcpLua_Roslyn_Utilities_AnalyzerConfigOptionsProviderExtensions_GetGlobalBoolOrDefault_Microsoft_CodeAnalysis_Diagnostics_AnalyzerConfigOptionsProvider_System_String_System_Boolean_System_String_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider
+    name: AnalyzerConfigOptionsProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.diagnostics.analyzerconfigoptionsprovider
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.TryGetGlobalBool*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.TryGetGlobalBool
+  href: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.html#ANcpLua_Roslyn_Utilities_AnalyzerConfigOptionsProviderExtensions_TryGetGlobalBool_Microsoft_CodeAnalysis_Diagnostics_AnalyzerConfigOptionsProvider_System_String_System_Boolean__System_String_
+  name: TryGetGlobalBool
+  nameWithType: AnalyzerConfigOptionsProviderExtensions.TryGetGlobalBool
+  fullName: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.TryGetGlobalBool
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetGlobalBoolOrDefault*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetGlobalBoolOrDefault
+  href: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.html#ANcpLua_Roslyn_Utilities_AnalyzerConfigOptionsProviderExtensions_GetGlobalBoolOrDefault_Microsoft_CodeAnalysis_Diagnostics_AnalyzerConfigOptionsProvider_System_String_System_Boolean_System_String_
+  name: GetGlobalBoolOrDefault
+  nameWithType: AnalyzerConfigOptionsProviderExtensions.GetGlobalBoolOrDefault
+  fullName: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetGlobalBoolOrDefault
+- uid: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetGlobalIntOrDefault(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,System.String,System.Int32,System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetGlobalIntOrDefault(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,System.String,System.Int32,System.String)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.html#ANcpLua_Roslyn_Utilities_AnalyzerConfigOptionsProviderExtensions_GetGlobalIntOrDefault_Microsoft_CodeAnalysis_Diagnostics_AnalyzerConfigOptionsProvider_System_String_System_Int32_System_String_
+  name: GetGlobalIntOrDefault(AnalyzerConfigOptionsProvider, string, int, string)
+  nameWithType: AnalyzerConfigOptionsProviderExtensions.GetGlobalIntOrDefault(AnalyzerConfigOptionsProvider, string, int, string)
+  fullName: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetGlobalIntOrDefault(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider, string, int, string)
+  nameWithType.vb: AnalyzerConfigOptionsProviderExtensions.GetGlobalIntOrDefault(AnalyzerConfigOptionsProvider, String, Integer, String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetGlobalIntOrDefault(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider, String, Integer, String)
+  name.vb: GetGlobalIntOrDefault(AnalyzerConfigOptionsProvider, String, Integer, String)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetGlobalIntOrDefault(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,System.String,System.Int32,System.String)
+    name: GetGlobalIntOrDefault
+    href: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.html#ANcpLua_Roslyn_Utilities_AnalyzerConfigOptionsProviderExtensions_GetGlobalIntOrDefault_Microsoft_CodeAnalysis_Diagnostics_AnalyzerConfigOptionsProvider_System_String_System_Int32_System_String_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider
+    name: AnalyzerConfigOptionsProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.diagnostics.analyzerconfigoptionsprovider
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetGlobalIntOrDefault(Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider,System.String,System.Int32,System.String)
+    name: GetGlobalIntOrDefault
+    href: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.html#ANcpLua_Roslyn_Utilities_AnalyzerConfigOptionsProviderExtensions_GetGlobalIntOrDefault_Microsoft_CodeAnalysis_Diagnostics_AnalyzerConfigOptionsProvider_System_String_System_Int32_System_String_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.Diagnostics.AnalyzerConfigOptionsProvider
+    name: AnalyzerConfigOptionsProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.diagnostics.analyzerconfigoptionsprovider
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Globalization.CultureInfo.InvariantCulture
+  commentId: P:System.Globalization.CultureInfo.InvariantCulture
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo.invariantculture
+  name: InvariantCulture
+  nameWithType: CultureInfo.InvariantCulture
+  fullName: System.Globalization.CultureInfo.InvariantCulture
+- uid: System.Globalization.NumberStyles.Integer
+  commentId: F:System.Globalization.NumberStyles.Integer
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.globalization.numberstyles#system-globalization-numberstyles-integer
+  name: Integer
+  nameWithType: NumberStyles.Integer
+  fullName: System.Globalization.NumberStyles.Integer
+- uid: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.TryGetGlobalInt*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.TryGetGlobalInt
+  href: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.html#ANcpLua_Roslyn_Utilities_AnalyzerConfigOptionsProviderExtensions_TryGetGlobalInt_Microsoft_CodeAnalysis_Diagnostics_AnalyzerConfigOptionsProvider_System_String_System_Int32__System_String_
+  name: TryGetGlobalInt
+  nameWithType: AnalyzerConfigOptionsProviderExtensions.TryGetGlobalInt
+  fullName: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.TryGetGlobalInt
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetGlobalIntOrDefault*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetGlobalIntOrDefault
+  href: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.html#ANcpLua_Roslyn_Utilities_AnalyzerConfigOptionsProviderExtensions_GetGlobalIntOrDefault_Microsoft_CodeAnalysis_Diagnostics_AnalyzerConfigOptionsProvider_System_String_System_Int32_System_String_
+  name: GetGlobalIntOrDefault
+  nameWithType: AnalyzerConfigOptionsProviderExtensions.GetGlobalIntOrDefault
+  fullName: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.GetGlobalIntOrDefault
+- uid: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.IsDesignTimeBuild*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.IsDesignTimeBuild
+  href: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.html#ANcpLua_Roslyn_Utilities_AnalyzerConfigOptionsProviderExtensions_IsDesignTimeBuild_Microsoft_CodeAnalysis_Diagnostics_AnalyzerConfigOptionsProvider_
+  name: IsDesignTimeBuild
+  nameWithType: AnalyzerConfigOptionsProviderExtensions.IsDesignTimeBuild
+  fullName: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.IsDesignTimeBuild

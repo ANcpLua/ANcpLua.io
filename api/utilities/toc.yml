@@ -1,0 +1,227 @@
+### YamlMime:TableOfContent
+items:
+- uid: ANcpLua.Roslyn.Utilities
+  name: ANcpLua.Roslyn.Utilities
+  type: Namespace
+  items:
+  - uid: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions
+    name: AnalyzerConfigOptionsProviderExtensions
+    type: Class
+  - uid: ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions
+    name: AnalyzerOptionsExtensions
+    type: Class
+  - uid: ANcpLua.Roslyn.Utilities.CompilationExtensions
+    name: CompilationExtensions
+    type: Class
+  - uid: ANcpLua.Roslyn.Utilities.ConvertExtensions
+    name: ConvertExtensions
+    type: Class
+  - uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow
+    name: DiagnosticFlow
+    type: Class
+  - uid: ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions
+    name: DiagnosticFlowReportingExtensions
+    type: Class
+  - uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+    name: DiagnosticFlow<T>
+    type: Struct
+  - uid: ANcpLua.Roslyn.Utilities.DictionaryExtensions
+    name: DictionaryExtensions
+    type: Class
+  - uid: ANcpLua.Roslyn.Utilities.DocumentationExtensions
+    name: DocumentationExtensions
+    type: Class
+  - uid: ANcpLua.Roslyn.Utilities.EnumerableExtensions
+    name: EnumerableExtensions
+    type: Class
+  - uid: ANcpLua.Roslyn.Utilities.EqualityExtensions
+    name: EqualityExtensions
+    type: Class
+  - uid: ANcpLua.Roslyn.Utilities.EquatableArray
+    name: EquatableArray
+    type: Class
+  - uid: ANcpLua.Roslyn.Utilities.EquatableArrayExtensions
+    name: EquatableArrayExtensions
+    type: Class
+  - uid: ANcpLua.Roslyn.Utilities.EquatableArray`1
+    name: EquatableArray<T>
+    type: Struct
+  - uid: ANcpLua.Roslyn.Utilities.GeneratedCodeHelpers
+    name: GeneratedCodeHelpers
+    type: Class
+  - uid: ANcpLua.Roslyn.Utilities.HashCombiner
+    name: HashCombiner
+    type: Struct
+  - uid: ANcpLua.Roslyn.Utilities.IncrementalValuesProviderExtensions
+    name: IncrementalValuesProviderExtensions
+    type: Class
+  - uid: ANcpLua.Roslyn.Utilities.IndentScope
+    name: IndentScope
+    type: Struct
+  - uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder
+    name: IndentedStringBuilder
+    type: Class
+  - uid: ANcpLua.Roslyn.Utilities.InvocationExtensions
+    name: InvocationExtensions
+    type: Class
+  - uid: ANcpLua.Roslyn.Utilities.LanguageVersionExtensions
+    name: LanguageVersionExtensions
+    type: Class
+  - uid: ANcpLua.Roslyn.Utilities.ListExtensions
+    name: ListExtensions
+    type: Class
+  - uid: ANcpLua.Roslyn.Utilities.LocationExtensions
+    name: LocationExtensions
+    type: Class
+  - uid: ANcpLua.Roslyn.Utilities.MethodSymbolExtensions
+    name: MethodSymbolExtensions
+    type: Class
+  - uid: ANcpLua.Roslyn.Utilities.NamespaceExtensions
+    name: NamespaceExtensions
+    type: Class
+  - uid: ANcpLua.Roslyn.Utilities.OperationExtensions
+    name: OperationExtensions
+    type: Class
+  - uid: ANcpLua.Roslyn.Utilities.OverloadFinder
+    name: OverloadFinder
+    type: Class
+  - uid: ANcpLua.Roslyn.Utilities.SemanticGuard
+    name: SemanticGuard
+    type: Class
+  - uid: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions
+    name: SemanticGuardExtensions
+    type: Class
+  - uid: ANcpLua.Roslyn.Utilities.SemanticGuard`1
+    name: SemanticGuard<T>
+    type: Class
+  - uid: ANcpLua.Roslyn.Utilities.SemanticModelExtensions
+    name: SemanticModelExtensions
+    type: Class
+  - uid: ANcpLua.Roslyn.Utilities.SourceProductionContextExtensions
+    name: SourceProductionContextExtensions
+    type: Class
+  - uid: ANcpLua.Roslyn.Utilities.SpanExtensions
+    name: SpanExtensions
+    type: Class
+  - uid: ANcpLua.Roslyn.Utilities.StringExtensions
+    name: StringExtensions
+    type: Class
+  - uid: ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEntry
+    name: StringExtensions.LineSplitEntry
+    type: Struct
+  - uid: ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEnumerator
+    name: StringExtensions.LineSplitEnumerator
+    type: Struct
+  - uid: ANcpLua.Roslyn.Utilities.SymbolExtensions
+    name: SymbolExtensions
+    type: Class
+  - uid: ANcpLua.Roslyn.Utilities.SyntaxExtensions
+    name: SyntaxExtensions
+    type: Class
+  - uid: ANcpLua.Roslyn.Utilities.SyntaxValueProviderExtensions
+    name: SyntaxValueProviderExtensions
+    type: Class
+  - uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions
+    name: TypeSymbolExtensions
+    type: Class
+  - uid: ANcpLua.Roslyn.Utilities.ValueTupleExtensions
+    name: ValueTupleExtensions
+    type: Class
+- uid: ANcpLua.Roslyn.Utilities.Contexts
+  name: ANcpLua.Roslyn.Utilities.Contexts
+  type: Namespace
+  items:
+  - uid: ANcpLua.Roslyn.Utilities.Contexts.AspNetContext
+    name: AspNetContext
+    type: Class
+  - uid: ANcpLua.Roslyn.Utilities.Contexts.AwaitableContext
+    name: AwaitableContext
+    type: Class
+  - uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext
+    name: CollectionContext
+    type: Class
+  - uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext
+    name: DisposableContext
+    type: Class
+- uid: ANcpLua.Roslyn.Utilities.Matching
+  name: ANcpLua.Roslyn.Utilities.Matching
+  type: Namespace
+  items:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.FieldMatcher
+    name: FieldMatcher
+    type: Class
+  - uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+    name: InvocationMatcher
+    type: Class
+  - uid: ANcpLua.Roslyn.Utilities.Matching.Invoke
+    name: Invoke
+    type: Class
+  - uid: ANcpLua.Roslyn.Utilities.Matching.Match
+    name: Match
+    type: Class
+  - uid: ANcpLua.Roslyn.Utilities.Matching.MethodMatcher
+    name: MethodMatcher
+    type: Class
+  - uid: ANcpLua.Roslyn.Utilities.Matching.ParameterMatcher
+    name: ParameterMatcher
+    type: Class
+  - uid: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher
+    name: PropertyMatcher
+    type: Class
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2
+    name: SymbolMatcherBase<TSelf, TSymbol>
+    type: Class
+  - uid: ANcpLua.Roslyn.Utilities.Matching.TypeMatcher
+    name: TypeMatcher
+    type: Class
+- uid: ANcpLua.Roslyn.Utilities.Models
+  name: ANcpLua.Roslyn.Utilities.Models
+  type: Namespace
+  items:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ClassWithAttributesContext
+    name: ClassWithAttributesContext
+    type: Struct
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    type: Struct
+  - uid: ANcpLua.Roslyn.Utilities.Models.EquatableMessageArgs
+    name: EquatableMessageArgs
+    type: Struct
+  - uid: ANcpLua.Roslyn.Utilities.Models.FileWithName
+    name: FileWithName
+    type: Struct
+  - uid: ANcpLua.Roslyn.Utilities.Models.LocationInfo
+    name: LocationInfo
+    type: Struct
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+    name: ResultWithDiagnosticsExtensions
+    type: Class
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics`1
+    name: ResultWithDiagnostics<T>
+    type: Struct
+- uid: ANcpLua.Roslyn.Utilities.Patterns
+  name: ANcpLua.Roslyn.Utilities.Patterns
+  type: Namespace
+  items:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder
+    name: FieldPatternBuilder
+    type: Class
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder
+    name: MethodPatternBuilder
+    type: Class
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+    name: ParameterPatternBuilder
+    type: Class
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.PropertyPatternBuilder
+    name: PropertyPatternBuilder
+    type: Class
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern
+    name: SymbolPattern
+    type: Class
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern`1
+    name: SymbolPattern<T>
+    type: Class
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.TypePatternBuilder
+    name: TypePatternBuilder
+    type: Class
+memberLayout: SamePage

@@ -1,0 +1,75 @@
+### YamlMime:ManagedReference
+items:
+- uid: ANcpLua.Analyzers.Core
+  commentId: N:ANcpLua.Analyzers.Core
+  id: ANcpLua.Analyzers.Core
+  children:
+  - ANcpLua.Analyzers.Core.ALAnalyzer
+  - ANcpLua.Analyzers.Core.DeprecatedOtelAttributes
+  - ANcpLua.Analyzers.Core.DiagnosticCategories
+  - ANcpLua.Analyzers.Core.DiagnosticIds
+  langs:
+  - csharp
+  - vb
+  name: ANcpLua.Analyzers.Core
+  nameWithType: ANcpLua.Analyzers.Core
+  fullName: ANcpLua.Analyzers.Core
+  type: Namespace
+  assemblies:
+  - ANcpLua.Analyzers
+references:
+- uid: ANcpLua.Analyzers.Core.ALAnalyzer
+  commentId: T:ANcpLua.Analyzers.Core.ALAnalyzer
+  parent: ANcpLua.Analyzers.Core
+  href: ANcpLua.Analyzers.Core.ALAnalyzer.html
+  name: ALAnalyzer
+  nameWithType: ALAnalyzer
+  fullName: ANcpLua.Analyzers.Core.ALAnalyzer
+- uid: ANcpLua.Analyzers.Core.DiagnosticCategories
+  commentId: T:ANcpLua.Analyzers.Core.DiagnosticCategories
+  href: ANcpLua.Analyzers.Core.DiagnosticCategories.html
+  name: DiagnosticCategories
+  nameWithType: DiagnosticCategories
+  fullName: ANcpLua.Analyzers.Core.DiagnosticCategories
+- uid: ANcpLua.Analyzers.Core.DiagnosticIds
+  commentId: T:ANcpLua.Analyzers.Core.DiagnosticIds
+  href: ANcpLua.Analyzers.Core.DiagnosticIds.html
+  name: DiagnosticIds
+  nameWithType: DiagnosticIds
+  fullName: ANcpLua.Analyzers.Core.DiagnosticIds
+- uid: ANcpLua.Analyzers.Core.DeprecatedOtelAttributes
+  commentId: T:ANcpLua.Analyzers.Core.DeprecatedOtelAttributes
+  href: ANcpLua.Analyzers.Core.DeprecatedOtelAttributes.html
+  name: DeprecatedOtelAttributes
+  nameWithType: DeprecatedOtelAttributes
+  fullName: ANcpLua.Analyzers.Core.DeprecatedOtelAttributes
+- uid: ANcpLua.Analyzers.Core
+  commentId: N:ANcpLua.Analyzers.Core
+  href: ANcpLua.html
+  name: ANcpLua.Analyzers.Core
+  nameWithType: ANcpLua.Analyzers.Core
+  fullName: ANcpLua.Analyzers.Core
+  spec.csharp:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Analyzers
+    name: Analyzers
+    href: ANcpLua.Analyzers.html
+  - name: .
+  - uid: ANcpLua.Analyzers.Core
+    name: Core
+    href: ANcpLua.Analyzers.Core.html
+  spec.vb:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Analyzers
+    name: Analyzers
+    href: ANcpLua.Analyzers.html
+  - name: .
+  - uid: ANcpLua.Analyzers.Core
+    name: Core
+    href: ANcpLua.Analyzers.Core.html

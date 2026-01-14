@@ -1,0 +1,1302 @@
+### YamlMime:ManagedReference
+items:
+- uid: ANcpLua.Roslyn.Utilities.EqualityExtensions
+  commentId: T:ANcpLua.Roslyn.Utilities.EqualityExtensions
+  id: EqualityExtensions
+  parent: ANcpLua.Roslyn.Utilities
+  children:
+  - ANcpLua.Roslyn.Utilities.EqualityExtensions.GetSequenceHashCode``1(System.Collections.Immutable.ImmutableArray{``0})
+  - ANcpLua.Roslyn.Utilities.EqualityExtensions.SequenceEquals``1(System.Collections.Immutable.ImmutableArray{``0},System.Collections.Immutable.ImmutableArray{``0})
+  - ANcpLua.Roslyn.Utilities.EqualityExtensions.SequenceEquals``1(System.Collections.Immutable.ImmutableArray{``0},System.Collections.Immutable.ImmutableArray{``0},System.Collections.Generic.IEqualityComparer{``0})
+  - ANcpLua.Roslyn.Utilities.EqualityExtensions.ToEquatableArray``1(System.Collections.Generic.IEnumerable{``0})
+  - ANcpLua.Roslyn.Utilities.EqualityExtensions.ToEquatableArray``1(System.Collections.Immutable.ImmutableArray{``0})
+  langs:
+  - csharp
+  - vb
+  name: EqualityExtensions
+  nameWithType: EqualityExtensions
+  fullName: ANcpLua.Roslyn.Utilities.EqualityExtensions
+  type: Class
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/HashCombiner.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: EqualityExtensions
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/HashCombiner.cs
+    startLine: 244
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Provides extension methods for equality comparisons and hash code generation on collections.
+  remarks: >-
+    <p>
+
+    This class contains helper methods for working with <xref href="ANcpLua.Roslyn.Utilities.EquatableArray%601" data-throw-if-not-resolved="false"></xref> and
+
+    <xref href="System.Collections.Immutable.ImmutableArray%601" data-throw-if-not-resolved="false"></xref>, providing value-based equality semantics for collections.
+
+    </p>
+
+    <ul><li>Use <xref href="ANcpLua.Roslyn.Utilities.EqualityExtensions.ToEquatableArray%60%601(System.Collections.Generic.IEnumerable%7b%60%600%7d)" data-throw-if-not-resolved="false"></xref> to wrap sequences for value equality.</li><li>Use <xref href="ANcpLua.Roslyn.Utilities.EqualityExtensions.SequenceEquals%60%601(System.Collections.Immutable.ImmutableArray%7b%60%600%7d%2cSystem.Collections.Immutable.ImmutableArray%7b%60%600%7d)" data-throw-if-not-resolved="false"></xref> for element-wise comparison.</li><li>Use <xref href="ANcpLua.Roslyn.Utilities.EqualityExtensions.GetSequenceHashCode%60%601(System.Collections.Immutable.ImmutableArray%7b%60%600%7d)" data-throw-if-not-resolved="false"></xref> to compute a hash over all elements.</li></ul>
+  example: []
+  syntax:
+    content: public static class EqualityExtensions
+    content.vb: Public Module EqualityExtensions
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.EquatableArray`1
+    commentId: T:ANcpLua.Roslyn.Utilities.EquatableArray`1
+  - linkId: ANcpLua.Roslyn.Utilities.HashCombiner
+    commentId: T:ANcpLua.Roslyn.Utilities.HashCombiner
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: ANcpLua.Roslyn.Utilities.EqualityExtensions.ToEquatableArray``1(System.Collections.Generic.IEnumerable{``0})
+  commentId: M:ANcpLua.Roslyn.Utilities.EqualityExtensions.ToEquatableArray``1(System.Collections.Generic.IEnumerable{``0})
+  id: ToEquatableArray``1(System.Collections.Generic.IEnumerable{``0})
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.EqualityExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToEquatableArray<T>(IEnumerable<T>)
+  nameWithType: EqualityExtensions.ToEquatableArray<T>(IEnumerable<T>)
+  fullName: ANcpLua.Roslyn.Utilities.EqualityExtensions.ToEquatableArray<T>(System.Collections.Generic.IEnumerable<T>)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/HashCombiner.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: ToEquatableArray
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/HashCombiner.cs
+    startLine: 264
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Converts an enumerable sequence to an <xref href="ANcpLua.Roslyn.Utilities.EquatableArray%601" data-throw-if-not-resolved="false"></xref> for value-based equality.
+  remarks: >-
+    <p>
+
+    This method materializes the sequence into an immutable array, then wraps it for value equality.
+
+    Use this when you need to cache or compare collections in incremental source generators.
+
+    </p>
+  example: []
+  syntax:
+    content: 'public static EquatableArray<T> ToEquatableArray<T>(this IEnumerable<T> source) where T : IEquatable<T>'
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: The source sequence to convert.
+    typeParameters:
+    - id: T
+      description: The type of elements in the sequence. Must implement <xref href="System.IEquatable%601" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: ANcpLua.Roslyn.Utilities.EquatableArray{{T}}
+      description: An <xref href="ANcpLua.Roslyn.Utilities.EquatableArray%601" data-throw-if-not-resolved="false"></xref> containing the elements from <code class="paramref">source</code>.
+    content.vb: Public Shared Function ToEquatableArray(Of T As IEquatable(Of T))(source As IEnumerable(Of T)) As EquatableArray(Of T)
+  overload: ANcpLua.Roslyn.Utilities.EqualityExtensions.ToEquatableArray*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.EqualityExtensions.ToEquatableArray``1(System.Collections.Immutable.ImmutableArray{``0})
+    commentId: M:ANcpLua.Roslyn.Utilities.EqualityExtensions.ToEquatableArray``1(System.Collections.Immutable.ImmutableArray{``0})
+  - linkId: ANcpLua.Roslyn.Utilities.EquatableArray`1
+    commentId: T:ANcpLua.Roslyn.Utilities.EquatableArray`1
+  nameWithType.vb: EqualityExtensions.ToEquatableArray(Of T)(IEnumerable(Of T))
+  fullName.vb: ANcpLua.Roslyn.Utilities.EqualityExtensions.ToEquatableArray(Of T)(System.Collections.Generic.IEnumerable(Of T))
+  name.vb: ToEquatableArray(Of T)(IEnumerable(Of T))
+- uid: ANcpLua.Roslyn.Utilities.EqualityExtensions.ToEquatableArray``1(System.Collections.Immutable.ImmutableArray{``0})
+  commentId: M:ANcpLua.Roslyn.Utilities.EqualityExtensions.ToEquatableArray``1(System.Collections.Immutable.ImmutableArray{``0})
+  id: ToEquatableArray``1(System.Collections.Immutable.ImmutableArray{``0})
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.EqualityExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToEquatableArray<T>(ImmutableArray<T>)
+  nameWithType: EqualityExtensions.ToEquatableArray<T>(ImmutableArray<T>)
+  fullName: ANcpLua.Roslyn.Utilities.EqualityExtensions.ToEquatableArray<T>(System.Collections.Immutable.ImmutableArray<T>)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/HashCombiner.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: ToEquatableArray
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/HashCombiner.cs
+    startLine: 282
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Converts an immutable array to an <xref href="ANcpLua.Roslyn.Utilities.EquatableArray%601" data-throw-if-not-resolved="false"></xref> for value-based equality.
+  remarks: >-
+    <p>
+
+    This is a zero-allocation wrapper that provides value equality semantics for the underlying
+
+    immutable array. The original array is preserved and can be retrieved via
+
+    <xref href="ANcpLua.Roslyn.Utilities.EquatableArray%601.AsImmutableArray" data-throw-if-not-resolved="false"></xref>.
+
+    </p>
+  example: []
+  syntax:
+    content: 'public static EquatableArray<T> ToEquatableArray<T>(this ImmutableArray<T> source) where T : IEquatable<T>'
+    parameters:
+    - id: source
+      type: System.Collections.Immutable.ImmutableArray{{T}}
+      description: The immutable array to wrap.
+    typeParameters:
+    - id: T
+      description: The type of elements in the array. Must implement <xref href="System.IEquatable%601" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: ANcpLua.Roslyn.Utilities.EquatableArray{{T}}
+      description: An <xref href="ANcpLua.Roslyn.Utilities.EquatableArray%601" data-throw-if-not-resolved="false"></xref> wrapping <code class="paramref">source</code>.
+    content.vb: Public Shared Function ToEquatableArray(Of T As IEquatable(Of T))(source As ImmutableArray(Of T)) As EquatableArray(Of T)
+  overload: ANcpLua.Roslyn.Utilities.EqualityExtensions.ToEquatableArray*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.EqualityExtensions.ToEquatableArray``1(System.Collections.Generic.IEnumerable{``0})
+    commentId: M:ANcpLua.Roslyn.Utilities.EqualityExtensions.ToEquatableArray``1(System.Collections.Generic.IEnumerable{``0})
+  - linkId: ANcpLua.Roslyn.Utilities.EquatableArray`1
+    commentId: T:ANcpLua.Roslyn.Utilities.EquatableArray`1
+  nameWithType.vb: EqualityExtensions.ToEquatableArray(Of T)(ImmutableArray(Of T))
+  fullName.vb: ANcpLua.Roslyn.Utilities.EqualityExtensions.ToEquatableArray(Of T)(System.Collections.Immutable.ImmutableArray(Of T))
+  name.vb: ToEquatableArray(Of T)(ImmutableArray(Of T))
+- uid: ANcpLua.Roslyn.Utilities.EqualityExtensions.SequenceEquals``1(System.Collections.Immutable.ImmutableArray{``0},System.Collections.Immutable.ImmutableArray{``0})
+  commentId: M:ANcpLua.Roslyn.Utilities.EqualityExtensions.SequenceEquals``1(System.Collections.Immutable.ImmutableArray{``0},System.Collections.Immutable.ImmutableArray{``0})
+  id: SequenceEquals``1(System.Collections.Immutable.ImmutableArray{``0},System.Collections.Immutable.ImmutableArray{``0})
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.EqualityExtensions
+  langs:
+  - csharp
+  - vb
+  name: SequenceEquals<T>(ImmutableArray<T>, ImmutableArray<T>)
+  nameWithType: EqualityExtensions.SequenceEquals<T>(ImmutableArray<T>, ImmutableArray<T>)
+  fullName: ANcpLua.Roslyn.Utilities.EqualityExtensions.SequenceEquals<T>(System.Collections.Immutable.ImmutableArray<T>, System.Collections.Immutable.ImmutableArray<T>)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/HashCombiner.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: SequenceEquals
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/HashCombiner.cs
+    startLine: 302
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Compares two immutable arrays for sequence equality using the default equality comparer.
+  remarks: >-
+    <p>
+
+    Default (uninitialized) and empty arrays are treated as equivalent. This follows the
+
+    null-equals-empty pattern commonly used in Roslyn source generators.
+
+    </p>
+  example: []
+  syntax:
+    content: public static bool SequenceEquals<T>(this ImmutableArray<T> left, ImmutableArray<T> right)
+    parameters:
+    - id: left
+      type: System.Collections.Immutable.ImmutableArray{{T}}
+      description: The first array to compare.
+    - id: right
+      type: System.Collections.Immutable.ImmutableArray{{T}}
+      description: The second array to compare.
+    typeParameters:
+    - id: T
+      description: The type of elements in the arrays.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if both arrays contain the same elements in the same order; otherwise, <code>false</code>.
+    content.vb: Public Shared Function SequenceEquals(Of T)(left As ImmutableArray(Of T), right As ImmutableArray(Of T)) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.EqualityExtensions.SequenceEquals*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.EqualityExtensions.SequenceEquals``1(System.Collections.Immutable.ImmutableArray{``0},System.Collections.Immutable.ImmutableArray{``0},System.Collections.Generic.IEqualityComparer{``0})
+    commentId: M:ANcpLua.Roslyn.Utilities.EqualityExtensions.SequenceEquals``1(System.Collections.Immutable.ImmutableArray{``0},System.Collections.Immutable.ImmutableArray{``0},System.Collections.Generic.IEqualityComparer{``0})
+  - linkId: ANcpLua.Roslyn.Utilities.EqualityExtensions.GetSequenceHashCode``1(System.Collections.Immutable.ImmutableArray{``0})
+    commentId: M:ANcpLua.Roslyn.Utilities.EqualityExtensions.GetSequenceHashCode``1(System.Collections.Immutable.ImmutableArray{``0})
+  nameWithType.vb: EqualityExtensions.SequenceEquals(Of T)(ImmutableArray(Of T), ImmutableArray(Of T))
+  fullName.vb: ANcpLua.Roslyn.Utilities.EqualityExtensions.SequenceEquals(Of T)(System.Collections.Immutable.ImmutableArray(Of T), System.Collections.Immutable.ImmutableArray(Of T))
+  name.vb: SequenceEquals(Of T)(ImmutableArray(Of T), ImmutableArray(Of T))
+- uid: ANcpLua.Roslyn.Utilities.EqualityExtensions.SequenceEquals``1(System.Collections.Immutable.ImmutableArray{``0},System.Collections.Immutable.ImmutableArray{``0},System.Collections.Generic.IEqualityComparer{``0})
+  commentId: M:ANcpLua.Roslyn.Utilities.EqualityExtensions.SequenceEquals``1(System.Collections.Immutable.ImmutableArray{``0},System.Collections.Immutable.ImmutableArray{``0},System.Collections.Generic.IEqualityComparer{``0})
+  id: SequenceEquals``1(System.Collections.Immutable.ImmutableArray{``0},System.Collections.Immutable.ImmutableArray{``0},System.Collections.Generic.IEqualityComparer{``0})
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.EqualityExtensions
+  langs:
+  - csharp
+  - vb
+  name: SequenceEquals<T>(ImmutableArray<T>, ImmutableArray<T>, IEqualityComparer<T>)
+  nameWithType: EqualityExtensions.SequenceEquals<T>(ImmutableArray<T>, ImmutableArray<T>, IEqualityComparer<T>)
+  fullName: ANcpLua.Roslyn.Utilities.EqualityExtensions.SequenceEquals<T>(System.Collections.Immutable.ImmutableArray<T>, System.Collections.Immutable.ImmutableArray<T>, System.Collections.Generic.IEqualityComparer<T>)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/HashCombiner.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: SequenceEquals
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/HashCombiner.cs
+    startLine: 344
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Compares two immutable arrays for sequence equality using a custom equality comparer.
+  remarks: >-
+    <p>
+
+    Default (uninitialized) and empty arrays are treated as equivalent. This follows the
+
+    null-equals-empty pattern commonly used in Roslyn source generators.
+
+    </p>
+  example: []
+  syntax:
+    content: public static bool SequenceEquals<T>(this ImmutableArray<T> left, ImmutableArray<T> right, IEqualityComparer<T> comparer)
+    parameters:
+    - id: left
+      type: System.Collections.Immutable.ImmutableArray{{T}}
+      description: The first array to compare.
+    - id: right
+      type: System.Collections.Immutable.ImmutableArray{{T}}
+      description: The second array to compare.
+    - id: comparer
+      type: System.Collections.Generic.IEqualityComparer{{T}}
+      description: The equality comparer to use for element comparisons.
+    typeParameters:
+    - id: T
+      description: The type of elements in the arrays.
+    return:
+      type: System.Boolean
+      description: >-
+        <code>true</code> if both arrays contain equal elements (as determined by <code class="paramref">comparer</code>)
+
+        in the same order; otherwise, <code>false</code>.
+    content.vb: Public Shared Function SequenceEquals(Of T)(left As ImmutableArray(Of T), right As ImmutableArray(Of T), comparer As IEqualityComparer(Of T)) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.EqualityExtensions.SequenceEquals*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.EqualityExtensions.SequenceEquals``1(System.Collections.Immutable.ImmutableArray{``0},System.Collections.Immutable.ImmutableArray{``0})
+    commentId: M:ANcpLua.Roslyn.Utilities.EqualityExtensions.SequenceEquals``1(System.Collections.Immutable.ImmutableArray{``0},System.Collections.Immutable.ImmutableArray{``0})
+  - linkId: ANcpLua.Roslyn.Utilities.EqualityExtensions.GetSequenceHashCode``1(System.Collections.Immutable.ImmutableArray{``0})
+    commentId: M:ANcpLua.Roslyn.Utilities.EqualityExtensions.GetSequenceHashCode``1(System.Collections.Immutable.ImmutableArray{``0})
+  nameWithType.vb: EqualityExtensions.SequenceEquals(Of T)(ImmutableArray(Of T), ImmutableArray(Of T), IEqualityComparer(Of T))
+  fullName.vb: ANcpLua.Roslyn.Utilities.EqualityExtensions.SequenceEquals(Of T)(System.Collections.Immutable.ImmutableArray(Of T), System.Collections.Immutable.ImmutableArray(Of T), System.Collections.Generic.IEqualityComparer(Of T))
+  name.vb: SequenceEquals(Of T)(ImmutableArray(Of T), ImmutableArray(Of T), IEqualityComparer(Of T))
+- uid: ANcpLua.Roslyn.Utilities.EqualityExtensions.GetSequenceHashCode``1(System.Collections.Immutable.ImmutableArray{``0})
+  commentId: M:ANcpLua.Roslyn.Utilities.EqualityExtensions.GetSequenceHashCode``1(System.Collections.Immutable.ImmutableArray{``0})
+  id: GetSequenceHashCode``1(System.Collections.Immutable.ImmutableArray{``0})
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.EqualityExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetSequenceHashCode<T>(ImmutableArray<T>)
+  nameWithType: EqualityExtensions.GetSequenceHashCode<T>(ImmutableArray<T>)
+  fullName: ANcpLua.Roslyn.Utilities.EqualityExtensions.GetSequenceHashCode<T>(System.Collections.Immutable.ImmutableArray<T>)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/HashCombiner.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: GetSequenceHashCode
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/HashCombiner.cs
+    startLine: 384
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Computes a hash code for the sequence of elements in an immutable array.
+  remarks: >-
+    <p>
+
+    The hash code is order-dependent: arrays with the same elements in different orders
+
+    will produce different hash codes. Default and empty arrays both return 0, consistent
+
+    with their treatment as equivalent in <xref href="ANcpLua.Roslyn.Utilities.EqualityExtensions.SequenceEquals%60%601(System.Collections.Immutable.ImmutableArray%7b%60%600%7d%2cSystem.Collections.Immutable.ImmutableArray%7b%60%600%7d)" data-throw-if-not-resolved="false"></xref>.
+
+    </p>
+  example: []
+  syntax:
+    content: public static int GetSequenceHashCode<T>(this ImmutableArray<T> array)
+    parameters:
+    - id: array
+      type: System.Collections.Immutable.ImmutableArray{{T}}
+      description: The array to compute a hash code for.
+    typeParameters:
+    - id: T
+      description: The type of elements in the array.
+    return:
+      type: System.Int32
+      description: A hash code computed from all elements in order, or 0 if the array is default or empty.
+    content.vb: Public Shared Function GetSequenceHashCode(Of T)(array As ImmutableArray(Of T)) As Integer
+  overload: ANcpLua.Roslyn.Utilities.EqualityExtensions.GetSequenceHashCode*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.EqualityExtensions.SequenceEquals``1(System.Collections.Immutable.ImmutableArray{``0},System.Collections.Immutable.ImmutableArray{``0})
+    commentId: M:ANcpLua.Roslyn.Utilities.EqualityExtensions.SequenceEquals``1(System.Collections.Immutable.ImmutableArray{``0},System.Collections.Immutable.ImmutableArray{``0})
+  - linkId: ANcpLua.Roslyn.Utilities.HashCombiner
+    commentId: T:ANcpLua.Roslyn.Utilities.HashCombiner
+  nameWithType.vb: EqualityExtensions.GetSequenceHashCode(Of T)(ImmutableArray(Of T))
+  fullName.vb: ANcpLua.Roslyn.Utilities.EqualityExtensions.GetSequenceHashCode(Of T)(System.Collections.Immutable.ImmutableArray(Of T))
+  name.vb: GetSequenceHashCode(Of T)(ImmutableArray(Of T))
+references:
+- uid: ANcpLua.Roslyn.Utilities.EquatableArray`1
+  commentId: T:ANcpLua.Roslyn.Utilities.EquatableArray`1
+  parent: ANcpLua.Roslyn.Utilities
+  href: ANcpLua.Roslyn.Utilities.EquatableArray-1.html
+  name: EquatableArray<T>
+  nameWithType: EquatableArray<T>
+  fullName: ANcpLua.Roslyn.Utilities.EquatableArray<T>
+  nameWithType.vb: EquatableArray(Of T)
+  fullName.vb: ANcpLua.Roslyn.Utilities.EquatableArray(Of T)
+  name.vb: EquatableArray(Of T)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.EquatableArray`1
+    name: EquatableArray
+    href: ANcpLua.Roslyn.Utilities.EquatableArray-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.EquatableArray`1
+    name: EquatableArray
+    href: ANcpLua.Roslyn.Utilities.EquatableArray-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.HashCombiner
+  commentId: T:ANcpLua.Roslyn.Utilities.HashCombiner
+  parent: ANcpLua.Roslyn.Utilities
+  href: ANcpLua.Roslyn.Utilities.HashCombiner.html
+  name: HashCombiner
+  nameWithType: HashCombiner
+  fullName: ANcpLua.Roslyn.Utilities.HashCombiner
+- uid: System.Collections.Immutable.ImmutableArray`1
+  commentId: T:System.Collections.Immutable.ImmutableArray`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  name: ImmutableArray<T>
+  nameWithType: ImmutableArray<T>
+  fullName: System.Collections.Immutable.ImmutableArray<T>
+  nameWithType.vb: ImmutableArray(Of T)
+  fullName.vb: System.Collections.Immutable.ImmutableArray(Of T)
+  name.vb: ImmutableArray(Of T)
+  spec.csharp:
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.EqualityExtensions.ToEquatableArray``1(System.Collections.Generic.IEnumerable{``0})
+  commentId: M:ANcpLua.Roslyn.Utilities.EqualityExtensions.ToEquatableArray``1(System.Collections.Generic.IEnumerable{``0})
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.EqualityExtensions.html#ANcpLua_Roslyn_Utilities_EqualityExtensions_ToEquatableArray__1_System_Collections_Generic_IEnumerable___0__
+  name: ToEquatableArray<T>(IEnumerable<T>)
+  nameWithType: EqualityExtensions.ToEquatableArray<T>(IEnumerable<T>)
+  fullName: ANcpLua.Roslyn.Utilities.EqualityExtensions.ToEquatableArray<T>(System.Collections.Generic.IEnumerable<T>)
+  nameWithType.vb: EqualityExtensions.ToEquatableArray(Of T)(IEnumerable(Of T))
+  fullName.vb: ANcpLua.Roslyn.Utilities.EqualityExtensions.ToEquatableArray(Of T)(System.Collections.Generic.IEnumerable(Of T))
+  name.vb: ToEquatableArray(Of T)(IEnumerable(Of T))
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.EqualityExtensions.ToEquatableArray``1(System.Collections.Generic.IEnumerable{``0})
+    name: ToEquatableArray
+    href: ANcpLua.Roslyn.Utilities.EqualityExtensions.html#ANcpLua_Roslyn_Utilities_EqualityExtensions_ToEquatableArray__1_System_Collections_Generic_IEnumerable___0__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.EqualityExtensions.ToEquatableArray``1(System.Collections.Generic.IEnumerable{``0})
+    name: ToEquatableArray
+    href: ANcpLua.Roslyn.Utilities.EqualityExtensions.html#ANcpLua_Roslyn_Utilities_EqualityExtensions_ToEquatableArray__1_System_Collections_Generic_IEnumerable___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.EqualityExtensions.SequenceEquals``1(System.Collections.Immutable.ImmutableArray{``0},System.Collections.Immutable.ImmutableArray{``0})
+  commentId: M:ANcpLua.Roslyn.Utilities.EqualityExtensions.SequenceEquals``1(System.Collections.Immutable.ImmutableArray{``0},System.Collections.Immutable.ImmutableArray{``0})
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.EqualityExtensions.html#ANcpLua_Roslyn_Utilities_EqualityExtensions_SequenceEquals__1_System_Collections_Immutable_ImmutableArray___0__System_Collections_Immutable_ImmutableArray___0__
+  name: SequenceEquals<T>(ImmutableArray<T>, ImmutableArray<T>)
+  nameWithType: EqualityExtensions.SequenceEquals<T>(ImmutableArray<T>, ImmutableArray<T>)
+  fullName: ANcpLua.Roslyn.Utilities.EqualityExtensions.SequenceEquals<T>(System.Collections.Immutable.ImmutableArray<T>, System.Collections.Immutable.ImmutableArray<T>)
+  nameWithType.vb: EqualityExtensions.SequenceEquals(Of T)(ImmutableArray(Of T), ImmutableArray(Of T))
+  fullName.vb: ANcpLua.Roslyn.Utilities.EqualityExtensions.SequenceEquals(Of T)(System.Collections.Immutable.ImmutableArray(Of T), System.Collections.Immutable.ImmutableArray(Of T))
+  name.vb: SequenceEquals(Of T)(ImmutableArray(Of T), ImmutableArray(Of T))
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.EqualityExtensions.SequenceEquals``1(System.Collections.Immutable.ImmutableArray{``0},System.Collections.Immutable.ImmutableArray{``0})
+    name: SequenceEquals
+    href: ANcpLua.Roslyn.Utilities.EqualityExtensions.html#ANcpLua_Roslyn_Utilities_EqualityExtensions_SequenceEquals__1_System_Collections_Immutable_ImmutableArray___0__System_Collections_Immutable_ImmutableArray___0__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.EqualityExtensions.SequenceEquals``1(System.Collections.Immutable.ImmutableArray{``0},System.Collections.Immutable.ImmutableArray{``0})
+    name: SequenceEquals
+    href: ANcpLua.Roslyn.Utilities.EqualityExtensions.html#ANcpLua_Roslyn_Utilities_EqualityExtensions_SequenceEquals__1_System_Collections_Immutable_ImmutableArray___0__System_Collections_Immutable_ImmutableArray___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.EqualityExtensions.GetSequenceHashCode``1(System.Collections.Immutable.ImmutableArray{``0})
+  commentId: M:ANcpLua.Roslyn.Utilities.EqualityExtensions.GetSequenceHashCode``1(System.Collections.Immutable.ImmutableArray{``0})
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.EqualityExtensions.html#ANcpLua_Roslyn_Utilities_EqualityExtensions_GetSequenceHashCode__1_System_Collections_Immutable_ImmutableArray___0__
+  name: GetSequenceHashCode<T>(ImmutableArray<T>)
+  nameWithType: EqualityExtensions.GetSequenceHashCode<T>(ImmutableArray<T>)
+  fullName: ANcpLua.Roslyn.Utilities.EqualityExtensions.GetSequenceHashCode<T>(System.Collections.Immutable.ImmutableArray<T>)
+  nameWithType.vb: EqualityExtensions.GetSequenceHashCode(Of T)(ImmutableArray(Of T))
+  fullName.vb: ANcpLua.Roslyn.Utilities.EqualityExtensions.GetSequenceHashCode(Of T)(System.Collections.Immutable.ImmutableArray(Of T))
+  name.vb: GetSequenceHashCode(Of T)(ImmutableArray(Of T))
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.EqualityExtensions.GetSequenceHashCode``1(System.Collections.Immutable.ImmutableArray{``0})
+    name: GetSequenceHashCode
+    href: ANcpLua.Roslyn.Utilities.EqualityExtensions.html#ANcpLua_Roslyn_Utilities_EqualityExtensions_GetSequenceHashCode__1_System_Collections_Immutable_ImmutableArray___0__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.EqualityExtensions.GetSequenceHashCode``1(System.Collections.Immutable.ImmutableArray{``0})
+    name: GetSequenceHashCode
+    href: ANcpLua.Roslyn.Utilities.EqualityExtensions.html#ANcpLua_Roslyn_Utilities_EqualityExtensions_GetSequenceHashCode__1_System_Collections_Immutable_ImmutableArray___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities
+  commentId: N:ANcpLua.Roslyn.Utilities
+  href: ANcpLua.html
+  name: ANcpLua.Roslyn.Utilities
+  nameWithType: ANcpLua.Roslyn.Utilities
+  fullName: ANcpLua.Roslyn.Utilities
+  spec.csharp:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  spec.vb:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ANcpLua.Roslyn.Utilities.EqualityExtensions.ToEquatableArray``1(System.Collections.Immutable.ImmutableArray{``0})
+  commentId: M:ANcpLua.Roslyn.Utilities.EqualityExtensions.ToEquatableArray``1(System.Collections.Immutable.ImmutableArray{``0})
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.EqualityExtensions.html#ANcpLua_Roslyn_Utilities_EqualityExtensions_ToEquatableArray__1_System_Collections_Immutable_ImmutableArray___0__
+  name: ToEquatableArray<T>(ImmutableArray<T>)
+  nameWithType: EqualityExtensions.ToEquatableArray<T>(ImmutableArray<T>)
+  fullName: ANcpLua.Roslyn.Utilities.EqualityExtensions.ToEquatableArray<T>(System.Collections.Immutable.ImmutableArray<T>)
+  nameWithType.vb: EqualityExtensions.ToEquatableArray(Of T)(ImmutableArray(Of T))
+  fullName.vb: ANcpLua.Roslyn.Utilities.EqualityExtensions.ToEquatableArray(Of T)(System.Collections.Immutable.ImmutableArray(Of T))
+  name.vb: ToEquatableArray(Of T)(ImmutableArray(Of T))
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.EqualityExtensions.ToEquatableArray``1(System.Collections.Immutable.ImmutableArray{``0})
+    name: ToEquatableArray
+    href: ANcpLua.Roslyn.Utilities.EqualityExtensions.html#ANcpLua_Roslyn_Utilities_EqualityExtensions_ToEquatableArray__1_System_Collections_Immutable_ImmutableArray___0__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.EqualityExtensions.ToEquatableArray``1(System.Collections.Immutable.ImmutableArray{``0})
+    name: ToEquatableArray
+    href: ANcpLua.Roslyn.Utilities.EqualityExtensions.html#ANcpLua_Roslyn_Utilities_EqualityExtensions_ToEquatableArray__1_System_Collections_Immutable_ImmutableArray___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.EqualityExtensions.ToEquatableArray*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.EqualityExtensions.ToEquatableArray
+  href: ANcpLua.Roslyn.Utilities.EqualityExtensions.html#ANcpLua_Roslyn_Utilities_EqualityExtensions_ToEquatableArray__1_System_Collections_Generic_IEnumerable___0__
+  name: ToEquatableArray
+  nameWithType: EqualityExtensions.ToEquatableArray
+  fullName: ANcpLua.Roslyn.Utilities.EqualityExtensions.ToEquatableArray
+- uid: System.Collections.Generic.IEnumerable{{T}}
+  commentId: T:System.Collections.Generic.IEnumerable{``0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.EquatableArray{{T}}
+  commentId: T:ANcpLua.Roslyn.Utilities.EquatableArray{``0}
+  parent: ANcpLua.Roslyn.Utilities
+  definition: ANcpLua.Roslyn.Utilities.EquatableArray`1
+  href: ANcpLua.Roslyn.Utilities.EquatableArray-1.html
+  name: EquatableArray<T>
+  nameWithType: EquatableArray<T>
+  fullName: ANcpLua.Roslyn.Utilities.EquatableArray<T>
+  nameWithType.vb: EquatableArray(Of T)
+  fullName.vb: ANcpLua.Roslyn.Utilities.EquatableArray(Of T)
+  name.vb: EquatableArray(Of T)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.EquatableArray`1
+    name: EquatableArray
+    href: ANcpLua.Roslyn.Utilities.EquatableArray-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.EquatableArray`1
+    name: EquatableArray
+    href: ANcpLua.Roslyn.Utilities.EquatableArray-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: ANcpLua.Roslyn.Utilities.EquatableArray`1.AsImmutableArray
+  commentId: M:ANcpLua.Roslyn.Utilities.EquatableArray`1.AsImmutableArray
+  href: ANcpLua.Roslyn.Utilities.EquatableArray-1.html#ANcpLua_Roslyn_Utilities_EquatableArray_1_AsImmutableArray
+  name: AsImmutableArray()
+  nameWithType: EquatableArray<T>.AsImmutableArray()
+  fullName: ANcpLua.Roslyn.Utilities.EquatableArray<T>.AsImmutableArray()
+  nameWithType.vb: EquatableArray(Of T).AsImmutableArray()
+  fullName.vb: ANcpLua.Roslyn.Utilities.EquatableArray(Of T).AsImmutableArray()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.EquatableArray`1.AsImmutableArray
+    name: AsImmutableArray
+    href: ANcpLua.Roslyn.Utilities.EquatableArray-1.html#ANcpLua_Roslyn_Utilities_EquatableArray_1_AsImmutableArray
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.EquatableArray`1.AsImmutableArray
+    name: AsImmutableArray
+    href: ANcpLua.Roslyn.Utilities.EquatableArray-1.html#ANcpLua_Roslyn_Utilities_EquatableArray_1_AsImmutableArray
+  - name: (
+  - name: )
+- uid: System.Collections.Immutable.ImmutableArray{{T}}
+  commentId: T:System.Collections.Immutable.ImmutableArray{``0}
+  parent: System.Collections.Immutable
+  definition: System.Collections.Immutable.ImmutableArray`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  name: ImmutableArray<T>
+  nameWithType: ImmutableArray<T>
+  fullName: System.Collections.Immutable.ImmutableArray<T>
+  nameWithType.vb: ImmutableArray(Of T)
+  fullName.vb: System.Collections.Immutable.ImmutableArray(Of T)
+  name.vb: ImmutableArray(Of T)
+  spec.csharp:
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Immutable
+  commentId: N:System.Collections.Immutable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Immutable
+  nameWithType: System.Collections.Immutable
+  fullName: System.Collections.Immutable
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Immutable
+    name: Immutable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Immutable
+    name: Immutable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable
+- uid: ANcpLua.Roslyn.Utilities.EqualityExtensions.SequenceEquals``1(System.Collections.Immutable.ImmutableArray{``0},System.Collections.Immutable.ImmutableArray{``0},System.Collections.Generic.IEqualityComparer{``0})
+  commentId: M:ANcpLua.Roslyn.Utilities.EqualityExtensions.SequenceEquals``1(System.Collections.Immutable.ImmutableArray{``0},System.Collections.Immutable.ImmutableArray{``0},System.Collections.Generic.IEqualityComparer{``0})
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.EqualityExtensions.html#ANcpLua_Roslyn_Utilities_EqualityExtensions_SequenceEquals__1_System_Collections_Immutable_ImmutableArray___0__System_Collections_Immutable_ImmutableArray___0__System_Collections_Generic_IEqualityComparer___0__
+  name: SequenceEquals<T>(ImmutableArray<T>, ImmutableArray<T>, IEqualityComparer<T>)
+  nameWithType: EqualityExtensions.SequenceEquals<T>(ImmutableArray<T>, ImmutableArray<T>, IEqualityComparer<T>)
+  fullName: ANcpLua.Roslyn.Utilities.EqualityExtensions.SequenceEquals<T>(System.Collections.Immutable.ImmutableArray<T>, System.Collections.Immutable.ImmutableArray<T>, System.Collections.Generic.IEqualityComparer<T>)
+  nameWithType.vb: EqualityExtensions.SequenceEquals(Of T)(ImmutableArray(Of T), ImmutableArray(Of T), IEqualityComparer(Of T))
+  fullName.vb: ANcpLua.Roslyn.Utilities.EqualityExtensions.SequenceEquals(Of T)(System.Collections.Immutable.ImmutableArray(Of T), System.Collections.Immutable.ImmutableArray(Of T), System.Collections.Generic.IEqualityComparer(Of T))
+  name.vb: SequenceEquals(Of T)(ImmutableArray(Of T), ImmutableArray(Of T), IEqualityComparer(Of T))
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.EqualityExtensions.SequenceEquals``1(System.Collections.Immutable.ImmutableArray{``0},System.Collections.Immutable.ImmutableArray{``0},System.Collections.Generic.IEqualityComparer{``0})
+    name: SequenceEquals
+    href: ANcpLua.Roslyn.Utilities.EqualityExtensions.html#ANcpLua_Roslyn_Utilities_EqualityExtensions_SequenceEquals__1_System_Collections_Immutable_ImmutableArray___0__System_Collections_Immutable_ImmutableArray___0__System_Collections_Generic_IEqualityComparer___0__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEqualityComparer`1
+    name: IEqualityComparer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iequalitycomparer-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.EqualityExtensions.SequenceEquals``1(System.Collections.Immutable.ImmutableArray{``0},System.Collections.Immutable.ImmutableArray{``0},System.Collections.Generic.IEqualityComparer{``0})
+    name: SequenceEquals
+    href: ANcpLua.Roslyn.Utilities.EqualityExtensions.html#ANcpLua_Roslyn_Utilities_EqualityExtensions_SequenceEquals__1_System_Collections_Immutable_ImmutableArray___0__System_Collections_Immutable_ImmutableArray___0__System_Collections_Generic_IEqualityComparer___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEqualityComparer`1
+    name: IEqualityComparer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iequalitycomparer-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.EqualityExtensions.SequenceEquals*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.EqualityExtensions.SequenceEquals
+  href: ANcpLua.Roslyn.Utilities.EqualityExtensions.html#ANcpLua_Roslyn_Utilities_EqualityExtensions_SequenceEquals__1_System_Collections_Immutable_ImmutableArray___0__System_Collections_Immutable_ImmutableArray___0__
+  name: SequenceEquals
+  nameWithType: EqualityExtensions.SequenceEquals
+  fullName: ANcpLua.Roslyn.Utilities.EqualityExtensions.SequenceEquals
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Collections.Generic.IEqualityComparer{{T}}
+  commentId: T:System.Collections.Generic.IEqualityComparer{``0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEqualityComparer`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iequalitycomparer-1
+  name: IEqualityComparer<T>
+  nameWithType: IEqualityComparer<T>
+  fullName: System.Collections.Generic.IEqualityComparer<T>
+  nameWithType.vb: IEqualityComparer(Of T)
+  fullName.vb: System.Collections.Generic.IEqualityComparer(Of T)
+  name.vb: IEqualityComparer(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEqualityComparer`1
+    name: IEqualityComparer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iequalitycomparer-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEqualityComparer`1
+    name: IEqualityComparer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iequalitycomparer-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic.IEqualityComparer`1
+  commentId: T:System.Collections.Generic.IEqualityComparer`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iequalitycomparer-1
+  name: IEqualityComparer<T>
+  nameWithType: IEqualityComparer<T>
+  fullName: System.Collections.Generic.IEqualityComparer<T>
+  nameWithType.vb: IEqualityComparer(Of T)
+  fullName.vb: System.Collections.Generic.IEqualityComparer(Of T)
+  name.vb: IEqualityComparer(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEqualityComparer`1
+    name: IEqualityComparer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iequalitycomparer-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEqualityComparer`1
+    name: IEqualityComparer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iequalitycomparer-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.EqualityExtensions.GetSequenceHashCode*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.EqualityExtensions.GetSequenceHashCode
+  href: ANcpLua.Roslyn.Utilities.EqualityExtensions.html#ANcpLua_Roslyn_Utilities_EqualityExtensions_GetSequenceHashCode__1_System_Collections_Immutable_ImmutableArray___0__
+  name: GetSequenceHashCode
+  nameWithType: EqualityExtensions.GetSequenceHashCode
+  fullName: ANcpLua.Roslyn.Utilities.EqualityExtensions.GetSequenceHashCode
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer

@@ -1,0 +1,804 @@
+### YamlMime:ManagedReference
+items:
+- uid: ANcpLua.Roslyn.Utilities.ConvertExtensions
+  commentId: T:ANcpLua.Roslyn.Utilities.ConvertExtensions
+  id: ConvertExtensions
+  parent: ANcpLua.Roslyn.Utilities
+  children:
+  - ANcpLua.Roslyn.Utilities.ConvertExtensions.ToBoolean(Microsoft.CodeAnalysis.TypedConstant,System.Boolean)
+  - ANcpLua.Roslyn.Utilities.ConvertExtensions.ToEnum``1(Microsoft.CodeAnalysis.TypedConstant)
+  - ANcpLua.Roslyn.Utilities.ConvertExtensions.ToEnum``1(Microsoft.CodeAnalysis.TypedConstant,``0)
+  - ANcpLua.Roslyn.Utilities.ConvertExtensions.ToNullableBoolean(Microsoft.CodeAnalysis.TypedConstant)
+  langs:
+  - csharp
+  - vb
+  name: ConvertExtensions
+  nameWithType: ConvertExtensions
+  fullName: ANcpLua.Roslyn.Utilities.ConvertExtensions
+  type: Class
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/ConvertExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: ConvertExtensions
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/ConvertExtensions.cs
+    startLine: 21
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Extension methods for converting <xref href="Microsoft.CodeAnalysis.TypedConstant" data-throw-if-not-resolved="false"></xref> values to strongly-typed representations.
+  remarks: >-
+    <p>
+        These extension methods simplify the extraction of typed values from Roslyn's
+        <xref href="Microsoft.CodeAnalysis.TypedConstant" data-throw-if-not-resolved="false"></xref> structure, which is commonly encountered when processing
+        attribute arguments in analyzers and source generators.
+    </p>
+
+    <ul><li>Provides safe conversions with default value fallbacks.</li><li>Supports nullable return types for optional attribute arguments.</li><li>Handles boolean, enum, and other primitive type conversions.</li></ul>
+  example: []
+  syntax:
+    content: public static class ConvertExtensions
+    content.vb: Public Module ConvertExtensions
+  seealso:
+  - linkId: Microsoft.CodeAnalysis.TypedConstant
+    commentId: T:Microsoft.CodeAnalysis.TypedConstant
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: ANcpLua.Roslyn.Utilities.ConvertExtensions.ToBoolean(Microsoft.CodeAnalysis.TypedConstant,System.Boolean)
+  commentId: M:ANcpLua.Roslyn.Utilities.ConvertExtensions.ToBoolean(Microsoft.CodeAnalysis.TypedConstant,System.Boolean)
+  id: ToBoolean(Microsoft.CodeAnalysis.TypedConstant,System.Boolean)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.ConvertExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToBoolean(TypedConstant, bool)
+  nameWithType: ConvertExtensions.ToBoolean(TypedConstant, bool)
+  fullName: ANcpLua.Roslyn.Utilities.ConvertExtensions.ToBoolean(Microsoft.CodeAnalysis.TypedConstant, bool)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/ConvertExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: ToBoolean
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/ConvertExtensions.cs
+    startLine: 40
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Converts the <xref href="Microsoft.CodeAnalysis.TypedConstant" data-throw-if-not-resolved="false"></xref> to a <xref href="System.Boolean" data-throw-if-not-resolved="false"></xref> value.
+  example: []
+  syntax:
+    content: public static bool ToBoolean(this TypedConstant typedConstant, bool defaultValue = false)
+    parameters:
+    - id: typedConstant
+      type: Microsoft.CodeAnalysis.TypedConstant
+      description: The typed constant to convert.
+    - id: defaultValue
+      type: System.Boolean
+      description: >-
+        The default value to return if the typed constant does not contain a boolean value.
+
+        Defaults to <code>false</code>.
+    return:
+      type: System.Boolean
+      description: >-
+        The boolean value contained in <code class="paramref">typedConstant</code> if it is a boolean;
+
+        otherwise, <code class="paramref">defaultValue</code>.
+    content.vb: Public Shared Function ToBoolean(typedConstant As TypedConstant, defaultValue As Boolean = False) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.ConvertExtensions.ToBoolean*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.ConvertExtensions.ToNullableBoolean(Microsoft.CodeAnalysis.TypedConstant)
+    commentId: M:ANcpLua.Roslyn.Utilities.ConvertExtensions.ToNullableBoolean(Microsoft.CodeAnalysis.TypedConstant)
+  nameWithType.vb: ConvertExtensions.ToBoolean(TypedConstant, Boolean)
+  fullName.vb: ANcpLua.Roslyn.Utilities.ConvertExtensions.ToBoolean(Microsoft.CodeAnalysis.TypedConstant, Boolean)
+  name.vb: ToBoolean(TypedConstant, Boolean)
+- uid: ANcpLua.Roslyn.Utilities.ConvertExtensions.ToNullableBoolean(Microsoft.CodeAnalysis.TypedConstant)
+  commentId: M:ANcpLua.Roslyn.Utilities.ConvertExtensions.ToNullableBoolean(Microsoft.CodeAnalysis.TypedConstant)
+  id: ToNullableBoolean(Microsoft.CodeAnalysis.TypedConstant)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.ConvertExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToNullableBoolean(TypedConstant)
+  nameWithType: ConvertExtensions.ToNullableBoolean(TypedConstant)
+  fullName: ANcpLua.Roslyn.Utilities.ConvertExtensions.ToNullableBoolean(Microsoft.CodeAnalysis.TypedConstant)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/ConvertExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: ToNullableBoolean
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/ConvertExtensions.cs
+    startLine: 56
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Converts the <xref href="Microsoft.CodeAnalysis.TypedConstant" data-throw-if-not-resolved="false"></xref> to a nullable <xref href="System.Boolean" data-throw-if-not-resolved="false"></xref> value.
+  example: []
+  syntax:
+    content: public static bool? ToNullableBoolean(this TypedConstant typedConstant)
+    parameters:
+    - id: typedConstant
+      type: Microsoft.CodeAnalysis.TypedConstant
+      description: The typed constant to convert.
+    return:
+      type: System.Nullable{System.Boolean}
+      description: >-
+        The boolean value contained in <code class="paramref">typedConstant</code> if it is a boolean;
+
+        otherwise, <code>null</code>.
+    content.vb: Public Shared Function ToNullableBoolean(typedConstant As TypedConstant) As Boolean?
+  overload: ANcpLua.Roslyn.Utilities.ConvertExtensions.ToNullableBoolean*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.ConvertExtensions.ToBoolean(Microsoft.CodeAnalysis.TypedConstant,System.Boolean)
+    commentId: M:ANcpLua.Roslyn.Utilities.ConvertExtensions.ToBoolean(Microsoft.CodeAnalysis.TypedConstant,System.Boolean)
+- uid: ANcpLua.Roslyn.Utilities.ConvertExtensions.ToEnum``1(Microsoft.CodeAnalysis.TypedConstant,``0)
+  commentId: M:ANcpLua.Roslyn.Utilities.ConvertExtensions.ToEnum``1(Microsoft.CodeAnalysis.TypedConstant,``0)
+  id: ToEnum``1(Microsoft.CodeAnalysis.TypedConstant,``0)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.ConvertExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToEnum<T>(TypedConstant, T)
+  nameWithType: ConvertExtensions.ToEnum<T>(TypedConstant, T)
+  fullName: ANcpLua.Roslyn.Utilities.ConvertExtensions.ToEnum<T>(Microsoft.CodeAnalysis.TypedConstant, T)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/ConvertExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: ToEnum
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/ConvertExtensions.cs
+    startLine: 76
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Converts the <xref href="Microsoft.CodeAnalysis.TypedConstant" data-throw-if-not-resolved="false"></xref> to an enum value of type <code class="typeparamref">T</code>.
+  example: []
+  syntax:
+    content: 'public static T ToEnum<T>(this TypedConstant typedConstant, T defaultValue) where T : Enum'
+    parameters:
+    - id: typedConstant
+      type: Microsoft.CodeAnalysis.TypedConstant
+      description: The typed constant to convert.
+    - id: defaultValue
+      type: '{T}'
+      description: The default value to return if the typed constant value is <code>null</code>.
+    typeParameters:
+    - id: T
+      description: The enum type to convert to. Must be a reference-compatible enum type.
+    return:
+      type: '{T}'
+      description: >-
+        The enum value contained in <code class="paramref">typedConstant</code> cast to <code class="typeparamref">T</code>,
+
+        or <code class="paramref">defaultValue</code> if the value is <code>null</code>.
+    content.vb: Public Shared Function ToEnum(Of T As [Enum])(typedConstant As TypedConstant, defaultValue As T) As T
+  overload: ANcpLua.Roslyn.Utilities.ConvertExtensions.ToEnum*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.ConvertExtensions.ToEnum``1(Microsoft.CodeAnalysis.TypedConstant)
+    commentId: M:ANcpLua.Roslyn.Utilities.ConvertExtensions.ToEnum``1(Microsoft.CodeAnalysis.TypedConstant)
+  nameWithType.vb: ConvertExtensions.ToEnum(Of T)(TypedConstant, T)
+  fullName.vb: ANcpLua.Roslyn.Utilities.ConvertExtensions.ToEnum(Of T)(Microsoft.CodeAnalysis.TypedConstant, T)
+  name.vb: ToEnum(Of T)(TypedConstant, T)
+- uid: ANcpLua.Roslyn.Utilities.ConvertExtensions.ToEnum``1(Microsoft.CodeAnalysis.TypedConstant)
+  commentId: M:ANcpLua.Roslyn.Utilities.ConvertExtensions.ToEnum``1(Microsoft.CodeAnalysis.TypedConstant)
+  id: ToEnum``1(Microsoft.CodeAnalysis.TypedConstant)
+  isExtensionMethod: true
+  parent: ANcpLua.Roslyn.Utilities.ConvertExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToEnum<T>(TypedConstant)
+  nameWithType: ConvertExtensions.ToEnum<T>(TypedConstant)
+  fullName: ANcpLua.Roslyn.Utilities.ConvertExtensions.ToEnum<T>(Microsoft.CodeAnalysis.TypedConstant)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/ConvertExtensions.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: ToEnum
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/ConvertExtensions.cs
+    startLine: 89
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Converts the <xref href="Microsoft.CodeAnalysis.TypedConstant" data-throw-if-not-resolved="false"></xref> to a nullable enum value of type <code class="typeparamref">T</code>.
+  example: []
+  syntax:
+    content: 'public static T? ToEnum<T>(this TypedConstant typedConstant) where T : struct, Enum'
+    parameters:
+    - id: typedConstant
+      type: Microsoft.CodeAnalysis.TypedConstant
+      description: The typed constant to convert.
+    typeParameters:
+    - id: T
+      description: The enum type to convert to. Must be a value type enum.
+    return:
+      type: System.Nullable{{T}}
+      description: >-
+        The enum value contained in <code class="paramref">typedConstant</code> cast to <code class="typeparamref">T</code>,
+
+        or <code>null</code> if the typed constant value is <code>null</code>.
+    content.vb: Public Shared Function ToEnum(Of T As {Structure, [Enum]})(typedConstant As TypedConstant) As T?
+  overload: ANcpLua.Roslyn.Utilities.ConvertExtensions.ToEnum*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.ConvertExtensions.ToEnum``1(Microsoft.CodeAnalysis.TypedConstant,``0)
+    commentId: M:ANcpLua.Roslyn.Utilities.ConvertExtensions.ToEnum``1(Microsoft.CodeAnalysis.TypedConstant,``0)
+  nameWithType.vb: ConvertExtensions.ToEnum(Of T)(TypedConstant)
+  fullName.vb: ANcpLua.Roslyn.Utilities.ConvertExtensions.ToEnum(Of T)(Microsoft.CodeAnalysis.TypedConstant)
+  name.vb: ToEnum(Of T)(TypedConstant)
+references:
+- uid: Microsoft.CodeAnalysis.TypedConstant
+  commentId: T:Microsoft.CodeAnalysis.TypedConstant
+  parent: Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.typedconstant
+  name: TypedConstant
+  nameWithType: TypedConstant
+  fullName: Microsoft.CodeAnalysis.TypedConstant
+- uid: ANcpLua.Roslyn.Utilities
+  commentId: N:ANcpLua.Roslyn.Utilities
+  href: ANcpLua.html
+  name: ANcpLua.Roslyn.Utilities
+  nameWithType: ANcpLua.Roslyn.Utilities
+  fullName: ANcpLua.Roslyn.Utilities
+  spec.csharp:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  spec.vb:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: Microsoft.CodeAnalysis
+  commentId: N:Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.CodeAnalysis
+  nameWithType: Microsoft.CodeAnalysis
+  fullName: Microsoft.CodeAnalysis
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ANcpLua.Roslyn.Utilities.ConvertExtensions.ToNullableBoolean(Microsoft.CodeAnalysis.TypedConstant)
+  commentId: M:ANcpLua.Roslyn.Utilities.ConvertExtensions.ToNullableBoolean(Microsoft.CodeAnalysis.TypedConstant)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.ConvertExtensions.html#ANcpLua_Roslyn_Utilities_ConvertExtensions_ToNullableBoolean_Microsoft_CodeAnalysis_TypedConstant_
+  name: ToNullableBoolean(TypedConstant)
+  nameWithType: ConvertExtensions.ToNullableBoolean(TypedConstant)
+  fullName: ANcpLua.Roslyn.Utilities.ConvertExtensions.ToNullableBoolean(Microsoft.CodeAnalysis.TypedConstant)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.ConvertExtensions.ToNullableBoolean(Microsoft.CodeAnalysis.TypedConstant)
+    name: ToNullableBoolean
+    href: ANcpLua.Roslyn.Utilities.ConvertExtensions.html#ANcpLua_Roslyn_Utilities_ConvertExtensions_ToNullableBoolean_Microsoft_CodeAnalysis_TypedConstant_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.TypedConstant
+    name: TypedConstant
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.typedconstant
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.ConvertExtensions.ToNullableBoolean(Microsoft.CodeAnalysis.TypedConstant)
+    name: ToNullableBoolean
+    href: ANcpLua.Roslyn.Utilities.ConvertExtensions.html#ANcpLua_Roslyn_Utilities_ConvertExtensions_ToNullableBoolean_Microsoft_CodeAnalysis_TypedConstant_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.TypedConstant
+    name: TypedConstant
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.typedconstant
+  - name: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: ANcpLua.Roslyn.Utilities.ConvertExtensions.ToBoolean*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.ConvertExtensions.ToBoolean
+  href: ANcpLua.Roslyn.Utilities.ConvertExtensions.html#ANcpLua_Roslyn_Utilities_ConvertExtensions_ToBoolean_Microsoft_CodeAnalysis_TypedConstant_System_Boolean_
+  name: ToBoolean
+  nameWithType: ConvertExtensions.ToBoolean
+  fullName: ANcpLua.Roslyn.Utilities.ConvertExtensions.ToBoolean
+- uid: ANcpLua.Roslyn.Utilities.ConvertExtensions.ToBoolean(Microsoft.CodeAnalysis.TypedConstant,System.Boolean)
+  commentId: M:ANcpLua.Roslyn.Utilities.ConvertExtensions.ToBoolean(Microsoft.CodeAnalysis.TypedConstant,System.Boolean)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.ConvertExtensions.html#ANcpLua_Roslyn_Utilities_ConvertExtensions_ToBoolean_Microsoft_CodeAnalysis_TypedConstant_System_Boolean_
+  name: ToBoolean(TypedConstant, bool)
+  nameWithType: ConvertExtensions.ToBoolean(TypedConstant, bool)
+  fullName: ANcpLua.Roslyn.Utilities.ConvertExtensions.ToBoolean(Microsoft.CodeAnalysis.TypedConstant, bool)
+  nameWithType.vb: ConvertExtensions.ToBoolean(TypedConstant, Boolean)
+  fullName.vb: ANcpLua.Roslyn.Utilities.ConvertExtensions.ToBoolean(Microsoft.CodeAnalysis.TypedConstant, Boolean)
+  name.vb: ToBoolean(TypedConstant, Boolean)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.ConvertExtensions.ToBoolean(Microsoft.CodeAnalysis.TypedConstant,System.Boolean)
+    name: ToBoolean
+    href: ANcpLua.Roslyn.Utilities.ConvertExtensions.html#ANcpLua_Roslyn_Utilities_ConvertExtensions_ToBoolean_Microsoft_CodeAnalysis_TypedConstant_System_Boolean_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.TypedConstant
+    name: TypedConstant
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.typedconstant
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.ConvertExtensions.ToBoolean(Microsoft.CodeAnalysis.TypedConstant,System.Boolean)
+    name: ToBoolean
+    href: ANcpLua.Roslyn.Utilities.ConvertExtensions.html#ANcpLua_Roslyn_Utilities_ConvertExtensions_ToBoolean_Microsoft_CodeAnalysis_TypedConstant_System_Boolean_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.TypedConstant
+    name: TypedConstant
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.typedconstant
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.ConvertExtensions.ToNullableBoolean*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.ConvertExtensions.ToNullableBoolean
+  href: ANcpLua.Roslyn.Utilities.ConvertExtensions.html#ANcpLua_Roslyn_Utilities_ConvertExtensions_ToNullableBoolean_Microsoft_CodeAnalysis_TypedConstant_
+  name: ToNullableBoolean
+  nameWithType: ConvertExtensions.ToNullableBoolean
+  fullName: ANcpLua.Roslyn.Utilities.ConvertExtensions.ToNullableBoolean
+- uid: System.Nullable{System.Boolean}
+  commentId: T:System.Nullable{System.Boolean}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool?
+  nameWithType: bool?
+  fullName: bool?
+  nameWithType.vb: Boolean?
+  fullName.vb: Boolean?
+  name.vb: Boolean?
+  spec.csharp:
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+  spec.vb:
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.ConvertExtensions.ToEnum``1(Microsoft.CodeAnalysis.TypedConstant)
+  commentId: M:ANcpLua.Roslyn.Utilities.ConvertExtensions.ToEnum``1(Microsoft.CodeAnalysis.TypedConstant)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.ConvertExtensions.html#ANcpLua_Roslyn_Utilities_ConvertExtensions_ToEnum__1_Microsoft_CodeAnalysis_TypedConstant_
+  name: ToEnum<T>(TypedConstant)
+  nameWithType: ConvertExtensions.ToEnum<T>(TypedConstant)
+  fullName: ANcpLua.Roslyn.Utilities.ConvertExtensions.ToEnum<T>(Microsoft.CodeAnalysis.TypedConstant)
+  nameWithType.vb: ConvertExtensions.ToEnum(Of T)(TypedConstant)
+  fullName.vb: ANcpLua.Roslyn.Utilities.ConvertExtensions.ToEnum(Of T)(Microsoft.CodeAnalysis.TypedConstant)
+  name.vb: ToEnum(Of T)(TypedConstant)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.ConvertExtensions.ToEnum``1(Microsoft.CodeAnalysis.TypedConstant)
+    name: ToEnum
+    href: ANcpLua.Roslyn.Utilities.ConvertExtensions.html#ANcpLua_Roslyn_Utilities_ConvertExtensions_ToEnum__1_Microsoft_CodeAnalysis_TypedConstant_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Microsoft.CodeAnalysis.TypedConstant
+    name: TypedConstant
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.typedconstant
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.ConvertExtensions.ToEnum``1(Microsoft.CodeAnalysis.TypedConstant)
+    name: ToEnum
+    href: ANcpLua.Roslyn.Utilities.ConvertExtensions.html#ANcpLua_Roslyn_Utilities_ConvertExtensions_ToEnum__1_Microsoft_CodeAnalysis_TypedConstant_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Microsoft.CodeAnalysis.TypedConstant
+    name: TypedConstant
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.typedconstant
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.ConvertExtensions.ToEnum*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.ConvertExtensions.ToEnum
+  href: ANcpLua.Roslyn.Utilities.ConvertExtensions.html#ANcpLua_Roslyn_Utilities_ConvertExtensions_ToEnum__1_Microsoft_CodeAnalysis_TypedConstant___0_
+  name: ToEnum
+  nameWithType: ConvertExtensions.ToEnum
+  fullName: ANcpLua.Roslyn.Utilities.ConvertExtensions.ToEnum
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: ANcpLua.Roslyn.Utilities.ConvertExtensions.ToEnum``1(Microsoft.CodeAnalysis.TypedConstant,``0)
+  commentId: M:ANcpLua.Roslyn.Utilities.ConvertExtensions.ToEnum``1(Microsoft.CodeAnalysis.TypedConstant,``0)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.ConvertExtensions.html#ANcpLua_Roslyn_Utilities_ConvertExtensions_ToEnum__1_Microsoft_CodeAnalysis_TypedConstant___0_
+  name: ToEnum<T>(TypedConstant, T)
+  nameWithType: ConvertExtensions.ToEnum<T>(TypedConstant, T)
+  fullName: ANcpLua.Roslyn.Utilities.ConvertExtensions.ToEnum<T>(Microsoft.CodeAnalysis.TypedConstant, T)
+  nameWithType.vb: ConvertExtensions.ToEnum(Of T)(TypedConstant, T)
+  fullName.vb: ANcpLua.Roslyn.Utilities.ConvertExtensions.ToEnum(Of T)(Microsoft.CodeAnalysis.TypedConstant, T)
+  name.vb: ToEnum(Of T)(TypedConstant, T)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.ConvertExtensions.ToEnum``1(Microsoft.CodeAnalysis.TypedConstant,``0)
+    name: ToEnum
+    href: ANcpLua.Roslyn.Utilities.ConvertExtensions.html#ANcpLua_Roslyn_Utilities_ConvertExtensions_ToEnum__1_Microsoft_CodeAnalysis_TypedConstant___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: Microsoft.CodeAnalysis.TypedConstant
+    name: TypedConstant
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.typedconstant
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.ConvertExtensions.ToEnum``1(Microsoft.CodeAnalysis.TypedConstant,``0)
+    name: ToEnum
+    href: ANcpLua.Roslyn.Utilities.ConvertExtensions.html#ANcpLua_Roslyn_Utilities_ConvertExtensions_ToEnum__1_Microsoft_CodeAnalysis_TypedConstant___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: Microsoft.CodeAnalysis.TypedConstant
+    name: TypedConstant
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.typedconstant
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Nullable{{T}}
+  commentId: T:System.Nullable{``0}
+  parent: System
+  definition: System.Nullable`1
+  name: T?
+  nameWithType: T?
+  fullName: T?
+  spec.csharp:
+  - name: T
+  - name: '?'
+  spec.vb:
+  - name: T
+  - name: '?'

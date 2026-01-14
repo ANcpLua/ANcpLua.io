@@ -1,0 +1,128 @@
+### YamlMime:ManagedReference
+items:
+- uid: ANcpLua.Roslyn.Utilities.Patterns
+  commentId: N:ANcpLua.Roslyn.Utilities.Patterns
+  id: ANcpLua.Roslyn.Utilities.Patterns
+  children:
+  - ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder
+  - ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder
+  - ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+  - ANcpLua.Roslyn.Utilities.Patterns.PropertyPatternBuilder
+  - ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern
+  - ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern`1
+  - ANcpLua.Roslyn.Utilities.Patterns.TypePatternBuilder
+  langs:
+  - csharp
+  - vb
+  name: ANcpLua.Roslyn.Utilities.Patterns
+  nameWithType: ANcpLua.Roslyn.Utilities.Patterns
+  fullName: ANcpLua.Roslyn.Utilities.Patterns
+  type: Namespace
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+references:
+- uid: ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder
+  commentId: T:ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder
+  parent: ANcpLua.Roslyn.Utilities.Patterns
+  href: ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.html
+  name: MethodPatternBuilder
+  nameWithType: MethodPatternBuilder
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder
+- uid: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+  commentId: T:ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+  parent: ANcpLua.Roslyn.Utilities.Patterns
+  href: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder.html
+  name: ParameterPatternBuilder
+  nameWithType: ParameterPatternBuilder
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.ParameterPatternBuilder
+- uid: ANcpLua.Roslyn.Utilities.Patterns.PropertyPatternBuilder
+  commentId: T:ANcpLua.Roslyn.Utilities.Patterns.PropertyPatternBuilder
+  parent: ANcpLua.Roslyn.Utilities.Patterns
+  href: ANcpLua.Roslyn.Utilities.Patterns.PropertyPatternBuilder.html
+  name: PropertyPatternBuilder
+  nameWithType: PropertyPatternBuilder
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.PropertyPatternBuilder
+- uid: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder
+  commentId: T:ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder
+  parent: ANcpLua.Roslyn.Utilities.Patterns
+  href: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder.html
+  name: FieldPatternBuilder
+  nameWithType: FieldPatternBuilder
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.FieldPatternBuilder
+- uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern`1
+  commentId: T:ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern`1
+  parent: ANcpLua.Roslyn.Utilities.Patterns
+  href: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern-1.html
+  name: SymbolPattern<T>
+  nameWithType: SymbolPattern<T>
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern<T>
+  nameWithType.vb: SymbolPattern(Of T)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern(Of T)
+  name.vb: SymbolPattern(Of T)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern`1
+    name: SymbolPattern
+    href: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern`1
+    name: SymbolPattern
+    href: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern
+  commentId: T:ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern
+  href: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.html
+  name: SymbolPattern
+  nameWithType: SymbolPattern
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern
+- uid: ANcpLua.Roslyn.Utilities.Patterns.TypePatternBuilder
+  commentId: T:ANcpLua.Roslyn.Utilities.Patterns.TypePatternBuilder
+  parent: ANcpLua.Roslyn.Utilities.Patterns
+  href: ANcpLua.Roslyn.Utilities.Patterns.TypePatternBuilder.html
+  name: TypePatternBuilder
+  nameWithType: TypePatternBuilder
+  fullName: ANcpLua.Roslyn.Utilities.Patterns.TypePatternBuilder
+- uid: ANcpLua.Roslyn.Utilities.Patterns
+  commentId: N:ANcpLua.Roslyn.Utilities.Patterns
+  href: ANcpLua.html
+  name: ANcpLua.Roslyn.Utilities.Patterns
+  nameWithType: ANcpLua.Roslyn.Utilities.Patterns
+  fullName: ANcpLua.Roslyn.Utilities.Patterns
+  spec.csharp:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities.Patterns
+    name: Patterns
+    href: ANcpLua.Roslyn.Utilities.Patterns.html
+  spec.vb:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities.Patterns
+    name: Patterns
+    href: ANcpLua.Roslyn.Utilities.Patterns.html

@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: ANcpLua.Analyzers.CodeFixes.Refactorings
+  commentId: N:ANcpLua.Analyzers.CodeFixes.Refactorings
+  id: ANcpLua.Analyzers.CodeFixes.Refactorings
+  children:
+  - ANcpLua.Analyzers.CodeFixes.Refactorings.Ar0001SnakeCaseToPascalCaseRefactoring
+  - ANcpLua.Analyzers.CodeFixes.Refactorings.Ar0002MakeStaticLambdaRefactoring
+  langs:
+  - csharp
+  - vb
+  name: ANcpLua.Analyzers.CodeFixes.Refactorings
+  nameWithType: ANcpLua.Analyzers.CodeFixes.Refactorings
+  fullName: ANcpLua.Analyzers.CodeFixes.Refactorings
+  type: Namespace
+  assemblies:
+  - ANcpLua.Analyzers.CodeFixes
+references:
+- uid: ANcpLua.Analyzers.CodeFixes.Refactorings.Ar0001SnakeCaseToPascalCaseRefactoring
+  commentId: T:ANcpLua.Analyzers.CodeFixes.Refactorings.Ar0001SnakeCaseToPascalCaseRefactoring
+  href: ANcpLua.Analyzers.CodeFixes.Refactorings.Ar0001SnakeCaseToPascalCaseRefactoring.html
+  name: Ar0001SnakeCaseToPascalCaseRefactoring
+  nameWithType: Ar0001SnakeCaseToPascalCaseRefactoring
+  fullName: ANcpLua.Analyzers.CodeFixes.Refactorings.Ar0001SnakeCaseToPascalCaseRefactoring
+- uid: ANcpLua.Analyzers.CodeFixes.Refactorings.Ar0002MakeStaticLambdaRefactoring
+  commentId: T:ANcpLua.Analyzers.CodeFixes.Refactorings.Ar0002MakeStaticLambdaRefactoring
+  href: ANcpLua.Analyzers.CodeFixes.Refactorings.Ar0002MakeStaticLambdaRefactoring.html
+  name: Ar0002MakeStaticLambdaRefactoring
+  nameWithType: Ar0002MakeStaticLambdaRefactoring
+  fullName: ANcpLua.Analyzers.CodeFixes.Refactorings.Ar0002MakeStaticLambdaRefactoring

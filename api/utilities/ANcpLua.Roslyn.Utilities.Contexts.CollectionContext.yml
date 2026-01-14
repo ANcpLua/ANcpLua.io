@@ -1,0 +1,3452 @@
+### YamlMime:ManagedReference
+items:
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext
+  commentId: T:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext
+  id: CollectionContext
+  parent: ANcpLua.Roslyn.Utilities.Contexts
+  children:
+  - ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.#ctor(Microsoft.CodeAnalysis.Compilation)
+  - ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ArraySegment
+  - ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.Dictionary
+  - ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.FrozenDictionary
+  - ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.FrozenSet
+  - ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.GetElementType(Microsoft.CodeAnalysis.ITypeSymbol)
+  - ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.HasCountProperty(Microsoft.CodeAnalysis.ITypeSymbol)
+  - ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.HashSet
+  - ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ICollection
+  - ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ICollectionOfT
+  - ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IDictionary
+  - ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IDictionaryOfTKeyTValue
+  - ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IEnumerable
+  - ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IEnumerableOfT
+  - ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IList
+  - ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IListOfT
+  - ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IReadOnlyCollection
+  - ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IReadOnlyDictionary
+  - ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IReadOnlyList
+  - ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IReadOnlySet
+  - ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ISet
+  - ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ImmutableArray
+  - ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ImmutableDictionary
+  - ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ImmutableHashSet
+  - ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ImmutableList
+  - ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsCollection(Microsoft.CodeAnalysis.ITypeSymbol)
+  - ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsDictionary(Microsoft.CodeAnalysis.ITypeSymbol)
+  - ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsEnumerable(Microsoft.CodeAnalysis.ITypeSymbol)
+  - ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsFrozen(Microsoft.CodeAnalysis.ITypeSymbol)
+  - ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsImmutable(Microsoft.CodeAnalysis.ITypeSymbol)
+  - ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsList(Microsoft.CodeAnalysis.ITypeSymbol)
+  - ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsMemoryLike(Microsoft.CodeAnalysis.ITypeSymbol)
+  - ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsReadOnly(Microsoft.CodeAnalysis.ITypeSymbol)
+  - ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsSet(Microsoft.CodeAnalysis.ITypeSymbol)
+  - ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsSpanLike(Microsoft.CodeAnalysis.ITypeSymbol)
+  - ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.LinkedList
+  - ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.List
+  - ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.Memory
+  - ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.Queue
+  - ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ReadOnlyMemory
+  - ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ReadOnlySpan
+  - ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.Span
+  - ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.Stack
+  langs:
+  - csharp
+  - vb
+  name: CollectionContext
+  nameWithType: CollectionContext
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext
+  type: Class
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: CollectionContext
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+    startLine: 22
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: >-
+    Provides cached type symbols and utility methods for working with collection types in Roslyn analysis.
+
+    <p>
+
+    This context caches commonly used collection type symbols from the compilation to avoid repeated lookups,
+
+    and provides methods to classify and analyze collection types.
+
+    </p>
+  remarks: <ul><li>Type symbols are resolved once during construction and cached for the lifetime of the context.</li><li>Properties may be <code>null</code> if the corresponding type is not available in the compilation.</li><li>All methods handle <code>null</code> input gracefully by returning <code>false</code> or <code>null</code>.</li></ul>
+  example: []
+  syntax:
+    content: public sealed class CollectionContext
+    content.vb: Public NotInheritable Class CollectionContext
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Contexts.AwaitableContext
+    commentId: T:ANcpLua.Roslyn.Utilities.Contexts.AwaitableContext
+  - linkId: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext
+    commentId: T:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext
+  - linkId: ANcpLua.Roslyn.Utilities.Contexts.AspNetContext
+    commentId: T:ANcpLua.Roslyn.Utilities.Contexts.AspNetContext
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1
+  - ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IEnumerable
+  commentId: P:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IEnumerable
+  id: IEnumerable
+  parent: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext
+  langs:
+  - csharp
+  - vb
+  name: IEnumerable
+  nameWithType: CollectionContext.IEnumerable
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IEnumerable
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IEnumerable
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+    startLine: 29
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Gets the <xref href="System.Collections.IEnumerable" data-throw-if-not-resolved="false"></xref> type symbol, or <code>null</code> if not available.
+  example: []
+  syntax:
+    content: public INamedTypeSymbol? IEnumerable { get; }
+    parameters: []
+    return:
+      type: Microsoft.CodeAnalysis.INamedTypeSymbol
+    content.vb: Public ReadOnly Property IEnumerable As INamedTypeSymbol
+  overload: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IEnumerable*
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IEnumerableOfT
+  commentId: P:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IEnumerableOfT
+  id: IEnumerableOfT
+  parent: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext
+  langs:
+  - csharp
+  - vb
+  name: IEnumerableOfT
+  nameWithType: CollectionContext.IEnumerableOfT
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IEnumerableOfT
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IEnumerableOfT
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+    startLine: 32
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Gets the <xref href="System.Collections.Generic.IEnumerable%601" data-throw-if-not-resolved="false"></xref> type symbol, or <code>null</code> if not available.
+  example: []
+  syntax:
+    content: public INamedTypeSymbol? IEnumerableOfT { get; }
+    parameters: []
+    return:
+      type: Microsoft.CodeAnalysis.INamedTypeSymbol
+    content.vb: Public ReadOnly Property IEnumerableOfT As INamedTypeSymbol
+  overload: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IEnumerableOfT*
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ICollection
+  commentId: P:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ICollection
+  id: ICollection
+  parent: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext
+  langs:
+  - csharp
+  - vb
+  name: ICollection
+  nameWithType: CollectionContext.ICollection
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ICollection
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: ICollection
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+    startLine: 35
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Gets the <xref href="System.Collections.ICollection" data-throw-if-not-resolved="false"></xref> type symbol, or <code>null</code> if not available.
+  example: []
+  syntax:
+    content: public INamedTypeSymbol? ICollection { get; }
+    parameters: []
+    return:
+      type: Microsoft.CodeAnalysis.INamedTypeSymbol
+    content.vb: Public ReadOnly Property ICollection As INamedTypeSymbol
+  overload: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ICollection*
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ICollectionOfT
+  commentId: P:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ICollectionOfT
+  id: ICollectionOfT
+  parent: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext
+  langs:
+  - csharp
+  - vb
+  name: ICollectionOfT
+  nameWithType: CollectionContext.ICollectionOfT
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ICollectionOfT
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: ICollectionOfT
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+    startLine: 38
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Gets the <xref href="System.Collections.Generic.ICollection%601" data-throw-if-not-resolved="false"></xref> type symbol, or <code>null</code> if not available.
+  example: []
+  syntax:
+    content: public INamedTypeSymbol? ICollectionOfT { get; }
+    parameters: []
+    return:
+      type: Microsoft.CodeAnalysis.INamedTypeSymbol
+    content.vb: Public ReadOnly Property ICollectionOfT As INamedTypeSymbol
+  overload: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ICollectionOfT*
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IList
+  commentId: P:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IList
+  id: IList
+  parent: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext
+  langs:
+  - csharp
+  - vb
+  name: IList
+  nameWithType: CollectionContext.IList
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IList
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IList
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+    startLine: 41
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Gets the <xref href="System.Collections.IList" data-throw-if-not-resolved="false"></xref> type symbol, or <code>null</code> if not available.
+  example: []
+  syntax:
+    content: public INamedTypeSymbol? IList { get; }
+    parameters: []
+    return:
+      type: Microsoft.CodeAnalysis.INamedTypeSymbol
+    content.vb: Public ReadOnly Property IList As INamedTypeSymbol
+  overload: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IList*
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IListOfT
+  commentId: P:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IListOfT
+  id: IListOfT
+  parent: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext
+  langs:
+  - csharp
+  - vb
+  name: IListOfT
+  nameWithType: CollectionContext.IListOfT
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IListOfT
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IListOfT
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+    startLine: 44
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Gets the <xref href="System.Collections.Generic.IList%601" data-throw-if-not-resolved="false"></xref> type symbol, or <code>null</code> if not available.
+  example: []
+  syntax:
+    content: public INamedTypeSymbol? IListOfT { get; }
+    parameters: []
+    return:
+      type: Microsoft.CodeAnalysis.INamedTypeSymbol
+    content.vb: Public ReadOnly Property IListOfT As INamedTypeSymbol
+  overload: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IListOfT*
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IReadOnlyCollection
+  commentId: P:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IReadOnlyCollection
+  id: IReadOnlyCollection
+  parent: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext
+  langs:
+  - csharp
+  - vb
+  name: IReadOnlyCollection
+  nameWithType: CollectionContext.IReadOnlyCollection
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IReadOnlyCollection
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IReadOnlyCollection
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+    startLine: 47
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Gets the <xref href="System.Collections.Generic.IReadOnlyCollection%601" data-throw-if-not-resolved="false"></xref> type symbol, or <code>null</code> if not available.
+  example: []
+  syntax:
+    content: public INamedTypeSymbol? IReadOnlyCollection { get; }
+    parameters: []
+    return:
+      type: Microsoft.CodeAnalysis.INamedTypeSymbol
+    content.vb: Public ReadOnly Property IReadOnlyCollection As INamedTypeSymbol
+  overload: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IReadOnlyCollection*
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IReadOnlyList
+  commentId: P:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IReadOnlyList
+  id: IReadOnlyList
+  parent: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext
+  langs:
+  - csharp
+  - vb
+  name: IReadOnlyList
+  nameWithType: CollectionContext.IReadOnlyList
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IReadOnlyList
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IReadOnlyList
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+    startLine: 50
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Gets the <xref href="System.Collections.Generic.IReadOnlyList%601" data-throw-if-not-resolved="false"></xref> type symbol, or <code>null</code> if not available.
+  example: []
+  syntax:
+    content: public INamedTypeSymbol? IReadOnlyList { get; }
+    parameters: []
+    return:
+      type: Microsoft.CodeAnalysis.INamedTypeSymbol
+    content.vb: Public ReadOnly Property IReadOnlyList As INamedTypeSymbol
+  overload: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IReadOnlyList*
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IDictionary
+  commentId: P:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IDictionary
+  id: IDictionary
+  parent: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext
+  langs:
+  - csharp
+  - vb
+  name: IDictionary
+  nameWithType: CollectionContext.IDictionary
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IDictionary
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IDictionary
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+    startLine: 53
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Gets the <xref href="System.Collections.IDictionary" data-throw-if-not-resolved="false"></xref> type symbol, or <code>null</code> if not available.
+  example: []
+  syntax:
+    content: public INamedTypeSymbol? IDictionary { get; }
+    parameters: []
+    return:
+      type: Microsoft.CodeAnalysis.INamedTypeSymbol
+    content.vb: Public ReadOnly Property IDictionary As INamedTypeSymbol
+  overload: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IDictionary*
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IDictionaryOfTKeyTValue
+  commentId: P:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IDictionaryOfTKeyTValue
+  id: IDictionaryOfTKeyTValue
+  parent: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext
+  langs:
+  - csharp
+  - vb
+  name: IDictionaryOfTKeyTValue
+  nameWithType: CollectionContext.IDictionaryOfTKeyTValue
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IDictionaryOfTKeyTValue
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IDictionaryOfTKeyTValue
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+    startLine: 56
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Gets the <xref href="System.Collections.Generic.IDictionary%602" data-throw-if-not-resolved="false"></xref> type symbol, or <code>null</code> if not available.
+  example: []
+  syntax:
+    content: public INamedTypeSymbol? IDictionaryOfTKeyTValue { get; }
+    parameters: []
+    return:
+      type: Microsoft.CodeAnalysis.INamedTypeSymbol
+    content.vb: Public ReadOnly Property IDictionaryOfTKeyTValue As INamedTypeSymbol
+  overload: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IDictionaryOfTKeyTValue*
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IReadOnlyDictionary
+  commentId: P:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IReadOnlyDictionary
+  id: IReadOnlyDictionary
+  parent: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext
+  langs:
+  - csharp
+  - vb
+  name: IReadOnlyDictionary
+  nameWithType: CollectionContext.IReadOnlyDictionary
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IReadOnlyDictionary
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IReadOnlyDictionary
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+    startLine: 59
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Gets the <xref href="System.Collections.Generic.IReadOnlyDictionary%602" data-throw-if-not-resolved="false"></xref> type symbol, or <code>null</code> if not available.
+  example: []
+  syntax:
+    content: public INamedTypeSymbol? IReadOnlyDictionary { get; }
+    parameters: []
+    return:
+      type: Microsoft.CodeAnalysis.INamedTypeSymbol
+    content.vb: Public ReadOnly Property IReadOnlyDictionary As INamedTypeSymbol
+  overload: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IReadOnlyDictionary*
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ISet
+  commentId: P:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ISet
+  id: ISet
+  parent: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext
+  langs:
+  - csharp
+  - vb
+  name: ISet
+  nameWithType: CollectionContext.ISet
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ISet
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: ISet
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+    startLine: 62
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Gets the <xref href="System.Collections.Generic.ISet%601" data-throw-if-not-resolved="false"></xref> type symbol, or <code>null</code> if not available.
+  example: []
+  syntax:
+    content: public INamedTypeSymbol? ISet { get; }
+    parameters: []
+    return:
+      type: Microsoft.CodeAnalysis.INamedTypeSymbol
+    content.vb: Public ReadOnly Property ISet As INamedTypeSymbol
+  overload: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ISet*
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IReadOnlySet
+  commentId: P:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IReadOnlySet
+  id: IReadOnlySet
+  parent: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext
+  langs:
+  - csharp
+  - vb
+  name: IReadOnlySet
+  nameWithType: CollectionContext.IReadOnlySet
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IReadOnlySet
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IReadOnlySet
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+    startLine: 65
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Gets the <code>IReadOnlySet&lt;T&gt;</code> type symbol, or <code>null</code> if not available.
+  example: []
+  syntax:
+    content: public INamedTypeSymbol? IReadOnlySet { get; }
+    parameters: []
+    return:
+      type: Microsoft.CodeAnalysis.INamedTypeSymbol
+    content.vb: Public ReadOnly Property IReadOnlySet As INamedTypeSymbol
+  overload: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IReadOnlySet*
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.List
+  commentId: P:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.List
+  id: List
+  parent: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext
+  langs:
+  - csharp
+  - vb
+  name: List
+  nameWithType: CollectionContext.List
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.List
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: List
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+    startLine: 68
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Gets the <xref href="System.Collections.Generic.List%601" data-throw-if-not-resolved="false"></xref> type symbol, or <code>null</code> if not available.
+  example: []
+  syntax:
+    content: public INamedTypeSymbol? List { get; }
+    parameters: []
+    return:
+      type: Microsoft.CodeAnalysis.INamedTypeSymbol
+    content.vb: Public ReadOnly Property List As INamedTypeSymbol
+  overload: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.List*
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.Dictionary
+  commentId: P:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.Dictionary
+  id: Dictionary
+  parent: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext
+  langs:
+  - csharp
+  - vb
+  name: Dictionary
+  nameWithType: CollectionContext.Dictionary
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.Dictionary
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Dictionary
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+    startLine: 71
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Gets the <xref href="System.Collections.Generic.Dictionary%602" data-throw-if-not-resolved="false"></xref> type symbol, or <code>null</code> if not available.
+  example: []
+  syntax:
+    content: public INamedTypeSymbol? Dictionary { get; }
+    parameters: []
+    return:
+      type: Microsoft.CodeAnalysis.INamedTypeSymbol
+    content.vb: Public ReadOnly Property Dictionary As INamedTypeSymbol
+  overload: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.Dictionary*
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.HashSet
+  commentId: P:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.HashSet
+  id: HashSet
+  parent: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext
+  langs:
+  - csharp
+  - vb
+  name: HashSet
+  nameWithType: CollectionContext.HashSet
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.HashSet
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: HashSet
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+    startLine: 74
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Gets the <xref href="System.Collections.Generic.HashSet%601" data-throw-if-not-resolved="false"></xref> type symbol, or <code>null</code> if not available.
+  example: []
+  syntax:
+    content: public INamedTypeSymbol? HashSet { get; }
+    parameters: []
+    return:
+      type: Microsoft.CodeAnalysis.INamedTypeSymbol
+    content.vb: Public ReadOnly Property HashSet As INamedTypeSymbol
+  overload: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.HashSet*
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.Queue
+  commentId: P:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.Queue
+  id: Queue
+  parent: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext
+  langs:
+  - csharp
+  - vb
+  name: Queue
+  nameWithType: CollectionContext.Queue
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.Queue
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Queue
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+    startLine: 77
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Gets the <xref href="System.Collections.Generic.Queue%601" data-throw-if-not-resolved="false"></xref> type symbol, or <code>null</code> if not available.
+  example: []
+  syntax:
+    content: public INamedTypeSymbol? Queue { get; }
+    parameters: []
+    return:
+      type: Microsoft.CodeAnalysis.INamedTypeSymbol
+    content.vb: Public ReadOnly Property Queue As INamedTypeSymbol
+  overload: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.Queue*
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.Stack
+  commentId: P:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.Stack
+  id: Stack
+  parent: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext
+  langs:
+  - csharp
+  - vb
+  name: Stack
+  nameWithType: CollectionContext.Stack
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.Stack
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Stack
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+    startLine: 80
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Gets the <xref href="System.Collections.Generic.Stack%601" data-throw-if-not-resolved="false"></xref> type symbol, or <code>null</code> if not available.
+  example: []
+  syntax:
+    content: public INamedTypeSymbol? Stack { get; }
+    parameters: []
+    return:
+      type: Microsoft.CodeAnalysis.INamedTypeSymbol
+    content.vb: Public ReadOnly Property Stack As INamedTypeSymbol
+  overload: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.Stack*
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.LinkedList
+  commentId: P:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.LinkedList
+  id: LinkedList
+  parent: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext
+  langs:
+  - csharp
+  - vb
+  name: LinkedList
+  nameWithType: CollectionContext.LinkedList
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.LinkedList
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: LinkedList
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+    startLine: 83
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Gets the <xref href="System.Collections.Generic.LinkedList%601" data-throw-if-not-resolved="false"></xref> type symbol, or <code>null</code> if not available.
+  example: []
+  syntax:
+    content: public INamedTypeSymbol? LinkedList { get; }
+    parameters: []
+    return:
+      type: Microsoft.CodeAnalysis.INamedTypeSymbol
+    content.vb: Public ReadOnly Property LinkedList As INamedTypeSymbol
+  overload: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.LinkedList*
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ImmutableArray
+  commentId: P:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ImmutableArray
+  id: ImmutableArray
+  parent: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext
+  langs:
+  - csharp
+  - vb
+  name: ImmutableArray
+  nameWithType: CollectionContext.ImmutableArray
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ImmutableArray
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: ImmutableArray
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+    startLine: 86
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Gets the <xref href="System.Collections.Immutable.ImmutableArray%601" data-throw-if-not-resolved="false"></xref> type symbol, or <code>null</code> if not available.
+  example: []
+  syntax:
+    content: public INamedTypeSymbol? ImmutableArray { get; }
+    parameters: []
+    return:
+      type: Microsoft.CodeAnalysis.INamedTypeSymbol
+    content.vb: Public ReadOnly Property ImmutableArray As INamedTypeSymbol
+  overload: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ImmutableArray*
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ImmutableList
+  commentId: P:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ImmutableList
+  id: ImmutableList
+  parent: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext
+  langs:
+  - csharp
+  - vb
+  name: ImmutableList
+  nameWithType: CollectionContext.ImmutableList
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ImmutableList
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: ImmutableList
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+    startLine: 89
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Gets the <xref href="System.Collections.Immutable.ImmutableList%601" data-throw-if-not-resolved="false"></xref> type symbol, or <code>null</code> if not available.
+  example: []
+  syntax:
+    content: public INamedTypeSymbol? ImmutableList { get; }
+    parameters: []
+    return:
+      type: Microsoft.CodeAnalysis.INamedTypeSymbol
+    content.vb: Public ReadOnly Property ImmutableList As INamedTypeSymbol
+  overload: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ImmutableList*
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ImmutableDictionary
+  commentId: P:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ImmutableDictionary
+  id: ImmutableDictionary
+  parent: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext
+  langs:
+  - csharp
+  - vb
+  name: ImmutableDictionary
+  nameWithType: CollectionContext.ImmutableDictionary
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ImmutableDictionary
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: ImmutableDictionary
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+    startLine: 92
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Gets the <xref href="System.Collections.Immutable.ImmutableDictionary%602" data-throw-if-not-resolved="false"></xref> type symbol, or <code>null</code> if not available.
+  example: []
+  syntax:
+    content: public INamedTypeSymbol? ImmutableDictionary { get; }
+    parameters: []
+    return:
+      type: Microsoft.CodeAnalysis.INamedTypeSymbol
+    content.vb: Public ReadOnly Property ImmutableDictionary As INamedTypeSymbol
+  overload: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ImmutableDictionary*
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ImmutableHashSet
+  commentId: P:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ImmutableHashSet
+  id: ImmutableHashSet
+  parent: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext
+  langs:
+  - csharp
+  - vb
+  name: ImmutableHashSet
+  nameWithType: CollectionContext.ImmutableHashSet
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ImmutableHashSet
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: ImmutableHashSet
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+    startLine: 95
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Gets the <xref href="System.Collections.Immutable.ImmutableHashSet%601" data-throw-if-not-resolved="false"></xref> type symbol, or <code>null</code> if not available.
+  example: []
+  syntax:
+    content: public INamedTypeSymbol? ImmutableHashSet { get; }
+    parameters: []
+    return:
+      type: Microsoft.CodeAnalysis.INamedTypeSymbol
+    content.vb: Public ReadOnly Property ImmutableHashSet As INamedTypeSymbol
+  overload: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ImmutableHashSet*
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.FrozenSet
+  commentId: P:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.FrozenSet
+  id: FrozenSet
+  parent: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext
+  langs:
+  - csharp
+  - vb
+  name: FrozenSet
+  nameWithType: CollectionContext.FrozenSet
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.FrozenSet
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: FrozenSet
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+    startLine: 98
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Gets the <code>System.Collections.Frozen.FrozenSet&lt;T&gt;</code> type symbol, or <code>null</code> if not available.
+  example: []
+  syntax:
+    content: public INamedTypeSymbol? FrozenSet { get; }
+    parameters: []
+    return:
+      type: Microsoft.CodeAnalysis.INamedTypeSymbol
+    content.vb: Public ReadOnly Property FrozenSet As INamedTypeSymbol
+  overload: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.FrozenSet*
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.FrozenDictionary
+  commentId: P:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.FrozenDictionary
+  id: FrozenDictionary
+  parent: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext
+  langs:
+  - csharp
+  - vb
+  name: FrozenDictionary
+  nameWithType: CollectionContext.FrozenDictionary
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.FrozenDictionary
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: FrozenDictionary
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+    startLine: 101
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Gets the <code>System.Collections.Frozen.FrozenDictionary&lt;TKey, TValue&gt;</code> type symbol, or <code>null</code> if not available.
+  example: []
+  syntax:
+    content: public INamedTypeSymbol? FrozenDictionary { get; }
+    parameters: []
+    return:
+      type: Microsoft.CodeAnalysis.INamedTypeSymbol
+    content.vb: Public ReadOnly Property FrozenDictionary As INamedTypeSymbol
+  overload: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.FrozenDictionary*
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ArraySegment
+  commentId: P:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ArraySegment
+  id: ArraySegment
+  parent: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext
+  langs:
+  - csharp
+  - vb
+  name: ArraySegment
+  nameWithType: CollectionContext.ArraySegment
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ArraySegment
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: ArraySegment
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+    startLine: 104
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Gets the <xref href="System.ArraySegment%601" data-throw-if-not-resolved="false"></xref> type symbol, or <code>null</code> if not available.
+  example: []
+  syntax:
+    content: public INamedTypeSymbol? ArraySegment { get; }
+    parameters: []
+    return:
+      type: Microsoft.CodeAnalysis.INamedTypeSymbol
+    content.vb: Public ReadOnly Property ArraySegment As INamedTypeSymbol
+  overload: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ArraySegment*
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.Span
+  commentId: P:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.Span
+  id: Span
+  parent: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext
+  langs:
+  - csharp
+  - vb
+  name: Span
+  nameWithType: CollectionContext.Span
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.Span
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Span
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+    startLine: 107
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Gets the <xref href="System.Span%601" data-throw-if-not-resolved="false"></xref> type symbol, or <code>null</code> if not available.
+  example: []
+  syntax:
+    content: public INamedTypeSymbol? Span { get; }
+    parameters: []
+    return:
+      type: Microsoft.CodeAnalysis.INamedTypeSymbol
+    content.vb: Public ReadOnly Property Span As INamedTypeSymbol
+  overload: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.Span*
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ReadOnlySpan
+  commentId: P:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ReadOnlySpan
+  id: ReadOnlySpan
+  parent: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext
+  langs:
+  - csharp
+  - vb
+  name: ReadOnlySpan
+  nameWithType: CollectionContext.ReadOnlySpan
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ReadOnlySpan
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: ReadOnlySpan
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+    startLine: 110
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Gets the <xref href="System.ReadOnlySpan%601" data-throw-if-not-resolved="false"></xref> type symbol, or <code>null</code> if not available.
+  example: []
+  syntax:
+    content: public INamedTypeSymbol? ReadOnlySpan { get; }
+    parameters: []
+    return:
+      type: Microsoft.CodeAnalysis.INamedTypeSymbol
+    content.vb: Public ReadOnly Property ReadOnlySpan As INamedTypeSymbol
+  overload: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ReadOnlySpan*
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.Memory
+  commentId: P:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.Memory
+  id: Memory
+  parent: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext
+  langs:
+  - csharp
+  - vb
+  name: Memory
+  nameWithType: CollectionContext.Memory
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.Memory
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Memory
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+    startLine: 113
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Gets the <xref href="System.Memory%601" data-throw-if-not-resolved="false"></xref> type symbol, or <code>null</code> if not available.
+  example: []
+  syntax:
+    content: public INamedTypeSymbol? Memory { get; }
+    parameters: []
+    return:
+      type: Microsoft.CodeAnalysis.INamedTypeSymbol
+    content.vb: Public ReadOnly Property Memory As INamedTypeSymbol
+  overload: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.Memory*
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ReadOnlyMemory
+  commentId: P:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ReadOnlyMemory
+  id: ReadOnlyMemory
+  parent: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext
+  langs:
+  - csharp
+  - vb
+  name: ReadOnlyMemory
+  nameWithType: CollectionContext.ReadOnlyMemory
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ReadOnlyMemory
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: ReadOnlyMemory
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+    startLine: 116
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Gets the <xref href="System.ReadOnlyMemory%601" data-throw-if-not-resolved="false"></xref> type symbol, or <code>null</code> if not available.
+  example: []
+  syntax:
+    content: public INamedTypeSymbol? ReadOnlyMemory { get; }
+    parameters: []
+    return:
+      type: Microsoft.CodeAnalysis.INamedTypeSymbol
+    content.vb: Public ReadOnly Property ReadOnlyMemory As INamedTypeSymbol
+  overload: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ReadOnlyMemory*
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.#ctor(Microsoft.CodeAnalysis.Compilation)
+  commentId: M:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.#ctor(Microsoft.CodeAnalysis.Compilation)
+  id: '#ctor(Microsoft.CodeAnalysis.Compilation)'
+  parent: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext
+  langs:
+  - csharp
+  - vb
+  name: CollectionContext(Compilation)
+  nameWithType: CollectionContext.CollectionContext(Compilation)
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.CollectionContext(Microsoft.CodeAnalysis.Compilation)
+  type: Constructor
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: .ctor
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+    startLine: 123
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: >-
+    Initializes a new instance of the <xref href="ANcpLua.Roslyn.Utilities.Contexts.CollectionContext" data-throw-if-not-resolved="false"></xref> class by resolving
+
+    all collection type symbols from the specified compilation.
+  example: []
+  syntax:
+    content: public CollectionContext(Compilation compilation)
+    parameters:
+    - id: compilation
+      type: Microsoft.CodeAnalysis.Compilation
+      description: The compilation from which to resolve collection type symbols.
+    content.vb: Public Sub New(compilation As Compilation)
+  overload: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.#ctor*
+  nameWithType.vb: CollectionContext.New(Compilation)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.New(Microsoft.CodeAnalysis.Compilation)
+  name.vb: New(Compilation)
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsEnumerable(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsEnumerable(Microsoft.CodeAnalysis.ITypeSymbol)
+  id: IsEnumerable(Microsoft.CodeAnalysis.ITypeSymbol)
+  parent: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext
+  langs:
+  - csharp
+  - vb
+  name: IsEnumerable(ITypeSymbol?)
+  nameWithType: CollectionContext.IsEnumerable(ITypeSymbol?)
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsEnumerable(Microsoft.CodeAnalysis.ITypeSymbol?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsEnumerable
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+    startLine: 167
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Determines whether the specified type is enumerable.
+  example: []
+  syntax:
+    content: public bool IsEnumerable(ITypeSymbol? type)
+    parameters:
+    - id: type
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The type symbol to check.
+    return:
+      type: System.Boolean
+      description: >-
+        <code>true</code> if <code class="paramref">type</code> is an array, implements <xref href="System.Collections.IEnumerable" data-throw-if-not-resolved="false"></xref>,
+
+        or implements <xref href="System.Collections.Generic.IEnumerable%601" data-throw-if-not-resolved="false"></xref>; otherwise, <code>false</code>.
+    content.vb: Public Function IsEnumerable(type As ITypeSymbol) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsEnumerable*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsCollection(Microsoft.CodeAnalysis.ITypeSymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsCollection(Microsoft.CodeAnalysis.ITypeSymbol)
+  - linkId: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsList(Microsoft.CodeAnalysis.ITypeSymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsList(Microsoft.CodeAnalysis.ITypeSymbol)
+  nameWithType.vb: CollectionContext.IsEnumerable(ITypeSymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsEnumerable(Microsoft.CodeAnalysis.ITypeSymbol)
+  name.vb: IsEnumerable(ITypeSymbol)
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsCollection(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsCollection(Microsoft.CodeAnalysis.ITypeSymbol)
+  id: IsCollection(Microsoft.CodeAnalysis.ITypeSymbol)
+  parent: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext
+  langs:
+  - csharp
+  - vb
+  name: IsCollection(ITypeSymbol?)
+  nameWithType: CollectionContext.IsCollection(ITypeSymbol?)
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsCollection(Microsoft.CodeAnalysis.ITypeSymbol?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsCollection
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+    startLine: 200
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Determines whether the specified type is a collection.
+  example: []
+  syntax:
+    content: public bool IsCollection(ITypeSymbol? type)
+    parameters:
+    - id: type
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The type symbol to check.
+    return:
+      type: System.Boolean
+      description: >-
+        <code>true</code> if <code class="paramref">type</code> is an array, implements <xref href="System.Collections.ICollection" data-throw-if-not-resolved="false"></xref>,
+
+        or implements <xref href="System.Collections.Generic.ICollection%601" data-throw-if-not-resolved="false"></xref>; otherwise, <code>false</code>.
+    content.vb: Public Function IsCollection(type As ITypeSymbol) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsCollection*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsEnumerable(Microsoft.CodeAnalysis.ITypeSymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsEnumerable(Microsoft.CodeAnalysis.ITypeSymbol)
+  - linkId: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsList(Microsoft.CodeAnalysis.ITypeSymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsList(Microsoft.CodeAnalysis.ITypeSymbol)
+  nameWithType.vb: CollectionContext.IsCollection(ITypeSymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsCollection(Microsoft.CodeAnalysis.ITypeSymbol)
+  name.vb: IsCollection(ITypeSymbol)
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsList(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsList(Microsoft.CodeAnalysis.ITypeSymbol)
+  id: IsList(Microsoft.CodeAnalysis.ITypeSymbol)
+  parent: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext
+  langs:
+  - csharp
+  - vb
+  name: IsList(ITypeSymbol?)
+  nameWithType: CollectionContext.IsList(ITypeSymbol?)
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsList(Microsoft.CodeAnalysis.ITypeSymbol?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsList
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+    startLine: 233
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Determines whether the specified type is a list.
+  example: []
+  syntax:
+    content: public bool IsList(ITypeSymbol? type)
+    parameters:
+    - id: type
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The type symbol to check.
+    return:
+      type: System.Boolean
+      description: >-
+        <code>true</code> if <code class="paramref">type</code> is an array, implements <xref href="System.Collections.IList" data-throw-if-not-resolved="false"></xref>,
+
+        or implements <xref href="System.Collections.Generic.IList%601" data-throw-if-not-resolved="false"></xref>; otherwise, <code>false</code>.
+    content.vb: Public Function IsList(type As ITypeSymbol) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsList*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsEnumerable(Microsoft.CodeAnalysis.ITypeSymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsEnumerable(Microsoft.CodeAnalysis.ITypeSymbol)
+  - linkId: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsCollection(Microsoft.CodeAnalysis.ITypeSymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsCollection(Microsoft.CodeAnalysis.ITypeSymbol)
+  nameWithType.vb: CollectionContext.IsList(ITypeSymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsList(Microsoft.CodeAnalysis.ITypeSymbol)
+  name.vb: IsList(ITypeSymbol)
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsDictionary(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsDictionary(Microsoft.CodeAnalysis.ITypeSymbol)
+  id: IsDictionary(Microsoft.CodeAnalysis.ITypeSymbol)
+  parent: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext
+  langs:
+  - csharp
+  - vb
+  name: IsDictionary(ITypeSymbol?)
+  nameWithType: CollectionContext.IsDictionary(ITypeSymbol?)
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsDictionary(Microsoft.CodeAnalysis.ITypeSymbol?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsDictionary
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+    startLine: 265
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Determines whether the specified type is a dictionary.
+  example: []
+  syntax:
+    content: public bool IsDictionary(ITypeSymbol? type)
+    parameters:
+    - id: type
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The type symbol to check.
+    return:
+      type: System.Boolean
+      description: >-
+        <code>true</code> if <code class="paramref">type</code> implements <xref href="System.Collections.IDictionary" data-throw-if-not-resolved="false"></xref>
+
+        or <xref href="System.Collections.Generic.IDictionary%602" data-throw-if-not-resolved="false"></xref>; otherwise, <code>false</code>.
+    content.vb: Public Function IsDictionary(type As ITypeSymbol) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsDictionary*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsSet(Microsoft.CodeAnalysis.ITypeSymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsSet(Microsoft.CodeAnalysis.ITypeSymbol)
+  nameWithType.vb: CollectionContext.IsDictionary(ITypeSymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsDictionary(Microsoft.CodeAnalysis.ITypeSymbol)
+  name.vb: IsDictionary(ITypeSymbol)
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsSet(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsSet(Microsoft.CodeAnalysis.ITypeSymbol)
+  id: IsSet(Microsoft.CodeAnalysis.ITypeSymbol)
+  parent: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext
+  langs:
+  - csharp
+  - vb
+  name: IsSet(ITypeSymbol?)
+  nameWithType: CollectionContext.IsSet(ITypeSymbol?)
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsSet(Microsoft.CodeAnalysis.ITypeSymbol?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsSet
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+    startLine: 293
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Determines whether the specified type is a set.
+  example: []
+  syntax:
+    content: public bool IsSet(ITypeSymbol? type)
+    parameters:
+    - id: type
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The type symbol to check.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if <code class="paramref">type</code> implements <xref href="System.Collections.Generic.ISet%601" data-throw-if-not-resolved="false"></xref>; otherwise, <code>false</code>.
+    content.vb: Public Function IsSet(type As ITypeSymbol) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsSet*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsDictionary(Microsoft.CodeAnalysis.ITypeSymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsDictionary(Microsoft.CodeAnalysis.ITypeSymbol)
+  nameWithType.vb: CollectionContext.IsSet(ITypeSymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsSet(Microsoft.CodeAnalysis.ITypeSymbol)
+  name.vb: IsSet(ITypeSymbol)
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsImmutable(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsImmutable(Microsoft.CodeAnalysis.ITypeSymbol)
+  id: IsImmutable(Microsoft.CodeAnalysis.ITypeSymbol)
+  parent: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext
+  langs:
+  - csharp
+  - vb
+  name: IsImmutable(ITypeSymbol?)
+  nameWithType: CollectionContext.IsImmutable(ITypeSymbol?)
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsImmutable(Microsoft.CodeAnalysis.ITypeSymbol?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsImmutable
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+    startLine: 322
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Determines whether the specified type is an immutable collection type.
+  example: []
+  syntax:
+    content: public bool IsImmutable(ITypeSymbol? type)
+    parameters:
+    - id: type
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The type symbol to check.
+    return:
+      type: System.Boolean
+      description: >-
+        <code>true</code> if <code class="paramref">type</code> is one of the immutable collection types
+
+        (<code>ImmutableArray&lt;T&gt;</code>, <code>ImmutableList&lt;T&gt;</code>, <code>ImmutableDictionary&lt;TKey, TValue&gt;</code>,
+
+        <code>ImmutableHashSet&lt;T&gt;</code>, <code>FrozenSet&lt;T&gt;</code>, or <code>FrozenDictionary&lt;TKey, TValue&gt;</code>);
+
+        otherwise, <code>false</code>.
+    content.vb: Public Function IsImmutable(type As ITypeSymbol) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsImmutable*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsFrozen(Microsoft.CodeAnalysis.ITypeSymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsFrozen(Microsoft.CodeAnalysis.ITypeSymbol)
+  - linkId: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsReadOnly(Microsoft.CodeAnalysis.ITypeSymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsReadOnly(Microsoft.CodeAnalysis.ITypeSymbol)
+  nameWithType.vb: CollectionContext.IsImmutable(ITypeSymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsImmutable(Microsoft.CodeAnalysis.ITypeSymbol)
+  name.vb: IsImmutable(ITypeSymbol)
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsFrozen(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsFrozen(Microsoft.CodeAnalysis.ITypeSymbol)
+  id: IsFrozen(Microsoft.CodeAnalysis.ITypeSymbol)
+  parent: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext
+  langs:
+  - csharp
+  - vb
+  name: IsFrozen(ITypeSymbol?)
+  nameWithType: CollectionContext.IsFrozen(ITypeSymbol?)
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsFrozen(Microsoft.CodeAnalysis.ITypeSymbol?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsFrozen
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+    startLine: 349
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Determines whether the specified type is a frozen collection type.
+  example: []
+  syntax:
+    content: public bool IsFrozen(ITypeSymbol? type)
+    parameters:
+    - id: type
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The type symbol to check.
+    return:
+      type: System.Boolean
+      description: >-
+        <code>true</code> if <code class="paramref">type</code> is <code>FrozenSet&lt;T&gt;</code> or <code>FrozenDictionary&lt;TKey, TValue&gt;</code>;
+
+        otherwise, <code>false</code>.
+    content.vb: Public Function IsFrozen(type As ITypeSymbol) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsFrozen*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsImmutable(Microsoft.CodeAnalysis.ITypeSymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsImmutable(Microsoft.CodeAnalysis.ITypeSymbol)
+  nameWithType.vb: CollectionContext.IsFrozen(ITypeSymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsFrozen(Microsoft.CodeAnalysis.ITypeSymbol)
+  name.vb: IsFrozen(ITypeSymbol)
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsSpanLike(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsSpanLike(Microsoft.CodeAnalysis.ITypeSymbol)
+  id: IsSpanLike(Microsoft.CodeAnalysis.ITypeSymbol)
+  parent: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext
+  langs:
+  - csharp
+  - vb
+  name: IsSpanLike(ITypeSymbol?)
+  nameWithType: CollectionContext.IsSpanLike(ITypeSymbol?)
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsSpanLike(Microsoft.CodeAnalysis.ITypeSymbol?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsSpanLike
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+    startLine: 372
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Determines whether the specified type is a span-like type.
+  example: []
+  syntax:
+    content: public bool IsSpanLike(ITypeSymbol? type)
+    parameters:
+    - id: type
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The type symbol to check.
+    return:
+      type: System.Boolean
+      description: >-
+        <code>true</code> if <code class="paramref">type</code> is <xref href="System.Span%601" data-throw-if-not-resolved="false"></xref> or <xref href="System.ReadOnlySpan%601" data-throw-if-not-resolved="false"></xref>;
+
+        otherwise, <code>false</code>.
+    content.vb: Public Function IsSpanLike(type As ITypeSymbol) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsSpanLike*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsMemoryLike(Microsoft.CodeAnalysis.ITypeSymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsMemoryLike(Microsoft.CodeAnalysis.ITypeSymbol)
+  nameWithType.vb: CollectionContext.IsSpanLike(ITypeSymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsSpanLike(Microsoft.CodeAnalysis.ITypeSymbol)
+  name.vb: IsSpanLike(ITypeSymbol)
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsMemoryLike(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsMemoryLike(Microsoft.CodeAnalysis.ITypeSymbol)
+  id: IsMemoryLike(Microsoft.CodeAnalysis.ITypeSymbol)
+  parent: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext
+  langs:
+  - csharp
+  - vb
+  name: IsMemoryLike(ITypeSymbol?)
+  nameWithType: CollectionContext.IsMemoryLike(ITypeSymbol?)
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsMemoryLike(Microsoft.CodeAnalysis.ITypeSymbol?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsMemoryLike
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+    startLine: 395
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Determines whether the specified type is a memory-like type.
+  example: []
+  syntax:
+    content: public bool IsMemoryLike(ITypeSymbol? type)
+    parameters:
+    - id: type
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The type symbol to check.
+    return:
+      type: System.Boolean
+      description: >-
+        <code>true</code> if <code class="paramref">type</code> is <xref href="System.Memory%601" data-throw-if-not-resolved="false"></xref> or <xref href="System.ReadOnlyMemory%601" data-throw-if-not-resolved="false"></xref>;
+
+        otherwise, <code>false</code>.
+    content.vb: Public Function IsMemoryLike(type As ITypeSymbol) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsMemoryLike*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsSpanLike(Microsoft.CodeAnalysis.ITypeSymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsSpanLike(Microsoft.CodeAnalysis.ITypeSymbol)
+  nameWithType.vb: CollectionContext.IsMemoryLike(ITypeSymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsMemoryLike(Microsoft.CodeAnalysis.ITypeSymbol)
+  name.vb: IsMemoryLike(ITypeSymbol)
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.HasCountProperty(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.HasCountProperty(Microsoft.CodeAnalysis.ITypeSymbol)
+  id: HasCountProperty(Microsoft.CodeAnalysis.ITypeSymbol)
+  parent: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext
+  langs:
+  - csharp
+  - vb
+  name: HasCountProperty(ITypeSymbol)
+  nameWithType: CollectionContext.HasCountProperty(ITypeSymbol)
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.HasCountProperty(Microsoft.CodeAnalysis.ITypeSymbol)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: HasCountProperty
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+    startLine: 417
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Determines whether the specified type has a <code>Count</code> or <code>Length</code> property with a getter.
+  example: []
+  syntax:
+    content: public static bool HasCountProperty(ITypeSymbol type)
+    parameters:
+    - id: type
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The type symbol to check.
+    return:
+      type: System.Boolean
+      description: >-
+        <code>true</code> if <code class="paramref">type</code> has a readable <code>Count</code> or <code>Length</code> property;
+
+        otherwise, <code>false</code>.
+    content.vb: Public Shared Function HasCountProperty(type As ITypeSymbol) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.HasCountProperty*
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsReadOnly(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsReadOnly(Microsoft.CodeAnalysis.ITypeSymbol)
+  id: IsReadOnly(Microsoft.CodeAnalysis.ITypeSymbol)
+  parent: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext
+  langs:
+  - csharp
+  - vb
+  name: IsReadOnly(ITypeSymbol?)
+  nameWithType: CollectionContext.IsReadOnly(ITypeSymbol?)
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsReadOnly(Microsoft.CodeAnalysis.ITypeSymbol?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsReadOnly
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+    startLine: 446
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Determines whether the specified type is a read-only collection type.
+  example: []
+  syntax:
+    content: public bool IsReadOnly(ITypeSymbol? type)
+    parameters:
+    - id: type
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The type symbol to check.
+    return:
+      type: System.Boolean
+      description: >-
+        <code>true</code> if <code class="paramref">type</code> is immutable, frozen, or implements a read-only collection interface
+
+        (<code>IReadOnlyCollection&lt;T&gt;</code>, <code>IReadOnlyList&lt;T&gt;</code>, <code>IReadOnlyDictionary&lt;TKey, TValue&gt;</code>,
+
+        <code>IReadOnlySet&lt;T&gt;</code>), or is <code>ReadOnlySpan&lt;T&gt;</code> or <code>ReadOnlyMemory&lt;T&gt;</code>;
+
+        otherwise, <code>false</code>.
+    content.vb: Public Function IsReadOnly(type As ITypeSymbol) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsReadOnly*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsImmutable(Microsoft.CodeAnalysis.ITypeSymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsImmutable(Microsoft.CodeAnalysis.ITypeSymbol)
+  - linkId: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsFrozen(Microsoft.CodeAnalysis.ITypeSymbol)
+    commentId: M:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsFrozen(Microsoft.CodeAnalysis.ITypeSymbol)
+  nameWithType.vb: CollectionContext.IsReadOnly(ITypeSymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsReadOnly(Microsoft.CodeAnalysis.ITypeSymbol)
+  name.vb: IsReadOnly(ITypeSymbol)
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.GetElementType(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.GetElementType(Microsoft.CodeAnalysis.ITypeSymbol)
+  id: GetElementType(Microsoft.CodeAnalysis.ITypeSymbol)
+  parent: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext
+  langs:
+  - csharp
+  - vb
+  name: GetElementType(ITypeSymbol?)
+  nameWithType: CollectionContext.GetElementType(ITypeSymbol?)
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.GetElementType(Microsoft.CodeAnalysis.ITypeSymbol?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: GetElementType
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
+    startLine: 482
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Contexts
+  summary: Gets the element type of a collection type.
+  remarks: >-
+    <p>
+
+    For arrays, returns the <xref href="Microsoft.CodeAnalysis.IArrayTypeSymbol.ElementType" data-throw-if-not-resolved="false"></xref>.
+
+    For generic collection types with a single type argument, returns that type argument.
+
+    For types implementing <code>IEnumerable&lt;T&gt;</code>, returns the <code>T</code> type argument from the interface.
+
+    </p>
+  example: []
+  syntax:
+    content: public ITypeSymbol? GetElementType(ITypeSymbol? type)
+    parameters:
+    - id: type
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: The collection type symbol to analyze.
+    return:
+      type: Microsoft.CodeAnalysis.ITypeSymbol
+      description: >-
+        The element type of the collection if <code class="paramref">type</code> is an array, a recognized generic collection type,
+
+        or implements <xref href="System.Collections.Generic.IEnumerable%601" data-throw-if-not-resolved="false"></xref>; otherwise, <code>null</code>.
+    content.vb: Public Function GetElementType(type As ITypeSymbol) As ITypeSymbol
+  overload: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.GetElementType*
+  nameWithType.vb: CollectionContext.GetElementType(ITypeSymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.GetElementType(Microsoft.CodeAnalysis.ITypeSymbol)
+  name.vb: GetElementType(ITypeSymbol)
+references:
+- uid: ANcpLua.Roslyn.Utilities.Contexts.AwaitableContext
+  commentId: T:ANcpLua.Roslyn.Utilities.Contexts.AwaitableContext
+  href: ANcpLua.Roslyn.Utilities.Contexts.AwaitableContext.html
+  name: AwaitableContext
+  nameWithType: AwaitableContext
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.AwaitableContext
+- uid: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext
+  commentId: T:ANcpLua.Roslyn.Utilities.Contexts.DisposableContext
+  href: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.html
+  name: DisposableContext
+  nameWithType: DisposableContext
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext
+- uid: ANcpLua.Roslyn.Utilities.Contexts.AspNetContext
+  commentId: T:ANcpLua.Roslyn.Utilities.Contexts.AspNetContext
+  href: ANcpLua.Roslyn.Utilities.Contexts.AspNetContext.html
+  name: AspNetContext
+  nameWithType: AspNetContext
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.AspNetContext
+- uid: ANcpLua.Roslyn.Utilities.Contexts
+  commentId: N:ANcpLua.Roslyn.Utilities.Contexts
+  href: ANcpLua.html
+  name: ANcpLua.Roslyn.Utilities.Contexts
+  nameWithType: ANcpLua.Roslyn.Utilities.Contexts
+  fullName: ANcpLua.Roslyn.Utilities.Contexts
+  spec.csharp:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities.Contexts
+    name: Contexts
+    href: ANcpLua.Roslyn.Utilities.Contexts.html
+  spec.vb:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities.Contexts
+    name: Contexts
+    href: ANcpLua.Roslyn.Utilities.Contexts.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+  parent: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+  definition: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  name: ToResultWithDiagnostics<CollectionContext>(CollectionContext)
+  nameWithType: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<CollectionContext>(CollectionContext)
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<ANcpLua.Roslyn.Utilities.Contexts.CollectionContext>(ANcpLua.Roslyn.Utilities.Contexts.CollectionContext)
+  nameWithType.vb: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of CollectionContext)(CollectionContext)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of ANcpLua.Roslyn.Utilities.Contexts.CollectionContext)(ANcpLua.Roslyn.Utilities.Contexts.CollectionContext)
+  name.vb: ToResultWithDiagnostics(Of CollectionContext)(CollectionContext)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(ANcpLua.Roslyn.Utilities.Contexts.CollectionContext)
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext
+    name: CollectionContext
+    href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html
+  - name: '>'
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext
+    name: CollectionContext
+    href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(ANcpLua.Roslyn.Utilities.Contexts.CollectionContext)
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext
+    name: CollectionContext
+    href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html
+  - name: )
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext
+    name: CollectionContext
+    href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  parent: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+  definition: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  name: ToResultWithDiagnostics<CollectionContext>(CollectionContext, ImmutableArray<DiagnosticInfo>)
+  nameWithType: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<CollectionContext>(CollectionContext, ImmutableArray<DiagnosticInfo>)
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<ANcpLua.Roslyn.Utilities.Contexts.CollectionContext>(ANcpLua.Roslyn.Utilities.Contexts.CollectionContext, System.Collections.Immutable.ImmutableArray<ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo>)
+  nameWithType.vb: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of CollectionContext)(CollectionContext, ImmutableArray(Of DiagnosticInfo))
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of ANcpLua.Roslyn.Utilities.Contexts.CollectionContext)(ANcpLua.Roslyn.Utilities.Contexts.CollectionContext, System.Collections.Immutable.ImmutableArray(Of ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo))
+  name.vb: ToResultWithDiagnostics(Of CollectionContext)(CollectionContext, ImmutableArray(Of DiagnosticInfo))
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(ANcpLua.Roslyn.Utilities.Contexts.CollectionContext,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext
+    name: CollectionContext
+    href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html
+  - name: '>'
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext
+    name: CollectionContext
+    href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(ANcpLua.Roslyn.Utilities.Contexts.CollectionContext,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext
+    name: CollectionContext
+    href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html
+  - name: )
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext
+    name: CollectionContext
+    href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: )
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  name: ToResultWithDiagnostics<T>(T)
+  nameWithType: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<T>(T)
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<T>(T)
+  nameWithType.vb: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of T)(T)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of T)(T)
+  name.vb: ToResultWithDiagnostics(Of T)(T)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+  commentId: T:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+  parent: ANcpLua.Roslyn.Utilities.Models
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html
+  name: ResultWithDiagnosticsExtensions
+  nameWithType: ResultWithDiagnosticsExtensions
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+- uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  name: ToResultWithDiagnostics<T>(T, ImmutableArray<DiagnosticInfo>)
+  nameWithType: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<T>(T, ImmutableArray<DiagnosticInfo>)
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<T>(T, System.Collections.Immutable.ImmutableArray<ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo>)
+  nameWithType.vb: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of T)(T, ImmutableArray(Of DiagnosticInfo))
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of T)(T, System.Collections.Immutable.ImmutableArray(Of ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo))
+  name.vb: ToResultWithDiagnostics(Of T)(T, ImmutableArray(Of DiagnosticInfo))
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: )
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Models
+  commentId: N:ANcpLua.Roslyn.Utilities.Models
+  href: ANcpLua.html
+  name: ANcpLua.Roslyn.Utilities.Models
+  nameWithType: ANcpLua.Roslyn.Utilities.Models
+  fullName: ANcpLua.Roslyn.Utilities.Models
+  spec.csharp:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities.Models
+    name: Models
+    href: ANcpLua.Roslyn.Utilities.Models.html
+  spec.vb:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities.Models
+    name: Models
+    href: ANcpLua.Roslyn.Utilities.Models.html
+- uid: System.Collections.IEnumerable
+  commentId: T:System.Collections.IEnumerable
+  parent: System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.ienumerable
+  name: IEnumerable
+  nameWithType: IEnumerable
+  fullName: System.Collections.IEnumerable
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IEnumerable*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IEnumerable
+  href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_IEnumerable
+  name: IEnumerable
+  nameWithType: CollectionContext.IEnumerable
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IEnumerable
+- uid: Microsoft.CodeAnalysis.INamedTypeSymbol
+  commentId: T:Microsoft.CodeAnalysis.INamedTypeSymbol
+  parent: Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.inamedtypesymbol
+  name: INamedTypeSymbol
+  nameWithType: INamedTypeSymbol
+  fullName: Microsoft.CodeAnalysis.INamedTypeSymbol
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+- uid: Microsoft.CodeAnalysis
+  commentId: N:Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.CodeAnalysis
+  nameWithType: Microsoft.CodeAnalysis
+  fullName: Microsoft.CodeAnalysis
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IEnumerableOfT*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IEnumerableOfT
+  href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_IEnumerableOfT
+  name: IEnumerableOfT
+  nameWithType: CollectionContext.IEnumerableOfT
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IEnumerableOfT
+- uid: System.Collections.ICollection
+  commentId: T:System.Collections.ICollection
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.icollection
+  name: ICollection
+  nameWithType: ICollection
+  fullName: System.Collections.ICollection
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ICollection*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ICollection
+  href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_ICollection
+  name: ICollection
+  nameWithType: CollectionContext.ICollection
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ICollection
+- uid: System.Collections.Generic.ICollection`1
+  commentId: T:System.Collections.Generic.ICollection`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  name: ICollection<T>
+  nameWithType: ICollection<T>
+  fullName: System.Collections.Generic.ICollection<T>
+  nameWithType.vb: ICollection(Of T)
+  fullName.vb: System.Collections.Generic.ICollection(Of T)
+  name.vb: ICollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ICollectionOfT*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ICollectionOfT
+  href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_ICollectionOfT
+  name: ICollectionOfT
+  nameWithType: CollectionContext.ICollectionOfT
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ICollectionOfT
+- uid: System.Collections.IList
+  commentId: T:System.Collections.IList
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.ilist
+  name: IList
+  nameWithType: IList
+  fullName: System.Collections.IList
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IList*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IList
+  href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_IList
+  name: IList
+  nameWithType: CollectionContext.IList
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IList
+- uid: System.Collections.Generic.IList`1
+  commentId: T:System.Collections.Generic.IList`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  name: IList<T>
+  nameWithType: IList<T>
+  fullName: System.Collections.Generic.IList<T>
+  nameWithType.vb: IList(Of T)
+  fullName.vb: System.Collections.Generic.IList(Of T)
+  name.vb: IList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IListOfT*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IListOfT
+  href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_IListOfT
+  name: IListOfT
+  nameWithType: CollectionContext.IListOfT
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IListOfT
+- uid: System.Collections.Generic.IReadOnlyCollection`1
+  commentId: T:System.Collections.Generic.IReadOnlyCollection`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  name: IReadOnlyCollection<T>
+  nameWithType: IReadOnlyCollection<T>
+  fullName: System.Collections.Generic.IReadOnlyCollection<T>
+  nameWithType.vb: IReadOnlyCollection(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyCollection(Of T)
+  name.vb: IReadOnlyCollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IReadOnlyCollection*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IReadOnlyCollection
+  href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_IReadOnlyCollection
+  name: IReadOnlyCollection
+  nameWithType: CollectionContext.IReadOnlyCollection
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IReadOnlyCollection
+- uid: System.Collections.Generic.IReadOnlyList`1
+  commentId: T:System.Collections.Generic.IReadOnlyList`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<T>
+  nameWithType: IReadOnlyList<T>
+  fullName: System.Collections.Generic.IReadOnlyList<T>
+  nameWithType.vb: IReadOnlyList(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of T)
+  name.vb: IReadOnlyList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IReadOnlyList*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IReadOnlyList
+  href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_IReadOnlyList
+  name: IReadOnlyList
+  nameWithType: CollectionContext.IReadOnlyList
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IReadOnlyList
+- uid: System.Collections.IDictionary
+  commentId: T:System.Collections.IDictionary
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.idictionary
+  name: IDictionary
+  nameWithType: IDictionary
+  fullName: System.Collections.IDictionary
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IDictionary*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IDictionary
+  href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_IDictionary
+  name: IDictionary
+  nameWithType: CollectionContext.IDictionary
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IDictionary
+- uid: System.Collections.Generic.IDictionary`2
+  commentId: T:System.Collections.Generic.IDictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  name: IDictionary<TKey, TValue>
+  nameWithType: IDictionary<TKey, TValue>
+  fullName: System.Collections.Generic.IDictionary<TKey, TValue>
+  nameWithType.vb: IDictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.IDictionary(Of TKey, TValue)
+  name.vb: IDictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IDictionaryOfTKeyTValue*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IDictionaryOfTKeyTValue
+  href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_IDictionaryOfTKeyTValue
+  name: IDictionaryOfTKeyTValue
+  nameWithType: CollectionContext.IDictionaryOfTKeyTValue
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IDictionaryOfTKeyTValue
+- uid: System.Collections.Generic.IReadOnlyDictionary`2
+  commentId: T:System.Collections.Generic.IReadOnlyDictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  name: IReadOnlyDictionary<TKey, TValue>
+  nameWithType: IReadOnlyDictionary<TKey, TValue>
+  fullName: System.Collections.Generic.IReadOnlyDictionary<TKey, TValue>
+  nameWithType.vb: IReadOnlyDictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.IReadOnlyDictionary(Of TKey, TValue)
+  name.vb: IReadOnlyDictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyDictionary`2
+    name: IReadOnlyDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyDictionary`2
+    name: IReadOnlyDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IReadOnlyDictionary*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IReadOnlyDictionary
+  href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_IReadOnlyDictionary
+  name: IReadOnlyDictionary
+  nameWithType: CollectionContext.IReadOnlyDictionary
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IReadOnlyDictionary
+- uid: System.Collections.Generic.ISet`1
+  commentId: T:System.Collections.Generic.ISet`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iset-1
+  name: ISet<T>
+  nameWithType: ISet<T>
+  fullName: System.Collections.Generic.ISet<T>
+  nameWithType.vb: ISet(Of T)
+  fullName.vb: System.Collections.Generic.ISet(Of T)
+  name.vb: ISet(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.ISet`1
+    name: ISet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iset-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ISet`1
+    name: ISet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.iset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ISet*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ISet
+  href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_ISet
+  name: ISet
+  nameWithType: CollectionContext.ISet
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ISet
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IReadOnlySet*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IReadOnlySet
+  href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_IReadOnlySet
+  name: IReadOnlySet
+  nameWithType: CollectionContext.IReadOnlySet
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IReadOnlySet
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.List*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.List
+  href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_List
+  name: List
+  nameWithType: CollectionContext.List
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.List
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.Dictionary*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.Dictionary
+  href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_Dictionary
+  name: Dictionary
+  nameWithType: CollectionContext.Dictionary
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.Dictionary
+- uid: System.Collections.Generic.HashSet`1
+  commentId: T:System.Collections.Generic.HashSet`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  name: HashSet<T>
+  nameWithType: HashSet<T>
+  fullName: System.Collections.Generic.HashSet<T>
+  nameWithType.vb: HashSet(Of T)
+  fullName.vb: System.Collections.Generic.HashSet(Of T)
+  name.vb: HashSet(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.HashSet`1
+    name: HashSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.HashSet`1
+    name: HashSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.HashSet*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.HashSet
+  href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_HashSet
+  name: HashSet
+  nameWithType: CollectionContext.HashSet
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.HashSet
+- uid: System.Collections.Generic.Queue`1
+  commentId: T:System.Collections.Generic.Queue`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.queue-1
+  name: Queue<T>
+  nameWithType: Queue<T>
+  fullName: System.Collections.Generic.Queue<T>
+  nameWithType.vb: Queue(Of T)
+  fullName.vb: System.Collections.Generic.Queue(Of T)
+  name.vb: Queue(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.Queue`1
+    name: Queue
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.queue-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Queue`1
+    name: Queue
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.queue-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.Queue*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.Queue
+  href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_Queue
+  name: Queue
+  nameWithType: CollectionContext.Queue
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.Queue
+- uid: System.Collections.Generic.Stack`1
+  commentId: T:System.Collections.Generic.Stack`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.stack-1
+  name: Stack<T>
+  nameWithType: Stack<T>
+  fullName: System.Collections.Generic.Stack<T>
+  nameWithType.vb: Stack(Of T)
+  fullName.vb: System.Collections.Generic.Stack(Of T)
+  name.vb: Stack(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.Stack`1
+    name: Stack
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.stack-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Stack`1
+    name: Stack
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.stack-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.Stack*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.Stack
+  href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_Stack
+  name: Stack
+  nameWithType: CollectionContext.Stack
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.Stack
+- uid: System.Collections.Generic.LinkedList`1
+  commentId: T:System.Collections.Generic.LinkedList`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.linkedlist-1
+  name: LinkedList<T>
+  nameWithType: LinkedList<T>
+  fullName: System.Collections.Generic.LinkedList<T>
+  nameWithType.vb: LinkedList(Of T)
+  fullName.vb: System.Collections.Generic.LinkedList(Of T)
+  name.vb: LinkedList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.LinkedList`1
+    name: LinkedList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.linkedlist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.LinkedList`1
+    name: LinkedList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.linkedlist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.LinkedList*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.LinkedList
+  href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_LinkedList
+  name: LinkedList
+  nameWithType: CollectionContext.LinkedList
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.LinkedList
+- uid: System.Collections.Immutable.ImmutableArray`1
+  commentId: T:System.Collections.Immutable.ImmutableArray`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  name: ImmutableArray<T>
+  nameWithType: ImmutableArray<T>
+  fullName: System.Collections.Immutable.ImmutableArray<T>
+  nameWithType.vb: ImmutableArray(Of T)
+  fullName.vb: System.Collections.Immutable.ImmutableArray(Of T)
+  name.vb: ImmutableArray(Of T)
+  spec.csharp:
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ImmutableArray*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ImmutableArray
+  href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_ImmutableArray
+  name: ImmutableArray
+  nameWithType: CollectionContext.ImmutableArray
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ImmutableArray
+- uid: System.Collections.Immutable.ImmutableList`1
+  commentId: T:System.Collections.Immutable.ImmutableList`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablelist-1
+  name: ImmutableList<T>
+  nameWithType: ImmutableList<T>
+  fullName: System.Collections.Immutable.ImmutableList<T>
+  nameWithType.vb: ImmutableList(Of T)
+  fullName.vb: System.Collections.Immutable.ImmutableList(Of T)
+  name.vb: ImmutableList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Immutable.ImmutableList`1
+    name: ImmutableList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablelist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Immutable.ImmutableList`1
+    name: ImmutableList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablelist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ImmutableList*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ImmutableList
+  href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_ImmutableList
+  name: ImmutableList
+  nameWithType: CollectionContext.ImmutableList
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ImmutableList
+- uid: System.Collections.Immutable.ImmutableDictionary`2
+  commentId: T:System.Collections.Immutable.ImmutableDictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutabledictionary-2
+  name: ImmutableDictionary<TKey, TValue>
+  nameWithType: ImmutableDictionary<TKey, TValue>
+  fullName: System.Collections.Immutable.ImmutableDictionary<TKey, TValue>
+  nameWithType.vb: ImmutableDictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Immutable.ImmutableDictionary(Of TKey, TValue)
+  name.vb: ImmutableDictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Immutable.ImmutableDictionary`2
+    name: ImmutableDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutabledictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Immutable.ImmutableDictionary`2
+    name: ImmutableDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutabledictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ImmutableDictionary*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ImmutableDictionary
+  href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_ImmutableDictionary
+  name: ImmutableDictionary
+  nameWithType: CollectionContext.ImmutableDictionary
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ImmutableDictionary
+- uid: System.Collections.Immutable.ImmutableHashSet`1
+  commentId: T:System.Collections.Immutable.ImmutableHashSet`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablehashset-1
+  name: ImmutableHashSet<T>
+  nameWithType: ImmutableHashSet<T>
+  fullName: System.Collections.Immutable.ImmutableHashSet<T>
+  nameWithType.vb: ImmutableHashSet(Of T)
+  fullName.vb: System.Collections.Immutable.ImmutableHashSet(Of T)
+  name.vb: ImmutableHashSet(Of T)
+  spec.csharp:
+  - uid: System.Collections.Immutable.ImmutableHashSet`1
+    name: ImmutableHashSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablehashset-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Immutable.ImmutableHashSet`1
+    name: ImmutableHashSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablehashset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ImmutableHashSet*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ImmutableHashSet
+  href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_ImmutableHashSet
+  name: ImmutableHashSet
+  nameWithType: CollectionContext.ImmutableHashSet
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ImmutableHashSet
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.FrozenSet*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.FrozenSet
+  href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_FrozenSet
+  name: FrozenSet
+  nameWithType: CollectionContext.FrozenSet
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.FrozenSet
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.FrozenDictionary*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.FrozenDictionary
+  href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_FrozenDictionary
+  name: FrozenDictionary
+  nameWithType: CollectionContext.FrozenDictionary
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.FrozenDictionary
+- uid: System.ArraySegment`1
+  commentId: T:System.ArraySegment`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.arraysegment-1
+  name: ArraySegment<T>
+  nameWithType: ArraySegment<T>
+  fullName: System.ArraySegment<T>
+  nameWithType.vb: ArraySegment(Of T)
+  fullName.vb: System.ArraySegment(Of T)
+  name.vb: ArraySegment(Of T)
+  spec.csharp:
+  - uid: System.ArraySegment`1
+    name: ArraySegment
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.arraysegment-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.ArraySegment`1
+    name: ArraySegment
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.arraysegment-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ArraySegment*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ArraySegment
+  href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_ArraySegment
+  name: ArraySegment
+  nameWithType: CollectionContext.ArraySegment
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ArraySegment
+- uid: System.Span`1
+  commentId: T:System.Span`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.span-1
+  name: Span<T>
+  nameWithType: Span<T>
+  fullName: System.Span<T>
+  nameWithType.vb: Span(Of T)
+  fullName.vb: System.Span(Of T)
+  name.vb: Span(Of T)
+  spec.csharp:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.Span*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.Span
+  href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_Span
+  name: Span
+  nameWithType: CollectionContext.Span
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.Span
+- uid: System.ReadOnlySpan`1
+  commentId: T:System.ReadOnlySpan`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  name: ReadOnlySpan<T>
+  nameWithType: ReadOnlySpan<T>
+  fullName: System.ReadOnlySpan<T>
+  nameWithType.vb: ReadOnlySpan(Of T)
+  fullName.vb: System.ReadOnlySpan(Of T)
+  name.vb: ReadOnlySpan(Of T)
+  spec.csharp:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ReadOnlySpan*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ReadOnlySpan
+  href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_ReadOnlySpan
+  name: ReadOnlySpan
+  nameWithType: CollectionContext.ReadOnlySpan
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ReadOnlySpan
+- uid: System.Memory`1
+  commentId: T:System.Memory`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.memory-1
+  name: Memory<T>
+  nameWithType: Memory<T>
+  fullName: System.Memory<T>
+  nameWithType.vb: Memory(Of T)
+  fullName.vb: System.Memory(Of T)
+  name.vb: Memory(Of T)
+  spec.csharp:
+  - uid: System.Memory`1
+    name: Memory
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.memory-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Memory`1
+    name: Memory
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.memory-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.Memory*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.Memory
+  href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_Memory
+  name: Memory
+  nameWithType: CollectionContext.Memory
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.Memory
+- uid: System.ReadOnlyMemory`1
+  commentId: T:System.ReadOnlyMemory`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.readonlymemory-1
+  name: ReadOnlyMemory<T>
+  nameWithType: ReadOnlyMemory<T>
+  fullName: System.ReadOnlyMemory<T>
+  nameWithType.vb: ReadOnlyMemory(Of T)
+  fullName.vb: System.ReadOnlyMemory(Of T)
+  name.vb: ReadOnlyMemory(Of T)
+  spec.csharp:
+  - uid: System.ReadOnlyMemory`1
+    name: ReadOnlyMemory
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlymemory-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlyMemory`1
+    name: ReadOnlyMemory
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlymemory-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ReadOnlyMemory*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ReadOnlyMemory
+  href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_ReadOnlyMemory
+  name: ReadOnlyMemory
+  nameWithType: CollectionContext.ReadOnlyMemory
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.ReadOnlyMemory
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext
+  commentId: T:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext
+  href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html
+  name: CollectionContext
+  nameWithType: CollectionContext
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.#ctor*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.#ctor
+  href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext__ctor_Microsoft_CodeAnalysis_Compilation_
+  name: CollectionContext
+  nameWithType: CollectionContext.CollectionContext
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.CollectionContext
+  nameWithType.vb: CollectionContext.New
+  fullName.vb: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.New
+  name.vb: New
+- uid: Microsoft.CodeAnalysis.Compilation
+  commentId: T:Microsoft.CodeAnalysis.Compilation
+  parent: Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.compilation
+  name: Compilation
+  nameWithType: Compilation
+  fullName: Microsoft.CodeAnalysis.Compilation
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsCollection(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsCollection(Microsoft.CodeAnalysis.ITypeSymbol)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_IsCollection_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsCollection(ITypeSymbol)
+  nameWithType: CollectionContext.IsCollection(ITypeSymbol)
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsCollection(Microsoft.CodeAnalysis.ITypeSymbol)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsCollection(Microsoft.CodeAnalysis.ITypeSymbol)
+    name: IsCollection
+    href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_IsCollection_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsCollection(Microsoft.CodeAnalysis.ITypeSymbol)
+    name: IsCollection
+    href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_IsCollection_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsList(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsList(Microsoft.CodeAnalysis.ITypeSymbol)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_IsList_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsList(ITypeSymbol)
+  nameWithType: CollectionContext.IsList(ITypeSymbol)
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsList(Microsoft.CodeAnalysis.ITypeSymbol)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsList(Microsoft.CodeAnalysis.ITypeSymbol)
+    name: IsList
+    href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_IsList_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsList(Microsoft.CodeAnalysis.ITypeSymbol)
+    name: IsList
+    href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_IsList_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsEnumerable*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsEnumerable
+  href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_IsEnumerable_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsEnumerable
+  nameWithType: CollectionContext.IsEnumerable
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsEnumerable
+- uid: Microsoft.CodeAnalysis.ITypeSymbol
+  commentId: T:Microsoft.CodeAnalysis.ITypeSymbol
+  parent: Microsoft.CodeAnalysis
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  name: ITypeSymbol
+  nameWithType: ITypeSymbol
+  fullName: Microsoft.CodeAnalysis.ITypeSymbol
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsEnumerable(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsEnumerable(Microsoft.CodeAnalysis.ITypeSymbol)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_IsEnumerable_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsEnumerable(ITypeSymbol)
+  nameWithType: CollectionContext.IsEnumerable(ITypeSymbol)
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsEnumerable(Microsoft.CodeAnalysis.ITypeSymbol)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsEnumerable(Microsoft.CodeAnalysis.ITypeSymbol)
+    name: IsEnumerable
+    href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_IsEnumerable_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsEnumerable(Microsoft.CodeAnalysis.ITypeSymbol)
+    name: IsEnumerable
+    href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_IsEnumerable_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsCollection*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsCollection
+  href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_IsCollection_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsCollection
+  nameWithType: CollectionContext.IsCollection
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsCollection
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsList*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsList
+  href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_IsList_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsList
+  nameWithType: CollectionContext.IsList
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsList
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsSet(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsSet(Microsoft.CodeAnalysis.ITypeSymbol)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_IsSet_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsSet(ITypeSymbol)
+  nameWithType: CollectionContext.IsSet(ITypeSymbol)
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsSet(Microsoft.CodeAnalysis.ITypeSymbol)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsSet(Microsoft.CodeAnalysis.ITypeSymbol)
+    name: IsSet
+    href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_IsSet_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsSet(Microsoft.CodeAnalysis.ITypeSymbol)
+    name: IsSet
+    href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_IsSet_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsDictionary*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsDictionary
+  href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_IsDictionary_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsDictionary
+  nameWithType: CollectionContext.IsDictionary
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsDictionary
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsDictionary(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsDictionary(Microsoft.CodeAnalysis.ITypeSymbol)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_IsDictionary_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsDictionary(ITypeSymbol)
+  nameWithType: CollectionContext.IsDictionary(ITypeSymbol)
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsDictionary(Microsoft.CodeAnalysis.ITypeSymbol)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsDictionary(Microsoft.CodeAnalysis.ITypeSymbol)
+    name: IsDictionary
+    href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_IsDictionary_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsDictionary(Microsoft.CodeAnalysis.ITypeSymbol)
+    name: IsDictionary
+    href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_IsDictionary_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsSet*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsSet
+  href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_IsSet_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsSet
+  nameWithType: CollectionContext.IsSet
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsSet
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsFrozen(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsFrozen(Microsoft.CodeAnalysis.ITypeSymbol)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_IsFrozen_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsFrozen(ITypeSymbol)
+  nameWithType: CollectionContext.IsFrozen(ITypeSymbol)
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsFrozen(Microsoft.CodeAnalysis.ITypeSymbol)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsFrozen(Microsoft.CodeAnalysis.ITypeSymbol)
+    name: IsFrozen
+    href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_IsFrozen_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsFrozen(Microsoft.CodeAnalysis.ITypeSymbol)
+    name: IsFrozen
+    href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_IsFrozen_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsReadOnly(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsReadOnly(Microsoft.CodeAnalysis.ITypeSymbol)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_IsReadOnly_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsReadOnly(ITypeSymbol)
+  nameWithType: CollectionContext.IsReadOnly(ITypeSymbol)
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsReadOnly(Microsoft.CodeAnalysis.ITypeSymbol)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsReadOnly(Microsoft.CodeAnalysis.ITypeSymbol)
+    name: IsReadOnly
+    href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_IsReadOnly_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsReadOnly(Microsoft.CodeAnalysis.ITypeSymbol)
+    name: IsReadOnly
+    href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_IsReadOnly_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsImmutable*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsImmutable
+  href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_IsImmutable_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsImmutable
+  nameWithType: CollectionContext.IsImmutable
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsImmutable
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsImmutable(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsImmutable(Microsoft.CodeAnalysis.ITypeSymbol)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_IsImmutable_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsImmutable(ITypeSymbol)
+  nameWithType: CollectionContext.IsImmutable(ITypeSymbol)
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsImmutable(Microsoft.CodeAnalysis.ITypeSymbol)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsImmutable(Microsoft.CodeAnalysis.ITypeSymbol)
+    name: IsImmutable
+    href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_IsImmutable_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsImmutable(Microsoft.CodeAnalysis.ITypeSymbol)
+    name: IsImmutable
+    href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_IsImmutable_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsFrozen*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsFrozen
+  href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_IsFrozen_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsFrozen
+  nameWithType: CollectionContext.IsFrozen
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsFrozen
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsMemoryLike(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsMemoryLike(Microsoft.CodeAnalysis.ITypeSymbol)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_IsMemoryLike_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsMemoryLike(ITypeSymbol)
+  nameWithType: CollectionContext.IsMemoryLike(ITypeSymbol)
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsMemoryLike(Microsoft.CodeAnalysis.ITypeSymbol)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsMemoryLike(Microsoft.CodeAnalysis.ITypeSymbol)
+    name: IsMemoryLike
+    href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_IsMemoryLike_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsMemoryLike(Microsoft.CodeAnalysis.ITypeSymbol)
+    name: IsMemoryLike
+    href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_IsMemoryLike_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsSpanLike*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsSpanLike
+  href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_IsSpanLike_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsSpanLike
+  nameWithType: CollectionContext.IsSpanLike
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsSpanLike
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsSpanLike(Microsoft.CodeAnalysis.ITypeSymbol)
+  commentId: M:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsSpanLike(Microsoft.CodeAnalysis.ITypeSymbol)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_IsSpanLike_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsSpanLike(ITypeSymbol)
+  nameWithType: CollectionContext.IsSpanLike(ITypeSymbol)
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsSpanLike(Microsoft.CodeAnalysis.ITypeSymbol)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsSpanLike(Microsoft.CodeAnalysis.ITypeSymbol)
+    name: IsSpanLike
+    href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_IsSpanLike_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsSpanLike(Microsoft.CodeAnalysis.ITypeSymbol)
+    name: IsSpanLike
+    href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_IsSpanLike_Microsoft_CodeAnalysis_ITypeSymbol_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.ITypeSymbol
+    name: ITypeSymbol
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.itypesymbol
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsMemoryLike*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsMemoryLike
+  href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_IsMemoryLike_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsMemoryLike
+  nameWithType: CollectionContext.IsMemoryLike
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsMemoryLike
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.HasCountProperty*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.HasCountProperty
+  href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_HasCountProperty_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: HasCountProperty
+  nameWithType: CollectionContext.HasCountProperty
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.HasCountProperty
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsReadOnly*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsReadOnly
+  href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_IsReadOnly_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: IsReadOnly
+  nameWithType: CollectionContext.IsReadOnly
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsReadOnly
+- uid: Microsoft.CodeAnalysis.IArrayTypeSymbol.ElementType
+  commentId: P:Microsoft.CodeAnalysis.IArrayTypeSymbol.ElementType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.iarraytypesymbol.elementtype
+  name: ElementType
+  nameWithType: IArrayTypeSymbol.ElementType
+  fullName: Microsoft.CodeAnalysis.IArrayTypeSymbol.ElementType
+- uid: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.GetElementType*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.GetElementType
+  href: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.html#ANcpLua_Roslyn_Utilities_Contexts_CollectionContext_GetElementType_Microsoft_CodeAnalysis_ITypeSymbol_
+  name: GetElementType
+  nameWithType: CollectionContext.GetElementType
+  fullName: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.GetElementType

@@ -1,0 +1,434 @@
+### YamlMime:ManagedReference
+items:
+- uid: ANcpLua.Roslyn.Utilities
+  commentId: N:ANcpLua.Roslyn.Utilities
+  id: ANcpLua.Roslyn.Utilities
+  children:
+  - ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions
+  - ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions
+  - ANcpLua.Roslyn.Utilities.CompilationExtensions
+  - ANcpLua.Roslyn.Utilities.ConvertExtensions
+  - ANcpLua.Roslyn.Utilities.DiagnosticFlow
+  - ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions
+  - ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+  - ANcpLua.Roslyn.Utilities.DictionaryExtensions
+  - ANcpLua.Roslyn.Utilities.DocumentationExtensions
+  - ANcpLua.Roslyn.Utilities.EnumerableExtensions
+  - ANcpLua.Roslyn.Utilities.EqualityExtensions
+  - ANcpLua.Roslyn.Utilities.EquatableArray
+  - ANcpLua.Roslyn.Utilities.EquatableArrayExtensions
+  - ANcpLua.Roslyn.Utilities.EquatableArray`1
+  - ANcpLua.Roslyn.Utilities.GeneratedCodeHelpers
+  - ANcpLua.Roslyn.Utilities.HashCombiner
+  - ANcpLua.Roslyn.Utilities.IncrementalValuesProviderExtensions
+  - ANcpLua.Roslyn.Utilities.IndentScope
+  - ANcpLua.Roslyn.Utilities.IndentedStringBuilder
+  - ANcpLua.Roslyn.Utilities.InvocationExtensions
+  - ANcpLua.Roslyn.Utilities.LanguageVersionExtensions
+  - ANcpLua.Roslyn.Utilities.ListExtensions
+  - ANcpLua.Roslyn.Utilities.LocationExtensions
+  - ANcpLua.Roslyn.Utilities.MethodSymbolExtensions
+  - ANcpLua.Roslyn.Utilities.NamespaceExtensions
+  - ANcpLua.Roslyn.Utilities.OperationExtensions
+  - ANcpLua.Roslyn.Utilities.OverloadFinder
+  - ANcpLua.Roslyn.Utilities.SemanticGuard
+  - ANcpLua.Roslyn.Utilities.SemanticGuardExtensions
+  - ANcpLua.Roslyn.Utilities.SemanticGuard`1
+  - ANcpLua.Roslyn.Utilities.SemanticModelExtensions
+  - ANcpLua.Roslyn.Utilities.SourceProductionContextExtensions
+  - ANcpLua.Roslyn.Utilities.SpanExtensions
+  - ANcpLua.Roslyn.Utilities.StringExtensions
+  - ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEntry
+  - ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEnumerator
+  - ANcpLua.Roslyn.Utilities.SymbolExtensions
+  - ANcpLua.Roslyn.Utilities.SyntaxExtensions
+  - ANcpLua.Roslyn.Utilities.SyntaxValueProviderExtensions
+  - ANcpLua.Roslyn.Utilities.TypeSymbolExtensions
+  - ANcpLua.Roslyn.Utilities.ValueTupleExtensions
+  langs:
+  - csharp
+  - vb
+  name: ANcpLua.Roslyn.Utilities
+  nameWithType: ANcpLua.Roslyn.Utilities
+  fullName: ANcpLua.Roslyn.Utilities
+  type: Namespace
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+references:
+- uid: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions
+  commentId: T:ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions
+  href: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions.html
+  name: AnalyzerConfigOptionsProviderExtensions
+  nameWithType: AnalyzerConfigOptionsProviderExtensions
+  fullName: ANcpLua.Roslyn.Utilities.AnalyzerConfigOptionsProviderExtensions
+- uid: ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions
+  commentId: T:ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions
+  href: ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions.html
+  name: AnalyzerOptionsExtensions
+  nameWithType: AnalyzerOptionsExtensions
+  fullName: ANcpLua.Roslyn.Utilities.AnalyzerOptionsExtensions
+- uid: ANcpLua.Roslyn.Utilities.GeneratedCodeHelpers
+  commentId: T:ANcpLua.Roslyn.Utilities.GeneratedCodeHelpers
+  href: ANcpLua.Roslyn.Utilities.GeneratedCodeHelpers.html
+  name: GeneratedCodeHelpers
+  nameWithType: GeneratedCodeHelpers
+  fullName: ANcpLua.Roslyn.Utilities.GeneratedCodeHelpers
+- uid: ANcpLua.Roslyn.Utilities.IndentedStringBuilder
+  commentId: T:ANcpLua.Roslyn.Utilities.IndentedStringBuilder
+  parent: ANcpLua.Roslyn.Utilities
+  href: ANcpLua.Roslyn.Utilities.IndentedStringBuilder.html
+  name: IndentedStringBuilder
+  nameWithType: IndentedStringBuilder
+  fullName: ANcpLua.Roslyn.Utilities.IndentedStringBuilder
+- uid: ANcpLua.Roslyn.Utilities.IndentScope
+  commentId: T:ANcpLua.Roslyn.Utilities.IndentScope
+  parent: ANcpLua.Roslyn.Utilities
+  href: ANcpLua.Roslyn.Utilities.IndentScope.html
+  name: IndentScope
+  nameWithType: IndentScope
+  fullName: ANcpLua.Roslyn.Utilities.IndentScope
+- uid: ANcpLua.Roslyn.Utilities.CompilationExtensions
+  commentId: T:ANcpLua.Roslyn.Utilities.CompilationExtensions
+  href: ANcpLua.Roslyn.Utilities.CompilationExtensions.html
+  name: CompilationExtensions
+  nameWithType: CompilationExtensions
+  fullName: ANcpLua.Roslyn.Utilities.CompilationExtensions
+- uid: ANcpLua.Roslyn.Utilities.ConvertExtensions
+  commentId: T:ANcpLua.Roslyn.Utilities.ConvertExtensions
+  href: ANcpLua.Roslyn.Utilities.ConvertExtensions.html
+  name: ConvertExtensions
+  nameWithType: ConvertExtensions
+  fullName: ANcpLua.Roslyn.Utilities.ConvertExtensions
+- uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+  commentId: T:ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+  parent: ANcpLua.Roslyn.Utilities
+  href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html
+  name: DiagnosticFlow<T>
+  nameWithType: DiagnosticFlow<T>
+  fullName: ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>
+  nameWithType.vb: DiagnosticFlow(Of T)
+  fullName.vb: ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T)
+  name.vb: DiagnosticFlow(Of T)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+    name: DiagnosticFlow
+    href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+    name: DiagnosticFlow
+    href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow
+  commentId: T:ANcpLua.Roslyn.Utilities.DiagnosticFlow
+  href: ANcpLua.Roslyn.Utilities.DiagnosticFlow.html
+  name: DiagnosticFlow
+  nameWithType: DiagnosticFlow
+  fullName: ANcpLua.Roslyn.Utilities.DiagnosticFlow
+- uid: ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions
+  commentId: T:ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions
+  parent: ANcpLua.Roslyn.Utilities
+  href: ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions.html
+  name: DiagnosticFlowReportingExtensions
+  nameWithType: DiagnosticFlowReportingExtensions
+  fullName: ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions
+- uid: ANcpLua.Roslyn.Utilities.DictionaryExtensions
+  commentId: T:ANcpLua.Roslyn.Utilities.DictionaryExtensions
+  href: ANcpLua.Roslyn.Utilities.DictionaryExtensions.html
+  name: DictionaryExtensions
+  nameWithType: DictionaryExtensions
+  fullName: ANcpLua.Roslyn.Utilities.DictionaryExtensions
+- uid: ANcpLua.Roslyn.Utilities.DocumentationExtensions
+  commentId: T:ANcpLua.Roslyn.Utilities.DocumentationExtensions
+  href: ANcpLua.Roslyn.Utilities.DocumentationExtensions.html
+  name: DocumentationExtensions
+  nameWithType: DocumentationExtensions
+  fullName: ANcpLua.Roslyn.Utilities.DocumentationExtensions
+- uid: ANcpLua.Roslyn.Utilities.EnumerableExtensions
+  commentId: T:ANcpLua.Roslyn.Utilities.EnumerableExtensions
+  parent: ANcpLua.Roslyn.Utilities
+  href: ANcpLua.Roslyn.Utilities.EnumerableExtensions.html
+  name: EnumerableExtensions
+  nameWithType: EnumerableExtensions
+  fullName: ANcpLua.Roslyn.Utilities.EnumerableExtensions
+- uid: ANcpLua.Roslyn.Utilities.SpanExtensions
+  commentId: T:ANcpLua.Roslyn.Utilities.SpanExtensions
+  href: ANcpLua.Roslyn.Utilities.SpanExtensions.html
+  name: SpanExtensions
+  nameWithType: SpanExtensions
+  fullName: ANcpLua.Roslyn.Utilities.SpanExtensions
+- uid: ANcpLua.Roslyn.Utilities.ValueTupleExtensions
+  commentId: T:ANcpLua.Roslyn.Utilities.ValueTupleExtensions
+  href: ANcpLua.Roslyn.Utilities.ValueTupleExtensions.html
+  name: ValueTupleExtensions
+  nameWithType: ValueTupleExtensions
+  fullName: ANcpLua.Roslyn.Utilities.ValueTupleExtensions
+- uid: ANcpLua.Roslyn.Utilities.EquatableArray
+  commentId: T:ANcpLua.Roslyn.Utilities.EquatableArray
+  href: ANcpLua.Roslyn.Utilities.EquatableArray.html
+  name: EquatableArray
+  nameWithType: EquatableArray
+  fullName: ANcpLua.Roslyn.Utilities.EquatableArray
+- uid: ANcpLua.Roslyn.Utilities.EquatableArray`1
+  commentId: T:ANcpLua.Roslyn.Utilities.EquatableArray`1
+  parent: ANcpLua.Roslyn.Utilities
+  href: ANcpLua.Roslyn.Utilities.EquatableArray-1.html
+  name: EquatableArray<T>
+  nameWithType: EquatableArray<T>
+  fullName: ANcpLua.Roslyn.Utilities.EquatableArray<T>
+  nameWithType.vb: EquatableArray(Of T)
+  fullName.vb: ANcpLua.Roslyn.Utilities.EquatableArray(Of T)
+  name.vb: EquatableArray(Of T)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.EquatableArray`1
+    name: EquatableArray
+    href: ANcpLua.Roslyn.Utilities.EquatableArray-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.EquatableArray`1
+    name: EquatableArray
+    href: ANcpLua.Roslyn.Utilities.EquatableArray-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.EquatableArrayExtensions
+  commentId: T:ANcpLua.Roslyn.Utilities.EquatableArrayExtensions
+  parent: ANcpLua.Roslyn.Utilities
+  href: ANcpLua.Roslyn.Utilities.EquatableArrayExtensions.html
+  name: EquatableArrayExtensions
+  nameWithType: EquatableArrayExtensions
+  fullName: ANcpLua.Roslyn.Utilities.EquatableArrayExtensions
+- uid: ANcpLua.Roslyn.Utilities.HashCombiner
+  commentId: T:ANcpLua.Roslyn.Utilities.HashCombiner
+  parent: ANcpLua.Roslyn.Utilities
+  href: ANcpLua.Roslyn.Utilities.HashCombiner.html
+  name: HashCombiner
+  nameWithType: HashCombiner
+  fullName: ANcpLua.Roslyn.Utilities.HashCombiner
+- uid: ANcpLua.Roslyn.Utilities.EqualityExtensions
+  commentId: T:ANcpLua.Roslyn.Utilities.EqualityExtensions
+  parent: ANcpLua.Roslyn.Utilities
+  href: ANcpLua.Roslyn.Utilities.EqualityExtensions.html
+  name: EqualityExtensions
+  nameWithType: EqualityExtensions
+  fullName: ANcpLua.Roslyn.Utilities.EqualityExtensions
+- uid: ANcpLua.Roslyn.Utilities.IncrementalValuesProviderExtensions
+  commentId: T:ANcpLua.Roslyn.Utilities.IncrementalValuesProviderExtensions
+  href: ANcpLua.Roslyn.Utilities.IncrementalValuesProviderExtensions.html
+  name: IncrementalValuesProviderExtensions
+  nameWithType: IncrementalValuesProviderExtensions
+  fullName: ANcpLua.Roslyn.Utilities.IncrementalValuesProviderExtensions
+- uid: ANcpLua.Roslyn.Utilities.InvocationExtensions
+  commentId: T:ANcpLua.Roslyn.Utilities.InvocationExtensions
+  href: ANcpLua.Roslyn.Utilities.InvocationExtensions.html
+  name: InvocationExtensions
+  nameWithType: InvocationExtensions
+  fullName: ANcpLua.Roslyn.Utilities.InvocationExtensions
+- uid: ANcpLua.Roslyn.Utilities.LanguageVersionExtensions
+  commentId: T:ANcpLua.Roslyn.Utilities.LanguageVersionExtensions
+  href: ANcpLua.Roslyn.Utilities.LanguageVersionExtensions.html
+  name: LanguageVersionExtensions
+  nameWithType: LanguageVersionExtensions
+  fullName: ANcpLua.Roslyn.Utilities.LanguageVersionExtensions
+- uid: ANcpLua.Roslyn.Utilities.ListExtensions
+  commentId: T:ANcpLua.Roslyn.Utilities.ListExtensions
+  href: ANcpLua.Roslyn.Utilities.ListExtensions.html
+  name: ListExtensions
+  nameWithType: ListExtensions
+  fullName: ANcpLua.Roslyn.Utilities.ListExtensions
+- uid: ANcpLua.Roslyn.Utilities.LocationExtensions
+  commentId: T:ANcpLua.Roslyn.Utilities.LocationExtensions
+  href: ANcpLua.Roslyn.Utilities.LocationExtensions.html
+  name: LocationExtensions
+  nameWithType: LocationExtensions
+  fullName: ANcpLua.Roslyn.Utilities.LocationExtensions
+- uid: ANcpLua.Roslyn.Utilities.MethodSymbolExtensions
+  commentId: T:ANcpLua.Roslyn.Utilities.MethodSymbolExtensions
+  href: ANcpLua.Roslyn.Utilities.MethodSymbolExtensions.html
+  name: MethodSymbolExtensions
+  nameWithType: MethodSymbolExtensions
+  fullName: ANcpLua.Roslyn.Utilities.MethodSymbolExtensions
+- uid: ANcpLua.Roslyn.Utilities.NamespaceExtensions
+  commentId: T:ANcpLua.Roslyn.Utilities.NamespaceExtensions
+  href: ANcpLua.Roslyn.Utilities.NamespaceExtensions.html
+  name: NamespaceExtensions
+  nameWithType: NamespaceExtensions
+  fullName: ANcpLua.Roslyn.Utilities.NamespaceExtensions
+- uid: ANcpLua.Roslyn.Utilities.OperationExtensions
+  commentId: T:ANcpLua.Roslyn.Utilities.OperationExtensions
+  href: ANcpLua.Roslyn.Utilities.OperationExtensions.html
+  name: OperationExtensions
+  nameWithType: OperationExtensions
+  fullName: ANcpLua.Roslyn.Utilities.OperationExtensions
+- uid: ANcpLua.Roslyn.Utilities.OverloadFinder
+  commentId: T:ANcpLua.Roslyn.Utilities.OverloadFinder
+  href: ANcpLua.Roslyn.Utilities.OverloadFinder.html
+  name: OverloadFinder
+  nameWithType: OverloadFinder
+  fullName: ANcpLua.Roslyn.Utilities.OverloadFinder
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuard`1
+  commentId: T:ANcpLua.Roslyn.Utilities.SemanticGuard`1
+  parent: ANcpLua.Roslyn.Utilities
+  href: ANcpLua.Roslyn.Utilities.SemanticGuard-1.html
+  name: SemanticGuard<T>
+  nameWithType: SemanticGuard<T>
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuard<T>
+  nameWithType.vb: SemanticGuard(Of T)
+  fullName.vb: ANcpLua.Roslyn.Utilities.SemanticGuard(Of T)
+  name.vb: SemanticGuard(Of T)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.SemanticGuard`1
+    name: SemanticGuard
+    href: ANcpLua.Roslyn.Utilities.SemanticGuard-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.SemanticGuard`1
+    name: SemanticGuard
+    href: ANcpLua.Roslyn.Utilities.SemanticGuard-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions
+  commentId: T:ANcpLua.Roslyn.Utilities.SemanticGuardExtensions
+  href: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions.html
+  name: SemanticGuardExtensions
+  nameWithType: SemanticGuardExtensions
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuardExtensions
+- uid: ANcpLua.Roslyn.Utilities.SemanticGuard
+  commentId: T:ANcpLua.Roslyn.Utilities.SemanticGuard
+  href: ANcpLua.Roslyn.Utilities.SemanticGuard.html
+  name: SemanticGuard
+  nameWithType: SemanticGuard
+  fullName: ANcpLua.Roslyn.Utilities.SemanticGuard
+- uid: ANcpLua.Roslyn.Utilities.SemanticModelExtensions
+  commentId: T:ANcpLua.Roslyn.Utilities.SemanticModelExtensions
+  href: ANcpLua.Roslyn.Utilities.SemanticModelExtensions.html
+  name: SemanticModelExtensions
+  nameWithType: SemanticModelExtensions
+  fullName: ANcpLua.Roslyn.Utilities.SemanticModelExtensions
+- uid: ANcpLua.Roslyn.Utilities.SourceProductionContextExtensions
+  commentId: T:ANcpLua.Roslyn.Utilities.SourceProductionContextExtensions
+  href: ANcpLua.Roslyn.Utilities.SourceProductionContextExtensions.html
+  name: SourceProductionContextExtensions
+  nameWithType: SourceProductionContextExtensions
+  fullName: ANcpLua.Roslyn.Utilities.SourceProductionContextExtensions
+- uid: ANcpLua.Roslyn.Utilities.StringExtensions
+  commentId: T:ANcpLua.Roslyn.Utilities.StringExtensions
+  href: ANcpLua.Roslyn.Utilities.StringExtensions.html
+  name: StringExtensions
+  nameWithType: StringExtensions
+  fullName: ANcpLua.Roslyn.Utilities.StringExtensions
+- uid: ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEnumerator
+  commentId: T:ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEnumerator
+  parent: ANcpLua.Roslyn.Utilities
+  href: ANcpLua.Roslyn.Utilities.StringExtensions.html
+  name: StringExtensions.LineSplitEnumerator
+  nameWithType: StringExtensions.LineSplitEnumerator
+  fullName: ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEnumerator
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.StringExtensions
+    name: StringExtensions
+    href: ANcpLua.Roslyn.Utilities.StringExtensions.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEnumerator
+    name: LineSplitEnumerator
+    href: ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEnumerator.html
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.StringExtensions
+    name: StringExtensions
+    href: ANcpLua.Roslyn.Utilities.StringExtensions.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEnumerator
+    name: LineSplitEnumerator
+    href: ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEnumerator.html
+- uid: ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEntry
+  commentId: T:ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEntry
+  parent: ANcpLua.Roslyn.Utilities
+  href: ANcpLua.Roslyn.Utilities.StringExtensions.html
+  name: StringExtensions.LineSplitEntry
+  nameWithType: StringExtensions.LineSplitEntry
+  fullName: ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEntry
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.StringExtensions
+    name: StringExtensions
+    href: ANcpLua.Roslyn.Utilities.StringExtensions.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEntry
+    name: LineSplitEntry
+    href: ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEntry.html
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.StringExtensions
+    name: StringExtensions
+    href: ANcpLua.Roslyn.Utilities.StringExtensions.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEntry
+    name: LineSplitEntry
+    href: ANcpLua.Roslyn.Utilities.StringExtensions.LineSplitEntry.html
+- uid: ANcpLua.Roslyn.Utilities.SymbolExtensions
+  commentId: T:ANcpLua.Roslyn.Utilities.SymbolExtensions
+  href: ANcpLua.Roslyn.Utilities.SymbolExtensions.html
+  name: SymbolExtensions
+  nameWithType: SymbolExtensions
+  fullName: ANcpLua.Roslyn.Utilities.SymbolExtensions
+- uid: ANcpLua.Roslyn.Utilities.SyntaxExtensions
+  commentId: T:ANcpLua.Roslyn.Utilities.SyntaxExtensions
+  href: ANcpLua.Roslyn.Utilities.SyntaxExtensions.html
+  name: SyntaxExtensions
+  nameWithType: SyntaxExtensions
+  fullName: ANcpLua.Roslyn.Utilities.SyntaxExtensions
+- uid: ANcpLua.Roslyn.Utilities.SyntaxValueProviderExtensions
+  commentId: T:ANcpLua.Roslyn.Utilities.SyntaxValueProviderExtensions
+  href: ANcpLua.Roslyn.Utilities.SyntaxValueProviderExtensions.html
+  name: SyntaxValueProviderExtensions
+  nameWithType: SyntaxValueProviderExtensions
+  fullName: ANcpLua.Roslyn.Utilities.SyntaxValueProviderExtensions
+- uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions
+  commentId: T:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions
+  href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html
+  name: TypeSymbolExtensions
+  nameWithType: TypeSymbolExtensions
+  fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions
+- uid: ANcpLua.Roslyn.Utilities
+  commentId: N:ANcpLua.Roslyn.Utilities
+  href: ANcpLua.html
+  name: ANcpLua.Roslyn.Utilities
+  nameWithType: ANcpLua.Roslyn.Utilities
+  fullName: ANcpLua.Roslyn.Utilities
+  spec.csharp:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  spec.vb:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html

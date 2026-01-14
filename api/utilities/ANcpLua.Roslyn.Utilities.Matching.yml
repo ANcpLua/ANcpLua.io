@@ -1,0 +1,148 @@
+### YamlMime:ManagedReference
+items:
+- uid: ANcpLua.Roslyn.Utilities.Matching
+  commentId: N:ANcpLua.Roslyn.Utilities.Matching
+  id: ANcpLua.Roslyn.Utilities.Matching
+  children:
+  - ANcpLua.Roslyn.Utilities.Matching.FieldMatcher
+  - ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+  - ANcpLua.Roslyn.Utilities.Matching.Invoke
+  - ANcpLua.Roslyn.Utilities.Matching.Match
+  - ANcpLua.Roslyn.Utilities.Matching.MethodMatcher
+  - ANcpLua.Roslyn.Utilities.Matching.ParameterMatcher
+  - ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher
+  - ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2
+  - ANcpLua.Roslyn.Utilities.Matching.TypeMatcher
+  langs:
+  - csharp
+  - vb
+  name: ANcpLua.Roslyn.Utilities.Matching
+  nameWithType: ANcpLua.Roslyn.Utilities.Matching
+  fullName: ANcpLua.Roslyn.Utilities.Matching
+  type: Namespace
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+references:
+- uid: ANcpLua.Roslyn.Utilities.Matching.Invoke
+  commentId: T:ANcpLua.Roslyn.Utilities.Matching.Invoke
+  href: ANcpLua.Roslyn.Utilities.Matching.Invoke.html
+  name: Invoke
+  nameWithType: Invoke
+  fullName: ANcpLua.Roslyn.Utilities.Matching.Invoke
+- uid: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+  commentId: T:ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+  parent: ANcpLua.Roslyn.Utilities.Matching
+  href: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher.html
+  name: InvocationMatcher
+  nameWithType: InvocationMatcher
+  fullName: ANcpLua.Roslyn.Utilities.Matching.InvocationMatcher
+- uid: ANcpLua.Roslyn.Utilities.Matching.Match
+  commentId: T:ANcpLua.Roslyn.Utilities.Matching.Match
+  href: ANcpLua.Roslyn.Utilities.Matching.Match.html
+  name: Match
+  nameWithType: Match
+  fullName: ANcpLua.Roslyn.Utilities.Matching.Match
+- uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2
+  commentId: T:ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2
+  href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html
+  name: SymbolMatcherBase<TSelf, TSymbol>
+  nameWithType: SymbolMatcherBase<TSelf, TSymbol>
+  fullName: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase<TSelf, TSymbol>
+  nameWithType.vb: SymbolMatcherBase(Of TSelf, TSymbol)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase(Of TSelf, TSymbol)
+  name.vb: SymbolMatcherBase(Of TSelf, TSymbol)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2
+    name: SymbolMatcherBase
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html
+  - name: <
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TSymbol
+  - name: '>'
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase`2
+    name: SymbolMatcherBase
+    href: ANcpLua.Roslyn.Utilities.Matching.SymbolMatcherBase-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSelf
+  - name: ','
+  - name: " "
+  - name: TSymbol
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Matching.MethodMatcher
+  commentId: T:ANcpLua.Roslyn.Utilities.Matching.MethodMatcher
+  parent: ANcpLua.Roslyn.Utilities.Matching
+  href: ANcpLua.Roslyn.Utilities.Matching.MethodMatcher.html
+  name: MethodMatcher
+  nameWithType: MethodMatcher
+  fullName: ANcpLua.Roslyn.Utilities.Matching.MethodMatcher
+- uid: ANcpLua.Roslyn.Utilities.Matching.TypeMatcher
+  commentId: T:ANcpLua.Roslyn.Utilities.Matching.TypeMatcher
+  parent: ANcpLua.Roslyn.Utilities.Matching
+  href: ANcpLua.Roslyn.Utilities.Matching.TypeMatcher.html
+  name: TypeMatcher
+  nameWithType: TypeMatcher
+  fullName: ANcpLua.Roslyn.Utilities.Matching.TypeMatcher
+- uid: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher
+  commentId: T:ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher
+  parent: ANcpLua.Roslyn.Utilities.Matching
+  href: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher.html
+  name: PropertyMatcher
+  nameWithType: PropertyMatcher
+  fullName: ANcpLua.Roslyn.Utilities.Matching.PropertyMatcher
+- uid: ANcpLua.Roslyn.Utilities.Matching.FieldMatcher
+  commentId: T:ANcpLua.Roslyn.Utilities.Matching.FieldMatcher
+  parent: ANcpLua.Roslyn.Utilities.Matching
+  href: ANcpLua.Roslyn.Utilities.Matching.FieldMatcher.html
+  name: FieldMatcher
+  nameWithType: FieldMatcher
+  fullName: ANcpLua.Roslyn.Utilities.Matching.FieldMatcher
+- uid: ANcpLua.Roslyn.Utilities.Matching.ParameterMatcher
+  commentId: T:ANcpLua.Roslyn.Utilities.Matching.ParameterMatcher
+  parent: ANcpLua.Roslyn.Utilities.Matching
+  href: ANcpLua.Roslyn.Utilities.Matching.ParameterMatcher.html
+  name: ParameterMatcher
+  nameWithType: ParameterMatcher
+  fullName: ANcpLua.Roslyn.Utilities.Matching.ParameterMatcher
+- uid: ANcpLua.Roslyn.Utilities.Matching
+  commentId: N:ANcpLua.Roslyn.Utilities.Matching
+  href: ANcpLua.html
+  name: ANcpLua.Roslyn.Utilities.Matching
+  nameWithType: ANcpLua.Roslyn.Utilities.Matching
+  fullName: ANcpLua.Roslyn.Utilities.Matching
+  spec.csharp:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities.Matching
+    name: Matching
+    href: ANcpLua.Roslyn.Utilities.Matching.html
+  spec.vb:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities.Matching
+    name: Matching
+    href: ANcpLua.Roslyn.Utilities.Matching.html

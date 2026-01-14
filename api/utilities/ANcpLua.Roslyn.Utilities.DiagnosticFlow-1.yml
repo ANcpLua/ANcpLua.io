@@ -1,0 +1,2919 @@
+### YamlMime:ManagedReference
+items:
+- uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+  commentId: T:ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+  id: DiagnosticFlow`1
+  parent: ANcpLua.Roslyn.Utilities
+  children:
+  - ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Diagnostics
+  - ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Do(System.Action{`0})
+  - ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Equals(ANcpLua.Roslyn.Utilities.DiagnosticFlow{`0})
+  - ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Equals(System.Object)
+  - ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Error(ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  - ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.ErrorIf(System.Func{`0,System.Boolean},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  - ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.GetHashCode
+  - ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.HasErrors
+  - ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.IsFailed
+  - ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.IsSuccess
+  - ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Match``1(System.Func{`0,``0},System.Func{ANcpLua.Roslyn.Utilities.EquatableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo},``0})
+  - ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Select``1(System.Func{`0,``0})
+  - ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Then``1(System.Func{`0,ANcpLua.Roslyn.Utilities.DiagnosticFlow{``0}})
+  - ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Value
+  - ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.ValueOrDefault(`0)
+  - ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Warn(ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  - ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.WarnIf(System.Func{`0,System.Boolean},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  - ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Where(System.Func{`0,System.Boolean},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  - ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.op_Equality(ANcpLua.Roslyn.Utilities.DiagnosticFlow{`0},ANcpLua.Roslyn.Utilities.DiagnosticFlow{`0})
+  - ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.op_Implicit(`0)~ANcpLua.Roslyn.Utilities.DiagnosticFlow{`0}
+  - ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.op_Inequality(ANcpLua.Roslyn.Utilities.DiagnosticFlow{`0},ANcpLua.Roslyn.Utilities.DiagnosticFlow{`0})
+  langs:
+  - csharp
+  - vb
+  name: DiagnosticFlow<T>
+  nameWithType: DiagnosticFlow<T>
+  fullName: ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>
+  type: Struct
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/DiagnosticFlow.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: DiagnosticFlow
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/DiagnosticFlow.cs
+    startLine: 31
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: >-
+    Railway-oriented result type for incremental generator pipelines.
+
+    <p>
+        Carries a value <b>and</b> accumulated diagnostics through transformations,
+        enabling error handling without exceptions while preserving all warnings and errors.
+    </p>
+  remarks: >-
+    <ul><li><b>Immutable.</b> All operations return new instances; the original flow is never modified.</li><li><b>Short-circuiting.</b> Once failed, subsequent <xref href="ANcpLua.Roslyn.Utilities.DiagnosticFlow%601.Then%60%601(System.Func%7b%600%2cANcpLua.Roslyn.Utilities.DiagnosticFlow%7b%60%600%7d%7d)" data-throw-if-not-resolved="false"></xref> and <xref href="ANcpLua.Roslyn.Utilities.DiagnosticFlow%601.Select%60%601(System.Func%7b%600%2c%60%600%7d)" data-throw-if-not-resolved="false"></xref>
+            operations preserve existing diagnostics without invoking transformations.</li><li><b>Equatable.</b> Implements value equality for incremental generator caching.</li></ul>
+  example: []
+  syntax:
+    content: 'public readonly struct DiagnosticFlow<T> : IEquatable<DiagnosticFlow<T>>'
+    typeParameters:
+    - id: T
+      description: The type of the wrapped value.
+    content.vb: Public Structure DiagnosticFlow(Of T) Implements IEquatable(Of DiagnosticFlow(Of T))
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.DiagnosticFlow
+    commentId: T:ANcpLua.Roslyn.Utilities.DiagnosticFlow
+  - linkId: ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions
+    commentId: T:ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions
+  implements:
+  - System.IEquatable{ANcpLua.Roslyn.Utilities.DiagnosticFlow`1}
+  inheritedMembers:
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  extensionMethods:
+  - ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions.ReportAndDo``1(Microsoft.CodeAnalysis.SourceProductionContext,System.Action{{T}})
+  - ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions.ReportAndGet``1(Microsoft.CodeAnalysis.SourceProductionContext)
+  - ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions.Report``1(Microsoft.CodeAnalysis.SourceProductionContext)
+  - ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1
+  - ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  nameWithType.vb: DiagnosticFlow(Of T)
+  fullName.vb: ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T)
+  name.vb: DiagnosticFlow(Of T)
+- uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Value
+  commentId: P:ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Value
+  id: Value
+  parent: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: DiagnosticFlow<T>.Value
+  fullName: ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>.Value
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/DiagnosticFlow.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Value
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/DiagnosticFlow.cs
+    startLine: 38
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Gets the wrapped value, or <code>default</code> if this flow has failed.
+  example: []
+  syntax:
+    content: public T? Value { get; }
+    parameters: []
+    return:
+      type: '{T}'
+    content.vb: Public ReadOnly Property Value As T
+  overload: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Value*
+  nameWithType.vb: DiagnosticFlow(Of T).Value
+  fullName.vb: ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T).Value
+- uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Diagnostics
+  commentId: P:ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Diagnostics
+  id: Diagnostics
+  parent: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+  langs:
+  - csharp
+  - vb
+  name: Diagnostics
+  nameWithType: DiagnosticFlow<T>.Diagnostics
+  fullName: ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>.Diagnostics
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/DiagnosticFlow.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Diagnostics
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/DiagnosticFlow.cs
+    startLine: 41
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Gets the accumulated diagnostics (warnings and errors) from all operations.
+  example: []
+  syntax:
+    content: public EquatableArray<DiagnosticInfo> Diagnostics { get; }
+    parameters: []
+    return:
+      type: ANcpLua.Roslyn.Utilities.EquatableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo}
+    content.vb: Public ReadOnly Property Diagnostics As EquatableArray(Of DiagnosticInfo)
+  overload: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Diagnostics*
+  nameWithType.vb: DiagnosticFlow(Of T).Diagnostics
+  fullName.vb: ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T).Diagnostics
+- uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.HasErrors
+  commentId: P:ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.HasErrors
+  id: HasErrors
+  parent: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+  langs:
+  - csharp
+  - vb
+  name: HasErrors
+  nameWithType: DiagnosticFlow<T>.HasErrors
+  fullName: ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>.HasErrors
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/DiagnosticFlow.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: HasErrors
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/DiagnosticFlow.cs
+    startLine: 47
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Gets a value indicating whether this flow contains any error-severity diagnostics.
+  example: []
+  syntax:
+    content: public bool HasErrors { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+      description: <code>true</code> if any diagnostic has <xref href="Microsoft.CodeAnalysis.DiagnosticSeverity.Error" data-throw-if-not-resolved="false"></xref>; otherwise, <code>false</code>.
+    content.vb: Public ReadOnly Property HasErrors As Boolean
+  overload: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.HasErrors*
+  nameWithType.vb: DiagnosticFlow(Of T).HasErrors
+  fullName.vb: ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T).HasErrors
+- uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.IsSuccess
+  commentId: P:ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.IsSuccess
+  id: IsSuccess
+  parent: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+  langs:
+  - csharp
+  - vb
+  name: IsSuccess
+  nameWithType: DiagnosticFlow<T>.IsSuccess
+  fullName: ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>.IsSuccess
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/DiagnosticFlow.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsSuccess
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/DiagnosticFlow.cs
+    startLine: 63
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Gets a value indicating whether this flow has a non-null value and no errors.
+  example: []
+  syntax:
+    content: public bool IsSuccess { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+      description: <code>true</code> if <xref href="ANcpLua.Roslyn.Utilities.DiagnosticFlow%601.Value" data-throw-if-not-resolved="false"></xref> is not <code>null</code> and <xref href="ANcpLua.Roslyn.Utilities.DiagnosticFlow%601.HasErrors" data-throw-if-not-resolved="false"></xref> is <code>false</code>.
+    content.vb: Public ReadOnly Property IsSuccess As Boolean
+  overload: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.IsSuccess*
+  nameWithType.vb: DiagnosticFlow(Of T).IsSuccess
+  fullName.vb: ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T).IsSuccess
+- uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.IsFailed
+  commentId: P:ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.IsFailed
+  id: IsFailed
+  parent: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+  langs:
+  - csharp
+  - vb
+  name: IsFailed
+  nameWithType: DiagnosticFlow<T>.IsFailed
+  fullName: ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>.IsFailed
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/DiagnosticFlow.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: IsFailed
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/DiagnosticFlow.cs
+    startLine: 67
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Gets a value indicating whether this flow has failed (null value or errors).
+  example: []
+  syntax:
+    content: public bool IsFailed { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+      description: The inverse of <xref href="ANcpLua.Roslyn.Utilities.DiagnosticFlow%601.IsSuccess" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public ReadOnly Property IsFailed As Boolean
+  overload: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.IsFailed*
+  nameWithType.vb: DiagnosticFlow(Of T).IsFailed
+  fullName.vb: ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T).IsFailed
+- uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Then``1(System.Func{`0,ANcpLua.Roslyn.Utilities.DiagnosticFlow{``0}})
+  commentId: M:ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Then``1(System.Func{`0,ANcpLua.Roslyn.Utilities.DiagnosticFlow{``0}})
+  id: Then``1(System.Func{`0,ANcpLua.Roslyn.Utilities.DiagnosticFlow{``0}})
+  parent: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+  langs:
+  - csharp
+  - vb
+  name: Then<TNext>(Func<T, DiagnosticFlow<TNext>>)
+  nameWithType: DiagnosticFlow<T>.Then<TNext>(Func<T, DiagnosticFlow<TNext>>)
+  fullName: ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>.Then<TNext>(System.Func<T, ANcpLua.Roslyn.Utilities.DiagnosticFlow<TNext>>)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/DiagnosticFlow.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Then
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/DiagnosticFlow.cs
+    startLine: 89
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: >-
+    Chains a transformation that produces a new <xref href="ANcpLua.Roslyn.Utilities.DiagnosticFlow%601" data-throw-if-not-resolved="false"></xref>,
+
+    merging diagnostics from both operations.
+  example: []
+  syntax:
+    content: public DiagnosticFlow<TNext> Then<TNext>(Func<T, DiagnosticFlow<TNext>> next)
+    parameters:
+    - id: next
+      type: System.Func{{T},ANcpLua.Roslyn.Utilities.DiagnosticFlow{{TNext}}}
+      description: >-
+        A function that transforms the current value into a new flow.
+
+        Only invoked if this flow is successful.
+    typeParameters:
+    - id: TNext
+      description: The result type of the chained operation.
+    return:
+      type: ANcpLua.Roslyn.Utilities.DiagnosticFlow{{TNext}}
+      description: >-
+        A new <xref href="ANcpLua.Roslyn.Utilities.DiagnosticFlow%601" data-throw-if-not-resolved="false"></xref> containing the transformed value
+
+        and merged diagnostics, or a failed flow preserving existing diagnostics if this flow has errors.
+    content.vb: Public Function [Then](Of TNext)([next] As Func(Of T, DiagnosticFlow(Of TNext))) As DiagnosticFlow(Of TNext)
+  overload: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Then*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Select``1(System.Func{`0,``0})
+    commentId: M:ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Select``1(System.Func{`0,``0})
+  nameWithType.vb: DiagnosticFlow(Of T).Then(Of TNext)(Func(Of T, DiagnosticFlow(Of TNext)))
+  fullName.vb: ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T).Then(Of TNext)(System.Func(Of T, ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of TNext)))
+  name.vb: Then(Of TNext)(Func(Of T, DiagnosticFlow(Of TNext)))
+- uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Select``1(System.Func{`0,``0})
+  commentId: M:ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Select``1(System.Func{`0,``0})
+  id: Select``1(System.Func{`0,``0})
+  parent: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+  langs:
+  - csharp
+  - vb
+  name: Select<TNext>(Func<T, TNext>)
+  nameWithType: DiagnosticFlow<T>.Select<TNext>(Func<T, TNext>)
+  fullName: ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>.Select<TNext>(System.Func<T, TNext>)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/DiagnosticFlow.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Select
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/DiagnosticFlow.cs
+    startLine: 111
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Transforms the value using a simple mapping function, preserving diagnostics.
+  example: []
+  syntax:
+    content: public DiagnosticFlow<TNext> Select<TNext>(Func<T, TNext> map)
+    parameters:
+    - id: map
+      type: System.Func{{T},{TNext}}
+      description: >-
+        A function that transforms the current value.
+
+        Only invoked if this flow is successful.
+    typeParameters:
+    - id: TNext
+      description: The result type of the mapping.
+    return:
+      type: ANcpLua.Roslyn.Utilities.DiagnosticFlow{{TNext}}
+      description: >-
+        A new <xref href="ANcpLua.Roslyn.Utilities.DiagnosticFlow%601" data-throw-if-not-resolved="false"></xref> with the transformed value and same diagnostics,
+
+        or a failed flow preserving existing diagnostics if this flow has errors.
+    content.vb: Public Function [Select](Of TNext)(map As Func(Of T, TNext)) As DiagnosticFlow(Of TNext)
+  overload: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Select*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Then``1(System.Func{`0,ANcpLua.Roslyn.Utilities.DiagnosticFlow{``0}})
+    commentId: M:ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Then``1(System.Func{`0,ANcpLua.Roslyn.Utilities.DiagnosticFlow{``0}})
+  nameWithType.vb: DiagnosticFlow(Of T).Select(Of TNext)(Func(Of T, TNext))
+  fullName.vb: ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T).Select(Of TNext)(System.Func(Of T, TNext))
+  name.vb: Select(Of TNext)(Func(Of T, TNext))
+- uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Warn(ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  commentId: M:ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Warn(ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  id: Warn(ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  parent: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+  langs:
+  - csharp
+  - vb
+  name: Warn(DiagnosticInfo)
+  nameWithType: DiagnosticFlow<T>.Warn(DiagnosticInfo)
+  fullName: ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>.Warn(ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/DiagnosticFlow.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Warn
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/DiagnosticFlow.cs
+    startLine: 126
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Appends a warning diagnostic to this flow without affecting success state.
+  example: []
+  syntax:
+    content: public DiagnosticFlow<T> Warn(DiagnosticInfo warning)
+    parameters:
+    - id: warning
+      type: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+      description: The warning diagnostic to append.
+    return:
+      type: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+      description: A new flow with the warning appended to <xref href="ANcpLua.Roslyn.Utilities.DiagnosticFlow%601.Diagnostics" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Function Warn(warning As DiagnosticInfo) As DiagnosticFlow(Of T)
+  overload: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Warn*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.WarnIf(System.Func{`0,System.Boolean},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+    commentId: M:ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.WarnIf(System.Func{`0,System.Boolean},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  - linkId: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Error(ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+    commentId: M:ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Error(ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  nameWithType.vb: DiagnosticFlow(Of T).Warn(DiagnosticInfo)
+  fullName.vb: ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T).Warn(ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+- uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.WarnIf(System.Func{`0,System.Boolean},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  commentId: M:ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.WarnIf(System.Func{`0,System.Boolean},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  id: WarnIf(System.Func{`0,System.Boolean},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  parent: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+  langs:
+  - csharp
+  - vb
+  name: WarnIf(Func<T, bool>, DiagnosticInfo)
+  nameWithType: DiagnosticFlow<T>.WarnIf(Func<T, bool>, DiagnosticInfo)
+  fullName: ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>.WarnIf(System.Func<T, bool>, ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/DiagnosticFlow.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: WarnIf
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/DiagnosticFlow.cs
+    startLine: 137
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Conditionally appends a warning diagnostic based on the current value.
+  example: []
+  syntax:
+    content: public DiagnosticFlow<T> WarnIf(Func<T, bool> condition, DiagnosticInfo warning)
+    parameters:
+    - id: condition
+      type: System.Func{{T},System.Boolean}
+      description: A predicate evaluated against the current value.
+    - id: warning
+      type: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+      description: The warning diagnostic to append if <code class="paramref">condition</code> returns <code>true</code>.
+    return:
+      type: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+      description: A new flow with the warning appended if the condition is met; otherwise, this flow unchanged.
+    content.vb: Public Function WarnIf(condition As Func(Of T, Boolean), warning As DiagnosticInfo) As DiagnosticFlow(Of T)
+  overload: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.WarnIf*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Warn(ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+    commentId: M:ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Warn(ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  - linkId: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.ErrorIf(System.Func{`0,System.Boolean},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+    commentId: M:ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.ErrorIf(System.Func{`0,System.Boolean},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  nameWithType.vb: DiagnosticFlow(Of T).WarnIf(Func(Of T, Boolean), DiagnosticInfo)
+  fullName.vb: ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T).WarnIf(System.Func(Of T, Boolean), ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  name.vb: WarnIf(Func(Of T, Boolean), DiagnosticInfo)
+- uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Error(ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  commentId: M:ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Error(ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  id: Error(ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  parent: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+  langs:
+  - csharp
+  - vb
+  name: Error(DiagnosticInfo)
+  nameWithType: DiagnosticFlow<T>.Error(DiagnosticInfo)
+  fullName: ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>.Error(ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/DiagnosticFlow.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Error
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/DiagnosticFlow.cs
+    startLine: 151
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Appends an error diagnostic and sets the value to <code>default</code>, causing the flow to fail.
+  example: []
+  syntax:
+    content: public DiagnosticFlow<T> Error(DiagnosticInfo error)
+    parameters:
+    - id: error
+      type: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+      description: The error diagnostic to append.
+    return:
+      type: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+      description: A new failed flow with the error appended to <xref href="ANcpLua.Roslyn.Utilities.DiagnosticFlow%601.Diagnostics" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Function [Error]([error] As DiagnosticInfo) As DiagnosticFlow(Of T)
+  overload: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Error*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.ErrorIf(System.Func{`0,System.Boolean},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+    commentId: M:ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.ErrorIf(System.Func{`0,System.Boolean},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  - linkId: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Warn(ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+    commentId: M:ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Warn(ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  nameWithType.vb: DiagnosticFlow(Of T).Error(DiagnosticInfo)
+  fullName.vb: ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T).Error(ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+- uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.ErrorIf(System.Func{`0,System.Boolean},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  commentId: M:ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.ErrorIf(System.Func{`0,System.Boolean},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  id: ErrorIf(System.Func{`0,System.Boolean},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  parent: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+  langs:
+  - csharp
+  - vb
+  name: ErrorIf(Func<T, bool>, DiagnosticInfo)
+  nameWithType: DiagnosticFlow<T>.ErrorIf(Func<T, bool>, DiagnosticInfo)
+  fullName: ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>.ErrorIf(System.Func<T, bool>, ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/DiagnosticFlow.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: ErrorIf
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/DiagnosticFlow.cs
+    startLine: 162
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Conditionally appends an error diagnostic based on the current value.
+  example: []
+  syntax:
+    content: public DiagnosticFlow<T> ErrorIf(Func<T, bool> condition, DiagnosticInfo error)
+    parameters:
+    - id: condition
+      type: System.Func{{T},System.Boolean}
+      description: A predicate evaluated against the current value.
+    - id: error
+      type: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+      description: The error diagnostic to append if <code class="paramref">condition</code> returns <code>true</code>.
+    return:
+      type: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+      description: A new failed flow with the error if the condition is met; otherwise, this flow unchanged.
+    content.vb: Public Function ErrorIf(condition As Func(Of T, Boolean), [error] As DiagnosticInfo) As DiagnosticFlow(Of T)
+  overload: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.ErrorIf*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Error(ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+    commentId: M:ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Error(ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  - linkId: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.WarnIf(System.Func{`0,System.Boolean},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+    commentId: M:ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.WarnIf(System.Func{`0,System.Boolean},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  nameWithType.vb: DiagnosticFlow(Of T).ErrorIf(Func(Of T, Boolean), DiagnosticInfo)
+  fullName.vb: ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T).ErrorIf(System.Func(Of T, Boolean), ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  name.vb: ErrorIf(Func(Of T, Boolean), DiagnosticInfo)
+- uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Where(System.Func{`0,System.Boolean},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  commentId: M:ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Where(System.Func{`0,System.Boolean},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  id: Where(System.Func{`0,System.Boolean},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  parent: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+  langs:
+  - csharp
+  - vb
+  name: Where(Func<T, bool>, DiagnosticInfo)
+  nameWithType: DiagnosticFlow<T>.Where(Func<T, bool>, DiagnosticInfo)
+  fullName: ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>.Where(System.Func<T, bool>, ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/DiagnosticFlow.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Where
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/DiagnosticFlow.cs
+    startLine: 175
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Filters the flow based on a predicate, failing with the specified diagnostic if not satisfied.
+  example: []
+  syntax:
+    content: public DiagnosticFlow<T> Where(Func<T, bool> predicate, DiagnosticInfo onFail)
+    parameters:
+    - id: predicate
+      type: System.Func{{T},System.Boolean}
+      description: A predicate that must return <code>true</code> for the flow to continue successfully.
+    - id: onFail
+      type: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+      description: The error diagnostic to report if <code class="paramref">predicate</code> returns <code>false</code>.
+    return:
+      type: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+      description: This flow unchanged if the predicate is satisfied; otherwise, a failed flow with <code class="paramref">onFail</code>.
+    content.vb: Public Function Where(predicate As Func(Of T, Boolean), onFail As DiagnosticInfo) As DiagnosticFlow(Of T)
+  overload: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Where*
+  nameWithType.vb: DiagnosticFlow(Of T).Where(Func(Of T, Boolean), DiagnosticInfo)
+  fullName.vb: ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T).Where(System.Func(Of T, Boolean), ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  name.vb: Where(Func(Of T, Boolean), DiagnosticInfo)
+- uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Do(System.Action{`0})
+  commentId: M:ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Do(System.Action{`0})
+  id: Do(System.Action{`0})
+  parent: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+  langs:
+  - csharp
+  - vb
+  name: Do(Action<T>)
+  nameWithType: DiagnosticFlow<T>.Do(Action<T>)
+  fullName: ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>.Do(System.Action<T>)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/DiagnosticFlow.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Do
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/DiagnosticFlow.cs
+    startLine: 188
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Executes a side-effect action if the flow is successful.
+  example: []
+  syntax:
+    content: public DiagnosticFlow<T> Do(Action<T> action)
+    parameters:
+    - id: action
+      type: System.Action{{T}}
+      description: The action to execute with the current value.
+    return:
+      type: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+      description: This flow unchanged (for chaining).
+    content.vb: Public Function [Do](action As Action(Of T)) As DiagnosticFlow(Of T)
+  overload: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Do*
+  nameWithType.vb: DiagnosticFlow(Of T).Do(Action(Of T))
+  fullName.vb: ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T).Do(System.Action(Of T))
+  name.vb: Do(Action(Of T))
+- uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.ValueOrDefault(`0)
+  commentId: M:ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.ValueOrDefault(`0)
+  id: ValueOrDefault(`0)
+  parent: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+  langs:
+  - csharp
+  - vb
+  name: ValueOrDefault(T?)
+  nameWithType: DiagnosticFlow<T>.ValueOrDefault(T?)
+  fullName: ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>.ValueOrDefault(T?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/DiagnosticFlow.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: ValueOrDefault
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/DiagnosticFlow.cs
+    startLine: 200
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Returns the value if successful, or a default value if failed.
+  example: []
+  syntax:
+    content: public T? ValueOrDefault(T? defaultValue = default)
+    parameters:
+    - id: defaultValue
+      type: '{T}'
+      description: The value to return if this flow has failed.
+    return:
+      type: '{T}'
+      description: The <xref href="ANcpLua.Roslyn.Utilities.DiagnosticFlow%601.Value" data-throw-if-not-resolved="false"></xref> if successful; otherwise, <code class="paramref">defaultValue</code>.
+    content.vb: Public Function ValueOrDefault(defaultValue As T = Nothing) As T
+  overload: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.ValueOrDefault*
+  nameWithType.vb: DiagnosticFlow(Of T).ValueOrDefault(T)
+  fullName.vb: ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T).ValueOrDefault(T)
+  name.vb: ValueOrDefault(T)
+- uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Match``1(System.Func{`0,``0},System.Func{ANcpLua.Roslyn.Utilities.EquatableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo},``0})
+  commentId: M:ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Match``1(System.Func{`0,``0},System.Func{ANcpLua.Roslyn.Utilities.EquatableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo},``0})
+  id: Match``1(System.Func{`0,``0},System.Func{ANcpLua.Roslyn.Utilities.EquatableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo},``0})
+  parent: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+  langs:
+  - csharp
+  - vb
+  name: Match<TResult>(Func<T, TResult>, Func<EquatableArray<DiagnosticInfo>, TResult>)
+  nameWithType: DiagnosticFlow<T>.Match<TResult>(Func<T, TResult>, Func<EquatableArray<DiagnosticInfo>, TResult>)
+  fullName: ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>.Match<TResult>(System.Func<T, TResult>, System.Func<ANcpLua.Roslyn.Utilities.EquatableArray<ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo>, TResult>)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/DiagnosticFlow.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Match
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/DiagnosticFlow.cs
+    startLine: 210
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Pattern matches on the flow state, invoking one of two functions.
+  example: []
+  syntax:
+    content: public TResult Match<TResult>(Func<T, TResult> onSuccess, Func<EquatableArray<DiagnosticInfo>, TResult> onFailed)
+    parameters:
+    - id: onSuccess
+      type: System.Func{{T},{TResult}}
+      description: Function invoked with the value if the flow is successful.
+    - id: onFailed
+      type: System.Func{ANcpLua.Roslyn.Utilities.EquatableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo},{TResult}}
+      description: Function invoked with the diagnostics if the flow has failed.
+    typeParameters:
+    - id: TResult
+      description: The return type of both functions.
+    return:
+      type: '{TResult}'
+      description: The result of whichever function is invoked.
+    content.vb: Public Function Match(Of TResult)(onSuccess As Func(Of T, TResult), onFailed As Func(Of EquatableArray(Of DiagnosticInfo), TResult)) As TResult
+  overload: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Match*
+  nameWithType.vb: DiagnosticFlow(Of T).Match(Of TResult)(Func(Of T, TResult), Func(Of EquatableArray(Of DiagnosticInfo), TResult))
+  fullName.vb: ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T).Match(Of TResult)(System.Func(Of T, TResult), System.Func(Of ANcpLua.Roslyn.Utilities.EquatableArray(Of ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo), TResult))
+  name.vb: Match(Of TResult)(Func(Of T, TResult), Func(Of EquatableArray(Of DiagnosticInfo), TResult))
+- uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.op_Implicit(`0)~ANcpLua.Roslyn.Utilities.DiagnosticFlow{`0}
+  commentId: M:ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.op_Implicit(`0)~ANcpLua.Roslyn.Utilities.DiagnosticFlow{`0}
+  id: op_Implicit(`0)~ANcpLua.Roslyn.Utilities.DiagnosticFlow{`0}
+  parent: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+  langs:
+  - csharp
+  - vb
+  name: implicit operator DiagnosticFlow<T>(T)
+  nameWithType: DiagnosticFlow<T>.implicit operator DiagnosticFlow<T>(T)
+  fullName: ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>.implicit operator ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>(T)
+  type: Operator
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/DiagnosticFlow.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: op_Implicit
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/DiagnosticFlow.cs
+    startLine: 224
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Implicitly converts a value to a successful <xref href="ANcpLua.Roslyn.Utilities.DiagnosticFlow%601" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static implicit operator DiagnosticFlow<T>(T value)
+    parameters:
+    - id: value
+      type: '{T}'
+      description: The value to wrap.
+    return:
+      type: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+      description: A successful flow containing <code class="paramref">value</code> with no diagnostics.
+    content.vb: Public Shared Widening Operator CType(value As T) As DiagnosticFlow(Of T)
+  overload: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.op_Implicit*
+  nameWithType.vb: DiagnosticFlow(Of T).CType(T)
+  fullName.vb: ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T).CType(T)
+  name.vb: CType(T)
+- uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Equals(ANcpLua.Roslyn.Utilities.DiagnosticFlow{`0})
+  commentId: M:ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Equals(ANcpLua.Roslyn.Utilities.DiagnosticFlow{`0})
+  id: Equals(ANcpLua.Roslyn.Utilities.DiagnosticFlow{`0})
+  parent: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+  langs:
+  - csharp
+  - vb
+  name: Equals(DiagnosticFlow<T>)
+  nameWithType: DiagnosticFlow<T>.Equals(DiagnosticFlow<T>)
+  fullName: ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>.Equals(ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/DiagnosticFlow.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Equals
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/DiagnosticFlow.cs
+    startLine: 227
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  example: []
+  syntax:
+    content: public bool Equals(DiagnosticFlow<T> other)
+    parameters:
+    - id: other
+      type: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+    return:
+      type: System.Boolean
+    content.vb: Public Function Equals(other As DiagnosticFlow(Of T)) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Equals*
+  implements:
+  - System.IEquatable{ANcpLua.Roslyn.Utilities.DiagnosticFlow`1}.Equals(ANcpLua.Roslyn.Utilities.DiagnosticFlow{{T}})
+  nameWithType.vb: DiagnosticFlow(Of T).Equals(DiagnosticFlow(Of T))
+  fullName.vb: ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T).Equals(ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T))
+  name.vb: Equals(DiagnosticFlow(Of T))
+- uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Equals(System.Object)
+  commentId: M:ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+  langs:
+  - csharp
+  - vb
+  name: Equals(object?)
+  nameWithType: DiagnosticFlow<T>.Equals(object?)
+  fullName: ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>.Equals(object?)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/DiagnosticFlow.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Equals
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/DiagnosticFlow.cs
+    startLine: 232
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  example: []
+  syntax:
+    content: public override bool Equals(object? obj)
+    parameters:
+    - id: obj
+      type: System.Object
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.ValueType.Equals(System.Object)
+  overload: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Equals*
+  nameWithType.vb: DiagnosticFlow(Of T).Equals(Object)
+  fullName.vb: ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T).Equals(Object)
+  name.vb: Equals(Object)
+- uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.GetHashCode
+  commentId: M:ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.GetHashCode
+  id: GetHashCode
+  parent: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: DiagnosticFlow<T>.GetHashCode()
+  fullName: ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>.GetHashCode()
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/DiagnosticFlow.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: GetHashCode
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/DiagnosticFlow.cs
+    startLine: 236
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  example: []
+  syntax:
+    content: public override int GetHashCode()
+    return:
+      type: System.Int32
+    content.vb: Public Overrides Function GetHashCode() As Integer
+  overridden: System.ValueType.GetHashCode
+  overload: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.GetHashCode*
+  nameWithType.vb: DiagnosticFlow(Of T).GetHashCode()
+  fullName.vb: ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T).GetHashCode()
+- uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.op_Equality(ANcpLua.Roslyn.Utilities.DiagnosticFlow{`0},ANcpLua.Roslyn.Utilities.DiagnosticFlow{`0})
+  commentId: M:ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.op_Equality(ANcpLua.Roslyn.Utilities.DiagnosticFlow{`0},ANcpLua.Roslyn.Utilities.DiagnosticFlow{`0})
+  id: op_Equality(ANcpLua.Roslyn.Utilities.DiagnosticFlow{`0},ANcpLua.Roslyn.Utilities.DiagnosticFlow{`0})
+  parent: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+  langs:
+  - csharp
+  - vb
+  name: operator ==(DiagnosticFlow<T>, DiagnosticFlow<T>)
+  nameWithType: DiagnosticFlow<T>.operator ==(DiagnosticFlow<T>, DiagnosticFlow<T>)
+  fullName: ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>.operator ==(ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>, ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>)
+  type: Operator
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/DiagnosticFlow.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: op_Equality
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/DiagnosticFlow.cs
+    startLine: 239
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Determines whether two flows are equal.
+  example: []
+  syntax:
+    content: public static bool operator ==(DiagnosticFlow<T> left, DiagnosticFlow<T> right)
+    parameters:
+    - id: left
+      type: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+    - id: right
+      type: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator =(left As DiagnosticFlow(Of T), right As DiagnosticFlow(Of T)) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.op_Equality*
+  nameWithType.vb: DiagnosticFlow(Of T).=(DiagnosticFlow(Of T), DiagnosticFlow(Of T))
+  fullName.vb: ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T).=(ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T), ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T))
+  name.vb: =(DiagnosticFlow(Of T), DiagnosticFlow(Of T))
+- uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.op_Inequality(ANcpLua.Roslyn.Utilities.DiagnosticFlow{`0},ANcpLua.Roslyn.Utilities.DiagnosticFlow{`0})
+  commentId: M:ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.op_Inequality(ANcpLua.Roslyn.Utilities.DiagnosticFlow{`0},ANcpLua.Roslyn.Utilities.DiagnosticFlow{`0})
+  id: op_Inequality(ANcpLua.Roslyn.Utilities.DiagnosticFlow{`0},ANcpLua.Roslyn.Utilities.DiagnosticFlow{`0})
+  parent: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+  langs:
+  - csharp
+  - vb
+  name: operator !=(DiagnosticFlow<T>, DiagnosticFlow<T>)
+  nameWithType: DiagnosticFlow<T>.operator !=(DiagnosticFlow<T>, DiagnosticFlow<T>)
+  fullName: ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>.operator !=(ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>, ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>)
+  type: Operator
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/DiagnosticFlow.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: op_Inequality
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/DiagnosticFlow.cs
+    startLine: 242
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Determines whether two flows are not equal.
+  example: []
+  syntax:
+    content: public static bool operator !=(DiagnosticFlow<T> left, DiagnosticFlow<T> right)
+    parameters:
+    - id: left
+      type: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+    - id: right
+      type: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator <>(left As DiagnosticFlow(Of T), right As DiagnosticFlow(Of T)) As Boolean
+  overload: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.op_Inequality*
+  nameWithType.vb: DiagnosticFlow(Of T).<>(DiagnosticFlow(Of T), DiagnosticFlow(Of T))
+  fullName.vb: ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T).<>(ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T), ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T))
+  name.vb: <>(DiagnosticFlow(Of T), DiagnosticFlow(Of T))
+references:
+- uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow
+  commentId: T:ANcpLua.Roslyn.Utilities.DiagnosticFlow
+  href: ANcpLua.Roslyn.Utilities.DiagnosticFlow.html
+  name: DiagnosticFlow
+  nameWithType: DiagnosticFlow
+  fullName: ANcpLua.Roslyn.Utilities.DiagnosticFlow
+- uid: ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions
+  commentId: T:ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions
+  parent: ANcpLua.Roslyn.Utilities
+  href: ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions.html
+  name: DiagnosticFlowReportingExtensions
+  nameWithType: DiagnosticFlowReportingExtensions
+  fullName: ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions
+- uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Then``1(System.Func{`0,ANcpLua.Roslyn.Utilities.DiagnosticFlow{``0}})
+  commentId: M:ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Then``1(System.Func{`0,ANcpLua.Roslyn.Utilities.DiagnosticFlow{``0}})
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html#ANcpLua_Roslyn_Utilities_DiagnosticFlow_1_Then__1_System_Func__0_ANcpLua_Roslyn_Utilities_DiagnosticFlow___0___
+  name: Then<TNext>(Func<T, DiagnosticFlow<TNext>>)
+  nameWithType: DiagnosticFlow<T>.Then<TNext>(Func<T, DiagnosticFlow<TNext>>)
+  fullName: ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>.Then<TNext>(System.Func<T, ANcpLua.Roslyn.Utilities.DiagnosticFlow<TNext>>)
+  nameWithType.vb: DiagnosticFlow(Of T).Then(Of TNext)(Func(Of T, DiagnosticFlow(Of TNext)))
+  fullName.vb: ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T).Then(Of TNext)(System.Func(Of T, ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of TNext)))
+  name.vb: Then(Of TNext)(Func(Of T, DiagnosticFlow(Of TNext)))
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Then``1(System.Func{`0,ANcpLua.Roslyn.Utilities.DiagnosticFlow{``0}})
+    name: Then
+    href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html#ANcpLua_Roslyn_Utilities_DiagnosticFlow_1_Then__1_System_Func__0_ANcpLua_Roslyn_Utilities_DiagnosticFlow___0___
+  - name: <
+  - name: TNext
+  - name: '>'
+  - name: (
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+    name: DiagnosticFlow
+    href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html
+  - name: <
+  - name: TNext
+  - name: '>'
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Then``1(System.Func{`0,ANcpLua.Roslyn.Utilities.DiagnosticFlow{``0}})
+    name: Then
+    href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html#ANcpLua_Roslyn_Utilities_DiagnosticFlow_1_Then__1_System_Func__0_ANcpLua_Roslyn_Utilities_DiagnosticFlow___0___
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TNext
+  - name: )
+  - name: (
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+    name: DiagnosticFlow
+    href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TNext
+  - name: )
+  - name: )
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Select``1(System.Func{`0,``0})
+  commentId: M:ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Select``1(System.Func{`0,``0})
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html#ANcpLua_Roslyn_Utilities_DiagnosticFlow_1_Select__1_System_Func__0___0__
+  name: Select<TNext>(Func<T, TNext>)
+  nameWithType: DiagnosticFlow<T>.Select<TNext>(Func<T, TNext>)
+  fullName: ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>.Select<TNext>(System.Func<T, TNext>)
+  nameWithType.vb: DiagnosticFlow(Of T).Select(Of TNext)(Func(Of T, TNext))
+  fullName.vb: ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T).Select(Of TNext)(System.Func(Of T, TNext))
+  name.vb: Select(Of TNext)(Func(Of T, TNext))
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Select``1(System.Func{`0,``0})
+    name: Select
+    href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html#ANcpLua_Roslyn_Utilities_DiagnosticFlow_1_Select__1_System_Func__0___0__
+  - name: <
+  - name: TNext
+  - name: '>'
+  - name: (
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TNext
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Select``1(System.Func{`0,``0})
+    name: Select
+    href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html#ANcpLua_Roslyn_Utilities_DiagnosticFlow_1_Select__1_System_Func__0___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TNext
+  - name: )
+  - name: (
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TNext
+  - name: )
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities
+  commentId: N:ANcpLua.Roslyn.Utilities
+  href: ANcpLua.html
+  name: ANcpLua.Roslyn.Utilities
+  nameWithType: ANcpLua.Roslyn.Utilities
+  fullName: ANcpLua.Roslyn.Utilities
+  spec.csharp:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  spec.vb:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+- uid: System.IEquatable{ANcpLua.Roslyn.Utilities.DiagnosticFlow`1}
+  commentId: T:System.IEquatable{ANcpLua.Roslyn.Utilities.DiagnosticFlow`1}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<DiagnosticFlow<T>>
+  nameWithType: IEquatable<DiagnosticFlow<T>>
+  fullName: System.IEquatable<ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>>
+  nameWithType.vb: IEquatable(Of DiagnosticFlow(Of T))
+  fullName.vb: System.IEquatable(Of ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T))
+  name.vb: IEquatable(Of DiagnosticFlow(Of T))
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+    name: DiagnosticFlow
+    href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+    name: DiagnosticFlow
+    href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions.ReportAndDo``1(Microsoft.CodeAnalysis.SourceProductionContext,System.Action{{T}})
+  commentId: M:ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions.ReportAndDo``1(ANcpLua.Roslyn.Utilities.DiagnosticFlow{``0},Microsoft.CodeAnalysis.SourceProductionContext,System.Action{``0})
+  parent: ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions
+  definition: ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions.ReportAndDo``1(ANcpLua.Roslyn.Utilities.DiagnosticFlow{``0},Microsoft.CodeAnalysis.SourceProductionContext,System.Action{``0})
+  href: ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions.html#ANcpLua_Roslyn_Utilities_DiagnosticFlowReportingExtensions_ReportAndDo__1_ANcpLua_Roslyn_Utilities_DiagnosticFlow___0__Microsoft_CodeAnalysis_SourceProductionContext_System_Action___0__
+  name: ReportAndDo<T>(DiagnosticFlow<T>, SourceProductionContext, Action<T>)
+  nameWithType: DiagnosticFlowReportingExtensions.ReportAndDo<T>(DiagnosticFlow<T>, SourceProductionContext, Action<T>)
+  fullName: ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions.ReportAndDo<T>(ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>, Microsoft.CodeAnalysis.SourceProductionContext, System.Action<T>)
+  nameWithType.vb: DiagnosticFlowReportingExtensions.ReportAndDo(Of T)(DiagnosticFlow(Of T), SourceProductionContext, Action(Of T))
+  fullName.vb: ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions.ReportAndDo(Of T)(ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T), Microsoft.CodeAnalysis.SourceProductionContext, System.Action(Of T))
+  name.vb: ReportAndDo(Of T)(DiagnosticFlow(Of T), SourceProductionContext, Action(Of T))
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions.ReportAndDo``1(ANcpLua.Roslyn.Utilities.DiagnosticFlow{`0},Microsoft.CodeAnalysis.SourceProductionContext,System.Action{`0})
+    name: ReportAndDo
+    href: ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions.html#ANcpLua_Roslyn_Utilities_DiagnosticFlowReportingExtensions_ReportAndDo__1_ANcpLua_Roslyn_Utilities_DiagnosticFlow___0__Microsoft_CodeAnalysis_SourceProductionContext_System_Action___0__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+    name: DiagnosticFlow
+    href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.SourceProductionContext
+    name: SourceProductionContext
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.sourceproductioncontext
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions.ReportAndDo``1(ANcpLua.Roslyn.Utilities.DiagnosticFlow{`0},Microsoft.CodeAnalysis.SourceProductionContext,System.Action{`0})
+    name: ReportAndDo
+    href: ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions.html#ANcpLua_Roslyn_Utilities_DiagnosticFlowReportingExtensions_ReportAndDo__1_ANcpLua_Roslyn_Utilities_DiagnosticFlow___0__Microsoft_CodeAnalysis_SourceProductionContext_System_Action___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+    name: DiagnosticFlow
+    href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.SourceProductionContext
+    name: SourceProductionContext
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.sourceproductioncontext
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions.ReportAndGet``1(Microsoft.CodeAnalysis.SourceProductionContext)
+  commentId: M:ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions.ReportAndGet``1(ANcpLua.Roslyn.Utilities.DiagnosticFlow{``0},Microsoft.CodeAnalysis.SourceProductionContext)
+  parent: ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions
+  definition: ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions.ReportAndGet``1(ANcpLua.Roslyn.Utilities.DiagnosticFlow{``0},Microsoft.CodeAnalysis.SourceProductionContext)
+  href: ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions.html#ANcpLua_Roslyn_Utilities_DiagnosticFlowReportingExtensions_ReportAndGet__1_ANcpLua_Roslyn_Utilities_DiagnosticFlow___0__Microsoft_CodeAnalysis_SourceProductionContext_
+  name: ReportAndGet<T>(DiagnosticFlow<T>, SourceProductionContext)
+  nameWithType: DiagnosticFlowReportingExtensions.ReportAndGet<T>(DiagnosticFlow<T>, SourceProductionContext)
+  fullName: ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions.ReportAndGet<T>(ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>, Microsoft.CodeAnalysis.SourceProductionContext)
+  nameWithType.vb: DiagnosticFlowReportingExtensions.ReportAndGet(Of T)(DiagnosticFlow(Of T), SourceProductionContext)
+  fullName.vb: ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions.ReportAndGet(Of T)(ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T), Microsoft.CodeAnalysis.SourceProductionContext)
+  name.vb: ReportAndGet(Of T)(DiagnosticFlow(Of T), SourceProductionContext)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions.ReportAndGet``1(ANcpLua.Roslyn.Utilities.DiagnosticFlow{`0},Microsoft.CodeAnalysis.SourceProductionContext)
+    name: ReportAndGet
+    href: ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions.html#ANcpLua_Roslyn_Utilities_DiagnosticFlowReportingExtensions_ReportAndGet__1_ANcpLua_Roslyn_Utilities_DiagnosticFlow___0__Microsoft_CodeAnalysis_SourceProductionContext_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+    name: DiagnosticFlow
+    href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.SourceProductionContext
+    name: SourceProductionContext
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.sourceproductioncontext
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions.ReportAndGet``1(ANcpLua.Roslyn.Utilities.DiagnosticFlow{`0},Microsoft.CodeAnalysis.SourceProductionContext)
+    name: ReportAndGet
+    href: ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions.html#ANcpLua_Roslyn_Utilities_DiagnosticFlowReportingExtensions_ReportAndGet__1_ANcpLua_Roslyn_Utilities_DiagnosticFlow___0__Microsoft_CodeAnalysis_SourceProductionContext_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+    name: DiagnosticFlow
+    href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.SourceProductionContext
+    name: SourceProductionContext
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.sourceproductioncontext
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions.Report``1(Microsoft.CodeAnalysis.SourceProductionContext)
+  commentId: M:ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions.Report``1(ANcpLua.Roslyn.Utilities.DiagnosticFlow{``0},Microsoft.CodeAnalysis.SourceProductionContext)
+  parent: ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions
+  definition: ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions.Report``1(ANcpLua.Roslyn.Utilities.DiagnosticFlow{``0},Microsoft.CodeAnalysis.SourceProductionContext)
+  href: ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions.html#ANcpLua_Roslyn_Utilities_DiagnosticFlowReportingExtensions_Report__1_ANcpLua_Roslyn_Utilities_DiagnosticFlow___0__Microsoft_CodeAnalysis_SourceProductionContext_
+  name: Report<T>(DiagnosticFlow<T>, SourceProductionContext)
+  nameWithType: DiagnosticFlowReportingExtensions.Report<T>(DiagnosticFlow<T>, SourceProductionContext)
+  fullName: ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions.Report<T>(ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>, Microsoft.CodeAnalysis.SourceProductionContext)
+  nameWithType.vb: DiagnosticFlowReportingExtensions.Report(Of T)(DiagnosticFlow(Of T), SourceProductionContext)
+  fullName.vb: ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions.Report(Of T)(ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T), Microsoft.CodeAnalysis.SourceProductionContext)
+  name.vb: Report(Of T)(DiagnosticFlow(Of T), SourceProductionContext)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions.Report``1(ANcpLua.Roslyn.Utilities.DiagnosticFlow{`0},Microsoft.CodeAnalysis.SourceProductionContext)
+    name: Report
+    href: ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions.html#ANcpLua_Roslyn_Utilities_DiagnosticFlowReportingExtensions_Report__1_ANcpLua_Roslyn_Utilities_DiagnosticFlow___0__Microsoft_CodeAnalysis_SourceProductionContext_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+    name: DiagnosticFlow
+    href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.SourceProductionContext
+    name: SourceProductionContext
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.sourceproductioncontext
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions.Report``1(ANcpLua.Roslyn.Utilities.DiagnosticFlow{`0},Microsoft.CodeAnalysis.SourceProductionContext)
+    name: Report
+    href: ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions.html#ANcpLua_Roslyn_Utilities_DiagnosticFlowReportingExtensions_Report__1_ANcpLua_Roslyn_Utilities_DiagnosticFlow___0__Microsoft_CodeAnalysis_SourceProductionContext_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+    name: DiagnosticFlow
+    href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.SourceProductionContext
+    name: SourceProductionContext
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.sourceproductioncontext
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+  parent: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+  definition: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  name: ToResultWithDiagnostics<DiagnosticFlow<T>>(DiagnosticFlow<T>)
+  nameWithType: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<DiagnosticFlow<T>>(DiagnosticFlow<T>)
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>>(ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>)
+  nameWithType.vb: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of DiagnosticFlow(Of T))(DiagnosticFlow(Of T))
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T))(ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T))
+  name.vb: ToResultWithDiagnostics(Of DiagnosticFlow(Of T))(DiagnosticFlow(Of T))
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(ANcpLua.Roslyn.Utilities.DiagnosticFlow{`0})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+    name: DiagnosticFlow
+    href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+    name: DiagnosticFlow
+    href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(ANcpLua.Roslyn.Utilities.DiagnosticFlow{`0})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+    name: DiagnosticFlow
+    href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+    name: DiagnosticFlow
+    href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  parent: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+  definition: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  name: ToResultWithDiagnostics<DiagnosticFlow<T>>(DiagnosticFlow<T>, ImmutableArray<DiagnosticInfo>)
+  nameWithType: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<DiagnosticFlow<T>>(DiagnosticFlow<T>, ImmutableArray<DiagnosticInfo>)
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>>(ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>, System.Collections.Immutable.ImmutableArray<ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo>)
+  nameWithType.vb: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of DiagnosticFlow(Of T))(DiagnosticFlow(Of T), ImmutableArray(Of DiagnosticInfo))
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T))(ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T), System.Collections.Immutable.ImmutableArray(Of ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo))
+  name.vb: ToResultWithDiagnostics(Of DiagnosticFlow(Of T))(DiagnosticFlow(Of T), ImmutableArray(Of DiagnosticInfo))
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(ANcpLua.Roslyn.Utilities.DiagnosticFlow{`0},System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+    name: DiagnosticFlow
+    href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+    name: DiagnosticFlow
+    href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(ANcpLua.Roslyn.Utilities.DiagnosticFlow{`0},System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+    name: DiagnosticFlow
+    href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+    name: DiagnosticFlow
+    href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: )
+  - name: )
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions.ReportAndDo``1(ANcpLua.Roslyn.Utilities.DiagnosticFlow{``0},Microsoft.CodeAnalysis.SourceProductionContext,System.Action{``0})
+  commentId: M:ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions.ReportAndDo``1(ANcpLua.Roslyn.Utilities.DiagnosticFlow{``0},Microsoft.CodeAnalysis.SourceProductionContext,System.Action{``0})
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions.html#ANcpLua_Roslyn_Utilities_DiagnosticFlowReportingExtensions_ReportAndDo__1_ANcpLua_Roslyn_Utilities_DiagnosticFlow___0__Microsoft_CodeAnalysis_SourceProductionContext_System_Action___0__
+  name: ReportAndDo<T>(DiagnosticFlow<T>, SourceProductionContext, Action<T>)
+  nameWithType: DiagnosticFlowReportingExtensions.ReportAndDo<T>(DiagnosticFlow<T>, SourceProductionContext, Action<T>)
+  fullName: ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions.ReportAndDo<T>(ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>, Microsoft.CodeAnalysis.SourceProductionContext, System.Action<T>)
+  nameWithType.vb: DiagnosticFlowReportingExtensions.ReportAndDo(Of T)(DiagnosticFlow(Of T), SourceProductionContext, Action(Of T))
+  fullName.vb: ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions.ReportAndDo(Of T)(ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T), Microsoft.CodeAnalysis.SourceProductionContext, System.Action(Of T))
+  name.vb: ReportAndDo(Of T)(DiagnosticFlow(Of T), SourceProductionContext, Action(Of T))
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions.ReportAndDo``1(ANcpLua.Roslyn.Utilities.DiagnosticFlow{``0},Microsoft.CodeAnalysis.SourceProductionContext,System.Action{``0})
+    name: ReportAndDo
+    href: ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions.html#ANcpLua_Roslyn_Utilities_DiagnosticFlowReportingExtensions_ReportAndDo__1_ANcpLua_Roslyn_Utilities_DiagnosticFlow___0__Microsoft_CodeAnalysis_SourceProductionContext_System_Action___0__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+    name: DiagnosticFlow
+    href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.SourceProductionContext
+    name: SourceProductionContext
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.sourceproductioncontext
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions.ReportAndDo``1(ANcpLua.Roslyn.Utilities.DiagnosticFlow{``0},Microsoft.CodeAnalysis.SourceProductionContext,System.Action{``0})
+    name: ReportAndDo
+    href: ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions.html#ANcpLua_Roslyn_Utilities_DiagnosticFlowReportingExtensions_ReportAndDo__1_ANcpLua_Roslyn_Utilities_DiagnosticFlow___0__Microsoft_CodeAnalysis_SourceProductionContext_System_Action___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+    name: DiagnosticFlow
+    href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.SourceProductionContext
+    name: SourceProductionContext
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.sourceproductioncontext
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions.ReportAndGet``1(ANcpLua.Roslyn.Utilities.DiagnosticFlow{``0},Microsoft.CodeAnalysis.SourceProductionContext)
+  commentId: M:ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions.ReportAndGet``1(ANcpLua.Roslyn.Utilities.DiagnosticFlow{``0},Microsoft.CodeAnalysis.SourceProductionContext)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions.html#ANcpLua_Roslyn_Utilities_DiagnosticFlowReportingExtensions_ReportAndGet__1_ANcpLua_Roslyn_Utilities_DiagnosticFlow___0__Microsoft_CodeAnalysis_SourceProductionContext_
+  name: ReportAndGet<T>(DiagnosticFlow<T>, SourceProductionContext)
+  nameWithType: DiagnosticFlowReportingExtensions.ReportAndGet<T>(DiagnosticFlow<T>, SourceProductionContext)
+  fullName: ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions.ReportAndGet<T>(ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>, Microsoft.CodeAnalysis.SourceProductionContext)
+  nameWithType.vb: DiagnosticFlowReportingExtensions.ReportAndGet(Of T)(DiagnosticFlow(Of T), SourceProductionContext)
+  fullName.vb: ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions.ReportAndGet(Of T)(ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T), Microsoft.CodeAnalysis.SourceProductionContext)
+  name.vb: ReportAndGet(Of T)(DiagnosticFlow(Of T), SourceProductionContext)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions.ReportAndGet``1(ANcpLua.Roslyn.Utilities.DiagnosticFlow{``0},Microsoft.CodeAnalysis.SourceProductionContext)
+    name: ReportAndGet
+    href: ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions.html#ANcpLua_Roslyn_Utilities_DiagnosticFlowReportingExtensions_ReportAndGet__1_ANcpLua_Roslyn_Utilities_DiagnosticFlow___0__Microsoft_CodeAnalysis_SourceProductionContext_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+    name: DiagnosticFlow
+    href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.SourceProductionContext
+    name: SourceProductionContext
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.sourceproductioncontext
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions.ReportAndGet``1(ANcpLua.Roslyn.Utilities.DiagnosticFlow{``0},Microsoft.CodeAnalysis.SourceProductionContext)
+    name: ReportAndGet
+    href: ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions.html#ANcpLua_Roslyn_Utilities_DiagnosticFlowReportingExtensions_ReportAndGet__1_ANcpLua_Roslyn_Utilities_DiagnosticFlow___0__Microsoft_CodeAnalysis_SourceProductionContext_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+    name: DiagnosticFlow
+    href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.SourceProductionContext
+    name: SourceProductionContext
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.sourceproductioncontext
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions.Report``1(ANcpLua.Roslyn.Utilities.DiagnosticFlow{``0},Microsoft.CodeAnalysis.SourceProductionContext)
+  commentId: M:ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions.Report``1(ANcpLua.Roslyn.Utilities.DiagnosticFlow{``0},Microsoft.CodeAnalysis.SourceProductionContext)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions.html#ANcpLua_Roslyn_Utilities_DiagnosticFlowReportingExtensions_Report__1_ANcpLua_Roslyn_Utilities_DiagnosticFlow___0__Microsoft_CodeAnalysis_SourceProductionContext_
+  name: Report<T>(DiagnosticFlow<T>, SourceProductionContext)
+  nameWithType: DiagnosticFlowReportingExtensions.Report<T>(DiagnosticFlow<T>, SourceProductionContext)
+  fullName: ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions.Report<T>(ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>, Microsoft.CodeAnalysis.SourceProductionContext)
+  nameWithType.vb: DiagnosticFlowReportingExtensions.Report(Of T)(DiagnosticFlow(Of T), SourceProductionContext)
+  fullName.vb: ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions.Report(Of T)(ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T), Microsoft.CodeAnalysis.SourceProductionContext)
+  name.vb: Report(Of T)(DiagnosticFlow(Of T), SourceProductionContext)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions.Report``1(ANcpLua.Roslyn.Utilities.DiagnosticFlow{``0},Microsoft.CodeAnalysis.SourceProductionContext)
+    name: Report
+    href: ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions.html#ANcpLua_Roslyn_Utilities_DiagnosticFlowReportingExtensions_Report__1_ANcpLua_Roslyn_Utilities_DiagnosticFlow___0__Microsoft_CodeAnalysis_SourceProductionContext_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+    name: DiagnosticFlow
+    href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.SourceProductionContext
+    name: SourceProductionContext
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.sourceproductioncontext
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions.Report``1(ANcpLua.Roslyn.Utilities.DiagnosticFlow{``0},Microsoft.CodeAnalysis.SourceProductionContext)
+    name: Report
+    href: ANcpLua.Roslyn.Utilities.DiagnosticFlowReportingExtensions.html#ANcpLua_Roslyn_Utilities_DiagnosticFlowReportingExtensions_Report__1_ANcpLua_Roslyn_Utilities_DiagnosticFlow___0__Microsoft_CodeAnalysis_SourceProductionContext_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+    name: DiagnosticFlow
+    href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.SourceProductionContext
+    name: SourceProductionContext
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.sourceproductioncontext
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  name: ToResultWithDiagnostics<T>(T)
+  nameWithType: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<T>(T)
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<T>(T)
+  nameWithType.vb: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of T)(T)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of T)(T)
+  name.vb: ToResultWithDiagnostics(Of T)(T)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+  commentId: T:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+  parent: ANcpLua.Roslyn.Utilities.Models
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html
+  name: ResultWithDiagnosticsExtensions
+  nameWithType: ResultWithDiagnosticsExtensions
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+- uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  name: ToResultWithDiagnostics<T>(T, ImmutableArray<DiagnosticInfo>)
+  nameWithType: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<T>(T, ImmutableArray<DiagnosticInfo>)
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<T>(T, System.Collections.Immutable.ImmutableArray<ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo>)
+  nameWithType.vb: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of T)(T, ImmutableArray(Of DiagnosticInfo))
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of T)(T, System.Collections.Immutable.ImmutableArray(Of ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo))
+  name.vb: ToResultWithDiagnostics(Of T)(T, ImmutableArray(Of DiagnosticInfo))
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: )
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Models
+  commentId: N:ANcpLua.Roslyn.Utilities.Models
+  href: ANcpLua.html
+  name: ANcpLua.Roslyn.Utilities.Models
+  nameWithType: ANcpLua.Roslyn.Utilities.Models
+  fullName: ANcpLua.Roslyn.Utilities.Models
+  spec.csharp:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities.Models
+    name: Models
+    href: ANcpLua.Roslyn.Utilities.Models.html
+  spec.vb:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities.Models
+    name: Models
+    href: ANcpLua.Roslyn.Utilities.Models.html
+- uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Value*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Value
+  href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html#ANcpLua_Roslyn_Utilities_DiagnosticFlow_1_Value
+  name: Value
+  nameWithType: DiagnosticFlow<T>.Value
+  fullName: ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>.Value
+  nameWithType.vb: DiagnosticFlow(Of T).Value
+  fullName.vb: ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T).Value
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Diagnostics*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Diagnostics
+  href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html#ANcpLua_Roslyn_Utilities_DiagnosticFlow_1_Diagnostics
+  name: Diagnostics
+  nameWithType: DiagnosticFlow<T>.Diagnostics
+  fullName: ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>.Diagnostics
+  nameWithType.vb: DiagnosticFlow(Of T).Diagnostics
+  fullName.vb: ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T).Diagnostics
+- uid: ANcpLua.Roslyn.Utilities.EquatableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo}
+  commentId: T:ANcpLua.Roslyn.Utilities.EquatableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo}
+  parent: ANcpLua.Roslyn.Utilities
+  definition: ANcpLua.Roslyn.Utilities.EquatableArray`1
+  href: ANcpLua.Roslyn.Utilities.EquatableArray-1.html
+  name: EquatableArray<DiagnosticInfo>
+  nameWithType: EquatableArray<DiagnosticInfo>
+  fullName: ANcpLua.Roslyn.Utilities.EquatableArray<ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo>
+  nameWithType.vb: EquatableArray(Of DiagnosticInfo)
+  fullName.vb: ANcpLua.Roslyn.Utilities.EquatableArray(Of ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  name.vb: EquatableArray(Of DiagnosticInfo)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.EquatableArray`1
+    name: EquatableArray
+    href: ANcpLua.Roslyn.Utilities.EquatableArray-1.html
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: '>'
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.EquatableArray`1
+    name: EquatableArray
+    href: ANcpLua.Roslyn.Utilities.EquatableArray-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.EquatableArray`1
+  commentId: T:ANcpLua.Roslyn.Utilities.EquatableArray`1
+  parent: ANcpLua.Roslyn.Utilities
+  href: ANcpLua.Roslyn.Utilities.EquatableArray-1.html
+  name: EquatableArray<T>
+  nameWithType: EquatableArray<T>
+  fullName: ANcpLua.Roslyn.Utilities.EquatableArray<T>
+  nameWithType.vb: EquatableArray(Of T)
+  fullName.vb: ANcpLua.Roslyn.Utilities.EquatableArray(Of T)
+  name.vb: EquatableArray(Of T)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.EquatableArray`1
+    name: EquatableArray
+    href: ANcpLua.Roslyn.Utilities.EquatableArray-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.EquatableArray`1
+    name: EquatableArray
+    href: ANcpLua.Roslyn.Utilities.EquatableArray-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Microsoft.CodeAnalysis.DiagnosticSeverity.Error
+  commentId: F:Microsoft.CodeAnalysis.DiagnosticSeverity.Error
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.diagnosticseverity#microsoft-codeanalysis-diagnosticseverity-error
+  name: Error
+  nameWithType: DiagnosticSeverity.Error
+  fullName: Microsoft.CodeAnalysis.DiagnosticSeverity.Error
+- uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.HasErrors*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.HasErrors
+  href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html#ANcpLua_Roslyn_Utilities_DiagnosticFlow_1_HasErrors
+  name: HasErrors
+  nameWithType: DiagnosticFlow<T>.HasErrors
+  fullName: ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>.HasErrors
+  nameWithType.vb: DiagnosticFlow(Of T).HasErrors
+  fullName.vb: ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T).HasErrors
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Value
+  commentId: P:ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Value
+  href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html#ANcpLua_Roslyn_Utilities_DiagnosticFlow_1_Value
+  name: Value
+  nameWithType: DiagnosticFlow<T>.Value
+  fullName: ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>.Value
+  nameWithType.vb: DiagnosticFlow(Of T).Value
+  fullName.vb: ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T).Value
+- uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.HasErrors
+  commentId: P:ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.HasErrors
+  href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html#ANcpLua_Roslyn_Utilities_DiagnosticFlow_1_HasErrors
+  name: HasErrors
+  nameWithType: DiagnosticFlow<T>.HasErrors
+  fullName: ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>.HasErrors
+  nameWithType.vb: DiagnosticFlow(Of T).HasErrors
+  fullName.vb: ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T).HasErrors
+- uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.IsSuccess*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.IsSuccess
+  href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html#ANcpLua_Roslyn_Utilities_DiagnosticFlow_1_IsSuccess
+  name: IsSuccess
+  nameWithType: DiagnosticFlow<T>.IsSuccess
+  fullName: ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>.IsSuccess
+  nameWithType.vb: DiagnosticFlow(Of T).IsSuccess
+  fullName.vb: ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T).IsSuccess
+- uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.IsSuccess
+  commentId: P:ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.IsSuccess
+  href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html#ANcpLua_Roslyn_Utilities_DiagnosticFlow_1_IsSuccess
+  name: IsSuccess
+  nameWithType: DiagnosticFlow<T>.IsSuccess
+  fullName: ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>.IsSuccess
+  nameWithType.vb: DiagnosticFlow(Of T).IsSuccess
+  fullName.vb: ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T).IsSuccess
+- uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.IsFailed*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.IsFailed
+  href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html#ANcpLua_Roslyn_Utilities_DiagnosticFlow_1_IsFailed
+  name: IsFailed
+  nameWithType: DiagnosticFlow<T>.IsFailed
+  fullName: ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>.IsFailed
+  nameWithType.vb: DiagnosticFlow(Of T).IsFailed
+  fullName.vb: ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T).IsFailed
+- uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+  commentId: T:ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+  parent: ANcpLua.Roslyn.Utilities
+  href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html
+  name: DiagnosticFlow<T>
+  nameWithType: DiagnosticFlow<T>
+  fullName: ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>
+  nameWithType.vb: DiagnosticFlow(Of T)
+  fullName.vb: ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T)
+  name.vb: DiagnosticFlow(Of T)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+    name: DiagnosticFlow
+    href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+    name: DiagnosticFlow
+    href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Then*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Then
+  href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html#ANcpLua_Roslyn_Utilities_DiagnosticFlow_1_Then__1_System_Func__0_ANcpLua_Roslyn_Utilities_DiagnosticFlow___0___
+  name: Then
+  nameWithType: DiagnosticFlow<T>.Then
+  fullName: ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>.Then
+  nameWithType.vb: DiagnosticFlow(Of T).Then
+  fullName.vb: ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T).Then
+- uid: System.Func{{T},ANcpLua.Roslyn.Utilities.DiagnosticFlow{{TNext}}}
+  commentId: T:System.Func{`0,ANcpLua.Roslyn.Utilities.DiagnosticFlow{``0}}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<T, DiagnosticFlow<TNext>>
+  nameWithType: Func<T, DiagnosticFlow<TNext>>
+  fullName: System.Func<T, ANcpLua.Roslyn.Utilities.DiagnosticFlow<TNext>>
+  nameWithType.vb: Func(Of T, DiagnosticFlow(Of TNext))
+  fullName.vb: System.Func(Of T, ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of TNext))
+  name.vb: Func(Of T, DiagnosticFlow(Of TNext))
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+    name: DiagnosticFlow
+    href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html
+  - name: <
+  - name: TNext
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+    name: DiagnosticFlow
+    href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TNext
+  - name: )
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow{{TNext}}
+  commentId: T:ANcpLua.Roslyn.Utilities.DiagnosticFlow{``0}
+  parent: ANcpLua.Roslyn.Utilities
+  definition: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+  href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html
+  name: DiagnosticFlow<TNext>
+  nameWithType: DiagnosticFlow<TNext>
+  fullName: ANcpLua.Roslyn.Utilities.DiagnosticFlow<TNext>
+  nameWithType.vb: DiagnosticFlow(Of TNext)
+  fullName.vb: ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of TNext)
+  name.vb: DiagnosticFlow(Of TNext)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+    name: DiagnosticFlow
+    href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html
+  - name: <
+  - name: TNext
+  - name: '>'
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+    name: DiagnosticFlow
+    href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TNext
+  - name: )
+- uid: System.Func`2
+  commentId: T:System.Func`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<T, TResult>
+  nameWithType: Func<T, TResult>
+  fullName: System.Func<T, TResult>
+  nameWithType.vb: Func(Of T, TResult)
+  fullName.vb: System.Func(Of T, TResult)
+  name.vb: Func(Of T, TResult)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Select*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Select
+  href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html#ANcpLua_Roslyn_Utilities_DiagnosticFlow_1_Select__1_System_Func__0___0__
+  name: Select
+  nameWithType: DiagnosticFlow<T>.Select
+  fullName: ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>.Select
+  nameWithType.vb: DiagnosticFlow(Of T).Select
+  fullName.vb: ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T).Select
+- uid: System.Func{{T},{TNext}}
+  commentId: T:System.Func{`0,``0}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<T, TNext>
+  nameWithType: Func<T, TNext>
+  fullName: System.Func<T, TNext>
+  nameWithType.vb: Func(Of T, TNext)
+  fullName.vb: System.Func(Of T, TNext)
+  name.vb: Func(Of T, TNext)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TNext
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TNext
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.WarnIf(System.Func{`0,System.Boolean},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  commentId: M:ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.WarnIf(System.Func{`0,System.Boolean},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html#ANcpLua_Roslyn_Utilities_DiagnosticFlow_1_WarnIf_System_Func__0_System_Boolean__ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_
+  name: WarnIf(Func<T, bool>, DiagnosticInfo)
+  nameWithType: DiagnosticFlow<T>.WarnIf(Func<T, bool>, DiagnosticInfo)
+  fullName: ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>.WarnIf(System.Func<T, bool>, ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  nameWithType.vb: DiagnosticFlow(Of T).WarnIf(Func(Of T, Boolean), DiagnosticInfo)
+  fullName.vb: ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T).WarnIf(System.Func(Of T, Boolean), ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  name.vb: WarnIf(Func(Of T, Boolean), DiagnosticInfo)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.WarnIf(System.Func{`0,System.Boolean},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+    name: WarnIf
+    href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html#ANcpLua_Roslyn_Utilities_DiagnosticFlow_1_WarnIf_System_Func__0_System_Boolean__ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_
+  - name: (
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.WarnIf(System.Func{`0,System.Boolean},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+    name: WarnIf
+    href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html#ANcpLua_Roslyn_Utilities_DiagnosticFlow_1_WarnIf_System_Func__0_System_Boolean__ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_
+  - name: (
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Error(ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  commentId: M:ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Error(ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html#ANcpLua_Roslyn_Utilities_DiagnosticFlow_1_Error_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_
+  name: Error(DiagnosticInfo)
+  nameWithType: DiagnosticFlow<T>.Error(DiagnosticInfo)
+  fullName: ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>.Error(ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  nameWithType.vb: DiagnosticFlow(Of T).Error(DiagnosticInfo)
+  fullName.vb: ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T).Error(ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Error(ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+    name: Error
+    href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html#ANcpLua_Roslyn_Utilities_DiagnosticFlow_1_Error_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Error(ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+    name: Error
+    href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html#ANcpLua_Roslyn_Utilities_DiagnosticFlow_1_Error_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Diagnostics
+  commentId: P:ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Diagnostics
+  href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html#ANcpLua_Roslyn_Utilities_DiagnosticFlow_1_Diagnostics
+  name: Diagnostics
+  nameWithType: DiagnosticFlow<T>.Diagnostics
+  fullName: ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>.Diagnostics
+  nameWithType.vb: DiagnosticFlow(Of T).Diagnostics
+  fullName.vb: ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T).Diagnostics
+- uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Warn*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Warn
+  href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html#ANcpLua_Roslyn_Utilities_DiagnosticFlow_1_Warn_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_
+  name: Warn
+  nameWithType: DiagnosticFlow<T>.Warn
+  fullName: ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>.Warn
+  nameWithType.vb: DiagnosticFlow(Of T).Warn
+  fullName.vb: ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T).Warn
+- uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+  commentId: T:ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+  parent: ANcpLua.Roslyn.Utilities.Models
+  href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  name: DiagnosticInfo
+  nameWithType: DiagnosticInfo
+  fullName: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+- uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Warn(ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  commentId: M:ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Warn(ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html#ANcpLua_Roslyn_Utilities_DiagnosticFlow_1_Warn_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_
+  name: Warn(DiagnosticInfo)
+  nameWithType: DiagnosticFlow<T>.Warn(DiagnosticInfo)
+  fullName: ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>.Warn(ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  nameWithType.vb: DiagnosticFlow(Of T).Warn(DiagnosticInfo)
+  fullName.vb: ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T).Warn(ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Warn(ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+    name: Warn
+    href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html#ANcpLua_Roslyn_Utilities_DiagnosticFlow_1_Warn_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Warn(ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+    name: Warn
+    href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html#ANcpLua_Roslyn_Utilities_DiagnosticFlow_1_Warn_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.ErrorIf(System.Func{`0,System.Boolean},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  commentId: M:ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.ErrorIf(System.Func{`0,System.Boolean},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html#ANcpLua_Roslyn_Utilities_DiagnosticFlow_1_ErrorIf_System_Func__0_System_Boolean__ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_
+  name: ErrorIf(Func<T, bool>, DiagnosticInfo)
+  nameWithType: DiagnosticFlow<T>.ErrorIf(Func<T, bool>, DiagnosticInfo)
+  fullName: ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>.ErrorIf(System.Func<T, bool>, ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  nameWithType.vb: DiagnosticFlow(Of T).ErrorIf(Func(Of T, Boolean), DiagnosticInfo)
+  fullName.vb: ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T).ErrorIf(System.Func(Of T, Boolean), ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  name.vb: ErrorIf(Func(Of T, Boolean), DiagnosticInfo)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.ErrorIf(System.Func{`0,System.Boolean},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+    name: ErrorIf
+    href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html#ANcpLua_Roslyn_Utilities_DiagnosticFlow_1_ErrorIf_System_Func__0_System_Boolean__ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_
+  - name: (
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.ErrorIf(System.Func{`0,System.Boolean},ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+    name: ErrorIf
+    href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html#ANcpLua_Roslyn_Utilities_DiagnosticFlow_1_ErrorIf_System_Func__0_System_Boolean__ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_
+  - name: (
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.WarnIf*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.WarnIf
+  href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html#ANcpLua_Roslyn_Utilities_DiagnosticFlow_1_WarnIf_System_Func__0_System_Boolean__ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_
+  name: WarnIf
+  nameWithType: DiagnosticFlow<T>.WarnIf
+  fullName: ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>.WarnIf
+  nameWithType.vb: DiagnosticFlow(Of T).WarnIf
+  fullName.vb: ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T).WarnIf
+- uid: System.Func{{T},System.Boolean}
+  commentId: T:System.Func{`0,System.Boolean}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<T, bool>
+  nameWithType: Func<T, bool>
+  fullName: System.Func<T, bool>
+  nameWithType.vb: Func(Of T, Boolean)
+  fullName.vb: System.Func(Of T, Boolean)
+  name.vb: Func(Of T, Boolean)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Error*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Error
+  href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html#ANcpLua_Roslyn_Utilities_DiagnosticFlow_1_Error_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_
+  name: Error
+  nameWithType: DiagnosticFlow<T>.Error
+  fullName: ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>.Error
+  nameWithType.vb: DiagnosticFlow(Of T).Error
+  fullName.vb: ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T).Error
+- uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.ErrorIf*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.ErrorIf
+  href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html#ANcpLua_Roslyn_Utilities_DiagnosticFlow_1_ErrorIf_System_Func__0_System_Boolean__ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_
+  name: ErrorIf
+  nameWithType: DiagnosticFlow<T>.ErrorIf
+  fullName: ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>.ErrorIf
+  nameWithType.vb: DiagnosticFlow(Of T).ErrorIf
+  fullName.vb: ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T).ErrorIf
+- uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Where*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Where
+  href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html#ANcpLua_Roslyn_Utilities_DiagnosticFlow_1_Where_System_Func__0_System_Boolean__ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo_
+  name: Where
+  nameWithType: DiagnosticFlow<T>.Where
+  fullName: ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>.Where
+  nameWithType.vb: DiagnosticFlow(Of T).Where
+  fullName.vb: ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T).Where
+- uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Do*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Do
+  href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html#ANcpLua_Roslyn_Utilities_DiagnosticFlow_1_Do_System_Action__0__
+  name: Do
+  nameWithType: DiagnosticFlow<T>.Do
+  fullName: ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>.Do
+  nameWithType.vb: DiagnosticFlow(Of T).Do
+  fullName.vb: ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T).Do
+- uid: System.Action{{T}}
+  commentId: T:System.Action{`0}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Action`1
+  commentId: T:System.Action`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.ValueOrDefault*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.ValueOrDefault
+  href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html#ANcpLua_Roslyn_Utilities_DiagnosticFlow_1_ValueOrDefault__0_
+  name: ValueOrDefault
+  nameWithType: DiagnosticFlow<T>.ValueOrDefault
+  fullName: ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>.ValueOrDefault
+  nameWithType.vb: DiagnosticFlow(Of T).ValueOrDefault
+  fullName.vb: ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T).ValueOrDefault
+- uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Match*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Match
+  href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html#ANcpLua_Roslyn_Utilities_DiagnosticFlow_1_Match__1_System_Func__0___0__System_Func_ANcpLua_Roslyn_Utilities_EquatableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo____0__
+  name: Match
+  nameWithType: DiagnosticFlow<T>.Match
+  fullName: ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>.Match
+  nameWithType.vb: DiagnosticFlow(Of T).Match
+  fullName.vb: ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T).Match
+- uid: System.Func{{T},{TResult}}
+  commentId: T:System.Func{`0,``0}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<T, TResult>
+  nameWithType: Func<T, TResult>
+  fullName: System.Func<T, TResult>
+  nameWithType.vb: Func(Of T, TResult)
+  fullName.vb: System.Func(Of T, TResult)
+  name.vb: Func(Of T, TResult)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Func{ANcpLua.Roslyn.Utilities.EquatableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo},{TResult}}
+  commentId: T:System.Func{ANcpLua.Roslyn.Utilities.EquatableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo},``0}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<EquatableArray<DiagnosticInfo>, TResult>
+  nameWithType: Func<EquatableArray<DiagnosticInfo>, TResult>
+  fullName: System.Func<ANcpLua.Roslyn.Utilities.EquatableArray<ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo>, TResult>
+  nameWithType.vb: Func(Of EquatableArray(Of DiagnosticInfo), TResult)
+  fullName.vb: System.Func(Of ANcpLua.Roslyn.Utilities.EquatableArray(Of ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo), TResult)
+  name.vb: Func(Of EquatableArray(Of DiagnosticInfo), TResult)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.EquatableArray`1
+    name: EquatableArray
+    href: ANcpLua.Roslyn.Utilities.EquatableArray-1.html
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: '>'
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.EquatableArray`1
+    name: EquatableArray
+    href: ANcpLua.Roslyn.Utilities.EquatableArray-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: )
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: '{TResult}'
+  commentId: '!:TResult'
+  definition: TResult
+  name: TResult
+  nameWithType: TResult
+  fullName: TResult
+- uid: TResult
+  commentId: '!:TResult'
+  name: TResult
+  nameWithType: TResult
+  fullName: TResult
+- uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.op_Implicit*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.op_Implicit
+  name: implicit operator
+  nameWithType: DiagnosticFlow<T>.implicit operator
+  fullName: ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>.implicit operator
+  nameWithType.vb: DiagnosticFlow(Of T).CType
+  fullName.vb: ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T).CType
+  name.vb: CType
+  spec.csharp:
+  - name: implicit
+  - name: " "
+  - name: operator
+- uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Equals*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.Equals
+  href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html#ANcpLua_Roslyn_Utilities_DiagnosticFlow_1_Equals_ANcpLua_Roslyn_Utilities_DiagnosticFlow__0__
+  name: Equals
+  nameWithType: DiagnosticFlow<T>.Equals
+  fullName: ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>.Equals
+  nameWithType.vb: DiagnosticFlow(Of T).Equals
+  fullName.vb: ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T).Equals
+- uid: System.IEquatable{ANcpLua.Roslyn.Utilities.DiagnosticFlow`1}.Equals(ANcpLua.Roslyn.Utilities.DiagnosticFlow{{T}})
+  commentId: M:System.IEquatable{ANcpLua.Roslyn.Utilities.DiagnosticFlow`1}.Equals(ANcpLua.Roslyn.Utilities.DiagnosticFlow{`0})
+  parent: System.IEquatable{ANcpLua.Roslyn.Utilities.DiagnosticFlow`1}
+  definition: System.IEquatable`1.Equals(`0)
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(DiagnosticFlow<T>)
+  nameWithType: IEquatable<DiagnosticFlow<T>>.Equals(DiagnosticFlow<T>)
+  fullName: System.IEquatable<ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>>.Equals(ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>)
+  nameWithType.vb: IEquatable(Of DiagnosticFlow(Of T)).Equals(DiagnosticFlow(Of T))
+  fullName.vb: System.IEquatable(Of ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T)).Equals(ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T))
+  name.vb: Equals(DiagnosticFlow(Of T))
+  spec.csharp:
+  - uid: System.IEquatable{ANcpLua.Roslyn.Utilities.DiagnosticFlow`1}.Equals(ANcpLua.Roslyn.Utilities.DiagnosticFlow{`0})
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+    name: DiagnosticFlow
+    href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable{ANcpLua.Roslyn.Utilities.DiagnosticFlow`1}.Equals(ANcpLua.Roslyn.Utilities.DiagnosticFlow{`0})
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1
+    name: DiagnosticFlow
+    href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: System.IEquatable`1.Equals(`0)
+  commentId: M:System.IEquatable`1.Equals(`0)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  name: Equals(T)
+  nameWithType: IEquatable<T>.Equals(T)
+  fullName: System.IEquatable<T>.Equals(T)
+  nameWithType.vb: IEquatable(Of T).Equals(T)
+  fullName.vb: System.IEquatable(Of T).Equals(T)
+  spec.csharp:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: System.IEquatable`1.Equals(`0)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1.equals
+  - name: (
+  - name: T
+  - name: )
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.GetHashCode*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.GetHashCode
+  href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html#ANcpLua_Roslyn_Utilities_DiagnosticFlow_1_GetHashCode
+  name: GetHashCode
+  nameWithType: DiagnosticFlow<T>.GetHashCode
+  fullName: ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>.GetHashCode
+  nameWithType.vb: DiagnosticFlow(Of T).GetHashCode
+  fullName.vb: ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T).GetHashCode
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.op_Equality*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.op_Equality
+  href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html#ANcpLua_Roslyn_Utilities_DiagnosticFlow_1_op_Equality_ANcpLua_Roslyn_Utilities_DiagnosticFlow__0__ANcpLua_Roslyn_Utilities_DiagnosticFlow__0__
+  name: operator ==
+  nameWithType: DiagnosticFlow<T>.operator ==
+  fullName: ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>.operator ==
+  nameWithType.vb: DiagnosticFlow(Of T).=
+  fullName.vb: ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T).=
+  name.vb: =
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.op_Equality*
+    name: ==
+    href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html#ANcpLua_Roslyn_Utilities_DiagnosticFlow_1_op_Equality_ANcpLua_Roslyn_Utilities_DiagnosticFlow__0__ANcpLua_Roslyn_Utilities_DiagnosticFlow__0__
+- uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.op_Inequality*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.op_Inequality
+  href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html#ANcpLua_Roslyn_Utilities_DiagnosticFlow_1_op_Inequality_ANcpLua_Roslyn_Utilities_DiagnosticFlow__0__ANcpLua_Roslyn_Utilities_DiagnosticFlow__0__
+  name: operator !=
+  nameWithType: DiagnosticFlow<T>.operator !=
+  fullName: ANcpLua.Roslyn.Utilities.DiagnosticFlow<T>.operator !=
+  nameWithType.vb: DiagnosticFlow(Of T).<>
+  fullName.vb: ANcpLua.Roslyn.Utilities.DiagnosticFlow(Of T).<>
+  name.vb: <>
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.DiagnosticFlow`1.op_Inequality*
+    name: '!='
+    href: ANcpLua.Roslyn.Utilities.DiagnosticFlow-1.html#ANcpLua_Roslyn_Utilities_DiagnosticFlow_1_op_Inequality_ANcpLua_Roslyn_Utilities_DiagnosticFlow__0__ANcpLua_Roslyn_Utilities_DiagnosticFlow__0__

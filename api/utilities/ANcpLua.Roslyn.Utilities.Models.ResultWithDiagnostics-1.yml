@@ -1,0 +1,969 @@
+### YamlMime:ManagedReference
+items:
+- uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics`1
+  commentId: T:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics`1
+  id: ResultWithDiagnostics`1
+  parent: ANcpLua.Roslyn.Utilities.Models
+  children:
+  - ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics`1.#ctor(`0)
+  - ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics`1.#ctor(`0,ANcpLua.Roslyn.Utilities.EquatableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  - ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics`1.Diagnostics
+  - ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics`1.Result
+  langs:
+  - csharp
+  - vb
+  name: ResultWithDiagnostics<T>
+  nameWithType: ResultWithDiagnostics<T>
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics<T>
+  type: Struct
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/ResultWithDiagnostics.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: ResultWithDiagnostics
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/ResultWithDiagnostics.cs
+    startLine: 46
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Models
+  summary: Represents a result value paired with associated diagnostics from a source generator operation.
+  remarks: >-
+    <p>
+        This type is designed specifically for use in Roslyn incremental source generators where
+        both a result and associated diagnostics need to be propagated through the pipeline.
+    </p>
+
+    <p>
+        Key design decisions:
+    </p>
+
+    <ul><li>
+                Uses <xref href="ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo" data-throw-if-not-resolved="false"></xref> instead of <code>Diagnostic</code> because <code>Diagnostic</code>
+                contains <code>Location</code> which uses reference equality, breaking incremental generator caching.
+            </li><li>
+                Diagnostics are stored in an <xref href="ANcpLua.Roslyn.Utilities.EquatableArray%601" data-throw-if-not-resolved="false"></xref> to ensure value-based equality
+                comparisons work correctly for the incremental generator's caching mechanism.
+            </li><li>
+                Implemented as a <code>readonly record struct</code> for optimal performance and correct
+                equality semantics.
+            </li></ul>
+  example: []
+  syntax:
+    content: 'public readonly record struct ResultWithDiagnostics<T> : IEquatable<ResultWithDiagnostics<T>>'
+    typeParameters:
+    - id: T
+      description: The type of the result value.
+    content.vb: Public Structure ResultWithDiagnostics(Of T) Implements IEquatable(Of ResultWithDiagnostics(Of T))
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    commentId: T:ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+  - linkId: ANcpLua.Roslyn.Utilities.EquatableArray`1
+    commentId: T:ANcpLua.Roslyn.Utilities.EquatableArray`1
+  - linkId: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+    commentId: T:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+  implements:
+  - System.IEquatable{ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics`1}
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  extensionMethods:
+  - ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics`1.ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1
+  - ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics`1.ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  nameWithType.vb: ResultWithDiagnostics(Of T)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics(Of T)
+  name.vb: ResultWithDiagnostics(Of T)
+- uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics`1.#ctor(`0,ANcpLua.Roslyn.Utilities.EquatableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics`1.#ctor(`0,ANcpLua.Roslyn.Utilities.EquatableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  id: '#ctor(`0,ANcpLua.Roslyn.Utilities.EquatableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})'
+  parent: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics`1
+  langs:
+  - csharp
+  - vb
+  name: ResultWithDiagnostics(T, EquatableArray<DiagnosticInfo>)
+  nameWithType: ResultWithDiagnostics<T>.ResultWithDiagnostics(T, EquatableArray<DiagnosticInfo>)
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics<T>.ResultWithDiagnostics(T, ANcpLua.Roslyn.Utilities.EquatableArray<ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo>)
+  type: Constructor
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/ResultWithDiagnostics.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: .ctor
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/ResultWithDiagnostics.cs
+    startLine: 46
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Models
+  summary: Represents a result value paired with associated diagnostics from a source generator operation.
+  remarks: >-
+    <p>
+        This type is designed specifically for use in Roslyn incremental source generators where
+        both a result and associated diagnostics need to be propagated through the pipeline.
+    </p>
+
+    <p>
+        Key design decisions:
+    </p>
+
+    <ul><li>
+                Uses <xref href="ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo" data-throw-if-not-resolved="false"></xref> instead of <code>Diagnostic</code> because <code>Diagnostic</code>
+                contains <code>Location</code> which uses reference equality, breaking incremental generator caching.
+            </li><li>
+                Diagnostics are stored in an <xref href="ANcpLua.Roslyn.Utilities.EquatableArray%601" data-throw-if-not-resolved="false"></xref> to ensure value-based equality
+                comparisons work correctly for the incremental generator's caching mechanism.
+            </li><li>
+                Implemented as a <code>readonly record struct</code> for optimal performance and correct
+                equality semantics.
+            </li></ul>
+  example: []
+  syntax:
+    content: public ResultWithDiagnostics(T Result, EquatableArray<DiagnosticInfo> Diagnostics)
+    parameters:
+    - id: Result
+      type: '{T}'
+      description: The result value produced by the operation.
+    - id: Diagnostics
+      type: ANcpLua.Roslyn.Utilities.EquatableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo}
+      description: >-
+        The diagnostics collected during the operation, wrapped in an <xref href="ANcpLua.Roslyn.Utilities.EquatableArray%601" data-throw-if-not-resolved="false"></xref>
+
+        to ensure proper equality comparisons for incremental generator caching.
+    content.vb: Public Sub New(Result As T, Diagnostics As EquatableArray(Of DiagnosticInfo))
+  overload: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics`1.#ctor*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    commentId: T:ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+  - linkId: ANcpLua.Roslyn.Utilities.EquatableArray`1
+    commentId: T:ANcpLua.Roslyn.Utilities.EquatableArray`1
+  - linkId: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+    commentId: T:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+  nameWithType.vb: ResultWithDiagnostics(Of T).New(T, EquatableArray(Of DiagnosticInfo))
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics(Of T).New(T, ANcpLua.Roslyn.Utilities.EquatableArray(Of ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo))
+  name.vb: New(T, EquatableArray(Of DiagnosticInfo))
+- uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics`1.Result
+  commentId: P:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics`1.Result
+  id: Result
+  parent: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics`1
+  langs:
+  - csharp
+  - vb
+  name: Result
+  nameWithType: ResultWithDiagnostics<T>.Result
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics<T>.Result
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/ResultWithDiagnostics.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Result
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/ResultWithDiagnostics.cs
+    startLine: 51
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Models
+  summary: The result value produced by the operation.
+  example: []
+  syntax:
+    content: public T Result { get; init; }
+    parameters: []
+    return:
+      type: '{T}'
+    content.vb: Public Property Result As T
+  overload: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics`1.Result*
+  nameWithType.vb: ResultWithDiagnostics(Of T).Result
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics(Of T).Result
+- uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics`1.Diagnostics
+  commentId: P:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics`1.Diagnostics
+  id: Diagnostics
+  parent: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics`1
+  langs:
+  - csharp
+  - vb
+  name: Diagnostics
+  nameWithType: ResultWithDiagnostics<T>.Diagnostics
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics<T>.Diagnostics
+  type: Property
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/ResultWithDiagnostics.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Diagnostics
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/ResultWithDiagnostics.cs
+    startLine: 52
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Models
+  summary: >-
+    The diagnostics collected during the operation, wrapped in an <xref href="ANcpLua.Roslyn.Utilities.EquatableArray%601" data-throw-if-not-resolved="false"></xref>
+
+    to ensure proper equality comparisons for incremental generator caching.
+  example: []
+  syntax:
+    content: public EquatableArray<DiagnosticInfo> Diagnostics { get; init; }
+    parameters: []
+    return:
+      type: ANcpLua.Roslyn.Utilities.EquatableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo}
+    content.vb: Public Property Diagnostics As EquatableArray(Of DiagnosticInfo)
+  overload: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics`1.Diagnostics*
+  nameWithType.vb: ResultWithDiagnostics(Of T).Diagnostics
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics(Of T).Diagnostics
+- uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics`1.#ctor(`0)
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics`1.#ctor(`0)
+  id: '#ctor(`0)'
+  parent: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics`1
+  langs:
+  - csharp
+  - vb
+  name: ResultWithDiagnostics(T)
+  nameWithType: ResultWithDiagnostics<T>.ResultWithDiagnostics(T)
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics<T>.ResultWithDiagnostics(T)
+  type: Constructor
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/ResultWithDiagnostics.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: .ctor
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/ResultWithDiagnostics.cs
+    startLine: 64
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities.Models
+  summary: Initializes a new instance of the <xref href="ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics%601" data-throw-if-not-resolved="false"></xref> struct with no diagnostics.
+  remarks: >-
+    This constructor is a convenience overload that creates a result with an empty diagnostics collection.
+
+    Use this when the operation completed successfully without any warnings or errors to report.
+  example: []
+  syntax:
+    content: public ResultWithDiagnostics(T result)
+    parameters:
+    - id: result
+      type: '{T}'
+      description: The result value to wrap.
+    content.vb: Public Sub New(result As T)
+  overload: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics`1.#ctor*
+  seealso:
+  - linkId: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+    commentId: M:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+  nameWithType.vb: ResultWithDiagnostics(Of T).New(T)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics(Of T).New(T)
+  name.vb: New(T)
+references:
+- uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+  commentId: T:ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+  parent: ANcpLua.Roslyn.Utilities.Models
+  href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  name: DiagnosticInfo
+  nameWithType: DiagnosticInfo
+  fullName: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+- uid: ANcpLua.Roslyn.Utilities.EquatableArray`1
+  commentId: T:ANcpLua.Roslyn.Utilities.EquatableArray`1
+  parent: ANcpLua.Roslyn.Utilities
+  href: ANcpLua.Roslyn.Utilities.EquatableArray-1.html
+  name: EquatableArray<T>
+  nameWithType: EquatableArray<T>
+  fullName: ANcpLua.Roslyn.Utilities.EquatableArray<T>
+  nameWithType.vb: EquatableArray(Of T)
+  fullName.vb: ANcpLua.Roslyn.Utilities.EquatableArray(Of T)
+  name.vb: EquatableArray(Of T)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.EquatableArray`1
+    name: EquatableArray
+    href: ANcpLua.Roslyn.Utilities.EquatableArray-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.EquatableArray`1
+    name: EquatableArray
+    href: ANcpLua.Roslyn.Utilities.EquatableArray-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+  commentId: T:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+  parent: ANcpLua.Roslyn.Utilities.Models
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html
+  name: ResultWithDiagnosticsExtensions
+  nameWithType: ResultWithDiagnosticsExtensions
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+- uid: ANcpLua.Roslyn.Utilities.Models
+  commentId: N:ANcpLua.Roslyn.Utilities.Models
+  href: ANcpLua.html
+  name: ANcpLua.Roslyn.Utilities.Models
+  nameWithType: ANcpLua.Roslyn.Utilities.Models
+  fullName: ANcpLua.Roslyn.Utilities.Models
+  spec.csharp:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities.Models
+    name: Models
+    href: ANcpLua.Roslyn.Utilities.Models.html
+  spec.vb:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities.Models
+    name: Models
+    href: ANcpLua.Roslyn.Utilities.Models.html
+- uid: System.IEquatable{ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics`1}
+  commentId: T:System.IEquatable{ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics`1}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<ResultWithDiagnostics<T>>
+  nameWithType: IEquatable<ResultWithDiagnostics<T>>
+  fullName: System.IEquatable<ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics<T>>
+  nameWithType.vb: IEquatable(Of ResultWithDiagnostics(Of T))
+  fullName.vb: System.IEquatable(Of ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics(Of T))
+  name.vb: IEquatable(Of ResultWithDiagnostics(Of T))
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics`1
+    name: ResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics`1
+    name: ResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics`1.ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+  parent: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+  definition: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  name: ToResultWithDiagnostics<ResultWithDiagnostics<T>>(ResultWithDiagnostics<T>)
+  nameWithType: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<ResultWithDiagnostics<T>>(ResultWithDiagnostics<T>)
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics<T>>(ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics<T>)
+  nameWithType.vb: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of ResultWithDiagnostics(Of T))(ResultWithDiagnostics(Of T))
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics(Of T))(ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics(Of T))
+  name.vb: ToResultWithDiagnostics(Of ResultWithDiagnostics(Of T))(ResultWithDiagnostics(Of T))
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics{`0})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics`1
+    name: ResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics`1
+    name: ResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics{`0})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics`1
+    name: ResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics`1
+    name: ResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics`1.ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  parent: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions
+  definition: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  name: ToResultWithDiagnostics<ResultWithDiagnostics<T>>(ResultWithDiagnostics<T>, ImmutableArray<DiagnosticInfo>)
+  nameWithType: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<ResultWithDiagnostics<T>>(ResultWithDiagnostics<T>, ImmutableArray<DiagnosticInfo>)
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics<T>>(ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics<T>, System.Collections.Immutable.ImmutableArray<ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo>)
+  nameWithType.vb: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of ResultWithDiagnostics(Of T))(ResultWithDiagnostics(Of T), ImmutableArray(Of DiagnosticInfo))
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics(Of T))(ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics(Of T), System.Collections.Immutable.ImmutableArray(Of ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo))
+  name.vb: ToResultWithDiagnostics(Of ResultWithDiagnostics(Of T))(ResultWithDiagnostics(Of T), ImmutableArray(Of DiagnosticInfo))
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics{`0},System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics`1
+    name: ResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics`1
+    name: ResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics{`0},System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics`1
+    name: ResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+  - name: (
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics`1
+    name: ResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: )
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities
+  commentId: N:ANcpLua.Roslyn.Utilities
+  href: ANcpLua.html
+  name: ANcpLua.Roslyn.Utilities
+  nameWithType: ANcpLua.Roslyn.Utilities
+  fullName: ANcpLua.Roslyn.Utilities
+  spec.csharp:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  spec.vb:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  name: ToResultWithDiagnostics<T>(T)
+  nameWithType: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<T>(T)
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<T>(T)
+  nameWithType.vb: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of T)(T)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of T)(T)
+  name.vb: ToResultWithDiagnostics(Of T)(T)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0)
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  commentId: M:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+  isExternal: true
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  name: ToResultWithDiagnostics<T>(T, ImmutableArray<DiagnosticInfo>)
+  nameWithType: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<T>(T, ImmutableArray<DiagnosticInfo>)
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics<T>(T, System.Collections.Immutable.ImmutableArray<ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo>)
+  nameWithType.vb: ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of T)(T, ImmutableArray(Of DiagnosticInfo))
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics(Of T)(T, System.Collections.Immutable.ImmutableArray(Of ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo))
+  name.vb: ToResultWithDiagnostics(Of T)(T, ImmutableArray(Of DiagnosticInfo))
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.ToResultWithDiagnostics``1(``0,System.Collections.Immutable.ImmutableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo})
+    name: ToResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnosticsExtensions.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnosticsExtensions_ToResultWithDiagnostics__1___0_System_Collections_Immutable_ImmutableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: )
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics`1.#ctor*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics`1.#ctor
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics-1.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnostics_1__ctor__0_ANcpLua_Roslyn_Utilities_EquatableArray_ANcpLua_Roslyn_Utilities_Models_DiagnosticInfo__
+  name: ResultWithDiagnostics
+  nameWithType: ResultWithDiagnostics<T>.ResultWithDiagnostics
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics<T>.ResultWithDiagnostics
+  nameWithType.vb: ResultWithDiagnostics(Of T).New
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics(Of T).New
+  name.vb: New
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: ANcpLua.Roslyn.Utilities.EquatableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo}
+  commentId: T:ANcpLua.Roslyn.Utilities.EquatableArray{ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo}
+  parent: ANcpLua.Roslyn.Utilities
+  definition: ANcpLua.Roslyn.Utilities.EquatableArray`1
+  href: ANcpLua.Roslyn.Utilities.EquatableArray-1.html
+  name: EquatableArray<DiagnosticInfo>
+  nameWithType: EquatableArray<DiagnosticInfo>
+  fullName: ANcpLua.Roslyn.Utilities.EquatableArray<ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo>
+  nameWithType.vb: EquatableArray(Of DiagnosticInfo)
+  fullName.vb: ANcpLua.Roslyn.Utilities.EquatableArray(Of ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo)
+  name.vb: EquatableArray(Of DiagnosticInfo)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.EquatableArray`1
+    name: EquatableArray
+    href: ANcpLua.Roslyn.Utilities.EquatableArray-1.html
+  - name: <
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: '>'
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.EquatableArray`1
+    name: EquatableArray
+    href: ANcpLua.Roslyn.Utilities.EquatableArray-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo
+    name: DiagnosticInfo
+    href: ANcpLua.Roslyn.Utilities.Models.DiagnosticInfo.html
+  - name: )
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics`1.Result*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics`1.Result
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics-1.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnostics_1_Result
+  name: Result
+  nameWithType: ResultWithDiagnostics<T>.Result
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics<T>.Result
+  nameWithType.vb: ResultWithDiagnostics(Of T).Result
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics(Of T).Result
+- uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics`1.Diagnostics*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics`1.Diagnostics
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics-1.html#ANcpLua_Roslyn_Utilities_Models_ResultWithDiagnostics_1_Diagnostics
+  name: Diagnostics
+  nameWithType: ResultWithDiagnostics<T>.Diagnostics
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics<T>.Diagnostics
+  nameWithType.vb: ResultWithDiagnostics(Of T).Diagnostics
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics(Of T).Diagnostics
+- uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics`1
+  commentId: T:ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics`1
+  href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics-1.html
+  name: ResultWithDiagnostics<T>
+  nameWithType: ResultWithDiagnostics<T>
+  fullName: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics<T>
+  nameWithType.vb: ResultWithDiagnostics(Of T)
+  fullName.vb: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics(Of T)
+  name.vb: ResultWithDiagnostics(Of T)
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics`1
+    name: ResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics`1
+    name: ResultWithDiagnostics
+    href: ANcpLua.Roslyn.Utilities.Models.ResultWithDiagnostics-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
