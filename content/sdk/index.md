@@ -5,7 +5,7 @@ description: MSBuild SDK with polyfills, analyzers, and opinionated defaults
 
 [![NuGet](https://img.shields.io/nuget/v/ANcpLua.NET.Sdk?label=NuGet&color=0891B2)](https://www.nuget.org/packages/ANcpLua.NET.Sdk/)
 [![.NET 10](https://img.shields.io/badge/.NET-10.0-7C3AED)](https://dotnet.microsoft.com/download/dotnet/10.0)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/ANcpLua/ANcpLua.NET.Sdk/blob/main/LICENSE.txt)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 # ANcpLua.NET.Sdk
 
