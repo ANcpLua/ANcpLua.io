@@ -4,52 +4,21 @@ title: Service Defaults (Web SDK)
 
 # Service Defaults
 
-The Web SDK (`ANcpLua.NET.Sdk.Web`) automatically configures common ASP.NET Core services.
+Opinionated service defaults for ASP.NET Core applications, inspired by .NET Aspire. The Web SDK (`ANcpLua.NET.Sdk.Web`) automatically configures these when you use `WebApplication.CreateBuilder()`.
 
 ## Features
 
-- **OpenTelemetry**: OpenTelemetry (logging, metrics, tracing with OTLP export)
-- **DevLogs**: DevLogs (browser console to server logs)
-- **Https**: HTTPS redirection and HSTS
-- **ForwardedHeaders**: Forwarded headers for reverse proxies
-- **AntiForgery**: Anti-forgery token configuration
-- **StaticAssets**: Static file serving with proper caching
-- **OpenApi**: OpenAPI/Swagger documentation
-
-## Usage
-
-Service defaults are automatically registered when using `ANcpLua.NET.Sdk.Web`.
-The source generator intercepts `WebApplication.CreateBuilder()` calls.
-
-```csharp
-// This call is automatically enhanced by the SDK
-var builder = WebApplication.CreateBuilder(args);
-```
-
-## Opt-out
-
-```xml
-<PropertyGroup>
-  <AutoRegisterServiceDefaults>false</AutoRegisterServiceDefaults>
-</PropertyGroup>
-```
-
-## Details
-
-# ANcpSdk.AspNetCore.ServiceDefaults
-
-Opinionated service defaults for ASP.NET Core applications, inspired by .NET Aspire.
-
-## Features
-
-- **OpenTelemetry**: Logging, metrics (ASP.NET Core, HTTP, Runtime), tracing with OTLP export
-- **Health Checks**: `/health` (readiness) and `/alive` (liveness) endpoints
-- **Service Discovery**: Microsoft.Extensions.ServiceDiscovery enabled
-- **HTTP Resilience**: Standard resilience handlers with retries and circuit breakers
-- **JSON Configuration**: CamelCase naming, enum converters, nullable annotations
-- **Security**: Forwarded headers, HTTPS redirect, HSTS, antiforgery
-- **OpenAPI**: Optional OpenAPI document generation
-- **DevLogs**: Frontend console log bridge for unified debugging (Development only)
+| Feature | Description |
+|---------|-------------|
+| **OpenTelemetry** | Logging, metrics (ASP.NET Core, HTTP, Runtime), tracing with OTLP export |
+| **Health Checks** | `/health` (readiness) and `/alive` (liveness) endpoints |
+| **Service Discovery** | Microsoft.Extensions.ServiceDiscovery enabled |
+| **HTTP Resilience** | Standard resilience handlers with retries and circuit breakers |
+| **JSON Configuration** | CamelCase naming, enum converters, nullable annotations |
+| **Security** | Forwarded headers, HTTPS redirect, HSTS, antiforgery |
+| **Static Assets** | Static file serving with proper caching |
+| **OpenAPI** | Optional OpenAPI/Swagger documentation |
+| **DevLogs** | Frontend console log bridge for unified debugging (Development only) |
 
 ## Usage
 
@@ -62,7 +31,12 @@ app.MapANcpSdkDefaultEndpoints();
 app.Run();
 ```
 
+> [!NOTE]
+> When using `ANcpLua.NET.Sdk.Web`, the source generator automatically intercepts `WebApplication.CreateBuilder()` calls, so explicit registration is optional.
+
 ## Configuration
+
+Customize behavior through the options callback:
 
 ```csharp
 builder.UseANcpSdkConventions(options =>
@@ -70,10 +44,66 @@ builder.UseANcpSdkConventions(options =>
     options.Https.Enabled = true;
     options.OpenApi.Enabled = true;
     options.AntiForgery.Enabled = false;
-    options.DevLogs.Enabled = true; // Default: true in Development
+    options.DevLogs.Enabled = true;
     options.OpenTelemetry.ConfigureTracing = tracing => tracing.AddSource("MyApp");
 });
 ```
+
+## Configuration Options
+
+### Https
+
+HTTPS and HSTS settings
+
+| Property | Type | Default | Description |
+|----------|------|---------|-------------|
+| `Enabled` | `bool` | `true` | Enable/disable this feature |
+| `HstsEnabled` | `bool` | `true` | Enable HTTP Strict Transport Security |
+
+### OpenApi
+
+OpenAPI/Swagger settings
+
+| Property | Type | Default | Description |
+|----------|------|---------|-------------|
+| `Enabled` | `bool` | `true` | Enable/disable this feature |
+| `ConfigureOpenApi` | `Action<OpenApiOptions>?` | `null` | Custom OpenAPI options callback |
+
+### OpenTelemetry
+
+Telemetry configuration
+
+| Property | Type | Default | Description |
+|----------|------|---------|-------------|
+| `ConfigureLogging` | `Action<OpenTelemetryLoggerOptions>?` | `null` | Custom logging configuration callback |
+| `ConfigureMetrics` | `Action<MeterProviderBuilder>?` | `null` | Custom metrics configuration callback |
+| `ConfigureTracing` | `Action<TracerProviderBuilder>?` | `null` | Custom tracing configuration callback |
+
+### AntiForgery
+
+Anti-forgery token settings
+
+| Property | Type | Default | Description |
+|----------|------|---------|-------------|
+| `Enabled` | `bool` | `true` | Enable/disable this feature |
+
+### StaticAssets
+
+Static file serving
+
+| Property | Type | Default | Description |
+|----------|------|---------|-------------|
+| `Enabled` | `bool` | `true` | Enable/disable this feature |
+
+### DevLogs
+
+Browser console bridge
+
+| Property | Type | Default | Description |
+|----------|------|---------|-------------|
+| `Enabled` | `bool` | `true` | Enable/disable this feature |
+| `RoutePattern` | `string` | `"/api/dev-logs"` | URL route pattern for the endpoint |
+| `EnableInProduction` | `bool` | - | Allow in production (security risk) |
 
 ## DevLogs - Frontend Console Bridge
 
@@ -93,19 +123,12 @@ warn: DevLogEntry[0] [BROWSER] Deprecated API called
 error: DevLogEntry[0] [BROWSER] Failed to fetch data
 ```
 
-**Configuration:**
+## Opt-out
 
-```csharp
-options.DevLogs.Enabled = true;           // Default: true
-options.DevLogs.RoutePattern = "/api/dev-logs"; // Default
-options.DevLogs.EnableInProduction = false;     // Default: false
+To disable auto-registration and configure services manually:
+
+```xml
+<PropertyGroup>
+  <AutoRegisterServiceDefaults>false</AutoRegisterServiceDefaults>
+</PropertyGroup>
 ```
-
-## Auto-Registration
-
-When used with `ANcpLua.NET.Sdk.Web`, service defaults are auto-registered via source generation.
-Opt-out: `<AutoRegisterServiceDefaults>false</AutoRegisterServiceDefaults>`
-
-## License
-
-MIT

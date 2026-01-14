@@ -111,32 +111,54 @@ internal sealed class DocsGenerator(DocsConfig config, string gitRoot)
 
     public async Task<int> GenerateAsync()
     {
-        Console.WriteLine("ANcpLua.io Documentation Generator");
-        Console.WriteLine($"Output: {_outputPath}");
-        Console.WriteLine();
+        try
+        {
+            Console.WriteLine("ANcpLua.io Documentation Generator");
+            Console.WriteLine($"Output: {_outputPath}");
+            Console.WriteLine();
 
-        // Step 1: Clone/update repos
-        await FetchReposAsync();
+            // Step 1: Clone/update repos
+            await FetchReposAsync();
 
-        // Step 2: Build assemblies for reflection
-        await BuildAssembliesAsync();
+            // Step 2: Build assemblies for reflection
+            await BuildAssembliesAsync();
 
-        // Step 3: Generate docs for each repo
-        foreach (var repo in _config.Repos) await GenerateRepoDocsAsync(repo);
+            // Step 3: Generate docs for each repo
+            foreach (var repo in _config.Repos) await GenerateRepoDocsAsync(repo);
 
-        // Step 4: Generate unified index and navigation
-        GenerateUnifiedIndex();
-        GenerateNavigation();
+            // Step 4: Generate unified index and navigation
+            GenerateUnifiedIndex();
+            GenerateNavigation();
 
-        // Step 5: Generate editorconfig files
-        await GenerateEditorConfigAsync();
+            // Step 5: Generate editorconfig files
+            await GenerateEditorConfigAsync();
 
-        Console.WriteLine();
-        Console.WriteLine($"Generated {_filesWritten} file(s)");
+            Console.WriteLine();
+            Console.WriteLine($"Generated {_filesWritten} file(s)");
 
-        if (_filesWritten > 0) await ShowGitDiffAsync();
+            // Validation: fail if zero files written (indicates critical failure)
+            if (_filesWritten == 0)
+            {
+                Console.Error.WriteLine("ERROR: Zero files generated. This indicates a critical failure.");
+                Console.Error.WriteLine("       Check git connectivity, assembly builds, and file paths.");
+                return 1;
+            }
 
-        return 0; // Success
+            if (_filesWritten > 0) await ShowGitDiffAsync();
+
+            return 0; // Success
+        }
+        catch (Exception ex)
+        {
+            Console.Error.WriteLine();
+            Console.Error.WriteLine("FATAL ERROR: Documentation generation failed");
+            Console.Error.WriteLine($"Exception: {ex.GetType().Name}");
+            Console.Error.WriteLine($"Message: {ex.Message}");
+            Console.Error.WriteLine();
+            Console.Error.WriteLine("Stack Trace:");
+            Console.Error.WriteLine(ex.StackTrace);
+            return 1;
+        }
     }
 
     private async Task FetchReposAsync()
@@ -267,7 +289,18 @@ internal sealed class DocsGenerator(DocsConfig config, string gitRoot)
         }
 
         // Load assemblies
-        var analyzerAssembly = Assembly.LoadFrom(assemblyPath);
+        Assembly analyzerAssembly;
+        try
+        {
+            analyzerAssembly = Assembly.LoadFrom(assemblyPath);
+        }
+        catch (Exception ex) when (ex is BadImageFormatException or FileNotFoundException or FileLoadException)
+        {
+            Console.WriteLine($"  Error: Failed to load analyzer assembly: {ex.Message}");
+            Console.WriteLine($"         Path: {assemblyPath}");
+            return;
+        }
+
         Assembly? codeFixAssembly = null;
         if (repo.CodeFixAssemblyPath != null)
         {
@@ -286,19 +319,37 @@ internal sealed class DocsGenerator(DocsConfig config, string gitRoot)
                 }
             }
 
-            if (File.Exists(codeFixPath)) codeFixAssembly = Assembly.LoadFrom(codeFixPath);
+            if (File.Exists(codeFixPath))
+            {
+                try
+                {
+                    codeFixAssembly = Assembly.LoadFrom(codeFixPath);
+                }
+                catch (Exception ex) when (ex is BadImageFormatException or FileNotFoundException or FileLoadException)
+                {
+                    Console.WriteLine($"  Warning: Could not load CodeFix assembly: {ex.Message}");
+                }
+            }
         }
 
         // Extract analyzers via reflection (Meziantou pattern)
         var analyzers = analyzerAssembly.GetExportedTypes()
             .Where(static t => !t.IsAbstract && typeof(DiagnosticAnalyzer).IsAssignableFrom(t))
-            .Select(static t => Activator.CreateInstance(t))
+            .Select(t =>
+            {
+                try { return Activator.CreateInstance(t) as DiagnosticAnalyzer; }
+                catch { Console.WriteLine($"  Warning: Could not instantiate analyzer {t.Name}"); return null; }
+            })
             .OfType<DiagnosticAnalyzer>()
             .ToList();
 
         var codeFixProviders = codeFixAssembly?.GetExportedTypes()
             .Where(static t => !t.IsAbstract && typeof(CodeFixProvider).IsAssignableFrom(t))
-            .Select(static t => Activator.CreateInstance(t))
+            .Select(t =>
+            {
+                try { return Activator.CreateInstance(t) as CodeFixProvider; }
+                catch { Console.WriteLine($"  Warning: Could not instantiate CodeFix {t.Name}"); return null; }
+            })
             .OfType<CodeFixProvider>()
             .ToList() ?? [];
 
@@ -455,7 +506,7 @@ internal sealed class DocsGenerator(DocsConfig config, string gitRoot)
         // For utilities: toc.yml is manually maintained in content/utilities/toc.yml
     }
 
-    private async Task GenerateSdkVariantsDocsAsync(string sdkDir, string outputDir)
+    private Task GenerateSdkVariantsDocsAsync(string sdkDir, string outputDir)
     {
         var sb = new StringBuilder();
         sb.AppendLine("---");
@@ -464,20 +515,73 @@ internal sealed class DocsGenerator(DocsConfig config, string gitRoot)
         sb.AppendLine();
         sb.AppendLine("# SDK Variants");
         sb.AppendLine();
+        sb.AppendLine("ANcpLua.NET.Sdk provides three SDK variants for different project types.");
+        sb.AppendLine();
         sb.AppendLine("| Variant | Description |");
         sb.AppendLine("|---------|-------------|");
-
-        foreach (var variant in Directory.GetDirectories(sdkDir))
-        {
-            var name = Path.GetFileName(variant);
-            var readmePath = Path.Combine(variant, "Readme.md");
-            var description = File.Exists(readmePath)
-                ? ExtractFirstParagraph(await File.ReadAllTextAsync(readmePath))
-                : "No description";
-            sb.AppendLine($"| `{name}` | {description} |");
-        }
+        sb.AppendLine("| `ANcpLua.NET.Sdk` | Base SDK for libraries, console apps, and workers |");
+        sb.AppendLine("| `ANcpLua.NET.Sdk.Web` | Web SDK extending `Microsoft.NET.Sdk.Web` with service defaults |");
+        sb.AppendLine("| `ANcpLua.NET.Sdk.Test` | Test SDK with xUnit v3 MTP auto-injection |");
+        sb.AppendLine();
+        sb.AppendLine("## Usage");
+        sb.AppendLine();
+        sb.AppendLine("### Base SDK (Libraries/Console)");
+        sb.AppendLine();
+        sb.AppendLine("```xml");
+        sb.AppendLine("<Project Sdk=\"ANcpLua.NET.Sdk\">");
+        sb.AppendLine("  <PropertyGroup>");
+        sb.AppendLine("    <TargetFramework>net10.0</TargetFramework>");
+        sb.AppendLine("  </PropertyGroup>");
+        sb.AppendLine("</Project>");
+        sb.AppendLine("```");
+        sb.AppendLine();
+        sb.AppendLine("### Web SDK (ASP.NET Core)");
+        sb.AppendLine();
+        sb.AppendLine("```xml");
+        sb.AppendLine("<Project Sdk=\"ANcpLua.NET.Sdk.Web\">");
+        sb.AppendLine("  <PropertyGroup>");
+        sb.AppendLine("    <TargetFramework>net10.0</TargetFramework>");
+        sb.AppendLine("  </PropertyGroup>");
+        sb.AppendLine("</Project>");
+        sb.AppendLine("```");
+        sb.AppendLine();
+        sb.AppendLine("### Test SDK");
+        sb.AppendLine();
+        sb.AppendLine("```xml");
+        sb.AppendLine("<Project Sdk=\"ANcpLua.NET.Sdk.Test\">");
+        sb.AppendLine("  <PropertyGroup>");
+        sb.AppendLine("    <TargetFramework>net10.0</TargetFramework>");
+        sb.AppendLine("  </PropertyGroup>");
+        sb.AppendLine("</Project>");
+        sb.AppendLine("```");
+        sb.AppendLine();
+        sb.AppendLine("## What Each Variant Provides");
+        sb.AppendLine();
+        sb.AppendLine("### ANcpLua.NET.Sdk (Base)");
+        sb.AppendLine();
+        sb.AppendLine("- **Analyzers**: ANcpLua.Analyzers, Meziantou.Analyzer, BannedApiAnalyzers");
+        sb.AppendLine("- **Banned APIs**: See [Banned APIs](banned-apis.md) for the full list");
+        sb.AppendLine("- **Guard Clauses**: `Throw.IfNull()` (opt-out: `InjectSharedThrow=false`)");
+        sb.AppendLine("- **AI Support**: CLAUDE.md generation (opt-out: `GenerateClaudeMd=false`)");
+        sb.AppendLine("- **Build Settings**: Nullable, ImplicitUsings, Deterministic, SourceLink");
+        sb.AppendLine();
+        sb.AppendLine("### ANcpLua.NET.Sdk.Web (adds)");
+        sb.AppendLine();
+        sb.AppendLine("- **OpenTelemetry**: Logging, metrics, tracing with OTLP export");
+        sb.AppendLine("- **Health Endpoints**: `/health` and `/alive`");
+        sb.AppendLine("- **HTTP Resilience**: Retries and circuit breakers");
+        sb.AppendLine("- **DevLogs**: Browser console to server logs");
+        sb.AppendLine("- **See**: [Service Defaults](service-defaults.md) for full configuration");
+        sb.AppendLine();
+        sb.AppendLine("### ANcpLua.NET.Sdk.Test (adds)");
+        sb.AppendLine();
+        sb.AppendLine("- **xUnit v3 MTP**: Microsoft Testing Platform runner");
+        sb.AppendLine("- **AwesomeAssertions**: Fluent assertion library");
+        sb.AppendLine("- **Integration Testing**: WebApplicationFactory base classes");
+        sb.AppendLine("- **Analyzer Testing**: Microsoft.CodeAnalysis.Testing packages");
 
         WriteFileIfChanged(Path.Combine(outputDir, "variants.md"), sb.ToString());
+        return Task.CompletedTask;
     }
 
     private async Task GeneratePolyfillsDocsAsync(string legacySupportDir, string outputDir)
@@ -545,59 +649,183 @@ internal sealed class DocsGenerator(DocsConfig config, string gitRoot)
         sb.AppendLine();
         sb.AppendLine("# Service Defaults");
         sb.AppendLine();
-        sb.AppendLine("The Web SDK (`ANcpLua.NET.Sdk.Web`) automatically configures common ASP.NET Core services.");
+        sb.AppendLine("Opinionated service defaults for ASP.NET Core applications, inspired by .NET Aspire. The Web SDK (`ANcpLua.NET.Sdk.Web`) automatically configures these when you use `WebApplication.CreateBuilder()`.");
         sb.AppendLine();
         sb.AppendLine("## Features");
         sb.AppendLine();
-
-        var features = new Dictionary<string, string>
-        {
-            ["ANcpSdkOpenTelemetryConfiguration"] = "OpenTelemetry (logging, metrics, tracing with OTLP export)",
-            ["ANcpSdkDevLogsConfiguration"] = "DevLogs (browser console to server logs)",
-            ["ANcpSdkHttpsConfiguration"] = "HTTPS redirection and HSTS",
-            ["ANcpSdkForwardedHeadersConfiguration"] = "Forwarded headers for reverse proxies",
-            ["ANcpSdkAntiForgeryConfiguration"] = "Anti-forgery token configuration",
-            ["ANcpSdkStaticAssetsConfiguration"] = "Static file serving with proper caching",
-            ["ANcpSdkOpenApiConfiguration"] = "OpenAPI/Swagger documentation"
-        };
-
-        foreach (var (file, description) in features)
-        {
-            var filePath = Path.Combine(serviceDefaultsDir, $"{file}.cs");
-            if (File.Exists(filePath))
-                sb.AppendLine($"- **{file.Replace("ANcpSdk", "").Replace("Configuration", "")}**: {description}");
-        }
-
+        sb.AppendLine("| Feature | Description |");
+        sb.AppendLine("|---------|-------------|");
+        sb.AppendLine("| **OpenTelemetry** | Logging, metrics (ASP.NET Core, HTTP, Runtime), tracing with OTLP export |");
+        sb.AppendLine("| **Health Checks** | `/health` (readiness) and `/alive` (liveness) endpoints |");
+        sb.AppendLine("| **Service Discovery** | Microsoft.Extensions.ServiceDiscovery enabled |");
+        sb.AppendLine("| **HTTP Resilience** | Standard resilience handlers with retries and circuit breakers |");
+        sb.AppendLine("| **JSON Configuration** | CamelCase naming, enum converters, nullable annotations |");
+        sb.AppendLine("| **Security** | Forwarded headers, HTTPS redirect, HSTS, antiforgery |");
+        sb.AppendLine("| **Static Assets** | Static file serving with proper caching |");
+        sb.AppendLine("| **OpenAPI** | Optional OpenAPI/Swagger documentation |");
+        sb.AppendLine("| **DevLogs** | Frontend console log bridge for unified debugging (Development only) |");
         sb.AppendLine();
         sb.AppendLine("## Usage");
         sb.AppendLine();
-        sb.AppendLine("Service defaults are automatically registered when using `ANcpLua.NET.Sdk.Web`.");
-        sb.AppendLine("The source generator intercepts `WebApplication.CreateBuilder()` calls.");
+        sb.AppendLine("```csharp");
+        sb.AppendLine("var builder = WebApplication.CreateBuilder(args);");
+        sb.AppendLine("builder.UseANcpSdkConventions();");
+        sb.AppendLine();
+        sb.AppendLine("var app = builder.Build();");
+        sb.AppendLine("app.MapANcpSdkDefaultEndpoints();");
+        sb.AppendLine("app.Run();");
+        sb.AppendLine("```");
+        sb.AppendLine();
+        sb.AppendLine("> [!NOTE]");
+        sb.AppendLine("> When using `ANcpLua.NET.Sdk.Web`, the source generator automatically intercepts `WebApplication.CreateBuilder()` calls, so explicit registration is optional.");
+        sb.AppendLine();
+        sb.AppendLine("## Configuration");
+        sb.AppendLine();
+        sb.AppendLine("Customize behavior through the options callback:");
         sb.AppendLine();
         sb.AppendLine("```csharp");
-        sb.AppendLine("// This call is automatically enhanced by the SDK");
-        sb.AppendLine("var builder = WebApplication.CreateBuilder(args);");
+        sb.AppendLine("builder.UseANcpSdkConventions(options =>");
+        sb.AppendLine("{");
+        sb.AppendLine("    options.Https.Enabled = true;");
+        sb.AppendLine("    options.OpenApi.Enabled = true;");
+        sb.AppendLine("    options.AntiForgery.Enabled = false;");
+        sb.AppendLine("    options.DevLogs.Enabled = true;");
+        sb.AppendLine("    options.OpenTelemetry.ConfigureTracing = tracing => tracing.AddSource(\"MyApp\");");
+        sb.AppendLine("});");
+        sb.AppendLine("```");
+        sb.AppendLine();
+
+        // Generate configuration options from source files
+        sb.AppendLine("## Configuration Options");
+        sb.AppendLine();
+        await GenerateConfigOptionsFromSourceAsync(serviceDefaultsDir, sb);
+
+        sb.AppendLine("## DevLogs - Frontend Console Bridge");
+        sb.AppendLine();
+        sb.AppendLine("Captures browser `console.log/warn/error` and sends to server logs. Enabled by default in Development.");
+        sb.AppendLine();
+        sb.AppendLine("**Add to your HTML** (only served in Development):");
+        sb.AppendLine();
+        sb.AppendLine("```html");
+        sb.AppendLine("<script src=\"/dev-logs.js\"></script>");
+        sb.AppendLine("```");
+        sb.AppendLine();
+        sb.AppendLine("**All frontend logs appear in server output with `[BROWSER]` prefix:**");
+        sb.AppendLine();
+        sb.AppendLine("```");
+        sb.AppendLine("info: DevLogEntry[0] [BROWSER] User clicked button");
+        sb.AppendLine("warn: DevLogEntry[0] [BROWSER] Deprecated API called");
+        sb.AppendLine("error: DevLogEntry[0] [BROWSER] Failed to fetch data");
         sb.AppendLine("```");
         sb.AppendLine();
         sb.AppendLine("## Opt-out");
+        sb.AppendLine();
+        sb.AppendLine("To disable auto-registration and configure services manually:");
         sb.AppendLine();
         sb.AppendLine("```xml");
         sb.AppendLine("<PropertyGroup>");
         sb.AppendLine("  <AutoRegisterServiceDefaults>false</AutoRegisterServiceDefaults>");
         sb.AppendLine("</PropertyGroup>");
         sb.AppendLine("```");
-        sb.AppendLine();
-
-        var readmePath = Path.Combine(serviceDefaultsDir, "README.md");
-        if (File.Exists(readmePath))
-        {
-            var readme = await File.ReadAllTextAsync(readmePath);
-            sb.AppendLine("## Details");
-            sb.AppendLine();
-            sb.AppendLine(readme);
-        }
 
         WriteFileIfChanged(Path.Combine(outputDir, "service-defaults.md"), sb.ToString());
+    }
+
+    private async Task GenerateConfigOptionsFromSourceAsync(string serviceDefaultsDir, StringBuilder sb)
+    {
+        var configFiles = new[]
+        {
+            ("ANcpSdkHttpsConfiguration.cs", "Https", "HTTPS and HSTS settings"),
+            ("ANcpSdkOpenApiConfiguration.cs", "OpenApi", "OpenAPI/Swagger settings"),
+            ("ANcpSdkOpenTelemetryConfiguration.cs", "OpenTelemetry", "Telemetry configuration"),
+            ("ANcpSdkAntiForgeryConfiguration.cs", "AntiForgery", "Anti-forgery token settings"),
+            ("ANcpSdkStaticAssetsConfiguration.cs", "StaticAssets", "Static file serving"),
+            ("ANcpSdkForwardedHeadersConfiguration.cs", "ForwardedHeaders", "Reverse proxy headers"),
+            ("ANcpSdkDevLogsConfiguration.cs", "DevLogs", "Browser console bridge")
+        };
+
+        foreach (var (fileName, optionName, description) in configFiles)
+        {
+            var filePath = Path.Combine(serviceDefaultsDir, fileName);
+            if (!File.Exists(filePath)) continue;
+
+            var content = await File.ReadAllTextAsync(filePath);
+            var properties = ExtractPropertiesFromSource(content);
+
+            if (properties.Count == 0) continue;
+
+            sb.AppendLine($"### {optionName}");
+            sb.AppendLine();
+            sb.AppendLine(description);
+            sb.AppendLine();
+            sb.AppendLine("| Property | Type | Default | Description |");
+            sb.AppendLine("|----------|------|---------|-------------|");
+
+            foreach (var prop in properties)
+            {
+                sb.AppendLine($"| `{prop.Name}` | `{prop.Type}` | {prop.Default} | {prop.Description} |");
+            }
+
+            sb.AppendLine();
+        }
+    }
+
+    private static List<(string Name, string Type, string Default, string Description)> ExtractPropertiesFromSource(string content)
+    {
+        var results = new List<(string Name, string Type, string Default, string Description)>();
+
+        // Match public properties with optional default values - line by line to avoid capturing garbage
+        var lines = content.Split('\n');
+        foreach (var line in lines)
+        {
+            var propMatch = Regex.Match(line.Trim(),
+                @"^public\s+(?<type>[\w<>?,\s]+?)\s+(?<name>\w+)\s*\{\s*get;\s*set;\s*\}(?:\s*=\s*(?<default>[^;]+))?;?\s*$");
+
+            if (!propMatch.Success) continue;
+
+            var name = propMatch.Groups["name"].Value.Trim();
+            var type = propMatch.Groups["type"].Value.Trim();
+            var defaultVal = propMatch.Groups["default"].Success ? propMatch.Groups["default"].Value.Trim() : "";
+
+            // Skip internal properties
+            if (name == "MapCalled") continue;
+
+            // Clean up type
+            type = type.Replace("  ", " ");
+
+            // Clean up default value
+            if (string.IsNullOrEmpty(defaultVal) || defaultVal == "new()")
+                defaultVal = type.Contains("Action") ? "`null`" : "-";
+            else if (defaultVal.StartsWith("new ") || defaultVal.Contains("ForwardedHeaders."))
+                defaultVal = "(configured)";
+            else if (defaultVal == "true" || defaultVal == "false")
+                defaultVal = $"`{defaultVal}`";
+            else if (defaultVal.StartsWith("\"") && defaultVal.EndsWith("\""))
+                defaultVal = $"`{defaultVal}`";
+            else
+                defaultVal = $"`{defaultVal}`";
+
+            // Generate description from property name
+            var description = name switch
+            {
+                "Enabled" => "Enable/disable this feature",
+                "HstsEnabled" => "Enable HTTP Strict Transport Security",
+                "RoutePattern" => "URL route pattern for the endpoint",
+                "EnableInProduction" => "Allow in production (security risk)",
+                "ForwardedHeaders" => "Which headers to forward from proxy",
+                "ConfigureLogging" => "Custom logging configuration callback",
+                "ConfigureMetrics" => "Custom metrics configuration callback",
+                "ConfigureTracing" => "Custom tracing configuration callback",
+                "ConfigureOpenApi" => "Custom OpenAPI options callback",
+                "ConfigureJsonOptions" => "Custom JSON serializer options callback",
+                "ValidateDependencyContainersOnStartup" => "Validate DI containers at startup",
+                _ => $"{name} setting"
+            };
+
+            results.Add((name, type, defaultVal, description));
+        }
+
+        return results;
     }
 
     private async Task GenerateExtensionsDocsAsync(string extensionsDir, string outputDir)
@@ -828,7 +1056,7 @@ internal sealed class DocsGenerator(DocsConfig config, string gitRoot)
         WriteFileIfChanged(Path.Combine(outputDir, "testing.md"), sb.ToString());
     }
 
-    private async Task GenerateMSBuildPropertiesDocsAsync(string repoPath, string outputDir)
+    private Task GenerateMSBuildPropertiesDocsAsync(string repoPath, string outputDir)
     {
         var sb = new StringBuilder();
         sb.AppendLine("---");
@@ -839,97 +1067,155 @@ internal sealed class DocsGenerator(DocsConfig config, string gitRoot)
         sb.AppendLine();
         sb.AppendLine("Complete reference of all MSBuild properties available in ANcpLua.NET.Sdk.");
         sb.AppendLine();
-
-        var properties = new Dictionary<string, (string Description, string Default, string Category)>();
-
-        var propsFiles = Directory.GetFiles(repoPath, "*.props", SearchOption.AllDirectories)
-            .Concat(Directory.GetFiles(repoPath, "*.targets", SearchOption.AllDirectories))
-            .Where(static f => !f.Contains("obj") && !f.Contains("bin") && !f.Contains(".repos"))
-            .ToArray();
-
-        foreach (var file in propsFiles)
-        {
-            var content = await File.ReadAllTextAsync(file);
-            var fileName = Path.GetFileName(file);
-
-            var propMatches = Regex.Matches(content, @"<(\w+)\s*(?:Condition=""[^""]*"")?\s*>([^<]*)</\1>");
-            foreach (Match match in propMatches)
-            {
-                var propName = match.Groups[1].Value;
-                var propValue = match.Groups[2].Value.Trim();
-
-                if (propName.StartsWith('_') || propName == "PropertyGroup" || propName == "ItemGroup")
-                    continue;
-
-                var category = fileName switch
-                {
-                    _ when fileName.Contains("Testing") => "Testing",
-                    _ when fileName.Contains("Web") => "Web SDK",
-                    _ when fileName.Contains("Legacy") => "Polyfills",
-                    _ when fileName.Contains("Enforcement") => "Enforcement",
-                    _ => "General"
-                };
-
-                if (!properties.ContainsKey(propName) && IsUserConfigurableProperty(propName))
-                    properties[propName] = (GetPropertyDescription(propName), propValue, category);
-            }
-        }
-
-        var grouped = properties
-            .GroupBy(static p => p.Value.Category)
-            .OrderBy(static g => g.Key);
-
-        foreach (var group in grouped)
-        {
-            sb.AppendLine($"## {group.Key}");
-            sb.AppendLine();
-            sb.AppendLine("| Property | Default | Description |");
-            sb.AppendLine("|----------|---------|-------------|");
-
-            foreach (var prop in group.OrderBy(static p => p.Key))
-            {
-                var defaultVal = string.IsNullOrEmpty(prop.Value.Default) ? "-" : $"`{prop.Value.Default}`";
-                sb.AppendLine($"| `{prop.Key}` | {defaultVal} | {prop.Value.Description} |");
-            }
-
-            sb.AppendLine();
-        }
+        sb.AppendLine("## SDK Defaults");
+        sb.AppendLine();
+        sb.AppendLine("These properties are set automatically by the SDK but can be overridden.");
+        sb.AppendLine();
+        sb.AppendLine("| Property | Default | Description |");
+        sb.AppendLine("|----------|---------|-------------|");
+        sb.AppendLine("| `LangVersion` | `latest` | C# language version |");
+        sb.AppendLine("| `Nullable` | `enable` | Nullable reference types |");
+        sb.AppendLine("| `ImplicitUsings` | `enable` | Implicit global usings |");
+        sb.AppendLine("| `Deterministic` | `true` | Reproducible builds |");
+        sb.AppendLine("| `EnableNETAnalyzers` | `true` | .NET code analyzers |");
+        sb.AppendLine("| `AnalysisLevel` | `latest-all` | Analysis rule severity |");
+        sb.AppendLine("| `GenerateDocumentationFile` | `true` | Generate XML docs |");
+        sb.AppendLine("| `EnableSourceLink` | `true` | Source Link support |");
+        sb.AppendLine("| `PublishRepositoryUrl` | `true` | Include repo URL in NuGet |");
+        sb.AppendLine("| `EmbedUntrackedSources` | `true` | Embed sources in PDB |");
+        sb.AppendLine("| `EnablePackageValidation` | `true` | NuGet package validation |");
+        sb.AppendLine("| `ManagePackageVersionsCentrally` | `true` | Central Package Management |");
+        sb.AppendLine("| `TreatWarningsAsErrors` | `true` (CI/Release) | Warnings as errors |");
+        sb.AppendLine("| `EnforceCodeStyleInBuild` | `true` (CI/Release) | Code style enforcement |");
+        sb.AppendLine();
+        sb.AppendLine("## Feature Toggles");
+        sb.AppendLine();
+        sb.AppendLine("### Core Features");
+        sb.AppendLine();
+        sb.AppendLine("| Property | Default | Description |");
+        sb.AppendLine("|----------|---------|-------------|");
+        sb.AppendLine("| `InjectSharedThrow` | `true` | Inject `Throw.IfNull()` guard clauses |");
+        sb.AppendLine("| `GenerateClaudeMd` | `true` | Generate CLAUDE.md for AI assistants |");
+        sb.AppendLine("| `IncludeDefaultBannedSymbols` | `true` | Include default banned APIs |");
+        sb.AppendLine("| `AutoRegisterServiceDefaults` | `true` | Auto-register service defaults (Web SDK) |");
+        sb.AppendLine();
+        sb.AppendLine("### Polyfills (Opt-in)");
+        sb.AppendLine();
+        sb.AppendLine("These inject source files for older target frameworks.");
+        sb.AppendLine();
+        sb.AppendLine("| Property | Default | Description |");
+        sb.AppendLine("|----------|---------|-------------|");
+        sb.AppendLine("| `InjectTrimAttributesOnLegacy` | `false` | Trimmer/AOT attributes (< net5.0) |");
+        sb.AppendLine("| `InjectNullabilityAttributesOnLegacy` | `false` | Nullable reference type attrs (< netcoreapp3.1) |");
+        sb.AppendLine("| `InjectIsExternalInitOnLegacy` | `false` | Records support (< net5.0) |");
+        sb.AppendLine("| `InjectRequiredMemberOnLegacy` | `false` | `required` keyword support (< net7.0) |");
+        sb.AppendLine("| `InjectCallerAttributesOnLegacy` | `false` | CallerArgumentExpression (< net6.0) |");
+        sb.AppendLine("| `InjectUnreachableExceptionOnLegacy` | `false` | UnreachableException (< net7.0) |");
+        sb.AppendLine("| `InjectExperimentalAttributeOnLegacy` | `false` | ExperimentalAttribute (< net8.0) |");
+        sb.AppendLine("| `InjectIndexRangeOnLegacy` | `false` | Index/Range structs (< net5.0) |");
+        sb.AppendLine("| `InjectStackTraceHiddenOnLegacy` | `false` | StackTraceHidden attribute |");
+        sb.AppendLine("| `InjectLockPolyfill` | `false` | System.Threading.Lock polyfill |");
+        sb.AppendLine("| `InjectTimeProviderPolyfill` | `false` | TimeProvider polyfill |");
+        sb.AppendLine("| `InjectStringExtensionsPolyfill` | `false` | String.Contains/Replace with StringComparison |");
+        sb.AppendLine();
+        sb.AppendLine("### Extensions (Opt-in)");
+        sb.AppendLine();
+        sb.AppendLine("| Property | Default | Description |");
+        sb.AppendLine("|----------|---------|-------------|");
+        sb.AppendLine("| `InjectSourceGenHelpers` | `false` | EquatableArray, DiagnosticInfo, LocationInfo |");
+        sb.AppendLine("| `InjectCommonComparers` | `false` | StringOrdinalComparer |");
+        sb.AppendLine("| `InjectFakeLogger` | `false` | FakeLogger test extensions |");
+        sb.AppendLine();
+        sb.AppendLine("### Bundles (Opt-in)");
+        sb.AppendLine();
+        sb.AppendLine("| Property | Default | Description |");
+        sb.AppendLine("|----------|---------|-------------|");
+        sb.AppendLine("| `InjectAllPolyfillsOnLegacy` | `false` | All polyfills based on TFM |");
+        sb.AppendLine("| `InjectAllExtensions` | `false` | All extension utilities |");
+        sb.AppendLine();
+        sb.AppendLine("## Test Project Properties");
+        sb.AppendLine();
+        sb.AppendLine("These are auto-detected or can be set explicitly.");
+        sb.AppendLine();
+        sb.AppendLine("| Property | Auto-Detected | Description |");
+        sb.AppendLine("|----------|---------------|-------------|");
+        sb.AppendLine("| `IsTestProject` | `.Tests`/`.Test` suffix or `tests` folder | Marks as test project |");
+        sb.AppendLine("| `IsIntegrationTestProject` | `Integration`/`E2E` in path | Integration test project |");
+        sb.AppendLine("| `IsAnalyzerTestProject` | `Analyzer` in name | Analyzer test project |");
+        sb.AppendLine("| `SkipXunitInjection` | `false` | Disable xUnit auto-injection |");
+        sb.AppendLine("| `InjectIntegrationTestFixtures` | `true` | Inject integration test base classes |");
+        sb.AppendLine();
+        sb.AppendLine("### Test Framework Defaults");
+        sb.AppendLine();
+        sb.AppendLine("When `IsTestProject=true`:");
+        sb.AppendLine();
+        sb.AppendLine("| Property | Value | Description |");
+        sb.AppendLine("|----------|-------|-------------|");
+        sb.AppendLine("| `OutputType` | `Exe` | Executable for MTP |");
+        sb.AppendLine("| `TestingPlatformDotnetTestSupport` | `true` | MTP support |");
+        sb.AppendLine("| `UseMicrosoftTestingPlatformRunner` | `true` | Use MTP runner |");
+        sb.AppendLine("| `UseMicrosoftTestingPlatform` | `true` | Enable MTP |");
+        sb.AppendLine();
+        sb.AppendLine("## NuGet Audit Properties");
+        sb.AppendLine();
+        sb.AppendLine("| Property | Default | Description |");
+        sb.AppendLine("|----------|---------|-------------|");
+        sb.AppendLine("| `NuGetAudit` | `true` | Enable vulnerability scanning |");
+        sb.AppendLine("| `NuGetAuditMode` | `all` | Audit mode (all/direct) |");
+        sb.AppendLine("| `NuGetAuditLevel` | `low` | Minimum severity level |");
+        sb.AppendLine();
+        sb.AppendLine("## Build Optimization");
+        sb.AppendLine();
+        sb.AppendLine("| Property | Default | Description |");
+        sb.AppendLine("|----------|---------|-------------|");
+        sb.AppendLine("| `AccelerateBuildsInVisualStudio` | `true` | VS build acceleration |");
+        sb.AppendLine("| `ReportAnalyzer` | `true` | Report analyzer performance |");
+        sb.AppendLine("| `Features` | `strict` | Enable strict mode |");
+        sb.AppendLine();
+        sb.AppendLine("## Usage Examples");
+        sb.AppendLine();
+        sb.AppendLine("### Opt-in to Polyfills");
+        sb.AppendLine();
+        sb.AppendLine("```xml");
+        sb.AppendLine("<PropertyGroup>");
+        sb.AppendLine("  <InjectLockPolyfill>true</InjectLockPolyfill>");
+        sb.AppendLine("  <InjectTimeProviderPolyfill>true</InjectTimeProviderPolyfill>");
+        sb.AppendLine("</PropertyGroup>");
+        sb.AppendLine("```");
+        sb.AppendLine();
+        sb.AppendLine("### Opt-out of Features");
+        sb.AppendLine();
+        sb.AppendLine("```xml");
+        sb.AppendLine("<PropertyGroup>");
+        sb.AppendLine("  <GenerateClaudeMd>false</GenerateClaudeMd>");
+        sb.AppendLine("  <InjectSharedThrow>false</InjectSharedThrow>");
+        sb.AppendLine("  <IncludeDefaultBannedSymbols>false</IncludeDefaultBannedSymbols>");
+        sb.AppendLine("</PropertyGroup>");
+        sb.AppendLine("```");
+        sb.AppendLine();
+        sb.AppendLine("### Web SDK Service Defaults");
+        sb.AppendLine();
+        sb.AppendLine("```xml");
+        sb.AppendLine("<PropertyGroup>");
+        sb.AppendLine("  <!-- Disable automatic service defaults registration -->");
+        sb.AppendLine("  <AutoRegisterServiceDefaults>false</AutoRegisterServiceDefaults>");
+        sb.AppendLine("</PropertyGroup>");
+        sb.AppendLine("```");
+        sb.AppendLine();
+        sb.AppendLine("### Test Project Configuration");
+        sb.AppendLine();
+        sb.AppendLine("```xml");
+        sb.AppendLine("<PropertyGroup>");
+        sb.AppendLine("  <!-- Use TUnit/NUnit/MSTest instead of xUnit -->");
+        sb.AppendLine("  <SkipXunitInjection>true</SkipXunitInjection>");
+        sb.AppendLine();
+        sb.AppendLine("  <!-- Disable integration test fixture injection -->");
+        sb.AppendLine("  <InjectIntegrationTestFixtures>false</InjectIntegrationTestFixtures>");
+        sb.AppendLine("</PropertyGroup>");
+        sb.AppendLine("```");
 
         WriteFileIfChanged(Path.Combine(outputDir, "msbuild-properties.md"), sb.ToString());
-    }
-
-    private static bool IsUserConfigurableProperty(string name)
-    {
-        var userProps = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
-        {
-            "GenerateClaudeMd", "InjectSharedThrow", "InjectSourceGenHelpers", "InjectFakeLogger",
-            "InjectLockPolyfill", "InjectTimeProviderPolyfill", "AutoRegisterServiceDefaults",
-            "IncludeDefaultBannedSymbols", "EnableNETAnalyzers", "EnforceCodeStyleInBuild",
-            "TreatWarningsAsErrors", "Nullable", "ImplicitUsings", "IsPackable"
-        };
-        return userProps.Contains(name) || name.StartsWith("Inject") || name.StartsWith("Generate");
-    }
-
-    private static string GetPropertyDescription(string name)
-    {
-        return name switch
-        {
-            "GenerateClaudeMd" => "Generate CLAUDE.md file for AI assistants",
-            "InjectSharedThrow" => "Inject Throw.IfNull() guard clauses",
-            "InjectSourceGenHelpers" => "Inject Roslyn source generator utilities",
-            "InjectFakeLogger" => "Inject FakeLogger test extensions",
-            "InjectLockPolyfill" => "Inject System.Threading.Lock polyfill",
-            "InjectTimeProviderPolyfill" => "Inject TimeProvider polyfill",
-            "AutoRegisterServiceDefaults" => "Auto-register service defaults in Web SDK",
-            "IncludeDefaultBannedSymbols" => "Include default banned API list",
-            "EnableNETAnalyzers" => "Enable .NET analyzers",
-            "EnforceCodeStyleInBuild" => "Enforce code style during build",
-            "TreatWarningsAsErrors" => "Treat all warnings as errors",
-            "Nullable" => "Nullable reference types setting",
-            "ImplicitUsings" => "Enable implicit global usings",
-            "IsPackable" => "Whether project can be packed as NuGet",
-            _ => "MSBuild property"
-        };
+        return Task.CompletedTask;
     }
 
     private void GenerateSdkToc(string outputDir)
@@ -1092,10 +1378,24 @@ internal sealed class DocsGenerator(DocsConfig config, string gitRoot)
             if (!File.Exists(assemblyPath))
                 continue;
 
-            var assembly = Assembly.LoadFrom(assemblyPath);
+            Assembly assembly;
+            try
+            {
+                assembly = Assembly.LoadFrom(assemblyPath);
+            }
+            catch (Exception ex) when (ex is BadImageFormatException or FileNotFoundException or FileLoadException)
+            {
+                Console.WriteLine($"  Warning: Could not load assembly for editorconfig: {ex.Message}");
+                continue;
+            }
+
             var analyzers = assembly.GetExportedTypes()
                 .Where(static t => !t.IsAbstract && typeof(DiagnosticAnalyzer).IsAssignableFrom(t))
-                .Select(static t => Activator.CreateInstance(t))
+                .Select(t =>
+                {
+                    try { return Activator.CreateInstance(t) as DiagnosticAnalyzer; }
+                    catch { return null; }
+                })
                 .OfType<DiagnosticAnalyzer>()
                 .ToList();
 
@@ -1553,7 +1853,18 @@ internal sealed class DocsGenerator(DocsConfig config, string gitRoot)
             UseShellExecute = false
         };
         var process = Process.Start(psi);
-        if (process is not null) await process.WaitForExitAsync();
+        if (process is null)
+            throw new InvalidOperationException("Failed to start git process - is git installed?");
+
+        var error = await process.StandardError.ReadToEndAsync();
+        await process.WaitForExitAsync();
+
+        if (process.ExitCode != 0)
+            throw new InvalidOperationException(
+                $"Git command failed: git {string.Join(' ', args)}\n" +
+                $"Working directory: {workingDir}\n" +
+                $"Exit code: {process.ExitCode}\n" +
+                $"Error: {error.Trim()}");
     }
 
     private static async Task<(int ExitCode, string Output, string Error)> RunDotNetWithOutputAsync(string workingDir,

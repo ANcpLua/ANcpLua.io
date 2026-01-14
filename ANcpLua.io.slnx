@@ -1,74 +1,76 @@
 <Solution>
-    <Folder Name="/tools/">
-        <Project Path="tools/DocsGenerator/DocsGenerator.csproj"/>
-    </Folder>
-    <Folder Name="/content/">
-        <File Path="content/index.md"/>
-        <File Path="content/toc.yml"/>
-        <Folder Name="/content/sdk/">
-            <File Path="content/sdk/index.md"/>
-            <File Path="content/sdk/toc.yml"/>
-            <File Path="content/sdk/banned-apis.md"/>
-            <File Path="content/sdk/polyfills.md"/>
-            <File Path="content/sdk/variants.md"/>
-        </Folder>
-        <Folder Name="/content/utilities/">
-            <File Path="content/utilities/index.md"/>
-            <File Path="content/utilities/toc.yml"/>
-            <File Path="content/utilities/codegen.md"/>
-            <File Path="content/utilities/contexts.md"/>
-            <File Path="content/utilities/diagnostic-flow.md"/>
-            <File Path="content/utilities/msbuild-testing.md"/>
-            <File Path="content/utilities/operations.md"/>
-            <File Path="content/utilities/patterns.md"/>
-            <File Path="content/utilities/pipeline.md"/>
-            <File Path="content/utilities/semantic-guard.md"/>
-            <File Path="content/utilities/symbols.md"/>
-            <File Path="content/utilities/testing.md"/>
-        </Folder>
-        <Folder Name="/content/analyzers/">
-            <File Path="content/analyzers/index.md"/>
-            <File Path="content/analyzers/toc.yml"/>
-            <File Path="content/analyzers/configuration.md"/>
-            <Folder Name="/content/analyzers/rules/">
-                <File Path="content/analyzers/rules/index.md"/>
-                <File Path="content/analyzers/rules/toc.yml"/>
-                <File Path="content/analyzers/rules/AL0001.md"/>
-                <File Path="content/analyzers/rules/AL0002.md"/>
-                <File Path="content/analyzers/rules/AL0003.md"/>
-                <File Path="content/analyzers/rules/AL0004.md"/>
-                <File Path="content/analyzers/rules/AL0005.md"/>
-                <File Path="content/analyzers/rules/AL0006.md"/>
-                <File Path="content/analyzers/rules/AL0007.md"/>
-                <File Path="content/analyzers/rules/AL0008.md"/>
-                <File Path="content/analyzers/rules/AL0009.md"/>
-                <File Path="content/analyzers/rules/AL0010.md"/>
-                <File Path="content/analyzers/rules/AL0011.md"/>
-                <File Path="content/analyzers/rules/AL0012.md"/>
-                <File Path="content/analyzers/rules/AL0013.md"/>
-                <File Path="content/analyzers/rules/AL0014.md"/>
-                <File Path="content/analyzers/rules/AL0015.md"/>
-                <File Path="content/analyzers/rules/AL0016.md"/>
-                <File Path="content/analyzers/rules/AL0017.md"/>
-                <File Path="content/analyzers/rules/AL0020.md"/>
-                <File Path="content/analyzers/rules/AL0021.md"/>
-                <File Path="content/analyzers/rules/AL0022.md"/>
-                <File Path="content/analyzers/rules/AL0023.md"/>
-                <File Path="content/analyzers/rules/AL0024.md"/>
-                <File Path="content/analyzers/rules/AL0025.md"/>
-                <File Path="content/analyzers/rules/AR0001.md"/>
-            </Folder>
-            <Folder Name="/content/analyzers/configuration/">
-                <File Path="content/analyzers/configuration/default.editorconfig"/>
-                <File Path="content/analyzers/configuration/none.editorconfig"/>
-            </Folder>
-        </Folder>
-        <Folder Name="/content/api/">
-            <File Path="content/api/index.md"/>
-            <File Path="content/api/toc.yml"/>
-        </Folder>
-    </Folder>
+  <Folder Name="/tools/">
+    <Project Path="tools/DocsGenerator/DocsGenerator.csproj"/>
+  </Folder>
+  <Folder Name="/content/">
+    <File Path="content/index.md"/>
+    <File Path="content/toc.yml"/>
+  </Folder>
+  <Folder Name="/content/sdk/">
+    <File Path="content/sdk/index.md"/>
+    <File Path="content/sdk/toc.yml"/>
+    <File Path="content/sdk/banned-apis.md"/>
+    <File Path="content/sdk/polyfills.md"/>
+    <File Path="content/sdk/variants.md"/>
+  </Folder>
+  <Folder Name="/content/utilities/">
+    <File Path="content/utilities/index.md"/>
+    <File Path="content/utilities/toc.yml"/>
+    <File Path="content/utilities/codegen.md"/>
+    <File Path="content/utilities/contexts.md"/>
+    <File Path="content/utilities/diagnostic-flow.md"/>
+    <File Path="content/utilities/msbuild-testing.md"/>
+    <File Path="content/utilities/operations.md"/>
+    <File Path="content/utilities/patterns.md"/>
+    <File Path="content/utilities/pipeline.md"/>
+    <File Path="content/utilities/semantic-guard.md"/>
+    <File Path="content/utilities/symbols.md"/>
+    <File Path="content/utilities/testing.md"/>
+  </Folder>
+  <Folder Name="/content/analyzers/">
+    <File Path="content/analyzers/index.md"/>
+    <File Path="content/analyzers/toc.yml"/>
+    <File Path="content/analyzers/configuration.md"/>
+  </Folder>
+  <Folder Name="/content/analyzers/rules/">
+    <File Path="content/analyzers/rules/index.md"/>
+    <File Path="content/analyzers/rules/toc.yml"/>
+    <File Path="content/analyzers/rules/AL0001.md"/>
+    <File Path="content/analyzers/rules/AL0002.md"/>
+    <File Path="content/analyzers/rules/AL0003.md"/>
+    <File Path="content/analyzers/rules/AL0004.md"/>
+    <File Path="content/analyzers/rules/AL0005.md"/>
+    <File Path="content/analyzers/rules/AL0006.md"/>
+    <File Path="content/analyzers/rules/AL0007.md"/>
+    <File Path="content/analyzers/rules/AL0008.md"/>
+    <File Path="content/analyzers/rules/AL0009.md"/>
+    <File Path="content/analyzers/rules/AL0010.md"/>
+    <File Path="content/analyzers/rules/AL0011.md"/>
+    <File Path="content/analyzers/rules/AL0012.md"/>
+    <File Path="content/analyzers/rules/AL0013.md"/>
+    <File Path="content/analyzers/rules/AL0014.md"/>
+    <File Path="content/analyzers/rules/AL0015.md"/>
+    <File Path="content/analyzers/rules/AL0016.md"/>
+    <File Path="content/analyzers/rules/AL0017.md"/>
+    <File Path="content/analyzers/rules/AL0020.md"/>
+    <File Path="content/analyzers/rules/AL0021.md"/>
+    <File Path="content/analyzers/rules/AL0022.md"/>
+    <File Path="content/analyzers/rules/AL0023.md"/>
+    <File Path="content/analyzers/rules/AL0024.md"/>
+    <File Path="content/analyzers/rules/AL0025.md"/>
+    <File Path="content/analyzers/rules/AR0001.md"/>
+  </Folder>
+  <Folder Name="/content/analyzers/configuration/">
+    <File Path="content/analyzers/configuration/default.editorconfig"/>
+    <File Path="content/analyzers/configuration/none.editorconfig"/>
+  </Folder>
+  <Folder Name="/content/api/">
+    <File Path="content/api/index.md"/>
+    <File Path="content/api/toc.yml"/>
+  </Folder>
+  <Folder Name="/Solution Items/">
     <File Path="CLAUDE.md"/>
     <File Path="README.md"/>
     <File Path="docfx.json"/>
+  </Folder>
 </Solution>
