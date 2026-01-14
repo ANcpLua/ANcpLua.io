@@ -26,6 +26,8 @@
     href: AL0008.md
   - name: AL0009
     href: AL0009.md
+  - name: AL0025
+    href: AL0025.md
 - name: Threading Rules
   items:
   - name: AL0011
@@ -44,14 +46,10 @@
     href: AL0015.md
   - name: AL0016
     href: AL0016.md
-- name: Version Management Rules
+- name: VersionManagement Rules
   items:
   - name: AL0017
     href: AL0017.md
-  - name: AL0018
-    href: AL0018.md
-  - name: AL0019
-    href: AL0019.md
 - name: ASP.NET Core Rules
   items:
   - name: AL0020

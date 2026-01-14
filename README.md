@@ -1,10 +1,11 @@
 # ANcpLua.io
 
 [![Build Docs](https://github.com/ANcpLua/ANcpLua.io/actions/workflows/docs.yml/badge.svg)](https://github.com/ANcpLua/ANcpLua.io/actions/workflows/docs.yml)
+[![Website](https://img.shields.io/website?url=https%3A%2F%2Fancplua.github.io%2FANcpLua.io%2F&label=docs)](https://ancplua.github.io/ANcpLua.io/)
 
 Unified documentation site for the ANcpLua .NET development ecosystem.
 
-**Live site:** [ancplua.github.io](https://ancplua.github.io)
+**📚 [View Documentation](https://ancplua.github.io/ANcpLua.io/)**
 
 ## Architecture
 

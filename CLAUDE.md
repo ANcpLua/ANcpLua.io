@@ -8,11 +8,11 @@
 
 This is the **unified documentation repository** for three interconnected .NET packages:
 
-| Package | Description | NuGet |
-|---------|-------------|-------|
-| **ANcpLua.NET.Sdk** | Zero-config MSBuild SDK | [![NuGet](https://img.shields.io/nuget/v/ANcpLua.NET.Sdk)](https://nuget.org/packages/ANcpLua.NET.Sdk) |
+| Package                      | Description                       | NuGet                                                                                                                    |
+|------------------------------|-----------------------------------|--------------------------------------------------------------------------------------------------------------------------|
+| **ANcpLua.NET.Sdk**          | Zero-config MSBuild SDK           | [![NuGet](https://img.shields.io/nuget/v/ANcpLua.NET.Sdk)](https://nuget.org/packages/ANcpLua.NET.Sdk)                   |
 | **ANcpLua.Roslyn.Utilities** | Roslyn source generator utilities | [![NuGet](https://img.shields.io/nuget/v/ANcpLua.Roslyn.Utilities)](https://nuget.org/packages/ANcpLua.Roslyn.Utilities) |
-| **ANcpLua.Analyzers** | Custom Roslyn analyzer rules | [![NuGet](https://img.shields.io/nuget/v/ANcpLua.Analyzers)](https://nuget.org/packages/ANcpLua.Analyzers) |
+| **ANcpLua.Analyzers**        | Custom Roslyn analyzer rules      | [![NuGet](https://img.shields.io/nuget/v/ANcpLua.Analyzers)](https://nuget.org/packages/ANcpLua.Analyzers)               |
 
 **Pattern:** Like Microsoft's `dotnet/docs`, React's `react.dev`, or Kubernetes's `kubernetes/website`.
 
@@ -47,19 +47,19 @@ ANcpLua.io/
 
 DocsGenerator clones these repos to `.repos/` at build time:
 
-| Repo | GitHub URL | Docs Strategy |
-|------|------------|---------------|
-| **SDK** | `ANcpLua/ANcpLua.NET.Sdk` | Manual (README + code structure) |
-| **Utilities** | `ANcpLua/ANcpLua.Roslyn.Utilities` | Existing (`docs/utilities/`) |
-| **Analyzers** | `ANcpLua/ANcpLua.Analyzers` | Reflection (assembly introspection) |
+| Repo          | GitHub URL                         | Docs Strategy                       |
+|---------------|------------------------------------|-------------------------------------|
+| **SDK**       | `ANcpLua/ANcpLua.NET.Sdk`          | Manual (README + code structure)    |
+| **Utilities** | `ANcpLua/ANcpLua.Roslyn.Utilities` | Existing (`docs/utilities/`)        |
+| **Analyzers** | `ANcpLua/ANcpLua.Analyzers`        | Reflection (assembly introspection) |
 
 **Where docs live in source repos:**
 
-| Repo | Docs Location | Status |
-|------|---------------|--------|
-| SDK | None | Generated from README |
-| Utilities | `docs/utilities/` | Copied by DocsGenerator |
-| Analyzers | `docs/rules/` | Merged with generated content |
+| Repo      | Docs Location     | Status                        |
+|-----------|-------------------|-------------------------------|
+| SDK       | None              | Generated from README         |
+| Utilities | `docs/utilities/` | Copied by DocsGenerator       |
+| Analyzers | `docs/rules/`     | Merged with generated content |
 
 ---
 
@@ -69,11 +69,11 @@ DocsGenerator (`tools/DocsGenerator/Program.cs`) handles everything automaticall
 
 ### Generation Strategy by Repo
 
-| Repo | Strategy | What DocsGenerator Does |
-|------|----------|------------------------|
-| **Utilities** | `Existing` | Copies `docs/utilities/*.md`, transforms links |
+| Repo          | Strategy     | What DocsGenerator Does                                                                            |
+|---------------|--------------|----------------------------------------------------------------------------------------------------|
+| **Utilities** | `Existing`   | Copies `docs/utilities/*.md`, transforms links                                                     |
 | **Analyzers** | `Reflection` | Loads DLLs, extracts `DiagnosticAnalyzer` + `CodeFixProvider` via reflection, generates rule pages |
-| **SDK** | `Manual` | Generates from README, `src/Sdk/` variants, `BannedSymbols.txt` |
+| **SDK**       | `Manual`     | Generates from README, `src/Sdk/` variants, `BannedSymbols.txt`                                    |
 
 ### Running DocsGenerator
 
@@ -82,6 +82,7 @@ dotnet run --project tools/DocsGenerator
 ```
 
 This will:
+
 1. Clone/update all repos to `.repos/`
 2. Build assemblies (`dotnet build -c Release`)
 3. Generate `content/{sdk,utilities,analyzers}/*.md`
@@ -100,6 +101,7 @@ docfx build docfx.json
 ## 5. DocFX Markdown (DFM)
 
 ### Alerts
+
 ```markdown
 > [!NOTE]
 > Informational content
@@ -112,16 +114,22 @@ docfx build docfx.json
 ```
 
 ### Code Tabs
+
 ```markdown
 # [C#](#tab/csharp)
+
 ```csharp
 // C# example
 ```
+
 # [CLI](#tab/cli)
+
 ```bash
 dotnet build
 ```
+
 ---
+
 ```
 
 ### Cross-References
@@ -164,6 +172,7 @@ Every content directory needs a `toc.yml`:
 ## 7. Local Development
 
 ### Preview site locally
+
 ```bash
 # Install docfx if needed
 dotnet tool install -g docfx
@@ -174,11 +183,13 @@ docfx docfx.json --serve
 ```
 
 ### Regenerate analyzer rules
+
 ```bash
 dotnet run --project tools/DocsGenerator
 ```
 
 ### Full build
+
 ```bash
 docfx metadata docfx.json  # Generate API docs from DLLs
 docfx build docfx.json     # Build final site
@@ -196,6 +207,7 @@ gh workflow run docs.yml --repo ANcpLua/ANcpLua.io
 ```
 
 **Pipeline steps:**
+
 1. Clone source repos to `.repos/`
 2. Build source repos (`dotnet build -c Release`)
 3. Run DocsGenerator (analyzer rules)
@@ -208,7 +220,9 @@ gh workflow run docs.yml --repo ANcpLua/ANcpLua.io
 ## 9. File Conventions
 
 ### YAML Front Matter
+
 Every `.md` file should have:
+
 ```yaml
 ---
 title: Page Title
@@ -216,11 +230,14 @@ title: Page Title
 ```
 
 ### Code Blocks
+
 Always specify language:
+
 ```markdown
 ```csharp
 public void Example() { }
 ```
+
 ```
 
 ### Internal Links
@@ -246,22 +263,21 @@ curl -s https://api.nuget.org/v3-flatcontainer/ancplua.roslyn.utilities/index.js
 
 ## 11. Workflow Summary
 
-| Task | Command |
-|------|---------|
-| Preview locally | `docfx docfx.json --serve` |
-| Regenerate rules | `dotnet run --project tools/DocsGenerator` |
-| Full build | `docfx metadata && docfx build` |
-| Deploy | Push to main (auto via GitHub Actions) |
+| Task                | Command                                              |
+|---------------------|------------------------------------------------------|
+| Preview locally     | `docfx docfx.json --serve`                           |
+| Regenerate rules    | `dotnet run --project tools/DocsGenerator`           |
+| Full build          | `docfx metadata && docfx build`                      |
+| Deploy              | Push to main (auto via GitHub Actions)               |
 | Trigger from source | `gh workflow run docs.yml --repo ANcpLua/ANcpLua.io` |
 
 ---
 
 ## 12. Related Files
 
-| File | Purpose |
-|------|---------|
-| `docfx.json` | DocFX configuration (metadata + build) |
-| `tools/DocsGenerator/Program.cs` | Analyzer rule generator |
-| `.github/workflows/docs.yml` | CI/CD pipeline |
-| `.github/workflows/trigger-docs.yml` | Template for source repos |
-| `content/toc.yml` | Top-level navigation |
+| File                             | Purpose                                |
+|----------------------------------|----------------------------------------|
+| `docfx.json`                     | DocFX configuration (metadata + build) |
+| `tools/DocsGenerator/Program.cs` | Analyzer rule generator                |
+| `.github/workflows/docs.yml`     | CI/CD pipeline                         |
+| `content/toc.yml`                | Top-level navigation                   |

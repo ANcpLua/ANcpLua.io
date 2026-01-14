@@ -1,8 +1,7 @@
 # ANcpLua.io Documentation Build and Deploy
-# Triggers on:
-# - Push to this repo
-# - Webhook from ANcpLua.NET.Sdk, ANcpLua.Roslyn.Utilities, ANcpLua.Analyzers
-# - Nightly schedule
+# Triggers:
+# - Push to content/tools/config
+# - Nightly schedule (4 AM UTC)
 # - Manual dispatch
 
 name: Build and Deploy Docs
@@ -17,10 +16,7 @@ on:
       - '.github/workflows/docs.yml'
 
   repository_dispatch:
-    types:
-      - docs-update-sdk
-      - docs-update-utilities
-      - docs-update-analyzers
+    types: [docs-update]
 
   schedule:
     - cron: '0 4 * * *'  # Daily at 4 AM UTC

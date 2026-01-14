@@ -14,6 +14,7 @@ using System.Text.Json;
 using System.Text.RegularExpressions;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CodeFixes;
+using Microsoft.CodeAnalysis.CodeRefactorings;
 using Microsoft.CodeAnalysis.Diagnostics;
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -39,11 +40,9 @@ var config = new DocsConfig
             GitUrl = "https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git",
             DisplayName = "ANcpLua.Roslyn.Utilities",
             Description = "Roslyn utilities for source generators and analyzers",
-            DocsSource = DocsSourceType.Existing, // Has docs/ folder
-            ExistingDocsPath = "docs/utilities",
-            GenerateFromAssembly = true,
-            AssemblyPath =
-                "ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/bin/Release/netstandard2.0/ANcpLua.Roslyn.Utilities.dll"
+            // Utilities has docs copied to ANcpLua.io content already, use Manual to generate from README
+            DocsSource = DocsSourceType.Manual,
+            GenerateFromAssembly = false // API docs generated separately via docfx metadata
         },
         new RepoConfig
         {
@@ -51,10 +50,13 @@ var config = new DocsConfig
             GitUrl = "https://github.com/ANcpLua/ANcpLua.Analyzers.git",
             DisplayName = "ANcpLua.Analyzers",
             Description = "Custom Roslyn analyzers and code fixes",
-            // Use existing docs (reflection requires ANcpLua.NET.Sdk which may not be on NuGet)
-            DocsSource = DocsSourceType.Existing,
-            ExistingDocsPath = "docs",
-            GenerateFromAssembly = false
+            // Use reflection to extract analyzer rules from compiled DLLs (Meziantou pattern)
+            DocsSource = DocsSourceType.Reflection,
+            GenerateFromAssembly = true,
+            // ANcpLua.NET.Sdk outputs to artifacts/bin/ folder
+            AssemblyPath = "artifacts/bin/ANcpLua.Analyzers/release_netstandard2.0/ANcpLua.Analyzers.dll",
+            CodeFixAssemblyPath =
+                "artifacts/bin/ANcpLua.Analyzers.CodeFixes/release_netstandard2.0/ANcpLua.Analyzers.CodeFixes.dll"
         }
     ],
     OutputPath = "content"
@@ -99,17 +101,17 @@ static bool TryFindGitRoot(out string root)
 // Core Generator
 // ═══════════════════════════════════════════════════════════════════════════════
 
-sealed class DocsGenerator(DocsConfig config, string gitRoot)
+internal sealed class DocsGenerator(DocsConfig config, string gitRoot)
 {
-    private readonly string _reposPath = Path.Combine(gitRoot, ".repos");
-    private readonly string _outputPath = Path.Combine(gitRoot, config.OutputPath);
-    private int _filesWritten;
     private readonly DocsConfig _config = config;
     private readonly string _gitRoot = gitRoot;
+    private readonly string _outputPath = Path.Combine(gitRoot, config.OutputPath);
+    private readonly string _reposPath = Path.Combine(gitRoot, ".repos");
+    private int _filesWritten;
 
     public async Task<int> GenerateAsync()
     {
-        Console.WriteLine($"ANcpLua.io Documentation Generator");
+        Console.WriteLine("ANcpLua.io Documentation Generator");
         Console.WriteLine($"Output: {_outputPath}");
         Console.WriteLine();
 
@@ -120,10 +122,7 @@ sealed class DocsGenerator(DocsConfig config, string gitRoot)
         await BuildAssembliesAsync();
 
         // Step 3: Generate docs for each repo
-        foreach (var repo in _config.Repos)
-        {
-            await GenerateRepoDocsAsync(repo);
-        }
+        foreach (var repo in _config.Repos) await GenerateRepoDocsAsync(repo);
 
         // Step 4: Generate unified index and navigation
         GenerateUnifiedIndex();
@@ -135,10 +134,7 @@ sealed class DocsGenerator(DocsConfig config, string gitRoot)
         Console.WriteLine();
         Console.WriteLine($"Generated {_filesWritten} file(s)");
 
-        if (_filesWritten > 0)
-        {
-            await ShowGitDiffAsync();
-        }
+        if (_filesWritten > 0) await ShowGitDiffAsync();
 
         return 0; // Success
     }
@@ -171,14 +167,12 @@ sealed class DocsGenerator(DocsConfig config, string gitRoot)
         {
             var repoPath = Path.Combine(_reposPath, repo.Name);
             Console.WriteLine($"Building {repo.Name}...");
-            var (exitCode, output, error) = await RunDotNetWithOutputAsync(repoPath, "build", "-c", "Release", "--nologo");
+            var (exitCode, output, error) =
+                await RunDotNetWithOutputAsync(repoPath, "build", "-c", "Release", "--nologo");
             if (exitCode != 0)
             {
                 Console.WriteLine($"  Warning: Build failed for {repo.Name} (exit code {exitCode})");
-                if (!string.IsNullOrWhiteSpace(error))
-                {
-                    Console.WriteLine($"  Error: {error.Trim()}");
-                }
+                if (!string.IsNullOrWhiteSpace(error)) Console.WriteLine($"  Error: {error.Trim()}");
             }
         }
     }
@@ -224,10 +218,7 @@ sealed class DocsGenerator(DocsConfig config, string gitRoot)
             var relativePath = Path.GetRelativePath(sourcePath, file);
             var destPath = Path.Combine(outputDir, relativePath);
             var destDir = Path.GetDirectoryName(destPath);
-            if (destDir is not null)
-            {
-                Directory.CreateDirectory(destDir);
-            }
+            if (destDir is not null) Directory.CreateDirectory(destDir);
 
             var content = await File.ReadAllTextAsync(file);
             // Transform links for unified site
@@ -259,7 +250,7 @@ sealed class DocsGenerator(DocsConfig config, string gitRoot)
             var assemblyName = Path.GetFileName(repo.AssemblyPath);
             var searchPattern = Path.Combine(repoPath, "**", "bin", "Release", "**", assemblyName);
             var foundFiles = Directory.GetFiles(repoPath, assemblyName, SearchOption.AllDirectories)
-                .Where(f => f.Contains(Path.Combine("bin", "Release")) && !f.Contains("ref"))
+                .Where(static f => f.Contains(Path.Combine("bin", "Release")) && !f.Contains("ref"))
                 .ToArray();
 
             if (foundFiles.Length > 0)
@@ -294,10 +285,8 @@ sealed class DocsGenerator(DocsConfig config, string gitRoot)
                     Console.WriteLine($"  Found CodeFix at: {Path.GetRelativePath(repoPath, codeFixPath)}");
                 }
             }
-            if (File.Exists(codeFixPath))
-            {
-                codeFixAssembly = Assembly.LoadFrom(codeFixPath);
-            }
+
+            if (File.Exists(codeFixPath)) codeFixAssembly = Assembly.LoadFrom(codeFixPath);
         }
 
         // Extract analyzers via reflection (Meziantou pattern)
@@ -313,8 +302,14 @@ sealed class DocsGenerator(DocsConfig config, string gitRoot)
             .OfType<CodeFixProvider>()
             .ToList() ?? [];
 
+        // Extract refactoring providers (AR* rules like AR0001)
+        var refactoringProviders = codeFixAssembly?.GetExportedTypes()
+            .Where(static t => !t.IsAbstract && typeof(CodeRefactoringProvider).IsAssignableFrom(t))
+            .ToList() ?? [];
+
         // Generate rules table (README)
         var rulesTable = GenerateRulesTable(analyzers, codeFixProviders);
+        var refactoringsTable = GenerateRefactoringsTable(refactoringProviders, repoPath);
         var readmePath = Path.Combine(outputDir, "index.md");
         var readme = $"""
                       ---
@@ -330,6 +325,10 @@ sealed class DocsGenerator(DocsConfig config, string gitRoot)
 
                       {rulesTable}
 
+                      ## Refactorings
+
+                      {refactoringsTable}
+
                       ## Configuration
 
                       See [Configuration](./configuration.md) for .editorconfig settings.
@@ -341,9 +340,10 @@ sealed class DocsGenerator(DocsConfig config, string gitRoot)
         Directory.CreateDirectory(rulesDir);
 
         await GenerateIndividualRulePagesAsync(analyzers, codeFixProviders, rulesDir, repoPath);
+        await GenerateRefactoringPagesAsync(refactoringProviders, rulesDir, repoPath);
 
-        // Generate rules toc.yml
-        var rulesToc = GenerateRulesToc(analyzers);
+        // Generate rules toc.yml (categorized)
+        var rulesToc = GenerateCategorizedRulesToc(analyzers, refactoringProviders);
         WriteFileIfChanged(Path.Combine(rulesDir, "toc.yml"), rulesToc);
 
         // Generate configuration page
@@ -359,18 +359,16 @@ sealed class DocsGenerator(DocsConfig config, string gitRoot)
     {
         var processedRules = new HashSet<string>(StringComparer.Ordinal);
         foreach (var analyzer in analyzers)
+        foreach (var diagnostic in analyzer.SupportedDiagnostics)
         {
-            foreach (var diagnostic in analyzer.SupportedDiagnostics)
-            {
-                if (!processedRules.Add(diagnostic.Id))
-                    continue;
+            if (!processedRules.Add(diagnostic.Id))
+                continue;
 
-                var rulePage = await GenerateSingleRulePageAsync(
-                    diagnostic, analyzer, codeFixProviders, repoPath);
+            var rulePage = await GenerateSingleRulePageAsync(
+                diagnostic, analyzer, codeFixProviders, repoPath);
 
-                var ruleFilePath = Path.Combine(rulesDir, $"{diagnostic.Id}.md");
-                WriteFileIfChanged(ruleFilePath, rulePage);
-            }
+            var ruleFilePath = Path.Combine(rulesDir, $"{diagnostic.Id}.md");
+            WriteFileIfChanged(ruleFilePath, rulePage);
         }
     }
 
@@ -416,24 +414,15 @@ sealed class DocsGenerator(DocsConfig config, string gitRoot)
 
         // Generate SDK variants documentation from src/Sdk/
         var sdkDir = Path.Combine(repoPath, "src", "Sdk");
-        if (Directory.Exists(sdkDir))
-        {
-            await GenerateSdkVariantsDocsAsync(sdkDir, outputDir);
-        }
+        if (Directory.Exists(sdkDir)) await GenerateSdkVariantsDocsAsync(sdkDir, outputDir);
 
         // Generate polyfills documentation from eng/LegacySupport/
         var legacySupportDir = Path.Combine(repoPath, "eng", "LegacySupport");
-        if (Directory.Exists(legacySupportDir))
-        {
-            await GeneratePolyfillsDocsAsync(legacySupportDir, outputDir);
-        }
+        if (Directory.Exists(legacySupportDir)) await GeneratePolyfillsDocsAsync(legacySupportDir, outputDir);
 
         // Generate banned APIs documentation
         var bannedApisFile = Path.Combine(repoPath, "src", "configuration", "BannedSymbols.txt");
-        if (File.Exists(bannedApisFile))
-        {
-            await GenerateBannedApisDocsAsync(bannedApisFile, outputDir);
-        }
+        if (File.Exists(bannedApisFile)) await GenerateBannedApisDocsAsync(bannedApisFile, outputDir);
     }
 
     private async Task GenerateSdkVariantsDocsAsync(string sdkDir, string outputDir)
@@ -523,13 +512,12 @@ sealed class DocsGenerator(DocsConfig config, string gitRoot)
         if (File.Exists(tocPath))
             return; // Already has a toc
 
-        var toc = $"""
-                   - name: Overview
-                     href: index.md
-                   """;
+        var toc = """
+                  - name: Overview
+                    href: index.md
+                  """;
 
         if (repo.DocsSource == DocsSourceType.Reflection)
-        {
             toc += """
 
                    - name: Rules
@@ -537,7 +525,6 @@ sealed class DocsGenerator(DocsConfig config, string gitRoot)
                    - name: Configuration
                      href: configuration.md
                    """;
-        }
 
         WriteFileIfChanged(tocPath, toc);
     }
@@ -619,7 +606,8 @@ sealed class DocsGenerator(DocsConfig config, string gitRoot)
     private Task GenerateEditorConfigAsync()
     {
         // Generate unified .editorconfig with all analyzer rules
-        foreach (var repo in _config.Repos.Where(static r => r.DocsSource == DocsSourceType.Reflection && r.AssemblyPath is not null))
+        foreach (var repo in _config.Repos.Where(static r =>
+                     r.DocsSource == DocsSourceType.Reflection && r.AssemblyPath is not null))
         {
             if (repo.AssemblyPath is null)
                 continue;
@@ -639,11 +627,11 @@ sealed class DocsGenerator(DocsConfig config, string gitRoot)
             Directory.CreateDirectory(configDir);
 
             // Default config
-            var defaultConfig = GenerateEditorConfig(analyzers, overrideSeverity: null);
+            var defaultConfig = GenerateEditorConfig(analyzers, null);
             WriteFileIfChanged(Path.Combine(configDir, "default.editorconfig"), defaultConfig);
 
             // None config (all disabled)
-            var noneConfig = GenerateEditorConfig(analyzers, overrideSeverity: "none");
+            var noneConfig = GenerateEditorConfig(analyzers, "none");
             WriteFileIfChanged(Path.Combine(configDir, "none.editorconfig"), noneConfig);
         }
 
@@ -654,7 +642,8 @@ sealed class DocsGenerator(DocsConfig config, string gitRoot)
     // Helper Methods (Meziantou-style)
     // ═══════════════════════════════════════════════════════════════════════════
 
-    private static string GenerateRulesTable(IEnumerable<DiagnosticAnalyzer> analyzers, List<CodeFixProvider> codeFixProviders)
+    private static string GenerateRulesTable(IEnumerable<DiagnosticAnalyzer> analyzers,
+        List<CodeFixProvider> codeFixProviders)
     {
         var sb = new StringBuilder();
         sb.AppendLine("|Id|Category|Description|Severity|Enabled|Code Fix|");
@@ -729,10 +718,7 @@ sealed class DocsGenerator(DocsConfig config, string gitRoot)
         // Keep custom content after the properties section
         var customContentMatch =
             Regex.Match(existing, @"(?<=## Examples|## See Also|## Notes).*", RegexOptions.Singleline);
-        if (customContentMatch.Success)
-        {
-            return generated + "\n" + customContentMatch.Value;
-        }
+        if (customContentMatch.Success) return generated + "\n" + customContentMatch.Value;
 
         return generated;
     }
@@ -753,6 +739,158 @@ sealed class DocsGenerator(DocsConfig config, string gitRoot)
         }
 
         return sb.ToString();
+    }
+
+    private static string GenerateCategorizedRulesToc(
+        IEnumerable<DiagnosticAnalyzer> analyzers,
+        List<Type> refactoringProviders)
+    {
+        var sb = new StringBuilder();
+        sb.AppendLine("- name: Rules Index");
+        sb.AppendLine("  href: index.md");
+
+        // Group diagnostics by category
+        var diagnosticsByCategory = analyzers
+            .SelectMany(static a => a.SupportedDiagnostics)
+            .DistinctBy(static d => d.Id)
+            .GroupBy(static d => d.Category)
+            .OrderBy(static g => GetCategoryOrder(g.Key))
+            .ToList();
+
+        foreach (var categoryGroup in diagnosticsByCategory)
+        {
+            sb.AppendLine($"- name: {categoryGroup.Key} Rules");
+            sb.AppendLine("  items:");
+            foreach (var diagnostic in categoryGroup.OrderBy(static d => d.Id, StringComparer.Ordinal))
+            {
+                sb.AppendLine($"  - name: {diagnostic.Id}");
+                sb.AppendLine($"    href: {diagnostic.Id}.md");
+            }
+        }
+
+        // Add refactorings section if any exist
+        if (refactoringProviders.Count > 0)
+        {
+            sb.AppendLine("- name: Refactorings");
+            sb.AppendLine("  items:");
+            foreach (var provider in refactoringProviders.OrderBy(static t => t.Name))
+            {
+                var refactoringId = ExtractRefactoringId(provider);
+                if (refactoringId is not null)
+                {
+                    sb.AppendLine($"  - name: {refactoringId}");
+                    sb.AppendLine($"    href: {refactoringId}.md");
+                }
+            }
+        }
+
+        return sb.ToString();
+    }
+
+    private static int GetCategoryOrder(string category)
+    {
+        return category switch
+        {
+            "Design" => 0,
+            "Reliability" => 1,
+            "Usage" => 2,
+            "Threading" => 3,
+            "OpenTelemetry" => 4,
+            "Style" => 5,
+            "VersionManagement" => 6,
+            "ASP.NET Core" => 7,
+            "Performance" => 8,
+            _ => 99
+        };
+    }
+
+    private static string? ExtractRefactoringId(Type providerType)
+    {
+        // Extract ID from class name pattern:
+        // Ar0001SnakeCaseToPascalCaseRefactoring -> AR0001 (note: class uses Ar not AR)
+        var match = Regex.Match(providerType.Name, @"^[Aa][Rr](\d{4})", RegexOptions.IgnoreCase);
+        return match.Success ? $"AR{match.Groups[1].Value}" : null;
+    }
+
+    private static string GenerateRefactoringsTable(List<Type> refactoringProviders, string repoPath)
+    {
+        if (refactoringProviders.Count == 0)
+            return "_No refactorings available._";
+
+        var sb = new StringBuilder();
+        sb.AppendLine("|Id|Description|");
+        sb.AppendLine("|--|-----------|");
+
+        foreach (var provider in refactoringProviders.OrderBy(static t => t.Name))
+        {
+            var refactoringId = ExtractRefactoringId(provider);
+            if (refactoringId is null) continue;
+
+            var description = ExtractRefactoringDescription(provider);
+            sb.AppendLine($"|[{refactoringId}](./rules/{refactoringId}.md)|{EscapeMarkdown(description)}|");
+        }
+
+        return sb.ToString();
+    }
+
+    private static string ExtractRefactoringDescription(Type providerType)
+    {
+        // Try to get description from XML doc comment or class name
+        var typeName = providerType.Name;
+        // Ar0001SnakeCaseToPascalCaseRefactoring -> "Snake Case To Pascal Case"
+        var idMatch = Regex.Match(typeName, @"^[Aa][Rr]\d{4}(.+?)Refactoring$", RegexOptions.IgnoreCase);
+        if (idMatch.Success)
+        {
+            var pascalName = idMatch.Groups[1].Value;
+            return Regex.Replace(pascalName, "([a-z])([A-Z])", "$1 $2");
+        }
+
+        return "Code refactoring";
+    }
+
+    private async Task GenerateRefactoringPagesAsync(
+        List<Type> refactoringProviders,
+        string rulesDir,
+        string repoPath)
+    {
+        foreach (var provider in refactoringProviders)
+        {
+            var refactoringId = ExtractRefactoringId(provider);
+            if (refactoringId is null) continue;
+
+            var description = ExtractRefactoringDescription(provider);
+            var sourceUrl = TryFindSourceFile(repoPath, provider.Name);
+
+            var page = new StringBuilder();
+            page.AppendLine("---");
+            page.AppendLine($"title: \"{refactoringId} - {EscapeYaml(description)}\"");
+            page.AppendLine("---");
+            page.AppendLine();
+            page.AppendLine($"# {refactoringId} - {EscapeMarkdown(description)}");
+            page.AppendLine();
+            if (sourceUrl is not null)
+            {
+                page.AppendLine($"Source: [{provider.Name}.cs]({sourceUrl})");
+                page.AppendLine();
+            }
+
+            page.AppendLine("## Description");
+            page.AppendLine();
+            page.AppendLine($"This is a code refactoring that {description.ToLowerInvariant()}.");
+            page.AppendLine();
+            page.AppendLine("## Properties");
+            page.AppendLine();
+            page.AppendLine("- **Type**: Refactoring (not a diagnostic)");
+            page.AppendLine("- **Triggered by**: Right-click context menu or Quick Actions");
+            page.AppendLine();
+            page.AppendLine("> [!NOTE]");
+            page.AppendLine("> Refactorings do not produce diagnostics and cannot be configured via .editorconfig.");
+
+            var filePath = Path.Combine(rulesDir, $"{refactoringId}.md");
+            WriteFileIfChanged(filePath, page.ToString());
+        }
+
+        await Task.CompletedTask;
     }
 
     private static string GenerateConfigurationPage(IEnumerable<DiagnosticAnalyzer> analyzers)
@@ -790,7 +928,8 @@ sealed class DocsGenerator(DocsConfig config, string gitRoot)
         return sb.ToString();
     }
 
-    private static string GenerateEditorConfigContent(IEnumerable<DiagnosticAnalyzer> analyzers, string? overrideSeverity)
+    private static string GenerateEditorConfigContent(IEnumerable<DiagnosticAnalyzer> analyzers,
+        string? overrideSeverity)
     {
         var sb = new StringBuilder();
         var first = true;
@@ -880,10 +1019,7 @@ sealed class DocsGenerator(DocsConfig config, string gitRoot)
     {
         content = content.ReplaceLineEndings("\n");
         var dir = Path.GetDirectoryName(path);
-        if (dir is not null)
-        {
-            Directory.CreateDirectory(dir);
-        }
+        if (dir is not null) Directory.CreateDirectory(dir);
 
         if (File.Exists(path))
         {
@@ -897,25 +1033,37 @@ sealed class DocsGenerator(DocsConfig config, string gitRoot)
         Console.WriteLine($"  {(_filesWritten == 1 ? "Created" : "Updated")}: {Path.GetRelativePath(_gitRoot, path)}");
     }
 
-    private static string GetSeverityEmoji(DiagnosticSeverity severity) => severity switch
+    private static string GetSeverityEmoji(DiagnosticSeverity severity)
     {
-        DiagnosticSeverity.Hidden => "👻",
-        DiagnosticSeverity.Info => "ℹ️",
-        DiagnosticSeverity.Warning => "⚠️",
-        DiagnosticSeverity.Error => "❌",
-        _ => "?"
-    };
+        return severity switch
+        {
+            DiagnosticSeverity.Hidden => "👻",
+            DiagnosticSeverity.Info => "ℹ️",
+            DiagnosticSeverity.Warning => "⚠️",
+            DiagnosticSeverity.Error => "❌",
+            _ => "?"
+        };
+    }
 
-    private static string GetBoolEmoji(bool value) => value ? "✔️" : "❌";
+    private static string GetBoolEmoji(bool value)
+    {
+        return value ? "✔️" : "❌";
+    }
 
-    private static string EscapeMarkdown(string text) => text
-        .Replace("[", "\\[")
-        .Replace("]", "\\]")
-        .Replace("<", "\\<")
-        .Replace(">", "\\>");
+    private static string EscapeMarkdown(string text)
+    {
+        return text
+            .Replace("[", "\\[")
+            .Replace("]", "\\]")
+            .Replace("<", "\\<")
+            .Replace(">", "\\>");
+    }
 
-    private static string EscapeYaml(string text) => text
-        .Replace("\"", "\\\"");
+    private static string EscapeYaml(string text)
+    {
+        return text
+            .Replace("\"", "\\\"");
+    }
 
     private static async Task RunGitAsync(string workingDir, params string[] args)
     {
@@ -929,13 +1077,11 @@ sealed class DocsGenerator(DocsConfig config, string gitRoot)
             UseShellExecute = false
         };
         var process = Process.Start(psi);
-        if (process is not null)
-        {
-            await process.WaitForExitAsync();
-        }
+        if (process is not null) await process.WaitForExitAsync();
     }
 
-    private static async Task<(int ExitCode, string Output, string Error)> RunDotNetWithOutputAsync(string workingDir, params string[] args)
+    private static async Task<(int ExitCode, string Output, string Error)> RunDotNetWithOutputAsync(string workingDir,
+        params string[] args)
     {
         var psi = new ProcessStartInfo
         {
@@ -947,10 +1093,7 @@ sealed class DocsGenerator(DocsConfig config, string gitRoot)
             UseShellExecute = false
         };
         var process = Process.Start(psi);
-        if (process is null)
-        {
-            return (-1, string.Empty, "Failed to start process");
-        }
+        if (process is null) return (-1, string.Empty, "Failed to start process");
 
         var output = await process.StandardOutput.ReadToEndAsync();
         var error = await process.StandardError.ReadToEndAsync();
@@ -970,10 +1113,7 @@ sealed class DocsGenerator(DocsConfig config, string gitRoot)
             UseShellExecute = false
         };
         var process = Process.Start(psi);
-        if (process is not null)
-        {
-            await process.WaitForExitAsync();
-        }
+        if (process is not null) await process.WaitForExitAsync();
     }
 }
 
@@ -981,20 +1121,20 @@ sealed class DocsGenerator(DocsConfig config, string gitRoot)
 // Configuration Types
 // ═══════════════════════════════════════════════════════════════════════════════
 
-enum DocsSourceType
+internal enum DocsSourceType
 {
     Existing, // Copy from existing docs/ folder
     Reflection, // Generate from assembly reflection (analyzers)
     Manual // Generate from README and code structure
 }
 
-sealed record DocsConfig
+internal sealed record DocsConfig
 {
     public required List<RepoConfig> Repos { get; init; }
     public required string OutputPath { get; init; }
 }
 
-sealed record RepoConfig
+internal sealed record RepoConfig
 {
     public required string Name { get; init; }
     public required string GitUrl { get; init; }

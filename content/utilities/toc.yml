@@ -16,3 +16,7 @@
   href: operations.md
 - name: Code Generation
   href: codegen.md
+- name: Testing Infrastructure
+  href: testing.md
+- name: MSBuild Testing
+  href: msbuild-testing.md

@@ -1,2 +1,8 @@
 - name: Overview
   href: index.md
+- name: SDK Variants
+  href: variants.md
+- name: Polyfills
+  href: polyfills.md
+- name: Banned APIs
+  href: banned-apis.md

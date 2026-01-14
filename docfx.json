@@ -13,7 +13,8 @@
     "dest": "_site",
     "globalMetadata": {
       "_appTitle": "ANcpLua Framework",
-      "_appFooter": "ANcpLua Framework Documentation"
+      "_appFooter": "ANcpLua Framework Documentation",
+      "_baseUrl": "/ANcpLua.io/"
     },
     "template": [
       "default",

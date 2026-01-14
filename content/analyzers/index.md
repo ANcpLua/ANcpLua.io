@@ -1,46 +1,48 @@
+---
+title: ANcpLua.Analyzers
+description: Custom Roslyn analyzers and code fixes
+---
+
 # ANcpLua.Analyzers
 
-Roslyn analyzers for C# code quality with 17 diagnostic rules (AL0001-AL0017).
+Custom Roslyn analyzers and code fixes
 
-## Installation
+## Rules
 
-```bash
-dotnet add package ANcpLua.Analyzers
-```
+|Id|Category|Description|Severity|Enabled|Code Fix|
+|--|--------|-----------|:------:|:-----:|:------:|
+|[AL0001](./rules/AL0001.md)|Design|Prohibit reassignment of primary constructor parameters|❌|✔️|❌|
+|[AL0002](./rules/AL0002.md)|Design|Don't repeat negated patterns|⚠️|✔️|✔️|
+|[AL0003](./rules/AL0003.md)|Reliability|Don't divide by constant zero|❌|✔️|❌|
+|[AL0004](./rules/AL0004.md)|Usage|Use pattern matching when comparing Span with constants|⚠️|✔️|✔️|
+|[AL0005](./rules/AL0005.md)|Usage|Use SequenceEqual when comparing Span with non-constants|⚠️|✔️|✔️|
+|[AL0006](./rules/AL0006.md)|Design|Field name conflicts with primary constructor parameter|⚠️|✔️|❌|
+|[AL0007](./rules/AL0007.md)|Usage|GetSchema should be explicitly implemented|❌|✔️|❌|
+|[AL0008](./rules/AL0008.md)|Usage|GetSchema must return null and not be abstract|❌|✔️|✔️|
+|[AL0009](./rules/AL0009.md)|Usage|Don't call IXmlSerializable.GetSchema|❌|✔️|❌|
+|[AL0010](./rules/AL0010.md)|Design|Type should be partial|ℹ️|❌|✔️|
+|[AL0011](./rules/AL0011.md)|Threading|Avoid lock keyword on non-Lock types|⚠️|✔️|❌|
+|[AL0012](./rules/AL0012.md)|OpenTelemetry|Deprecated semantic convention attribute|⚠️|✔️|✔️|
+|[AL0013](./rules/AL0013.md)|OpenTelemetry|Missing telemetry schema URL|ℹ️|✔️|❌|
+|[AL0014](./rules/AL0014.md)|Style|Prefer pattern matching for null and zero comparisons|ℹ️|✔️|✔️|
+|[AL0015](./rules/AL0015.md)|Style|Normalize null-guard style|ℹ️|✔️|✔️|
+|[AL0016](./rules/AL0016.md)|Style|Combine declaration with subsequent null-check|ℹ️|✔️|✔️|
+|[AL0017](./rules/AL0017.md)|VersionManagement|Hardcoded package version detected|⚠️|✔️|❌|
+|[AL0020](./rules/AL0020.md)|ASP.NET Core|IFormCollection requires explicit attribute|❌|✔️|❌|
+|[AL0021](./rules/AL0021.md)|ASP.NET Core|Multiple structured form sources|❌|✔️|❌|
+|[AL0022](./rules/AL0022.md)|ASP.NET Core|Mixed form collection and DTO|❌|✔️|❌|
+|[AL0023](./rules/AL0023.md)|ASP.NET Core|Unsupported form type|❌|✔️|❌|
+|[AL0024](./rules/AL0024.md)|ASP.NET Core|Form and body conflict|❌|✔️|❌|
+|[AL0025](./rules/AL0025.md)|Usage|Anonymous function can be made static|ℹ️|✔️|✔️|
 
-Or via PackageReference:
 
-```xml
-<PackageReference Include="ANcpLua.Analyzers" Version="1.3.6" PrivateAssets="all" />
-```
+## Refactorings
 
-## Features
+|Id|Description|
+|--|-----------|
+|[AR0001](./rules/AR0001.md)|Snake Case To Pascal Case|
 
-- **17 diagnostic rules** covering code quality, patterns, and best practices
-- **Code fixes** for most diagnostics with batch fix support
-- **Zero configuration** - works out of the box
-- **.NET 10 + netstandard2.0** compatible
 
-## Quick Start
+## Configuration
 
-After installation, the analyzer automatically runs during build and in your IDE.
-
-```csharp
-// AL0001: Primary constructor parameter reassignment
-public class Example(int x)
-{
-    void Bad() => x = 10;  // ⚠️ Diagnostic reported
-}
-
-// AL0014: Prefer pattern matching
-if (obj == null)  // ⚠️ Use 'obj is null' instead
-```
-
-## Documentation
-
-- [Rules Reference](rules/index.md) - All 17 diagnostic rules
-- [API Reference](api/index.md) - Source code documentation
-
-## Source Code
-
-[GitHub Repository](https://github.com/ANcpLua/ANcpLua.Analyzers)
+See [Configuration](./configuration.md) for .editorconfig settings.

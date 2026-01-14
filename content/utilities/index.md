@@ -1,27 +1,69 @@
+---
+title: ANcpLua.Roslyn.Utilities
+description: Roslyn utilities for source generators and analyzers
+---
+
+[![NuGet](https://img.shields.io/nuget/v/ANcpLua.Roslyn.Utilities?label=NuGet&color=0891B2)](https://www.nuget.org/packages/ANcpLua.Roslyn.Utilities/)
+[![NuGet](https://img.shields.io/nuget/v/ANcpLua.Roslyn.Utilities.Testing?label=Testing&color=059669)](https://www.nuget.org/packages/ANcpLua.Roslyn.Utilities.Testing/)
+[![.NET Standard 2.0](https://img.shields.io/badge/.NET%20Standard-2.0-512BD4)](https://dotnet.microsoft.com/platform/dotnet-standard)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities/blob/main/LICENSE)
+
 # ANcpLua.Roslyn.Utilities
 
-Comprehensive utilities for Roslyn analyzers and incremental source generators.
+Comprehensive utilities for Roslyn analyzers and source generators.
+
+> **CRITICAL: Layer 0 Package - No SDK Dependency Allowed**
+>
+> This is an **upstream** package in the ANcpLua ecosystem. It **CANNOT** depend on ANcpLua.NET.Sdk.
+> Any such dependency would create a circular reference and break the entire build chain.
+
+## Dependency Hierarchy
+
+```
+Layer 0: ANcpLua.Roslyn.Utilities     <- YOU ARE HERE (publishes first)
+    |
+    v
+Layer 1: ANcpLua.NET.Sdk              <- Consumes this package
+    |
+    v
+Layer 2: Downstream repos             <- Consume the SDK
+```
+
+**Why this matters:**
+- This package must be published to NuGet **before** ANcpLua.NET.Sdk can reference it
+- Uses `Microsoft.NET.Sdk` directly (not any custom SDK)
+- Uses [PolySharp](https://github.com/Sergio0694/PolySharp) for netstandard2.0 polyfills instead of SDK-provided polyfills
+- CI enforcement: GitHub Actions checks fail if any ANcpLua.NET.Sdk dependency is detected
 
 ## Installation
 
-```bash
+```shell
 dotnet add package ANcpLua.Roslyn.Utilities
+dotnet add package ANcpLua.Roslyn.Utilities.Testing
 ```
 
-## Overview
+## Packages
 
-| Category | Key Types |
-|----------|-----------|
-| **Flow Control** | `DiagnosticFlow<T>` |
-| **Validation** | `SemanticGuard<T>` |
-| **Pattern Matching** | `SymbolPattern`, `Match.*`, `Invoke.*` |
-| **Domain Contexts** | `AwaitableContext`, `AspNetContext`, `DisposableContext`, `CollectionContext` |
-| **Code Generation** | `IndentedStringBuilder`, `GeneratedCodeHelpers` |
-| **Caching** | `EquatableArray<T>`, `HashCombiner` |
+| Package | Target | Description |
+|---------|--------|-------------|
+| **ANcpLua.Roslyn.Utilities** | netstandard2.0 | Core library with EquatableArray, symbol extensions, pipeline extensions, DiagnosticFlow |
+| **ANcpLua.Roslyn.Utilities.Testing** | net10.0 | Testing framework for incremental generators with caching validation |
 
-## Quick Examples
+## Building
 
-### Railway-Oriented Pipelines
+```bash
+# Build
+dotnet build -c Release
+
+# Pack
+dotnet pack -c Release
+```
+
+## Highlights
+
+### DiagnosticFlow - Railway-Oriented Programming
+
+Never lose diagnostics in your pipeline:
 
 ```csharp
 symbol.ToFlow(nullDiag)
@@ -29,9 +71,18 @@ symbol.ToFlow(nullDiag)
     .Where(m => m.IsAsync, asyncRequired)
     .WarnIf(m => m.IsObsolete, obsoleteWarn)
     .Then(GenerateCode);
+
+// Pipeline integration
+provider
+    .SelectFlow(ExtractModel)
+    .ThenFlow(ValidateModel)
+    .ReportAndContinue(context)
+    .AddSource(context);
 ```
 
-### Pattern Matching
+### Symbol Pattern Matching
+
+Replace 50-line if-statements with composable patterns:
 
 ```csharp
 var asyncTask = SymbolPattern.Method()
@@ -44,39 +95,134 @@ var asyncTask = SymbolPattern.Method()
 if (asyncTask.Matches(method)) { ... }
 ```
 
-### Declarative Validation
+### SemanticGuard - Declarative Validation
 
 ```csharp
 SemanticGuard.ForMethod(method)
     .MustBeAsync(asyncRequired)
     .MustReturnTask(taskRequired)
     .MustHaveCancellationToken(ctRequired)
-    .ToFlow();
+    .ToFlow();  // -> DiagnosticFlow<IMethodSymbol>
 ```
 
-## Extension Methods
+## API Overview
 
-The library provides 170+ extension methods across 20 classes:
+| Category | Key APIs |
+|----------|----------|
+| **Flow Control** | `DiagnosticFlow<T>`, `ReportAndContinue()` |
+| **Pattern Matching** | `SymbolPattern.*`, `Match.*`, `Invoke.*` |
+| **Validation** | `SemanticGuard<T>`, `MustBeAsync()`, `MustBePartial()` |
+| **Domain Contexts** | `AwaitableContext`, `AspNetContext`, `DisposableContext`, `CollectionContext` |
+| **Operations** | `OperationExtensions`, `InvocationExtensions`, `OverloadFinder` |
+| **Code Generation** | `IndentedStringBuilder`, `GeneratedCodeHelpers` |
+| **Pipeline** | `GroupBy()`, `Batch()`, `Distinct()`, `CollectFlows()` |
 
-| Class | Purpose |
-|-------|---------|
-| `SymbolExtensions` | Equality, attributes, visibility, names |
-| `TypeSymbolExtensions` | Inheritance, interfaces, special types |
-| `MethodSymbolExtensions` | Overrides, interface implementations |
-| `OperationExtensions` | Tree traversal, context detection |
-| `InvocationExtensions` | Method call analysis |
-| `IncrementalValuesProviderExtensions` | Pipeline helpers |
-| `SourceProductionContextExtensions` | Source output |
-| `StringExtensions` | Zero-allocation parsing |
-| `EnumerableExtensions` | Null-safe LINQ |
+## Symbol Extensions
 
-## Documentation
+```csharp
+// Core
+symbol.IsEqualTo(other)
+symbol.HasAttribute("Full.Name")
+symbol.IsVisibleOutsideOfAssembly()
 
-- [DiagnosticFlow](diagnostic-flow.md) - Railway-oriented programming
-- [SemanticGuard](semantic-guard.md) - Declarative validation
-- [Pattern Matching](patterns.md) - Composable symbol patterns
-- [Domain Contexts](contexts.md) - Awaitable, ASP.NET, Disposable, Collection
-- [Pipeline Extensions](pipeline.md) - Generator pipeline helpers
-- [Symbol Extensions](symbols.md) - Symbol analysis utilities
-- [Operation Extensions](operations.md) - IOperation tree traversal
-- [Code Generation](codegen.md) - IndentedStringBuilder, helpers
+// Type checking
+type.InheritsFrom(baseType)
+type.Implements(interfaceType)
+type.IsTaskType() / IsSpanType() / IsEnumerableType()
+
+// Methods
+method.IsInterfaceImplementation()
+method.IsOrOverrideMethod(baseMethod)
+```
+
+## Operation Extensions
+
+```csharp
+// Navigation
+operation.Ancestors()
+operation.FindAncestor<TOperation>()
+operation.Descendants()
+
+// Context
+operation.IsInExpressionTree()
+operation.IsInsideLoop()
+operation.IsInsideTryBlock()
+
+// Invocations
+invocation.GetArgument("name")
+invocation.IsLinqMethod()
+invocation.AllArgumentsAreConstant()
+```
+
+## Domain Contexts
+
+Pre-cached symbol lookups for common patterns:
+
+```csharp
+var ctx = new AwaitableContext(compilation);
+ctx.IsTaskLike(type)
+ctx.IsAwaitable(type)
+ctx.CanUseAsyncKeyword(method)
+
+var asp = new AspNetContext(compilation);
+asp.IsController(type)
+asp.IsAction(method)
+asp.IsFromBody(parameter)
+
+var disp = new DisposableContext(compilation);
+disp.IsDisposable(type)
+disp.HasDisposeMethod(type)
+
+var coll = new CollectionContext(compilation);
+coll.IsImmutable(type)
+coll.GetElementType(type)
+```
+
+## Code Generation
+
+```csharp
+var sb = new IndentedStringBuilder();
+using (sb.BeginNamespace("MyNamespace"))
+using (sb.BeginClass("public partial", "MyClass"))
+using (sb.BeginMethod("public", "void", "Execute"))
+{
+    sb.AppendLine("// generated code");
+}
+```
+
+## Pipeline Extensions
+
+```csharp
+provider
+    .SelectFlow(ExtractModel)
+    .ThenFlow(ValidateModel)
+    .WarnIf(m => m.IsOld, obsoleteWarn)
+    .ReportAndContinue(context)
+    .AddSource(context);
+
+// Collection operations
+provider.GroupBy(keySelector)
+provider.Batch(100)
+provider.Distinct()
+provider.CollectAsEquatableArray()
+```
+
+## Testing Library
+
+```csharp
+using var result = await Test<MyGenerator>.Run(source);
+result
+    .Produces("Output.g.cs", expectedContent)
+    .IsCached()
+    .IsClean()
+    .HasNoForbiddenTypes();
+```
+
+## Full Documentation
+
+See [CLAUDE.md](https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities/blob/main/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/CLAUDE.md) for complete API reference.
+
+## Related
+
+- [ANcpLua.Analyzers](https://github.com/ANcpLua/ANcpLua.Analyzers)
+- [ANcpLua.NET.Sdk](https://github.com/ANcpLua/ANcpLua.NET.Sdk)

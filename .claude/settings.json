@@ -1,4 +1,7 @@
 {
+  "enabledPlugins": {
+    "ancplua-docs-librarian@ancplua-claude-plugins": true
+  },
   "agents": [
     ".claude/agents/docfx-principal.md"
   ],
