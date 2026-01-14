@@ -10,16 +10,6 @@
         "src": "content"
       }
     ],
-    "resource": [
-      {
-        "files": [
-          ".nojekyll",
-          "logo.svg",
-          "favicon.ico"
-        ],
-        "src": "content"
-      }
-    ],
     "dest": "_site",
     "globalMetadata": {
       "_appTitle": "ANcpLua Framework",
