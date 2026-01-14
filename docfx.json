@@ -12,9 +12,16 @@
     ],
     "dest": "_site",
     "globalMetadata": {
-      "_appTitle": "ANcpLua Framework",
-      "_appFooter": "ANcpLua Framework Documentation",
-      "_baseUrl": "/ANcpLua.io/"
+      "_appTitle": "ANcpLua",
+      "_appFooter": "ANcpLua Documentation",
+      "_baseUrl": "/ANcpLua.io/",
+      "_enableSearch": true,
+      "_enableNewTab": true,
+      "_gitContribute": {
+        "repo": "https://github.com/ANcpLua/ANcpLua.io",
+        "branch": "main",
+        "path": "content"
+      }
     },
     "template": [
       "default",
