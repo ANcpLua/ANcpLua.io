@@ -3,11 +3,10 @@ title: ANcpLua.Roslyn.Utilities
 description: Roslyn utilities for source generators and analyzers
 ---
 
-[![GitHub](https://img.shields.io/badge/GitHub-Source-181717?logo=github)](https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities)
 [![NuGet](https://img.shields.io/nuget/v/ANcpLua.Roslyn.Utilities?label=NuGet&color=0891B2)](https://www.nuget.org/packages/ANcpLua.Roslyn.Utilities/)
 [![NuGet](https://img.shields.io/nuget/v/ANcpLua.Roslyn.Utilities.Testing?label=Testing&color=059669)](https://www.nuget.org/packages/ANcpLua.Roslyn.Utilities.Testing/)
 [![.NET Standard 2.0](https://img.shields.io/badge/.NET%20Standard-2.0-512BD4)](https://dotnet.microsoft.com/platform/dotnet-standard)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities/blob/main/LICENSE)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 # ANcpLua.Roslyn.Utilities
 
@@ -219,23 +218,11 @@ result
     .HasNoForbiddenTypes();
 ```
 
-## Documentation
+## Full Documentation
 
-Explore the detailed documentation for each component:
+See [CLAUDE.md](ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/CLAUDE.md) for complete API reference.
 
-- [DiagnosticFlow](diagnostic-flow.md) - Railway-oriented programming for pipelines
-- [SemanticGuard](semantic-guard.md) - Declarative validation
-- [Pattern Matching](patterns.md) - Composable symbol patterns
-- [Domain Contexts](contexts.md) - Pre-cached symbol lookups
-- [Symbol Extensions](symbols.md) - Symbol analysis utilities
-- [Operation Extensions](operations.md) - IOperation tree traversal
-- [Pipeline Extensions](pipeline.md) - Generator pipeline helpers
-- [Code Generation](codegen.md) - IndentedStringBuilder and helpers
-- [Testing](testing.md) - Generator testing framework
-- [MSBuild Testing](msbuild-testing.md) - Integration testing with real builds
+## Related
 
-## Related Projects
-
-- [ANcpLua.Analyzers](../analyzers/index.md) - Roslyn analyzers built with these utilities
-- [ANcpLua.NET.Sdk](../sdk/index.md) - MSBuild SDK consuming this package
-- [GitHub Repository](https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities) - Source code and issues
+- [ANcpLua.Analyzers](https://github.com/ANcpLua/ANcpLua.Analyzers)
+- [ANcpLua.NET.Sdk](https://github.com/ANcpLua/ANcpLua.NET.Sdk)
