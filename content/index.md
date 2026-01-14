@@ -1,25 +1,25 @@
 ---
 title: ANcpLua Framework
-description: Documentation for the ANcpLua .NET ecosystem
+description: Documentation for the ANcpLua .NET framework
 ---
 
 # ANcpLua Framework
 
 Welcome to the ANcpLua Framework documentation.
 
-## Packages
+## Components
 
-| Package | NuGet | GitHub | Description |
-|---------|-------|--------|-------------|
-| **[ANcpLua.NET.Sdk](./sdk/)** | [![NuGet](https://img.shields.io/nuget/v/ANcpLua.NET.Sdk)](https://nuget.org/packages/ANcpLua.NET.Sdk) | [GitHub](https://github.com/ANcpLua/ANcpLua.NET.Sdk) | Zero-config MSBuild SDK |
-| **[ANcpLua.Roslyn.Utilities](./utilities/)** | [![NuGet](https://img.shields.io/nuget/v/ANcpLua.Roslyn.Utilities)](https://nuget.org/packages/ANcpLua.Roslyn.Utilities) | [GitHub](https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities) | Roslyn utilities |
-| **[ANcpLua.Analyzers](./analyzers/)** | [![NuGet](https://img.shields.io/nuget/v/ANcpLua.Analyzers)](https://nuget.org/packages/ANcpLua.Analyzers) | [GitHub](https://github.com/ANcpLua/ANcpLua.Analyzers) | Custom analyzers |
+### [ANcpLua.NET.Sdk](./sdk/)
 
-## Other Projects
+MSBuild SDK with polyfills, analyzers, and opinionated defaults
 
-| Project | GitHub | Description |
-|---------|--------|-------------|
-| **ancplua-claude-plugins** | [GitHub](https://github.com/ANcpLua/ancplua-claude-plugins) | Claude Code plugins and skills |
+### [ANcpLua.Roslyn.Utilities](./utilities/)
+
+Roslyn utilities for source generators and analyzers
+
+### [ANcpLua.Analyzers](./analyzers/)
+
+Custom Roslyn analyzers and code fixes
 
 ## Quick Start
 
@@ -30,8 +30,3 @@ Welcome to the ANcpLua Framework documentation.
   </PropertyGroup>
 </Project>
 ```
-
-## Resources
-
-- [NuGet Gallery](https://www.nuget.org/profiles/ANcpLua)
-- [GitHub Organization](https://github.com/ANcpLua)
