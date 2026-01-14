@@ -1,6 +1,2 @@
 - name: Overview
   href: index.md
-- name: Utilities API
-  href: utilities/
-- name: Analyzers API
-  href: analyzers/

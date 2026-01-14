@@ -11,12 +11,12 @@ Auto-generated API documentation for all ANcpLua packages.
 
 ## Packages
 
-| Package | Description |
-|---------|-------------|
-| [ANcpLua.Roslyn.Utilities](utilities/) | Core utilities for Roslyn source generators and analyzers |
-| [ANcpLua.Analyzers](analyzers/) | Analyzer and code fix implementations |
+| Package | Description | Source |
+|---------|-------------|--------|
+| ANcpLua.Roslyn.Utilities | Core utilities for Roslyn source generators and analyzers | [GitHub](https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities) |
+| ANcpLua.Analyzers | Analyzer and code fix implementations | [GitHub](https://github.com/ANcpLua/ANcpLua.Analyzers) |
 
-## Namespaces
+## Key Types
 
 ### ANcpLua.Roslyn.Utilities
 
@@ -29,3 +29,5 @@ Auto-generated API documentation for all ANcpLua packages.
 
 - `AL0001` - `AL0025` Analyzer implementations
 - `AR0001` Code refactoring provider
+
+See [Analyzers Rules](../analyzers/index.md) for complete rule documentation.
