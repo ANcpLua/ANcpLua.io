@@ -1,32 +1,5 @@
 {
-  "metadata": [
-    {
-      "src": [
-        {
-          "files": ["ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/*.csproj"],
-          "src": ".repos/utilities"
-        }
-      ],
-      "dest": "api/utilities",
-      "properties": {
-        "TargetFramework": "netstandard2.0"
-      },
-      "disableGitFeatures": false
-    },
-    {
-      "src": [
-        {
-          "files": ["src/ANcpLua.Analyzers/*.csproj", "src/ANcpLua.Analyzers.CodeFixes/*.csproj"],
-          "src": ".repos/analyzers"
-        }
-      ],
-      "dest": "api/analyzers",
-      "properties": {
-        "TargetFramework": "netstandard2.0"
-      },
-      "disableGitFeatures": false
-    }
-  ],
+  "metadata": [],
   "build": {
     "content": [
       {
@@ -35,34 +8,16 @@
           "**/toc.yml"
         ],
         "src": "content"
-      },
-      {
-        "files": ["**/*.yml"],
-        "src": "api"
-      }
-    ],
-    "resource": [
-      {
-        "files": [
-          ".nojekyll",
-          "logo.svg",
-          "favicon.ico"
-        ],
-        "src": "content"
       }
     ],
     "dest": "_site",
     "globalMetadata": {
       "_appTitle": "ANcpLua Framework",
-      "_appFooter": "ANcpLua Framework Documentation",
-      "_enableSearch": true
+      "_appFooter": "ANcpLua Framework Documentation"
     },
     "template": [
       "default",
       "modern"
-    ],
-    "xref": [
-      "https://learn.microsoft.com/en-us/dotnet/.xrefmap.json"
     ]
   }
 }
