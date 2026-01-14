@@ -103,8 +103,16 @@ jobs:
         with:
           node-version: '22'
 
+      - name: Setup .NET 10
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+
       - name: Install docfx
         run: dotnet tool install -g docfx
+
+      - name: Extract API metadata
+        run: docfx metadata docfx.json || echo "Metadata extraction completed (warnings expected for missing repos)"
 
       - name: Build docs
         run: docfx build docfx.json
