@@ -43,9 +43,12 @@
       },
       {
         "files": [
-          "**/*.yml"
+          "**/*.yml",
+          "**/*.md",
+          "toc.yml"
         ],
-        "src": "api"
+        "src": "api",
+        "dest": "api"
       }
     ],
     "resource": [
