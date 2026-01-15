@@ -33,18 +33,15 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: FieldPatternBuilder
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/PropertyPattern.cs
-    startLine: 303
+    startLine: 320
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
   summary: Provides a fluent builder for constructing field symbol patterns.
   remarks: >-
     <p>
-
-    This builder enables declarative matching of <xref href="Microsoft.CodeAnalysis.IFieldSymbol" data-throw-if-not-resolved="false"></xref> instances
-
-    by composing multiple predicates that must all be satisfied for a match.
-
+        This builder enables declarative matching of <xref href="Microsoft.CodeAnalysis.IFieldSymbol" data-throw-if-not-resolved="false"></xref> instances
+        by composing multiple predicates that must all be satisfied for a match.
     </p>
 
     <ul><li>Supports filtering by name, type, accessibility, and modifiers.</li><li>Can match fields based on const, readonly, and volatile characteristics.</li><li>Supports attribute-based filtering.</li><li>Implicitly converts to <xref href="ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern%601" data-throw-if-not-resolved="false"></xref> for seamless integration.</li></ul>
@@ -87,7 +84,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Named
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/PropertyPattern.cs
-    startLine: 316
+    startLine: 333
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -125,7 +122,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: OfType
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/PropertyPattern.cs
-    startLine: 328
+    startLine: 345
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -163,7 +160,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Public
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/PropertyPattern.cs
-    startLine: 339
+    startLine: 356
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -197,7 +194,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Private
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/PropertyPattern.cs
-    startLine: 350
+    startLine: 367
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -231,7 +228,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Static
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/PropertyPattern.cs
-    startLine: 361
+    startLine: 378
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -265,7 +262,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Instance
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/PropertyPattern.cs
-    startLine: 372
+    startLine: 389
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -299,7 +296,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsConst
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/PropertyPattern.cs
-    startLine: 383
+    startLine: 400
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -333,7 +330,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsReadOnly
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/PropertyPattern.cs
-    startLine: 394
+    startLine: 411
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -367,7 +364,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsVolatile
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/PropertyPattern.cs
-    startLine: 404
+    startLine: 421
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -398,7 +395,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: HasAttribute
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/PropertyPattern.cs
-    startLine: 416
+    startLine: 433
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -436,7 +433,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: HasAttribute
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/PropertyPattern.cs
-    startLine: 428
+    startLine: 445
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -477,7 +474,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Where
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/PropertyPattern.cs
-    startLine: 439
+    startLine: 456
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -515,7 +512,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Build
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/PropertyPattern.cs
-    startLine: 449
+    startLine: 466
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -546,7 +543,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: op_Implicit
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/PropertyPattern.cs
-    startLine: 468
+    startLine: 483
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns

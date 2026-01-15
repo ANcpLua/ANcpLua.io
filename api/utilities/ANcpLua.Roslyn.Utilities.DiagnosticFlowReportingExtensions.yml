@@ -24,7 +24,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: DiagnosticFlowReportingExtensions
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/DiagnosticFlow.cs
-    startLine: 484
+    startLine: 520
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -62,7 +62,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Report
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/DiagnosticFlow.cs
-    startLine: 496
+    startLine: 532
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -104,7 +104,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: ReportAndGet
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/DiagnosticFlow.cs
-    startLine: 509
+    startLine: 545
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -149,7 +149,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: ReportAndDo
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/DiagnosticFlow.cs
-    startLine: 522
+    startLine: 558
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -194,7 +194,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: ReportAndAddSource
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/DiagnosticFlow.cs
-    startLine: 537
+    startLine: 573
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -233,7 +233,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: ReportAndAddSources
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/DiagnosticFlow.cs
-    startLine: 551
+    startLine: 587
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities

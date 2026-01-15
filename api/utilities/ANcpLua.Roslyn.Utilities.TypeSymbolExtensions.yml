@@ -51,7 +51,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: TypeSymbolExtensions
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
-    startLine: 24
+    startLine: 33
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -101,7 +101,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: GetAllInterfacesIncludingThis
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
-    startLine: 44
+    startLine: 53
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -149,7 +149,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: InheritsFrom
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
-    startLine: 97
+    startLine: 115
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -160,7 +160,10 @@ items:
         for comparison. It does not consider the type itself as inheriting from itself.
     </p>
 
-    <ul><li>Returns <code>false</code> if <code class="paramref">classSymbol</code> equals <code class="paramref">baseClassType</code></li><li>Walks the entire base type chain until <xref href="System.Object" data-throw-if-not-resolved="false"></xref> or <code>null</code></li><li>Use <xref href="ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsOrInheritsFrom(Microsoft.CodeAnalysis.ITypeSymbol%2cMicrosoft.CodeAnalysis.ITypeSymbol)" data-throw-if-not-resolved="false"></xref> if you need to include the type itself in the check</li></ul>
+    <ul><li>
+                Returns <code>false</code> if <code class="paramref">classSymbol</code> equals
+                <code class="paramref">baseClassType</code>
+            </li><li>Walks the entire base type chain until <xref href="System.Object" data-throw-if-not-resolved="false"></xref> or <code>null</code></li><li>Use <xref href="ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.IsOrInheritsFrom(Microsoft.CodeAnalysis.ITypeSymbol%2cMicrosoft.CodeAnalysis.ITypeSymbol)" data-throw-if-not-resolved="false"></xref> if you need to include the type itself in the check</li></ul>
   example:
   - >-
     <pre><code class="lang-csharp">// Check if a type inherits from a specific base class
@@ -226,7 +229,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Implements
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
-    startLine: 129
+    startLine: 147
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -280,7 +283,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsOrImplements
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
-    startLine: 157
+    startLine: 174
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -334,7 +337,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsOrInheritsFrom
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
-    startLine: 184
+    startLine: 199
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -383,7 +386,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsObject
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
-    startLine: 198
+    startLine: 213
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -422,7 +425,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsString
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
-    startLine: 205
+    startLine: 223
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -461,7 +464,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsChar
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
-    startLine: 212
+    startLine: 233
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -500,7 +503,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsInt32
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
-    startLine: 219
+    startLine: 243
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -539,7 +542,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsInt64
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
-    startLine: 226
+    startLine: 253
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -578,7 +581,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsBoolean
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
-    startLine: 233
+    startLine: 263
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -617,7 +620,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsDateTime
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
-    startLine: 240
+    startLine: 273
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -656,7 +659,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsByte
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
-    startLine: 247
+    startLine: 283
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -695,7 +698,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsSByte
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
-    startLine: 254
+    startLine: 293
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -734,7 +737,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsInt16
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
-    startLine: 261
+    startLine: 303
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -773,7 +776,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsUInt16
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
-    startLine: 268
+    startLine: 313
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -812,7 +815,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsUInt32
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
-    startLine: 275
+    startLine: 323
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -851,7 +854,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsUInt64
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
-    startLine: 282
+    startLine: 333
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -890,7 +893,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsSingle
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
-    startLine: 289
+    startLine: 343
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -929,7 +932,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsDouble
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
-    startLine: 296
+    startLine: 353
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -968,7 +971,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsDecimal
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
-    startLine: 303
+    startLine: 363
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -1007,7 +1010,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsEnumeration
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
-    startLine: 311
+    startLine: 374
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -1049,7 +1052,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: GetEnumerationType
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
-    startLine: 323
+    startLine: 388
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -1094,7 +1097,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsNumberType
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
-    startLine: 341
+    startLine: 422
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -1102,7 +1105,15 @@ items:
   remarks: >-
     <p>Numeric types include:</p>
 
-    <ul><li>Signed integers: <xref href="System.SByte" data-throw-if-not-resolved="false"></xref>, <xref href="System.Int16" data-throw-if-not-resolved="false"></xref>, <xref href="System.Int32" data-throw-if-not-resolved="false"></xref>, <xref href="System.Int64" data-throw-if-not-resolved="false"></xref></li><li>Unsigned integers: <xref href="System.Byte" data-throw-if-not-resolved="false"></xref>, <xref href="System.UInt16" data-throw-if-not-resolved="false"></xref>, <xref href="System.UInt32" data-throw-if-not-resolved="false"></xref>, <xref href="System.UInt64" data-throw-if-not-resolved="false"></xref></li><li>Floating-point: <xref href="System.Single" data-throw-if-not-resolved="false"></xref>, <xref href="System.Double" data-throw-if-not-resolved="false"></xref>, <xref href="System.Decimal" data-throw-if-not-resolved="false"></xref></li></ul>
+    <ul><li>
+                Signed integers: <xref href="System.SByte" data-throw-if-not-resolved="false"></xref>, <xref href="System.Int16" data-throw-if-not-resolved="false"></xref>, <xref href="System.Int32" data-throw-if-not-resolved="false"></xref>,
+                <xref href="System.Int64" data-throw-if-not-resolved="false"></xref>
+            </li><li>
+                Unsigned integers: <xref href="System.Byte" data-throw-if-not-resolved="false"></xref>, <xref href="System.UInt16" data-throw-if-not-resolved="false"></xref>, <xref href="System.UInt32" data-throw-if-not-resolved="false"></xref>,
+                <xref href="System.UInt64" data-throw-if-not-resolved="false"></xref>
+            </li><li>
+                Floating-point: <xref href="System.Single" data-throw-if-not-resolved="false"></xref>, <xref href="System.Double" data-throw-if-not-resolved="false"></xref>, <xref href="System.Decimal" data-throw-if-not-resolved="false"></xref>
+            </li></ul>
   example: []
   syntax:
     content: public static bool IsNumberType(this ITypeSymbol? symbol)
@@ -1137,7 +1148,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: GetUnderlyingNullableTypeOrSelf
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
-    startLine: 367
+    startLine: 448
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -1180,7 +1191,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsUnitTestClass
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
-    startLine: 397
+    startLine: 488
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -1188,7 +1199,15 @@ items:
   remarks: >-
     <p>This method detects test classes from the following frameworks:</p>
 
-    <ul><li><b>MSTest:</b> Classes with <code>[TestClass]</code> attribute or methods with <code>[TestMethod]</code></li><li><b>NUnit:</b> Classes with <code>[TestFixture]</code> attribute or methods with <code>[Test]</code>/<code>[TestCase]</code></li><li><b>xUnit:</b> Classes with methods having <code>[Fact]</code>, <code>[Theory]</code>, or other Xunit.* attributes</li></ul>
+    <ul><li>
+                <b>MSTest:</b> Classes with <code>[TestClass]</code> attribute or methods with <code>[TestMethod]</code>
+            </li><li>
+                <b>NUnit:</b> Classes with <code>[TestFixture]</code> attribute or methods with <code>[Test]</code>/
+                <code>[TestCase]</code>
+            </li><li>
+                <b>xUnit:</b> Classes with methods having <code>[Fact]</code>, <code>[Theory]</code>, or other Xunit.*
+                attributes
+            </li></ul>
   example: []
   syntax:
     content: public static bool IsUnitTestClass(this INamedTypeSymbol symbol)
@@ -1220,7 +1239,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsPotentialStatic
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
-    startLine: 469
+    startLine: 574
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -1266,7 +1285,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsSpanType
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
-    startLine: 507
+    startLine: 612
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -1310,7 +1329,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsMemoryType
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
-    startLine: 525
+    startLine: 630
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -1354,7 +1373,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsTaskType
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
-    startLine: 550
+    startLine: 671
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -1362,7 +1381,15 @@ items:
   remarks: >-
     <p>Task types include:</p>
 
-    <ul><li><xref href="System.Threading.Tasks.Task" data-throw-if-not-resolved="false"></xref></li><li><xref href="System.Threading.Tasks.Task%601" data-throw-if-not-resolved="false"></xref></li><li><xref href="System.Threading.Tasks.ValueTask" data-throw-if-not-resolved="false"></xref></li><li><xref href="System.Threading.Tasks.ValueTask%601" data-throw-if-not-resolved="false"></xref></li></ul>
+    <ul><li>
+                <xref href="System.Threading.Tasks.Task" data-throw-if-not-resolved="false"></xref>
+            </li><li>
+                <xref href="System.Threading.Tasks.Task%601" data-throw-if-not-resolved="false"></xref>
+            </li><li>
+                <xref href="System.Threading.Tasks.ValueTask" data-throw-if-not-resolved="false"></xref>
+            </li><li>
+                <xref href="System.Threading.Tasks.ValueTask%601" data-throw-if-not-resolved="false"></xref>
+            </li></ul>
   example: []
   syntax:
     content: public static bool IsTaskType(this ITypeSymbol? symbol)
@@ -1397,7 +1424,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsEnumerableType
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
-    startLine: 574
+    startLine: 695
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -1442,7 +1469,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: GetElementType
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/TypeSymbolExtensions.cs
-    startLine: 608
+    startLine: 739
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -1450,7 +1477,9 @@ items:
   remarks: >-
     <p>This method extracts element types from:</p>
 
-    <ul><li>Arrays (e.g., <code>int[]</code> returns <code>int</code>)</li><li><xref href="System.Span%601" data-throw-if-not-resolved="false"></xref> and <xref href="System.ReadOnlySpan%601" data-throw-if-not-resolved="false"></xref></li><li><xref href="System.Memory%601" data-throw-if-not-resolved="false"></xref> and <xref href="System.ReadOnlyMemory%601" data-throw-if-not-resolved="false"></xref></li><li><xref href="System.Collections.Generic.IEnumerable%601" data-throw-if-not-resolved="false"></xref></li></ul>
+    <ul><li>Arrays (e.g., <code>int[]</code> returns <code>int</code>)</li><li><xref href="System.Span%601" data-throw-if-not-resolved="false"></xref> and <xref href="System.ReadOnlySpan%601" data-throw-if-not-resolved="false"></xref></li><li><xref href="System.Memory%601" data-throw-if-not-resolved="false"></xref> and <xref href="System.ReadOnlyMemory%601" data-throw-if-not-resolved="false"></xref></li><li>
+                <xref href="System.Collections.Generic.IEnumerable%601" data-throw-if-not-resolved="false"></xref>
+            </li></ul>
   example: []
   syntax:
     content: public static ITypeSymbol? GetElementType(this ITypeSymbol? symbol)

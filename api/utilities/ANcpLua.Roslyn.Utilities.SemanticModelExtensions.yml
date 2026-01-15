@@ -23,7 +23,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: SemanticModelExtensions
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticModelExtensions.cs
-    startLine: 20
+    startLine: 26
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -71,7 +71,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsConstant
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticModelExtensions.cs
-    startLine: 38
+    startLine: 44
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -121,7 +121,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: AllConstant
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticModelExtensions.cs
-    startLine: 57
+    startLine: 65
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -176,7 +176,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: GetConstantValueOrDefault
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticModelExtensions.cs
-    startLine: 89
+    startLine: 99
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -236,7 +236,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsNullConstant
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticModelExtensions.cs
-    startLine: 113
+    startLine: 123
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities

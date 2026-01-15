@@ -25,16 +25,14 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: SemanticGuard
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
-    startLine: 536
+    startLine: 622
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
   summary: Provides static factory methods for creating <xref href="ANcpLua.Roslyn.Utilities.SemanticGuard%601" data-throw-if-not-resolved="false"></xref> instances.
   remarks: >-
     <p>
-
-    Use this class as the entry point for declarative symbol validation.
-
+        Use this class as the entry point for declarative symbol validation.
     </p>
   example:
   - >-
@@ -83,7 +81,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: For
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
-    startLine: 548
+    startLine: 634
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -124,7 +122,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: ForMethod
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
-    startLine: 558
+    startLine: 647
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -166,7 +164,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: ForType
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
-    startLine: 568
+    startLine: 660
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -208,7 +206,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: ForProperty
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
-    startLine: 578
+    startLine: 673
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -250,7 +248,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: ForField
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
-    startLine: 585
+    startLine: 683
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -285,7 +283,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: ForParameter
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SemanticGuard.cs
-    startLine: 592
+    startLine: 693
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities

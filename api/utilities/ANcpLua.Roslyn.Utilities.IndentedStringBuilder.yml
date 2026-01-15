@@ -38,7 +38,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IndentedStringBuilder
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/CodeGeneration.cs
-    startLine: 176
+    startLine: 203
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -46,11 +46,8 @@ items:
     A <xref href="System.Text.StringBuilder" data-throw-if-not-resolved="false"></xref>-based builder that automatically manages indentation for code generation.
 
     <p>
-
-    This class provides fluent methods for building indented source code with support for
-
-    common code structures like namespaces, classes, methods, and control flow statements.
-
+        This class provides fluent methods for building indented source code with support for
+        common code structures like namespaces, classes, methods, and control flow statements.
     </p>
   remarks: <ul><li>All <code>Append</code> and <code>AppendLine</code> methods automatically prepend the current indentation.</li><li>Use <xref href="ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginBlock(System.String)" data-throw-if-not-resolved="false"></xref> with a <code>using</code> statement for automatic block closure.</li><li>The builder is reusable via the <xref href="ANcpLua.Roslyn.Utilities.IndentedStringBuilder.Clear" data-throw-if-not-resolved="false"></xref> method.</li></ul>
   example: []
@@ -91,7 +88,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: .ctor
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/CodeGeneration.cs
-    startLine: 192
+    startLine: 219
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -129,7 +126,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Length
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/CodeGeneration.cs
-    startLine: 202
+    startLine: 229
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -160,7 +157,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Append
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/CodeGeneration.cs
-    startLine: 209
+    startLine: 236
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -198,7 +195,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Append
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/CodeGeneration.cs
-    startLine: 221
+    startLine: 248
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -236,7 +233,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: AppendLine
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/CodeGeneration.cs
-    startLine: 232
+    startLine: 259
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -267,7 +264,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: AppendLine
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/CodeGeneration.cs
-    startLine: 244
+    startLine: 271
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -305,7 +302,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: AppendLineNoIndent
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/CodeGeneration.cs
-    startLine: 260
+    startLine: 287
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -313,9 +310,7 @@ items:
     Appends the specified text followed by a new line without applying indentation.
 
     <p>
-
-    Use this method for preprocessor directives or other content that should not be indented.
-
+        Use this method for preprocessor directives or other content that should not be indented.
     </p>
   example: []
   syntax:
@@ -350,7 +345,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Indent
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/CodeGeneration.cs
-    startLine: 272
+    startLine: 299
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -384,7 +379,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Outdent
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/CodeGeneration.cs
-    startLine: 283
+    startLine: 310
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -418,7 +413,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: BeginBlock
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/CodeGeneration.cs
-    startLine: 298
+    startLine: 325
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -459,7 +454,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: BeginNamespace
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/CodeGeneration.cs
-    startLine: 313
+    startLine: 340
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -497,7 +492,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: BeginClass
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/CodeGeneration.cs
-    startLine: 328
+    startLine: 355
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -541,7 +536,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: BeginMethod
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/CodeGeneration.cs
-    startLine: 347
+    startLine: 374
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -588,7 +583,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: BeginIf
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/CodeGeneration.cs
-    startLine: 361
+    startLine: 388
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -629,7 +624,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: BeginElse
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/CodeGeneration.cs
-    startLine: 374
+    startLine: 401
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -663,7 +658,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: BeginForEach
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/CodeGeneration.cs
-    startLine: 389
+    startLine: 416
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -707,7 +702,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: EndBlock
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/CodeGeneration.cs
-    startLine: 400
+    startLine: 427
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -745,7 +740,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: ToString
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/CodeGeneration.cs
-    startLine: 411
+    startLine: 438
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -777,7 +772,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Clear
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/CodeGeneration.cs
-    startLine: 416
+    startLine: 446
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities

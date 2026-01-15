@@ -124,7 +124,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: HasAccessibleTypeWithMetadataName
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/CompilationExtensions.cs
-    startLine: 87
+    startLine: 89
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -230,7 +230,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: GetBestTypeByMetadataName
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/CompilationExtensions.cs
-    startLine: 170
+    startLine: 171
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -263,7 +263,10 @@ items:
       description: The compilation to search for the type.
     - id: fullyQualifiedMetadataName
       type: System.String
-      description: The fully qualified metadata name of the type to find (e.g., "System.String" or "System.Collections.Generic.List`1").
+      description: >-
+        The fully qualified metadata name of the type to find (e.g., "System.String" or
+
+        "System.Collections.Generic.List`1").
     return:
       type: Microsoft.CodeAnalysis.INamedTypeSymbol
       description: >-

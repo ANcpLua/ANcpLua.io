@@ -55,7 +55,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: DisposableContext
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
-    startLine: 23
+    startLine: 37
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
@@ -63,13 +63,17 @@ items:
     Provides context and utilities for analyzing disposable types and disposal patterns in Roslyn compilations.
 
     <p>
-
-    This context caches well-known disposable-related type symbols from the compilation and provides
-
-    methods to check whether types implement disposal interfaces or inherit from common disposable base classes.
-
+        This context caches well-known disposable-related type symbols from the compilation and provides
+        methods to check whether types implement disposal interfaces or inherit from common disposable base classes.
     </p>
-  remarks: <ul><li>Caches symbols for <xref href="System.IDisposable" data-throw-if-not-resolved="false"></xref>, <code>IAsyncDisposable</code>, and common disposable types.</li><li>Provides type classification methods for streams, database types, synchronization primitives, and more.</li><li>Includes static helpers for detecting <code>using</code> statements and dispose methods.</li><li>Properties may be <code>null</code> if the corresponding type is not available in the compilation.</li></ul>
+  remarks: >-
+    <ul><li>
+                Caches symbols for <xref href="System.IDisposable" data-throw-if-not-resolved="false"></xref>, <code>IAsyncDisposable</code>, and common
+                disposable types.
+            </li><li>
+                Provides type classification methods for streams, database types, synchronization primitives,
+                and more.
+            </li><li>Includes static helpers for detecting <code>using</code> statements and dispose methods.</li><li>Properties may be <code>null</code> if the corresponding type is not available in the compilation.</li></ul>
   example: []
   syntax:
     content: public sealed class DisposableContext
@@ -109,7 +113,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IDisposable
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
-    startLine: 32
+    startLine: 46
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
@@ -140,7 +144,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IAsyncDisposable
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
-    startLine: 37
+    startLine: 51
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
@@ -171,11 +175,14 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: SafeHandle
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
-    startLine: 42
+    startLine: 57
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
-  summary: Gets the <xref href="Microsoft.CodeAnalysis.INamedTypeSymbol" data-throw-if-not-resolved="false"></xref> for <xref href="System.Runtime.InteropServices.SafeHandle" data-throw-if-not-resolved="false"></xref>, or <code>null</code> if not available.
+  summary: >-
+    Gets the <xref href="Microsoft.CodeAnalysis.INamedTypeSymbol" data-throw-if-not-resolved="false"></xref> for <xref href="System.Runtime.InteropServices.SafeHandle" data-throw-if-not-resolved="false"></xref>, or
+
+    <code>null</code> if not available.
   example: []
   syntax:
     content: public INamedTypeSymbol? SafeHandle { get; }
@@ -202,7 +209,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Stream
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
-    startLine: 47
+    startLine: 62
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
@@ -233,7 +240,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: TextReader
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
-    startLine: 52
+    startLine: 67
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
@@ -264,7 +271,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: TextWriter
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
-    startLine: 57
+    startLine: 72
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
@@ -295,11 +302,14 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: DbConnection
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
-    startLine: 62
+    startLine: 78
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
-  summary: Gets the <xref href="Microsoft.CodeAnalysis.INamedTypeSymbol" data-throw-if-not-resolved="false"></xref> for <xref href="System.Data.Common.DbConnection" data-throw-if-not-resolved="false"></xref>, or <code>null</code> if not available.
+  summary: >-
+    Gets the <xref href="Microsoft.CodeAnalysis.INamedTypeSymbol" data-throw-if-not-resolved="false"></xref> for <xref href="System.Data.Common.DbConnection" data-throw-if-not-resolved="false"></xref>, or <code>null</code> if not
+
+    available.
   example: []
   syntax:
     content: public INamedTypeSymbol? DbConnection { get; }
@@ -326,11 +336,14 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: DbCommand
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
-    startLine: 67
+    startLine: 84
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
-  summary: Gets the <xref href="Microsoft.CodeAnalysis.INamedTypeSymbol" data-throw-if-not-resolved="false"></xref> for <xref href="System.Data.Common.DbCommand" data-throw-if-not-resolved="false"></xref>, or <code>null</code> if not available.
+  summary: >-
+    Gets the <xref href="Microsoft.CodeAnalysis.INamedTypeSymbol" data-throw-if-not-resolved="false"></xref> for <xref href="System.Data.Common.DbCommand" data-throw-if-not-resolved="false"></xref>, or <code>null</code> if not
+
+    available.
   example: []
   syntax:
     content: public INamedTypeSymbol? DbCommand { get; }
@@ -357,11 +370,14 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: DbDataReader
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
-    startLine: 72
+    startLine: 90
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
-  summary: Gets the <xref href="Microsoft.CodeAnalysis.INamedTypeSymbol" data-throw-if-not-resolved="false"></xref> for <xref href="System.Data.Common.DbDataReader" data-throw-if-not-resolved="false"></xref>, or <code>null</code> if not available.
+  summary: >-
+    Gets the <xref href="Microsoft.CodeAnalysis.INamedTypeSymbol" data-throw-if-not-resolved="false"></xref> for <xref href="System.Data.Common.DbDataReader" data-throw-if-not-resolved="false"></xref>, or <code>null</code> if not
+
+    available.
   example: []
   syntax:
     content: public INamedTypeSymbol? DbDataReader { get; }
@@ -388,11 +404,14 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: HttpClient
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
-    startLine: 77
+    startLine: 96
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
-  summary: Gets the <xref href="Microsoft.CodeAnalysis.INamedTypeSymbol" data-throw-if-not-resolved="false"></xref> for <xref href="System.Net.Http.HttpClient" data-throw-if-not-resolved="false"></xref>, or <code>null</code> if not available.
+  summary: >-
+    Gets the <xref href="Microsoft.CodeAnalysis.INamedTypeSymbol" data-throw-if-not-resolved="false"></xref> for <xref href="System.Net.Http.HttpClient" data-throw-if-not-resolved="false"></xref>, or <code>null</code> if not
+
+    available.
   example: []
   syntax:
     content: public INamedTypeSymbol? HttpClient { get; }
@@ -419,11 +438,14 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: HttpMessageHandler
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
-    startLine: 82
+    startLine: 102
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
-  summary: Gets the <xref href="Microsoft.CodeAnalysis.INamedTypeSymbol" data-throw-if-not-resolved="false"></xref> for <xref href="System.Net.Http.HttpMessageHandler" data-throw-if-not-resolved="false"></xref>, or <code>null</code> if not available.
+  summary: >-
+    Gets the <xref href="Microsoft.CodeAnalysis.INamedTypeSymbol" data-throw-if-not-resolved="false"></xref> for <xref href="System.Net.Http.HttpMessageHandler" data-throw-if-not-resolved="false"></xref>, or <code>null</code> if
+
+    not available.
   example: []
   syntax:
     content: public INamedTypeSymbol? HttpMessageHandler { get; }
@@ -450,11 +472,14 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: CancellationTokenSource
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
-    startLine: 87
+    startLine: 108
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
-  summary: Gets the <xref href="Microsoft.CodeAnalysis.INamedTypeSymbol" data-throw-if-not-resolved="false"></xref> for <xref href="System.Threading.CancellationTokenSource" data-throw-if-not-resolved="false"></xref>, or <code>null</code> if not available.
+  summary: >-
+    Gets the <xref href="Microsoft.CodeAnalysis.INamedTypeSymbol" data-throw-if-not-resolved="false"></xref> for <xref href="System.Threading.CancellationTokenSource" data-throw-if-not-resolved="false"></xref>, or
+
+    <code>null</code> if not available.
   example: []
   syntax:
     content: public INamedTypeSymbol? CancellationTokenSource { get; }
@@ -481,11 +506,14 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Timer
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
-    startLine: 92
+    startLine: 114
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
-  summary: Gets the <xref href="Microsoft.CodeAnalysis.INamedTypeSymbol" data-throw-if-not-resolved="false"></xref> for <xref href="System.Threading.Timer" data-throw-if-not-resolved="false"></xref>, or <code>null</code> if not available.
+  summary: >-
+    Gets the <xref href="Microsoft.CodeAnalysis.INamedTypeSymbol" data-throw-if-not-resolved="false"></xref> for <xref href="System.Threading.Timer" data-throw-if-not-resolved="false"></xref>, or <code>null</code> if not
+
+    available.
   example: []
   syntax:
     content: public INamedTypeSymbol? Timer { get; }
@@ -512,11 +540,14 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Semaphore
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
-    startLine: 97
+    startLine: 120
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
-  summary: Gets the <xref href="Microsoft.CodeAnalysis.INamedTypeSymbol" data-throw-if-not-resolved="false"></xref> for <xref href="System.Threading.Semaphore" data-throw-if-not-resolved="false"></xref>, or <code>null</code> if not available.
+  summary: >-
+    Gets the <xref href="Microsoft.CodeAnalysis.INamedTypeSymbol" data-throw-if-not-resolved="false"></xref> for <xref href="System.Threading.Semaphore" data-throw-if-not-resolved="false"></xref>, or <code>null</code> if not
+
+    available.
   example: []
   syntax:
     content: public INamedTypeSymbol? Semaphore { get; }
@@ -543,11 +574,14 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: SemaphoreSlim
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
-    startLine: 102
+    startLine: 126
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
-  summary: Gets the <xref href="Microsoft.CodeAnalysis.INamedTypeSymbol" data-throw-if-not-resolved="false"></xref> for <xref href="System.Threading.SemaphoreSlim" data-throw-if-not-resolved="false"></xref>, or <code>null</code> if not available.
+  summary: >-
+    Gets the <xref href="Microsoft.CodeAnalysis.INamedTypeSymbol" data-throw-if-not-resolved="false"></xref> for <xref href="System.Threading.SemaphoreSlim" data-throw-if-not-resolved="false"></xref>, or <code>null</code> if not
+
+    available.
   example: []
   syntax:
     content: public INamedTypeSymbol? SemaphoreSlim { get; }
@@ -574,11 +608,14 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Mutex
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
-    startLine: 107
+    startLine: 132
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
-  summary: Gets the <xref href="Microsoft.CodeAnalysis.INamedTypeSymbol" data-throw-if-not-resolved="false"></xref> for <xref href="System.Threading.Mutex" data-throw-if-not-resolved="false"></xref>, or <code>null</code> if not available.
+  summary: >-
+    Gets the <xref href="Microsoft.CodeAnalysis.INamedTypeSymbol" data-throw-if-not-resolved="false"></xref> for <xref href="System.Threading.Mutex" data-throw-if-not-resolved="false"></xref>, or <code>null</code> if not
+
+    available.
   example: []
   syntax:
     content: public INamedTypeSymbol? Mutex { get; }
@@ -605,11 +642,14 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: ReaderWriterLock
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
-    startLine: 112
+    startLine: 138
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
-  summary: Gets the <xref href="Microsoft.CodeAnalysis.INamedTypeSymbol" data-throw-if-not-resolved="false"></xref> for <xref href="System.Threading.ReaderWriterLock" data-throw-if-not-resolved="false"></xref>, or <code>null</code> if not available.
+  summary: >-
+    Gets the <xref href="Microsoft.CodeAnalysis.INamedTypeSymbol" data-throw-if-not-resolved="false"></xref> for <xref href="System.Threading.ReaderWriterLock" data-throw-if-not-resolved="false"></xref>, or <code>null</code> if
+
+    not available.
   example: []
   syntax:
     content: public INamedTypeSymbol? ReaderWriterLock { get; }
@@ -636,11 +676,14 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: ReaderWriterLockSlim
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
-    startLine: 117
+    startLine: 144
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
-  summary: Gets the <xref href="Microsoft.CodeAnalysis.INamedTypeSymbol" data-throw-if-not-resolved="false"></xref> for <xref href="System.Threading.ReaderWriterLockSlim" data-throw-if-not-resolved="false"></xref>, or <code>null</code> if not available.
+  summary: >-
+    Gets the <xref href="Microsoft.CodeAnalysis.INamedTypeSymbol" data-throw-if-not-resolved="false"></xref> for <xref href="System.Threading.ReaderWriterLockSlim" data-throw-if-not-resolved="false"></xref>, or <code>null</code>
+
+    if not available.
   example: []
   syntax:
     content: public INamedTypeSymbol? ReaderWriterLockSlim { get; }
@@ -667,7 +710,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: .ctor
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
-    startLine: 124
+    startLine: 151
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
@@ -705,7 +748,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsDisposable
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
-    startLine: 156
+    startLine: 183
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
@@ -751,7 +794,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsSyncDisposable
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
-    startLine: 179
+    startLine: 206
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
@@ -794,7 +837,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsAsyncDisposable
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
-    startLine: 191
+    startLine: 220
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
@@ -837,7 +880,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: HasDisposeMethod
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
-    startLine: 202
+    startLine: 234
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
@@ -851,7 +894,10 @@ items:
       description: The type symbol to check.
     return:
       type: System.Boolean
-      description: <code>true</code> if <code class="paramref">type</code> has a <code>void Dispose()</code> method with no parameters; otherwise, <code>false</code>.
+      description: >-
+        <code>true</code> if <code class="paramref">type</code> has a <code>void Dispose()</code> method with no parameters; otherwise,
+
+        <code>false</code>.
     content.vb: Public Shared Function HasDisposeMethod(type As ITypeSymbol) As Boolean
   overload: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.HasDisposeMethod*
   seealso:
@@ -875,7 +921,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: HasDisposeAsyncMethod
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
-    startLine: 221
+    startLine: 252
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
@@ -889,7 +935,10 @@ items:
       description: The type symbol to check.
     return:
       type: System.Boolean
-      description: <code>true</code> if <code class="paramref">type</code> has a <code>DisposeAsync()</code> method with no parameters; otherwise, <code>false</code>.
+      description: >-
+        <code>true</code> if <code class="paramref">type</code> has a <code>DisposeAsync()</code> method with no parameters; otherwise,
+
+        <code>false</code>.
     content.vb: Public Shared Function HasDisposeAsyncMethod(type As ITypeSymbol) As Boolean
   overload: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.HasDisposeAsyncMethod*
   seealso:
@@ -913,7 +962,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsUsingStatement
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
-    startLine: 241
+    startLine: 270
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
@@ -954,11 +1003,14 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsInsideUsing
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
-    startLine: 253
+    startLine: 285
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
-  summary: Determines whether the specified operation is contained within a <code>using</code> statement or <code>using</code> declaration.
+  summary: >-
+    Determines whether the specified operation is contained within a <code>using</code> statement or <code>using</code>
+
+    declaration.
   example: []
   syntax:
     content: public static bool IsInsideUsing(IOperation operation)
@@ -995,7 +1047,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsStream
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
-    startLine: 273
+    startLine: 306
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
@@ -1009,7 +1061,10 @@ items:
       description: The type symbol to check, or <code>null</code>.
     return:
       type: System.Boolean
-      description: <code>true</code> if <code class="paramref">type</code> is or inherits from <xref href="System.IO.Stream" data-throw-if-not-resolved="false"></xref>; otherwise, <code>false</code>.
+      description: >-
+        <code>true</code> if <code class="paramref">type</code> is or inherits from <xref href="System.IO.Stream" data-throw-if-not-resolved="false"></xref>; otherwise,
+
+        <code>false</code>.
     content.vb: Public Function IsStream(type As ITypeSymbol) As Boolean
   overload: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsStream*
   nameWithType.vb: DisposableContext.IsStream(ITypeSymbol)
@@ -1033,11 +1088,14 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsTextReaderOrWriter
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
-    startLine: 284
+    startLine: 320
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
-  summary: Determines whether the specified type is or inherits from <xref href="System.IO.TextReader" data-throw-if-not-resolved="false"></xref> or <xref href="System.IO.TextWriter" data-throw-if-not-resolved="false"></xref>.
+  summary: >-
+    Determines whether the specified type is or inherits from <xref href="System.IO.TextReader" data-throw-if-not-resolved="false"></xref> or
+
+    <xref href="System.IO.TextWriter" data-throw-if-not-resolved="false"></xref>.
   example: []
   syntax:
     content: public bool IsTextReaderOrWriter(ITypeSymbol? type)
@@ -1074,7 +1132,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsDbConnection
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
-    startLine: 298
+    startLine: 337
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
@@ -1088,7 +1146,10 @@ items:
       description: The type symbol to check, or <code>null</code>.
     return:
       type: System.Boolean
-      description: <code>true</code> if <code class="paramref">type</code> is or inherits from <xref href="System.Data.Common.DbConnection" data-throw-if-not-resolved="false"></xref>; otherwise, <code>false</code>.
+      description: >-
+        <code>true</code> if <code class="paramref">type</code> is or inherits from <xref href="System.Data.Common.DbConnection" data-throw-if-not-resolved="false"></xref>;
+
+        otherwise, <code>false</code>.
     content.vb: Public Function IsDbConnection(type As ITypeSymbol) As Boolean
   overload: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDbConnection*
   seealso:
@@ -1117,7 +1178,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsDbCommand
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
-    startLine: 310
+    startLine: 352
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
@@ -1131,7 +1192,10 @@ items:
       description: The type symbol to check, or <code>null</code>.
     return:
       type: System.Boolean
-      description: <code>true</code> if <code class="paramref">type</code> is or inherits from <xref href="System.Data.Common.DbCommand" data-throw-if-not-resolved="false"></xref>; otherwise, <code>false</code>.
+      description: >-
+        <code>true</code> if <code class="paramref">type</code> is or inherits from <xref href="System.Data.Common.DbCommand" data-throw-if-not-resolved="false"></xref>; otherwise,
+
+        <code>false</code>.
     content.vb: Public Function IsDbCommand(type As ITypeSymbol) As Boolean
   overload: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDbCommand*
   seealso:
@@ -1160,7 +1224,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsDbDataReader
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
-    startLine: 322
+    startLine: 367
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
@@ -1174,7 +1238,10 @@ items:
       description: The type symbol to check, or <code>null</code>.
     return:
       type: System.Boolean
-      description: <code>true</code> if <code class="paramref">type</code> is or inherits from <xref href="System.Data.Common.DbDataReader" data-throw-if-not-resolved="false"></xref>; otherwise, <code>false</code>.
+      description: >-
+        <code>true</code> if <code class="paramref">type</code> is or inherits from <xref href="System.Data.Common.DbDataReader" data-throw-if-not-resolved="false"></xref>;
+
+        otherwise, <code>false</code>.
     content.vb: Public Function IsDbDataReader(type As ITypeSymbol) As Boolean
   overload: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsDbDataReader*
   seealso:
@@ -1203,7 +1270,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsHttpClient
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
-    startLine: 332
+    startLine: 380
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
@@ -1217,7 +1284,10 @@ items:
       description: The type symbol to check, or <code>null</code>.
     return:
       type: System.Boolean
-      description: <code>true</code> if <code class="paramref">type</code> is or inherits from <xref href="System.Net.Http.HttpClient" data-throw-if-not-resolved="false"></xref>; otherwise, <code>false</code>.
+      description: >-
+        <code>true</code> if <code class="paramref">type</code> is or inherits from <xref href="System.Net.Http.HttpClient" data-throw-if-not-resolved="false"></xref>; otherwise,
+
+        <code>false</code>.
     content.vb: Public Function IsHttpClient(type As ITypeSymbol) As Boolean
   overload: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsHttpClient*
   nameWithType.vb: DisposableContext.IsHttpClient(ITypeSymbol)
@@ -1241,7 +1311,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsSynchronizationPrimitive
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
-    startLine: 343
+    startLine: 394
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
@@ -1258,7 +1328,10 @@ items:
       description: The type symbol to check, or <code>null</code>.
     return:
       type: System.Boolean
-      description: <code>true</code> if <code class="paramref">type</code> is or inherits from a synchronization primitive type; otherwise, <code>false</code>.
+      description: >-
+        <code>true</code> if <code class="paramref">type</code> is or inherits from a synchronization primitive type; otherwise,
+
+        <code>false</code>.
     content.vb: Public Function IsSynchronizationPrimitive(type As ITypeSymbol) As Boolean
   overload: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsSynchronizationPrimitive*
   nameWithType.vb: DisposableContext.IsSynchronizationPrimitive(ITypeSymbol)
@@ -1282,7 +1355,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsCancellationTokenSource
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
-    startLine: 362
+    startLine: 414
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
@@ -1296,7 +1369,10 @@ items:
       description: The type symbol to check, or <code>null</code>.
     return:
       type: System.Boolean
-      description: <code>true</code> if <code class="paramref">type</code> equals <xref href="System.Threading.CancellationTokenSource" data-throw-if-not-resolved="false"></xref>; otherwise, <code>false</code>.
+      description: >-
+        <code>true</code> if <code class="paramref">type</code> equals <xref href="System.Threading.CancellationTokenSource" data-throw-if-not-resolved="false"></xref>; otherwise,
+
+        <code>false</code>.
     content.vb: Public Function IsCancellationTokenSource(type As ITypeSymbol) As Boolean
   overload: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsCancellationTokenSource*
   nameWithType.vb: DisposableContext.IsCancellationTokenSource(ITypeSymbol)
@@ -1320,7 +1396,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsSafeHandle
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
-    startLine: 372
+    startLine: 427
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
@@ -1334,7 +1410,10 @@ items:
       description: The type symbol to check, or <code>null</code>.
     return:
       type: System.Boolean
-      description: <code>true</code> if <code class="paramref">type</code> is or inherits from <xref href="System.Runtime.InteropServices.SafeHandle" data-throw-if-not-resolved="false"></xref>; otherwise, <code>false</code>.
+      description: >-
+        <code>true</code> if <code class="paramref">type</code> is or inherits from
+
+        <xref href="System.Runtime.InteropServices.SafeHandle" data-throw-if-not-resolved="false"></xref>; otherwise, <code>false</code>.
     content.vb: Public Function IsSafeHandle(type As ITypeSymbol) As Boolean
   overload: ANcpLua.Roslyn.Utilities.Contexts.DisposableContext.IsSafeHandle*
   nameWithType.vb: DisposableContext.IsSafeHandle(ITypeSymbol)
@@ -1358,7 +1437,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: ShouldBeDisposed
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/DisposableContext.cs
-    startLine: 389
+    startLine: 446
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
@@ -1366,11 +1445,8 @@ items:
     Determines whether the specified type is disposable and should typically be disposed by the caller.
 
     <p>
-
-    This method returns <code>false</code> for types that are commonly managed by dependency injection
-
-    or pooling mechanisms (such as <xref href="System.Net.Http.HttpClient" data-throw-if-not-resolved="false"></xref>).
-
+        This method returns <code>false</code> for types that are commonly managed by dependency injection
+        or pooling mechanisms (such as <xref href="System.Net.Http.HttpClient" data-throw-if-not-resolved="false"></xref>).
     </p>
   example: []
   syntax:

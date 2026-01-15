@@ -62,7 +62,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: CollectionContext
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
-    startLine: 22
+    startLine: 28
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
@@ -70,11 +70,8 @@ items:
     Provides cached type symbols and utility methods for working with collection types in Roslyn analysis.
 
     <p>
-
-    This context caches commonly used collection type symbols from the compilation to avoid repeated lookups,
-
-    and provides methods to classify and analyze collection types.
-
+        This context caches commonly used collection type symbols from the compilation to avoid repeated lookups,
+        and provides methods to classify and analyze collection types.
     </p>
   remarks: <ul><li>Type symbols are resolved once during construction and cached for the lifetime of the context.</li><li>Properties may be <code>null</code> if the corresponding type is not available in the compilation.</li><li>All methods handle <code>null</code> input gracefully by returning <code>false</code> or <code>null</code>.</li></ul>
   example: []
@@ -118,7 +115,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IEnumerable
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
-    startLine: 29
+    startLine: 35
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
@@ -149,11 +146,14 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IEnumerableOfT
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
-    startLine: 32
+    startLine: 41
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
-  summary: Gets the <xref href="System.Collections.Generic.IEnumerable%601" data-throw-if-not-resolved="false"></xref> type symbol, or <code>null</code> if not available.
+  summary: >-
+    Gets the <xref href="System.Collections.Generic.IEnumerable%601" data-throw-if-not-resolved="false"></xref> type symbol, or <code>null</code> if not
+
+    available.
   example: []
   syntax:
     content: public INamedTypeSymbol? IEnumerableOfT { get; }
@@ -180,7 +180,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: ICollection
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
-    startLine: 35
+    startLine: 44
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
@@ -211,11 +211,14 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: ICollectionOfT
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
-    startLine: 38
+    startLine: 50
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
-  summary: Gets the <xref href="System.Collections.Generic.ICollection%601" data-throw-if-not-resolved="false"></xref> type symbol, or <code>null</code> if not available.
+  summary: >-
+    Gets the <xref href="System.Collections.Generic.ICollection%601" data-throw-if-not-resolved="false"></xref> type symbol, or <code>null</code> if not
+
+    available.
   example: []
   syntax:
     content: public INamedTypeSymbol? ICollectionOfT { get; }
@@ -242,7 +245,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IList
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
-    startLine: 41
+    startLine: 53
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
@@ -273,7 +276,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IListOfT
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
-    startLine: 44
+    startLine: 56
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
@@ -304,11 +307,14 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IReadOnlyCollection
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
-    startLine: 47
+    startLine: 62
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
-  summary: Gets the <xref href="System.Collections.Generic.IReadOnlyCollection%601" data-throw-if-not-resolved="false"></xref> type symbol, or <code>null</code> if not available.
+  summary: >-
+    Gets the <xref href="System.Collections.Generic.IReadOnlyCollection%601" data-throw-if-not-resolved="false"></xref> type symbol, or <code>null</code> if not
+
+    available.
   example: []
   syntax:
     content: public INamedTypeSymbol? IReadOnlyCollection { get; }
@@ -335,11 +341,14 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IReadOnlyList
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
-    startLine: 50
+    startLine: 68
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
-  summary: Gets the <xref href="System.Collections.Generic.IReadOnlyList%601" data-throw-if-not-resolved="false"></xref> type symbol, or <code>null</code> if not available.
+  summary: >-
+    Gets the <xref href="System.Collections.Generic.IReadOnlyList%601" data-throw-if-not-resolved="false"></xref> type symbol, or <code>null</code> if not
+
+    available.
   example: []
   syntax:
     content: public INamedTypeSymbol? IReadOnlyList { get; }
@@ -366,7 +375,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IDictionary
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
-    startLine: 53
+    startLine: 71
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
@@ -397,11 +406,14 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IDictionaryOfTKeyTValue
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
-    startLine: 56
+    startLine: 77
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
-  summary: Gets the <xref href="System.Collections.Generic.IDictionary%602" data-throw-if-not-resolved="false"></xref> type symbol, or <code>null</code> if not available.
+  summary: >-
+    Gets the <xref href="System.Collections.Generic.IDictionary%602" data-throw-if-not-resolved="false"></xref> type symbol, or <code>null</code> if
+
+    not available.
   example: []
   syntax:
     content: public INamedTypeSymbol? IDictionaryOfTKeyTValue { get; }
@@ -428,11 +440,14 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IReadOnlyDictionary
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
-    startLine: 59
+    startLine: 83
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
-  summary: Gets the <xref href="System.Collections.Generic.IReadOnlyDictionary%602" data-throw-if-not-resolved="false"></xref> type symbol, or <code>null</code> if not available.
+  summary: >-
+    Gets the <xref href="System.Collections.Generic.IReadOnlyDictionary%602" data-throw-if-not-resolved="false"></xref> type symbol, or
+
+    <code>null</code> if not available.
   example: []
   syntax:
     content: public INamedTypeSymbol? IReadOnlyDictionary { get; }
@@ -459,7 +474,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: ISet
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
-    startLine: 62
+    startLine: 86
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
@@ -490,7 +505,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IReadOnlySet
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
-    startLine: 65
+    startLine: 89
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
@@ -521,7 +536,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: List
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
-    startLine: 68
+    startLine: 92
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
@@ -552,11 +567,14 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Dictionary
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
-    startLine: 71
+    startLine: 98
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
-  summary: Gets the <xref href="System.Collections.Generic.Dictionary%602" data-throw-if-not-resolved="false"></xref> type symbol, or <code>null</code> if not available.
+  summary: >-
+    Gets the <xref href="System.Collections.Generic.Dictionary%602" data-throw-if-not-resolved="false"></xref> type symbol, or <code>null</code> if not
+
+    available.
   example: []
   syntax:
     content: public INamedTypeSymbol? Dictionary { get; }
@@ -583,7 +601,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: HashSet
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
-    startLine: 74
+    startLine: 101
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
@@ -614,7 +632,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Queue
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
-    startLine: 77
+    startLine: 104
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
@@ -645,7 +663,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Stack
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
-    startLine: 80
+    startLine: 107
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
@@ -676,7 +694,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: LinkedList
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
-    startLine: 83
+    startLine: 110
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
@@ -707,11 +725,14 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: ImmutableArray
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
-    startLine: 86
+    startLine: 116
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
-  summary: Gets the <xref href="System.Collections.Immutable.ImmutableArray%601" data-throw-if-not-resolved="false"></xref> type symbol, or <code>null</code> if not available.
+  summary: >-
+    Gets the <xref href="System.Collections.Immutable.ImmutableArray%601" data-throw-if-not-resolved="false"></xref> type symbol, or <code>null</code> if not
+
+    available.
   example: []
   syntax:
     content: public INamedTypeSymbol? ImmutableArray { get; }
@@ -738,11 +759,14 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: ImmutableList
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
-    startLine: 89
+    startLine: 122
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
-  summary: Gets the <xref href="System.Collections.Immutable.ImmutableList%601" data-throw-if-not-resolved="false"></xref> type symbol, or <code>null</code> if not available.
+  summary: >-
+    Gets the <xref href="System.Collections.Immutable.ImmutableList%601" data-throw-if-not-resolved="false"></xref> type symbol, or <code>null</code> if not
+
+    available.
   example: []
   syntax:
     content: public INamedTypeSymbol? ImmutableList { get; }
@@ -769,11 +793,14 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: ImmutableDictionary
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
-    startLine: 92
+    startLine: 128
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
-  summary: Gets the <xref href="System.Collections.Immutable.ImmutableDictionary%602" data-throw-if-not-resolved="false"></xref> type symbol, or <code>null</code> if not available.
+  summary: >-
+    Gets the <xref href="System.Collections.Immutable.ImmutableDictionary%602" data-throw-if-not-resolved="false"></xref> type symbol, or
+
+    <code>null</code> if not available.
   example: []
   syntax:
     content: public INamedTypeSymbol? ImmutableDictionary { get; }
@@ -800,11 +827,14 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: ImmutableHashSet
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
-    startLine: 95
+    startLine: 134
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
-  summary: Gets the <xref href="System.Collections.Immutable.ImmutableHashSet%601" data-throw-if-not-resolved="false"></xref> type symbol, or <code>null</code> if not available.
+  summary: >-
+    Gets the <xref href="System.Collections.Immutable.ImmutableHashSet%601" data-throw-if-not-resolved="false"></xref> type symbol, or <code>null</code> if not
+
+    available.
   example: []
   syntax:
     content: public INamedTypeSymbol? ImmutableHashSet { get; }
@@ -831,7 +861,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: FrozenSet
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
-    startLine: 98
+    startLine: 137
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
@@ -862,11 +892,14 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: FrozenDictionary
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
-    startLine: 101
+    startLine: 143
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
-  summary: Gets the <code>System.Collections.Frozen.FrozenDictionary&lt;TKey, TValue&gt;</code> type symbol, or <code>null</code> if not available.
+  summary: >-
+    Gets the <code>System.Collections.Frozen.FrozenDictionary&lt;TKey, TValue&gt;</code> type symbol, or <code>null</code> if
+
+    not available.
   example: []
   syntax:
     content: public INamedTypeSymbol? FrozenDictionary { get; }
@@ -893,7 +926,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: ArraySegment
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
-    startLine: 104
+    startLine: 146
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
@@ -924,7 +957,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Span
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
-    startLine: 107
+    startLine: 149
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
@@ -955,7 +988,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: ReadOnlySpan
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
-    startLine: 110
+    startLine: 152
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
@@ -986,7 +1019,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Memory
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
-    startLine: 113
+    startLine: 155
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
@@ -1017,7 +1050,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: ReadOnlyMemory
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
-    startLine: 116
+    startLine: 158
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
@@ -1048,7 +1081,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: .ctor
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
-    startLine: 123
+    startLine: 165
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
@@ -1086,7 +1119,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsEnumerable
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
-    startLine: 167
+    startLine: 209
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
@@ -1132,7 +1165,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsCollection
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
-    startLine: 200
+    startLine: 238
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
@@ -1178,7 +1211,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsList
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
-    startLine: 233
+    startLine: 267
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
@@ -1224,7 +1257,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsDictionary
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
-    startLine: 265
+    startLine: 295
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
@@ -1268,7 +1301,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsSet
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
-    startLine: 293
+    startLine: 320
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
@@ -1282,7 +1315,10 @@ items:
       description: The type symbol to check.
     return:
       type: System.Boolean
-      description: <code>true</code> if <code class="paramref">type</code> implements <xref href="System.Collections.Generic.ISet%601" data-throw-if-not-resolved="false"></xref>; otherwise, <code>false</code>.
+      description: >-
+        <code>true</code> if <code class="paramref">type</code> implements <xref href="System.Collections.Generic.ISet%601" data-throw-if-not-resolved="false"></xref>; otherwise,
+
+        <code>false</code>.
     content.vb: Public Function IsSet(type As ITypeSymbol) As Boolean
   overload: ANcpLua.Roslyn.Utilities.Contexts.CollectionContext.IsSet*
   seealso:
@@ -1309,7 +1345,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsImmutable
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
-    startLine: 322
+    startLine: 345
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
@@ -1359,7 +1395,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsFrozen
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
-    startLine: 349
+    startLine: 374
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
@@ -1374,7 +1410,9 @@ items:
     return:
       type: System.Boolean
       description: >-
-        <code>true</code> if <code class="paramref">type</code> is <code>FrozenSet&lt;T&gt;</code> or <code>FrozenDictionary&lt;TKey, TValue&gt;</code>;
+        <code>true</code> if <code class="paramref">type</code> is <code>FrozenSet&lt;T&gt;</code> or <code>FrozenDictionary&lt;TKey, TValue&gt;</code>
+
+        ;
 
         otherwise, <code>false</code>.
     content.vb: Public Function IsFrozen(type As ITypeSymbol) As Boolean
@@ -1403,7 +1441,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsSpanLike
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
-    startLine: 372
+    startLine: 397
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
@@ -1447,7 +1485,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsMemoryLike
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
-    startLine: 395
+    startLine: 421
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
@@ -1462,7 +1500,9 @@ items:
     return:
       type: System.Boolean
       description: >-
-        <code>true</code> if <code class="paramref">type</code> is <xref href="System.Memory%601" data-throw-if-not-resolved="false"></xref> or <xref href="System.ReadOnlyMemory%601" data-throw-if-not-resolved="false"></xref>;
+        <code>true</code> if <code class="paramref">type</code> is <xref href="System.Memory%601" data-throw-if-not-resolved="false"></xref> or
+
+        <xref href="System.ReadOnlyMemory%601" data-throw-if-not-resolved="false"></xref>;
 
         otherwise, <code>false</code>.
     content.vb: Public Function IsMemoryLike(type As ITypeSymbol) As Boolean
@@ -1491,7 +1531,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: HasCountProperty
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
-    startLine: 417
+    startLine: 443
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
@@ -1529,7 +1569,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsReadOnly
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
-    startLine: 446
+    startLine: 469
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
@@ -1546,7 +1586,9 @@ items:
       description: >-
         <code>true</code> if <code class="paramref">type</code> is immutable, frozen, or implements a read-only collection interface
 
-        (<code>IReadOnlyCollection&lt;T&gt;</code>, <code>IReadOnlyList&lt;T&gt;</code>, <code>IReadOnlyDictionary&lt;TKey, TValue&gt;</code>,
+        (<code>IReadOnlyCollection&lt;T&gt;</code>, <code>IReadOnlyList&lt;T&gt;</code>, <code>IReadOnlyDictionary&lt;TKey, TValue&gt;</code>
+
+        ,
 
         <code>IReadOnlySet&lt;T&gt;</code>), or is <code>ReadOnlySpan&lt;T&gt;</code> or <code>ReadOnlyMemory&lt;T&gt;</code>;
 
@@ -1579,20 +1621,16 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: GetElementType
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/CollectionContext.cs
-    startLine: 482
+    startLine: 505
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
   summary: Gets the element type of a collection type.
   remarks: >-
     <p>
-
-    For arrays, returns the <xref href="Microsoft.CodeAnalysis.IArrayTypeSymbol.ElementType" data-throw-if-not-resolved="false"></xref>.
-
-    For generic collection types with a single type argument, returns that type argument.
-
-    For types implementing <code>IEnumerable&lt;T&gt;</code>, returns the <code>T</code> type argument from the interface.
-
+        For arrays, returns the <xref href="Microsoft.CodeAnalysis.IArrayTypeSymbol.ElementType" data-throw-if-not-resolved="false"></xref>.
+        For generic collection types with a single type argument, returns that type argument.
+        For types implementing <code>IEnumerable&lt;T&gt;</code>, returns the <code>T</code> type argument from the interface.
     </p>
   example: []
   syntax:

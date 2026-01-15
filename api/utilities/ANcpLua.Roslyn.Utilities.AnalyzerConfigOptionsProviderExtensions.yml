@@ -29,7 +29,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: AnalyzerConfigOptionsProviderExtensions
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/AnalyzerConfigOptionsProviderExtensions.cs
-    startLine: 43
+    startLine: 44
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -42,7 +42,8 @@ items:
     <ul><li>
                 <code>build_property.&lt;PropertyName&gt;</code> for MSBuild properties
             </li><li>
-                <code>build_metadata.&lt;ItemGroup&gt;.&lt;MetadataName&gt;</code> for item metadata (commonly AdditionalFiles)
+                <code>build_metadata.&lt;ItemGroup&gt;.&lt;MetadataName&gt;</code> for item metadata (commonly
+                AdditionalFiles)
             </li></ul>
     <p>
         Conventions in this helper:
@@ -91,7 +92,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: GetValueOrNull
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/AnalyzerConfigOptionsProviderExtensions.cs
-    startLine: 67
+    startLine: 68
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -145,7 +146,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: GetGlobalProperty
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/AnalyzerConfigOptionsProviderExtensions.cs
-    startLine: 96
+    startLine: 98
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -165,7 +166,9 @@ items:
       description: >-
         An optional prefix to prepend to <code class="paramref">name</code> with an underscore separator.
 
-        For example, if <code class="paramref">prefix</code> is <code>"MyPrefix"</code> and <code class="paramref">name</code> is <code>"TargetFramework"</code>,
+        For example, if <code class="paramref">prefix</code> is <code>"MyPrefix"</code> and <code class="paramref">name</code> is
+
+        <code>"TargetFramework"</code>,
 
         the resulting key is <code>build_property.MyPrefix_TargetFramework</code>.
     return:
@@ -206,7 +209,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: GetAdditionalTextMetadata
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/AnalyzerConfigOptionsProviderExtensions.cs
-    startLine: 128
+    startLine: 130
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -268,7 +271,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: GetRequiredGlobalProperty
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/AnalyzerConfigOptionsProviderExtensions.cs
-    startLine: 157
+    startLine: 159
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -320,7 +323,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: GetRequiredAdditionalTextMetadata
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/AnalyzerConfigOptionsProviderExtensions.cs
-    startLine: 179
+    startLine: 183
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -378,7 +381,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: TryGetGlobalBool
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/AnalyzerConfigOptionsProviderExtensions.cs
-    startLine: 212
+    startLine: 222
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -436,7 +439,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: GetGlobalBoolOrDefault
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/AnalyzerConfigOptionsProviderExtensions.cs
-    startLine: 229
+    startLine: 241
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -487,7 +490,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: TryGetGlobalInt
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/AnalyzerConfigOptionsProviderExtensions.cs
-    startLine: 252
+    startLine: 266
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -542,7 +545,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: GetGlobalIntOrDefault
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/AnalyzerConfigOptionsProviderExtensions.cs
-    startLine: 272
+    startLine: 286
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -593,7 +596,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsDesignTimeBuild
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/AnalyzerConfigOptionsProviderExtensions.cs
-    startLine: 303
+    startLine: 319
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities

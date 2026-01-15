@@ -27,18 +27,15 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: SymbolPattern
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/SymbolPattern.cs
-    startLine: 126
+    startLine: 176
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
   summary: Entry point for creating symbol patterns.
   remarks: >-
     <p>
-
-    This static class provides factory methods for creating pattern builders for different
-
-    symbol types. Each builder provides a fluent API for specifying matching criteria.
-
+        This static class provides factory methods for creating pattern builders for different
+        symbol types. Each builder provides a fluent API for specifying matching criteria.
     </p>
 
     <ul><li>Use <xref href="ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Method" data-throw-if-not-resolved="false"></xref> to create patterns for <xref href="Microsoft.CodeAnalysis.IMethodSymbol" data-throw-if-not-resolved="false"></xref>.</li><li>Use <xref href="ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Type" data-throw-if-not-resolved="false"></xref> to create patterns for <xref href="Microsoft.CodeAnalysis.INamedTypeSymbol" data-throw-if-not-resolved="false"></xref>.</li><li>Use <xref href="ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Parameter" data-throw-if-not-resolved="false"></xref> to create patterns for <xref href="Microsoft.CodeAnalysis.IParameterSymbol" data-throw-if-not-resolved="false"></xref>.</li><li>Use <xref href="ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Property" data-throw-if-not-resolved="false"></xref> to create patterns for <xref href="Microsoft.CodeAnalysis.IPropertySymbol" data-throw-if-not-resolved="false"></xref>.</li><li>Use <xref href="ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern.Field" data-throw-if-not-resolved="false"></xref> to create patterns for <xref href="Microsoft.CodeAnalysis.IFieldSymbol" data-throw-if-not-resolved="false"></xref>.</li></ul>
@@ -77,7 +74,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Method
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/SymbolPattern.cs
-    startLine: 136
+    startLine: 186
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -108,7 +105,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Type
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/SymbolPattern.cs
-    startLine: 142
+    startLine: 195
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -139,7 +136,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Parameter
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/SymbolPattern.cs
-    startLine: 148
+    startLine: 204
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -170,7 +167,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Property
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/SymbolPattern.cs
-    startLine: 154
+    startLine: 213
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -201,7 +198,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Field
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/SymbolPattern.cs
-    startLine: 160
+    startLine: 222
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -232,7 +229,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Any
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/SymbolPattern.cs
-    startLine: 172
+    startLine: 237
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -279,7 +276,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: All
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/SymbolPattern.cs
-    startLine: 187
+    startLine: 254
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -326,7 +323,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Where
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/SymbolPattern.cs
-    startLine: 198
+    startLine: 267
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns

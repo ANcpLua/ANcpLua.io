@@ -28,21 +28,24 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: HashCombiner
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/HashCombiner.cs
-    startLine: 22
+    startLine: 34
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
   summary: Murmur3-based hash combiner for implementing <xref href="System.Object.GetHashCode" data-throw-if-not-resolved="false"></xref> in equatable types.
   remarks: >-
     <p>
-
-    This struct provides a high-quality hash combining algorithm based on MurmurHash3, offering
-
-    excellent distribution and minimal collisions for use in hash tables and equality comparisons.
-
+        This struct provides a high-quality hash combining algorithm based on MurmurHash3, offering
+        excellent distribution and minimal collisions for use in hash tables and equality comparisons.
     </p>
 
-    <ul><li>This is a mutable struct for performance; use it within a single method scope only.</li><li>Do not store or pass instances across method boundaries as the state may be copied unexpectedly.</li><li>Use <xref href="ANcpLua.Roslyn.Utilities.HashCombiner.Create(System.Int32)" data-throw-if-not-resolved="false"></xref> to initialize a new instance, then call <xref href="ANcpLua.Roslyn.Utilities.HashCombiner.Add(System.Int32)" data-throw-if-not-resolved="false"></xref> or overloads to combine values.</li><li>Retrieve the final hash via <xref href="ANcpLua.Roslyn.Utilities.HashCombiner.HashCode" data-throw-if-not-resolved="false"></xref> or <xref href="ANcpLua.Roslyn.Utilities.HashCombiner.ToHashCode" data-throw-if-not-resolved="false"></xref>.</li></ul>
+    <ul><li>This is a mutable struct for performance; use it within a single method scope only.</li><li>
+                Do not store or pass instances across method boundaries as the state may be copied
+                unexpectedly.
+            </li><li>
+                Use <xref href="ANcpLua.Roslyn.Utilities.HashCombiner.Create(System.Int32)" data-throw-if-not-resolved="false"></xref> to initialize a new instance, then call <xref href="ANcpLua.Roslyn.Utilities.HashCombiner.Add(System.Int32)" data-throw-if-not-resolved="false"></xref> or
+                overloads to combine values.
+            </li><li>Retrieve the final hash via <xref href="ANcpLua.Roslyn.Utilities.HashCombiner.HashCode" data-throw-if-not-resolved="false"></xref> or <xref href="ANcpLua.Roslyn.Utilities.HashCombiner.ToHashCode" data-throw-if-not-resolved="false"></xref>.</li></ul>
   example: []
   syntax:
     content: public struct HashCombiner
@@ -80,18 +83,15 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: HashCode
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/HashCombiner.cs
-    startLine: 41
+    startLine: 53
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
   summary: Gets the combined hash code computed from all added values.
   remarks: >-
     <p>
-
-    The returned value incorporates finalization mixing to ensure good bit distribution,
-
-    making it suitable for use in hash tables and dictionaries.
-
+        The returned value incorporates finalization mixing to ensure good bit distribution,
+        making it suitable for use in hash tables and dictionaries.
     </p>
   example: []
   syntax:
@@ -122,18 +122,15 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Create
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/HashCombiner.cs
-    startLine: 71
+    startLine: 83
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
   summary: Creates a new <xref href="ANcpLua.Roslyn.Utilities.HashCombiner" data-throw-if-not-resolved="false"></xref> instance with the specified seed value.
   remarks: >-
     <p>
-
-    Use different seed values when you need distinct hash sequences for the same input values,
-
-    such as when implementing multiple hash functions for bloom filters.
-
+        Use different seed values when you need distinct hash sequences for the same input values,
+        such as when implementing multiple hash functions for bloom filters.
     </p>
   example: []
   syntax:
@@ -168,18 +165,15 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Add
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/HashCombiner.cs
-    startLine: 90
+    startLine: 102
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
   summary: Adds an integer value to the hash computation.
   remarks: >-
     <p>
-
-    This is the core hashing method that implements the MurmurHash3 mixing function.
-
-    All other <code>Add</code> overloads ultimately delegate to this method.
-
+        This is the core hashing method that implements the MurmurHash3 mixing function.
+        All other <code>Add</code> overloads ultimately delegate to this method.
     </p>
   example: []
   syntax:
@@ -216,18 +210,15 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Add
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/HashCombiner.cs
-    startLine: 121
+    startLine: 133
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
   summary: Adds a value of any type to the hash computation using its <xref href="System.Object.GetHashCode" data-throw-if-not-resolved="false"></xref> result.
   remarks: >-
     <p>
-
-    This method uses the value's <xref href="System.Object.GetHashCode" data-throw-if-not-resolved="false"></xref> method to obtain an integer
-
-    hash code, which is then incorporated using the MurmurHash3 algorithm.
-
+        This method uses the value's <xref href="System.Object.GetHashCode" data-throw-if-not-resolved="false"></xref> method to obtain an integer
+        hash code, which is then incorporated using the MurmurHash3 algorithm.
     </p>
   example: []
   syntax:
@@ -267,16 +258,14 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Add
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/HashCombiner.cs
-    startLine: 133
+    startLine: 147
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
   summary: Adds a boolean value to the hash computation.
   remarks: >-
     <p>
-
-    Converts <code>true</code> to 1 and <code>false</code> to 0 for consistent hashing behavior.
-
+        Converts <code>true</code> to 1 and <code>false</code> to 0 for consistent hashing behavior.
     </p>
   example: []
   syntax:
@@ -308,20 +297,16 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Add
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/HashCombiner.cs
-    startLine: 152
+    startLine: 168
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
   summary: Adds a string value to the hash computation using the specified comparer.
   remarks: >-
     <p>
-
-    Use a consistent comparer that matches your equality comparison semantics.
-
-    For example, use <xref href="System.StringComparer.OrdinalIgnoreCase" data-throw-if-not-resolved="false"></xref> if your equality
-
-    comparison is case-insensitive.
-
+        Use a consistent comparer that matches your equality comparison semantics.
+        For example, use <xref href="System.StringComparer.OrdinalIgnoreCase" data-throw-if-not-resolved="false"></xref> if your equality
+        comparison is case-insensitive.
     </p>
   example: []
   syntax:
@@ -356,18 +341,15 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: AddRange
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/HashCombiner.cs
-    startLine: 179
+    startLine: 195
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
   summary: Adds all values from a sequence to the hash computation.
   remarks: >-
     <p>
-
-    Each element's hash code is added in order, so the hash will differ for sequences
-
-    with the same elements in different orders.
-
+        Each element's hash code is added in order, so the hash will differ for sequences
+        with the same elements in different orders.
     </p>
   example: []
   syntax:
@@ -407,18 +389,15 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: AddRange
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/HashCombiner.cs
-    startLine: 204
+    startLine: 220
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
   summary: Adds all values from a span to the hash computation.
   remarks: >-
     <p>
-
-    This overload avoids allocation when iterating over contiguous memory regions.
-
-    Each element's hash code is added in order.
-
+        This overload avoids allocation when iterating over contiguous memory regions.
+        Each element's hash code is added in order.
     </p>
   example: []
   syntax:
@@ -458,18 +437,15 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: ToHashCode
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/HashCombiner.cs
-    startLine: 221
+    startLine: 237
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
   summary: Returns the combined hash code computed from all added values.
   remarks: >-
     <p>
-
-    This method is equivalent to reading the <xref href="ANcpLua.Roslyn.Utilities.HashCombiner.HashCode" data-throw-if-not-resolved="false"></xref> property and is provided
-
-    for API compatibility with <xref href="System.HashCode.ToHashCode" data-throw-if-not-resolved="false"></xref>.
-
+        This method is equivalent to reading the <xref href="ANcpLua.Roslyn.Utilities.HashCombiner.HashCode" data-throw-if-not-resolved="false"></xref> property and is provided
+        for API compatibility with <xref href="System.HashCode.ToHashCode" data-throw-if-not-resolved="false"></xref>.
     </p>
   example: []
   syntax:

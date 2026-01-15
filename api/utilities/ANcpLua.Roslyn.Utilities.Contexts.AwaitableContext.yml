@@ -40,7 +40,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: AwaitableContext
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/AwaitableContext.cs
-    startLine: 23
+    startLine: 26
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
@@ -48,15 +48,15 @@ items:
     Provides context for analyzing awaitable types and async patterns in a <xref href="Microsoft.CodeAnalysis.Compilation" data-throw-if-not-resolved="false"></xref>.
 
     <p>
-
-    This class caches common task-like type symbols and provides methods to determine whether
-
-    types are awaitable, conform to the awaiter pattern, or can be used with the <code>async</code> keyword.
-
+        This class caches common task-like type symbols and provides methods to determine whether
+        types are awaitable, conform to the awaiter pattern, or can be used with the <code>async</code> keyword.
     </p>
   remarks: >-
-    <ul><li>Supports <xref href="System.Threading.Tasks.Task" data-throw-if-not-resolved="false"></xref>, <xref href="System.Threading.Tasks.Task%601" data-throw-if-not-resolved="false"></xref>,
-            <xref href="System.Threading.Tasks.ValueTask" data-throw-if-not-resolved="false"></xref>, and <xref href="System.Threading.Tasks.ValueTask%601" data-throw-if-not-resolved="false"></xref>.</li><li>Detects custom awaitable types by checking for the awaiter pattern.</li><li>Supports extension method <code>GetAwaiter</code> when provided with a <xref href="Microsoft.CodeAnalysis.SemanticModel" data-throw-if-not-resolved="false"></xref>.</li><li>Properties may be <code>null</code> if the corresponding types are not available in the compilation.</li></ul>
+    <ul><li>
+            Supports <xref href="System.Threading.Tasks.Task" data-throw-if-not-resolved="false"></xref>, <xref href="System.Threading.Tasks.Task%601" data-throw-if-not-resolved="false"></xref>,
+            <xref href="System.Threading.Tasks.ValueTask" data-throw-if-not-resolved="false"></xref>, and
+            <xref href="System.Threading.Tasks.ValueTask%601" data-throw-if-not-resolved="false"></xref>.
+        </li><li>Detects custom awaitable types by checking for the awaiter pattern.</li><li>Supports extension method <code>GetAwaiter</code> when provided with a <xref href="Microsoft.CodeAnalysis.SemanticModel" data-throw-if-not-resolved="false"></xref>.</li><li>Properties may be <code>null</code> if the corresponding types are not available in the compilation.</li></ul>
   example: []
   syntax:
     content: public sealed class AwaitableContext
@@ -96,7 +96,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Task
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/AwaitableContext.cs
-    startLine: 34
+    startLine: 37
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
@@ -127,11 +127,14 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: TaskOfT
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/AwaitableContext.cs
-    startLine: 39
+    startLine: 43
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
-  summary: Gets the <xref href="System.Threading.Tasks.Task%601" data-throw-if-not-resolved="false"></xref> generic type definition, or <code>null</code> if not available.
+  summary: >-
+    Gets the <xref href="System.Threading.Tasks.Task%601" data-throw-if-not-resolved="false"></xref> generic type definition, or <code>null</code> if not
+
+    available.
   example: []
   syntax:
     content: public INamedTypeSymbol? TaskOfT { get; }
@@ -158,7 +161,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: ValueTask
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/AwaitableContext.cs
-    startLine: 44
+    startLine: 48
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
@@ -189,11 +192,14 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: ValueTaskOfT
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/AwaitableContext.cs
-    startLine: 49
+    startLine: 54
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
-  summary: Gets the <xref href="System.Threading.Tasks.ValueTask%601" data-throw-if-not-resolved="false"></xref> generic type definition, or <code>null</code> if not available.
+  summary: >-
+    Gets the <xref href="System.Threading.Tasks.ValueTask%601" data-throw-if-not-resolved="false"></xref> generic type definition, or <code>null</code> if not
+
+    available.
   example: []
   syntax:
     content: public INamedTypeSymbol? ValueTaskOfT { get; }
@@ -220,7 +226,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IAsyncEnumerable
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/AwaitableContext.cs
-    startLine: 54
+    startLine: 59
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
@@ -251,7 +257,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IAsyncEnumerator
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/AwaitableContext.cs
-    startLine: 59
+    startLine: 64
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
@@ -282,11 +288,14 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: INotifyCompletion
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/AwaitableContext.cs
-    startLine: 64
+    startLine: 70
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
-  summary: Gets the <xref href="System.Runtime.CompilerServices.INotifyCompletion" data-throw-if-not-resolved="false"></xref> interface type symbol, or <code>null</code> if not available.
+  summary: >-
+    Gets the <xref href="System.Runtime.CompilerServices.INotifyCompletion" data-throw-if-not-resolved="false"></xref> interface type symbol, or <code>null</code> if
+
+    not available.
   example: []
   syntax:
     content: public INamedTypeSymbol? INotifyCompletion { get; }
@@ -313,11 +322,14 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: ICriticalNotifyCompletion
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/AwaitableContext.cs
-    startLine: 69
+    startLine: 76
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
-  summary: Gets the <xref href="System.Runtime.CompilerServices.ICriticalNotifyCompletion" data-throw-if-not-resolved="false"></xref> interface type symbol, or <code>null</code> if not available.
+  summary: >-
+    Gets the <xref href="System.Runtime.CompilerServices.ICriticalNotifyCompletion" data-throw-if-not-resolved="false"></xref> interface type symbol, or
+
+    <code>null</code> if not available.
   example: []
   syntax:
     content: public INamedTypeSymbol? ICriticalNotifyCompletion { get; }
@@ -344,11 +356,14 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: AsyncMethodBuilderAttribute
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/AwaitableContext.cs
-    startLine: 74
+    startLine: 82
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
-  summary: Gets the <xref href="System.Runtime.CompilerServices.AsyncMethodBuilderAttribute" data-throw-if-not-resolved="false"></xref> type symbol, or <code>null</code> if not available.
+  summary: >-
+    Gets the <xref href="System.Runtime.CompilerServices.AsyncMethodBuilderAttribute" data-throw-if-not-resolved="false"></xref> type symbol, or <code>null</code> if
+
+    not available.
   example: []
   syntax:
     content: public INamedTypeSymbol? AsyncMethodBuilderAttribute { get; }
@@ -375,11 +390,14 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: ConfiguredTaskAwaitable
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/AwaitableContext.cs
-    startLine: 79
+    startLine: 88
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
-  summary: Gets the <xref href="System.Runtime.CompilerServices.ConfiguredTaskAwaitable" data-throw-if-not-resolved="false"></xref> type symbol, or <code>null</code> if not available.
+  summary: >-
+    Gets the <xref href="System.Runtime.CompilerServices.ConfiguredTaskAwaitable" data-throw-if-not-resolved="false"></xref> type symbol, or <code>null</code> if not
+
+    available.
   example: []
   syntax:
     content: public INamedTypeSymbol? ConfiguredTaskAwaitable { get; }
@@ -406,11 +424,14 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: ConfiguredValueTaskAwaitable
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/AwaitableContext.cs
-    startLine: 84
+    startLine: 94
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
-  summary: Gets the <xref href="System.Runtime.CompilerServices.ConfiguredValueTaskAwaitable" data-throw-if-not-resolved="false"></xref> type symbol, or <code>null</code> if not available.
+  summary: >-
+    Gets the <xref href="System.Runtime.CompilerServices.ConfiguredValueTaskAwaitable" data-throw-if-not-resolved="false"></xref> type symbol, or <code>null</code> if
+
+    not available.
   example: []
   syntax:
     content: public INamedTypeSymbol? ConfiguredValueTaskAwaitable { get; }
@@ -437,7 +458,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: .ctor
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/AwaitableContext.cs
-    startLine: 90
+    startLine: 100
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
@@ -472,7 +493,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsTaskLike
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/AwaitableContext.cs
-    startLine: 119
+    startLine: 133
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
@@ -517,26 +538,20 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsAwaitable
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/AwaitableContext.cs
-    startLine: 153
+    startLine: 165
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
   summary: Determines whether the specified type is awaitable by checking for a valid <code>GetAwaiter</code> method.
   remarks: >-
     <p>
-
-    This method only checks for instance methods named <code>GetAwaiter</code>. To include extension methods,
-
-    use the overload that accepts a <xref href="Microsoft.CodeAnalysis.SemanticModel" data-throw-if-not-resolved="false"></xref>.
-
+        This method only checks for instance methods named <code>GetAwaiter</code>. To include extension methods,
+        use the overload that accepts a <xref href="Microsoft.CodeAnalysis.SemanticModel" data-throw-if-not-resolved="false"></xref>.
     </p>
 
     <p>
-
-    A type is awaitable if it is task-like or has a parameterless <code>GetAwaiter</code> method returning
-
-    a type that conforms to the awaiter pattern.
-
+        A type is awaitable if it is task-like or has a parameterless <code>GetAwaiter</code> method returning
+        a type that conforms to the awaiter pattern.
     </p>
   example: []
   syntax:
@@ -576,18 +591,15 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsAwaitable
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/AwaitableContext.cs
-    startLine: 194
+    startLine: 202
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
   summary: Determines whether the specified type is awaitable, including extension methods visible at the given position.
   remarks: >-
     <p>
-
-    Unlike the simpler overload, this method considers extension methods for <code>GetAwaiter</code>
-
-    that are accessible at the specified <code class="paramref">position</code>.
-
+        Unlike the simpler overload, this method considers extension methods for <code>GetAwaiter</code>
+        that are accessible at the specified <code class="paramref">position</code>.
     </p>
   example: []
   syntax:
@@ -633,16 +645,14 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: ConformsToAwaiterPattern
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/AwaitableContext.cs
-    startLine: 242
+    startLine: 250
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
   summary: Determines whether the specified type conforms to the awaiter pattern.
   remarks: >-
     <p>
-
-    The awaiter pattern requires:
-
+        The awaiter pattern requires:
     </p>
 
     <ul><li>The type implements <xref href="System.Runtime.CompilerServices.INotifyCompletion" data-throw-if-not-resolved="false"></xref>.</li><li>An instance property <code>IsCompleted</code> of type <xref href="System.Boolean" data-throw-if-not-resolved="false"></xref> with a getter.</li><li>An instance method <code>GetResult()</code> with no parameters or type parameters.</li></ul>
@@ -682,20 +692,16 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: CanUseAsyncKeyword
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/AwaitableContext.cs
-    startLine: 283
+    startLine: 298
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
   summary: Determines whether the specified method can use the <code>async</code> modifier.
   remarks: >-
     <p>
-
-    This method determines whether a method declaration could validly include the <code>async</code> keyword
-
-    based on its return type. Methods returning <code>void</code> cannot use <code>async</code> (except for event handlers,
-
-    which are not distinguished here).
-
+        This method determines whether a method declaration could validly include the <code>async</code> keyword
+        based on its return type. Methods returning <code>void</code> cannot use <code>async</code> (except for event handlers,
+        which are not distinguished here).
     </p>
   example: []
   syntax:
@@ -732,7 +738,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsAsyncEnumerable
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/AwaitableContext.cs
-    startLine: 316
+    startLine: 333
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
@@ -773,7 +779,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsAsyncEnumerator
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/AwaitableContext.cs
-    startLine: 335
+    startLine: 352
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
@@ -814,7 +820,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsConfiguredAwaitable
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/AwaitableContext.cs
-    startLine: 357
+    startLine: 374
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
@@ -856,7 +862,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: GetTaskResultType
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/AwaitableContext.cs
-    startLine: 379
+    startLine: 398
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts

@@ -25,7 +25,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: EquatableMessageArgs
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/EquatableMessageArgs.cs
-    startLine: 30
+    startLine: 31
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Models
@@ -40,7 +40,10 @@ items:
         Without proper equality, generators may produce redundant outputs or miss necessary updates.
     </p>
 
-    <ul><li>Treats default (uninitialized) and empty arrays as equivalent, following the "null = empty" pattern.</li><li>Compares array elements using <xref href="System.Object.Equals(System.Object%2cSystem.Object)" data-throw-if-not-resolved="false"></xref> for deep equality.</li><li>Produces consistent hash codes where empty and default arrays both return 0.</li></ul>
+    <ul><li>
+                Treats default (uninitialized) and empty arrays as equivalent, following the "null = empty"
+                pattern.
+            </li><li>Compares array elements using <xref href="System.Object.Equals(System.Object%2cSystem.Object)" data-throw-if-not-resolved="false"></xref> for deep equality.</li><li>Produces consistent hash codes where empty and default arrays both return 0.</li></ul>
   example: []
   syntax:
     content: 'public readonly record struct EquatableMessageArgs : IEquatable<EquatableMessageArgs>'
@@ -79,7 +82,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: .ctor
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/EquatableMessageArgs.cs
-    startLine: 30
+    startLine: 31
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Models
@@ -94,7 +97,10 @@ items:
         Without proper equality, generators may produce redundant outputs or miss necessary updates.
     </p>
 
-    <ul><li>Treats default (uninitialized) and empty arrays as equivalent, following the "null = empty" pattern.</li><li>Compares array elements using <xref href="System.Object.Equals(System.Object%2cSystem.Object)" data-throw-if-not-resolved="false"></xref> for deep equality.</li><li>Produces consistent hash codes where empty and default arrays both return 0.</li></ul>
+    <ul><li>
+                Treats default (uninitialized) and empty arrays as equivalent, following the "null = empty"
+                pattern.
+            </li><li>Compares array elements using <xref href="System.Object.Equals(System.Object%2cSystem.Object)" data-throw-if-not-resolved="false"></xref> for deep equality.</li><li>Produces consistent hash codes where empty and default arrays both return 0.</li></ul>
   example: []
   syntax:
     content: public EquatableMessageArgs(ImmutableArray<object?> Args)
@@ -130,7 +136,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Args
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/EquatableMessageArgs.cs
-    startLine: 34
+    startLine: 35
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Models
@@ -161,7 +167,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Empty
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/EquatableMessageArgs.cs
-    startLine: 43
+    startLine: 44
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Models
@@ -194,7 +200,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsEmpty
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/EquatableMessageArgs.cs
-    startLine: 52
+    startLine: 53
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Models
@@ -229,7 +235,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Equals
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/EquatableMessageArgs.cs
-    startLine: 66
+    startLine: 67
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Models
@@ -273,7 +279,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: GetHashCode
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Models/EquatableMessageArgs.cs
-    startLine: 100
+    startLine: 99
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Models

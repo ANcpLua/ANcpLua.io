@@ -35,7 +35,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: EquatableArray
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/EquatableArray.cs
-    startLine: 124
+    startLine: 141
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -53,7 +53,13 @@ items:
 
     <p>
         Key behaviors:
-        <ul><li><xref href="ANcpLua.Roslyn.Utilities.EquatableArray%601.IsEmpty" data-throw-if-not-resolved="false"></xref> returns <code>true</code> for both <code>default</code> and explicitly empty arrays</li><li><xref href="ANcpLua.Roslyn.Utilities.EquatableArray%601.AsSpan" data-throw-if-not-resolved="false"></xref> returns an empty span for <code>null</code> backing (never throws)</li><li><xref href="ANcpLua.Roslyn.Utilities.EquatableArray%601.GetEnumerator" data-throw-if-not-resolved="false"></xref> returns an empty enumerator for <code>null</code> backing (never throws)</li><li>Equality: two empty arrays are always equal regardless of how they were created</li></ul>
+        <ul><li>
+                    <xref href="ANcpLua.Roslyn.Utilities.EquatableArray%601.IsEmpty" data-throw-if-not-resolved="false"></xref> returns <code>true</code> for both <code>default</code> and explicitly empty
+                    arrays
+                </li><li><xref href="ANcpLua.Roslyn.Utilities.EquatableArray%601.AsSpan" data-throw-if-not-resolved="false"></xref> returns an empty span for <code>null</code> backing (never throws)</li><li>
+                    <xref href="ANcpLua.Roslyn.Utilities.EquatableArray%601.GetEnumerator" data-throw-if-not-resolved="false"></xref> returns an empty enumerator for <code>null</code> backing (never
+                    throws)
+                </li><li>Equality: two empty arrays are always equal regardless of how they were created</li></ul>
     </p>
 
     <p>
@@ -143,7 +149,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: .ctor
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/EquatableArray.cs
-    startLine: 146
+    startLine: 163
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -182,7 +188,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsEmpty
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/EquatableArray.cs
-    startLine: 185
+    startLine: 202
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -225,7 +231,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsDefaultOrEmpty
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/EquatableArray.cs
-    startLine: 202
+    startLine: 219
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -266,7 +272,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Length
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/EquatableArray.cs
-    startLine: 215
+    startLine: 232
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -303,7 +309,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: this[]
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/EquatableArray.cs
-    startLine: 244
+    startLine: 261
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -348,7 +354,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Equals
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/EquatableArray.cs
-    startLine: 270
+    startLine: 287
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -400,7 +406,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Equals
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/EquatableArray.cs
-    startLine: 290
+    startLine: 307
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -442,7 +448,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: GetHashCode
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/EquatableArray.cs
-    startLine: 303
+    startLine: 323
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -482,7 +488,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: AsImmutableArray
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/EquatableArray.cs
-    startLine: 327
+    startLine: 348
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -499,7 +505,9 @@ items:
       description: >-
         An <xref href="System.Collections.Immutable.ImmutableArray%601" data-throw-if-not-resolved="false"></xref> containing the same elements.
 
-        Returns <xref href="System.Collections.Immutable.ImmutableArray%601.Empty" data-throw-if-not-resolved="false"></xref> for empty arrays (never returns a default <xref href="System.Collections.Immutable.ImmutableArray%601" data-throw-if-not-resolved="false"></xref>).
+        Returns <xref href="System.Collections.Immutable.ImmutableArray%601.Empty" data-throw-if-not-resolved="false"></xref> for empty arrays (never returns a default
+
+        <xref href="System.Collections.Immutable.ImmutableArray%601" data-throw-if-not-resolved="false"></xref>).
     content.vb: Public Function AsImmutableArray() As ImmutableArray(Of T)
   overload: ANcpLua.Roslyn.Utilities.EquatableArray`1.AsImmutableArray*
   seealso:
@@ -525,7 +533,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Items
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/EquatableArray.cs
-    startLine: 342
+    startLine: 365
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -566,7 +574,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: AsSpan
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/EquatableArray.cs
-    startLine: 359
+    startLine: 382
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -606,7 +614,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: ToArray
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/EquatableArray.cs
-    startLine: 371
+    startLine: 397
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -640,7 +648,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: GetEnumerator
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/EquatableArray.cs
-    startLine: 383
+    startLine: 412
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -677,7 +685,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: op_Implicit
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/EquatableArray.cs
-    startLine: 403
+    startLine: 441
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -715,7 +723,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: op_Equality
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/EquatableArray.cs
-    startLine: 415
+    startLine: 456
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -762,7 +770,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: op_Inequality
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/EquatableArray.cs
-    startLine: 427
+    startLine: 471
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities

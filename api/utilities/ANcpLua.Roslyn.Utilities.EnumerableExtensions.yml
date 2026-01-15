@@ -45,7 +45,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: EnumerableExtensions
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/EnumerableExtensions.cs
-    startLine: 27
+    startLine: 25
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -95,7 +95,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: SelectManyOrEmpty
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/EnumerableExtensions.cs
-    startLine: 47
+    startLine: 45
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -153,7 +153,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: OrEmpty
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/EnumerableExtensions.cs
-    startLine: 70
+    startLine: 68
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -254,7 +254,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsNullOrEmpty
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/EnumerableExtensions.cs
-    startLine: 97
+    startLine: 99
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -302,7 +302,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: HasDuplicates
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/EnumerableExtensions.cs
-    startLine: 139
+    startLine: 149
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -378,7 +378,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: HasDuplicates
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/EnumerableExtensions.cs
-    startLine: 188
+    startLine: 205
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -389,7 +389,10 @@ items:
         resulting in O(n) time complexity. The key selector is called once per element.
     </p>
 
-    <ul><li>Short-circuits on first duplicate key found</li><li>Useful when comparing complex objects by a specific property</li><li>Key comparison uses <xref href="System.Collections.Generic.EqualityComparer%601.Default" data-throw-if-not-resolved="false"></xref> for <code class="typeparamref">TKey</code></li></ul>
+    <ul><li>Short-circuits on first duplicate key found</li><li>Useful when comparing complex objects by a specific property</li><li>
+                Key comparison uses <xref href="System.Collections.Generic.EqualityComparer%601.Default" data-throw-if-not-resolved="false"></xref> for
+                <code class="typeparamref">TKey</code>
+            </li></ul>
   example:
   - >-
     <pre><code class="lang-csharp">// Check for duplicate parameter names in a method
@@ -455,7 +458,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: SingleOrDefaultIfMultiple
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/EnumerableExtensions.cs
-    startLine: 214
+    startLine: 229
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -507,7 +510,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: WhereNotNull
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/EnumerableExtensions.cs
-    startLine: 234
+    startLine: 249
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -555,7 +558,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: WhereNotNull
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/EnumerableExtensions.cs
-    startLine: 253
+    startLine: 266
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -603,7 +606,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: WhereNot
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/EnumerableExtensions.cs
-    startLine: 273
+    startLine: 284
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -654,7 +657,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Indexed
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/EnumerableExtensions.cs
-    startLine: 298
+    startLine: 307
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -705,7 +708,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: ConsecutivePairs
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/EnumerableExtensions.cs
-    startLine: 325
+    startLine: 334
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -762,7 +765,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: ConsecutivePairs
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/EnumerableExtensions.cs
-    startLine: 352
+    startLine: 361
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -810,7 +813,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IndexOf
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/EnumerableExtensions.cs
-    startLine: 366
+    startLine: 377
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -861,7 +864,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: FirstOrDefaultFast
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/EnumerableExtensions.cs
-    startLine: 393
+    startLine: 403
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -870,7 +873,9 @@ items:
 
     if no element matches.
   remarks: >-
-    This method is more efficient than <xref href="System.Linq.Enumerable.FirstOrDefault%60%601(System.Collections.Generic.IEnumerable%7b%60%600%7d%2cSystem.Func%7b%60%600%2cSystem.Boolean%7d)" data-throw-if-not-resolved="false"></xref>
+    This method is more efficient than
+
+    <xref href="System.Linq.Enumerable.FirstOrDefault%60%601(System.Collections.Generic.IEnumerable%7b%60%600%7d%2cSystem.Func%7b%60%600%2cSystem.Boolean%7d)" data-throw-if-not-resolved="false"></xref>
 
     for <xref href="System.Collections.Generic.IList%601" data-throw-if-not-resolved="false"></xref> implementations as it uses indexed access instead of enumeration.
   example: []
@@ -919,7 +924,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Partition
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/EnumerableExtensions.cs
-    startLine: 415
+    startLine: 423
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -969,7 +974,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: DistinctBy
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/EnumerableExtensions.cs
-    startLine: 467
+    startLine: 482
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -980,7 +985,10 @@ items:
         providing O(n) time complexity with O(k) memory where k is distinct key count.
     </p>
 
-    <ul><li>Returns the first element for each unique key (preserves order)</li><li>Uses deferred execution - the sequence is enumerated lazily</li><li>Key comparison uses <xref href="System.Collections.Generic.EqualityComparer%601.Default" data-throw-if-not-resolved="false"></xref> for <code class="typeparamref">TKey</code></li></ul>
+    <ul><li>Returns the first element for each unique key (preserves order)</li><li>Uses deferred execution - the sequence is enumerated lazily</li><li>
+                Key comparison uses <xref href="System.Collections.Generic.EqualityComparer%601.Default" data-throw-if-not-resolved="false"></xref> for
+                <code class="typeparamref">TKey</code>
+            </li></ul>
   example:
   - >-
     <pre><code class="lang-csharp">// Get one method per unique name (first overload only)
@@ -1039,7 +1047,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: ForEach
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/EnumerableExtensions.cs
-    startLine: 490
+    startLine: 503
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -1088,7 +1096,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: ForEach
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/EnumerableExtensions.cs
-    startLine: 508
+    startLine: 521
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -1139,7 +1147,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: MinByOrDefault
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/EnumerableExtensions.cs
-    startLine: 528
+    startLine: 544
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -1161,7 +1169,10 @@ items:
     - id: T
       description: The type of the elements in the sequence.
     - id: TKey
-      description: The type of the key returned by <code class="paramref">selector</code>, which must implement <xref href="System.IComparable%601" data-throw-if-not-resolved="false"></xref>.
+      description: >-
+        The type of the key returned by <code class="paramref">selector</code>, which must implement
+
+        <xref href="System.IComparable%601" data-throw-if-not-resolved="false"></xref>.
     return:
       type: '{T}'
       description: >-
@@ -1195,7 +1206,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: MaxByOrDefault
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/EnumerableExtensions.cs
-    startLine: 564
+    startLine: 583
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -1217,7 +1228,10 @@ items:
     - id: T
       description: The type of the elements in the sequence.
     - id: TKey
-      description: The type of the key returned by <code class="paramref">selector</code>, which must implement <xref href="System.IComparable%601" data-throw-if-not-resolved="false"></xref>.
+      description: >-
+        The type of the key returned by <code class="paramref">selector</code>, which must implement
+
+        <xref href="System.IComparable%601" data-throw-if-not-resolved="false"></xref>.
     return:
       type: '{T}'
       description: >-
@@ -1251,7 +1265,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Batch
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/EnumerableExtensions.cs
-    startLine: 600
+    startLine: 619
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -1303,7 +1317,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: JoinToString
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/EnumerableExtensions.cs
-    startLine: 630
+    startLine: 649
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -1351,7 +1365,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: SkipLast
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/EnumerableExtensions.cs
-    startLine: 644
+    startLine: 665
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -1402,7 +1416,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: TakeLast
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/EnumerableExtensions.cs
-    startLine: 667
+    startLine: 688
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -1455,7 +1469,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: SafeCast
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/EnumerableExtensions.cs
-    startLine: 694
+    startLine: 715
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities

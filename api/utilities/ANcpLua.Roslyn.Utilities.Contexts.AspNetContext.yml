@@ -31,18 +31,15 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: AspNetContext
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/AspNetContext.cs
-    startLine: 23
+    startLine: 31
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
   summary: Provides cached type symbols and helper methods for analyzing ASP.NET Core and legacy Web API code patterns.
   remarks: >-
     <p>
-
-    This context class caches commonly used ASP.NET type symbols from the compilation to enable
-
-    efficient analysis of controller classes, action methods, and related ASP.NET patterns.
-
+        This context class caches commonly used ASP.NET type symbols from the compilation to enable
+        efficient analysis of controller classes, action methods, and related ASP.NET patterns.
     </p>
 
     <ul><li>Supports ASP.NET Core MVC controllers and actions</li><li>Supports ASP.NET Core Minimal APIs (IResult)</li><li>Supports legacy System.Web.Http API controllers</li><li>Provides binding source attribute detection</li></ul>
@@ -87,20 +84,19 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: .ctor
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/AspNetContext.cs
-    startLine: 70
+    startLine: 79
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
-  summary: Initializes a new instance of the <xref href="ANcpLua.Roslyn.Utilities.Contexts.AspNetContext" data-throw-if-not-resolved="false"></xref> class by resolving ASP.NET type symbols from the compilation.
+  summary: >-
+    Initializes a new instance of the <xref href="ANcpLua.Roslyn.Utilities.Contexts.AspNetContext" data-throw-if-not-resolved="false"></xref> class by resolving ASP.NET type symbols from the
+
+    compilation.
   remarks: >-
     <p>
-
-    This constructor attempts to resolve all known ASP.NET type symbols from the provided compilation.
-
-    If a type is not available in the compilation (e.g., the required NuGet package is not referenced),
-
-    the corresponding property will be <code>null</code>, and related checks will return <code>false</code>.
-
+        This constructor attempts to resolve all known ASP.NET type symbols from the provided compilation.
+        If a type is not available in the compilation (e.g., the required NuGet package is not referenced),
+        the corresponding property will be <code>null</code>, and related checks will return <code>false</code>.
     </p>
   example: []
   syntax:
@@ -132,19 +128,20 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsController
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/AspNetContext.cs
-    startLine: 120
+    startLine: 138
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
   summary: Determines whether the specified type is an ASP.NET controller.
   remarks: >-
     <p>
-
-    A type is considered a controller if it meets all of the following criteria:
-
+        A type is considered a controller if it meets all of the following criteria:
     </p>
 
-    <ul><li>Is a non-abstract, public class</li><li>Does not have the <code>[NonController]</code> attribute</li><li>Has the <code>[Controller]</code> attribute, inherits from <code>ControllerBase</code>, or is a legacy Web API controller</li></ul>
+    <ul><li>Is a non-abstract, public class</li><li>Does not have the <code>[NonController]</code> attribute</li><li>
+                Has the <code>[Controller]</code> attribute, inherits from <code>ControllerBase</code>, or is a legacy Web
+                API controller
+            </li></ul>
   example: []
   syntax:
     content: public bool IsController(INamedTypeSymbol type)
@@ -180,18 +177,15 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsApiController
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/AspNetContext.cs
-    startLine: 143
+    startLine: 161
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
   summary: Determines whether the specified type is an API controller (has <code>[ApiController]</code> attribute).
   remarks: >-
     <p>
-
-    A type is considered an API controller if it is a controller (as determined by <xref href="ANcpLua.Roslyn.Utilities.Contexts.AspNetContext.IsController(Microsoft.CodeAnalysis.INamedTypeSymbol)" data-throw-if-not-resolved="false"></xref>)
-
-    and either the type itself or one of its base types has the <code>[ApiController]</code> attribute.
-
+        A type is considered an API controller if it is a controller (as determined by <xref href="ANcpLua.Roslyn.Utilities.Contexts.AspNetContext.IsController(Microsoft.CodeAnalysis.INamedTypeSymbol)" data-throw-if-not-resolved="false"></xref>)
+        and either the type itself or one of its base types has the <code>[ApiController]</code> attribute.
     </p>
   example: []
   syntax:
@@ -226,16 +220,14 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsAction
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/AspNetContext.cs
-    startLine: 170
+    startLine: 198
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
   summary: Determines whether the specified method is a controller action.
   remarks: >-
     <p>
-
-    A method is considered an action if it meets all of the following criteria:
-
+        A method is considered an action if it meets all of the following criteria:
     </p>
 
     <ul><li>Is an ordinary method (not a constructor, property accessor, etc.)</li><li>Is not static</li><li>Has public accessibility</li><li>Does not have the <code>[NonAction]</code> attribute</li><li>Is declared in a controller type</li></ul>
@@ -274,20 +266,16 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: HasHttpMethodAttribute
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/AspNetContext.cs
-    startLine: 201
+    startLine: 229
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
   summary: Determines whether the specified method has an HTTP method attribute (<code>[HttpGet]</code>, <code>[HttpPost]</code>, etc.).
   remarks: >-
     <p>
-
-    This method checks if any attribute on the method inherits from <code>HttpMethodAttribute</code>,
-
-    which includes <code>[HttpGet]</code>, <code>[HttpPost]</code>, <code>[HttpPut]</code>, <code>[HttpDelete]</code>,
-
-    <code>[HttpPatch]</code>, <code>[HttpHead]</code>, and <code>[HttpOptions]</code>.
-
+        This method checks if any attribute on the method inherits from <code>HttpMethodAttribute</code>,
+        which includes <code>[HttpGet]</code>, <code>[HttpPost]</code>, <code>[HttpPut]</code>, <code>[HttpDelete]</code>,
+        <code>[HttpPatch]</code>, <code>[HttpHead]</code>, and <code>[HttpOptions]</code>.
     </p>
   example: []
   syntax:
@@ -324,7 +312,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: HasRouteAttribute
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/AspNetContext.cs
-    startLine: 221
+    startLine: 247
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
@@ -362,16 +350,14 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsActionResult
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/AspNetContext.cs
-    startLine: 240
+    startLine: 276
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
   summary: Determines whether the specified type is an action result type.
   remarks: >-
     <p>
-
-    This method returns <code>true</code> if the type is any of the following:
-
+        This method returns <code>true</code> if the type is any of the following:
     </p>
 
     <ul><li>Implements <code>IActionResult</code> or inherits from <code>ActionResult</code></li><li>Is <code>ActionResult&lt;T&gt;</code></li><li>Implements <code>IResult</code> (Minimal APIs)</li><li>Implements <code>IHttpActionResult</code> (legacy Web API)</li></ul>
@@ -408,18 +394,15 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: HasBindingAttribute
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/AspNetContext.cs
-    startLine: 261
+    startLine: 297
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
   summary: Determines whether the specified parameter has a binding source attribute.
   remarks: >-
     <p>
-
-    Binding source attributes include <code>[FromBody]</code>, <code>[FromQuery]</code>, <code>[FromRoute]</code>,
-
-    <code>[FromServices]</code>, <code>[FromHeader]</code>, and <code>[FromForm]</code>.
-
+        Binding source attributes include <code>[FromBody]</code>, <code>[FromQuery]</code>, <code>[FromRoute]</code>,
+        <code>[FromServices]</code>, <code>[FromHeader]</code>, and <code>[FromForm]</code>.
     </p>
   example: []
   syntax:
@@ -456,7 +439,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsFromBody
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/AspNetContext.cs
-    startLine: 279
+    startLine: 313
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
@@ -496,7 +479,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsFromServices
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/AspNetContext.cs
-    startLine: 289
+    startLine: 325
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
@@ -536,7 +519,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsHttpContextType
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/AspNetContext.cs
-    startLine: 297
+    startLine: 335
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts
@@ -574,7 +557,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsFormFile
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Contexts/AspNetContext.cs
-    startLine: 305
+    startLine: 345
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Contexts

@@ -28,7 +28,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Match
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/SymbolMatch.cs
-    startLine: 28
+    startLine: 49
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Matching
@@ -39,7 +39,19 @@ items:
         that can be composed using a fluent API.
     </p>
 
-    <ul><li>Use <xref href="ANcpLua.Roslyn.Utilities.Matching.Match.Method" data-throw-if-not-resolved="false"></xref> or <xref href="ANcpLua.Roslyn.Utilities.Matching.Match.Method(System.String)" data-throw-if-not-resolved="false"></xref> for matching <xref href="Microsoft.CodeAnalysis.IMethodSymbol" data-throw-if-not-resolved="false"></xref> instances.</li><li>Use <xref href="ANcpLua.Roslyn.Utilities.Matching.Match.Type" data-throw-if-not-resolved="false"></xref> or <xref href="ANcpLua.Roslyn.Utilities.Matching.Match.Type(System.String)" data-throw-if-not-resolved="false"></xref> for matching <xref href="Microsoft.CodeAnalysis.INamedTypeSymbol" data-throw-if-not-resolved="false"></xref> instances.</li><li>Use <xref href="ANcpLua.Roslyn.Utilities.Matching.Match.Property" data-throw-if-not-resolved="false"></xref> or <xref href="ANcpLua.Roslyn.Utilities.Matching.Match.Property(System.String)" data-throw-if-not-resolved="false"></xref> for matching <xref href="Microsoft.CodeAnalysis.IPropertySymbol" data-throw-if-not-resolved="false"></xref> instances.</li><li>Use <xref href="ANcpLua.Roslyn.Utilities.Matching.Match.Field" data-throw-if-not-resolved="false"></xref> or <xref href="ANcpLua.Roslyn.Utilities.Matching.Match.Field(System.String)" data-throw-if-not-resolved="false"></xref> for matching <xref href="Microsoft.CodeAnalysis.IFieldSymbol" data-throw-if-not-resolved="false"></xref> instances.</li><li>Use <xref href="ANcpLua.Roslyn.Utilities.Matching.Match.Parameter" data-throw-if-not-resolved="false"></xref> for matching <xref href="Microsoft.CodeAnalysis.IParameterSymbol" data-throw-if-not-resolved="false"></xref> instances.</li></ul>
+    <ul><li>
+                Use <xref href="ANcpLua.Roslyn.Utilities.Matching.Match.Method" data-throw-if-not-resolved="false"></xref> or <xref href="ANcpLua.Roslyn.Utilities.Matching.Match.Method(System.String)" data-throw-if-not-resolved="false"></xref> for matching
+                <xref href="Microsoft.CodeAnalysis.IMethodSymbol" data-throw-if-not-resolved="false"></xref> instances.
+            </li><li>
+                Use <xref href="ANcpLua.Roslyn.Utilities.Matching.Match.Type" data-throw-if-not-resolved="false"></xref> or <xref href="ANcpLua.Roslyn.Utilities.Matching.Match.Type(System.String)" data-throw-if-not-resolved="false"></xref> for matching
+                <xref href="Microsoft.CodeAnalysis.INamedTypeSymbol" data-throw-if-not-resolved="false"></xref> instances.
+            </li><li>
+                Use <xref href="ANcpLua.Roslyn.Utilities.Matching.Match.Property" data-throw-if-not-resolved="false"></xref> or <xref href="ANcpLua.Roslyn.Utilities.Matching.Match.Property(System.String)" data-throw-if-not-resolved="false"></xref> for matching
+                <xref href="Microsoft.CodeAnalysis.IPropertySymbol" data-throw-if-not-resolved="false"></xref> instances.
+            </li><li>
+                Use <xref href="ANcpLua.Roslyn.Utilities.Matching.Match.Field" data-throw-if-not-resolved="false"></xref> or <xref href="ANcpLua.Roslyn.Utilities.Matching.Match.Field(System.String)" data-throw-if-not-resolved="false"></xref> for matching
+                <xref href="Microsoft.CodeAnalysis.IFieldSymbol" data-throw-if-not-resolved="false"></xref> instances.
+            </li><li>Use <xref href="ANcpLua.Roslyn.Utilities.Matching.Match.Parameter" data-throw-if-not-resolved="false"></xref> for matching <xref href="Microsoft.CodeAnalysis.IParameterSymbol" data-throw-if-not-resolved="false"></xref> instances.</li></ul>
   example: []
   syntax:
     content: public static class Match
@@ -83,7 +95,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Method
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/SymbolMatch.cs
-    startLine: 39
+    startLine: 60
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Matching
@@ -117,7 +129,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Method
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/SymbolMatch.cs
-    startLine: 47
+    startLine: 71
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Matching
@@ -158,7 +170,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Type
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/SymbolMatch.cs
-    startLine: 54
+    startLine: 81
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Matching
@@ -192,7 +204,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Type
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/SymbolMatch.cs
-    startLine: 62
+    startLine: 92
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Matching
@@ -233,7 +245,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Property
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/SymbolMatch.cs
-    startLine: 69
+    startLine: 102
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Matching
@@ -267,7 +279,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Property
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/SymbolMatch.cs
-    startLine: 77
+    startLine: 113
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Matching
@@ -308,7 +320,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Field
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/SymbolMatch.cs
-    startLine: 84
+    startLine: 123
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Matching
@@ -342,7 +354,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Field
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/SymbolMatch.cs
-    startLine: 92
+    startLine: 134
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Matching
@@ -383,7 +395,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Parameter
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Matching/SymbolMatch.cs
-    startLine: 98
+    startLine: 143
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Matching

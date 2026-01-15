@@ -26,7 +26,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: SyntaxExtensions
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SyntaxExtensions.cs
-    startLine: 25
+    startLine: 33
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -78,7 +78,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: GetMethodName
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SyntaxExtensions.cs
-    startLine: 51
+    startLine: 65
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -127,7 +127,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: GetIdentifierName
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SyntaxExtensions.cs
-    startLine: 79
+    startLine: 101
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -176,7 +176,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: HasModifier
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SyntaxExtensions.cs
-    startLine: 132
+    startLine: 183
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -188,7 +188,24 @@ items:
         <xref href="Microsoft.CodeAnalysis.CSharp.SyntaxKind.AsyncKeyword" data-throw-if-not-resolved="false"></xref>, and <xref href="Microsoft.CodeAnalysis.CSharp.SyntaxKind.PartialKeyword" data-throw-if-not-resolved="false"></xref>.
     </p>
 
-    <ul><li>Access modifiers: <xref href="Microsoft.CodeAnalysis.CSharp.SyntaxKind.PublicKeyword" data-throw-if-not-resolved="false"></xref>, <xref href="Microsoft.CodeAnalysis.CSharp.SyntaxKind.PrivateKeyword" data-throw-if-not-resolved="false"></xref>, <xref href="Microsoft.CodeAnalysis.CSharp.SyntaxKind.ProtectedKeyword" data-throw-if-not-resolved="false"></xref>, <xref href="Microsoft.CodeAnalysis.CSharp.SyntaxKind.InternalKeyword" data-throw-if-not-resolved="false"></xref></li><li>Member modifiers: <xref href="Microsoft.CodeAnalysis.CSharp.SyntaxKind.StaticKeyword" data-throw-if-not-resolved="false"></xref>, <xref href="Microsoft.CodeAnalysis.CSharp.SyntaxKind.ReadOnlyKeyword" data-throw-if-not-resolved="false"></xref>, <xref href="Microsoft.CodeAnalysis.CSharp.SyntaxKind.ConstKeyword" data-throw-if-not-resolved="false"></xref>, <xref href="Microsoft.CodeAnalysis.CSharp.SyntaxKind.VolatileKeyword" data-throw-if-not-resolved="false"></xref></li><li>Inheritance modifiers: <xref href="Microsoft.CodeAnalysis.CSharp.SyntaxKind.AbstractKeyword" data-throw-if-not-resolved="false"></xref>, <xref href="Microsoft.CodeAnalysis.CSharp.SyntaxKind.VirtualKeyword" data-throw-if-not-resolved="false"></xref>, <xref href="Microsoft.CodeAnalysis.CSharp.SyntaxKind.OverrideKeyword" data-throw-if-not-resolved="false"></xref>, <xref href="Microsoft.CodeAnalysis.CSharp.SyntaxKind.SealedKeyword" data-throw-if-not-resolved="false"></xref>, <xref href="Microsoft.CodeAnalysis.CSharp.SyntaxKind.NewKeyword" data-throw-if-not-resolved="false"></xref></li><li>Async/unsafe: <xref href="Microsoft.CodeAnalysis.CSharp.SyntaxKind.AsyncKeyword" data-throw-if-not-resolved="false"></xref>, <xref href="Microsoft.CodeAnalysis.CSharp.SyntaxKind.UnsafeKeyword" data-throw-if-not-resolved="false"></xref></li><li>Type modifiers: <xref href="Microsoft.CodeAnalysis.CSharp.SyntaxKind.PartialKeyword" data-throw-if-not-resolved="false"></xref>, <xref href="Microsoft.CodeAnalysis.CSharp.SyntaxKind.FileKeyword" data-throw-if-not-resolved="false"></xref></li></ul>
+    <ul><li>
+                Access modifiers: <xref href="Microsoft.CodeAnalysis.CSharp.SyntaxKind.PublicKeyword" data-throw-if-not-resolved="false"></xref>,
+                <xref href="Microsoft.CodeAnalysis.CSharp.SyntaxKind.PrivateKeyword" data-throw-if-not-resolved="false"></xref>, <xref href="Microsoft.CodeAnalysis.CSharp.SyntaxKind.ProtectedKeyword" data-throw-if-not-resolved="false"></xref>,
+                <xref href="Microsoft.CodeAnalysis.CSharp.SyntaxKind.InternalKeyword" data-throw-if-not-resolved="false"></xref>
+            </li><li>
+                Member modifiers: <xref href="Microsoft.CodeAnalysis.CSharp.SyntaxKind.StaticKeyword" data-throw-if-not-resolved="false"></xref>,
+                <xref href="Microsoft.CodeAnalysis.CSharp.SyntaxKind.ReadOnlyKeyword" data-throw-if-not-resolved="false"></xref>, <xref href="Microsoft.CodeAnalysis.CSharp.SyntaxKind.ConstKeyword" data-throw-if-not-resolved="false"></xref>,
+                <xref href="Microsoft.CodeAnalysis.CSharp.SyntaxKind.VolatileKeyword" data-throw-if-not-resolved="false"></xref>
+            </li><li>
+                Inheritance modifiers: <xref href="Microsoft.CodeAnalysis.CSharp.SyntaxKind.AbstractKeyword" data-throw-if-not-resolved="false"></xref>,
+                <xref href="Microsoft.CodeAnalysis.CSharp.SyntaxKind.VirtualKeyword" data-throw-if-not-resolved="false"></xref>, <xref href="Microsoft.CodeAnalysis.CSharp.SyntaxKind.OverrideKeyword" data-throw-if-not-resolved="false"></xref>,
+                <xref href="Microsoft.CodeAnalysis.CSharp.SyntaxKind.SealedKeyword" data-throw-if-not-resolved="false"></xref>, <xref href="Microsoft.CodeAnalysis.CSharp.SyntaxKind.NewKeyword" data-throw-if-not-resolved="false"></xref>
+            </li><li>
+                Async/unsafe: <xref href="Microsoft.CodeAnalysis.CSharp.SyntaxKind.AsyncKeyword" data-throw-if-not-resolved="false"></xref>, <xref href="Microsoft.CodeAnalysis.CSharp.SyntaxKind.UnsafeKeyword" data-throw-if-not-resolved="false"></xref>
+            </li><li>
+                Type modifiers: <xref href="Microsoft.CodeAnalysis.CSharp.SyntaxKind.PartialKeyword" data-throw-if-not-resolved="false"></xref>,
+                <xref href="Microsoft.CodeAnalysis.CSharp.SyntaxKind.FileKeyword" data-throw-if-not-resolved="false"></xref>
+            </li></ul>
   example:
   - >-
     <pre><code class="lang-csharp">// Check for async methods in an analyzer
@@ -252,7 +269,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsPartial
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SyntaxExtensions.cs
-    startLine: 149
+    startLine: 203
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -298,7 +315,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsPrimaryConstructorType
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SyntaxExtensions.cs
-    startLine: 172
+    startLine: 241
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -310,7 +327,13 @@ items:
         declared by adding a parameter list directly after the type name.
     </p>
 
-    <ul><li>Applies to <xref href="Microsoft.CodeAnalysis.CSharp.Syntax.ClassDeclarationSyntax" data-throw-if-not-resolved="false"></xref>, <xref href="Microsoft.CodeAnalysis.CSharp.Syntax.StructDeclarationSyntax" data-throw-if-not-resolved="false"></xref>, and <xref href="Microsoft.CodeAnalysis.CSharp.Syntax.RecordDeclarationSyntax" data-throw-if-not-resolved="false"></xref></li><li>Returns <code>true</code> only if the type has a non-null <xref href="Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax.ParameterList" data-throw-if-not-resolved="false"></xref></li><li>Does not apply to interfaces or other type declarations</li></ul>
+    <ul><li>
+                Applies to <xref href="Microsoft.CodeAnalysis.CSharp.Syntax.ClassDeclarationSyntax" data-throw-if-not-resolved="false"></xref>, <xref href="Microsoft.CodeAnalysis.CSharp.Syntax.StructDeclarationSyntax" data-throw-if-not-resolved="false"></xref>, and
+                <xref href="Microsoft.CodeAnalysis.CSharp.Syntax.RecordDeclarationSyntax" data-throw-if-not-resolved="false"></xref>
+            </li><li>
+                Returns <code>true</code> only if the type has a non-null
+                <xref href="Microsoft.CodeAnalysis.CSharp.Syntax.TypeDeclarationSyntax.ParameterList" data-throw-if-not-resolved="false"></xref>
+            </li><li>Does not apply to interfaces or other type declarations</li></ul>
   example: []
   syntax:
     content: public static bool IsPrimaryConstructorType(this TypeDeclarationSyntax type)
@@ -348,7 +371,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: GetNameLocation
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SyntaxExtensions.cs
-    startLine: 190
+    startLine: 261
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -392,7 +415,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: GetNameLocation
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SyntaxExtensions.cs
-    startLine: 206
+    startLine: 280
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities

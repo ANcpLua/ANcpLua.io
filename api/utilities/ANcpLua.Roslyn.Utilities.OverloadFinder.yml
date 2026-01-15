@@ -31,18 +31,15 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: OverloadFinder
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OverloadFinder.cs
-    startLine: 24
+    startLine: 32
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
   summary: Provides utilities for finding method overloads in a compilation.
   remarks: >-
     <p>
-
-    This class enables analyzers and source generators to discover method overloads
-
-    based on various criteria such as parameter types, return types, and parameter counts.
-
+        This class enables analyzers and source generators to discover method overloads
+        based on various criteria such as parameter types, return types, and parameter counts.
     </p>
 
     <ul><li>Searches for overloads within the same containing type.</li><li>Supports filtering out obsolete methods via the <code>includeObsolete</code> parameter.</li><li>Handles single and multiple additional parameter type searches.</li><li>Provides both existence checks and overload retrieval methods.</li></ul>
@@ -85,18 +82,15 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: .ctor
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OverloadFinder.cs
-    startLine: 24
+    startLine: 32
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
   summary: Provides utilities for finding method overloads in a compilation.
   remarks: >-
     <p>
-
-    This class enables analyzers and source generators to discover method overloads
-
-    based on various criteria such as parameter types, return types, and parameter counts.
-
+        This class enables analyzers and source generators to discover method overloads
+        based on various criteria such as parameter types, return types, and parameter counts.
     </p>
 
     <ul><li>Searches for overloads within the same containing type.</li><li>Supports filtering out obsolete methods via the <code>includeObsolete</code> parameter.</li><li>Handles single and multiple additional parameter type searches.</li><li>Provides both existence checks and overload retrieval methods.</li></ul>
@@ -135,11 +129,14 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: HasOverloadWithParameter
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OverloadFinder.cs
-    startLine: 46
+    startLine: 55
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
-  summary: Determines whether an overload of the specified method exists that includes an additional parameter of the given type.
+  summary: >-
+    Determines whether an overload of the specified method exists that includes an additional parameter of the given
+
+    type.
   example: []
   syntax:
     content: public bool HasOverloadWithParameter(IMethodSymbol method, ITypeSymbol additionalParamType, bool includeObsolete = false)
@@ -185,11 +182,14 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: HasOverloadWithParameter
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OverloadFinder.cs
-    startLine: 63
+    startLine: 75
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
-  summary: Determines whether an overload of the target method of the specified invocation exists that includes an additional parameter of the given type.
+  summary: >-
+    Determines whether an overload of the target method of the specified invocation exists that includes an additional
+
+    parameter of the given type.
   example: []
   syntax:
     content: public bool HasOverloadWithParameter(IInvocationOperation operation, ITypeSymbol additionalParamType, bool includeObsolete = false)
@@ -235,11 +235,14 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: HasOverloadWithParameters
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OverloadFinder.cs
-    startLine: 80
+    startLine: 95
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
-  summary: Determines whether an overload of the specified method exists that includes all of the specified additional parameter types.
+  summary: >-
+    Determines whether an overload of the specified method exists that includes all of the specified additional
+
+    parameter types.
   example: []
   syntax:
     content: public bool HasOverloadWithParameters(IMethodSymbol method, ReadOnlySpan<ITypeSymbol> additionalParamTypes, bool includeObsolete = false)
@@ -285,11 +288,14 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: HasOverloadWithParameters
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OverloadFinder.cs
-    startLine: 97
+    startLine: 115
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
-  summary: Determines whether an overload of the target method of the specified invocation exists that includes all of the specified additional parameter types.
+  summary: >-
+    Determines whether an overload of the target method of the specified invocation exists that includes all of the
+
+    specified additional parameter types.
   example: []
   syntax:
     content: public bool HasOverloadWithParameters(IInvocationOperation operation, ReadOnlySpan<ITypeSymbol> additionalParamTypes, bool includeObsolete = false)
@@ -335,7 +341,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: FindOverloadWithParameter
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OverloadFinder.cs
-    startLine: 118
+    startLine: 138
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -389,7 +395,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: FindOverloadWithParameters
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OverloadFinder.cs
-    startLine: 160
+    startLine: 178
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -443,7 +449,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: FindOverload
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OverloadFinder.cs
-    startLine: 201
+    startLine: 217
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -493,7 +499,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: FindAllOverloads
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OverloadFinder.cs
-    startLine: 235
+    startLine: 251
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -540,7 +546,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: HasOverloadWithReturnType
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OverloadFinder.cs
-    startLine: 265
+    startLine: 281
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -587,7 +593,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: HasOverloadWithFewerParameters
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OverloadFinder.cs
-    startLine: 288
+    startLine: 302
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -634,7 +640,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: HasOverloadWithMoreParameters
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OverloadFinder.cs
-    startLine: 311
+    startLine: 323
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities

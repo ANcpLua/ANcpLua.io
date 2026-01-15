@@ -24,7 +24,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: LanguageVersionExtensions
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/LanguageVersionExtensions.cs
-    startLine: 19
+    startLine: 28
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -35,7 +35,10 @@ items:
         version being used in a compilation, enabling feature-gated code generation.
     </p>
 
-    <ul><li>Uses numeric comparison against internal language version values for forward compatibility.</li><li>Each method returns <code>true</code> if the version is at least the specified version or higher.</li><li>Works with both explicit versions and <xref href="Microsoft.CodeAnalysis.CSharp.LanguageVersion.Latest" data-throw-if-not-resolved="false"></xref> / <xref href="Microsoft.CodeAnalysis.CSharp.LanguageVersion.Preview" data-throw-if-not-resolved="false"></xref>.</li></ul>
+    <ul><li>Uses numeric comparison against internal language version values for forward compatibility.</li><li>Each method returns <code>true</code> if the version is at least the specified version or higher.</li><li>
+                Works with both explicit versions and <xref href="Microsoft.CodeAnalysis.CSharp.LanguageVersion.Latest" data-throw-if-not-resolved="false"></xref> /
+                <xref href="Microsoft.CodeAnalysis.CSharp.LanguageVersion.Preview" data-throw-if-not-resolved="false"></xref>.
+            </li></ul>
   example: []
   syntax:
     content: public static class LanguageVersionExtensions
@@ -69,7 +72,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsCSharp10OrAbove
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/LanguageVersionExtensions.cs
-    startLine: 38
+    startLine: 47
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -114,7 +117,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsCSharp11OrAbove
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/LanguageVersionExtensions.cs
-    startLine: 54
+    startLine: 65
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -159,7 +162,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsCSharp12OrAbove
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/LanguageVersionExtensions.cs
-    startLine: 70
+    startLine: 83
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -204,7 +207,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsCSharp13OrAbove
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/LanguageVersionExtensions.cs
-    startLine: 86
+    startLine: 101
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -249,7 +252,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsCSharp14OrAbove
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/LanguageVersionExtensions.cs
-    startLine: 101
+    startLine: 118
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities

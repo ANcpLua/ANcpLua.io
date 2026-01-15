@@ -66,7 +66,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: MethodPatternBuilder
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/MethodPattern.cs
-    startLine: 42
+    startLine: 82
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -76,14 +76,35 @@ items:
     that match <xref href="Microsoft.CodeAnalysis.IMethodSymbol" data-throw-if-not-resolved="false"></xref> based on various criteria.
   remarks: >-
     <p>
-
-    The builder accumulates predicates that are combined with logical AND semantics.
-
-    All specified conditions must be satisfied for a method to match the resulting pattern.
-
+        The builder accumulates predicates that are combined with logical AND semantics.
+        All specified conditions must be satisfied for a method to match the resulting pattern.
     </p>
 
-    <ul><li>Name matching: <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.Named(System.String)" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.NameStartsWith(System.String)" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.NameEndsWith(System.String)" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.NameMatches(System.Func%7bSystem.String%2cSystem.Boolean%7d)" data-throw-if-not-resolved="false"></xref></li><li>Modifiers: <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.Static" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.Instance" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.Async" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.Virtual" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.Abstract" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.Sealed" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.Override" data-throw-if-not-resolved="false"></xref></li><li>Accessibility: <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.Public" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.Private" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.Protected" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.Internal" data-throw-if-not-resolved="false"></xref></li><li>Return types: <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.ReturnsVoid" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.Returns(Microsoft.CodeAnalysis.ITypeSymbol)" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.ReturnsString" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.ReturnsBool" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.ReturnsInt" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.ReturnsTask" data-throw-if-not-resolved="false"></xref></li><li>Parameters: <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.NoParameters" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.ParameterCount(System.Int32)" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.WithParameter(System.Func%7bMicrosoft.CodeAnalysis.IParameterSymbol%2cSystem.Boolean%7d)" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.WithCancellationToken" data-throw-if-not-resolved="false"></xref></li><li>Type parameters: <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.NoTypeParameters" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.TypeParameterCount(System.Int32)" data-throw-if-not-resolved="false"></xref></li><li>Method kind: <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.IsExtensionMethod" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.IsConstructor" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.IsOrdinaryMethod" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.IsOperator" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.IsPropertyAccessor" data-throw-if-not-resolved="false"></xref></li><li>Context: <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.InType(System.Func%7bMicrosoft.CodeAnalysis.INamedTypeSymbol%2cSystem.Boolean%7d)" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.InNamespace(System.String)" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.HasAttribute(System.String)" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.ImplementsInterface" data-throw-if-not-resolved="false"></xref></li></ul>
+    <ul><li>
+                Name matching: <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.Named(System.String)" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.NameStartsWith(System.String)" data-throw-if-not-resolved="false"></xref>,
+                <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.NameEndsWith(System.String)" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.NameMatches(System.Func%7bSystem.String%2cSystem.Boolean%7d)" data-throw-if-not-resolved="false"></xref>
+            </li><li>
+                Modifiers: <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.Static" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.Instance" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.Async" data-throw-if-not-resolved="false"></xref>,
+                <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.Virtual" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.Abstract" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.Sealed" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.Override" data-throw-if-not-resolved="false"></xref>
+            </li><li>
+                Accessibility: <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.Public" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.Private" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.Protected" data-throw-if-not-resolved="false"></xref>,
+                <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.Internal" data-throw-if-not-resolved="false"></xref>
+            </li><li>
+                Return types: <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.ReturnsVoid" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.Returns(Microsoft.CodeAnalysis.ITypeSymbol)" data-throw-if-not-resolved="false"></xref>,
+                <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.ReturnsString" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.ReturnsBool" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.ReturnsInt" data-throw-if-not-resolved="false"></xref>,
+                <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.ReturnsTask" data-throw-if-not-resolved="false"></xref>
+            </li><li>
+                Parameters: <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.NoParameters" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.ParameterCount(System.Int32)" data-throw-if-not-resolved="false"></xref>,
+                <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.WithParameter(System.Func%7bMicrosoft.CodeAnalysis.IParameterSymbol%2cSystem.Boolean%7d)" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.WithCancellationToken" data-throw-if-not-resolved="false"></xref>
+            </li><li>
+                Type parameters: <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.NoTypeParameters" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.TypeParameterCount(System.Int32)" data-throw-if-not-resolved="false"></xref>
+            </li><li>
+                Method kind: <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.IsExtensionMethod" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.IsConstructor" data-throw-if-not-resolved="false"></xref>,
+                <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.IsOrdinaryMethod" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.IsOperator" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.IsPropertyAccessor" data-throw-if-not-resolved="false"></xref>
+            </li><li>
+                Context: <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.InType(System.Func%7bMicrosoft.CodeAnalysis.INamedTypeSymbol%2cSystem.Boolean%7d)" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.InNamespace(System.String)" data-throw-if-not-resolved="false"></xref>,
+                <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.HasAttribute(System.String)" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.Patterns.MethodPatternBuilder.ImplementsInterface" data-throw-if-not-resolved="false"></xref>
+            </li></ul>
   example:
   - >-
     <pre><code class="lang-csharp">var asyncPublicMethod = new MethodPatternBuilder()
@@ -136,7 +157,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Named
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/MethodPattern.cs
-    startLine: 58
+    startLine: 98
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -181,7 +202,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: NameStartsWith
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/MethodPattern.cs
-    startLine: 74
+    startLine: 114
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -225,7 +246,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: NameEndsWith
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/MethodPattern.cs
-    startLine: 90
+    startLine: 130
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -269,7 +290,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: NameMatches
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/MethodPattern.cs
-    startLine: 102
+    startLine: 142
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -310,7 +331,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Static
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/MethodPattern.cs
-    startLine: 113
+    startLine: 153
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -344,7 +365,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Instance
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/MethodPattern.cs
-    startLine: 124
+    startLine: 164
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -378,7 +399,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Async
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/MethodPattern.cs
-    startLine: 136
+    startLine: 176
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -414,7 +435,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: NotAsync
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/MethodPattern.cs
-    startLine: 147
+    startLine: 187
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -448,7 +469,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Virtual
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/MethodPattern.cs
-    startLine: 160
+    startLine: 200
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -486,7 +507,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Override
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/MethodPattern.cs
-    startLine: 172
+    startLine: 212
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -522,7 +543,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Abstract
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/MethodPattern.cs
-    startLine: 184
+    startLine: 224
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -558,7 +579,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Sealed
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/MethodPattern.cs
-    startLine: 196
+    startLine: 236
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -594,7 +615,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Public
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/MethodPattern.cs
-    startLine: 209
+    startLine: 249
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -632,7 +653,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Private
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/MethodPattern.cs
-    startLine: 222
+    startLine: 262
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -670,7 +691,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Protected
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/MethodPattern.cs
-    startLine: 235
+    startLine: 275
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -708,7 +729,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Internal
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/MethodPattern.cs
-    startLine: 248
+    startLine: 288
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -746,7 +767,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: ReturnsVoid
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/MethodPattern.cs
-    startLine: 260
+    startLine: 300
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -782,7 +803,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Returns
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/MethodPattern.cs
-    startLine: 273
+    startLine: 313
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -822,7 +843,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Returns
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/MethodPattern.cs
-    startLine: 285
+    startLine: 325
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -863,7 +884,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: ReturnsString
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/MethodPattern.cs
-    startLine: 297
+    startLine: 337
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -899,7 +920,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: ReturnsBool
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/MethodPattern.cs
-    startLine: 309
+    startLine: 349
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -935,7 +956,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: ReturnsInt
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/MethodPattern.cs
-    startLine: 321
+    startLine: 361
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -971,7 +992,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: ReturnsTask
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/MethodPattern.cs
-    startLine: 337
+    startLine: 377
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -1011,7 +1032,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: NoParameters
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/MethodPattern.cs
-    startLine: 349
+    startLine: 389
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -1047,7 +1068,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: ParameterCount
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/MethodPattern.cs
-    startLine: 362
+    startLine: 402
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -1090,7 +1111,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: ParameterCountAtLeast
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/MethodPattern.cs
-    startLine: 375
+    startLine: 415
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -1133,11 +1154,14 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: WithParameter
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/MethodPattern.cs
-    startLine: 388
+    startLine: 429
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
-  summary: Adds a predicate requiring the method to have at least one parameter matching the specified <code class="paramref">predicate</code>.
+  summary: >-
+    Adds a predicate requiring the method to have at least one parameter matching the specified
+
+    <code class="paramref">predicate</code>.
   example: []
   syntax:
     content: public MethodPatternBuilder WithParameter(Func<IParameterSymbol, bool> predicate)
@@ -1176,11 +1200,14 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: WithParameter
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/MethodPattern.cs
-    startLine: 404
+    startLine: 446
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
-  summary: Adds a predicate requiring the parameter at the specified <code class="paramref">index</code> to match the specified <code class="paramref">predicate</code>.
+  summary: >-
+    Adds a predicate requiring the parameter at the specified <code class="paramref">index</code> to match the specified
+
+    <code class="paramref">predicate</code>.
   remarks: If the method has fewer parameters than <code class="paramref">index</code> + 1, the predicate will not match.
   example: []
   syntax:
@@ -1221,7 +1248,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: WithParameterOfType
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/MethodPattern.cs
-    startLine: 417
+    startLine: 459
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -1261,11 +1288,14 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: WithCancellationToken
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/MethodPattern.cs
-    startLine: 430
+    startLine: 473
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
-  summary: Adds a predicate requiring the method to have at least one <xref href="System.Threading.CancellationToken" data-throw-if-not-resolved="false"></xref> parameter.
+  summary: >-
+    Adds a predicate requiring the method to have at least one <xref href="System.Threading.CancellationToken" data-throw-if-not-resolved="false"></xref>
+
+    parameter.
   example: []
   syntax:
     content: public MethodPatternBuilder WithCancellationToken()
@@ -1299,7 +1329,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: NoTypeParameters
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/MethodPattern.cs
-    startLine: 442
+    startLine: 485
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -1333,7 +1363,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: TypeParameterCount
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/MethodPattern.cs
-    startLine: 454
+    startLine: 497
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -1374,7 +1404,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsExtensionMethod
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/MethodPattern.cs
-    startLine: 466
+    startLine: 509
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -1410,7 +1440,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsNotExtensionMethod
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/MethodPattern.cs
-    startLine: 477
+    startLine: 520
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -1444,7 +1474,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsConstructor
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/MethodPattern.cs
-    startLine: 490
+    startLine: 533
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -1482,7 +1512,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsOrdinaryMethod
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/MethodPattern.cs
-    startLine: 503
+    startLine: 546
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -1520,7 +1550,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsOperator
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/MethodPattern.cs
-    startLine: 516
+    startLine: 559
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -1558,7 +1588,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsPropertyAccessor
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/MethodPattern.cs
-    startLine: 529
+    startLine: 572
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -1596,7 +1626,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: HasAttribute
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/MethodPattern.cs
-    startLine: 541
+    startLine: 584
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -1634,7 +1664,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: HasAttribute
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/MethodPattern.cs
-    startLine: 553
+    startLine: 596
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -1675,7 +1705,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: InType
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/MethodPattern.cs
-    startLine: 566
+    startLine: 609
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -1718,7 +1748,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: InType
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/MethodPattern.cs
-    startLine: 579
+    startLine: 622
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -1761,7 +1791,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: InNamespace
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/MethodPattern.cs
-    startLine: 591
+    startLine: 634
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -1802,7 +1832,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: ImplementsInterface
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/MethodPattern.cs
-    startLine: 605
+    startLine: 648
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -1837,7 +1867,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Where
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/MethodPattern.cs
-    startLine: 620
+    startLine: 663
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -1876,7 +1906,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Build
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/MethodPattern.cs
-    startLine: 636
+    startLine: 679
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -1911,7 +1941,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: op_Implicit
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/MethodPattern.cs
-    startLine: 657
+    startLine: 698
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns

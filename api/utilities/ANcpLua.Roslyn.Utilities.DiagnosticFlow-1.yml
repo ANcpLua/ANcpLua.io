@@ -40,7 +40,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: DiagnosticFlow
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/DiagnosticFlow.cs
-    startLine: 31
+    startLine: 33
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -52,8 +52,11 @@ items:
         enabling error handling without exceptions while preserving all warnings and errors.
     </p>
   remarks: >-
-    <ul><li><b>Immutable.</b> All operations return new instances; the original flow is never modified.</li><li><b>Short-circuiting.</b> Once failed, subsequent <xref href="ANcpLua.Roslyn.Utilities.DiagnosticFlow%601.Then%60%601(System.Func%7b%600%2cANcpLua.Roslyn.Utilities.DiagnosticFlow%7b%60%600%7d%7d)" data-throw-if-not-resolved="false"></xref> and <xref href="ANcpLua.Roslyn.Utilities.DiagnosticFlow%601.Select%60%601(System.Func%7b%600%2c%60%600%7d)" data-throw-if-not-resolved="false"></xref>
-            operations preserve existing diagnostics without invoking transformations.</li><li><b>Equatable.</b> Implements value equality for incremental generator caching.</li></ul>
+    <ul><li><b>Immutable.</b> All operations return new instances; the original flow is never modified.</li><li>
+                <b>Short-circuiting.</b> Once failed, subsequent <xref href="ANcpLua.Roslyn.Utilities.DiagnosticFlow%601.Then%60%601(System.Func%7b%600%2cANcpLua.Roslyn.Utilities.DiagnosticFlow%7b%60%600%7d%7d)" data-throw-if-not-resolved="false"></xref> and
+                <xref href="ANcpLua.Roslyn.Utilities.DiagnosticFlow%601.Select%60%601(System.Func%7b%600%2c%60%600%7d)" data-throw-if-not-resolved="false"></xref>
+                operations preserve existing diagnostics without invoking transformations.
+            </li><li><b>Equatable.</b> Implements value equality for incremental generator caching.</li></ul>
   example: []
   syntax:
     content: 'public readonly struct DiagnosticFlow<T> : IEquatable<DiagnosticFlow<T>>'
@@ -100,7 +103,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Value
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/DiagnosticFlow.cs
-    startLine: 38
+    startLine: 40
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -133,7 +136,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Diagnostics
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/DiagnosticFlow.cs
-    startLine: 41
+    startLine: 43
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -166,7 +169,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: HasErrors
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/DiagnosticFlow.cs
-    startLine: 47
+    startLine: 49
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -321,7 +324,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Select
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/DiagnosticFlow.cs
-    startLine: 111
+    startLine: 112
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -371,7 +374,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Warn
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/DiagnosticFlow.cs
-    startLine: 126
+    startLine: 127
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -413,7 +416,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: WarnIf
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/DiagnosticFlow.cs
-    startLine: 137
+    startLine: 140
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -459,7 +462,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Error
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/DiagnosticFlow.cs
-    startLine: 151
+    startLine: 154
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -501,7 +504,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: ErrorIf
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/DiagnosticFlow.cs
-    startLine: 162
+    startLine: 167
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -547,7 +550,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Where
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/DiagnosticFlow.cs
-    startLine: 175
+    startLine: 180
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -588,7 +591,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Do
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/DiagnosticFlow.cs
-    startLine: 188
+    startLine: 193
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -626,7 +629,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: ValueOrDefault
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/DiagnosticFlow.cs
-    startLine: 200
+    startLine: 205
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -664,7 +667,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Match
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/DiagnosticFlow.cs
-    startLine: 210
+    startLine: 217
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -708,7 +711,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: op_Implicit
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/DiagnosticFlow.cs
-    startLine: 224
+    startLine: 231
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -746,7 +749,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Equals
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/DiagnosticFlow.cs
-    startLine: 227
+    startLine: 237
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -783,7 +786,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Equals
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/DiagnosticFlow.cs
-    startLine: 232
+    startLine: 244
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -819,7 +822,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: GetHashCode
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/DiagnosticFlow.cs
-    startLine: 236
+    startLine: 250
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -851,7 +854,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: op_Equality
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/DiagnosticFlow.cs
-    startLine: 239
+    startLine: 256
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -889,7 +892,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: op_Inequality
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/DiagnosticFlow.cs
-    startLine: 242
+    startLine: 262
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities

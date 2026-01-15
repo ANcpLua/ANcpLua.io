@@ -24,21 +24,21 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: EqualityExtensions
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/HashCombiner.cs
-    startLine: 244
+    startLine: 274
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
   summary: Provides extension methods for equality comparisons and hash code generation on collections.
   remarks: >-
     <p>
-
-    This class contains helper methods for working with <xref href="ANcpLua.Roslyn.Utilities.EquatableArray%601" data-throw-if-not-resolved="false"></xref> and
-
-    <xref href="System.Collections.Immutable.ImmutableArray%601" data-throw-if-not-resolved="false"></xref>, providing value-based equality semantics for collections.
-
+        This class contains helper methods for working with <xref href="ANcpLua.Roslyn.Utilities.EquatableArray%601" data-throw-if-not-resolved="false"></xref> and
+        <xref href="System.Collections.Immutable.ImmutableArray%601" data-throw-if-not-resolved="false"></xref>, providing value-based equality semantics for collections.
     </p>
 
-    <ul><li>Use <xref href="ANcpLua.Roslyn.Utilities.EqualityExtensions.ToEquatableArray%60%601(System.Collections.Generic.IEnumerable%7b%60%600%7d)" data-throw-if-not-resolved="false"></xref> to wrap sequences for value equality.</li><li>Use <xref href="ANcpLua.Roslyn.Utilities.EqualityExtensions.SequenceEquals%60%601(System.Collections.Immutable.ImmutableArray%7b%60%600%7d%2cSystem.Collections.Immutable.ImmutableArray%7b%60%600%7d)" data-throw-if-not-resolved="false"></xref> for element-wise comparison.</li><li>Use <xref href="ANcpLua.Roslyn.Utilities.EqualityExtensions.GetSequenceHashCode%60%601(System.Collections.Immutable.ImmutableArray%7b%60%600%7d)" data-throw-if-not-resolved="false"></xref> to compute a hash over all elements.</li></ul>
+    <ul><li>Use <xref href="ANcpLua.Roslyn.Utilities.EqualityExtensions.ToEquatableArray%60%601(System.Collections.Generic.IEnumerable%7b%60%600%7d)" data-throw-if-not-resolved="false"></xref> to wrap sequences for value equality.</li><li>
+                Use <xref href="ANcpLua.Roslyn.Utilities.EqualityExtensions.SequenceEquals%60%601(System.Collections.Immutable.ImmutableArray%7b%60%600%7d%2cSystem.Collections.Immutable.ImmutableArray%7b%60%600%7d)" data-throw-if-not-resolved="false"></xref> for element-wise
+                comparison.
+            </li><li>Use <xref href="ANcpLua.Roslyn.Utilities.EqualityExtensions.GetSequenceHashCode%60%601(System.Collections.Immutable.ImmutableArray%7b%60%600%7d)" data-throw-if-not-resolved="false"></xref> to compute a hash over all elements.</li></ul>
   example: []
   syntax:
     content: public static class EqualityExtensions
@@ -77,18 +77,15 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: ToEquatableArray
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/HashCombiner.cs
-    startLine: 264
+    startLine: 294
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
   summary: Converts an enumerable sequence to an <xref href="ANcpLua.Roslyn.Utilities.EquatableArray%601" data-throw-if-not-resolved="false"></xref> for value-based equality.
   remarks: >-
     <p>
-
-    This method materializes the sequence into an immutable array, then wraps it for value equality.
-
-    Use this when you need to cache or compare collections in incremental source generators.
-
+        This method materializes the sequence into an immutable array, then wraps it for value equality.
+        Use this when you need to cache or compare collections in incremental source generators.
     </p>
   example: []
   syntax:
@@ -132,20 +129,16 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: ToEquatableArray
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/HashCombiner.cs
-    startLine: 282
+    startLine: 314
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
   summary: Converts an immutable array to an <xref href="ANcpLua.Roslyn.Utilities.EquatableArray%601" data-throw-if-not-resolved="false"></xref> for value-based equality.
   remarks: >-
     <p>
-
-    This is a zero-allocation wrapper that provides value equality semantics for the underlying
-
-    immutable array. The original array is preserved and can be retrieved via
-
-    <xref href="ANcpLua.Roslyn.Utilities.EquatableArray%601.AsImmutableArray" data-throw-if-not-resolved="false"></xref>.
-
+        This is a zero-allocation wrapper that provides value equality semantics for the underlying
+        immutable array. The original array is preserved and can be retrieved via
+        <xref href="ANcpLua.Roslyn.Utilities.EquatableArray%601.AsImmutableArray" data-throw-if-not-resolved="false"></xref>.
     </p>
   example: []
   syntax:
@@ -189,18 +182,15 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: SequenceEquals
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/HashCombiner.cs
-    startLine: 302
+    startLine: 336
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
   summary: Compares two immutable arrays for sequence equality using the default equality comparer.
   remarks: >-
     <p>
-
-    Default (uninitialized) and empty arrays are treated as equivalent. This follows the
-
-    null-equals-empty pattern commonly used in Roslyn source generators.
-
+        Default (uninitialized) and empty arrays are treated as equivalent. This follows the
+        null-equals-empty pattern commonly used in Roslyn source generators.
     </p>
   example: []
   syntax:
@@ -247,18 +237,15 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: SequenceEquals
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/HashCombiner.cs
-    startLine: 344
+    startLine: 376
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
   summary: Compares two immutable arrays for sequence equality using a custom equality comparer.
   remarks: >-
     <p>
-
-    Default (uninitialized) and empty arrays are treated as equivalent. This follows the
-
-    null-equals-empty pattern commonly used in Roslyn source generators.
-
+        Default (uninitialized) and empty arrays are treated as equivalent. This follows the
+        null-equals-empty pattern commonly used in Roslyn source generators.
     </p>
   example: []
   syntax:
@@ -311,20 +298,16 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: GetSequenceHashCode
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/HashCombiner.cs
-    startLine: 384
+    startLine: 415
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
   summary: Computes a hash code for the sequence of elements in an immutable array.
   remarks: >-
     <p>
-
-    The hash code is order-dependent: arrays with the same elements in different orders
-
-    will produce different hash codes. Default and empty arrays both return 0, consistent
-
-    with their treatment as equivalent in <xref href="ANcpLua.Roslyn.Utilities.EqualityExtensions.SequenceEquals%60%601(System.Collections.Immutable.ImmutableArray%7b%60%600%7d%2cSystem.Collections.Immutable.ImmutableArray%7b%60%600%7d)" data-throw-if-not-resolved="false"></xref>.
-
+        The hash code is order-dependent: arrays with the same elements in different orders
+        will produce different hash codes. Default and empty arrays both return 0, consistent
+        with their treatment as equivalent in <xref href="ANcpLua.Roslyn.Utilities.EqualityExtensions.SequenceEquals%60%601(System.Collections.Immutable.ImmutableArray%7b%60%600%7d%2cSystem.Collections.Immutable.ImmutableArray%7b%60%600%7d)" data-throw-if-not-resolved="false"></xref>.
     </p>
   example: []
   syntax:

@@ -21,7 +21,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IndentScope
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/CodeGeneration.cs
-    startLine: 451
+    startLine: 487
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -29,11 +29,8 @@ items:
     A disposable struct that automatically closes a code block when disposed.
 
     <p>
-
-    This struct is designed to be used with <code>using</code> statements to ensure
-
-    proper block closure in <xref href="ANcpLua.Roslyn.Utilities.IndentedStringBuilder" data-throw-if-not-resolved="false"></xref>.
-
+        This struct is designed to be used with <code>using</code> statements to ensure
+        proper block closure in <xref href="ANcpLua.Roslyn.Utilities.IndentedStringBuilder" data-throw-if-not-resolved="false"></xref>.
     </p>
   remarks: <ul><li>Created by <xref href="ANcpLua.Roslyn.Utilities.IndentedStringBuilder.BeginBlock(System.String)" data-throw-if-not-resolved="false"></xref> and related methods.</li><li>Calls <xref href="ANcpLua.Roslyn.Utilities.IndentedStringBuilder.EndBlock(System.String)" data-throw-if-not-resolved="false"></xref> when disposed.</li><li>Implemented as a <code>readonly struct</code> for zero-allocation usage.</li></ul>
   example: []
@@ -73,7 +70,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: .ctor
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/CodeGeneration.cs
-    startLine: 463
+    startLine: 499
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -108,7 +105,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Dispose
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/CodeGeneration.cs
-    startLine: 471
+    startLine: 507
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities

@@ -26,7 +26,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: SpanExtensions
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/EnumerableExtensions.cs
-    startLine: 723
+    startLine: 742
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -74,7 +74,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: MinBy
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/EnumerableExtensions.cs
-    startLine: 739
+    startLine: 761
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -93,7 +93,10 @@ items:
     - id: T
       description: The type of the elements in the span.
     - id: TKey
-      description: The type of the key returned by <code class="paramref">selector</code>, which must implement <xref href="System.IComparable%601" data-throw-if-not-resolved="false"></xref>.
+      description: >-
+        The type of the key returned by <code class="paramref">selector</code>, which must implement
+
+        <xref href="System.IComparable%601" data-throw-if-not-resolved="false"></xref>.
     return:
       type: '{T}'
       description: The element with the minimum key value.
@@ -128,7 +131,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: MaxBy
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/EnumerableExtensions.cs
-    startLine: 771
+    startLine: 796
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -147,7 +150,10 @@ items:
     - id: T
       description: The type of the elements in the span.
     - id: TKey
-      description: The type of the key returned by <code class="paramref">selector</code>, which must implement <xref href="System.IComparable%601" data-throw-if-not-resolved="false"></xref>.
+      description: >-
+        The type of the key returned by <code class="paramref">selector</code>, which must implement
+
+        <xref href="System.IComparable%601" data-throw-if-not-resolved="false"></xref>.
     return:
       type: '{T}'
       description: The element with the maximum key value.
@@ -182,7 +188,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IndexOf
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/EnumerableExtensions.cs
-    startLine: 804
+    startLine: 829
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -233,7 +239,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Any
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/EnumerableExtensions.cs
-    startLine: 826
+    startLine: 849
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -284,7 +290,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: All
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/EnumerableExtensions.cs
-    startLine: 848
+    startLine: 869
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -335,7 +341,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Count
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/EnumerableExtensions.cs
-    startLine: 869
+    startLine: 888
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -383,7 +389,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: FirstOrDefault
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/EnumerableExtensions.cs
-    startLine: 893
+    startLine: 910
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities

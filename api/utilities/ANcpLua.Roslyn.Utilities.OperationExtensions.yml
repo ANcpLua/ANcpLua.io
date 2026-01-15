@@ -51,23 +51,34 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: OperationExtensions
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
-    startLine: 27
+    startLine: 52
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
   summary: Provides extension methods for working with <xref href="Microsoft.CodeAnalysis.IOperation" data-throw-if-not-resolved="false"></xref> instances.
   remarks: >-
     <p>
-
-    This class provides utilities for navigating, analyzing, and querying the operation tree
-
-    in Roslyn analyzers. Operations represent the semantic interpretation of syntax nodes
-
-    and provide a language-agnostic way to analyze code behavior.
-
+        This class provides utilities for navigating, analyzing, and querying the operation tree
+        in Roslyn analyzers. Operations represent the semantic interpretation of syntax nodes
+        and provide a language-agnostic way to analyze code behavior.
     </p>
 
-    <ul><li>Tree navigation: <xref href="ANcpLua.Roslyn.Utilities.OperationExtensions.Ancestors(Microsoft.CodeAnalysis.IOperation)" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.OperationExtensions.Descendants(Microsoft.CodeAnalysis.IOperation)" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.OperationExtensions.FindAncestor%60%601(Microsoft.CodeAnalysis.IOperation)" data-throw-if-not-resolved="false"></xref></li><li>Context detection: <xref href="ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideLoop(Microsoft.CodeAnalysis.IOperation)" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideTryBlock(Microsoft.CodeAnalysis.IOperation)" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.OperationExtensions.IsInExpressionTree(Microsoft.CodeAnalysis.IOperation%2cMicrosoft.CodeAnalysis.INamedTypeSymbol)" data-throw-if-not-resolved="false"></xref></li><li>Unwrapping: <xref href="ANcpLua.Roslyn.Utilities.OperationExtensions.UnwrapImplicitConversions(Microsoft.CodeAnalysis.IOperation)" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.OperationExtensions.UnwrapAllConversions(Microsoft.CodeAnalysis.IOperation)" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.OperationExtensions.UnwrapParenthesized(Microsoft.CodeAnalysis.IOperation)" data-throw-if-not-resolved="false"></xref></li><li>Value analysis: <xref href="ANcpLua.Roslyn.Utilities.OperationExtensions.IsConstantZero(Microsoft.CodeAnalysis.IOperation)" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.OperationExtensions.IsConstantNull(Microsoft.CodeAnalysis.IOperation)" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.OperationExtensions.TryGetConstantValue%60%601(Microsoft.CodeAnalysis.IOperation%2c%60%600%40)" data-throw-if-not-resolved="false"></xref></li><li>Assignment detection: <xref href="ANcpLua.Roslyn.Utilities.OperationExtensions.IsAssignmentTarget(Microsoft.CodeAnalysis.IOperation)" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.OperationExtensions.IsLeftSideOfAssignment(Microsoft.CodeAnalysis.IOperation)" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.OperationExtensions.IsPassedByRef(Microsoft.CodeAnalysis.IOperation)" data-throw-if-not-resolved="false"></xref></li></ul>
+    <ul><li>
+                Tree navigation: <xref href="ANcpLua.Roslyn.Utilities.OperationExtensions.Ancestors(Microsoft.CodeAnalysis.IOperation)" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.OperationExtensions.Descendants(Microsoft.CodeAnalysis.IOperation)" data-throw-if-not-resolved="false"></xref>,
+                <xref href="ANcpLua.Roslyn.Utilities.OperationExtensions.FindAncestor%60%601(Microsoft.CodeAnalysis.IOperation)" data-throw-if-not-resolved="false"></xref>
+            </li><li>
+                Context detection: <xref href="ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideLoop(Microsoft.CodeAnalysis.IOperation)" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.OperationExtensions.IsInsideTryBlock(Microsoft.CodeAnalysis.IOperation)" data-throw-if-not-resolved="false"></xref>,
+                <xref href="ANcpLua.Roslyn.Utilities.OperationExtensions.IsInExpressionTree(Microsoft.CodeAnalysis.IOperation%2cMicrosoft.CodeAnalysis.INamedTypeSymbol)" data-throw-if-not-resolved="false"></xref>
+            </li><li>
+                Unwrapping: <xref href="ANcpLua.Roslyn.Utilities.OperationExtensions.UnwrapImplicitConversions(Microsoft.CodeAnalysis.IOperation)" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.OperationExtensions.UnwrapAllConversions(Microsoft.CodeAnalysis.IOperation)" data-throw-if-not-resolved="false"></xref>,
+                <xref href="ANcpLua.Roslyn.Utilities.OperationExtensions.UnwrapParenthesized(Microsoft.CodeAnalysis.IOperation)" data-throw-if-not-resolved="false"></xref>
+            </li><li>
+                Value analysis: <xref href="ANcpLua.Roslyn.Utilities.OperationExtensions.IsConstantZero(Microsoft.CodeAnalysis.IOperation)" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.OperationExtensions.IsConstantNull(Microsoft.CodeAnalysis.IOperation)" data-throw-if-not-resolved="false"></xref>,
+                <xref href="ANcpLua.Roslyn.Utilities.OperationExtensions.TryGetConstantValue%60%601(Microsoft.CodeAnalysis.IOperation%2c%60%600%40)" data-throw-if-not-resolved="false"></xref>
+            </li><li>
+                Assignment detection: <xref href="ANcpLua.Roslyn.Utilities.OperationExtensions.IsAssignmentTarget(Microsoft.CodeAnalysis.IOperation)" data-throw-if-not-resolved="false"></xref>, <xref href="ANcpLua.Roslyn.Utilities.OperationExtensions.IsLeftSideOfAssignment(Microsoft.CodeAnalysis.IOperation)" data-throw-if-not-resolved="false"></xref>
+                , <xref href="ANcpLua.Roslyn.Utilities.OperationExtensions.IsPassedByRef(Microsoft.CodeAnalysis.IOperation)" data-throw-if-not-resolved="false"></xref>
+            </li></ul>
   example: []
   syntax:
     content: public static class OperationExtensions
@@ -106,7 +117,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Ancestors
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
-    startLine: 46
+    startLine: 71
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -151,7 +162,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: FindAncestor
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
-    startLine: 66
+    startLine: 91
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -198,7 +209,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsDescendantOf
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
-    startLine: 88
+    startLine: 116
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -212,7 +223,10 @@ items:
       description: The operation to check.
     typeParameters:
     - id: T
-      description: The type of ancestor operation to check for. Must be a class implementing <xref href="Microsoft.CodeAnalysis.IOperation" data-throw-if-not-resolved="false"></xref>.
+      description: >-
+        The type of ancestor operation to check for. Must be a class implementing <xref href="Microsoft.CodeAnalysis.IOperation" data-throw-if-not-resolved="false"></xref>
+
+        .
     return:
       type: System.Boolean
       description: <code>true</code> if an ancestor of type <code class="typeparamref">T</code> exists; otherwise, <code>false</code>.
@@ -243,7 +257,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsInNameofOperation
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
-    startLine: 102
+    startLine: 132
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -283,7 +297,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsInExpressionTree
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
-    startLine: 132
+    startLine: 162
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -337,7 +351,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsInStaticContext
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
-    startLine: 163
+    startLine: 193
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -385,7 +399,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: UnwrapImplicitConversions
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
-    startLine: 214
+    startLine: 243
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -429,7 +443,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: UnwrapAllConversions
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
-    startLine: 231
+    startLine: 260
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -473,7 +487,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: UnwrapParenthesized
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
-    startLine: 246
+    startLine: 275
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -512,7 +526,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: UnwrapLabeledOperations
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
-    startLine: 262
+    startLine: 291
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -553,7 +567,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: GetActualType
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
-    startLine: 278
+    startLine: 307
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -595,7 +609,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsConstantZero
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
-    startLine: 293
+    startLine: 324
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -643,7 +657,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsConstantNull
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
-    startLine: 306
+    startLine: 339
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -687,7 +701,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsConstant
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
-    startLine: 323
+    startLine: 358
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -739,7 +753,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: TryGetConstantValue
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
-    startLine: 349
+    startLine: 384
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -793,7 +807,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: GetContainingMethod
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
-    startLine: 373
+    startLine: 408
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -842,7 +856,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: GetContainingType
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
-    startLine: 406
+    startLine: 439
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -887,7 +901,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: GetCSharpLanguageVersion
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
-    startLine: 428
+    startLine: 459
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -926,7 +940,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: DescendantsAndSelf
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
-    startLine: 444
+    startLine: 475
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -967,7 +981,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Descendants
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
-    startLine: 461
+    startLine: 492
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -1008,7 +1022,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: DescendantsOfType
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
-    startLine: 478
+    startLine: 509
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -1055,7 +1069,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: ContainsOperation
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
-    startLine: 496
+    startLine: 525
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -1100,7 +1114,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsInsideLoop
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
-    startLine: 509
+    startLine: 540
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -1144,7 +1158,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsInsideTryBlock
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
-    startLine: 535
+    startLine: 566
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -1189,7 +1203,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsInsideCatchBlock
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
-    startLine: 557
+    startLine: 588
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -1230,7 +1244,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsInsideFinallyBlock
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
-    startLine: 579
+    startLine: 610
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -1271,7 +1285,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsInsideLockStatement
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
-    startLine: 601
+    startLine: 633
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -1312,7 +1326,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsInsideUsingStatement
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
-    startLine: 623
+    startLine: 655
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -1354,7 +1368,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: GetContainingBlock
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
-    startLine: 646
+    startLine: 678
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -1398,7 +1412,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsAssignmentTarget
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
-    startLine: 659
+    startLine: 693
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -1442,7 +1456,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsLeftSideOfAssignment
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
-    startLine: 685
+    startLine: 719
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -1490,7 +1504,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsPassedByRef
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/OperationExtensions.cs
-    startLine: 700
+    startLine: 734
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities

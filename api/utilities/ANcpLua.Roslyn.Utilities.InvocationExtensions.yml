@@ -45,18 +45,18 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: InvocationExtensions
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/InvocationExtensions.cs
-    startLine: 24
+    startLine: 34
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
-  summary: Provides extension methods for working with <xref href="Microsoft.CodeAnalysis.Operations.IInvocationOperation" data-throw-if-not-resolved="false"></xref> and <xref href="Microsoft.CodeAnalysis.Operations.IObjectCreationOperation" data-throw-if-not-resolved="false"></xref>.
+  summary: >-
+    Provides extension methods for working with <xref href="Microsoft.CodeAnalysis.Operations.IInvocationOperation" data-throw-if-not-resolved="false"></xref> and
+
+    <xref href="Microsoft.CodeAnalysis.Operations.IObjectCreationOperation" data-throw-if-not-resolved="false"></xref>.
   remarks: >-
     <p>
-
-    This class provides utilities for analyzing method invocations and object creations in Roslyn operations,
-
-    including argument extraction, method identification, and context detection.
-
+        This class provides utilities for analyzing method invocations and object creations in Roslyn operations,
+        including argument extraction, method identification, and context detection.
     </p>
 
     <ul><li>Retrieve arguments by name or index from invocations and object creations</li><li>Extract constant argument values with type-safe conversion</li><li>Identify method characteristics such as LINQ methods, async methods, and extension methods</li><li>Analyze receiver types and cancellation token usage</li></ul>
@@ -100,7 +100,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: GetArgument
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/InvocationExtensions.cs
-    startLine: 40
+    startLine: 50
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -148,7 +148,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: GetArgument
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/InvocationExtensions.cs
-    startLine: 61
+    startLine: 69
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -196,7 +196,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: GetArgument
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/InvocationExtensions.cs
-    startLine: 85
+    startLine: 91
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -244,7 +244,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: GetArgument
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/InvocationExtensions.cs
-    startLine: 106
+    startLine: 110
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -292,7 +292,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: HasArgumentOfType
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/InvocationExtensions.cs
-    startLine: 134
+    startLine: 136
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -346,7 +346,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: TryGetConstantArgument
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/InvocationExtensions.cs
-    startLine: 178
+    startLine: 180
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -405,7 +405,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: TryGetConstantArgument
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/InvocationExtensions.cs
-    startLine: 204
+    startLine: 206
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -464,7 +464,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: TryGetStringArgument
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/InvocationExtensions.cs
-    startLine: 229
+    startLine: 231
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -520,7 +520,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: TryGetStringArgument
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/InvocationExtensions.cs
-    startLine: 266
+    startLine: 268
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -576,7 +576,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsMethodNamed
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/InvocationExtensions.cs
-    startLine: 299
+    startLine: 301
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -627,7 +627,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsMethodNamed
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/InvocationExtensions.cs
-    startLine: 314
+    startLine: 318
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -678,7 +678,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsExtensionMethodOn
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/InvocationExtensions.cs
-    startLine: 330
+    startLine: 337
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -728,7 +728,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsInstanceMethodOn
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/InvocationExtensions.cs
-    startLine: 350
+    startLine: 357
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -778,7 +778,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: GetReceiverType
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/InvocationExtensions.cs
-    startLine: 368
+    startLine: 375
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -822,7 +822,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: ReturnsVoid
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/InvocationExtensions.cs
-    startLine: 384
+    startLine: 391
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -858,7 +858,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsAsyncMethod
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/InvocationExtensions.cs
-    startLine: 394
+    startLine: 403
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -899,7 +899,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: HasCancellationTokenParameter
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/InvocationExtensions.cs
-    startLine: 407
+    startLine: 418
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -943,7 +943,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsCancellationTokenPassed
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/InvocationExtensions.cs
-    startLine: 427
+    startLine: 436
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -984,11 +984,14 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsLinqMethod
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/InvocationExtensions.cs
-    startLine: 451
+    startLine: 457
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
-  summary: Determines whether the invocation is a LINQ method from <code>System.Linq.Enumerable</code> or <code>System.Linq.Queryable</code>.
+  summary: >-
+    Determines whether the invocation is a LINQ method from <code>System.Linq.Enumerable</code> or
+
+    <code>System.Linq.Queryable</code>.
   example: []
   syntax:
     content: public static bool IsLinqMethod(this IInvocationOperation operation)
@@ -1028,7 +1031,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsStringMethod
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/InvocationExtensions.cs
-    startLine: 466
+    startLine: 472
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -1069,7 +1072,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsObjectMethod
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/InvocationExtensions.cs
-    startLine: 478
+    startLine: 486
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -1110,7 +1113,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: GetArgumentCount
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/InvocationExtensions.cs
-    startLine: 488
+    startLine: 498
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -1151,7 +1154,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: HasOptionalArgumentsNotProvided
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/InvocationExtensions.cs
-    startLine: 501
+    startLine: 513
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -1195,7 +1198,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: GetExplicitArguments
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/InvocationExtensions.cs
-    startLine: 518
+    startLine: 530
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -1239,7 +1242,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: AllArgumentsAreConstant
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/InvocationExtensions.cs
-    startLine: 535
+    startLine: 545
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -1278,7 +1281,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsNullConditionalAccess
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/InvocationExtensions.cs
-    startLine: 554
+    startLine: 562
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities

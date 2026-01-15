@@ -46,7 +46,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: SymbolExtensions
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
-    startLine: 28
+    startLine: 38
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -98,7 +98,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsEqualTo
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
-    startLine: 44
+    startLine: 54
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -146,7 +146,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: GetFullyQualifiedName
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
-    startLine: 59
+    startLine: 69
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -187,7 +187,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: GetMetadataName
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
-    startLine: 69
+    startLine: 81
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -228,7 +228,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: HasAttribute
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
-    startLine: 116
+    startLine: 141
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -240,7 +240,10 @@ items:
         <code>Namespace.TypeName</code> without the <code>global::</code> prefix.
     </p>
 
-    <ul><li>Include the full namespace path (e.g., <code>"System.Serializable"</code>)</li><li>Include the <code>Attribute</code> suffix if present in the type name</li><li>For nested types, use <code>+</code> separator (e.g., <code>"Outer+InnerAttribute"</code>)</li><li>For generic attributes, include type parameters (e.g., <code>"MyNamespace.GenericAttribute`1"</code>)</li></ul>
+    <ul><li>Include the full namespace path (e.g., <code>"System.Serializable"</code>)</li><li>Include the <code>Attribute</code> suffix if present in the type name</li><li>For nested types, use <code>+</code> separator (e.g., <code>"Outer+InnerAttribute"</code>)</li><li>
+                For generic attributes, include type parameters (e.g., <code>"MyNamespace.GenericAttribute`1"</code>
+                )
+            </li></ul>
   example:
   - >-
     <pre><code class="lang-csharp">// Check for common attributes
@@ -309,7 +312,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: GetAttribute
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
-    startLine: 139
+    startLine: 162
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -356,7 +359,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: GetAttributes
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
-    startLine: 166
+    startLine: 187
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -414,7 +417,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: GetAttribute
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
-    startLine: 207
+    startLine: 228
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -467,7 +470,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: HasAttribute
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
-    startLine: 222
+    startLine: 245
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -520,7 +523,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsVisibleOutsideOfAssembly
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
-    startLine: 239
+    startLine: 264
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -567,7 +570,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsOperator
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
-    startLine: 262
+    startLine: 285
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -611,7 +614,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsConst
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
-    startLine: 275
+    startLine: 301
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -653,7 +656,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: GetAllMembers
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
-    startLine: 286
+    startLine: 315
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -697,7 +700,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: GetAllMembers
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
-    startLine: 307
+    startLine: 336
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -744,7 +747,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: GetAllMembers
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
-    startLine: 330
+    startLine: 359
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -797,7 +800,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsTopLevelStatement
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
-    startLine: 361
+    startLine: 388
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -841,7 +844,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: GetSymbolType
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
-    startLine: 396
+    startLine: 435
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -880,7 +883,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: GetNamespaceName
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
-    startLine: 415
+    startLine: 456
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -919,7 +922,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: GetMethod
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
-    startLine: 431
+    startLine: 472
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -967,7 +970,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: GetProperty
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
-    startLine: 457
+    startLine: 496
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -1015,7 +1018,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: ExplicitlyImplements
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
-    startLine: 479
+    startLine: 516
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -1062,7 +1065,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: ExplicitOrImplicitInterfaceImplementations
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
-    startLine: 501
+    startLine: 536
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -1108,7 +1111,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: ExplicitInterfaceImplementations
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
-    startLine: 525
+    startLine: 560
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -1152,7 +1155,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: GetAllTypeParameters
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
-    startLine: 544
+    startLine: 581
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -1199,7 +1202,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: GetTypeParameters
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
-    startLine: 566
+    startLine: 603
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -1246,7 +1249,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: GetTypeArguments
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
-    startLine: 584
+    startLine: 623
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -1293,7 +1296,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: GetOverriddenMember
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
-    startLine: 605
+    startLine: 656
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -1310,7 +1313,9 @@ items:
       description: >-
         The overridden symbol:
 
-        <ul><li>For <xref href="Microsoft.CodeAnalysis.IMethodSymbol" data-throw-if-not-resolved="false"></xref>: <xref href="Microsoft.CodeAnalysis.IMethodSymbol.OverriddenMethod" data-throw-if-not-resolved="false"></xref></li><li>For <xref href="Microsoft.CodeAnalysis.IPropertySymbol" data-throw-if-not-resolved="false"></xref>: <xref href="Microsoft.CodeAnalysis.IPropertySymbol.OverriddenProperty" data-throw-if-not-resolved="false"></xref></li><li>For <xref href="Microsoft.CodeAnalysis.IEventSymbol" data-throw-if-not-resolved="false"></xref>: <xref href="Microsoft.CodeAnalysis.IEventSymbol.OverriddenEvent" data-throw-if-not-resolved="false"></xref></li><li>For other symbols: <code>null</code></li></ul>
+        <ul><li>For <xref href="Microsoft.CodeAnalysis.IMethodSymbol" data-throw-if-not-resolved="false"></xref>: <xref href="Microsoft.CodeAnalysis.IMethodSymbol.OverriddenMethod" data-throw-if-not-resolved="false"></xref></li><li>
+                    For <xref href="Microsoft.CodeAnalysis.IPropertySymbol" data-throw-if-not-resolved="false"></xref>: <xref href="Microsoft.CodeAnalysis.IPropertySymbol.OverriddenProperty" data-throw-if-not-resolved="false"></xref>
+                </li><li>For <xref href="Microsoft.CodeAnalysis.IEventSymbol" data-throw-if-not-resolved="false"></xref>: <xref href="Microsoft.CodeAnalysis.IEventSymbol.OverriddenEvent" data-throw-if-not-resolved="false"></xref></li><li>For other symbols: <code>null</code></li></ul>
     content.vb: Public Shared Function GetOverriddenMember(symbol As ISymbol) As ISymbol
   overload: ANcpLua.Roslyn.Utilities.SymbolExtensions.GetOverriddenMember*
   nameWithType.vb: SymbolExtensions.GetOverriddenMember(ISymbol)
@@ -1335,7 +1340,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: GetAllTypeArguments
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/SymbolExtensions.cs
-    startLine: 624
+    startLine: 677
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities

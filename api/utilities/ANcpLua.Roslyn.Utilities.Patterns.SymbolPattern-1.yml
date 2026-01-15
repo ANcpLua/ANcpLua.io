@@ -26,20 +26,16 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: SymbolPattern
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/SymbolPattern.cs
-    startLine: 22
+    startLine: 28
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
   summary: Composable pattern for matching symbols. Like regex, but for Roslyn symbols.
   remarks: >-
     <p>
-
-    <xref href="ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern%601" data-throw-if-not-resolved="false"></xref> provides a declarative, composable approach to matching
-
-    Roslyn symbols based on their characteristics. Patterns can be combined using logical
-
-    operators to create complex matching criteria.
-
+        <xref href="ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern%601" data-throw-if-not-resolved="false"></xref> provides a declarative, composable approach to matching
+        Roslyn symbols based on their characteristics. Patterns can be combined using logical
+        operators to create complex matching criteria.
     </p>
 
     <ul><li>Use <xref href="ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern%601.And(ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern%7b%600%7d)" data-throw-if-not-resolved="false"></xref> or the <code>&amp;</code> operator to require both patterns to match.</li><li>Use <xref href="ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern%601.Or(ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern%7b%600%7d)" data-throw-if-not-resolved="false"></xref> or the <code>|</code> operator to match if either pattern matches.</li><li>Use <xref href="ANcpLua.Roslyn.Utilities.Patterns.SymbolPattern%601.Not" data-throw-if-not-resolved="false"></xref> or the <code>!</code> operator to invert a pattern.</li></ul>
@@ -87,7 +83,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Matches
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/SymbolPattern.cs
-    startLine: 33
+    startLine: 39
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -124,7 +120,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: And
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/SymbolPattern.cs
-    startLine: 41
+    startLine: 47
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -165,7 +161,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Or
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/SymbolPattern.cs
-    startLine: 49
+    startLine: 58
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -206,7 +202,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: Not
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/SymbolPattern.cs
-    startLine: 56
+    startLine: 68
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -242,7 +238,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: op_BitwiseAnd
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/SymbolPattern.cs
-    startLine: 64
+    startLine: 79
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -283,7 +279,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: op_BitwiseOr
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/SymbolPattern.cs
-    startLine: 72
+    startLine: 90
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns
@@ -324,7 +320,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: op_LogicalNot
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/Patterns/SymbolPattern.cs
-    startLine: 79
+    startLine: 100
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities.Patterns

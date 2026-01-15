@@ -25,7 +25,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: NamespaceExtensions
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/NamespaceExtensions.cs
-    startLine: 21
+    startLine: 30
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -36,7 +36,10 @@ items:
         including recursive type enumeration and namespace matching.
     </p>
 
-    <ul><li>Zero-allocation namespace matching with <xref href="ANcpLua.Roslyn.Utilities.NamespaceExtensions.IsNamespace(Microsoft.CodeAnalysis.INamespaceSymbol%2cSystem.String%5b%5d)" data-throw-if-not-resolved="false"></xref></li><li>Recursive type enumeration with <xref href="ANcpLua.Roslyn.Utilities.NamespaceExtensions.GetAllTypes(Microsoft.CodeAnalysis.INamespaceSymbol)" data-throw-if-not-resolved="false"></xref></li><li>Assembly-level type queries with <xref href="ANcpLua.Roslyn.Utilities.NamespaceExtensions.GetTypesRecursive(Microsoft.CodeAnalysis.IAssemblySymbol)" data-throw-if-not-resolved="false"></xref> and <xref href="ANcpLua.Roslyn.Utilities.NamespaceExtensions.GetPublicTypes(Microsoft.CodeAnalysis.IAssemblySymbol)" data-throw-if-not-resolved="false"></xref></li></ul>
+    <ul><li>Zero-allocation namespace matching with <xref href="ANcpLua.Roslyn.Utilities.NamespaceExtensions.IsNamespace(Microsoft.CodeAnalysis.INamespaceSymbol%2cSystem.String%5b%5d)" data-throw-if-not-resolved="false"></xref></li><li>Recursive type enumeration with <xref href="ANcpLua.Roslyn.Utilities.NamespaceExtensions.GetAllTypes(Microsoft.CodeAnalysis.INamespaceSymbol)" data-throw-if-not-resolved="false"></xref></li><li>
+                Assembly-level type queries with <xref href="ANcpLua.Roslyn.Utilities.NamespaceExtensions.GetTypesRecursive(Microsoft.CodeAnalysis.IAssemblySymbol)" data-throw-if-not-resolved="false"></xref> and
+                <xref href="ANcpLua.Roslyn.Utilities.NamespaceExtensions.GetPublicTypes(Microsoft.CodeAnalysis.IAssemblySymbol)" data-throw-if-not-resolved="false"></xref>
+            </li></ul>
   example: []
   syntax:
     content: public static class NamespaceExtensions
@@ -75,7 +78,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: IsNamespace
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/NamespaceExtensions.cs
-    startLine: 60
+    startLine: 69
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -145,7 +148,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: GetAllTypes
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/NamespaceExtensions.cs
-    startLine: 105
+    startLine: 114
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -205,7 +208,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: GetAllNamespaces
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/NamespaceExtensions.cs
-    startLine: 155
+    startLine: 162
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -264,7 +267,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: GetTypesRecursive
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/NamespaceExtensions.cs
-    startLine: 190
+    startLine: 193
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -318,7 +321,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: GetPublicTypes
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/NamespaceExtensions.cs
-    startLine: 220
+    startLine: 225
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
@@ -378,7 +381,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
     id: GetPublicTypes
     path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/NamespaceExtensions.cs
-    startLine: 253
+    startLine: 260
   assemblies:
   - ANcpLua.Roslyn.Utilities
   namespace: ANcpLua.Roslyn.Utilities
