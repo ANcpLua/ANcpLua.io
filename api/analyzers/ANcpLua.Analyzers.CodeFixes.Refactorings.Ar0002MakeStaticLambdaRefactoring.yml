@@ -20,7 +20,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Analyzers.git
     id: Ar0002MakeStaticLambdaRefactoring
     path: .repos/analyzers/src/ANcpLua.Analyzers.CodeFixes/Refactorings/AR0002MakeStaticLambdaRefactoring.cs
-    startLine: 10
+    startLine: 11
   assemblies:
   - ANcpLua.Analyzers.CodeFixes
   namespace: ANcpLua.Analyzers.CodeFixes.Refactorings
@@ -78,7 +78,7 @@ items:
       repo: https://github.com/ANcpLua/ANcpLua.Analyzers.git
     id: ComputeRefactoringsAsync
     path: .repos/analyzers/src/ANcpLua.Analyzers.CodeFixes/Refactorings/AR0002MakeStaticLambdaRefactoring.cs
-    startLine: 13
+    startLine: 14
   assemblies:
   - ANcpLua.Analyzers.CodeFixes
   namespace: ANcpLua.Analyzers.CodeFixes.Refactorings

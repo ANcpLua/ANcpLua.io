@@ -1,0 +1,647 @@
+### YamlMime:ManagedReference
+items:
+- uid: ANcpLua.Analyzers.Analyzers.Al0013MissingSchemaUrlAnalyzer
+  commentId: T:ANcpLua.Analyzers.Analyzers.Al0013MissingSchemaUrlAnalyzer
+  id: Al0013MissingSchemaUrlAnalyzer
+  parent: ANcpLua.Analyzers.Analyzers
+  children:
+  - ANcpLua.Analyzers.Analyzers.Al0013MissingSchemaUrlAnalyzer.RegisterActions(Microsoft.CodeAnalysis.Diagnostics.AnalysisContext)
+  - ANcpLua.Analyzers.Analyzers.Al0013MissingSchemaUrlAnalyzer.SupportedDiagnostics
+  langs:
+  - csharp
+  - vb
+  name: Al0013MissingSchemaUrlAnalyzer
+  nameWithType: Al0013MissingSchemaUrlAnalyzer
+  fullName: ANcpLua.Analyzers.Analyzers.Al0013MissingSchemaUrlAnalyzer
+  type: Class
+  source:
+    remote:
+      path: src/ANcpLua.Analyzers/Analyzers/AL0013MissingSchemaUrlAnalyzer.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Analyzers.git
+    id: Al0013MissingSchemaUrlAnalyzer
+    path: .repos/analyzers/src/ANcpLua.Analyzers/Analyzers/AL0013MissingSchemaUrlAnalyzer.cs
+    startLine: 26
+  assemblies:
+  - ANcpLua.Analyzers
+  namespace: ANcpLua.Analyzers.Analyzers
+  summary: "AL0013: Detects OpenTelemetry configurations that don't set the schema URL."
+  remarks: >-
+    <p>
+        The OpenTelemetry specification recommends setting a schema URL on resources
+        to indicate which version of the semantic conventions is being used. Without
+        a schema URL, telemetry backends cannot automatically transform attributes
+        between convention versions, potentially causing data inconsistencies.
+    </p>
+
+    <p>
+        The analyzer flags resource configuration calls like <code>ConfigureResource</code>,
+        <code>SetResourceBuilder</code>, and <code>AddResource</code> on OpenTelemetry builder
+        types when they do not include a schema URL reference.
+    </p>
+
+    <p>
+        Schema URL detection is heuristic: the analyzer looks for string literals
+        containing "schema", "telemetry.schema_url", or "opentelemetry.io/schemas",
+        as well as method calls with "Schema" in the name. This may not catch all
+        indirect configurations but covers common patterns.
+    </p>
+  example: []
+  syntax:
+    content: >-
+      [DiagnosticAnalyzer("C#", new string[] { })]
+
+      public sealed class Al0013MissingSchemaUrlAnalyzer : AlAnalyzer
+    content.vb: >-
+      <DiagnosticAnalyzer("C#", New String() { })>
+
+      Public NotInheritable Class Al0013MissingSchemaUrlAnalyzer Inherits AlAnalyzer
+  inheritance:
+  - System.Object
+  - Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer
+  - ANcpLua.Analyzers.Core.AlAnalyzer
+  inheritedMembers:
+  - ANcpLua.Analyzers.Core.AlAnalyzer.HelpLinkBase
+  - ANcpLua.Analyzers.Core.AlAnalyzer.Initialize(Microsoft.CodeAnalysis.Diagnostics.AnalysisContext)
+  - Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer.Equals(System.Object)
+  - Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer.GetHashCode
+  - Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: ANcpLua.Analyzers.Analyzers.Al0013MissingSchemaUrlAnalyzer.SupportedDiagnostics
+  commentId: P:ANcpLua.Analyzers.Analyzers.Al0013MissingSchemaUrlAnalyzer.SupportedDiagnostics
+  id: SupportedDiagnostics
+  parent: ANcpLua.Analyzers.Analyzers.Al0013MissingSchemaUrlAnalyzer
+  langs:
+  - csharp
+  - vb
+  name: SupportedDiagnostics
+  nameWithType: Al0013MissingSchemaUrlAnalyzer.SupportedDiagnostics
+  fullName: ANcpLua.Analyzers.Analyzers.Al0013MissingSchemaUrlAnalyzer.SupportedDiagnostics
+  type: Property
+  source:
+    remote:
+      path: src/ANcpLua.Analyzers/Analyzers/AL0013MissingSchemaUrlAnalyzer.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Analyzers.git
+    id: SupportedDiagnostics
+    path: .repos/analyzers/src/ANcpLua.Analyzers/Analyzers/AL0013MissingSchemaUrlAnalyzer.cs
+    startLine: 59
+  assemblies:
+  - ANcpLua.Analyzers
+  namespace: ANcpLua.Analyzers.Analyzers
+  summary: Returns a set of descriptors for the diagnostics that this analyzer is capable of producing.
+  example: []
+  syntax:
+    content: public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get; }
+    parameters: []
+    return:
+      type: System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.DiagnosticDescriptor}
+    content.vb: Public Overrides ReadOnly Property SupportedDiagnostics As ImmutableArray(Of DiagnosticDescriptor)
+  overridden: Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer.SupportedDiagnostics
+  overload: ANcpLua.Analyzers.Analyzers.Al0013MissingSchemaUrlAnalyzer.SupportedDiagnostics*
+- uid: ANcpLua.Analyzers.Analyzers.Al0013MissingSchemaUrlAnalyzer.RegisterActions(Microsoft.CodeAnalysis.Diagnostics.AnalysisContext)
+  commentId: M:ANcpLua.Analyzers.Analyzers.Al0013MissingSchemaUrlAnalyzer.RegisterActions(Microsoft.CodeAnalysis.Diagnostics.AnalysisContext)
+  id: RegisterActions(Microsoft.CodeAnalysis.Diagnostics.AnalysisContext)
+  parent: ANcpLua.Analyzers.Analyzers.Al0013MissingSchemaUrlAnalyzer
+  langs:
+  - csharp
+  - vb
+  name: RegisterActions(AnalysisContext)
+  nameWithType: Al0013MissingSchemaUrlAnalyzer.RegisterActions(AnalysisContext)
+  fullName: ANcpLua.Analyzers.Analyzers.Al0013MissingSchemaUrlAnalyzer.RegisterActions(Microsoft.CodeAnalysis.Diagnostics.AnalysisContext)
+  type: Method
+  source:
+    remote:
+      path: src/ANcpLua.Analyzers/Analyzers/AL0013MissingSchemaUrlAnalyzer.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Analyzers.git
+    id: RegisterActions
+    path: .repos/analyzers/src/ANcpLua.Analyzers/Analyzers/AL0013MissingSchemaUrlAnalyzer.cs
+    startLine: 61
+  assemblies:
+  - ANcpLua.Analyzers
+  namespace: ANcpLua.Analyzers.Analyzers
+  example: []
+  syntax:
+    content: protected override void RegisterActions(AnalysisContext context)
+    parameters:
+    - id: context
+      type: Microsoft.CodeAnalysis.Diagnostics.AnalysisContext
+    content.vb: Protected Overrides Sub RegisterActions(context As AnalysisContext)
+  overridden: ANcpLua.Analyzers.Core.AlAnalyzer.RegisterActions(Microsoft.CodeAnalysis.Diagnostics.AnalysisContext)
+  overload: ANcpLua.Analyzers.Analyzers.Al0013MissingSchemaUrlAnalyzer.RegisterActions*
+references:
+- uid: ANcpLua.Analyzers.Analyzers
+  commentId: N:ANcpLua.Analyzers.Analyzers
+  href: ANcpLua.html
+  name: ANcpLua.Analyzers.Analyzers
+  nameWithType: ANcpLua.Analyzers.Analyzers
+  fullName: ANcpLua.Analyzers.Analyzers
+  spec.csharp:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Analyzers
+    name: Analyzers
+    href: ANcpLua.Analyzers.html
+  - name: .
+  - uid: ANcpLua.Analyzers.Analyzers
+    name: Analyzers
+    href: ANcpLua.Analyzers.Analyzers.html
+  spec.vb:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Analyzers
+    name: Analyzers
+    href: ANcpLua.Analyzers.html
+  - name: .
+  - uid: ANcpLua.Analyzers.Analyzers
+    name: Analyzers
+    href: ANcpLua.Analyzers.Analyzers.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer
+  commentId: T:Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer
+  parent: Microsoft.CodeAnalysis.Diagnostics
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.diagnostics.diagnosticanalyzer
+  name: DiagnosticAnalyzer
+  nameWithType: DiagnosticAnalyzer
+  fullName: Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer
+- uid: ANcpLua.Analyzers.Core.AlAnalyzer
+  commentId: T:ANcpLua.Analyzers.Core.AlAnalyzer
+  parent: ANcpLua.Analyzers.Core
+  href: ANcpLua.Analyzers.Core.AlAnalyzer.html
+  name: AlAnalyzer
+  nameWithType: AlAnalyzer
+  fullName: ANcpLua.Analyzers.Core.AlAnalyzer
+- uid: ANcpLua.Analyzers.Core.AlAnalyzer.HelpLinkBase
+  commentId: F:ANcpLua.Analyzers.Core.AlAnalyzer.HelpLinkBase
+  parent: ANcpLua.Analyzers.Core.AlAnalyzer
+  href: ANcpLua.Analyzers.Core.AlAnalyzer.html#ANcpLua_Analyzers_Core_AlAnalyzer_HelpLinkBase
+  name: HelpLinkBase
+  nameWithType: AlAnalyzer.HelpLinkBase
+  fullName: ANcpLua.Analyzers.Core.AlAnalyzer.HelpLinkBase
+- uid: ANcpLua.Analyzers.Core.AlAnalyzer.Initialize(Microsoft.CodeAnalysis.Diagnostics.AnalysisContext)
+  commentId: M:ANcpLua.Analyzers.Core.AlAnalyzer.Initialize(Microsoft.CodeAnalysis.Diagnostics.AnalysisContext)
+  parent: ANcpLua.Analyzers.Core.AlAnalyzer
+  isExternal: true
+  href: ANcpLua.Analyzers.Core.AlAnalyzer.html#ANcpLua_Analyzers_Core_AlAnalyzer_Initialize_Microsoft_CodeAnalysis_Diagnostics_AnalysisContext_
+  name: Initialize(AnalysisContext)
+  nameWithType: AlAnalyzer.Initialize(AnalysisContext)
+  fullName: ANcpLua.Analyzers.Core.AlAnalyzer.Initialize(Microsoft.CodeAnalysis.Diagnostics.AnalysisContext)
+  spec.csharp:
+  - uid: ANcpLua.Analyzers.Core.AlAnalyzer.Initialize(Microsoft.CodeAnalysis.Diagnostics.AnalysisContext)
+    name: Initialize
+    href: ANcpLua.Analyzers.Core.AlAnalyzer.html#ANcpLua_Analyzers_Core_AlAnalyzer_Initialize_Microsoft_CodeAnalysis_Diagnostics_AnalysisContext_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.Diagnostics.AnalysisContext
+    name: AnalysisContext
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.diagnostics.analysiscontext
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Analyzers.Core.AlAnalyzer.Initialize(Microsoft.CodeAnalysis.Diagnostics.AnalysisContext)
+    name: Initialize
+    href: ANcpLua.Analyzers.Core.AlAnalyzer.html#ANcpLua_Analyzers_Core_AlAnalyzer_Initialize_Microsoft_CodeAnalysis_Diagnostics_AnalysisContext_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.Diagnostics.AnalysisContext
+    name: AnalysisContext
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.diagnostics.analysiscontext
+  - name: )
+- uid: Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer.Equals(System.Object)
+  commentId: M:Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer.Equals(System.Object)
+  parent: Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.diagnostics.diagnosticanalyzer.equals
+  name: Equals(object)
+  nameWithType: DiagnosticAnalyzer.Equals(object)
+  fullName: Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer.Equals(object)
+  nameWithType.vb: DiagnosticAnalyzer.Equals(Object)
+  fullName.vb: Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.diagnostics.diagnosticanalyzer.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.diagnostics.diagnosticanalyzer.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer.GetHashCode
+  commentId: M:Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer.GetHashCode
+  parent: Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.diagnostics.diagnosticanalyzer.gethashcode
+  name: GetHashCode()
+  nameWithType: DiagnosticAnalyzer.GetHashCode()
+  fullName: Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer.GetHashCode()
+  spec.csharp:
+  - uid: Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.diagnostics.diagnosticanalyzer.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.diagnostics.diagnosticanalyzer.gethashcode
+  - name: (
+  - name: )
+- uid: Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer.ToString
+  commentId: M:Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer.ToString
+  parent: Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.diagnostics.diagnosticanalyzer.tostring
+  name: ToString()
+  nameWithType: DiagnosticAnalyzer.ToString()
+  fullName: Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer.ToString()
+  spec.csharp:
+  - uid: Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.diagnostics.diagnosticanalyzer.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.diagnostics.diagnosticanalyzer.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Microsoft.CodeAnalysis.Diagnostics
+  commentId: N:Microsoft.CodeAnalysis.Diagnostics
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.CodeAnalysis.Diagnostics
+  nameWithType: Microsoft.CodeAnalysis.Diagnostics
+  fullName: Microsoft.CodeAnalysis.Diagnostics
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+  - name: .
+  - uid: Microsoft.CodeAnalysis.Diagnostics
+    name: Diagnostics
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.diagnostics
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+  - name: .
+  - uid: Microsoft.CodeAnalysis.Diagnostics
+    name: Diagnostics
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.diagnostics
+- uid: ANcpLua.Analyzers.Core
+  commentId: N:ANcpLua.Analyzers.Core
+  href: ANcpLua.html
+  name: ANcpLua.Analyzers.Core
+  nameWithType: ANcpLua.Analyzers.Core
+  fullName: ANcpLua.Analyzers.Core
+  spec.csharp:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Analyzers
+    name: Analyzers
+    href: ANcpLua.Analyzers.html
+  - name: .
+  - uid: ANcpLua.Analyzers.Core
+    name: Core
+    href: ANcpLua.Analyzers.Core.html
+  spec.vb:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Analyzers
+    name: Analyzers
+    href: ANcpLua.Analyzers.html
+  - name: .
+  - uid: ANcpLua.Analyzers.Core
+    name: Core
+    href: ANcpLua.Analyzers.Core.html
+- uid: Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer.SupportedDiagnostics
+  commentId: P:Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer.SupportedDiagnostics
+  parent: Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.diagnostics.diagnosticanalyzer.supporteddiagnostics
+  name: SupportedDiagnostics
+  nameWithType: DiagnosticAnalyzer.SupportedDiagnostics
+  fullName: Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer.SupportedDiagnostics
+- uid: ANcpLua.Analyzers.Analyzers.Al0013MissingSchemaUrlAnalyzer.SupportedDiagnostics*
+  commentId: Overload:ANcpLua.Analyzers.Analyzers.Al0013MissingSchemaUrlAnalyzer.SupportedDiagnostics
+  href: ANcpLua.Analyzers.Analyzers.Al0013MissingSchemaUrlAnalyzer.html#ANcpLua_Analyzers_Analyzers_Al0013MissingSchemaUrlAnalyzer_SupportedDiagnostics
+  name: SupportedDiagnostics
+  nameWithType: Al0013MissingSchemaUrlAnalyzer.SupportedDiagnostics
+  fullName: ANcpLua.Analyzers.Analyzers.Al0013MissingSchemaUrlAnalyzer.SupportedDiagnostics
+- uid: System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.DiagnosticDescriptor}
+  commentId: T:System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.DiagnosticDescriptor}
+  parent: System.Collections.Immutable
+  definition: System.Collections.Immutable.ImmutableArray`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  name: ImmutableArray<DiagnosticDescriptor>
+  nameWithType: ImmutableArray<DiagnosticDescriptor>
+  fullName: System.Collections.Immutable.ImmutableArray<Microsoft.CodeAnalysis.DiagnosticDescriptor>
+  nameWithType.vb: ImmutableArray(Of DiagnosticDescriptor)
+  fullName.vb: System.Collections.Immutable.ImmutableArray(Of Microsoft.CodeAnalysis.DiagnosticDescriptor)
+  name.vb: ImmutableArray(Of DiagnosticDescriptor)
+  spec.csharp:
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: <
+  - uid: Microsoft.CodeAnalysis.DiagnosticDescriptor
+    name: DiagnosticDescriptor
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.diagnosticdescriptor
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Microsoft.CodeAnalysis.DiagnosticDescriptor
+    name: DiagnosticDescriptor
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.diagnosticdescriptor
+  - name: )
+- uid: System.Collections.Immutable.ImmutableArray`1
+  commentId: T:System.Collections.Immutable.ImmutableArray`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  name: ImmutableArray<T>
+  nameWithType: ImmutableArray<T>
+  fullName: System.Collections.Immutable.ImmutableArray<T>
+  nameWithType.vb: ImmutableArray(Of T)
+  fullName.vb: System.Collections.Immutable.ImmutableArray(Of T)
+  name.vb: ImmutableArray(Of T)
+  spec.csharp:
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Immutable
+  commentId: N:System.Collections.Immutable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Immutable
+  nameWithType: System.Collections.Immutable
+  fullName: System.Collections.Immutable
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Immutable
+    name: Immutable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Immutable
+    name: Immutable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable
+- uid: ANcpLua.Analyzers.Core.AlAnalyzer.RegisterActions(Microsoft.CodeAnalysis.Diagnostics.AnalysisContext)
+  commentId: M:ANcpLua.Analyzers.Core.AlAnalyzer.RegisterActions(Microsoft.CodeAnalysis.Diagnostics.AnalysisContext)
+  parent: ANcpLua.Analyzers.Core.AlAnalyzer
+  isExternal: true
+  href: ANcpLua.Analyzers.Core.AlAnalyzer.html#ANcpLua_Analyzers_Core_AlAnalyzer_RegisterActions_Microsoft_CodeAnalysis_Diagnostics_AnalysisContext_
+  name: RegisterActions(AnalysisContext)
+  nameWithType: AlAnalyzer.RegisterActions(AnalysisContext)
+  fullName: ANcpLua.Analyzers.Core.AlAnalyzer.RegisterActions(Microsoft.CodeAnalysis.Diagnostics.AnalysisContext)
+  spec.csharp:
+  - uid: ANcpLua.Analyzers.Core.AlAnalyzer.RegisterActions(Microsoft.CodeAnalysis.Diagnostics.AnalysisContext)
+    name: RegisterActions
+    href: ANcpLua.Analyzers.Core.AlAnalyzer.html#ANcpLua_Analyzers_Core_AlAnalyzer_RegisterActions_Microsoft_CodeAnalysis_Diagnostics_AnalysisContext_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.Diagnostics.AnalysisContext
+    name: AnalysisContext
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.diagnostics.analysiscontext
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Analyzers.Core.AlAnalyzer.RegisterActions(Microsoft.CodeAnalysis.Diagnostics.AnalysisContext)
+    name: RegisterActions
+    href: ANcpLua.Analyzers.Core.AlAnalyzer.html#ANcpLua_Analyzers_Core_AlAnalyzer_RegisterActions_Microsoft_CodeAnalysis_Diagnostics_AnalysisContext_
+  - name: (
+  - uid: Microsoft.CodeAnalysis.Diagnostics.AnalysisContext
+    name: AnalysisContext
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.diagnostics.analysiscontext
+  - name: )
+- uid: ANcpLua.Analyzers.Analyzers.Al0013MissingSchemaUrlAnalyzer.RegisterActions*
+  commentId: Overload:ANcpLua.Analyzers.Analyzers.Al0013MissingSchemaUrlAnalyzer.RegisterActions
+  href: ANcpLua.Analyzers.Analyzers.Al0013MissingSchemaUrlAnalyzer.html#ANcpLua_Analyzers_Analyzers_Al0013MissingSchemaUrlAnalyzer_RegisterActions_Microsoft_CodeAnalysis_Diagnostics_AnalysisContext_
+  name: RegisterActions
+  nameWithType: Al0013MissingSchemaUrlAnalyzer.RegisterActions
+  fullName: ANcpLua.Analyzers.Analyzers.Al0013MissingSchemaUrlAnalyzer.RegisterActions
+- uid: Microsoft.CodeAnalysis.Diagnostics.AnalysisContext
+  commentId: T:Microsoft.CodeAnalysis.Diagnostics.AnalysisContext
+  parent: Microsoft.CodeAnalysis.Diagnostics
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.diagnostics.analysiscontext
+  name: AnalysisContext
+  nameWithType: AnalysisContext
+  fullName: Microsoft.CodeAnalysis.Diagnostics.AnalysisContext

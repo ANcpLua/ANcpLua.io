@@ -42,7 +42,7 @@ dotnet_diagnostic.AL0012.severity = warning
 dotnet_diagnostic.AL0013.severity = suggestion
 
 # AL0014: Prefer pattern matching for null and zero comparisons
-dotnet_diagnostic.AL0014.severity = suggestion
+dotnet_diagnostic.AL0014.severity = warning
 
 # AL0015: Normalize null-guard style
 dotnet_diagnostic.AL0015.severity = suggestion
@@ -69,4 +69,4 @@ dotnet_diagnostic.AL0023.severity = error
 dotnet_diagnostic.AL0024.severity = error
 
 # AL0025: Anonymous function can be made static
-dotnet_diagnostic.AL0025.severity = suggestion
+dotnet_diagnostic.AL0025.severity = warning

@@ -1,0 +1,722 @@
+### YamlMime:ManagedReference
+items:
+- uid: ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0010PartialTypeCodeFixProvider
+  commentId: T:ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0010PartialTypeCodeFixProvider
+  id: Al0010PartialTypeCodeFixProvider
+  parent: ANcpLua.Analyzers.CodeFixes.CodeFixes
+  children:
+  - ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0010PartialTypeCodeFixProvider.FixableDiagnosticIds
+  - ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0010PartialTypeCodeFixProvider.GetFixAllProvider
+  - ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0010PartialTypeCodeFixProvider.RegisterCodeFixesAsync(Microsoft.CodeAnalysis.CodeFixes.CodeFixContext)
+  langs:
+  - csharp
+  - vb
+  name: Al0010PartialTypeCodeFixProvider
+  nameWithType: Al0010PartialTypeCodeFixProvider
+  fullName: ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0010PartialTypeCodeFixProvider
+  type: Class
+  source:
+    remote:
+      path: src/ANcpLua.Analyzers.CodeFixes/CodeFixes/AL0010PartialTypeCodeFixProvider.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Analyzers.git
+    id: Al0010PartialTypeCodeFixProvider
+    path: .repos/analyzers/src/ANcpLua.Analyzers.CodeFixes/CodeFixes/AL0010PartialTypeCodeFixProvider.cs
+    startLine: 7
+  assemblies:
+  - ANcpLua.Analyzers.CodeFixes
+  namespace: ANcpLua.Analyzers.CodeFixes.CodeFixes
+  summary: Code fix provider for AL0010 - adds partial modifier to types.
+  example: []
+  syntax:
+    content: >-
+      [ExportCodeFixProvider("C#", new string[] { }, Name = "Al0010PartialTypeCodeFixProvider")]
+
+      [Shared]
+
+      public sealed class Al0010PartialTypeCodeFixProvider : CodeFixProvider
+    content.vb: >-
+      <ExportCodeFixProvider("C#", New String() { }, Name:="Al0010PartialTypeCodeFixProvider")>
+
+      <Shared>
+
+      Public NotInheritable Class Al0010PartialTypeCodeFixProvider Inherits CodeFixProvider
+  inheritance:
+  - System.Object
+  - Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider
+  inheritedMembers:
+  - Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider.RequestPriority
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  attributes:
+  - type: System.Composition.SharedAttribute
+    ctor: System.Composition.SharedAttribute.#ctor
+    arguments: []
+- uid: ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0010PartialTypeCodeFixProvider.FixableDiagnosticIds
+  commentId: P:ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0010PartialTypeCodeFixProvider.FixableDiagnosticIds
+  id: FixableDiagnosticIds
+  parent: ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0010PartialTypeCodeFixProvider
+  langs:
+  - csharp
+  - vb
+  name: FixableDiagnosticIds
+  nameWithType: Al0010PartialTypeCodeFixProvider.FixableDiagnosticIds
+  fullName: ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0010PartialTypeCodeFixProvider.FixableDiagnosticIds
+  type: Property
+  source:
+    remote:
+      path: src/ANcpLua.Analyzers.CodeFixes/CodeFixes/AL0010PartialTypeCodeFixProvider.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Analyzers.git
+    id: FixableDiagnosticIds
+    path: .repos/analyzers/src/ANcpLua.Analyzers.CodeFixes/CodeFixes/AL0010PartialTypeCodeFixProvider.cs
+    startLine: 10
+  assemblies:
+  - ANcpLua.Analyzers.CodeFixes
+  namespace: ANcpLua.Analyzers.CodeFixes.CodeFixes
+  summary: A list of diagnostic IDs that this provider can provide fixes for.
+  example: []
+  syntax:
+    content: public override ImmutableArray<string> FixableDiagnosticIds { get; }
+    parameters: []
+    return:
+      type: System.Collections.Immutable.ImmutableArray{System.String}
+    content.vb: Public Overrides ReadOnly Property FixableDiagnosticIds As ImmutableArray(Of String)
+  overridden: Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider.FixableDiagnosticIds
+  overload: ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0010PartialTypeCodeFixProvider.FixableDiagnosticIds*
+- uid: ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0010PartialTypeCodeFixProvider.GetFixAllProvider
+  commentId: M:ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0010PartialTypeCodeFixProvider.GetFixAllProvider
+  id: GetFixAllProvider
+  parent: ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0010PartialTypeCodeFixProvider
+  langs:
+  - csharp
+  - vb
+  name: GetFixAllProvider()
+  nameWithType: Al0010PartialTypeCodeFixProvider.GetFixAllProvider()
+  fullName: ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0010PartialTypeCodeFixProvider.GetFixAllProvider()
+  type: Method
+  source:
+    remote:
+      path: src/ANcpLua.Analyzers.CodeFixes/CodeFixes/AL0010PartialTypeCodeFixProvider.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Analyzers.git
+    id: GetFixAllProvider
+    path: .repos/analyzers/src/ANcpLua.Analyzers.CodeFixes/CodeFixes/AL0010PartialTypeCodeFixProvider.cs
+    startLine: 13
+  assemblies:
+  - ANcpLua.Analyzers.CodeFixes
+  namespace: ANcpLua.Analyzers.CodeFixes.CodeFixes
+  summary: >-
+    Gets an optional <xref href="Microsoft.CodeAnalysis.CodeFixes.FixAllProvider" data-throw-if-not-resolved="false"></xref> that can fix all/multiple occurrences of diagnostics fixed by this code fix provider.
+
+    Return null if the provider doesn't support fix all/multiple occurrences.
+
+    Otherwise, you can return any of the well known fix all providers from <xref href="Microsoft.CodeAnalysis.CodeFixes.WellKnownFixAllProviders" data-throw-if-not-resolved="false"></xref> or implement your own fix all provider.
+  example: []
+  syntax:
+    content: public override FixAllProvider GetFixAllProvider()
+    return:
+      type: Microsoft.CodeAnalysis.CodeFixes.FixAllProvider
+    content.vb: Public Overrides Function GetFixAllProvider() As FixAllProvider
+  overridden: Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider.GetFixAllProvider
+  overload: ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0010PartialTypeCodeFixProvider.GetFixAllProvider*
+- uid: ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0010PartialTypeCodeFixProvider.RegisterCodeFixesAsync(Microsoft.CodeAnalysis.CodeFixes.CodeFixContext)
+  commentId: M:ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0010PartialTypeCodeFixProvider.RegisterCodeFixesAsync(Microsoft.CodeAnalysis.CodeFixes.CodeFixContext)
+  id: RegisterCodeFixesAsync(Microsoft.CodeAnalysis.CodeFixes.CodeFixContext)
+  parent: ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0010PartialTypeCodeFixProvider
+  langs:
+  - csharp
+  - vb
+  name: RegisterCodeFixesAsync(CodeFixContext)
+  nameWithType: Al0010PartialTypeCodeFixProvider.RegisterCodeFixesAsync(CodeFixContext)
+  fullName: ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0010PartialTypeCodeFixProvider.RegisterCodeFixesAsync(Microsoft.CodeAnalysis.CodeFixes.CodeFixContext)
+  type: Method
+  source:
+    remote:
+      path: src/ANcpLua.Analyzers.CodeFixes/CodeFixes/AL0010PartialTypeCodeFixProvider.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Analyzers.git
+    id: RegisterCodeFixesAsync
+    path: .repos/analyzers/src/ANcpLua.Analyzers.CodeFixes/CodeFixes/AL0010PartialTypeCodeFixProvider.cs
+    startLine: 15
+  assemblies:
+  - ANcpLua.Analyzers.CodeFixes
+  namespace: ANcpLua.Analyzers.CodeFixes.CodeFixes
+  summary: Computes one or more fixes for the specified <xref href="Microsoft.CodeAnalysis.CodeFixes.CodeFixContext" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public override Task RegisterCodeFixesAsync(CodeFixContext context)
+    parameters:
+    - id: context
+      type: Microsoft.CodeAnalysis.CodeFixes.CodeFixContext
+      description: >-
+        A <xref href="Microsoft.CodeAnalysis.CodeFixes.CodeFixContext" data-throw-if-not-resolved="false"></xref> containing context information about the diagnostics to fix.
+
+        The context must only contain diagnostics with a <xref href="Microsoft.CodeAnalysis.Diagnostic.Id" data-throw-if-not-resolved="false"></xref> included in the <xref href="Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider.FixableDiagnosticIds" data-throw-if-not-resolved="false"></xref> for the current provider.
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Public Overrides Function RegisterCodeFixesAsync(context As CodeFixContext) As Task
+  overridden: Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider.RegisterCodeFixesAsync(Microsoft.CodeAnalysis.CodeFixes.CodeFixContext)
+  overload: ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0010PartialTypeCodeFixProvider.RegisterCodeFixesAsync*
+references:
+- uid: ANcpLua.Analyzers.CodeFixes.CodeFixes
+  commentId: N:ANcpLua.Analyzers.CodeFixes.CodeFixes
+  href: ANcpLua.html
+  name: ANcpLua.Analyzers.CodeFixes.CodeFixes
+  nameWithType: ANcpLua.Analyzers.CodeFixes.CodeFixes
+  fullName: ANcpLua.Analyzers.CodeFixes.CodeFixes
+  spec.csharp:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Analyzers
+    name: Analyzers
+    href: ANcpLua.Analyzers.html
+  - name: .
+  - uid: ANcpLua.Analyzers.CodeFixes
+    name: CodeFixes
+    href: ANcpLua.Analyzers.CodeFixes.html
+  - name: .
+  - uid: ANcpLua.Analyzers.CodeFixes.CodeFixes
+    name: CodeFixes
+    href: ANcpLua.Analyzers.CodeFixes.CodeFixes.html
+  spec.vb:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Analyzers
+    name: Analyzers
+    href: ANcpLua.Analyzers.html
+  - name: .
+  - uid: ANcpLua.Analyzers.CodeFixes
+    name: CodeFixes
+    href: ANcpLua.Analyzers.CodeFixes.html
+  - name: .
+  - uid: ANcpLua.Analyzers.CodeFixes.CodeFixes
+    name: CodeFixes
+    href: ANcpLua.Analyzers.CodeFixes.CodeFixes.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider
+  commentId: T:Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider
+  parent: Microsoft.CodeAnalysis.CodeFixes
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.codefixes.codefixprovider
+  name: CodeFixProvider
+  nameWithType: CodeFixProvider
+  fullName: Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider
+- uid: Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider.RequestPriority
+  commentId: P:Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider.RequestPriority
+  parent: Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.codefixes.codefixprovider.requestpriority
+  name: RequestPriority
+  nameWithType: CodeFixProvider.RequestPriority
+  fullName: Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider.RequestPriority
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Microsoft.CodeAnalysis.CodeFixes
+  commentId: N:Microsoft.CodeAnalysis.CodeFixes
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.CodeAnalysis.CodeFixes
+  nameWithType: Microsoft.CodeAnalysis.CodeFixes
+  fullName: Microsoft.CodeAnalysis.CodeFixes
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+  - name: .
+  - uid: Microsoft.CodeAnalysis.CodeFixes
+    name: CodeFixes
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.codefixes
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.CodeAnalysis
+    name: CodeAnalysis
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis
+  - name: .
+  - uid: Microsoft.CodeAnalysis.CodeFixes
+    name: CodeFixes
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.codefixes
+- uid: Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider.FixableDiagnosticIds
+  commentId: P:Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider.FixableDiagnosticIds
+  parent: Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.codefixes.codefixprovider.fixablediagnosticids
+  name: FixableDiagnosticIds
+  nameWithType: CodeFixProvider.FixableDiagnosticIds
+  fullName: Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider.FixableDiagnosticIds
+- uid: ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0010PartialTypeCodeFixProvider.FixableDiagnosticIds*
+  commentId: Overload:ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0010PartialTypeCodeFixProvider.FixableDiagnosticIds
+  href: ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0010PartialTypeCodeFixProvider.html#ANcpLua_Analyzers_CodeFixes_CodeFixes_Al0010PartialTypeCodeFixProvider_FixableDiagnosticIds
+  name: FixableDiagnosticIds
+  nameWithType: Al0010PartialTypeCodeFixProvider.FixableDiagnosticIds
+  fullName: ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0010PartialTypeCodeFixProvider.FixableDiagnosticIds
+- uid: System.Collections.Immutable.ImmutableArray{System.String}
+  commentId: T:System.Collections.Immutable.ImmutableArray{System.String}
+  parent: System.Collections.Immutable
+  definition: System.Collections.Immutable.ImmutableArray`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  name: ImmutableArray<string>
+  nameWithType: ImmutableArray<string>
+  fullName: System.Collections.Immutable.ImmutableArray<string>
+  nameWithType.vb: ImmutableArray(Of String)
+  fullName.vb: System.Collections.Immutable.ImmutableArray(Of String)
+  name.vb: ImmutableArray(Of String)
+  spec.csharp:
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Immutable.ImmutableArray`1
+  commentId: T:System.Collections.Immutable.ImmutableArray`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  name: ImmutableArray<T>
+  nameWithType: ImmutableArray<T>
+  fullName: System.Collections.Immutable.ImmutableArray<T>
+  nameWithType.vb: ImmutableArray(Of T)
+  fullName.vb: System.Collections.Immutable.ImmutableArray(Of T)
+  name.vb: ImmutableArray(Of T)
+  spec.csharp:
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Immutable.ImmutableArray`1
+    name: ImmutableArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Immutable
+  commentId: N:System.Collections.Immutable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Immutable
+  nameWithType: System.Collections.Immutable
+  fullName: System.Collections.Immutable
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Immutable
+    name: Immutable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Immutable
+    name: Immutable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.immutable
+- uid: Microsoft.CodeAnalysis.CodeFixes.FixAllProvider
+  commentId: T:Microsoft.CodeAnalysis.CodeFixes.FixAllProvider
+  parent: Microsoft.CodeAnalysis.CodeFixes
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.codefixes.fixallprovider
+  name: FixAllProvider
+  nameWithType: FixAllProvider
+  fullName: Microsoft.CodeAnalysis.CodeFixes.FixAllProvider
+- uid: Microsoft.CodeAnalysis.CodeFixes.WellKnownFixAllProviders
+  commentId: T:Microsoft.CodeAnalysis.CodeFixes.WellKnownFixAllProviders
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.codefixes.wellknownfixallproviders
+  name: WellKnownFixAllProviders
+  nameWithType: WellKnownFixAllProviders
+  fullName: Microsoft.CodeAnalysis.CodeFixes.WellKnownFixAllProviders
+- uid: Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider.GetFixAllProvider
+  commentId: M:Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider.GetFixAllProvider
+  parent: Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.codefixes.codefixprovider.getfixallprovider
+  name: GetFixAllProvider()
+  nameWithType: CodeFixProvider.GetFixAllProvider()
+  fullName: Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider.GetFixAllProvider()
+  spec.csharp:
+  - uid: Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider.GetFixAllProvider
+    name: GetFixAllProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.codefixes.codefixprovider.getfixallprovider
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider.GetFixAllProvider
+    name: GetFixAllProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.codefixes.codefixprovider.getfixallprovider
+  - name: (
+  - name: )
+- uid: ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0010PartialTypeCodeFixProvider.GetFixAllProvider*
+  commentId: Overload:ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0010PartialTypeCodeFixProvider.GetFixAllProvider
+  href: ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0010PartialTypeCodeFixProvider.html#ANcpLua_Analyzers_CodeFixes_CodeFixes_Al0010PartialTypeCodeFixProvider_GetFixAllProvider
+  name: GetFixAllProvider
+  nameWithType: Al0010PartialTypeCodeFixProvider.GetFixAllProvider
+  fullName: ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0010PartialTypeCodeFixProvider.GetFixAllProvider
+- uid: Microsoft.CodeAnalysis.CodeFixes.CodeFixContext
+  commentId: T:Microsoft.CodeAnalysis.CodeFixes.CodeFixContext
+  parent: Microsoft.CodeAnalysis.CodeFixes
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.codefixes.codefixcontext
+  name: CodeFixContext
+  nameWithType: CodeFixContext
+  fullName: Microsoft.CodeAnalysis.CodeFixes.CodeFixContext
+- uid: Microsoft.CodeAnalysis.Diagnostic.Id
+  commentId: P:Microsoft.CodeAnalysis.Diagnostic.Id
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.diagnostic.id
+  name: Id
+  nameWithType: Diagnostic.Id
+  fullName: Microsoft.CodeAnalysis.Diagnostic.Id
+- uid: Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider.RegisterCodeFixesAsync(Microsoft.CodeAnalysis.CodeFixes.CodeFixContext)
+  commentId: M:Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider.RegisterCodeFixesAsync(Microsoft.CodeAnalysis.CodeFixes.CodeFixContext)
+  parent: Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.codefixes.codefixprovider.registercodefixesasync
+  name: RegisterCodeFixesAsync(CodeFixContext)
+  nameWithType: CodeFixProvider.RegisterCodeFixesAsync(CodeFixContext)
+  fullName: Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider.RegisterCodeFixesAsync(Microsoft.CodeAnalysis.CodeFixes.CodeFixContext)
+  spec.csharp:
+  - uid: Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider.RegisterCodeFixesAsync(Microsoft.CodeAnalysis.CodeFixes.CodeFixContext)
+    name: RegisterCodeFixesAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.codefixes.codefixprovider.registercodefixesasync
+  - name: (
+  - uid: Microsoft.CodeAnalysis.CodeFixes.CodeFixContext
+    name: CodeFixContext
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.codefixes.codefixcontext
+  - name: )
+  spec.vb:
+  - uid: Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider.RegisterCodeFixesAsync(Microsoft.CodeAnalysis.CodeFixes.CodeFixContext)
+    name: RegisterCodeFixesAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.codefixes.codefixprovider.registercodefixesasync
+  - name: (
+  - uid: Microsoft.CodeAnalysis.CodeFixes.CodeFixContext
+    name: CodeFixContext
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.codeanalysis.codefixes.codefixcontext
+  - name: )
+- uid: ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0010PartialTypeCodeFixProvider.RegisterCodeFixesAsync*
+  commentId: Overload:ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0010PartialTypeCodeFixProvider.RegisterCodeFixesAsync
+  href: ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0010PartialTypeCodeFixProvider.html#ANcpLua_Analyzers_CodeFixes_CodeFixes_Al0010PartialTypeCodeFixProvider_RegisterCodeFixesAsync_Microsoft_CodeAnalysis_CodeFixes_CodeFixContext_
+  name: RegisterCodeFixesAsync
+  nameWithType: Al0010PartialTypeCodeFixProvider.RegisterCodeFixesAsync
+  fullName: ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0010PartialTypeCodeFixProvider.RegisterCodeFixesAsync
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks

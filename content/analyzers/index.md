@@ -24,7 +24,7 @@ Custom Roslyn analyzers and code fixes
 |[AL0011](./rules/AL0011.md)|Threading|Avoid lock keyword on non-Lock types|⚠️|✔️|❌|
 |[AL0012](./rules/AL0012.md)|OpenTelemetry|Deprecated semantic convention attribute|⚠️|✔️|✔️|
 |[AL0013](./rules/AL0013.md)|OpenTelemetry|Missing telemetry schema URL|ℹ️|✔️|❌|
-|[AL0014](./rules/AL0014.md)|Style|Prefer pattern matching for null and zero comparisons|ℹ️|✔️|✔️|
+|[AL0014](./rules/AL0014.md)|Style|Prefer pattern matching for null and zero comparisons|⚠️|✔️|✔️|
 |[AL0015](./rules/AL0015.md)|Style|Normalize null-guard style|ℹ️|✔️|✔️|
 |[AL0016](./rules/AL0016.md)|Style|Combine declaration with subsequent null-check|ℹ️|✔️|✔️|
 |[AL0017](./rules/AL0017.md)|VersionManagement|Hardcoded package version detected|⚠️|✔️|❌|
@@ -33,7 +33,7 @@ Custom Roslyn analyzers and code fixes
 |[AL0022](./rules/AL0022.md)|ASP.NET Core|Mixed form collection and DTO|❌|✔️|❌|
 |[AL0023](./rules/AL0023.md)|ASP.NET Core|Unsupported form type|❌|✔️|❌|
 |[AL0024](./rules/AL0024.md)|ASP.NET Core|Form and body conflict|❌|✔️|❌|
-|[AL0025](./rules/AL0025.md)|Usage|Anonymous function can be made static|ℹ️|✔️|✔️|
+|[AL0025](./rules/AL0025.md)|Usage|Anonymous function can be made static|⚠️|✔️|✔️|
 
 
 ## Refactorings

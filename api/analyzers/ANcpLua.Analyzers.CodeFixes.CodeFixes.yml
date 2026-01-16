@@ -4,17 +4,17 @@ items:
   commentId: N:ANcpLua.Analyzers.CodeFixes.CodeFixes
   id: ANcpLua.Analyzers.CodeFixes.CodeFixes
   children:
-  - ANcpLua.Analyzers.CodeFixes.CodeFixes.AL0002CodeFixProvider
-  - ANcpLua.Analyzers.CodeFixes.CodeFixes.AL0004CodeFixProvider
-  - ANcpLua.Analyzers.CodeFixes.CodeFixes.AL0005CodeFixProvider
-  - ANcpLua.Analyzers.CodeFixes.CodeFixes.AL0008IXmlSerializableCodeFixProvider
-  - ANcpLua.Analyzers.CodeFixes.CodeFixes.AL0010PartialTypeCodeFixProvider
-  - ANcpLua.Analyzers.CodeFixes.CodeFixes.AL0012DeprecatedAttributeCodeFixProvider
-  - ANcpLua.Analyzers.CodeFixes.CodeFixes.AL0014CodeFixProvider
-  - ANcpLua.Analyzers.CodeFixes.CodeFixes.AL0015NormalizeNullGuardStyleCodeFixProvider
-  - ANcpLua.Analyzers.CodeFixes.CodeFixes.AL0016CombineDeclarationWithNullCheckCodeFixProvider
-  - ANcpLua.Analyzers.CodeFixes.CodeFixes.AL0025StaticLambdaCodeFixProvider
-  - ANcpLua.Analyzers.CodeFixes.CodeFixes.ALCodeFixProvider`1
+  - ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0002CodeFixProvider
+  - ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0004CodeFixProvider
+  - ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0005CodeFixProvider
+  - ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0008IXmlSerializableCodeFixProvider
+  - ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0010PartialTypeCodeFixProvider
+  - ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0012DeprecatedAttributeCodeFixProvider
+  - ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0014CodeFixProvider
+  - ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0015NormalizeNullGuardStyleCodeFixProvider
+  - ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0016CombineDeclarationWithNullCheckCodeFixProvider
+  - ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0025StaticLambdaCodeFixProvider
+  - ANcpLua.Analyzers.CodeFixes.CodeFixes.AlCodeFixProvider`1
   langs:
   - csharp
   - vb
@@ -25,86 +25,86 @@ items:
   assemblies:
   - ANcpLua.Analyzers.CodeFixes
 references:
-- uid: ANcpLua.Analyzers.CodeFixes.CodeFixes.AL0002CodeFixProvider
-  commentId: T:ANcpLua.Analyzers.CodeFixes.CodeFixes.AL0002CodeFixProvider
-  href: ANcpLua.Analyzers.CodeFixes.CodeFixes.AL0002CodeFixProvider.html
-  name: AL0002CodeFixProvider
-  nameWithType: AL0002CodeFixProvider
-  fullName: ANcpLua.Analyzers.CodeFixes.CodeFixes.AL0002CodeFixProvider
-- uid: ANcpLua.Analyzers.CodeFixes.CodeFixes.AL0004CodeFixProvider
-  commentId: T:ANcpLua.Analyzers.CodeFixes.CodeFixes.AL0004CodeFixProvider
-  href: ANcpLua.Analyzers.CodeFixes.CodeFixes.AL0004CodeFixProvider.html
-  name: AL0004CodeFixProvider
-  nameWithType: AL0004CodeFixProvider
-  fullName: ANcpLua.Analyzers.CodeFixes.CodeFixes.AL0004CodeFixProvider
-- uid: ANcpLua.Analyzers.CodeFixes.CodeFixes.AL0005CodeFixProvider
-  commentId: T:ANcpLua.Analyzers.CodeFixes.CodeFixes.AL0005CodeFixProvider
-  href: ANcpLua.Analyzers.CodeFixes.CodeFixes.AL0005CodeFixProvider.html
-  name: AL0005CodeFixProvider
-  nameWithType: AL0005CodeFixProvider
-  fullName: ANcpLua.Analyzers.CodeFixes.CodeFixes.AL0005CodeFixProvider
-- uid: ANcpLua.Analyzers.CodeFixes.CodeFixes.AL0008IXmlSerializableCodeFixProvider
-  commentId: T:ANcpLua.Analyzers.CodeFixes.CodeFixes.AL0008IXmlSerializableCodeFixProvider
-  href: ANcpLua.Analyzers.CodeFixes.CodeFixes.AL0008IXmlSerializableCodeFixProvider.html
-  name: AL0008IXmlSerializableCodeFixProvider
-  nameWithType: AL0008IXmlSerializableCodeFixProvider
-  fullName: ANcpLua.Analyzers.CodeFixes.CodeFixes.AL0008IXmlSerializableCodeFixProvider
-- uid: ANcpLua.Analyzers.CodeFixes.CodeFixes.AL0010PartialTypeCodeFixProvider
-  commentId: T:ANcpLua.Analyzers.CodeFixes.CodeFixes.AL0010PartialTypeCodeFixProvider
-  href: ANcpLua.Analyzers.CodeFixes.CodeFixes.AL0010PartialTypeCodeFixProvider.html
-  name: AL0010PartialTypeCodeFixProvider
-  nameWithType: AL0010PartialTypeCodeFixProvider
-  fullName: ANcpLua.Analyzers.CodeFixes.CodeFixes.AL0010PartialTypeCodeFixProvider
-- uid: ANcpLua.Analyzers.CodeFixes.CodeFixes.AL0012DeprecatedAttributeCodeFixProvider
-  commentId: T:ANcpLua.Analyzers.CodeFixes.CodeFixes.AL0012DeprecatedAttributeCodeFixProvider
-  href: ANcpLua.Analyzers.CodeFixes.CodeFixes.AL0012DeprecatedAttributeCodeFixProvider.html
-  name: AL0012DeprecatedAttributeCodeFixProvider
-  nameWithType: AL0012DeprecatedAttributeCodeFixProvider
-  fullName: ANcpLua.Analyzers.CodeFixes.CodeFixes.AL0012DeprecatedAttributeCodeFixProvider
-- uid: ANcpLua.Analyzers.CodeFixes.CodeFixes.AL0014CodeFixProvider
-  commentId: T:ANcpLua.Analyzers.CodeFixes.CodeFixes.AL0014CodeFixProvider
-  href: ANcpLua.Analyzers.CodeFixes.CodeFixes.AL0014CodeFixProvider.html
-  name: AL0014CodeFixProvider
-  nameWithType: AL0014CodeFixProvider
-  fullName: ANcpLua.Analyzers.CodeFixes.CodeFixes.AL0014CodeFixProvider
-- uid: ANcpLua.Analyzers.CodeFixes.CodeFixes.AL0015NormalizeNullGuardStyleCodeFixProvider
-  commentId: T:ANcpLua.Analyzers.CodeFixes.CodeFixes.AL0015NormalizeNullGuardStyleCodeFixProvider
-  href: ANcpLua.Analyzers.CodeFixes.CodeFixes.AL0015NormalizeNullGuardStyleCodeFixProvider.html
-  name: AL0015NormalizeNullGuardStyleCodeFixProvider
-  nameWithType: AL0015NormalizeNullGuardStyleCodeFixProvider
-  fullName: ANcpLua.Analyzers.CodeFixes.CodeFixes.AL0015NormalizeNullGuardStyleCodeFixProvider
-- uid: ANcpLua.Analyzers.CodeFixes.CodeFixes.AL0016CombineDeclarationWithNullCheckCodeFixProvider
-  commentId: T:ANcpLua.Analyzers.CodeFixes.CodeFixes.AL0016CombineDeclarationWithNullCheckCodeFixProvider
-  href: ANcpLua.Analyzers.CodeFixes.CodeFixes.AL0016CombineDeclarationWithNullCheckCodeFixProvider.html
-  name: AL0016CombineDeclarationWithNullCheckCodeFixProvider
-  nameWithType: AL0016CombineDeclarationWithNullCheckCodeFixProvider
-  fullName: ANcpLua.Analyzers.CodeFixes.CodeFixes.AL0016CombineDeclarationWithNullCheckCodeFixProvider
-- uid: ANcpLua.Analyzers.CodeFixes.CodeFixes.AL0025StaticLambdaCodeFixProvider
-  commentId: T:ANcpLua.Analyzers.CodeFixes.CodeFixes.AL0025StaticLambdaCodeFixProvider
-  href: ANcpLua.Analyzers.CodeFixes.CodeFixes.AL0025StaticLambdaCodeFixProvider.html
-  name: AL0025StaticLambdaCodeFixProvider
-  nameWithType: AL0025StaticLambdaCodeFixProvider
-  fullName: ANcpLua.Analyzers.CodeFixes.CodeFixes.AL0025StaticLambdaCodeFixProvider
-- uid: ANcpLua.Analyzers.CodeFixes.CodeFixes.ALCodeFixProvider`1
-  commentId: T:ANcpLua.Analyzers.CodeFixes.CodeFixes.ALCodeFixProvider`1
-  href: ANcpLua.Analyzers.CodeFixes.CodeFixes.ALCodeFixProvider-1.html
-  name: ALCodeFixProvider<TNode>
-  nameWithType: ALCodeFixProvider<TNode>
-  fullName: ANcpLua.Analyzers.CodeFixes.CodeFixes.ALCodeFixProvider<TNode>
-  nameWithType.vb: ALCodeFixProvider(Of TNode)
-  fullName.vb: ANcpLua.Analyzers.CodeFixes.CodeFixes.ALCodeFixProvider(Of TNode)
-  name.vb: ALCodeFixProvider(Of TNode)
+- uid: ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0002CodeFixProvider
+  commentId: T:ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0002CodeFixProvider
+  href: ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0002CodeFixProvider.html
+  name: Al0002CodeFixProvider
+  nameWithType: Al0002CodeFixProvider
+  fullName: ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0002CodeFixProvider
+- uid: ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0004CodeFixProvider
+  commentId: T:ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0004CodeFixProvider
+  href: ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0004CodeFixProvider.html
+  name: Al0004CodeFixProvider
+  nameWithType: Al0004CodeFixProvider
+  fullName: ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0004CodeFixProvider
+- uid: ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0005CodeFixProvider
+  commentId: T:ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0005CodeFixProvider
+  href: ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0005CodeFixProvider.html
+  name: Al0005CodeFixProvider
+  nameWithType: Al0005CodeFixProvider
+  fullName: ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0005CodeFixProvider
+- uid: ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0008IXmlSerializableCodeFixProvider
+  commentId: T:ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0008IXmlSerializableCodeFixProvider
+  href: ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0008IXmlSerializableCodeFixProvider.html
+  name: Al0008IXmlSerializableCodeFixProvider
+  nameWithType: Al0008IXmlSerializableCodeFixProvider
+  fullName: ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0008IXmlSerializableCodeFixProvider
+- uid: ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0010PartialTypeCodeFixProvider
+  commentId: T:ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0010PartialTypeCodeFixProvider
+  href: ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0010PartialTypeCodeFixProvider.html
+  name: Al0010PartialTypeCodeFixProvider
+  nameWithType: Al0010PartialTypeCodeFixProvider
+  fullName: ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0010PartialTypeCodeFixProvider
+- uid: ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0012DeprecatedAttributeCodeFixProvider
+  commentId: T:ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0012DeprecatedAttributeCodeFixProvider
+  href: ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0012DeprecatedAttributeCodeFixProvider.html
+  name: Al0012DeprecatedAttributeCodeFixProvider
+  nameWithType: Al0012DeprecatedAttributeCodeFixProvider
+  fullName: ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0012DeprecatedAttributeCodeFixProvider
+- uid: ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0014CodeFixProvider
+  commentId: T:ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0014CodeFixProvider
+  href: ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0014CodeFixProvider.html
+  name: Al0014CodeFixProvider
+  nameWithType: Al0014CodeFixProvider
+  fullName: ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0014CodeFixProvider
+- uid: ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0015NormalizeNullGuardStyleCodeFixProvider
+  commentId: T:ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0015NormalizeNullGuardStyleCodeFixProvider
+  href: ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0015NormalizeNullGuardStyleCodeFixProvider.html
+  name: Al0015NormalizeNullGuardStyleCodeFixProvider
+  nameWithType: Al0015NormalizeNullGuardStyleCodeFixProvider
+  fullName: ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0015NormalizeNullGuardStyleCodeFixProvider
+- uid: ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0016CombineDeclarationWithNullCheckCodeFixProvider
+  commentId: T:ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0016CombineDeclarationWithNullCheckCodeFixProvider
+  href: ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0016CombineDeclarationWithNullCheckCodeFixProvider.html
+  name: Al0016CombineDeclarationWithNullCheckCodeFixProvider
+  nameWithType: Al0016CombineDeclarationWithNullCheckCodeFixProvider
+  fullName: ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0016CombineDeclarationWithNullCheckCodeFixProvider
+- uid: ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0025StaticLambdaCodeFixProvider
+  commentId: T:ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0025StaticLambdaCodeFixProvider
+  href: ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0025StaticLambdaCodeFixProvider.html
+  name: Al0025StaticLambdaCodeFixProvider
+  nameWithType: Al0025StaticLambdaCodeFixProvider
+  fullName: ANcpLua.Analyzers.CodeFixes.CodeFixes.Al0025StaticLambdaCodeFixProvider
+- uid: ANcpLua.Analyzers.CodeFixes.CodeFixes.AlCodeFixProvider`1
+  commentId: T:ANcpLua.Analyzers.CodeFixes.CodeFixes.AlCodeFixProvider`1
+  href: ANcpLua.Analyzers.CodeFixes.CodeFixes.AlCodeFixProvider-1.html
+  name: AlCodeFixProvider<TNode>
+  nameWithType: AlCodeFixProvider<TNode>
+  fullName: ANcpLua.Analyzers.CodeFixes.CodeFixes.AlCodeFixProvider<TNode>
+  nameWithType.vb: AlCodeFixProvider(Of TNode)
+  fullName.vb: ANcpLua.Analyzers.CodeFixes.CodeFixes.AlCodeFixProvider(Of TNode)
+  name.vb: AlCodeFixProvider(Of TNode)
   spec.csharp:
-  - uid: ANcpLua.Analyzers.CodeFixes.CodeFixes.ALCodeFixProvider`1
-    name: ALCodeFixProvider
-    href: ANcpLua.Analyzers.CodeFixes.CodeFixes.ALCodeFixProvider-1.html
+  - uid: ANcpLua.Analyzers.CodeFixes.CodeFixes.AlCodeFixProvider`1
+    name: AlCodeFixProvider
+    href: ANcpLua.Analyzers.CodeFixes.CodeFixes.AlCodeFixProvider-1.html
   - name: <
   - name: TNode
   - name: '>'
   spec.vb:
-  - uid: ANcpLua.Analyzers.CodeFixes.CodeFixes.ALCodeFixProvider`1
-    name: ALCodeFixProvider
-    href: ANcpLua.Analyzers.CodeFixes.CodeFixes.ALCodeFixProvider-1.html
+  - uid: ANcpLua.Analyzers.CodeFixes.CodeFixes.AlCodeFixProvider`1
+    name: AlCodeFixProvider
+    href: ANcpLua.Analyzers.CodeFixes.CodeFixes.AlCodeFixProvider-1.html
   - name: (
   - name: Of
   - name: " "

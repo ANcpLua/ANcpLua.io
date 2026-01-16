@@ -100,14 +100,15 @@ Central Package Management enabled in `Directory.Packages.props`:
 </PropertyGroup>
 ```
 
-## Full Documentation
+## Documentation
 
-See [ANcpLua.io/sdk](https://ancplua.io/content/sdk/) for complete documentation and [API Reference](https://ancplua.io/api/sdk/).
+Full reference: https://ancplua.io/sdk/overview
 
 ## Related
 
 - [ANcpLua.Analyzers](https://github.com/ANcpLua/ANcpLua.Analyzers) - Custom Roslyn analyzers (auto-injected)
-- [ANcpLua.Roslyn.Utilities](https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities) - Roslyn utilities for source generators
+- [ANcpLua.Roslyn.Utilities](https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities) - Roslyn utilities for source
+  generators
 
 ---
 

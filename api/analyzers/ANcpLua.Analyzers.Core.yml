@@ -4,7 +4,7 @@ items:
   commentId: N:ANcpLua.Analyzers.Core
   id: ANcpLua.Analyzers.Core
   children:
-  - ANcpLua.Analyzers.Core.ALAnalyzer
+  - ANcpLua.Analyzers.Core.AlAnalyzer
   - ANcpLua.Analyzers.Core.DeprecatedOtelAttributes
   - ANcpLua.Analyzers.Core.DiagnosticCategories
   - ANcpLua.Analyzers.Core.DiagnosticIds
@@ -18,13 +18,13 @@ items:
   assemblies:
   - ANcpLua.Analyzers
 references:
-- uid: ANcpLua.Analyzers.Core.ALAnalyzer
-  commentId: T:ANcpLua.Analyzers.Core.ALAnalyzer
+- uid: ANcpLua.Analyzers.Core.AlAnalyzer
+  commentId: T:ANcpLua.Analyzers.Core.AlAnalyzer
   parent: ANcpLua.Analyzers.Core
-  href: ANcpLua.Analyzers.Core.ALAnalyzer.html
-  name: ALAnalyzer
-  nameWithType: ALAnalyzer
-  fullName: ANcpLua.Analyzers.Core.ALAnalyzer
+  href: ANcpLua.Analyzers.Core.AlAnalyzer.html
+  name: AlAnalyzer
+  nameWithType: AlAnalyzer
+  fullName: ANcpLua.Analyzers.Core.AlAnalyzer
 - uid: ANcpLua.Analyzers.Core.DiagnosticCategories
   commentId: T:ANcpLua.Analyzers.Core.DiagnosticCategories
   href: ANcpLua.Analyzers.Core.DiagnosticCategories.html
