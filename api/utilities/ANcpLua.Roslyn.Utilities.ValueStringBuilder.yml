@@ -1,0 +1,765 @@
+### YamlMime:ManagedReference
+items:
+- uid: ANcpLua.Roslyn.Utilities.ValueStringBuilder
+  commentId: T:ANcpLua.Roslyn.Utilities.ValueStringBuilder
+  id: ValueStringBuilder
+  parent: ANcpLua.Roslyn.Utilities
+  children:
+  - ANcpLua.Roslyn.Utilities.ValueStringBuilder.#ctor(System.Span{System.Char})
+  - ANcpLua.Roslyn.Utilities.ValueStringBuilder.Append(System.Char)
+  - ANcpLua.Roslyn.Utilities.ValueStringBuilder.Append(System.ReadOnlySpan{System.Char})
+  - ANcpLua.Roslyn.Utilities.ValueStringBuilder.Append(System.String)
+  - ANcpLua.Roslyn.Utilities.ValueStringBuilder.Dispose
+  - ANcpLua.Roslyn.Utilities.ValueStringBuilder.ToString
+  - ANcpLua.Roslyn.Utilities.ValueStringBuilder.ToTrimString
+  langs:
+  - csharp
+  - vb
+  name: ValueStringBuilder
+  nameWithType: ValueStringBuilder
+  fullName: ANcpLua.Roslyn.Utilities.ValueStringBuilder
+  type: Struct
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/ValueStringBuilder.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: ValueStringBuilder
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/ValueStringBuilder.cs
+    startLine: 26
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: A lightweight, pooled string builder for low-allocation source generation.
+  remarks: >-
+    <p>
+        This type minimizes allocations by using a caller-provided buffer first and
+        renting larger buffers from <xref href="System.Buffers.ArrayPool%601" data-throw-if-not-resolved="false"></xref> when needed.
+    </p>
+
+    <ul><li>Use <xref href="ANcpLua.Roslyn.Utilities.ValueStringBuilder.Dispose" data-throw-if-not-resolved="false"></xref> to return pooled buffers.</li><li>Designed for short-lived, hot-path string construction.</li></ul>
+  example: []
+  syntax:
+    content: public ref struct ValueStringBuilder
+    content.vb: Public Structure ValueStringBuilder
+  seealso:
+  - linkId: System.Buffers.ArrayPool`1
+    commentId: T:System.Buffers.ArrayPool`1
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: ANcpLua.Roslyn.Utilities.ValueStringBuilder.#ctor(System.Span{System.Char})
+  commentId: M:ANcpLua.Roslyn.Utilities.ValueStringBuilder.#ctor(System.Span{System.Char})
+  id: '#ctor(System.Span{System.Char})'
+  parent: ANcpLua.Roslyn.Utilities.ValueStringBuilder
+  langs:
+  - csharp
+  - vb
+  name: ValueStringBuilder(Span<char>)
+  nameWithType: ValueStringBuilder.ValueStringBuilder(Span<char>)
+  fullName: ANcpLua.Roslyn.Utilities.ValueStringBuilder.ValueStringBuilder(System.Span<char>)
+  type: Constructor
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/ValueStringBuilder.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: .ctor
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/ValueStringBuilder.cs
+    startLine: 40
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Initializes a new instance of the <xref href="ANcpLua.Roslyn.Utilities.ValueStringBuilder" data-throw-if-not-resolved="false"></xref> with an initial buffer.
+  example: []
+  syntax:
+    content: public ValueStringBuilder(Span<char> initialBuffer)
+    parameters:
+    - id: initialBuffer
+      type: System.Span{System.Char}
+      description: The initial buffer used before renting from the pool.
+    content.vb: Public Sub New(initialBuffer As Span(Of Char))
+  overload: ANcpLua.Roslyn.Utilities.ValueStringBuilder.#ctor*
+  nameWithType.vb: ValueStringBuilder.New(Span(Of Char))
+  fullName.vb: ANcpLua.Roslyn.Utilities.ValueStringBuilder.New(System.Span(Of Char))
+  name.vb: New(Span(Of Char))
+- uid: ANcpLua.Roslyn.Utilities.ValueStringBuilder.Dispose
+  commentId: M:ANcpLua.Roslyn.Utilities.ValueStringBuilder.Dispose
+  id: Dispose
+  parent: ANcpLua.Roslyn.Utilities.ValueStringBuilder
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: ValueStringBuilder.Dispose()
+  fullName: ANcpLua.Roslyn.Utilities.ValueStringBuilder.Dispose()
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/ValueStringBuilder.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Dispose
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/ValueStringBuilder.cs
+    startLine: 50
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Returns any rented buffers to the shared pool.
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: ANcpLua.Roslyn.Utilities.ValueStringBuilder.Dispose*
+- uid: ANcpLua.Roslyn.Utilities.ValueStringBuilder.Append(System.String)
+  commentId: M:ANcpLua.Roslyn.Utilities.ValueStringBuilder.Append(System.String)
+  id: Append(System.String)
+  parent: ANcpLua.Roslyn.Utilities.ValueStringBuilder
+  langs:
+  - csharp
+  - vb
+  name: Append(string)
+  nameWithType: ValueStringBuilder.Append(string)
+  fullName: ANcpLua.Roslyn.Utilities.ValueStringBuilder.Append(string)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/ValueStringBuilder.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Append
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/ValueStringBuilder.cs
+    startLine: 62
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Appends a string to the builder.
+  example: []
+  syntax:
+    content: public void Append(string str)
+    parameters:
+    - id: str
+      type: System.String
+      description: The string to append.
+    content.vb: Public Sub Append(str As String)
+  overload: ANcpLua.Roslyn.Utilities.ValueStringBuilder.Append*
+  nameWithType.vb: ValueStringBuilder.Append(String)
+  fullName.vb: ANcpLua.Roslyn.Utilities.ValueStringBuilder.Append(String)
+  name.vb: Append(String)
+- uid: ANcpLua.Roslyn.Utilities.ValueStringBuilder.Append(System.ReadOnlySpan{System.Char})
+  commentId: M:ANcpLua.Roslyn.Utilities.ValueStringBuilder.Append(System.ReadOnlySpan{System.Char})
+  id: Append(System.ReadOnlySpan{System.Char})
+  parent: ANcpLua.Roslyn.Utilities.ValueStringBuilder
+  langs:
+  - csharp
+  - vb
+  name: Append(ReadOnlySpan<char>)
+  nameWithType: ValueStringBuilder.Append(ReadOnlySpan<char>)
+  fullName: ANcpLua.Roslyn.Utilities.ValueStringBuilder.Append(System.ReadOnlySpan<char>)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/ValueStringBuilder.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Append
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/ValueStringBuilder.cs
+    startLine: 76
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Appends a span of characters to the builder.
+  example: []
+  syntax:
+    content: public void Append(ReadOnlySpan<char> str)
+    parameters:
+    - id: str
+      type: System.ReadOnlySpan{System.Char}
+      description: The span to append.
+    content.vb: Public Sub Append(str As ReadOnlySpan(Of Char))
+  overload: ANcpLua.Roslyn.Utilities.ValueStringBuilder.Append*
+  nameWithType.vb: ValueStringBuilder.Append(ReadOnlySpan(Of Char))
+  fullName.vb: ANcpLua.Roslyn.Utilities.ValueStringBuilder.Append(System.ReadOnlySpan(Of Char))
+  name.vb: Append(ReadOnlySpan(Of Char))
+- uid: ANcpLua.Roslyn.Utilities.ValueStringBuilder.Append(System.Char)
+  commentId: M:ANcpLua.Roslyn.Utilities.ValueStringBuilder.Append(System.Char)
+  id: Append(System.Char)
+  parent: ANcpLua.Roslyn.Utilities.ValueStringBuilder
+  langs:
+  - csharp
+  - vb
+  name: Append(char)
+  nameWithType: ValueStringBuilder.Append(char)
+  fullName: ANcpLua.Roslyn.Utilities.ValueStringBuilder.Append(char)
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/ValueStringBuilder.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: Append
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/ValueStringBuilder.cs
+    startLine: 90
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Appends a single character to the builder.
+  example: []
+  syntax:
+    content: public void Append(char c)
+    parameters:
+    - id: c
+      type: System.Char
+      description: The character to append.
+    content.vb: Public Sub Append(c As Char)
+  overload: ANcpLua.Roslyn.Utilities.ValueStringBuilder.Append*
+  nameWithType.vb: ValueStringBuilder.Append(Char)
+  fullName.vb: ANcpLua.Roslyn.Utilities.ValueStringBuilder.Append(Char)
+  name.vb: Append(Char)
+- uid: ANcpLua.Roslyn.Utilities.ValueStringBuilder.ToTrimString
+  commentId: M:ANcpLua.Roslyn.Utilities.ValueStringBuilder.ToTrimString
+  id: ToTrimString
+  parent: ANcpLua.Roslyn.Utilities.ValueStringBuilder
+  langs:
+  - csharp
+  - vb
+  name: ToTrimString()
+  nameWithType: ValueStringBuilder.ToTrimString()
+  fullName: ANcpLua.Roslyn.Utilities.ValueStringBuilder.ToTrimString()
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/ValueStringBuilder.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: ToTrimString
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/ValueStringBuilder.cs
+    startLine: 118
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Returns the current contents as a trimmed string.
+  example: []
+  syntax:
+    content: public string ToTrimString()
+    return:
+      type: System.String
+      description: The trimmed string representation.
+    content.vb: Public Function ToTrimString() As String
+  overload: ANcpLua.Roslyn.Utilities.ValueStringBuilder.ToTrimString*
+- uid: ANcpLua.Roslyn.Utilities.ValueStringBuilder.ToString
+  commentId: M:ANcpLua.Roslyn.Utilities.ValueStringBuilder.ToString
+  id: ToString
+  parent: ANcpLua.Roslyn.Utilities.ValueStringBuilder
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: ValueStringBuilder.ToString()
+  fullName: ANcpLua.Roslyn.Utilities.ValueStringBuilder.ToString()
+  type: Method
+  source:
+    remote:
+      path: ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/ValueStringBuilder.cs
+      branch: main
+      repo: https://github.com/ANcpLua/ANcpLua.Roslyn.Utilities.git
+    id: ToString
+    path: .repos/utilities/ANcpLua.Roslyn.Utilities/ANcpLua.Roslyn.Utilities/ValueStringBuilder.cs
+    startLine: 127
+  assemblies:
+  - ANcpLua.Roslyn.Utilities
+  namespace: ANcpLua.Roslyn.Utilities
+  summary: Returns the current contents as a string.
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: The string representation.
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.ValueType.ToString
+  overload: ANcpLua.Roslyn.Utilities.ValueStringBuilder.ToString*
+references:
+- uid: System.Buffers.ArrayPool`1
+  commentId: T:System.Buffers.ArrayPool`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.buffers.arraypool-1
+  name: ArrayPool<T>
+  nameWithType: ArrayPool<T>
+  fullName: System.Buffers.ArrayPool<T>
+  nameWithType.vb: ArrayPool(Of T)
+  fullName.vb: System.Buffers.ArrayPool(Of T)
+  name.vb: ArrayPool(Of T)
+  spec.csharp:
+  - uid: System.Buffers.ArrayPool`1
+    name: ArrayPool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.buffers.arraypool-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Buffers.ArrayPool`1
+    name: ArrayPool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.buffers.arraypool-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.ValueStringBuilder.Dispose
+  commentId: M:ANcpLua.Roslyn.Utilities.ValueStringBuilder.Dispose
+  href: ANcpLua.Roslyn.Utilities.ValueStringBuilder.html#ANcpLua_Roslyn_Utilities_ValueStringBuilder_Dispose
+  name: Dispose()
+  nameWithType: ValueStringBuilder.Dispose()
+  fullName: ANcpLua.Roslyn.Utilities.ValueStringBuilder.Dispose()
+  spec.csharp:
+  - uid: ANcpLua.Roslyn.Utilities.ValueStringBuilder.Dispose
+    name: Dispose
+    href: ANcpLua.Roslyn.Utilities.ValueStringBuilder.html#ANcpLua_Roslyn_Utilities_ValueStringBuilder_Dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: ANcpLua.Roslyn.Utilities.ValueStringBuilder.Dispose
+    name: Dispose
+    href: ANcpLua.Roslyn.Utilities.ValueStringBuilder.html#ANcpLua_Roslyn_Utilities_ValueStringBuilder_Dispose
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities
+  commentId: N:ANcpLua.Roslyn.Utilities
+  href: ANcpLua.html
+  name: ANcpLua.Roslyn.Utilities
+  nameWithType: ANcpLua.Roslyn.Utilities
+  fullName: ANcpLua.Roslyn.Utilities
+  spec.csharp:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+  spec.vb:
+  - uid: ANcpLua
+    name: ANcpLua
+    href: ANcpLua.html
+  - name: .
+  - uid: ANcpLua.Roslyn
+    name: Roslyn
+    href: ANcpLua.Roslyn.html
+  - name: .
+  - uid: ANcpLua.Roslyn.Utilities
+    name: Utilities
+    href: ANcpLua.Roslyn.Utilities.html
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ANcpLua.Roslyn.Utilities.ValueStringBuilder
+  commentId: T:ANcpLua.Roslyn.Utilities.ValueStringBuilder
+  href: ANcpLua.Roslyn.Utilities.ValueStringBuilder.html
+  name: ValueStringBuilder
+  nameWithType: ValueStringBuilder
+  fullName: ANcpLua.Roslyn.Utilities.ValueStringBuilder
+- uid: ANcpLua.Roslyn.Utilities.ValueStringBuilder.#ctor*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.ValueStringBuilder.#ctor
+  href: ANcpLua.Roslyn.Utilities.ValueStringBuilder.html#ANcpLua_Roslyn_Utilities_ValueStringBuilder__ctor_System_Span_System_Char__
+  name: ValueStringBuilder
+  nameWithType: ValueStringBuilder.ValueStringBuilder
+  fullName: ANcpLua.Roslyn.Utilities.ValueStringBuilder.ValueStringBuilder
+  nameWithType.vb: ValueStringBuilder.New
+  fullName.vb: ANcpLua.Roslyn.Utilities.ValueStringBuilder.New
+  name.vb: New
+- uid: System.Span{System.Char}
+  commentId: T:System.Span{System.Char}
+  parent: System
+  definition: System.Span`1
+  href: https://learn.microsoft.com/dotnet/api/system.span-1
+  name: Span<char>
+  nameWithType: Span<char>
+  fullName: System.Span<char>
+  nameWithType.vb: Span(Of Char)
+  fullName.vb: System.Span(Of Char)
+  name.vb: Span(Of Char)
+  spec.csharp:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: <
+  - uid: System.Char
+    name: char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: '>'
+  spec.vb:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Char
+    name: Char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: )
+- uid: System.Span`1
+  commentId: T:System.Span`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.span-1
+  name: Span<T>
+  nameWithType: Span<T>
+  fullName: System.Span<T>
+  nameWithType.vb: Span(Of T)
+  fullName.vb: System.Span(Of T)
+  name.vb: Span(Of T)
+  spec.csharp:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Span`1
+    name: Span
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.span-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.ValueStringBuilder.Dispose*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.ValueStringBuilder.Dispose
+  href: ANcpLua.Roslyn.Utilities.ValueStringBuilder.html#ANcpLua_Roslyn_Utilities_ValueStringBuilder_Dispose
+  name: Dispose
+  nameWithType: ValueStringBuilder.Dispose
+  fullName: ANcpLua.Roslyn.Utilities.ValueStringBuilder.Dispose
+- uid: ANcpLua.Roslyn.Utilities.ValueStringBuilder.Append*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.ValueStringBuilder.Append
+  href: ANcpLua.Roslyn.Utilities.ValueStringBuilder.html#ANcpLua_Roslyn_Utilities_ValueStringBuilder_Append_System_String_
+  name: Append
+  nameWithType: ValueStringBuilder.Append
+  fullName: ANcpLua.Roslyn.Utilities.ValueStringBuilder.Append
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.ReadOnlySpan{System.Char}
+  commentId: T:System.ReadOnlySpan{System.Char}
+  parent: System
+  definition: System.ReadOnlySpan`1
+  href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  name: ReadOnlySpan<char>
+  nameWithType: ReadOnlySpan<char>
+  fullName: System.ReadOnlySpan<char>
+  nameWithType.vb: ReadOnlySpan(Of Char)
+  fullName.vb: System.ReadOnlySpan(Of Char)
+  name.vb: ReadOnlySpan(Of Char)
+  spec.csharp:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - uid: System.Char
+    name: char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Char
+    name: Char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: )
+- uid: System.ReadOnlySpan`1
+  commentId: T:System.ReadOnlySpan`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  name: ReadOnlySpan<T>
+  nameWithType: ReadOnlySpan<T>
+  fullName: System.ReadOnlySpan<T>
+  nameWithType.vb: ReadOnlySpan(Of T)
+  fullName.vb: System.ReadOnlySpan(Of T)
+  name.vb: ReadOnlySpan(Of T)
+  spec.csharp:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Char
+  commentId: T:System.Char
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.char
+  name: char
+  nameWithType: char
+  fullName: char
+  nameWithType.vb: Char
+  fullName.vb: Char
+  name.vb: Char
+- uid: ANcpLua.Roslyn.Utilities.ValueStringBuilder.ToTrimString*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.ValueStringBuilder.ToTrimString
+  href: ANcpLua.Roslyn.Utilities.ValueStringBuilder.html#ANcpLua_Roslyn_Utilities_ValueStringBuilder_ToTrimString
+  name: ToTrimString
+  nameWithType: ValueStringBuilder.ToTrimString
+  fullName: ANcpLua.Roslyn.Utilities.ValueStringBuilder.ToTrimString
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: ANcpLua.Roslyn.Utilities.ValueStringBuilder.ToString*
+  commentId: Overload:ANcpLua.Roslyn.Utilities.ValueStringBuilder.ToString
+  href: ANcpLua.Roslyn.Utilities.ValueStringBuilder.html#ANcpLua_Roslyn_Utilities_ValueStringBuilder_ToString
+  name: ToString
+  nameWithType: ValueStringBuilder.ToString
+  fullName: ANcpLua.Roslyn.Utilities.ValueStringBuilder.ToString

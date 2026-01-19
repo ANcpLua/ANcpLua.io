@@ -44,6 +44,8 @@ items:
   - ANcpLua.Roslyn.Utilities.SyntaxExtensions
   - ANcpLua.Roslyn.Utilities.SyntaxValueProviderExtensions
   - ANcpLua.Roslyn.Utilities.TypeSymbolExtensions
+  - ANcpLua.Roslyn.Utilities.TypedConstantExtensions
+  - ANcpLua.Roslyn.Utilities.ValueStringBuilder
   - ANcpLua.Roslyn.Utilities.ValueTupleExtensions
   langs:
   - csharp
@@ -396,12 +398,24 @@ references:
   name: SyntaxValueProviderExtensions
   nameWithType: SyntaxValueProviderExtensions
   fullName: ANcpLua.Roslyn.Utilities.SyntaxValueProviderExtensions
+- uid: ANcpLua.Roslyn.Utilities.TypedConstantExtensions
+  commentId: T:ANcpLua.Roslyn.Utilities.TypedConstantExtensions
+  href: ANcpLua.Roslyn.Utilities.TypedConstantExtensions.html
+  name: TypedConstantExtensions
+  nameWithType: TypedConstantExtensions
+  fullName: ANcpLua.Roslyn.Utilities.TypedConstantExtensions
 - uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions
   commentId: T:ANcpLua.Roslyn.Utilities.TypeSymbolExtensions
   href: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions.html
   name: TypeSymbolExtensions
   nameWithType: TypeSymbolExtensions
   fullName: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions
+- uid: ANcpLua.Roslyn.Utilities.ValueStringBuilder
+  commentId: T:ANcpLua.Roslyn.Utilities.ValueStringBuilder
+  href: ANcpLua.Roslyn.Utilities.ValueStringBuilder.html
+  name: ValueStringBuilder
+  nameWithType: ValueStringBuilder
+  fullName: ANcpLua.Roslyn.Utilities.ValueStringBuilder
 - uid: ANcpLua.Roslyn.Utilities
   commentId: N:ANcpLua.Roslyn.Utilities
   href: ANcpLua.html

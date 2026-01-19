@@ -116,7 +116,7 @@ SemanticGuard.ForMethod(method)
 | **Validation**       | `SemanticGuard<T>`, `MustBeAsync()`, `MustBePartial()`                        |
 | **Domain Contexts**  | `AwaitableContext`, `AspNetContext`, `DisposableContext`, `CollectionContext` |
 | **Operations**       | `OperationExtensions`, `InvocationExtensions`, `OverloadFinder`               |
-| **Code Generation**  | `IndentedStringBuilder`, `GeneratedCodeHelpers`                               |
+| **Code Generation**  | `IndentedStringBuilder`, `GeneratedCodeHelpers`, `ValueStringBuilder`, `TypedConstantExtensions` |
 | **Pipeline**         | `GroupBy()`, `Batch()`, `Distinct()`, `CollectFlows()`                        |
 
 ## Symbol Extensions
@@ -191,6 +191,9 @@ using (sb.BeginMethod("public", "void", "Execute"))
     sb.AppendLine("// generated code");
 }
 ```
+
+Additional helpers include `ValueStringBuilder` for low-allocation string building and
+`TypedConstantExtensions.ToCSharpStringWithPostfix()` for emitting numeric literals with suffixes.
 
 ## Pipeline Extensions
 

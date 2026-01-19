@@ -124,6 +124,12 @@ items:
   - uid: ANcpLua.Roslyn.Utilities.TypeSymbolExtensions
     name: TypeSymbolExtensions
     type: Class
+  - uid: ANcpLua.Roslyn.Utilities.TypedConstantExtensions
+    name: TypedConstantExtensions
+    type: Class
+  - uid: ANcpLua.Roslyn.Utilities.ValueStringBuilder
+    name: ValueStringBuilder
+    type: Struct
   - uid: ANcpLua.Roslyn.Utilities.ValueTupleExtensions
     name: ValueTupleExtensions
     type: Class
